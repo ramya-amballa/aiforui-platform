@@ -1,6 +1,6 @@
 # Hi, I'm Ramya Amballa
 
-**AI Governance | Technology Risk | GRC**
+**AI Governance | Technology Risk | GRC Practitioner**
 
 Helping organizations operationalize governance into measurable controls and audit-ready evidence.
 
@@ -79,7 +79,7 @@ Customizable policy templates designed for implementation and audit readiness.
 
 AI threats mapped to practical governance and control actions.
 
-[Download free](https://ramyavibes2.gumroad.com/l/ai-grc-map)
+[Download Free](https://ramyavibes2.gumroad.com/l/ai-grc-map)
 
 ### TPRM Practitioner Toolkit
 
@@ -138,7 +138,7 @@ Published across EU AI Act, NIST AI RMF, CBUAE AI Principles, Microsoft SSPA, an
 
 ## Certifications
 
-NIST AI RMF | CAISR (Certified AI Security and Risk) | EU GDPR Practitioner
+**Certifications:** NIST AI RMF | CAISR (Certified AI Security and Risk) | EU GDPR Practitioner
 
 ---
 
