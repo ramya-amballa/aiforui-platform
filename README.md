@@ -1,103 +1,170 @@
-# GRC and AI Governance Practitioner Resources
+# Hi, I'm Ramya Amballa
 
-**By Ramya Amballa | 13 Years GRC | PwC | Wells Fargo | Viatris | JP Morgan**
+**AI Governance | Technology Risk | GRC**
+
+Helping organizations operationalize governance into measurable controls and audit-ready evidence.
+
+13+ years across consulting and regulated industries including PwC, Wells Fargo, Viatris, and JP Morgan.
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-amballa--ramya-blue)](https://linkedin.com/in/amballa-ramya)
 [![Newsletter](https://img.shields.io/badge/Newsletter-AI%20for%20U%26I-orange)](https://aiforui.substack.com)
-[![Gumroad](https://img.shields.io/badge/Gumroad-Practitioner%20Resources-green)](https://ramyavibes2.gumroad.com)
+[![Resources](https://img.shields.io/badge/Resources-Practitioner%20Toolkit-green)](https://ramyavibes2.gumroad.com)
 
 ---
 
-## About This Repository
+## About
 
-Practitioner resources for GRC, AI governance, and cybersecurity compliance professionals. Built from 13 years of hands-on delivery across regulated financial services including PwC, Wells Fargo, Viatris, and JP Morgan Chase.
+Senior GRC and AI Governance practitioner with experience across consulting, financial services, and regulated environments.
 
-Every resource in this repository comes from real audit rooms, real vendor governance programmes, and real regulatory engagements. Not textbook theory.
+I work across AI governance, technology risk, and GRC to translate frameworks into practical controls, governance decisions, and audit-ready evidence.
+
+### Experience Highlights
+
+✔ 300+ applications assessed and control tested  
+✔ 230+ vendors governed end-to-end  
+✔ 35% residual risk reduction delivered  
+✔ Enterprise governance, technology risk, and supplier risk initiatives delivered  
+
+---
+
+## Areas of Focus
+
+### AI Governance
+
+- NIST AI RMF
+- EU AI Act
+- ISO 42001
+- AI Risk Assessments
+- AI Acceptable Use Policies
+- Microsoft SSPA readiness
+- Responsible AI implementation
+
+### Technology Risk and Controls
+
+- Risk and control design
+- Control testing
+- Policy implementation
+- Risk assessments
+- Audit readiness
+
+### Third-Party Risk Management
+
+- Vendor governance
+- Risk tiering
+- Due diligence
+- Supplier risk assessments
+- Remediation tracking
+
+### Regulatory and Compliance Readiness
+
+- ISO 27001
+- PCI DSS
+- CBUAE AI Principles
+- DORA
+- Privacy and regulatory alignment
 
 ---
 
-## Free Resources
+## Featured Resources
 
-### CBUAE AI Principles Quick Reference Card
-Five principles every UAE licensed financial institution must align to. What each one requires. What good looks like. The exact question to ask in the room. Gap assessment table included.
+### Microsoft SSPA Section K Toolkit
 
-**Download free:** https://ramyavibes2.gumroad.com/l/jlocq
+Practical resources supporting AI impact assessments and supplier readiness activities.
 
----
+### Information Security Policy Toolkit
+
+Customizable policy templates designed for implementation and audit readiness.
 
 ### AI Threat to GRC Control Mapping
-21 AI threats from the Snowflake AI Security Framework mapped to NIST AI RMF, ISO 27001, GDPR, NIST CSF, and Responsible AI principles. One GRC action per threat.
 
-**Download free:** https://ramyavibes2.gumroad.com/l/ai-grc-map
+AI threats mapped to practical governance and control actions.
 
----
+[Download free](https://ramyavibes2.gumroad.com/l/ai-grc-map)
 
-### Where Governance Actually Fails
-Four governance questions derived from real control failures in digital banking. KRI framework across ten domains. Technology risk appetite statements.
+### TPRM Practitioner Toolkit
 
-**Download free:** https://ramyavibes2.gumroad.com/l/kcuuwt
+Vendor tiering, risk scoring, governance checklists, and remediation resources.
 
----
+[View on Gumroad](https://ramyavibes2.gumroad.com/l/tfvdzr)
 
-## Paid Resources
+### NIST AI RMF Implementation Resources
 
-### NIST AI RMF Implementation Playbook for UAE Banking
-The most comprehensive NIST AI RMF implementation guide tailored specifically for UAE licensed financial institutions aligned to CBUAE AI Principles.
+Practical guidance for organizations implementing AI governance frameworks.
 
-**Covers:**
-- NIST AI RMF Trustworthiness Characteristics mapped to UAE banking
-- All four functions: Govern, Map, Measure, Manage
-- AI Risk Classification Framework with UAE banking examples
-- AI Ecosystem Roles and Responsibilities
-- Sociotechnical Risk Assessment
-- AI Risk Tolerance Decision Framework
-- Adversarial Testing and Red Teaming guidance
-- AI Lifecycle Governance across seven stages
-- Framework Crosswalk: NIST AI RMF to CBUAE to EU AI Act to ISO 42001
-- Six month implementation roadmap
-
-**Appendix A: AI Governance Evidence Pack**
-- AI Inventory Register template
-- AI Risk Assessment template
-- AI Governance Committee Minutes template
-- AI Incident Log template
-- AI Model Card template
-- AI Validation Report template
-
-**Buy:** https://ramyavibes2.gumroad.com
+[View on Gumroad](https://ramyavibes2.gumroad.com/l/jgdin)
 
 ---
 
-### SaaS PCI DSS Audit Readiness Workbook
-Control-to-evidence mapping, gap tracking, operating guidance, and policy templates aligned to actual audit expectations.
+## Practitioner Insights
 
-**Buy:** https://ramyavibes2.gumroad.com
+### Insider Knowledge
 
----
+A practitioner series focused on lessons from governance implementation, technology risk, AI adoption, and control failures observed across regulated environments.
 
-### TPRM Starter Kit
-Five practitioner tools for third party risk management built from governing 230 plus vendor relationships. Weighted IRQ, vendor tiering matrix, governance checklist, sample findings, sample remediation plan.
+Topics include:
 
-**Buy:** https://ramyavibes2.gumroad.com
+- AI Governance implementation
+- Technology Risk
+- Third-Party Risk
+- Control failures
+- Regulatory readiness
+- Audit evidence
 
----
-
-## About the Author
-
-Senior GRC and Cyber Risk professional. 13 years across consulting and regulated financial services.
-
-**Certifications:** NIST AI RMF | CAISR (Certified AI Security and Risk) | GDPR Practitioner | Microsoft AI Transformation Leader (In Progress 2026)
-
-**Frameworks:** EU AI Act | NIST AI RMF | CBUAE AI Principles | ISO 27001 | SOC 2 | PCI DSS | DORA | EU GDPR | TPRM
-
-**Tools:** RSA Archer | OneTrust | ProcessUnity | Tableau | JIRA
-
-**Connect:**
-- LinkedIn: https://linkedin.com/in/amballa-ramya
-- Newsletter: https://aiforui.substack.com
-- Practitioner resources: https://ramyavibes2.gumroad.com
-- Email: amballa.ramya911@gmail.com
+Follow on [LinkedIn](https://linkedin.com/in/amballa-ramya) for regular practitioner posts.
 
 ---
 
-*Because AI governance without GRC foundations is just policy writing. And GRC without AI governance is fighting yesterday's battle.*
+## AI for U&I Newsletter
+
+Practical insights on AI Governance, Technology Risk, and GRC.
+
+Translating AI laws, risk, and governance into plain English for the people responsible for implementation.
+
+Published across EU AI Act, NIST AI RMF, CBUAE AI Principles, Microsoft SSPA, and global AI governance developments.
+
+[Subscribe here](https://aiforui.substack.com)
+
+---
+
+## Current Work
+
+- Microsoft SSPA Section K resources
+- CBUAE AI governance work
+- Information Security Policy architecture
+- AI Governance implementation resources
+- Third-Party Risk toolkits
+
+---
+
+## Certifications
+
+NIST AI RMF | CAISR (Certified AI Security and Risk) | EU GDPR Practitioner
+
+---
+
+## Repository Structure
+
+```text
+grc-ai-governance-toolkit/
+
+├── ai-governance/
+├── technology-risk/
+├── microsoft-sspa/
+├── information-security/
+├── tprm/
+├── audit-readiness/
+└── practitioner-resources/
+```
+
+---
+
+## Areas of Collaboration
+
+- AI Governance implementation
+- Technology Risk and Controls
+- Third-Party Risk Management
+- Audit and compliance readiness
+
+---
+
+*"Governance becomes meaningful when policies turn into decisions and evidence."*
