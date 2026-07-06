@@ -51,3 +51,13 @@ Controls and risks only matter if people understand them well enough to act on t
 ## Related Methodology
 
 [OPERA Methodology](../../01-OPERA-Methodology/)
+
+## Visual Implementation Previews
+
+### Governance Workflow
+
+![Governance Workflow](preview-assets/Governance_Workflow_Preview_v1.0.png)
+
+### Implementation Map
+
+![Implementation Map](preview-assets/Implementation_Map_Preview_v1.0.png)
