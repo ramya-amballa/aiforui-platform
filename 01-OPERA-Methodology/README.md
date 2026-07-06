@@ -76,3 +76,15 @@ Deliverables:
 
 Version: OPERA v1.0
 Status: Under active development
+
+
+## OPERA in Practice
+
+The methodology is implemented through supporting artefacts and practical scenarios.
+
+Examples:
+
+- [AI Governance Decision Lab](../02-Decision-Lab/AI-Third-Party-Risk-Intelligence-Assistant/)
+- Implementation Lab
+- Practitioner Resources
+- Templates
