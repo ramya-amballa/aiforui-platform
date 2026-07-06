@@ -47,3 +47,7 @@ Detailed implementation artefacts and supporting materials remain practitioner i
 ## Key Principle
 
 Controls and risks only matter if people understand them well enough to act on them.
+
+## Related Methodology
+
+[OPERA Methodology](../../01-OPERA-Methodology/)
