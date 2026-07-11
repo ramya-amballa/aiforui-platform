@@ -1,0 +1,77 @@
+import { site } from "@/lib/constants";
+
+/**
+ * schema.org Person entity for Ramya Amballa, used on the About and
+ * homepage routes to establish independent-advisor E-E-A-T signals.
+ */
+export function personSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: site.advisorName,
+    url: site.url,
+    jobTitle: "[Job Title / Positioning Placeholder]",
+    worksFor: {
+      "@type": "Organization",
+      name: site.name,
+    },
+    description: "[Person Description Placeholder]",
+  };
+}
+
+/**
+ * schema.org ProfessionalService entity for the advisory practice.
+ */
+export function organizationSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    name: site.name,
+    url: site.url,
+    founder: {
+      "@type": "Person",
+      name: site.advisorName,
+    },
+    description: site.description,
+  };
+}
+
+interface BreadcrumbItem {
+  name: string;
+  path: string;
+}
+
+export function breadcrumbSchema(items: BreadcrumbItem[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name,
+      item: new URL(item.path, site.url).toString(),
+    })),
+  };
+}
+
+interface ArticleSchemaInput {
+  title: string;
+  description: string;
+  path: string;
+  datePublished: string;
+}
+
+export function articleSchema({ title, description, path, datePublished }: ArticleSchemaInput) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: title,
+    description,
+    url: new URL(path, site.url).toString(),
+    datePublished,
+    author: {
+      "@type": "Person",
+      name: site.advisorName,
+    },
+  };
+}

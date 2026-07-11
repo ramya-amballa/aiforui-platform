@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/**
+ * Design tokens.
+ * Single source of truth for color. Tailwind reads these via tailwind.config.ts.
+ * Values are HSL triplets (no hsl() wrapper) so Tailwind can apply <alpha-value>.
+ */
+:root {
+  --color-paper: 40 20% 98%;
+  --color-ink: 220 20% 9%;
+  --color-surface: 40 14% 95%;
+  --color-border: 220 12% 85%;
+  --color-muted: 220 8% 40%;
+  --color-accent: 217 46% 20%;
+  --color-accent-muted: 217 30% 35%;
+  --color-signal: 38 42% 40%;
+}
+
+:root[data-theme="dark"] {
+  --color-paper: 220 22% 8%;
+  --color-ink: 40 20% 96%;
+  --color-surface: 220 18% 12%;
+  --color-border: 220 14% 20%;
+  --color-muted: 220 10% 65%;
+  --color-accent: 40 30% 80%;
+  --color-accent-muted: 220 20% 70%;
+  --color-signal: 38 55% 62%;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --color-paper: 220 22% 8%;
+    --color-ink: 40 20% 96%;
+    --color-surface: 220 18% 12%;
+    --color-border: 220 14% 20%;
+    --color-muted: 220 10% 65%;
+    --color-accent: 40 30% 80%;
+    --color-accent-muted: 220 20% 70%;
+    --color-signal: 38 55% 62%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-paper text-ink font-sans antialiased;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    @apply bg-accent/20 text-ink;
+  }
+
+  :focus-visible {
+    outline: 2px solid hsl(var(--color-accent));
+    outline-offset: 3px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-serif text-ink;
+  }
+}
+
+@layer utilities {
+  .balance {
+    text-wrap: balance;
+  }
+
+  .pretty {
+    text-wrap: pretty;
+  }
+}
