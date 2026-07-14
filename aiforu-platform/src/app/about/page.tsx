@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { CtaBand } from "@/components/sections/cta-band";
 import { OperaDiagram } from "@/components/sections/opera-diagram";
 import { JsonLd } from "@/components/seo/json-ld";
@@ -17,7 +18,13 @@ export const metadata: Metadata = buildMetadata({
   path: "/about",
 });
 
-const environments = ["Financial Services", "Government & Public Sector", "Healthcare", "Technology"];
+const environments = ["Government & Public Sector", "Energy & Critical Infrastructure", "Financial Services", "Enterprise SaaS"];
+
+const elsewhere = [
+  { label: "Substack", href: site.substack },
+  { label: "GitHub", href: site.github },
+  { label: "Gumroad", href: site.gumroad },
+];
 
 const gaps = [
   "Ownership no one clearly holds",
@@ -123,7 +130,28 @@ export default function AboutPage() {
                   </li>
                 ))}
               </ul>
-              <p className="mt-6 text-sm text-muted">Creator of the OPERA governance methodology.</p>
+              <p className="mt-6 text-sm text-muted">
+                Creator of the{" "}
+                <Link href="/methodology" className="text-accent underline underline-offset-4">
+                  OPERA governance methodology
+                </Link>
+                .
+              </p>
+              <p className="mt-6 text-eyebrow uppercase tracking-widest text-muted">Elsewhere</p>
+              <ul className="mt-4 flex flex-wrap gap-x-6 gap-y-2 border-t border-border pt-4">
+                {elsewhere.map((link) => (
+                  <li key={link.label}>
+                    <a
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm text-ink hover:text-accent"
+                    >
+                      {link.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </Container>

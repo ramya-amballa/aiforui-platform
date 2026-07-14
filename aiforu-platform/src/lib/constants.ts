@@ -11,10 +11,14 @@ export const site = {
   twitter: "",
   email: "amballa.ramya911@gmail.com",
   linkedin: "https://www.linkedin.com/in/amballa-ramya/",
+  substack: "https://aiforui.substack.com",
+  github: "https://github.com/ramya-amballa",
+  gumroad: "https://ramyavibes2.gumroad.com",
 } as const;
 
 export const primaryNav: NavItem[] = [
   { label: "Home", href: "/" },
+  { label: "Methodology", href: "/methodology" },
   { label: "Selected Engagement Areas", href: "/selected-advisory-engagements" },
   { label: "Governance Domains", href: "/governance-domains" },
   { label: "Insights", href: "/insights" },
@@ -27,6 +31,7 @@ export const footerNav: { title: string; items: NavItem[] }[] = [
   {
     title: "Practice",
     items: [
+      { label: "Methodology", href: "/methodology" },
       { label: "Selected Engagement Areas", href: "/selected-advisory-engagements" },
       { label: "Governance Domains", href: "/governance-domains" },
     ],

@@ -74,7 +74,7 @@ export const insights: Insight[] = [
     body: [
       "A board that asks whether the organisation has an AI policy will almost always get a satisfying answer, since most now have one. It is a weaker question than it appears: a policy document confirms intent, not execution.",
       "A more useful question starts with ownership: for AI use cases in production, who is accountable for the risk decision on each, and can that person be named? Boards that ask this often find accountability was assumed to sit somewhere without ever being formally assigned.",
-      "The second question is about evidence: when was the risk assessment last reviewed, and by whom? One performed once, at launch, and never revisited is a snapshot, not governance. Asking for the review cadence, not just the assessment's existence, surfaces whether oversight is live or historical.",
+      "The second question is about evidence: when was the risk assessment last reviewed, and by whom? One performed once, at launch, and never revisited is a snapshot, not governance. Asking for the review cadence, beyond the assessment's existence, surfaces whether oversight is live or historical.",
     ],
     featured: true,
   },
@@ -90,7 +90,7 @@ export const insights: Insight[] = [
     body: [
       "In regulated sectors, a compliance obligation does not transfer to a vendor simply because the vendor performs the activity. The regulated organisation typically remains accountable for the outcome, so third-party governance has to be built around that, not standard commercial risk allocation.",
       "A vendor questionnaire built for general commercial risk will miss sector-specific obligations, data residency, audit rights, incident notification timelines. Assessment criteria need to be built from the regulatory obligation backward, not a generic template forward.",
-      "It also changes what monitoring needs to mean. A vendor compliant at onboarding can drift out of alignment as the regulatory requirement itself evolves, with no commercial breach involved. Monitoring in regulated sectors has to track the obligation, not just the contract.",
+      "It also changes what monitoring needs to mean. A vendor compliant at onboarding can drift out of alignment as the regulatory requirement itself evolves, with no commercial breach involved. Monitoring in regulated sectors has to track the obligation itself, beyond the contract.",
     ],
     featured: false,
   },

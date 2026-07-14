@@ -14,8 +14,7 @@ export function Footer() {
               {site.name}
             </Link>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted">
-              Independent advisory in AI governance, digital governance, cyber governance, technology risk and
-              third-party governance, for regulated and high-assurance organisations.
+              Independent advisory practice of {site.advisorName}, built on the OPERA governance methodology.
             </p>
           </div>
 
@@ -51,6 +50,27 @@ export function Footer() {
                 <Link href="/contact" className="text-sm text-ink/80 hover:text-accent">
                   Start a Conversation
                 </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <p className="text-eyebrow uppercase tracking-widest text-muted">Elsewhere</p>
+            <ul className="mt-4 space-y-3">
+              <li>
+                <a href={site.substack} target="_blank" rel="noopener noreferrer" className="text-sm text-ink/80 hover:text-accent">
+                  Substack
+                </a>
+              </li>
+              <li>
+                <a href={site.github} target="_blank" rel="noopener noreferrer" className="text-sm text-ink/80 hover:text-accent">
+                  GitHub
+                </a>
+              </li>
+              <li>
+                <a href={site.gumroad} target="_blank" rel="noopener noreferrer" className="text-sm text-ink/80 hover:text-accent">
+                  Gumroad
+                </a>
               </li>
             </ul>
           </div>

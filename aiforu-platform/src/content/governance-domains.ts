@@ -39,7 +39,7 @@ export const governanceDomains: GovernanceDomain[] = [
     shortName: "Responsible AI",
     cluster: "emerging-technology-governance",
     eyebrow: "Governance Domain",
-    summary: "Putting fairness, transparency and human oversight into practice, not just principle.",
+    summary: "Turning fairness, transparency and human oversight from stated principle into daily practice.",
     overview:
       "Responsible AI principles are widely published and rarely operationalised. This covers the mechanics: how bias is actually tested, who signs off a model before launch, and where human oversight is genuinely exercised, not nominally present.",
     focusAreas: ["Model review and sign-off processes", "Bias testing and monitoring practice"],
@@ -157,7 +157,7 @@ export const governanceDomains: GovernanceDomain[] = [
     eyebrow: "Governance Domain",
     summary: "Readiness for India's Digital Personal Data Protection Act, built as governance, not a checklist.",
     overview:
-      "The DPDP Act sets specific obligations on consent, purpose limitation and data principal rights. This translates them into governance: accountable owners for consent and grievance redressal, and the evidence base a DPO needs to demonstrate ongoing compliance, not just initial readiness.",
+      "The DPDP Act sets specific obligations on consent, purpose limitation and data principal rights. This translates them into governance: accountable owners for consent and grievance redressal, and the evidence base a DPO needs to demonstrate ongoing compliance, beyond initial readiness.",
     focusAreas: ["Data processing and consent inventories", "DPDP gap assessment against current practice", "Accountability structures for ongoing compliance"],
     whoItsFor: ["Chief Compliance Officer", "Enterprise Leadership"],
     relatedEngagementSlugs: ["dpdp-governance-readiness-programme"],

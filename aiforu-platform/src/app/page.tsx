@@ -91,9 +91,6 @@ export default function HomePage() {
           <div className="mt-12">
             <OperaDiagram />
           </div>
-          <Link href="/about" className="mt-10 inline-block text-sm text-accent underline underline-offset-4">
-            More on the approach and its founder &rarr;
-          </Link>
         </Container>
       </section>
 
