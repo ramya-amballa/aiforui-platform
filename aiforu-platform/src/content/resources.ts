@@ -16,7 +16,7 @@ export const resources: Resource[] = [
     accessTier: "Free",
     domainSlugs: ["ai-governance"],
     description:
-      "A structured way to assess where an organisation's AI governance actually stands, across ownership, risk evaluation and assurance, built on the OPERA methodology.",
+      "Assess where AI governance actually stands, across ownership, risk evaluation and assurance, built on the OPERA methodology.",
     featured: true,
   },
   {
@@ -25,8 +25,7 @@ export const resources: Resource[] = [
     type: "Playbook",
     accessTier: "Premium",
     domainSlugs: ["ai-governance", "responsible-ai"],
-    description:
-      "A working playbook for the specific decisions AI governance requires: use-case risk evaluation, escalation triggers and sign-off criteria.",
+    description: "Use-case risk evaluation, escalation triggers and sign-off criteria for the decisions AI governance actually requires.",
     featured: true,
   },
   {
@@ -35,8 +34,7 @@ export const resources: Resource[] = [
     type: "Checklist",
     accessTier: "Free",
     domainSlugs: ["third-party-governance"],
-    description:
-      "A checklist for assessing vendor risk proportional to criticality and data access, covering onboarding through ongoing monitoring.",
+    description: "Assess vendor risk proportional to criticality and data access, from onboarding through ongoing monitoring.",
     featured: true,
   },
   {
@@ -45,8 +43,7 @@ export const resources: Resource[] = [
     type: "Briefing",
     accessTier: "Free",
     domainSlugs: ["dpdp-governance-readiness"],
-    description:
-      "A concise briefing on India's Digital Personal Data Protection Act, framed around the governance decisions it actually requires organisations to make.",
+    description: "India's Digital Personal Data Protection Act, framed around the governance decisions it actually requires.",
     featured: true,
   },
   {
@@ -55,8 +52,7 @@ export const resources: Resource[] = [
     type: "Toolkit",
     accessTier: "Premium",
     domainSlugs: ["dpdp-governance-readiness", "operational-compliance"],
-    description:
-      "Templates and working documents for DPDP compliance: data processing inventory, consent mapping and accountability structure.",
+    description: "Data processing inventory, consent mapping and accountability structure templates for DPDP compliance.",
     featured: false,
   },
   {
@@ -65,8 +61,7 @@ export const resources: Resource[] = [
     type: "Template",
     accessTier: "Premium",
     domainSlugs: ["governance-transformation"],
-    description:
-      "A working template for documenting decision rights, ownership and escalation paths as part of a governance operating model redesign.",
+    description: "Document decision rights, ownership and escalation paths for a governance operating model redesign.",
     featured: false,
   },
   {
@@ -75,8 +70,7 @@ export const resources: Resource[] = [
     type: "Whitepaper",
     accessTier: "Free",
     domainSlugs: ["technology-risk"],
-    description:
-      "A whitepaper on building technology risk appetite statements and control ownership models that hold up under audit.",
+    description: "Building risk appetite statements and control ownership models that hold up under audit.",
     featured: false,
   },
   {
@@ -85,8 +79,7 @@ export const resources: Resource[] = [
     type: "Reference Architecture",
     accessTier: "Premium",
     domainSlugs: ["cyber-governance"],
-    description:
-      "A reference architecture for the governance layer behind a cyber security programme: control ownership, gap prioritisation and assessment readiness.",
+    description: "The governance layer behind a cyber security programme: control ownership, gap prioritisation, assessment readiness.",
     featured: false,
   },
   {
@@ -95,8 +88,7 @@ export const resources: Resource[] = [
     type: "Toolkit",
     accessTier: "Free",
     domainSlugs: ["government-digital-governance"],
-    description:
-      "A set of governance artefacts adapted for public-sector accountability: ownership maps, oversight reporting templates and statutory alignment checklists.",
+    description: "Ownership maps, oversight reporting templates and statutory alignment checklists for public-sector accountability.",
     featured: true,
   },
   {
@@ -105,8 +97,7 @@ export const resources: Resource[] = [
     type: "Checklist",
     accessTier: "Free",
     domainSlugs: ["audit-readiness"],
-    description:
-      "A checklist for building continuous audit evidence into day-to-day control operation, so audit becomes validation rather than discovery.",
+    description: "Build continuous audit evidence into day-to-day control operation, so audit becomes validation, not discovery.",
     featured: false,
   },
 ];

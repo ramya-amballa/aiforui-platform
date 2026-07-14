@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
 import { GovernanceCapabilityMap } from "@/components/governance/governance-capability-map";
 import { CtaBand } from "@/components/sections/cta-band";
+import { MaturityScale } from "@/components/sections/maturity-scale";
 import { PageHero } from "@/components/sections/page-hero";
 import { Container } from "@/components/ui/container";
+import { Divider } from "@/components/ui/divider";
+import { SectionHeading } from "@/components/ui/section-heading";
 import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
@@ -19,6 +22,15 @@ export default function GovernanceDomainsPage() {
         title="Governance Domains"
         description="A structured map of the practice, grouped by cluster, so the taxonomy can grow without a redesign."
       />
+      <section className="py-section-sm">
+        <Container size="wide">
+          <SectionHeading eyebrow="Assessment" title="How Domain Maturity Is Assessed" />
+          <div className="mt-10">
+            <MaturityScale />
+          </div>
+        </Container>
+      </section>
+      <Divider />
       <section className="py-section-sm">
         <Container size="wide">
           <GovernanceCapabilityMap variant="full" />

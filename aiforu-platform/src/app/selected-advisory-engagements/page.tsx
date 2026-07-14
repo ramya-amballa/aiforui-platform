@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { AdvisoryEngagementGrid } from "@/components/advisory/advisory-engagement-grid";
 import { CtaBand } from "@/components/sections/cta-band";
+import { EngagementLifecycle } from "@/components/sections/engagement-lifecycle";
 import { PageHero } from "@/components/sections/page-hero";
 import { Container } from "@/components/ui/container";
+import { Divider } from "@/components/ui/divider";
 import { FilterPills } from "@/components/ui/filter-pills";
 import { Pagination } from "@/components/ui/pagination";
 import { advisoryEngagements } from "@/content/advisory-engagements";
@@ -36,8 +38,14 @@ export default async function SelectedAdvisoryEngagementsPage({ searchParams }: 
       <PageHero
         eyebrow="Selected Work"
         title="Selected Engagement Areas"
-        description="How advisory work is approached and what it produces, across government initiatives, enterprise advisory engagements and standalone strategic programmes. Named case studies are added as they are cleared for public reference."
+        description="How advisory work is approached and what it produces, across government, enterprise and strategic programmes."
       />
+      <section className="py-section-sm">
+        <Container size="wide">
+          <EngagementLifecycle />
+        </Container>
+      </section>
+      <Divider />
       <section className="py-section-sm">
         <Container size="wide">
           <FilterPills
