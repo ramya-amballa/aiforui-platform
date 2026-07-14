@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   return buildMetadata({
     title: engagement.title,
-    description: engagement.summary,
+    description: engagement.focus,
     path: `/selected-advisory-engagements/${engagement.slug}`,
   });
 }
@@ -38,12 +38,12 @@ export default async function AdvisoryEngagementPage({ params }: PageProps) {
     <>
       <Breadcrumbs
         items={[
-          { label: "Selected Advisory Engagements", href: "/selected-advisory-engagements" },
+          { label: "Selected Engagement Areas", href: "/selected-advisory-engagements" },
           { label: engagement.title, href: `/selected-advisory-engagements/${engagement.slug}` },
         ]}
       />
       <AdvisoryEngagementDetail engagement={engagement} relatedDomains={relatedDomains} />
-      <BackLink href="/selected-advisory-engagements" label="All Advisory Engagements" />
+      <BackLink href="/selected-advisory-engagements" label="All Engagement Areas" />
     </>
   );
 }

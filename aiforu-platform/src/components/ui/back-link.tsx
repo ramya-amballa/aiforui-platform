@@ -7,7 +7,7 @@ interface BackLinkProps {
 }
 
 /**
- * Quiet wayfinding for the end of a detail/article page — deliberately
+ * Quiet wayfinding for the end of a detail/article page, deliberately
  * not a CTA band. A reader who came here to evaluate or verify
  * shouldn't be pushed toward "Start a Conversation" on every page.
  */

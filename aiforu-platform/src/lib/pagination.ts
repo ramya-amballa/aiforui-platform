@@ -9,7 +9,7 @@ export interface PaginationResult<T> {
 
 /**
  * Pure slice-based pagination over an in-memory array. The listing
- * pages that call this only know about `items`/`currentPage`/`totalPages` —
+ * pages that call this only know about `items`/`currentPage`/`totalPages`;
  * when content/*.ts is eventually backed by a CMS or database query
  * with LIMIT/OFFSET, only this function's internals change.
  */

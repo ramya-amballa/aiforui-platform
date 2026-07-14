@@ -14,7 +14,8 @@ export function Footer() {
               {site.name}
             </Link>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted">
-              [Footer Executive Summary Placeholder — one or two lines on independent advisory positioning.]
+              Independent advisory in AI governance, digital governance, cyber governance, technology risk and
+              third-party governance, for regulated and high-assurance organisations.
             </p>
           </div>
 
@@ -36,8 +37,11 @@ export function Footer() {
           <div>
             <p className="text-eyebrow uppercase tracking-widest text-muted">Connect</p>
             <ul className="mt-4 space-y-3">
-              <li className="text-sm text-ink/80">[LinkedIn Placeholder]</li>
-              <li className="text-sm text-ink/80">[Email Placeholder]</li>
+              <li>
+                <Link href="/contact" className="text-sm text-ink/80 hover:text-accent">
+                  Start a Conversation
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
@@ -48,10 +52,10 @@ export function Footer() {
           </p>
           <div className="flex gap-6">
             <Link href="/privacy-policy" className="hover:text-ink">
-              [Privacy Policy Placeholder]
+              Privacy Policy
             </Link>
             <Link href="/terms" className="hover:text-ink">
-              [Terms Placeholder]
+              Terms
             </Link>
           </div>
         </div>

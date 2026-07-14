@@ -15,7 +15,7 @@ interface GovernanceDomainDetailProps {
 }
 
 /**
- * Reusable template for every governance domain page — all thirteen
+ * Reusable template for every governance domain page: all thirteen
  * domains render through this one component. Domain content lives
  * entirely in content/governance-domains.ts; a fourteenth domain
  * needs no change here.
@@ -75,7 +75,7 @@ export function GovernanceDomainDetail({
           <Divider />
           <section className="py-section-sm">
             <Container size="wide">
-              <h2 className="font-serif text-title text-ink">Related Advisory Engagements</h2>
+              <h2 className="font-serif text-title text-ink">Related Engagement Areas</h2>
               <div className="mt-8">
                 <AdvisoryEngagementGrid engagements={relatedEngagements} />
               </div>

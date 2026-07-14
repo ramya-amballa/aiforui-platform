@@ -3,7 +3,7 @@ import type { AdvisoryEngagement } from "@/types";
 
 export function AdvisoryEngagementGrid({ engagements }: { engagements: AdvisoryEngagement[] }) {
   if (engagements.length === 0) {
-    return <p className="text-sm text-muted">[No Engagements Available Placeholder]</p>;
+    return <p className="text-sm text-muted">No engagement areas match this filter yet.</p>;
   }
 
   return (

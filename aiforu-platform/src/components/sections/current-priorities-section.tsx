@@ -4,7 +4,7 @@ import { formatDate } from "@/lib/utils";
 import type { CurrentPrioritiesSnapshot } from "@/types";
 
 /**
- * A "now page" style block — signals an active practice without a
+ * A "now page" style block, signalling an active practice without a
  * news feed or promotional framing. `snapshot.updatedAt` is rendered
  * plainly so the section is self-policing: it looks stale if it is.
  */

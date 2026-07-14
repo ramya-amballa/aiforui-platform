@@ -15,7 +15,7 @@ const aspectMap: Record<NonNullable<PlaceholderProps["aspect"]>, string> = {
 
 /**
  * Visual stand-in for imagery, portraits and diagrams that will be
- * supplied in Phase 2. Never use for copy — use inline `[Placeholder]`
+ * supplied later. Never use for copy; use inline `[Placeholder]`
  * text for that so content gaps stay searchable.
  */
 export function Placeholder({ label, className, aspect = "auto" }: PlaceholderProps) {

@@ -5,7 +5,7 @@
  * This is a living-platform architecture: every collection below is
  * additive-only by design. New engagements, domains, insights and
  * resources are appended to content/*.ts without touching page or
- * component code — see content/README.md for the extension contract.
+ * component code; see content/README.md for the extension contract.
  */
 
 export interface NavItem {
@@ -46,7 +46,14 @@ export interface GovernanceDomain {
  * Government work, enterprise consulting-style engagements and
  * standalone strategic advisory assignments all live in the same
  * collection, distinguished by `track` rather than separate content
- * types — they share one template and one taxonomy.
+ * types, so they share one template and one taxonomy.
+ *
+ * This describes engagement areas: real methodology, real deliverables,
+ * real scope of practice. It does not claim specific client instances.
+ * `client`, `sector`, `year` and `outcome` are reserved, optional fields
+ * for named, verified engagements once cleared for public reference;
+ * the detail template renders them only when present, so adding a real
+ * case study later is a data-only change.
  */
 export type EngagementTrack = "Government" | "Enterprise Advisory" | "Strategic Programme";
 
@@ -55,14 +62,14 @@ export interface AdvisoryEngagement {
   title: string;
   track: EngagementTrack;
   domainSlugs: string[];
-  sector: string;
-  engagementType: string;
-  year: string;
-  summary: string;
-  context: string;
+  focus: string;
   approach: string[];
-  outcome: string;
+  deliverables: string[];
   featured: boolean;
+  client?: string;
+  sector?: string;
+  year?: string;
+  outcome?: string;
 }
 
 /**
@@ -83,6 +90,7 @@ export interface Insight {
   date: string;
   readTime: string;
   excerpt: string;
+  body: string[];
   featured: boolean;
 }
 
@@ -110,7 +118,7 @@ export interface Resource {
 
 /**
  * A single dated snapshot of what the practice is actively focused on
- * right now — the homepage "Current Advisory Priorities" section.
+ * right now: the homepage "Current Advisory Priorities" section.
  * Update `updatedAt` whenever `items` changes so staleness is visible
  * in the data itself, not just in the rendered page.
  */

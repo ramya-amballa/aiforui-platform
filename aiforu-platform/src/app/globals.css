@@ -16,7 +16,7 @@
   --color-accent: 217 46% 20%;
   --color-accent-muted: 217 30% 35%;
   /* 34% lightness (not the brand's original 40%) clears WCAG AA 4.5:1
-     against --color-paper — see the a11y-check scan in the deploy log. */
+     against --color-paper; see the a11y-check scan in the deploy log. */
   --color-signal: 38 42% 34%;
 }
 

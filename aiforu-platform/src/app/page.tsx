@@ -20,8 +20,9 @@ import { buildMetadata } from "@/lib/metadata";
 import { primaryCta, secondaryCta } from "@/lib/constants";
 
 export const metadata: Metadata = buildMetadata({
-  title: "[Homepage Title Placeholder]",
-  description: "[Homepage Meta Description Placeholder]",
+  title: "AIforU&I: Independent Advisory in AI and Technology Governance",
+  description:
+    "Independent advisory practice of Ramya Amballa, working across AI governance, digital governance, cyber governance, technology risk and third-party governance for regulated and high-assurance organisations.",
   path: "/",
 });
 
@@ -44,11 +45,12 @@ export default function HomePage() {
             <div className="lg:col-span-8">
               <Eyebrow>Independent Advisory</Eyebrow>
               <h1 className="mt-6 max-w-4xl font-serif text-display-lg text-ink balance">
-                [Hero Title Placeholder]
+                Governance that holds up under audit, regulation and board scrutiny.
               </h1>
               <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted pretty">
-                [Executive Introduction Placeholder — one to two sentences establishing independent advisory
-                positioning and point of view, not a services pitch.]
+                AIforU&I is the independent advisory practice of Ramya Amballa, working with boards, executives
+                and public-sector leaders on AI governance, digital governance, cyber governance, technology
+                risk and third-party governance.
               </p>
               <div className="mt-10 flex flex-wrap items-center gap-6">
                 <Button href={primaryCta.href} variant="primary" size="lg">
@@ -75,29 +77,36 @@ export default function HomePage() {
         <Container size="wide">
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
             <div className="lg:col-span-4">
-              <SectionHeading eyebrow="About Ramya" title="[Why Organisations Engage Her — Heading Placeholder]" />
+              <SectionHeading eyebrow="About Ramya" title="Judgment before documentation" />
             </div>
             <div className="lg:col-span-7 lg:col-start-6">
-              <p className="text-lg leading-relaxed text-ink pretty">[Why Organisations Engage Her — Paragraph Placeholder 1]</p>
+              <p className="text-lg leading-relaxed text-ink pretty">
+                Most governance failures are not caused by a missing framework. They are caused by ownership
+                no one holds, risk decisions no one is accountable for, and evidence assembled after the fact
+                instead of maintained as a matter of course.
+              </p>
               <p className="mt-6 text-base leading-relaxed text-muted pretty">
-                [Why Organisations Engage Her — Paragraph Placeholder 2]
+                Ramya Amballa works across AI governance, cyber governance, technology risk and third-party
+                governance, building operating models that regulators, auditors and boards can rely on. The
+                OPERA methodology (Opportunity, People, Evaluation, Response, Assurance) structures that work
+                from use case through to ongoing assurance.
               </p>
               <Link href="/about" className="mt-6 inline-block text-sm text-accent underline underline-offset-4">
-                [Read Full Profile Placeholder]
+                Read the full profile
               </Link>
             </div>
           </div>
         </Container>
       </section>
 
-      {/* Governance domains — capability map */}
+      {/* Governance domains: capability map */}
       <section className="border-t border-border py-section">
         <Container size="wide">
           <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
             <SectionHeading
               eyebrow="Capability Map"
               title="Governance Domains"
-              description="[Governance Domains Section Description Placeholder]"
+              description="Thirteen domains across four clusters, from AI governance to government digital governance, each with a defined scope and the audience it serves."
             />
             <Button href="/governance-domains" variant="ghost">
               View the full map &rarr;
@@ -109,17 +118,17 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* Selected advisory engagements */}
+      {/* Selected engagement areas */}
       <section className="border-t border-border py-section">
         <Container size="wide">
           <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
             <SectionHeading
               eyebrow="Selected Work"
-              title="Selected Advisory Engagements"
-              description="[Selected Advisory Engagements Section Description Placeholder]"
+              title="Selected Engagement Areas"
+              description="How advisory work is approached and what it produces, from AI governance operating models to third-party governance frameworks."
             />
             <Button href="/selected-advisory-engagements" variant="ghost">
-              View all engagements &rarr;
+              View all engagement areas &rarr;
             </Button>
           </div>
           <div className="mt-12">
@@ -135,7 +144,7 @@ export default function HomePage() {
             <SectionHeading
               eyebrow="Perspective"
               title="Insights"
-              description="[Insights Section Description Placeholder]"
+              description="Perspective on governance decisions, written for the people who have to make them."
             />
             <Button href="/insights" variant="ghost">
               View all insights &rarr;
@@ -148,8 +157,8 @@ export default function HomePage() {
       </section>
 
       <CtaBand
-        title="[Homepage Closing CTA Title Placeholder]"
-        description="[Homepage Closing CTA Description Placeholder]"
+        title="Discuss a governance challenge"
+        description="Most engagements begin with a working conversation about a specific governance, risk or AI oversight problem, not a formal proposal."
       />
     </>
   );

@@ -10,12 +10,12 @@ export function personSchema() {
     "@type": "Person",
     name: site.advisorName,
     url: site.url,
-    jobTitle: "[Job Title / Positioning Placeholder]",
+    jobTitle: "Founder and Independent Advisor, AIforU&I",
     worksFor: {
       "@type": "Organization",
       name: site.name,
     },
-    description: "[Person Description Placeholder]",
+    description: site.description,
   };
 }
 

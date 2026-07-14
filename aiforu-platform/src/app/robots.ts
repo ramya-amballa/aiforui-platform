@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { site } from "@/lib/constants";
 
 /**
- * True only on a Vercel Production deployment — mirrors the checks in
+ * True only on a Vercel Production deployment; mirrors the checks in
  * next.config.ts and lib/metadata.ts. Every other environment
  * (Preview deployments, local dev) disallows all crawling.
  */

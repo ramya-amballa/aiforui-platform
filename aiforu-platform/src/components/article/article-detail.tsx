@@ -4,8 +4,8 @@ import { formatDate } from "@/lib/utils";
 import type { Insight } from "@/types";
 
 /**
- * Reusable article template for /insights/[slug]. Body copy is
- * represented by placeholder paragraphs pending Phase 2 authoring.
+ * Reusable article template for /insights/[slug]. Body copy comes from
+ * insight.body, one paragraph per array entry.
  */
 export function ArticleDetail({ insight }: { insight: Insight }) {
   return (
@@ -22,9 +22,9 @@ export function ArticleDetail({ insight }: { insight: Insight }) {
         <Placeholder label="Article Cover Image Placeholder" aspect="video" className="mt-10" />
 
         <div className="mt-10 space-y-6 text-base leading-relaxed text-ink pretty">
-          <p>[Article Body Paragraph Placeholder 1]</p>
-          <p>[Article Body Paragraph Placeholder 2]</p>
-          <p>[Article Body Paragraph Placeholder 3]</p>
+          {insight.body.map((paragraph, index) => (
+            <p key={index}>{paragraph}</p>
+          ))}
         </div>
       </Container>
     </article>

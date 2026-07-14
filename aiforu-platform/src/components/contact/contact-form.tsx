@@ -8,7 +8,7 @@ const fieldStyles =
 
 /**
  * Presentational contact form. Submission wiring (API route / provider)
- * is out of scope for Phase 1 — see README "Remaining Work".
+ * is out of scope for Phase 1; see README "Remaining Work".
  */
 export function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
@@ -21,7 +21,7 @@ export function ContactForm() {
   if (submitted) {
     return (
       <div className="border border-border p-8">
-        <p className="text-base text-ink">[Form Submission Confirmation Placeholder]</p>
+        <p className="text-base text-ink">Thank you. Your message has been received, and you&apos;ll hear back directly within a few business days.</p>
       </div>
     );
   }
@@ -33,7 +33,7 @@ export function ContactForm() {
           <label htmlFor="name" className="text-eyebrow uppercase tracking-widest text-muted">
             Name
           </label>
-          <input id="name" name="name" type="text" required className={`mt-2 ${fieldStyles}`} placeholder="[Name Placeholder]" />
+          <input id="name" name="name" type="text" required className={`mt-2 ${fieldStyles}`} placeholder="Jane Doe" />
         </div>
         <div>
           <label htmlFor="organization" className="text-eyebrow uppercase tracking-widest text-muted">
@@ -44,20 +44,20 @@ export function ContactForm() {
             name="organization"
             type="text"
             className={`mt-2 ${fieldStyles}`}
-            placeholder="[Organisation Placeholder]"
+            placeholder="Organisation name"
           />
         </div>
         <div>
           <label htmlFor="role" className="text-eyebrow uppercase tracking-widest text-muted">
             Role
           </label>
-          <input id="role" name="role" type="text" className={`mt-2 ${fieldStyles}`} placeholder="[Role Placeholder]" />
+          <input id="role" name="role" type="text" className={`mt-2 ${fieldStyles}`} placeholder="CISO, Board Member, etc." />
         </div>
         <div>
           <label htmlFor="email" className="text-eyebrow uppercase tracking-widest text-muted">
             Email
           </label>
-          <input id="email" name="email" type="email" required className={`mt-2 ${fieldStyles}`} placeholder="[Email Placeholder]" />
+          <input id="email" name="email" type="email" required className={`mt-2 ${fieldStyles}`} placeholder="jane@company.com" />
         </div>
       </div>
 
@@ -71,12 +71,12 @@ export function ContactForm() {
           rows={5}
           required
           className={`mt-2 ${fieldStyles}`}
-          placeholder="[Message Placeholder]"
+          placeholder="What are you working through right now?"
         />
       </div>
 
       <Button type="submit" variant="primary" size="lg">
-        [Submit CTA Placeholder]
+        Send message
       </Button>
     </form>
   );

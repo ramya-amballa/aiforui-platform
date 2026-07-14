@@ -3,17 +3,17 @@ import type { NavItem } from "@/types";
 export const site = {
   name: "AIforU&I",
   advisorName: "Ramya Amballa",
-  tagline: "[Site Tagline Placeholder]",
+  tagline: "Independent advisory in AI, digital, cyber and technology risk governance.",
   description:
-    "[Site Meta Description Placeholder — independent advisory positioning across AI governance, digital governance, cyber governance, technology risk and third-party governance.]",
-  url: "https://www.aiforuandi.com",
+    "AIforU&I is an independent advisory practice founded by Ramya Amballa, focused on AI governance, digital governance, cyber governance, technology risk and third-party governance for regulated and high-assurance organisations.",
+  url: "https://aiforui.org",
   locale: "en_US",
-  twitter: "@aiforuandi",
+  twitter: "",
 } as const;
 
 export const primaryNav: NavItem[] = [
   { label: "Home", href: "/" },
-  { label: "Selected Advisory Engagements", href: "/selected-advisory-engagements" },
+  { label: "Selected Engagement Areas", href: "/selected-advisory-engagements" },
   { label: "Governance Domains", href: "/governance-domains" },
   { label: "Insights", href: "/insights" },
   { label: "Resources", href: "/resources" },
@@ -25,7 +25,7 @@ export const footerNav: { title: string; items: NavItem[] }[] = [
   {
     title: "Practice",
     items: [
-      { label: "Selected Advisory Engagements", href: "/selected-advisory-engagements" },
+      { label: "Selected Engagement Areas", href: "/selected-advisory-engagements" },
       { label: "Governance Domains", href: "/governance-domains" },
     ],
   },
@@ -46,7 +46,7 @@ export const footerNav: { title: string; items: NavItem[] }[] = [
 ];
 
 export const primaryCta: NavItem = {
-  label: "Selected Advisory Engagements",
+  label: "Selected Engagement Areas",
   href: "/selected-advisory-engagements",
 };
 

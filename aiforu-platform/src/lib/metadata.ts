@@ -10,7 +10,7 @@ interface BuildMetadataInput {
 }
 
 /**
- * True only on a Vercel Production deployment — mirrors the check in
+ * True only on a Vercel Production deployment; mirrors the check in
  * next.config.ts. Preview deployments and local dev must never be
  * indexable, regardless of what an individual page passes as `noIndex`.
  */
@@ -48,7 +48,7 @@ export function buildMetadata({
       card: "summary_large_image",
       title,
       description,
-      site: site.twitter,
+      ...(site.twitter ? { site: site.twitter } : {}),
     },
     robots: shouldIndex
       ? { index: true, follow: true }

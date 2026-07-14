@@ -9,7 +9,7 @@ interface GovernanceCapabilityMapProps {
 
 /**
  * Renders the domain taxonomy grouped by cluster. `compact` (used on
- * the homepage) is a text index — four columns of links, no cards —
+ * the homepage) is a text index: four columns of links, no cards,
  * so thirteen domains read as a structured map rather than a wall of
  * tiles. `full` (used on /governance-domains) renders each cluster as
  * a heading followed by the standard domain card grid.

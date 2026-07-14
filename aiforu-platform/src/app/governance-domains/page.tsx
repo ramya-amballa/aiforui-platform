@@ -7,7 +7,7 @@ import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
   title: "Governance Domains",
-  description: "[Governance Domains — Meta Description Placeholder]",
+  description: "Thirteen governance domains across four clusters: emerging technology, risk and cyber, regulatory and third-party, and public sector governance.",
   path: "/governance-domains",
 });
 
@@ -17,7 +17,7 @@ export default function GovernanceDomainsPage() {
       <PageHero
         eyebrow="Capability Map"
         title="Governance Domains"
-        description="[Governance Domains — Page Description Placeholder. A structured map of the practice, not a services list — grouped so the taxonomy can grow without a redesign.]"
+        description="A structured map of the practice, grouped by cluster, so the taxonomy can grow without a redesign."
       />
       <section className="py-section-sm">
         <Container size="wide">

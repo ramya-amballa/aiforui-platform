@@ -6,7 +6,7 @@ import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
   title: "Contact",
-  description: "[Contact — Meta Description Placeholder]",
+  description: "Start a conversation about a specific AI governance, technology risk or third-party governance challenge.",
   path: "/contact",
 });
 
@@ -17,23 +17,16 @@ export default function ContactPage() {
         <div className="grid grid-cols-1 gap-16 lg:grid-cols-12">
           <div className="lg:col-span-5">
             <Eyebrow>Start a Conversation</Eyebrow>
-            <h1 className="mt-6 font-serif text-display text-ink balance">[Contact Page Title Placeholder]</h1>
+            <h1 className="mt-6 font-serif text-display text-ink balance">Let&apos;s discuss the problem, not a proposal.</h1>
             <p className="mt-6 max-w-md text-base leading-relaxed text-muted pretty">
-              [Contact — Introductory Description Placeholder]
+              Share what you&apos;re working through: an AI governance decision, a technology risk gap, a
+              third-party governance question, or something that does not fit neatly into a category yet.
             </p>
 
             <dl className="mt-12 space-y-6 border-t border-border pt-8">
               <div>
-                <dt className="text-eyebrow uppercase tracking-widest text-muted">Direct</dt>
-                <dd className="mt-2 text-sm text-ink">[Direct Email Placeholder]</dd>
-              </div>
-              <div>
-                <dt className="text-eyebrow uppercase tracking-widest text-muted">LinkedIn</dt>
-                <dd className="mt-2 text-sm text-ink">[LinkedIn Profile Placeholder]</dd>
-              </div>
-              <div>
                 <dt className="text-eyebrow uppercase tracking-widest text-muted">Response Time</dt>
-                <dd className="mt-2 text-sm text-ink">[Response Time Placeholder]</dd>
+                <dd className="mt-2 text-sm text-ink">Replies are sent directly, typically within a few business days.</dd>
               </div>
             </dl>
           </div>

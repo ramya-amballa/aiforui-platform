@@ -18,7 +18,7 @@ export function ResourceDetail({ resource }: { resource: Resource }) {
 
         <div className="mt-10">
           <Button variant="primary" size="lg">
-            {isPremium ? "[Request Access Placeholder]" : "[Download Resource Placeholder]"}
+            {isPremium ? "Request access" : "Download resource"}
           </Button>
         </div>
       </Container>

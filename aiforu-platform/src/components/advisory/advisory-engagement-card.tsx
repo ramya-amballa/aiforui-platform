@@ -6,15 +6,13 @@ export function AdvisoryEngagementCard({ engagement }: { engagement: AdvisoryEng
   return (
     <Card href={`/selected-advisory-engagements/${engagement.slug}`}>
       <div className="flex items-center justify-between gap-3">
-        <CardEyebrow>
-          {engagement.sector} &middot; {engagement.year}
-        </CardEyebrow>
+        <CardEyebrow>{engagement.sector ?? engagement.track}</CardEyebrow>
         <Badge>{engagement.track}</Badge>
       </div>
       <CardTitle>{engagement.title}</CardTitle>
-      <CardDescription>{engagement.summary}</CardDescription>
+      <CardDescription>{engagement.focus}</CardDescription>
       <CardFooter>
-        <span className="text-sm text-accent">View engagement &rarr;</span>
+        <span className="text-sm text-accent">View engagement area &rarr;</span>
       </CardFooter>
     </Card>
   );

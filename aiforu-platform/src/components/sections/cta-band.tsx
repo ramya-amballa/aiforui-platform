@@ -12,8 +12,8 @@ interface CtaBandProps {
  * both the primary and secondary calls to action.
  */
 export function CtaBand({
-  title = "[Closing CTA Title Placeholder]",
-  description = "[Closing CTA Description Placeholder]",
+  title = "Discuss a governance challenge",
+  description = "Most engagements begin with a working conversation about a specific problem, not a formal proposal.",
 }: CtaBandProps) {
   return (
     <section className="border-t border-border py-section-sm">

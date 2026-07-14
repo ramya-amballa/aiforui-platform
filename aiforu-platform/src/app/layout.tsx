@@ -26,11 +26,11 @@ const mono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  ...buildMetadata({ title: `${site.name} — [Site Title Placeholder]`, path: "/" }),
+  ...buildMetadata({ title: `${site.name}: Independent Advisory in AI and Technology Governance`, path: "/" }),
   metadataBase: new URL(site.url),
   title: {
-    default: `${site.name} — [Site Title Placeholder]`,
-    template: `%s — ${site.name}`,
+    default: `${site.name}: Independent Advisory in AI and Technology Governance`,
+    template: `%s | ${site.name}`,
   },
   icons: {
     icon: "/favicon.ico",

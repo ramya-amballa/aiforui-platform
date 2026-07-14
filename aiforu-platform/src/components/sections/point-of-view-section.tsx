@@ -5,7 +5,7 @@ import type { Insight } from "@/types";
 
 /**
  * The signature section of the site. Deliberately not built from the
- * standard Card/ArticleCard primitives — Point of View pieces (original
+ * standard Card/ArticleCard primitives. Point of View pieces (original
  * frameworks, decision models, governance perspectives) are meant to
  * read as authored thinking, not as feed items, so the treatment is
  * large serif type over hairline rules rather than bordered cards.
@@ -19,11 +19,10 @@ export function PointOfViewSection({ pieces }: { pieces: Insight[] }) {
         <div className="max-w-2xl">
           <Eyebrow>Point of View</Eyebrow>
           <h2 className="mt-6 font-serif text-headline text-ink balance">
-            [Point of View Section Heading Placeholder]
+            Original thinking, not commentary on the news cycle
           </h2>
           <p className="mt-4 text-base leading-relaxed text-muted pretty">
-            [Point of View Section Description Placeholder — original frameworks, decision models
-            and governance perspectives, not commentary on the news cycle.]
+            Frameworks, decision models and governance perspectives developed from live advisory work.
           </p>
         </div>
 

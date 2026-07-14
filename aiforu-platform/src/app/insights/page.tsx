@@ -12,7 +12,7 @@ import type { InsightFormat } from "@/types";
 
 export const metadata: Metadata = buildMetadata({
   title: "Insights",
-  description: "[Insights — Meta Description Placeholder]",
+  description: "Original perspective on AI governance, technology risk and third-party governance decisions, from working advisory practice.",
   path: "/insights",
 });
 
@@ -35,7 +35,7 @@ export default async function InsightsPage({ searchParams }: PageProps) {
       <PageHero
         eyebrow="Perspective"
         title="Insights"
-        description="[Insights — Page Description Placeholder. A perspective library, not a news feed — original thinking, governance notes and field observations from live advisory work.]"
+        description="A perspective library: original thinking, governance notes and field observations from live advisory work, not a news feed."
       />
       <section className="py-section-sm">
         <Container size="wide">

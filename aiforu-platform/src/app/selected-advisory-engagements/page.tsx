@@ -11,8 +11,9 @@ import { paginate, parseFilter, parsePage } from "@/lib/pagination";
 import type { EngagementTrack } from "@/types";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Selected Advisory Engagements",
-  description: "[Selected Advisory Engagements — Meta Description Placeholder]",
+  title: "Selected Engagement Areas",
+  description:
+    "Real methodology, approach and deliverables across AI governance, technology risk, cyber governance, third-party governance and government digital governance advisory work.",
   path: "/selected-advisory-engagements",
 });
 
@@ -34,8 +35,8 @@ export default async function SelectedAdvisoryEngagementsPage({ searchParams }: 
     <>
       <PageHero
         eyebrow="Selected Work"
-        title="Selected Advisory Engagements"
-        description="[Selected Advisory Engagements — Page Description Placeholder. Spans government initiatives, enterprise advisory engagements and standalone strategic programmes.]"
+        title="Selected Engagement Areas"
+        description="How advisory work is approached and what it produces, across government initiatives, enterprise advisory engagements and standalone strategic programmes. Named case studies are added as they are cleared for public reference."
       />
       <section className="py-section-sm">
         <Container size="wide">

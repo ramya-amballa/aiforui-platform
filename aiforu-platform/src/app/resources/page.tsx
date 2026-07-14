@@ -12,7 +12,7 @@ import type { ResourceAccessTier, ResourceType } from "@/types";
 
 export const metadata: Metadata = buildMetadata({
   title: "Resources",
-  description: "[Resources — Meta Description Placeholder]",
+  description: "Frameworks, playbooks, checklists, reference architectures and toolkits for AI governance, technology risk, cyber governance and third-party governance.",
   path: "/resources",
 });
 
@@ -50,7 +50,7 @@ export default async function ResourcesPage({ searchParams }: PageProps) {
       <PageHero
         eyebrow="Practitioner Resources"
         title="Resources"
-        description="[Resources — Page Description Placeholder. Frameworks, playbooks, checklists, reference architectures and toolkits, published as the practice develops them.]"
+        description="Frameworks, playbooks, checklists, reference architectures and toolkits, published as the practice develops them."
       />
       <section className="py-section-sm">
         <Container size="wide">
