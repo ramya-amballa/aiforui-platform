@@ -8,6 +8,7 @@ import { CurrentPrioritiesSection } from "@/components/sections/current-prioriti
 import { PointOfViewSection } from "@/components/sections/point-of-view-section";
 import { JsonLd } from "@/components/seo/json-ld";
 import { organizationSchema, personSchema } from "@/components/seo/schema";
+import { OperaDiagram } from "@/components/sections/opera-diagram";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { Eyebrow } from "@/components/ui/eyebrow";
@@ -43,14 +44,14 @@ export default function HomePage() {
         <Container size="wide">
           <div className="grid grid-cols-1 items-end gap-12 lg:grid-cols-12">
             <div className="lg:col-span-8">
-              <Eyebrow>Independent Advisory</Eyebrow>
+              <Eyebrow>AI &amp; Digital Governance Advisory</Eyebrow>
               <h1 className="mt-6 max-w-4xl font-serif text-display-lg text-ink balance">
                 Governance that holds up under audit, regulation and board scrutiny.
               </h1>
               <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted pretty">
-                AIforU&I is the independent advisory practice of Ramya Amballa, working with boards, executives
-                and public-sector leaders on AI governance, digital governance, cyber governance, technology
-                risk and third-party governance.
+                Independent advisory across AI governance, digital governance, cyber governance, technology
+                risk and third-party governance, for boards, executives and public-sector leaders in regulated
+                and high-assurance organisations.
               </p>
               <div className="mt-10 flex flex-wrap items-center gap-6">
                 <Button href={primaryCta.href} variant="primary" size="lg">
@@ -60,6 +61,13 @@ export default function HomePage() {
                   {secondaryCta.label} &rarr;
                 </Link>
               </div>
+              <p className="mt-8 text-sm text-muted">
+                Founded by{" "}
+                <Link href="/about" className="text-ink underline underline-offset-4 decoration-border hover:decoration-accent hover:text-accent">
+                  Ramya Amballa
+                </Link>
+                .
+              </p>
             </div>
             <div className="lg:col-span-4">
               <Placeholder label="Executive Portrait Placeholder" aspect="portrait" />
@@ -72,30 +80,20 @@ export default function HomePage() {
 
       <PointOfViewSection pieces={pointOfViewPieces} />
 
-      {/* Why organisations engage her */}
+      {/* Approach */}
       <section className="border-t border-border py-section">
         <Container size="wide">
-          <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
-            <div className="lg:col-span-4">
-              <SectionHeading eyebrow="About Ramya" title="Judgment before documentation" />
-            </div>
-            <div className="lg:col-span-7 lg:col-start-6">
-              <p className="text-lg leading-relaxed text-ink pretty">
-                Most governance failures are not caused by a missing framework. They are caused by ownership
-                no one holds, risk decisions no one is accountable for, and evidence assembled after the fact
-                instead of maintained as a matter of course.
-              </p>
-              <p className="mt-6 text-base leading-relaxed text-muted pretty">
-                Ramya Amballa works across AI governance, cyber governance, technology risk and third-party
-                governance, building operating models that regulators, auditors and boards can rely on. The
-                OPERA methodology (Opportunity, People, Evaluation, Response, Assurance) structures that work
-                from use case through to ongoing assurance.
-              </p>
-              <Link href="/about" className="mt-6 inline-block text-sm text-accent underline underline-offset-4">
-                Read the full profile
-              </Link>
-            </div>
+          <SectionHeading
+            eyebrow="Approach"
+            title="The OPERA Methodology"
+            description="Every engagement moves through five stages, from the real opportunity behind a decision to the assurance evidence that outlasts it."
+          />
+          <div className="mt-12">
+            <OperaDiagram />
           </div>
+          <Link href="/about" className="mt-10 inline-block text-sm text-accent underline underline-offset-4">
+            More on the approach and its founder &rarr;
+          </Link>
         </Container>
       </section>
 

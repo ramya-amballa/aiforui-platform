@@ -2,7 +2,7 @@
   "name": "aiforu-and-i",
   "version": "0.1.0",
   "private": true,
-  "description": "AIforU&I — Independent advisory platform of Ramya Amballa. Executive advisory in AI governance, digital governance, cyber governance, technology risk and third-party governance.",
+  "description": "AIforU&I: independent advisory platform of Ramya Amballa. Executive advisory in AI governance, digital governance, cyber governance, technology risk and third-party governance.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -13,7 +13,8 @@
   "dependencies": {
     "next": "^15.0.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "resend": "^4.0.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.1.0",

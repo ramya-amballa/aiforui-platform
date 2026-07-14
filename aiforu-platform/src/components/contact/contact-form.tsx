@@ -6,22 +6,49 @@ import { Button } from "@/components/ui/button";
 const fieldStyles =
   "w-full border border-border bg-transparent px-4 py-3 text-sm text-ink placeholder:text-muted focus:border-accent focus:outline-none";
 
+type Status = "idle" | "submitting" | "success" | "error";
+
 /**
- * Presentational contact form. Submission wiring (API route / provider)
- * is out of scope for Phase 1; see README "Remaining Work".
+ * Submits to /api/contact, which delivers the message by email via
+ * Resend. See that route for the required environment variables.
  */
 export function ContactForm() {
-  const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState<Status>("idle");
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
-  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    setSubmitted(true);
+    setStatus("submitting");
+    setErrorMessage(null);
+
+    const form = event.currentTarget;
+    const data = Object.fromEntries(new FormData(form).entries());
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) {
+        const body = await response.json().catch(() => null);
+        throw new Error(body?.error ?? "The message could not be sent.");
+      }
+
+      setStatus("success");
+    } catch (error) {
+      setStatus("error");
+      setErrorMessage(error instanceof Error ? error.message : "The message could not be sent.");
+    }
   }
 
-  if (submitted) {
+  if (status === "success") {
     return (
       <div className="border border-border p-8">
-        <p className="text-base text-ink">Thank you. Your message has been received, and you&apos;ll hear back directly within a few business days.</p>
+        <p className="text-base text-ink">
+          Thank you. Your message has been received, and you&apos;ll hear back directly within a few business days.
+        </p>
       </div>
     );
   }
@@ -75,8 +102,13 @@ export function ContactForm() {
         />
       </div>
 
-      <Button type="submit" variant="primary" size="lg">
-        Send message
+      {/* Honeypot: hidden from real visitors, filled in only by bots. */}
+      <input type="text" name="company" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden="true" />
+
+      {status === "error" && <p className="text-sm text-signal">{errorMessage}</p>}
+
+      <Button type="submit" variant="primary" size="lg" disabled={status === "submitting"}>
+        {status === "submitting" ? "Sending…" : "Send message"}
       </Button>
     </form>
   );
