@@ -38,6 +38,16 @@ export function Footer() {
             <p className="text-eyebrow uppercase tracking-widest text-muted">Connect</p>
             <ul className="mt-4 space-y-3">
               <li>
+                <a href={`mailto:${site.email}`} className="text-sm text-ink/80 hover:text-accent">
+                  {site.email}
+                </a>
+              </li>
+              <li>
+                <a href={site.linkedin} target="_blank" rel="noopener noreferrer" className="text-sm text-ink/80 hover:text-accent">
+                  LinkedIn
+                </a>
+              </li>
+              <li>
                 <Link href="/contact" className="text-sm text-ink/80 hover:text-accent">
                   Start a Conversation
                 </Link>

@@ -16,6 +16,7 @@ export function personSchema() {
       name: site.name,
     },
     description: site.description,
+    sameAs: [site.linkedin],
   };
 }
 

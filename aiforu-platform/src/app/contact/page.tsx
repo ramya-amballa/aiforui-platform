@@ -3,6 +3,7 @@ import { ContactForm } from "@/components/contact/contact-form";
 import { Container } from "@/components/ui/container";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { buildMetadata } from "@/lib/metadata";
+import { site } from "@/lib/constants";
 
 export const metadata: Metadata = buildMetadata({
   title: "Contact",
@@ -24,6 +25,22 @@ export default function ContactPage() {
             </p>
 
             <dl className="mt-12 space-y-6 border-t border-border pt-8">
+              <div>
+                <dt className="text-eyebrow uppercase tracking-widest text-muted">Direct</dt>
+                <dd className="mt-2 text-sm text-ink">
+                  <a href={`mailto:${site.email}`} className="hover:text-accent">
+                    {site.email}
+                  </a>
+                </dd>
+              </div>
+              <div>
+                <dt className="text-eyebrow uppercase tracking-widest text-muted">LinkedIn</dt>
+                <dd className="mt-2 text-sm text-ink">
+                  <a href={site.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-accent">
+                    linkedin.com/in/amballa-ramya
+                  </a>
+                </dd>
+              </div>
               <div>
                 <dt className="text-eyebrow uppercase tracking-widest text-muted">Response Time</dt>
                 <dd className="mt-2 text-sm text-ink">Replies are sent directly, typically within a few business days.</dd>

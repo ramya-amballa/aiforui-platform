@@ -9,6 +9,8 @@ export const site = {
   url: "https://aiforui.org",
   locale: "en_US",
   twitter: "",
+  email: "amballa.ramya911@gmail.com",
+  linkedin: "https://www.linkedin.com/in/amballa-ramya/",
 } as const;
 
 export const primaryNav: NavItem[] = [
