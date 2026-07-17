@@ -15,6 +15,10 @@ export function personSchema() {
       "@type": "Organization",
       name: site.name,
     },
+    alumniOf: ["PwC India", "Viatris", "Wells Fargo", "JPMorgan Chase"].map((name) => ({
+      "@type": "Organization",
+      name,
+    })),
     description: site.description,
     sameAs: [site.linkedin],
   };

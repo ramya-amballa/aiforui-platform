@@ -31,6 +31,7 @@ const config: Config = {
         "brand-paper": "hsl(var(--color-brand-paper) / <alpha-value>)",
         "brand-muted": "hsl(var(--color-brand-muted) / <alpha-value>)",
         "brand-gold": "hsl(var(--color-brand-gold) / <alpha-value>)",
+        "brand-ink-quiet": "hsl(var(--color-brand-ink-quiet) / <alpha-value>)",
       },
       fontFamily: {
         serif: ["var(--font-editorial)", "Georgia", "serif"],

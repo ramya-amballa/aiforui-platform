@@ -1,46 +1,36 @@
 import Link from "next/link";
-import { BlueprintPanel } from "@/components/sections/blueprint-panel";
 import { operaStages } from "@/content/opera";
 
 /**
- * The homepage hero's primary visual: a restrained, executive rendering
- * of the OPERA sequence, not the full stage detail (that lives in
- * OperaDiagram and on /methodology). Letters and connectors sit in
- * normal inline flow, not absolute positioning, deliberately: an
- * earlier version used absolute-positioned arrows that collided with
- * the following stage's letter.
- *
- * Attributed to Ramya Amballa by name, not presented as a standalone
- * product: OPERA is the methodology behind the advisory practice, and
- * the practice is the thing being engaged.
+ * A compact reference card in the homepage hero's right column, not a
+ * second focal point: the H1 in the left column is the dominant
+ * element on this page. Deliberately plain (no grid pattern, no
+ * corner brackets) and short, so it reads as a briefing note next to
+ * the headline rather than a competing cover panel. Stage names are
+ * listed, not rendered as large decorative letterforms, so a visitor
+ * can tell in one glance that OPERA is a five-stage method, not a
+ * logotype.
  */
 export function OperaHeroMark() {
   return (
-    <BlueprintPanel tone="ink" className="flex h-full flex-col justify-center p-8 sm:p-10">
-      <p className="text-eyebrow uppercase tracking-widest text-brand-muted">Ramya Amballa&apos;s Methodology</p>
+    <div className="border border-brand-ink-quiet/10 bg-brand-ink-quiet px-6 py-6 sm:px-7 sm:py-7">
+      <p className="text-eyebrow uppercase tracking-widest text-brand-muted">OPERA Methodology</p>
 
-      <div className="mt-8 flex flex-nowrap items-center">
-        {operaStages.map((stage, index) => (
-          <span key={stage.letter} className="flex items-center">
-            <span className="font-serif text-3xl text-brand-gold">{stage.letter}</span>
-            {index < operaStages.length - 1 && (
-              <span aria-hidden className="mx-2 text-brand-muted">
-                &rarr;
-              </span>
-            )}
-          </span>
+      <ol className="mt-5 space-y-2 border-t border-brand-paper/10 pt-5">
+        {operaStages.map((stage) => (
+          <li key={stage.letter} className="flex items-baseline gap-3 text-sm text-brand-paper">
+            <span className="w-4 shrink-0 text-brand-gold">{stage.letter}</span>
+            <span>{stage.name}</span>
+          </li>
         ))}
-      </div>
+      </ol>
 
-      <p className="mt-8 font-serif text-title text-brand-paper">Operational AI Governance Methodology</p>
-      <p className="mt-4 text-sm leading-relaxed text-brand-muted pretty">
-        The structure behind every engagement: how Ramya turns a governance requirement into an operational
-        decision, evidence, accountability and audit readiness, not just a policy document.
-      </p>
-
-      <Link href="/methodology" className="mt-8 inline-block text-sm text-brand-gold underline underline-offset-4">
-        Explore the full methodology &rarr;
+      <Link
+        href="/methodology"
+        className="mt-5 inline-block text-xs text-brand-gold underline underline-offset-4"
+      >
+        View the methodology &rarr;
       </Link>
-    </BlueprintPanel>
+    </div>
   );
 }

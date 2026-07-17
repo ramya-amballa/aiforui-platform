@@ -32,6 +32,10 @@
   --color-brand-paper: 40 20% 98%;
   --color-brand-muted: 220 10% 65%;
   --color-brand-gold: 38 42% 34%;
+  /* Quieter than --color-brand-ink: same low-saturation family as
+     --color-ink, for compact executive-card surfaces that should
+     recede rather than compete with page headlines. */
+  --color-brand-ink-quiet: 220 20% 11%;
 }
 
 :root[data-theme="dark"] {
