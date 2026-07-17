@@ -15,7 +15,6 @@ export const insights: Insight[] = [
     format: "Point of View",
     category: "Governance Philosophy",
     domainSlugs: ["ai-governance", "governance-transformation"],
-    date: "2026-01-01",
     readTime: "6 min read",
     excerpt:
       "A framework tells you what questions to ask. It does not make the decision for you. Most governance failures happen after the framework has already been applied correctly.",
@@ -33,7 +32,6 @@ export const insights: Insight[] = [
     format: "Point of View",
     category: "Risk Governance",
     domainSlugs: ["technology-risk", "enterprise-risk-governance"],
-    date: "2026-01-01",
     readTime: "5 min read",
     excerpt:
       "Technical debt has a name and a budget line. Governance debt accumulates just as fast, usually with neither, until an audit or an incident forces the reckoning.",
@@ -51,7 +49,6 @@ export const insights: Insight[] = [
     format: "Point of View",
     category: "Third Party Governance",
     domainSlugs: ["third-party-governance", "privacy-data-governance"],
-    date: "2026-01-01",
     readTime: "5 min read",
     excerpt:
       "Most third-party risk programmes are strongest at onboarding and weakest at everything after. That gap is where the actual risk lives.",
@@ -68,7 +65,6 @@ export const insights: Insight[] = [
     format: "Governance Note",
     category: "AI Governance",
     domainSlugs: ["ai-governance"],
-    date: "2026-01-01",
     readTime: "4 min read",
     excerpt: "Board oversight of AI usually stops at 'do we have a policy.' The more useful question is who owns each decision the policy describes.",
     body: [
@@ -84,7 +80,6 @@ export const insights: Insight[] = [
     format: "Briefing",
     category: "Third Party Governance",
     domainSlugs: ["third-party-governance"],
-    date: "2026-01-01",
     readTime: "4 min read",
     excerpt: "Regulated organisations carry vendor risk differently: the obligation does not transfer with the contract.",
     body: [
@@ -100,7 +95,6 @@ export const insights: Insight[] = [
     format: "Briefing",
     category: "DPDP Governance & Readiness",
     domainSlugs: ["dpdp-governance-readiness"],
-    date: "2026-01-01",
     readTime: "4 min read",
     excerpt: "Most organisations approaching DPDP readiness start with policy. The more urgent starting point is the data inventory.",
     body: [
@@ -116,7 +110,6 @@ export const insights: Insight[] = [
     format: "Governance Note",
     category: "Technology Risk",
     domainSlugs: ["technology-risk"],
-    date: "2026-01-01",
     readTime: "4 min read",
     excerpt: "A risk appetite statement written for a board deck rarely survives contact with an engineering decision.",
     body: [
@@ -132,7 +125,6 @@ export const insights: Insight[] = [
     format: "Field Note",
     category: "Government Digital Governance",
     domainSlugs: ["government-digital-governance"],
-    date: "2026-01-01",
     readTime: "3 min read",
     excerpt: "Digital governance maturity in government looks different from the private-sector version of the same model.",
     body: [
@@ -148,7 +140,6 @@ export const insights: Insight[] = [
     format: "Governance Note",
     category: "Governance Transformation",
     domainSlugs: ["governance-transformation"],
-    date: "2026-01-01",
     readTime: "5 min read",
     excerpt: "A governance transformation that tries to fix everything at once usually fixes nothing before the appetite for change runs out.",
     body: [

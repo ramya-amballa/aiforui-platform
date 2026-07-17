@@ -59,9 +59,15 @@ interface ArticleSchemaInput {
   title: string;
   description: string;
   path: string;
-  datePublished: string;
+  datePublished?: string;
 }
 
+/**
+ * datePublished is omitted for evergreen advisory perspectives that
+ * carry no real publication date, rather than filling it with a
+ * placeholder; schema.org treats it as recommended, not required, for
+ * Article.
+ */
 export function articleSchema({ title, description, path, datePublished }: ArticleSchemaInput) {
   return {
     "@context": "https://schema.org",
@@ -69,7 +75,7 @@ export function articleSchema({ title, description, path, datePublished }: Artic
     headline: title,
     description,
     url: new URL(path, site.url).toString(),
-    datePublished,
+    ...(datePublished ? { datePublished } : {}),
     author: {
       "@type": "Person",
       name: site.advisorName,

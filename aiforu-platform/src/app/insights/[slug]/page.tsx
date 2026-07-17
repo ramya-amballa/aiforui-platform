@@ -41,7 +41,6 @@ export default async function InsightPage({ params }: PageProps) {
           title: insight.title,
           description: insight.excerpt,
           path: `/insights/${insight.slug}`,
-          datePublished: insight.date,
         })}
       />
       <Breadcrumbs

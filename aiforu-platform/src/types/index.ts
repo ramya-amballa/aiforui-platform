@@ -86,7 +86,6 @@ export interface Insight {
   format: InsightFormat;
   category: string;
   domainSlugs: string[];
-  date: string;
   readTime: string;
   excerpt: string;
   body: string[];
