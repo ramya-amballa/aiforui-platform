@@ -9,17 +9,12 @@ import { governanceWorkflow, governanceWorkflowOutcomes } from "@/content/opera"
 export function GovernanceWorkflow() {
   return (
     <div>
-      <ol className="grid grid-cols-1 gap-8 sm:grid-cols-3 lg:grid-cols-6 sm:gap-4">
-        {governanceWorkflow.map((item, index) => (
-          <li key={item.step} className="relative border-t border-border pt-4">
+      <ol className="grid grid-cols-1 gap-8 sm:grid-cols-3 lg:grid-cols-6 sm:gap-6">
+        {governanceWorkflow.map((item) => (
+          <li key={item.step} className="border-t border-border pt-4">
             <span className="font-mono text-xs text-signal">{String(item.step).padStart(2, "0")}</span>
             <p className="mt-2 font-serif text-base text-ink">{item.name}</p>
             <p className="mt-1 text-sm leading-relaxed text-muted">{item.detail}</p>
-            {index < governanceWorkflow.length - 1 && (
-              <span aria-hidden className="hidden lg:block absolute right-[-1rem] top-2 text-muted">
-                &rarr;
-              </span>
-            )}
           </li>
         ))}
       </ol>

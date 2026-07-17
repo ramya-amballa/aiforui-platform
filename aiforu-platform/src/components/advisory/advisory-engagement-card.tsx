@@ -6,7 +6,7 @@ export function AdvisoryEngagementCard({ engagement }: { engagement: AdvisoryEng
   return (
     <Card href={`/selected-advisory-engagements/${engagement.slug}`}>
       <div className="flex items-center justify-between gap-3">
-        <CardEyebrow>{engagement.sector ?? engagement.track}</CardEyebrow>
+        {engagement.sector ? <CardEyebrow>{engagement.sector}</CardEyebrow> : <span aria-hidden />}
         <Badge>{engagement.track}</Badge>
       </div>
       <CardTitle>{engagement.title}</CardTitle>

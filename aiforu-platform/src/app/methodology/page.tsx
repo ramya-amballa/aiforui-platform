@@ -49,7 +49,7 @@ export default function MethodologyPage() {
                   <span className="font-serif text-3xl text-accent">{stage.letter}</span>
                   <Badge tone="accent">Stage {operaStages.indexOf(stage) + 1}</Badge>
                 </div>
-                <p className="mt-3 font-serif text-title text-ink">{stage.name}</p>
+                <h3 className="mt-3 font-serif text-title text-ink">{stage.name}</h3>
 
                 <p className="mt-6 text-eyebrow uppercase tracking-widest text-muted">Governance Decision</p>
                 <ul className="mt-3 space-y-2">

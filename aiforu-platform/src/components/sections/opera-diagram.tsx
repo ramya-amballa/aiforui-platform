@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { cn } from "@/lib/utils";
 import { operaStages } from "@/content/opera";
 
 interface OperaDiagramProps {
@@ -9,14 +10,16 @@ interface OperaDiagramProps {
  * Compact OPERA summary for the homepage and About page: letter, name
  * and the real activities per stage from content/opera.ts. The full
  * breakdown (governance decisions, artefacts, business outcomes) lives
- * on /methodology; this is a teaser, not a duplicate.
+ * on /methodology; this is a teaser, not a duplicate. Stages are
+ * separated by a vertical rule rather than an arrow glyph, which
+ * collided with the following stage's letter at this column width.
  */
 export function OperaDiagram({ showLink = true }: OperaDiagramProps) {
   return (
     <div className="border-t border-border pt-8">
-      <ol className="grid grid-cols-1 gap-8 sm:grid-cols-5 sm:gap-4">
+      <ol className="grid grid-cols-1 gap-8 sm:grid-cols-5 sm:gap-6">
         {operaStages.map((stage, index) => (
-          <li key={stage.letter} className="relative">
+          <li key={stage.letter} className={cn(index > 0 && "sm:border-l sm:border-border sm:pl-6")}>
             <div className="flex items-baseline gap-3 sm:block sm:gap-0">
               <span className="font-serif text-3xl text-accent">{stage.letter}</span>
               <p className="font-serif text-base text-ink sm:mt-3">{stage.name}</p>
@@ -28,11 +31,6 @@ export function OperaDiagram({ showLink = true }: OperaDiagramProps) {
                 </li>
               ))}
             </ul>
-            {index < operaStages.length - 1 && (
-              <span aria-hidden className="hidden sm:block absolute right-[-1rem] top-2 text-muted">
-                &rarr;
-              </span>
-            )}
           </li>
         ))}
       </ol>

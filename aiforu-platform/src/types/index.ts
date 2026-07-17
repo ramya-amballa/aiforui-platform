@@ -1,6 +1,5 @@
 /**
  * Shared domain types for the AIforU&I advisory platform.
- * All copy fields are placeholder content pending Phase 2 authoring.
  *
  * This is a living-platform architecture: every collection below is
  * additive-only by design. New engagements, domains, insights and

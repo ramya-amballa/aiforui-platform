@@ -32,9 +32,6 @@ export const metadata: Metadata = {
     default: `${site.name}: Independent Advisory in AI and Technology Governance`,
     template: `%s | ${site.name}`,
   },
-  icons: {
-    icon: "/favicon.ico",
-  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

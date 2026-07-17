@@ -1,5 +1,4 @@
 import { Container } from "@/components/ui/container";
-import { Placeholder } from "@/components/ui/placeholder";
 import { formatDate } from "@/lib/utils";
 import type { Insight } from "@/types";
 
@@ -18,8 +17,6 @@ export function ArticleDetail({ insight }: { insight: Insight }) {
           <span aria-hidden>&middot;</span>
           <span>{insight.readTime}</span>
         </div>
-
-        <Placeholder label="Article Cover Image Placeholder" aspect="video" className="mt-10" />
 
         <div className="mt-10 space-y-6 text-base leading-relaxed text-ink pretty">
           {insight.body.map((paragraph, index) => (

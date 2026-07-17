@@ -5,8 +5,8 @@ import type { Resource } from "@/types";
  * architectures and toolkits. Designed as the platform's largest
  * long-term collection: `type` and `accessTier` drive the filters on
  * /resources so this can grow to hundreds of entries without a
- * redesign. `accessTier: "Premium"` is a labelling placeholder only;
- * no gating or paywall is wired up yet.
+ * redesign. `accessTier: "Premium"` currently only changes the badge
+ * shown on a resource; no access gating or paywall exists yet.
  */
 export const resources: Resource[] = [
   {

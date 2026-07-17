@@ -61,8 +61,8 @@ export default function PrivacyPolicyPage() {
             <h2 className="font-serif text-title text-ink">Your choices</h2>
             <p className="text-base leading-relaxed text-muted pretty">
               You can decline to submit the contact form and browse the site without providing any personal
-              information. To request that a previous email exchange be deleted, contact {site.advisorName}
-              directly using the details on the Contact page.
+              information. To request that a previous email exchange be deleted, contact {site.advisorName} directly
+              using the details on the Contact page.
             </p>
           </div>
 

@@ -7,7 +7,7 @@ import { personSchema } from "@/components/seo/schema";
 import { Container } from "@/components/ui/container";
 import { Divider } from "@/components/ui/divider";
 import { Eyebrow } from "@/components/ui/eyebrow";
-import { Placeholder } from "@/components/ui/placeholder";
+import { Portrait } from "@/components/ui/portrait";
 import { buildMetadata } from "@/lib/metadata";
 import { site } from "@/lib/constants";
 
@@ -59,7 +59,7 @@ export default function AboutPage() {
               </p>
             </div>
             <div className="lg:col-span-4 lg:col-start-9">
-              <Placeholder label="Executive Portrait Placeholder" aspect="portrait" />
+              <Portrait name={site.advisorName} />
             </div>
           </div>
         </Container>

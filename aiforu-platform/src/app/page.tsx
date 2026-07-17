@@ -12,13 +12,13 @@ import { OperaDiagram } from "@/components/sections/opera-diagram";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { Eyebrow } from "@/components/ui/eyebrow";
-import { Placeholder } from "@/components/ui/placeholder";
+import { Portrait } from "@/components/ui/portrait";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { advisoryEngagements } from "@/content/advisory-engagements";
 import { currentPriorities } from "@/content/current-priorities";
 import { getPointOfViewInsights, insights } from "@/content/insights";
 import { buildMetadata } from "@/lib/metadata";
-import { primaryCta, secondaryCta } from "@/lib/constants";
+import { primaryCta, secondaryCta, site } from "@/lib/constants";
 
 export const metadata: Metadata = buildMetadata({
   title: "AIforU&I: Independent Advisory in AI and Technology Governance",
@@ -70,7 +70,7 @@ export default function HomePage() {
               </p>
             </div>
             <div className="lg:col-span-4">
-              <Placeholder label="Executive Portrait Placeholder" aspect="portrait" />
+              <Portrait name={site.advisorName} />
             </div>
           </div>
         </Container>
