@@ -9,6 +9,7 @@ import { PointOfViewSection } from "@/components/sections/point-of-view-section"
 import { JsonLd } from "@/components/seo/json-ld";
 import { organizationSchema, personSchema } from "@/components/seo/schema";
 import { OperaDiagram } from "@/components/sections/opera-diagram";
+import { OperaHeroMark } from "@/components/sections/opera-hero-mark";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { Eyebrow } from "@/components/ui/eyebrow";
@@ -70,7 +71,30 @@ export default function HomePage() {
               </p>
             </div>
             <div className="lg:col-span-4">
+              <OperaHeroMark />
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* Founder */}
+      <section className="border-b border-border py-section">
+        <Container size="wide">
+          <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
+            <div className="lg:col-span-4">
               <Portrait name={site.advisorName} />
+            </div>
+            <div className="lg:col-span-7 lg:col-start-6">
+              <Eyebrow>Founder</Eyebrow>
+              <h2 className="mt-6 font-serif text-headline text-ink balance">{site.advisorName}</h2>
+              <p className="mt-4 text-lg leading-relaxed text-ink pretty">
+                Founder of {site.name} and creator of the OPERA methodology, built from work across AI
+                governance, cyber governance, technology risk and third-party governance in regulated and
+                high-assurance environments.
+              </p>
+              <Link href="/about" className="mt-6 inline-block text-sm text-accent underline underline-offset-4">
+                Read the full profile &rarr;
+              </Link>
             </div>
           </div>
         </Container>
