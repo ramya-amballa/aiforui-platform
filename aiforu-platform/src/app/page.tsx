@@ -8,12 +8,12 @@ import { CurrentPrioritiesSection } from "@/components/sections/current-prioriti
 import { PointOfViewSection } from "@/components/sections/point-of-view-section";
 import { JsonLd } from "@/components/seo/json-ld";
 import { organizationSchema, personSchema } from "@/components/seo/schema";
+import { FounderMark } from "@/components/sections/founder-mark";
 import { OperaDiagram } from "@/components/sections/opera-diagram";
 import { OperaHeroMark } from "@/components/sections/opera-hero-mark";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { Eyebrow } from "@/components/ui/eyebrow";
-import { Portrait } from "@/components/ui/portrait";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { advisoryEngagements } from "@/content/advisory-engagements";
 import { currentPriorities } from "@/content/current-priorities";
@@ -41,7 +41,18 @@ export default function HomePage() {
       <JsonLd data={organizationSchema()} />
 
       {/* Hero */}
-      <section className="border-b border-border py-section-lg">
+      <section className="relative overflow-hidden border-b border-border py-section-lg">
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 -z-10 opacity-40"
+          style={{
+            backgroundImage:
+              "linear-gradient(to right, hsl(var(--color-border)) 1px, transparent 1px), linear-gradient(to bottom, hsl(var(--color-border)) 1px, transparent 1px)",
+            backgroundSize: "40px 40px",
+            maskImage: "linear-gradient(to bottom, black, transparent)",
+            WebkitMaskImage: "linear-gradient(to bottom, black, transparent)",
+          }}
+        />
         <Container size="wide">
           <div className="grid grid-cols-1 items-end gap-12 lg:grid-cols-12">
             <div className="lg:col-span-8">
@@ -82,7 +93,7 @@ export default function HomePage() {
         <Container size="wide">
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
             <div className="lg:col-span-4">
-              <Portrait name={site.advisorName} />
+              <FounderMark />
             </div>
             <div className="lg:col-span-7 lg:col-start-6">
               <Eyebrow>Founder</Eyebrow>

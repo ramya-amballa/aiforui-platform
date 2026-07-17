@@ -27,6 +27,10 @@ const config: Config = {
         accent: "hsl(var(--color-accent) / <alpha-value>)",
         "accent-muted": "hsl(var(--color-accent-muted) / <alpha-value>)",
         signal: "hsl(var(--color-signal) / <alpha-value>)",
+        "brand-ink": "hsl(var(--color-brand-ink) / <alpha-value>)",
+        "brand-paper": "hsl(var(--color-brand-paper) / <alpha-value>)",
+        "brand-muted": "hsl(var(--color-brand-muted) / <alpha-value>)",
+        "brand-gold": "hsl(var(--color-brand-gold) / <alpha-value>)",
       },
       fontFamily: {
         serif: ["var(--font-editorial)", "Georgia", "serif"],

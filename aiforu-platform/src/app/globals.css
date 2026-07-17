@@ -18,6 +18,20 @@
   /* 34% lightness (not the brand's original 40%) clears WCAG AA 4.5:1
      against --color-paper; see the a11y-check scan in the deploy log. */
   --color-signal: 38 42% 34%;
+
+  /*
+   * Fixed brand tokens for identity surfaces (the About portfolio hero,
+   * blueprint panels): the same values as --color-accent/--color-paper/
+   * --color-signal above, captured once and never overridden by the
+   * dark theme blocks below. Every other token here intentionally
+   * swaps meaning between themes (that's how the toggle works); a
+   * brand panel needs to stay navy-on-cream regardless of the
+   * visitor's light/dark preference, the way a logo doesn't invert.
+   */
+  --color-brand-ink: 217 46% 20%;
+  --color-brand-paper: 40 20% 98%;
+  --color-brand-muted: 220 10% 65%;
+  --color-brand-gold: 38 42% 34%;
 }
 
 :root[data-theme="dark"] {

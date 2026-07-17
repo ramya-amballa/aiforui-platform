@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { BlueprintPanel } from "@/components/sections/blueprint-panel";
 import { CtaBand } from "@/components/sections/cta-band";
 import { OperaDiagram } from "@/components/sections/opera-diagram";
 import { JsonLd } from "@/components/seo/json-ld";
 import { personSchema } from "@/components/seo/schema";
 import { Container } from "@/components/ui/container";
 import { Divider } from "@/components/ui/divider";
-import { Eyebrow } from "@/components/ui/eyebrow";
-import { Portrait } from "@/components/ui/portrait";
+import { operaStages } from "@/content/opera";
 import { buildMetadata } from "@/lib/metadata";
 import { site } from "@/lib/constants";
 
@@ -19,6 +19,10 @@ export const metadata: Metadata = buildMetadata({
 });
 
 const environments = ["Government & Public Sector", "Energy & Critical Infrastructure", "Financial Services", "Enterprise SaaS"];
+
+const practiceAreas = ["AI Governance", "Digital Governance", "Cyber Governance", "Technology Risk", "Third-Party Governance"];
+
+const operaOutcomes = operaStages.map((stage) => stage.outcome);
 
 const elsewhere = [
   { label: "Substack", href: site.substack },
@@ -46,22 +50,42 @@ export default function AboutPage() {
       {/* Identity */}
       <section className="border-b border-border py-section">
         <Container size="wide">
-          <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
-            <div className="lg:col-span-7">
-              <Eyebrow>About {site.advisorName}</Eyebrow>
-              <h1 className="mt-6 font-serif text-display text-ink balance">
-                Independent advisory in AI, digital and technology risk governance.
-              </h1>
-              <p className="mt-6 text-lg leading-relaxed text-muted pretty">
-                I work with boards, executives and public-sector leaders who need governance decisions made,
-                not just documented, using the OPERA methodology I developed for turning governance intent
-                into everyday practice.
-              </p>
+          <BlueprintPanel tone="ink" className="p-8 sm:p-12 lg:p-16">
+            <p className="text-eyebrow uppercase tracking-[0.25em] text-brand-gold">{site.advisorName}</p>
+            <div className="mt-4 h-px w-16 bg-brand-gold" />
+
+            <h1 className="mt-8 max-w-3xl font-serif text-display text-brand-paper balance">
+              Independent advisory in AI, digital and technology risk governance.
+            </h1>
+            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-brand-muted pretty">
+              I work with boards, executives and public-sector leaders who need governance decisions made,
+              not just documented, using the OPERA methodology I developed for turning governance intent
+              into everyday practice.
+            </p>
+
+            <div className="mt-10 flex flex-wrap items-center gap-x-3 gap-y-2 border-t border-brand-paper/10 pt-8 text-sm text-brand-paper">
+              {practiceAreas.map((area, index) => (
+                <span key={area} className="flex items-center gap-3">
+                  {area}
+                  {index < practiceAreas.length - 1 && (
+                    <span aria-hidden className="text-brand-gold">
+                      &middot;
+                    </span>
+                  )}
+                </span>
+              ))}
             </div>
-            <div className="lg:col-span-4 lg:col-start-9">
-              <Portrait name={site.advisorName} />
+
+            <p className="mt-6 text-eyebrow uppercase tracking-widest text-brand-muted">
+              {operaOutcomes.join(" · ")}
+            </p>
+
+            <div className="mt-12 flex items-center gap-4 border-t border-brand-paper/10 pt-6">
+              <span aria-hidden className="h-px flex-1 bg-brand-paper/20" />
+              <p className="text-eyebrow uppercase tracking-[0.2em] text-brand-gold">Founder, {site.name}</p>
+              <span aria-hidden className="h-px flex-1 bg-brand-paper/20" />
             </div>
-          </div>
+          </BlueprintPanel>
         </Container>
       </section>
 
