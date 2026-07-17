@@ -21,7 +21,8 @@ export default function ContactPage() {
             <h1 className="mt-6 font-serif text-display text-ink balance">Let&apos;s discuss the problem, not a proposal.</h1>
             <p className="mt-6 max-w-md text-base leading-relaxed text-muted pretty">
               Share what you&apos;re working through: an AI governance decision, a technology risk gap, a
-              third-party governance question, or something that does not fit neatly into a category yet.
+              third-party governance question, or something that does not fit neatly into a category yet. This
+              goes directly to {site.advisorName}, not an intake team.
             </p>
 
             <dl className="mt-12 space-y-6 border-t border-border pt-8">

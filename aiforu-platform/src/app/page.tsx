@@ -74,11 +74,11 @@ export default function HomePage() {
                 </Link>
               </div>
               <p className="mt-8 text-sm text-muted">
-                Founded by{" "}
+                An engagement with {site.name} means direct access to{" "}
                 <Link href="/about" className="text-ink underline underline-offset-4 decoration-border hover:decoration-accent hover:text-accent">
                   Ramya Amballa
                 </Link>
-                .
+                , not a staffing pyramid.
               </p>
             </div>
             <div className="lg:col-span-4">
@@ -121,7 +121,7 @@ export default function HomePage() {
           <SectionHeading
             eyebrow="Approach"
             title="The OPERA Methodology"
-            description="Every engagement moves through five stages, from the real opportunity behind a decision to the assurance evidence that outlasts it."
+            description={`How ${site.advisorName} runs an engagement: five stages, from the real opportunity behind a decision to the assurance evidence that outlasts it.`}
           />
           <div className="mt-12">
             <OperaDiagram />
@@ -136,7 +136,7 @@ export default function HomePage() {
             <SectionHeading
               eyebrow="Capability Map"
               title="Governance Domains"
-              description="Thirteen domains across four clusters, from AI governance to government digital governance, each with a defined scope and the audience it serves."
+              description={`Thirteen domains across four clusters, mapped from what ${site.advisorName} has advised on directly, each with a defined scope and the audience it serves.`}
             />
             <Button href="/governance-domains" variant="ghost">
               View the full map &rarr;
@@ -155,7 +155,7 @@ export default function HomePage() {
             <SectionHeading
               eyebrow="Selected Work"
               title="Selected Engagement Areas"
-              description="How advisory work is approached and what it produces, from AI governance operating models to third-party governance frameworks."
+              description={`How ${site.advisorName} approaches an engagement and what it produces, from AI governance operating models to third-party governance frameworks.`}
             />
             <Button href="/selected-advisory-engagements" variant="ghost">
               View all engagement areas &rarr;

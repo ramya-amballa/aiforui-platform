@@ -9,11 +9,15 @@ import { operaStages } from "@/content/opera";
  * normal inline flow, not absolute positioning, deliberately: an
  * earlier version used absolute-positioned arrows that collided with
  * the following stage's letter.
+ *
+ * Attributed to Ramya Amballa by name, not presented as a standalone
+ * product: OPERA is the methodology behind the advisory practice, and
+ * the practice is the thing being engaged.
  */
 export function OperaHeroMark() {
   return (
     <BlueprintPanel tone="ink" className="flex h-full flex-col justify-center p-8 sm:p-10">
-      <p className="text-eyebrow uppercase tracking-widest text-brand-muted">Proprietary Methodology</p>
+      <p className="text-eyebrow uppercase tracking-widest text-brand-muted">Ramya Amballa&apos;s Methodology</p>
 
       <div className="mt-8 flex flex-nowrap items-center">
         {operaStages.map((stage, index) => (
@@ -30,8 +34,8 @@ export function OperaHeroMark() {
 
       <p className="mt-8 font-serif text-title text-brand-paper">Operational AI Governance Methodology</p>
       <p className="mt-4 text-sm leading-relaxed text-brand-muted pretty">
-        A structured implementation pathway that translates governance requirements into operational decisions,
-        evidence, accountability and audit readiness.
+        The structure behind every engagement: how Ramya turns a governance requirement into an operational
+        decision, evidence, accountability and audit readiness, not just a policy document.
       </p>
 
       <Link href="/methodology" className="mt-8 inline-block text-sm text-brand-gold underline underline-offset-4">

@@ -10,6 +10,7 @@ import { Pagination } from "@/components/ui/pagination";
 import { advisoryEngagements } from "@/content/advisory-engagements";
 import { buildMetadata } from "@/lib/metadata";
 import { paginate, parseFilter, parsePage } from "@/lib/pagination";
+import { site } from "@/lib/constants";
 import type { EngagementTrack } from "@/types";
 
 export const metadata: Metadata = buildMetadata({
@@ -38,7 +39,7 @@ export default async function SelectedAdvisoryEngagementsPage({ searchParams }: 
       <PageHero
         eyebrow="Selected Work"
         title="Selected Engagement Areas"
-        description="How advisory work is approached and what it produces, across government, enterprise and strategic programmes."
+        description={`How ${site.advisorName} approaches an engagement and what it produces, across government, enterprise and strategic programmes.`}
       />
       <section className="py-section-sm">
         <Container size="wide">

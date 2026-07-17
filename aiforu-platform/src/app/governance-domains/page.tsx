@@ -7,6 +7,7 @@ import { Container } from "@/components/ui/container";
 import { Divider } from "@/components/ui/divider";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { buildMetadata } from "@/lib/metadata";
+import { site } from "@/lib/constants";
 
 export const metadata: Metadata = buildMetadata({
   title: "Governance Domains",
@@ -20,7 +21,7 @@ export default function GovernanceDomainsPage() {
       <PageHero
         eyebrow="Capability Map"
         title="Governance Domains"
-        description="A structured map of the practice, grouped by cluster, so the taxonomy can grow without a redesign."
+        description={`Where ${site.advisorName} advises, grouped by cluster: emerging technology, risk and cyber, regulatory and third-party, and public sector governance.`}
       />
       <section className="py-section-sm">
         <Container size="wide">

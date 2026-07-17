@@ -38,8 +38,9 @@ const gaps = [
 
 const engagementModel = [
   "Starts with a working conversation about a specific problem, not a scoping questionnaire",
-  "Structured around the OPERA methodology, scaled to what the organisation needs",
+  "Run using the OPERA methodology, scaled to what the organisation needs rather than applied wholesale",
   "Sized to fit: a focused advisory engagement, an operating model redesign, or a longer programme",
+  "Ends with something the organisation owns and can run without me: an operating model, not a report that sits on a shelf",
 ];
 
 export default function AboutPage() {
@@ -141,8 +142,9 @@ export default function AboutPage() {
             <div className="lg:col-span-6">
               <h2 className="font-serif text-title text-ink">Built for Enterprise &amp; Regulated Environments</h2>
               <p className="mt-6 text-base leading-relaxed text-muted pretty">
-                Built for organisations where governance decisions face external scrutiny: audit, regulation,
-                procurement rules or public accountability.
+                I work with organisations where a governance decision has to survive contact with someone
+                outside the building: an auditor, a regulator, a procurement panel, or a legislature. That is
+                the standard I design to, not a generic best-practice baseline.
               </p>
             </div>
             <div className="lg:col-span-5 lg:col-start-8">

@@ -22,7 +22,7 @@ export default function MethodologyPage() {
       <PageHero
         eyebrow="Methodology"
         title="The OPERA Methodology"
-        description="Turning AI governance requirements into operational decisions."
+        description={`How ${site.advisorName} turns AI and technology governance requirements into operational decisions, at every ${site.name} engagement.`}
       />
 
       <section className="py-section-sm">
@@ -30,6 +30,11 @@ export default function MethodologyPage() {
           <blockquote className="border-l-2 border-accent pl-6 text-lg leading-relaxed text-ink pretty">
             {operaWhyItExists}
           </blockquote>
+          <p className="mt-6 text-sm leading-relaxed text-muted pretty">
+            OPERA is not a framework for sale or a certification standard. It is the working method {site.advisorName}{" "}
+            built from advising on AI, digital, cyber and technology risk governance, and the structure behind
+            every engagement she runs.
+          </p>
         </Container>
       </section>
 
@@ -100,7 +105,8 @@ export default function MethodologyPage() {
         <Container size="narrow">
           <p className="text-sm leading-relaxed text-muted">{operaDesignedFor}</p>
           <p className="mt-2 text-sm leading-relaxed text-muted">
-            OPERA is the proprietary implementation methodology of {site.name}, developed by {site.advisorName}.
+            OPERA is developed and run by {site.advisorName}. Engaging {site.name} means engaging the person who
+            built it, not a team applying it on her behalf.
           </p>
         </Container>
       </section>
