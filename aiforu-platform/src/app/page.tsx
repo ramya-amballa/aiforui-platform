@@ -22,7 +22,7 @@ import { buildMetadata } from "@/lib/metadata";
 import { primaryCta, secondaryCta, site } from "@/lib/constants";
 
 export const metadata: Metadata = buildMetadata({
-  title: "AIforU&I: Independent Advisory in AI and Technology Governance",
+  title: "AI for U&I: Independent Advisory in AI and Technology Governance",
   description:
     "Independent advisory practice of Ramya Amballa, working across AI governance, digital governance, cyber governance, technology risk and third-party governance for regulated and high-assurance organisations.",
   path: "/",

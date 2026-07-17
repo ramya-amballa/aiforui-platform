@@ -20,7 +20,7 @@ export const metadata: Metadata = buildMetadata({
 const practiceAreas = ["AI Governance", "Digital Governance", "Cyber Governance", "Technology Risk", "Third-Party Governance"];
 
 const roles = [
-  { company: "AIforU&I", role: "Independent Advisor", period: "Feb 2026 – Present" },
+  { company: "AI for U&I", role: "Independent Advisor", period: "Feb 2026 – Present" },
   { company: "PwC India", role: "Cyber Security Consultant, Governance", period: "Aug 2024 – Feb 2026" },
   { company: "Viatris", role: "Deputy Manager, Global Compliance", period: "Aug 2023 – Feb 2024" },
   { company: "Wells Fargo", role: "Operational Risk Consultant, TPRM", period: "Mar 2020 – Jul 2023" },

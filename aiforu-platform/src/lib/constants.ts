@@ -1,11 +1,11 @@
 import type { NavItem } from "@/types";
 
 export const site = {
-  name: "AIforU&I",
+  name: "AI for U&I",
   advisorName: "Ramya Amballa",
   tagline: "Independent advisory in AI, digital, cyber and technology risk governance.",
   description:
-    "AIforU&I is an independent advisory practice founded by Ramya Amballa, focused on AI governance, digital governance, cyber governance, technology risk and third-party governance for regulated and high-assurance organisations.",
+    "AI for U&I is an independent advisory practice founded by Ramya Amballa, focused on AI governance, digital governance, cyber governance, technology risk and third-party governance for regulated and high-assurance organisations.",
   url: "https://aiforui.org",
   locale: "en_US",
   twitter: "",

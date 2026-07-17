@@ -10,7 +10,7 @@ export function personSchema() {
     "@type": "Person",
     name: site.advisorName,
     url: site.url,
-    jobTitle: "Founder and Independent Advisor, AIforU&I",
+    jobTitle: "Founder and Independent Advisor, AI for U&I",
     worksFor: {
       "@type": "Organization",
       name: site.name,

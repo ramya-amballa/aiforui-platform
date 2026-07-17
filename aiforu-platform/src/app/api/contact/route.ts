@@ -46,7 +46,7 @@ export async function POST(request: Request) {
   }
 
   const resend = new Resend(apiKey);
-  const fromEmail = process.env.RESEND_FROM_EMAIL ?? "AIforU&I Contact Form <onboarding@resend.dev>";
+  const fromEmail = process.env.RESEND_FROM_EMAIL ?? "AI for U&I Contact Form <onboarding@resend.dev>";
 
   const { error } = await resend.emails.send({
     from: fromEmail,

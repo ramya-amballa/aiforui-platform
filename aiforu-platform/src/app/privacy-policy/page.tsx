@@ -6,7 +6,7 @@ import { site } from "@/lib/constants";
 
 export const metadata: Metadata = buildMetadata({
   title: "Privacy Policy",
-  description: "How AIforU&I collects, uses and protects information submitted through this website.",
+  description: "How AI for U&I collects, uses and protects information submitted through this website.",
   path: "/privacy-policy",
 });
 

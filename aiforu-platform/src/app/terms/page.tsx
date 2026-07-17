@@ -6,7 +6,7 @@ import { site } from "@/lib/constants";
 
 export const metadata: Metadata = buildMetadata({
   title: "Terms of Use",
-  description: "Terms governing use of the AIforU&I website.",
+  description: "Terms governing use of the AI for U&I website.",
   path: "/terms",
 });
 
