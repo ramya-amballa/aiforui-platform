@@ -1,5 +1,5 @@
+import { Fragment } from "react";
 import Link from "next/link";
-import { cn } from "@/lib/utils";
 import { operaStages } from "@/content/opera";
 
 interface OperaDiagramProps {
@@ -7,31 +7,44 @@ interface OperaDiagramProps {
 }
 
 /**
- * Compact OPERA summary for the homepage and About page: letter, name
- * and the real activities per stage from content/opera.ts. The full
- * breakdown (governance decisions, artefacts, business outcomes) lives
- * on /methodology; this is a teaser, not a duplicate. Stages are
- * separated by a vertical rule rather than an arrow glyph, which
- * collided with the following stage's letter at this column width.
+ * The OPERA operating model, rendered as a connected sequence of
+ * governance capability nodes (index badge, stage, outcome, real
+ * activities from content/opera.ts) rather than large decorative
+ * letterforms. Shares the node/spine visual language of OperaHeroMark
+ * and GovernanceWorkflow: an index mark, not a logotype, is what
+ * identifies a stage. The full breakdown (governance decisions,
+ * artefacts) lives on /methodology; this is a teaser, not a
+ * duplicate.
  */
 export function OperaDiagram({ showLink = true }: OperaDiagramProps) {
   return (
     <div className="border-t border-border pt-8">
-      <ol className="grid grid-cols-1 gap-8 sm:grid-cols-5 sm:gap-6">
+      <ol className="flex flex-col gap-8 sm:flex-row sm:items-start sm:gap-0">
         {operaStages.map((stage, index) => (
-          <li key={stage.letter} className={cn(index > 0 && "sm:border-l sm:border-border sm:pl-6")}>
-            <div className="flex items-baseline gap-3 sm:block sm:gap-0">
-              <span className="font-serif text-3xl text-accent">{stage.letter}</span>
-              <p className="font-serif text-base text-ink sm:mt-3">{stage.name}</p>
-            </div>
-            <ul className="mt-2 space-y-1">
-              {stage.activities.map((activity) => (
-                <li key={activity} className="text-sm leading-relaxed text-muted">
-                  {activity}
-                </li>
-              ))}
-            </ul>
-          </li>
+          <Fragment key={stage.letter}>
+            {index > 0 && (
+              <li aria-hidden className="hidden shrink-0 items-start justify-center px-3 pt-3 text-muted sm:flex">
+                &rarr;
+              </li>
+            )}
+            <li
+              className="capability-node flex-1"
+              style={{ "--stage-delay": `${index * 70}ms` } as React.CSSProperties}
+            >
+              <span className="flex h-6 w-6 items-center justify-center border border-accent/40 font-mono text-[10px] text-accent">
+                {stage.letter}
+              </span>
+              <p className="mt-3 font-serif text-base text-ink">{stage.name}</p>
+              <p className="mt-1 text-xs uppercase tracking-wide text-accent">{stage.outcome}</p>
+              <ul className="mt-3 space-y-1">
+                {stage.activities.map((activity) => (
+                  <li key={activity} className="text-sm leading-relaxed text-muted">
+                    {activity}
+                  </li>
+                ))}
+              </ul>
+            </li>
+          </Fragment>
         ))}
       </ol>
       {showLink && (

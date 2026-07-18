@@ -102,4 +102,35 @@
   .pretty {
     text-wrap: pretty;
   }
+
+  /*
+   * Shared reveal for governance-framework diagrams (OPERA stages, the
+   * governance workflow, and any future methodology diagram: decision
+   * architecture, evidence lifecycle, assurance flow). Nodes fade and
+   * settle in sequence via the --stage-delay custom property set per
+   * node, rather than each diagram inventing its own motion.
+   */
+  .capability-node {
+    opacity: 0;
+    animation: capability-reveal 420ms ease-out forwards;
+    animation-delay: var(--stage-delay, 0ms);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .capability-node {
+      animation: none;
+      opacity: 1;
+    }
+  }
+}
+
+@keyframes capability-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
