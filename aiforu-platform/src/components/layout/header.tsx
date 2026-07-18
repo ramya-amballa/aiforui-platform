@@ -17,11 +17,15 @@ export function Header() {
     <header className="sticky top-0 z-50 border-b border-border bg-paper/90 backdrop-blur">
       <Container size="wide">
         <div className="flex h-20 items-center justify-between">
-          <Link href="/" className="font-serif text-xl tracking-tight text-ink" onClick={() => setIsMenuOpen(false)}>
+          <Link
+            href="/"
+            className="shrink-0 whitespace-nowrap font-serif text-xl tracking-tight text-ink"
+            onClick={() => setIsMenuOpen(false)}
+          >
             {site.name}
           </Link>
 
-          <nav aria-label="Primary" className="hidden items-center gap-8 lg:flex">
+          <nav aria-label="Primary" className="hidden items-center gap-8 xl:flex">
             {primaryNav.slice(1, -1).map((item) => {
               const isActive = pathname === item.href || (item.href !== "/" && pathname.startsWith(item.href));
               return (
@@ -39,7 +43,7 @@ export function Header() {
             })}
           </nav>
 
-          <div className="hidden items-center gap-4 lg:flex">
+          <div className="hidden items-center gap-4 xl:flex">
             <ThemeToggle />
             <Button href={secondaryCta.href} variant="secondary" size="sm">
               {secondaryCta.label}
@@ -48,7 +52,7 @@ export function Header() {
 
           <button
             type="button"
-            className="inline-flex flex-col gap-1.5 p-2 lg:hidden"
+            className="inline-flex flex-col gap-1.5 p-2 xl:hidden"
             aria-label="Toggle navigation menu"
             aria-expanded={isMenuOpen}
             onClick={() => setIsMenuOpen((open) => !open)}
@@ -60,7 +64,7 @@ export function Header() {
       </Container>
 
       {isMenuOpen ? (
-        <div className="border-t border-border lg:hidden">
+        <div className="border-t border-border xl:hidden">
           <Container size="wide">
             <nav aria-label="Mobile" className="flex flex-col gap-1 py-6">
               {primaryNav.map((item) => (
