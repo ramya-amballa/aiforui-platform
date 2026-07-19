@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { AdvisoryEngagementGrid } from "@/components/advisory/advisory-engagement-grid";
-import { ArticleGrid } from "@/components/article/article-grid";
-import { GovernanceCapabilityMap } from "@/components/governance/governance-capability-map";
 import { CtaBand } from "@/components/sections/cta-band";
 import { CurrentPrioritiesSection } from "@/components/sections/current-priorities-section";
 import { PointOfViewSection } from "@/components/sections/point-of-view-section";
@@ -15,7 +13,8 @@ import { Eyebrow } from "@/components/ui/eyebrow";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { advisoryEngagements } from "@/content/advisory-engagements";
 import { currentPriorities } from "@/content/current-priorities";
-import { getPointOfViewInsights, insights } from "@/content/insights";
+import { governanceClusters } from "@/content/governance-clusters";
+import { getPointOfViewInsights } from "@/content/insights";
 import { buildMetadata } from "@/lib/metadata";
 import { primaryCta, secondaryCta, site } from "@/lib/constants";
 
@@ -29,9 +28,6 @@ export const metadata: Metadata = buildMetadata({
 export default function HomePage() {
   const featuredEngagements = advisoryEngagements.filter((engagement) => engagement.featured).slice(0, 3);
   const pointOfViewPieces = getPointOfViewInsights().filter((piece) => piece.featured).slice(0, 3);
-  const featuredInsights = insights
-    .filter((insight) => insight.featured && insight.format !== "Point of View")
-    .slice(0, 3);
 
   return (
     <>
@@ -88,22 +84,25 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* Governance domains: capability map */}
-      <section className="border-t border-border py-section">
+      {/* Governance domains: light teaser, full map lives at /governance-domains */}
+      <section className="border-t border-border py-section-sm">
         <Container size="wide">
           <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
-            <SectionHeading
-              eyebrow="Capability Map"
-              title="Governance Domains"
-              description={`Thirteen domains across four clusters, mapped from what ${site.advisorName} has advised on directly, each with a defined scope and the audience it serves.`}
-            />
+            <div className="max-w-2xl">
+              <Eyebrow>Capability Map</Eyebrow>
+              <h2 className="mt-4 font-serif text-title text-ink balance">Governance Domains</h2>
+            </div>
             <Button href="/governance-domains" variant="ghost">
               View the full map &rarr;
             </Button>
           </div>
-          <div className="mt-12">
-            <GovernanceCapabilityMap variant="compact" />
-          </div>
+          <ul className="mt-8 flex flex-wrap gap-x-10 gap-y-3 border-t border-border pt-6">
+            {governanceClusters.map((cluster) => (
+              <li key={cluster.id} className="text-sm text-ink">
+                {cluster.name}
+              </li>
+            ))}
+          </ul>
         </Container>
       </section>
 
@@ -140,25 +139,6 @@ export default function HomePage() {
             <Link href="/about" className="mt-4 inline-block text-sm text-accent underline underline-offset-4">
               Read the full profile &rarr;
             </Link>
-          </div>
-        </Container>
-      </section>
-
-      {/* Insights */}
-      <section className="border-t border-border py-section">
-        <Container size="wide">
-          <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
-            <SectionHeading
-              eyebrow="Perspective"
-              title="Insights"
-              description="Perspective on governance decisions, written for the people who have to make them."
-            />
-            <Button href="/insights" variant="ghost">
-              View all insights &rarr;
-            </Button>
-          </div>
-          <div className="mt-12">
-            <ArticleGrid insights={featuredInsights} />
           </div>
         </Container>
       </section>

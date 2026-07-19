@@ -47,13 +47,13 @@ export default function MethodologyPage() {
             title="Opportunity, People, Evaluation, Response, Assurance"
             description="Each stage answers a specific governance decision, produces named artefacts, and delivers one business outcome."
           />
-          <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-5">
-            {operaStages.map((stage) => (
-              <div key={stage.letter} className="border border-border p-6">
-                <div className="flex items-center justify-between">
-                  <span className="font-serif text-3xl text-accent">{stage.letter}</span>
-                  <Badge tone="accent">Stage {operaStages.indexOf(stage) + 1}</Badge>
-                </div>
+          <div className="mt-12 grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-5">
+            {operaStages.map((stage, index) => (
+              <div key={stage.letter} className="relative border-t-2 border-ink pt-8">
+                <span className="absolute -top-3 left-0 flex h-6 w-6 items-center justify-center border border-accent bg-paper font-mono text-[10px] text-accent">
+                  {stage.letter}
+                </span>
+                <Badge tone="accent">Stage {index + 1}</Badge>
                 <h3 className="mt-3 font-serif text-title text-ink">{stage.name}</h3>
 
                 <p className="mt-6 text-eyebrow uppercase tracking-widest text-muted">Governance Decision</p>
