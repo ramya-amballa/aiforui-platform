@@ -10,8 +10,8 @@ interface OperaDiagramProps {
  * The OPERA operating model, rendered as a connected sequence of
  * governance capability nodes (index badge, stage, outcome, real
  * activities from content/opera.ts) rather than large decorative
- * letterforms. Shares the node/spine visual language of OperaHeroMark
- * and GovernanceWorkflow: an index mark, not a logotype, is what
+ * letterforms. Shares the node/spine visual language of
+ * GovernanceWorkflow: an index mark, not a logotype, is what
  * identifies a stage. The full breakdown (governance decisions,
  * artefacts) lives on /methodology; this is a teaser, not a
  * duplicate.

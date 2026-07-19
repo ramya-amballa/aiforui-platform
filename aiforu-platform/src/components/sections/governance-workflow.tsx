@@ -6,9 +6,9 @@ import { governanceWorkflow, governanceWorkflowOutcomes } from "@/content/opera"
  * through under OPERA, from submission to evidence and assurance.
  * Distinct from the five OPERA stages: this is the operational
  * decision path within a single use case's lifecycle. Uses the same
- * index-badge, connected-node visual language as OperaDiagram and
- * OperaHeroMark, so the two diagrams read as one operating model
- * rather than unrelated graphics.
+ * index-badge, connected-node visual language as OperaDiagram, so the
+ * two diagrams read as one operating model rather than unrelated
+ * graphics.
  */
 export function GovernanceWorkflow() {
   return (

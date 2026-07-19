@@ -27,15 +27,9 @@ const roles = [
   { company: "JPMorgan Chase", role: "Team Lead, Operations", period: "Aug 2017 – Mar 2020" },
 ];
 
-const certifications = ["NIST AI RMF", "CAISR, Red Team Leaders", "EU GDPR Practitioner", "Microsoft AI Transformation Leader"];
+const certifications = "NIST AI RMF, CAISR, EU GDPR Practitioner, Microsoft AI Transformation Leader";
 
-const environments = ["Government & Public Sector", "Energy & Critical Infrastructure", "Financial Services", "Enterprise SaaS"];
-
-const elsewhere = [
-  { label: "Substack", href: site.substack },
-  { label: "GitHub", href: site.github },
-  { label: "Gumroad", href: site.gumroad },
-];
+const environments = "Government & Public Sector, Energy & Critical Infrastructure, Financial Services, Enterprise SaaS";
 
 const engagementModel = [
   "Starts with a working conversation about a specific problem, not a scoping questionnaire",
@@ -77,12 +71,6 @@ export default function AboutPage() {
                   )}
                 </span>
               ))}
-            </div>
-
-            <div className="mt-12 flex items-center gap-4 border-t border-brand-paper/10 pt-6">
-              <span aria-hidden className="h-px flex-1 bg-brand-paper/20" />
-              <p className="text-eyebrow uppercase tracking-[0.2em] text-brand-gold">Founder, {site.name}</p>
-              <span aria-hidden className="h-px flex-1 bg-brand-paper/20" />
             </div>
           </BlueprintPanel>
         </Container>
@@ -194,40 +182,15 @@ export default function AboutPage() {
                 the standard I design to, not a generic best-practice baseline.
               </p>
             </div>
-            <div className="lg:col-span-5 lg:col-start-8">
-              <p className="text-eyebrow uppercase tracking-widest text-muted">Sectors</p>
-              <ul className="mt-4 space-y-3 border-t border-border pt-4">
-                {environments.map((environment) => (
-                  <li key={environment} className="text-sm text-ink">
-                    {environment}
-                  </li>
-                ))}
-              </ul>
-
-              <p className="mt-6 text-eyebrow uppercase tracking-widest text-muted">Certifications</p>
-              <ul className="mt-4 space-y-3 border-t border-border pt-4">
-                {certifications.map((certification) => (
-                  <li key={certification} className="text-sm text-ink">
-                    {certification}
-                  </li>
-                ))}
-              </ul>
-
-              <p className="mt-6 text-eyebrow uppercase tracking-widest text-muted">Elsewhere</p>
-              <ul className="mt-4 flex flex-wrap gap-x-6 gap-y-2 border-t border-border pt-4">
-                {elsewhere.map((link) => (
-                  <li key={link.label}>
-                    <a
-                      href={link.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-sm text-ink hover:text-accent"
-                    >
-                      {link.label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
+            <div className="lg:col-span-5 lg:col-start-8 space-y-4 border-t border-border pt-4 text-sm">
+              <p className="text-ink">
+                <span className="text-muted">Sectors </span>
+                {environments}
+              </p>
+              <p className="text-ink">
+                <span className="text-muted">Certifications </span>
+                {certifications}
+              </p>
             </div>
           </div>
         </Container>

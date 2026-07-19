@@ -8,9 +8,7 @@ import { CurrentPrioritiesSection } from "@/components/sections/current-prioriti
 import { PointOfViewSection } from "@/components/sections/point-of-view-section";
 import { JsonLd } from "@/components/seo/json-ld";
 import { organizationSchema, personSchema } from "@/components/seo/schema";
-import { FounderMark } from "@/components/sections/founder-mark";
 import { OperaDiagram } from "@/components/sections/opera-diagram";
-import { OperaHeroMark } from "@/components/sections/opera-hero-mark";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { Eyebrow } from "@/components/ui/eyebrow";
@@ -41,72 +39,33 @@ export default function HomePage() {
       <JsonLd data={organizationSchema()} />
 
       {/* Hero */}
-      <section className="relative overflow-hidden border-b border-border py-section-lg">
-        <div
-          aria-hidden
-          className="pointer-events-none absolute inset-0 -z-10 opacity-40"
-          style={{
-            backgroundImage:
-              "linear-gradient(to right, hsl(var(--color-border)) 1px, transparent 1px), linear-gradient(to bottom, hsl(var(--color-border)) 1px, transparent 1px)",
-            backgroundSize: "40px 40px",
-            maskImage: "linear-gradient(to bottom, black, transparent)",
-            WebkitMaskImage: "linear-gradient(to bottom, black, transparent)",
-          }}
-        />
+      <section className="border-b border-border py-section-lg">
         <Container size="wide">
-          <div className="grid grid-cols-1 items-end gap-12 lg:grid-cols-12">
-            <div className="lg:col-span-8">
-              <Eyebrow>AI &amp; Digital Governance Advisory</Eyebrow>
-              <h1 className="mt-6 max-w-4xl font-serif text-display-lg text-ink balance">
-                Governance that holds up under audit, regulation and board scrutiny.
-              </h1>
-              <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted pretty">
-                Independent advisory across AI governance, digital governance, cyber governance, technology
-                risk and third-party governance, for boards, executives and public-sector leaders in regulated
-                and high-assurance organisations.
-              </p>
-              <div className="mt-10 flex flex-wrap items-center gap-6">
-                <Button href={primaryCta.href} variant="primary" size="lg">
-                  {primaryCta.label}
-                </Button>
-                <Link href={secondaryCta.href} className="text-sm text-ink underline underline-offset-4 decoration-border hover:decoration-accent hover:text-accent">
-                  {secondaryCta.label} &rarr;
-                </Link>
-              </div>
-              <p className="mt-8 text-sm text-muted">
-                An engagement with {site.name} means direct access to{" "}
-                <Link href="/about" className="text-ink underline underline-offset-4 decoration-border hover:decoration-accent hover:text-accent">
-                  Ramya Amballa
-                </Link>
-                , not a staffing pyramid.
-              </p>
-            </div>
-            <div className="lg:col-span-4">
-              <OperaHeroMark />
-            </div>
-          </div>
-        </Container>
-      </section>
-
-      {/* Founder */}
-      <section className="border-b border-border py-section">
-        <Container size="wide">
-          <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
-            <div className="lg:col-span-4">
-              <FounderMark />
-            </div>
-            <div className="lg:col-span-7 lg:col-start-6">
-              <Eyebrow>Founder</Eyebrow>
-              <h2 className="mt-6 font-serif text-headline text-ink balance">{site.advisorName}</h2>
-              <p className="mt-4 text-lg leading-relaxed text-ink pretty">
-                Founder of {site.name} and creator of the OPERA methodology, built from work across AI
-                governance, cyber governance, technology risk and third-party governance in regulated and
-                high-assurance environments.
-              </p>
-              <Link href="/about" className="mt-6 inline-block text-sm text-accent underline underline-offset-4">
-                Read the full profile &rarr;
+          <div className="max-w-3xl">
+            <Eyebrow>AI &amp; Digital Governance Advisory</Eyebrow>
+            <h1 className="mt-6 font-serif text-display-lg text-ink balance">
+              Governance that holds up under audit, regulation and board scrutiny.
+            </h1>
+            <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted pretty">
+              Independent advisory across AI governance, digital governance, cyber governance, technology
+              risk and third-party governance, for boards, executives and public-sector leaders in regulated
+              and high-assurance organisations.
+            </p>
+            <div className="mt-10 flex flex-wrap items-center gap-6">
+              <Button href={primaryCta.href} variant="primary" size="lg">
+                {primaryCta.label}
+              </Button>
+              <Link href={secondaryCta.href} className="text-sm text-ink underline underline-offset-4 decoration-border hover:decoration-accent hover:text-accent">
+                {secondaryCta.label} &rarr;
               </Link>
             </div>
+            <p className="mt-8 text-sm text-muted">
+              An engagement with {site.name} means direct access to{" "}
+              <Link href="/about" className="text-ink underline underline-offset-4 decoration-border hover:decoration-accent hover:text-accent">
+                Ramya Amballa
+              </Link>
+              , not a staffing pyramid.
+            </p>
           </div>
         </Container>
       </section>
@@ -163,6 +122,24 @@ export default function HomePage() {
           </div>
           <div className="mt-12">
             <AdvisoryEngagementGrid engagements={featuredEngagements} />
+          </div>
+        </Container>
+      </section>
+
+      {/* Founder */}
+      <section className="border-t border-border py-section-sm">
+        <Container size="wide">
+          <div className="max-w-2xl">
+            <Eyebrow>Founder</Eyebrow>
+            <h2 className="mt-4 font-serif text-title text-ink balance">{site.advisorName}</h2>
+            <p className="mt-3 text-base leading-relaxed text-muted pretty">
+              Founder of {site.name} and creator of the OPERA methodology, built from work across AI governance,
+              cyber governance, technology risk and third-party governance in regulated and high-assurance
+              environments.
+            </p>
+            <Link href="/about" className="mt-4 inline-block text-sm text-accent underline underline-offset-4">
+              Read the full profile &rarr;
+            </Link>
           </div>
         </Container>
       </section>

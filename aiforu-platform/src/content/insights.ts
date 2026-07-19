@@ -11,7 +11,7 @@ import type { Insight } from "@/types";
 export const insights: Insight[] = [
   {
     slug: "judgment-over-frameworks",
-    title: "Judgment Over Frameworks",
+    title: "Why Frameworks Don't Make Decisions",
     format: "Point of View",
     category: "Governance Philosophy",
     domainSlugs: ["ai-governance", "governance-transformation"],
@@ -28,7 +28,7 @@ export const insights: Insight[] = [
   },
   {
     slug: "governance-debt",
-    title: "Governance Debt",
+    title: "The Cost of Governance Debt",
     format: "Point of View",
     category: "Risk Governance",
     domainSlugs: ["technology-risk", "enterprise-risk-governance"],
@@ -76,7 +76,7 @@ export const insights: Insight[] = [
   },
   {
     slug: "third-party-risk-in-regulated-sectors",
-    title: "Third-Party Risk in Regulated Sectors",
+    title: "Why Vendor Risk Doesn't Transfer With the Contract",
     format: "Briefing",
     category: "Third Party Governance",
     domainSlugs: ["third-party-governance"],
@@ -91,7 +91,7 @@ export const insights: Insight[] = [
   },
   {
     slug: "dpdp-readiness-priorities",
-    title: "DPDP Readiness: Where to Start",
+    title: "DPDP Readiness Starts With Data, Not Policy",
     format: "Briefing",
     category: "DPDP Governance & Readiness",
     domainSlugs: ["dpdp-governance-readiness"],
@@ -121,7 +121,7 @@ export const insights: Insight[] = [
   },
   {
     slug: "government-digital-governance-maturity",
-    title: "Maturity in Government Digital Governance",
+    title: "Why Private-Sector Maturity Models Don't Work for Government",
     format: "Field Note",
     category: "Government Digital Governance",
     domainSlugs: ["government-digital-governance"],
