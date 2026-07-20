@@ -37,7 +37,7 @@ export const footerNav: { title: string; items: NavItem[] }[] = [
     ],
   },
   {
-    title: "Perspective",
+    title: "Knowledge",
     items: [
       { label: "Insights", href: "/insights" },
       { label: "Resources", href: "/resources" },

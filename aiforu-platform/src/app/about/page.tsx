@@ -13,7 +13,7 @@ import { site } from "@/lib/constants";
 export const metadata: Metadata = buildMetadata({
   title: "About",
   description:
-    "Ramya Amballa advises boards, CISOs and government steering committees on AI and technology governance, drawing on thirteen-plus years in governance, risk and audit roles and the OPERA methodology.",
+    "Ramya Amballa spent thirteen years in enterprise technology risk, cyber risk, GRC, third-party risk and audit readiness at PwC, Wells Fargo, JPMorgan Chase and Viatris before founding an independent AI and technology governance advisory practice built on the OPERA methodology.",
   path: "/about",
 });
 
@@ -35,7 +35,7 @@ const engagementModel = [
   "Starts with a working conversation about a specific problem, not a scoping questionnaire",
   "Run using the OPERA methodology, scaled to what the organisation needs rather than applied wholesale",
   "Sized to fit: a focused advisory engagement, an operating model redesign, or a longer programme",
-  "Ends with something the organisation owns and can run without me: an operating model, not a report that sits on a shelf",
+  "Ends with something the organisation owns and can run without outside help: an operating model, not a report that sits on a shelf",
 ];
 
 export default function AboutPage() {
@@ -51,11 +51,13 @@ export default function AboutPage() {
             <div className="mt-4 h-px w-16 bg-brand-gold" />
 
             <h1 className="mt-8 max-w-3xl font-serif text-display text-brand-paper balance">
-              Frameworks describe what governance should look like. OPERA is how it actually gets run.
+              Thirteen years across PwC, Wells Fargo, JPMorgan Chase and Viatris, now advising boards and
+              regulators on AI and technology governance.
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-brand-muted pretty">
-              Advisory work in AI, digital, cyber and third-party governance, for boards, CISOs and government
-              steering committees in regulated and high-assurance organisations.
+              Ramya Amballa built her governance judgment inside enterprise technology risk, cyber risk, GRC,
+              third-party risk and audit readiness functions, the disciplines she now applies to AI governance
+              for boards, CISOs and government steering committees.
             </p>
 
             <div className="mt-10 flex flex-wrap items-center gap-x-3 gap-y-2 border-t border-brand-paper/10 pt-8 text-sm text-brand-paper">
@@ -74,29 +76,28 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      {/* Who this practice serves */}
+      {/* Where this judgment comes from */}
       <section className="py-section">
         <Container size="narrow">
-          <h2 className="font-serif text-title text-ink">Who This Practice Serves</h2>
+          <h2 className="font-serif text-title text-ink">Where This Judgment Comes From</h2>
+
           <p className="mt-6 text-base leading-relaxed text-ink pretty">
-            Boards, CISOs, CIOs and government steering committees who need a governance decision to hold up
-            when someone outside the organisation, an auditor, a regulator, a procurement panel, examines it.
-            Work spans {environments}.
+            Ramya Amballa spent thirteen years inside the governance, risk and audit functions of PwC, Wells
+            Fargo, JPMorgan Chase and Viatris, running enterprise technology risk, cyber risk, GRC, third-party
+            risk and audit readiness programmes across banking, professional services and life sciences. At
+            JPMorgan Chase, that meant global KYC and sanctions operations across multiple jurisdictions. At
+            Wells Fargo and Viatris, it meant third-party risk governance for hundreds of vendor relationships,
+            through the part of the relationship most programmes stop watching once onboarding is signed off.
+            At PwC, it meant testing controls across 300+ business-critical applications and cutting residual
+            risk exposure by 35% in a single programme.
           </p>
-        </Container>
-      </section>
 
-      <Divider />
-
-      {/* Why organisations engage */}
-      <section className="py-section">
-        <Container size="narrow">
-          <h2 className="font-serif text-title text-ink">Why Organisations Engage This Practice</h2>
           <p className="mt-6 text-base leading-relaxed text-ink pretty">
-            Governance programmes rarely fail from a missing framework. They fail because ownership was
-            assumed rather than assigned, evidence was produced after the fact rather than maintained, and
-            controls were tested on paper but not in the environment where they actually operate. Closing that
-            gap, not adding another policy, is the work.
+            AI governance turned out to be the same discipline wearing a faster clock. The organisations asking
+            for it were rarely short of frameworks. What they lacked was what those thirteen years had actually
+            been about: a named owner for every decision, evidence maintained as a matter of course rather than
+            assembled after an incident, and controls tested against what a system does in production, not what
+            a policy says it should do.
           </p>
         </Container>
       </section>
@@ -109,23 +110,23 @@ export default function AboutPage() {
             decisions.
           </p>
           <p className="mt-6 text-base leading-relaxed text-muted pretty">
-            The technology changes faster than the organisations governing it. The failure pattern,
-            undocumented ownership, evidence assembled after the fact, controls never tested against how the
-            system actually behaves, does not.
+            It fails for the same reasons governance has always failed: assumed ownership, retrospective
+            evidence, and controls nobody tested against how the system actually behaves.
           </p>
         </Container>
       </section>
 
       <Divider />
 
-      {/* Why OPERA exists */}
+      {/* Why OPERA exists, introduced only now */}
       <section className="py-section">
         <Container size="wide">
           <h2 className="font-serif text-title text-ink">Why OPERA Exists</h2>
           <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted pretty">
-            Most governance frameworks describe intent well and operations poorly. OPERA sequences five
-            decisions, from the opportunity behind a requirement to the assurance evidence that outlasts it, so
-            a governance requirement becomes something an organisation runs, not just a document it produces.
+            OPERA is what came out of applying that judgment consistently. It sequences five decisions, from
+            the opportunity behind a governance requirement to the assurance evidence that outlasts it,
+            developed from running this kind of programme inside four different regulated environments before
+            it had a name.
           </p>
           <div className="mt-10">
             <OperaDiagram />
@@ -135,18 +136,14 @@ export default function AboutPage() {
 
       <Divider />
 
-      {/* Credibility */}
+      {/* Background */}
       <section className="py-section">
         <Container size="wide">
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
             <div className="lg:col-span-6">
               <h2 className="font-serif text-title text-ink">Background</h2>
-              <p className="mt-6 text-base leading-relaxed text-muted pretty">
-                Thirteen-plus years across professional services, banking and life sciences: control testing,
-                third-party risk and audit readiness, most recently leading control testing across 300+
-                business-critical applications at PwC.
-              </p>
-              <p className="mt-4 text-sm text-muted">Certifications: {certifications}</p>
+              <p className="mt-6 text-sm text-muted">Certifications: {certifications}</p>
+              <p className="mt-2 text-sm text-muted">Sectors: {environments}</p>
             </div>
             <div className="lg:col-span-5 lg:col-start-8">
               <p className="text-eyebrow uppercase tracking-widest text-muted">Experience</p>
@@ -180,8 +177,9 @@ export default function AboutPage() {
             ))}
           </ul>
           <p className="mt-6 text-sm leading-relaxed text-muted pretty">
-            No work where the goal is a compliance document rather than a governance structure people will
-            actually use, or where accountability cannot be clearly assigned inside the organisation.
+            She does not take on work where the goal is a compliance document rather than a governance
+            structure people will actually use, or where accountability cannot be clearly assigned inside the
+            organisation.
           </p>
           <p className="mt-6 text-sm leading-relaxed text-muted">
             <Link href="/methodology" className="text-accent underline underline-offset-4">
