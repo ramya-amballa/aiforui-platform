@@ -27,14 +27,6 @@ export default function ContactPage() {
 
             <dl className="mt-12 space-y-6 border-t border-border pt-8">
               <div>
-                <dt className="text-eyebrow uppercase tracking-widest text-muted">Direct</dt>
-                <dd className="mt-2 text-sm text-ink">
-                  <a href={`mailto:${site.email}`} className="hover:text-accent">
-                    {site.email}
-                  </a>
-                </dd>
-              </div>
-              <div>
                 <dt className="text-eyebrow uppercase tracking-widest text-muted">LinkedIn</dt>
                 <dd className="mt-2 text-sm text-ink">
                   <a href={site.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-accent">
