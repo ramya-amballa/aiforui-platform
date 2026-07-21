@@ -13,6 +13,7 @@ const staticRoutes = [
   "/insights",
   "/resources",
   "/about",
+  "/capability-overview",
   "/contact",
   "/privacy-policy",
   "/terms",

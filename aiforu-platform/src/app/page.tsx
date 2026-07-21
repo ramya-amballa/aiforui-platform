@@ -62,6 +62,12 @@ export default function HomePage() {
               </Link>
               , not a staffing pyramid.
             </p>
+            <Link
+              href="/capability-overview"
+              className="mt-3 inline-block text-xs text-muted underline underline-offset-4 decoration-border hover:decoration-accent hover:text-accent"
+            >
+              Explore our Executive Capability Overview (PDF) &rarr;
+            </Link>
           </div>
         </Container>
       </section>

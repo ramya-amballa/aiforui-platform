@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { AdvisoryEngagementGrid } from "@/components/advisory/advisory-engagement-grid";
 import { CtaBand } from "@/components/sections/cta-band";
 import { EngagementLifecycle } from "@/components/sections/engagement-lifecycle";
@@ -65,6 +66,13 @@ export default async function SelectedAdvisoryEngagementsPage({ searchParams }: 
             searchParams={params}
             basePath="/selected-advisory-engagements"
           />
+          <p className="mt-10 border-t border-border pt-6 text-sm text-muted">
+            For a single-document summary of these engagement areas,{" "}
+            <Link href="/capability-overview" className="text-ink underline underline-offset-4 hover:text-accent">
+              see the Executive Capability Overview
+            </Link>
+            .
+          </p>
         </Container>
       </section>
       <CtaBand />

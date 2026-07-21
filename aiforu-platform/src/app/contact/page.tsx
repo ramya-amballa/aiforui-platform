@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { ContactForm } from "@/components/contact/contact-form";
 import { Container } from "@/components/ui/container";
 import { Eyebrow } from "@/components/ui/eyebrow";
@@ -39,6 +40,14 @@ export default function ContactPage() {
                 <dd className="mt-2 text-sm text-ink">Replies are sent directly, typically within a few business days.</dd>
               </div>
             </dl>
+
+            <p className="mt-8 text-sm leading-relaxed text-muted pretty">
+              For those not ready to start a conversation yet, the{" "}
+              <Link href="/capability-overview" className="text-ink underline underline-offset-4 hover:text-accent">
+                Executive Capability Overview
+              </Link>{" "}
+              covers the same ground in a single document.
+            </p>
           </div>
 
           <div className="lg:col-span-6 lg:col-start-7">
