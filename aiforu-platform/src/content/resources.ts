@@ -10,6 +10,16 @@ import type { Resource } from "@/types";
  */
 export const resources: Resource[] = [
   {
+    slug: "opera-executive-guide",
+    title: "OPERA Executive Guide",
+    type: "Executive Guide",
+    accessTier: "Coming Soon",
+    domainSlugs: ["ai-governance"],
+    description:
+      "A concise executive publication introducing the OPERA methodology, implementation approach, governance workflow and advisory capabilities.",
+    featured: true,
+  },
+  {
     slug: "ai-governance-maturity-framework",
     title: "AI Governance Maturity Framework",
     type: "Framework",

@@ -11,7 +11,10 @@ interface PageProps {
 }
 
 export function generateStaticParams() {
-  return resources.map((resource) => ({ slug: resource.slug }));
+  // "opera-executive-guide" has its own bespoke route (app/resources/opera-executive-guide/page.tsx),
+  // which a static segment always takes precedence over; excluded here to avoid generating an
+  // unreachable duplicate via this dynamic template.
+  return resources.filter((resource) => resource.slug !== "opera-executive-guide").map((resource) => ({ slug: resource.slug }));
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {

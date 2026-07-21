@@ -7,7 +7,7 @@ export function ResourceCard({ resource }: { resource: Resource }) {
     <Card href={`/resources/${resource.slug}`}>
       <div className="flex items-center justify-between gap-3">
         <Badge>{resource.type}</Badge>
-        <Badge tone={resource.accessTier === "Premium" ? "accent" : "neutral"}>{resource.accessTier}</Badge>
+        <Badge tone={resource.accessTier === "Free" ? "neutral" : "accent"}>{resource.accessTier}</Badge>
       </div>
       <CardTitle>{resource.title}</CardTitle>
       <CardDescription>{resource.description}</CardDescription>

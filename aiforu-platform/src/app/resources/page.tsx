@@ -17,6 +17,7 @@ export const metadata: Metadata = buildMetadata({
 });
 
 const types: ResourceType[] = [
+  "Executive Guide",
   "Framework",
   "Checklist",
   "Whitepaper",
@@ -26,7 +27,7 @@ const types: ResourceType[] = [
   "Reference Architecture",
   "Toolkit",
 ];
-const tiers: ResourceAccessTier[] = ["Free", "Premium"];
+const tiers: ResourceAccessTier[] = ["Free", "Premium", "Coming Soon"];
 
 interface PageProps {
   searchParams: Promise<Record<string, string | string[] | undefined>>;

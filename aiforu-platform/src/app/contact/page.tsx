@@ -43,8 +43,8 @@ export default function ContactPage() {
 
             <p className="mt-8 text-sm leading-relaxed text-muted pretty">
               For those not ready to start a conversation yet, the{" "}
-              <Link href="/capability-overview" className="text-ink underline underline-offset-4 hover:text-accent">
-                Executive Capability Overview
+              <Link href="/resources/opera-executive-guide" className="text-ink underline underline-offset-4 hover:text-accent">
+                OPERA Executive Guide
               </Link>{" "}
               covers the same ground in a single document.
             </p>

@@ -93,6 +93,7 @@ export interface Insight {
 }
 
 export type ResourceType =
+  | "Executive Guide"
   | "Framework"
   | "Checklist"
   | "Whitepaper"
@@ -102,7 +103,7 @@ export type ResourceType =
   | "Reference Architecture"
   | "Toolkit";
 
-export type ResourceAccessTier = "Free" | "Premium";
+export type ResourceAccessTier = "Free" | "Premium" | "Coming Soon";
 
 export interface Resource {
   slug: string;

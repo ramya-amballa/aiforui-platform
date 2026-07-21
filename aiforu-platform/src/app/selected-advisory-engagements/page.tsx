@@ -68,8 +68,8 @@ export default async function SelectedAdvisoryEngagementsPage({ searchParams }: 
           />
           <p className="mt-10 border-t border-border pt-6 text-sm text-muted">
             For a single-document summary of these engagement areas,{" "}
-            <Link href="/capability-overview" className="text-ink underline underline-offset-4 hover:text-accent">
-              see the Executive Capability Overview
+            <Link href="/resources/opera-executive-guide" className="text-ink underline underline-offset-4 hover:text-accent">
+              see the OPERA Executive Guide
             </Link>
             .
           </p>

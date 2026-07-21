@@ -63,10 +63,10 @@ export default function HomePage() {
               , not a staffing pyramid.
             </p>
             <Link
-              href="/capability-overview"
+              href="/resources/opera-executive-guide"
               className="mt-3 inline-block text-xs text-muted underline underline-offset-4 decoration-border hover:decoration-accent hover:text-accent"
             >
-              Explore our Executive Capability Overview (PDF) &rarr;
+              Explore the OPERA Executive Guide &rarr;
             </Link>
           </div>
         </Container>
