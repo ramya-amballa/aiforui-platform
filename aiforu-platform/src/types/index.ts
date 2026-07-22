@@ -113,6 +113,8 @@ export interface Resource {
   domainSlugs: string[];
   description: string;
   featured: boolean;
+  /** Path to a real, downloadable file under public/, when one exists. */
+  fileUrl?: string;
 }
 
 /**

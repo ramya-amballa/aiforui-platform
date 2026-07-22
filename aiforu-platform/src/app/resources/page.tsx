@@ -27,7 +27,7 @@ const types: ResourceType[] = [
   "Reference Architecture",
   "Toolkit",
 ];
-const tiers: ResourceAccessTier[] = ["Free", "Premium", "Coming Soon"];
+const tiers: ResourceAccessTier[] = ["Free", "Premium"];
 
 interface PageProps {
   searchParams: Promise<Record<string, string | string[] | undefined>>;

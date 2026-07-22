@@ -18,9 +18,15 @@ export function ResourceDetail({ resource }: { resource: Resource }) {
         <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted pretty">{resource.description}</p>
 
         <div className="mt-10">
-          <Button variant="primary" size="lg" disabled={isComingSoon}>
-            {isComingSoon ? "Coming soon" : isPremium ? "Request access" : "Download resource"}
-          </Button>
+          {resource.fileUrl ? (
+            <Button href={resource.fileUrl} target="_blank" rel="noopener noreferrer" variant="primary" size="lg">
+              Download PDF
+            </Button>
+          ) : (
+            <Button variant="primary" size="lg" disabled={isComingSoon}>
+              {isComingSoon ? "Coming soon" : isPremium ? "Request access" : "Download resource"}
+            </Button>
+          )}
         </div>
       </Container>
     </article>

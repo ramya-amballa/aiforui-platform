@@ -10,14 +10,15 @@ import type { Resource } from "@/types";
  */
 export const resources: Resource[] = [
   {
-    slug: "opera-executive-guide",
-    title: "OPERA Executive Guide",
+    slug: "executive-capability-overview",
+    title: "Executive Capability Overview",
     type: "Executive Guide",
-    accessTier: "Coming Soon",
+    accessTier: "Free",
     domainSlugs: ["ai-governance"],
     description:
-      "A concise executive publication introducing the OPERA methodology, implementation approach, governance workflow and advisory capabilities.",
+      "A concise overview of AI for U&I's advisory approach, governance methodology, engagement models, and practitioner experience for executive decision makers.",
     featured: true,
+    fileUrl: "/downloads/executive-capability-overview.pdf",
   },
   {
     slug: "ai-governance-maturity-framework",
