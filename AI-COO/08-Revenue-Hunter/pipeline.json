@@ -1,0 +1,22 @@
+{
+  "schema": {
+    "id": "string — unique identifier, e.g. rev-0001",
+    "dateAdded": "string — ISO 8601 date",
+    "type": "string — one of: Consulting Project, Enterprise Contract, Workshop, Speaking Engagement, Paid Advisory Call, Grant, Partnership, Product Idea, Licensing",
+    "title": "string",
+    "organisation": "string",
+    "sourceRef": "string — id from opportunities.json, company-intelligence.json, or product-backlog.json this came from, if any",
+    "expectedRevenue": "number or string — amount or range, with currency",
+    "probabilityOfSuccess": "number — 0-10",
+    "effortRequired": "number — 0-10, 10 = lowest effort",
+    "strategicValue": "number — 0-10",
+    "score": "number — 0-100, per lead-scoring.md",
+    "band": "string — Priority, Active, or Deferred",
+    "stage": "string — identified, qualified, in-progress, won, lost, deferred",
+    "owner": "string — who is driving this (usually Ramya, sometimes Sales Director)",
+    "lastTouch": "string — ISO 8601 date",
+    "nextAction": "string",
+    "nextActionDue": "string — ISO 8601 date"
+  },
+  "pipeline": []
+}

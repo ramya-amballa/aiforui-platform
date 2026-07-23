@@ -7,11 +7,21 @@
 
 ## Highest Priority Revenue Action
 
-{{ONE_SENTENCE: the single most important thing to act on today, and
-why. Everything below supports this line; this line is what actually
-gets read.}}
+{{Pulled directly from `09-CEO-Advisor/daily-recommendation-template.md`.
+Everything below supports this line; this line is what actually gets
+read.}}
+
+**Today's highest-value action:** {{ACTION}}
+**Estimated value:** {{VALUE}}
+**Estimated effort:** {{EFFORT}}
+**Reason:** {{REASON}}
 
 ---
+
+## Pipeline at a Glance
+
+{{Priority-band count, total open value, from
+`08-Revenue-Hunter/revenue-dashboard-template.md`}}
 
 ## New Consulting Opportunities
 
@@ -42,11 +52,11 @@ gets read.}}
 ## Product Ideas
 
 {{LIST: new or refined product/resource ideas surfaced today, from
-Product Factory}}
+Product Manager}}
 
 ## LinkedIn Content Ideas
 
-{{LIST: post ideas surfaced today, from Content Engine}}
+{{LIST: post ideas surfaced today, from Content Director}}
 
 ## Regulations Published Today
 
@@ -57,11 +67,18 @@ creates}}
 
 ## Existing Follow-Ups
 
-| Company | Last Touch | Days Since | Next Action Due |
-|---|---|---|---|
+{{From `04-Sales-Director`'s follow-up queue}}
+
+| Company | Last Touch | Days Since | Next Action Due | Status |
+|---|---|---|---|---|
+
+## At Risk
+
+{{Any relationship `04-Sales-Director` has escalated as going cold}}
 
 ---
 
-*Compiled from `01-Opportunity-Hunter`, `02-Content-Engine`,
-`03-Product-Factory`, `05-Market-Intelligence` and
-`06-CRM/company-intelligence.json`.*
+*Compiled from `01-Opportunity-Hunter`, `02-Content-Director`,
+`03-Product-Manager`, `04-Sales-Director`, `05-Market-Intelligence`,
+`06-CRM/company-intelligence.json`, `08-Revenue-Hunter` and
+`09-CEO-Advisor`.*

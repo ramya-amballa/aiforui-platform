@@ -15,6 +15,15 @@
     ],
     "tailoredPositioning": "string — the angle that fits this company specifically, so it doesn't need to be reasoned out again next time",
     "lastTouch": "string — ISO 8601 date",
+    "relationshipTemperature": "string — hot, warm, cooling, cold (owned by 04-Sales-Director)",
+    "nextFollowUpDue": "string — ISO 8601 date (owned by 04-Sales-Director)",
+    "outreachHistory": [
+      {
+        "date": "string — ISO 8601 date",
+        "channel": "string — LinkedIn, email, call, referral introduction, event",
+        "summary": "string"
+      }
+    ],
     "notes": "string"
   },
   "companies": []

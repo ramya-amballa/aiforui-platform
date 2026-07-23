@@ -22,6 +22,10 @@ searching for opportunities from scratch.
    company, add a full record to `06-CRM/company-intelligence.json`.
 7. Fill in today's entry in `daily-report-template.md` and hand it to
    `07-Daily-Brief`.
+8. Anything scoring `Priority` gets added to
+   `08-Revenue-Hunter/pipeline.json` (`sourceRef` pointing back to this
+   opportunity's id) so it enters the unified revenue view rather than
+   staying siloed here.
 
 ## Sources to Monitor
 

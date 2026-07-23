@@ -1,0 +1,15 @@
+{
+  "schema": {
+    "id": "string — unique identifier, e.g. prod-0001",
+    "dateAdded": "string — ISO 8601 date",
+    "signalSource": "string — Market Intelligence, CRM, Content Director, Sales Director, or a specific engagement",
+    "signalDescription": "string",
+    "proposedFormat": "string — Toolkit, Checklist, Executive Guide, Assessment, Course, Workshop, or Subscription",
+    "score": "number — 0-40, per product-evaluation-framework.md",
+    "status": "string — candidate, in-development, shipped, parked",
+    "revenueOrLeadPotential": "string",
+    "owner": "string",
+    "notes": "string"
+  },
+  "backlog": []
+}
