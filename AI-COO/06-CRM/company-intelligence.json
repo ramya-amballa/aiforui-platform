@@ -1,0 +1,21 @@
+{
+  "schema": {
+    "companyName": "string",
+    "industry": "string",
+    "aiMaturity": "string — one of: Exploring, Piloting, Scaling, Mature, Unknown",
+    "regulations": "array of strings — regulatory regimes that apply to this company, e.g. ['EU AI Act', 'DORA', 'GDPR']",
+    "existingRelationship": "string — none, warm referral, prior conversation, prior client, active client",
+    "recruiter": "string or null — recruiter/agency name if this company was reached via one",
+    "previousApplications": [
+      {
+        "date": "string — ISO 8601 date",
+        "role": "string",
+        "outcome": "string — applied, interview, rejected, withdrawn, offer, hired"
+      }
+    ],
+    "tailoredPositioning": "string — the angle that fits this company specifically, so it doesn't need to be reasoned out again next time",
+    "lastTouch": "string — ISO 8601 date",
+    "notes": "string"
+  },
+  "companies": []
+}

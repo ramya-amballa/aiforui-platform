@@ -1,0 +1,17 @@
+{
+  "schema": {
+    "id": "string — unique identifier, e.g. reg-0001",
+    "date": "string — ISO 8601 date",
+    "source": "string — one of: EU AI Act, ISO 42001, NIST AI RMF, DORA, GDPR, CBUAE AI Principles, RBI AI guidance, AI security news",
+    "summary": "string — what changed, in plain language",
+    "url": "string — link to the original publication",
+    "substantive": "boolean — false for minor edits or duplicate reports",
+    "triggers": {
+      "linkedinIdea": "string or null",
+      "newsletterIdea": "string or null",
+      "productUpdate": "string or null — which product/resource, or 'not applicable' with a reason",
+      "consultingOpportunity": "string or null — who this creates urgency for, or 'not applicable' with a reason"
+    }
+  },
+  "log": []
+}
