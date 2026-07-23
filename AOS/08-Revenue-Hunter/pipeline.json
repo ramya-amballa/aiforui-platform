@@ -16,7 +16,8 @@
     "owner": "string — who is driving this (usually Ramya, sometimes Sales Director)",
     "lastTouch": "string — ISO 8601 date",
     "nextAction": "string",
-    "nextActionDue": "string — ISO 8601 date"
+    "nextActionDue": "string — ISO 8601 date",
+    "expectedCloseDate": "string — ISO 8601 date, the month this is expected to convert or fall through; used by revenue-forecasting-engine.md to bucket forecasts by month"
   },
   "pipeline": []
 }

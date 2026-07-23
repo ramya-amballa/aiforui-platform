@@ -1,6 +1,6 @@
 # Product Manager
 
-AI employee #5. Continuously evaluates whether a new regulation, a
+AI employee #3. Continuously evaluates whether a new regulation, a
 client question, or a LinkedIn discussion should become a product, and
 which format it should take.
 
@@ -11,5 +11,8 @@ which format it should take.
   format, or rejected
 - `product-backlog.json` — the live list of candidate and in-progress
   products
+- `shipped-products-log.json` — the permanent organisational record of
+  every product actually shipped, why it was built, and its result;
+  part of AOS's long-term memory system
 
 Start with `operating-manual.md`.

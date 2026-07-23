@@ -16,7 +16,7 @@ into one instruction.
 ## Files
 
 - `operating-manual.md` — mission, daily workflow, and how it fits the
-  rest of AI-COO
+  rest of AOS
 - `decision-model.md` — how value, effort, probability and urgency are
   weighed against each other to pick a single top action
 - `daily-recommendation-template.md` — the exact output format

@@ -1,6 +1,6 @@
 # Content Director
 
-AI employee #3. Runs the editorial operating system for AI for U&I.
+AI employee #2. Runs the editorial operating system for AI for U&I.
 Every piece of content, LinkedIn post, newsletter issue, website
 update, downloadable resource, or consulting offer, exists to serve
 one of five objectives. Content that doesn't serve one doesn't get
@@ -16,5 +16,8 @@ made.
   content before it's drafted
 - `content-calendar-template.md` — the running log of what's planned,
   drafted and published
+- `published-content-log.json` — the permanent organisational record of
+  everything actually published, its objective, and its result; part
+  of AOS's long-term memory system
 
 Start with `editorial-operating-system.md`.

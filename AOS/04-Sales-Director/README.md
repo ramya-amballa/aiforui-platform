@@ -10,7 +10,7 @@ day and drafts the outreach itself.
 ## Files
 
 - `operating-manual.md` — mission, daily workflow, and how it fits the
-  rest of AI-COO
+  rest of AOS
 - `follow-up-priority-model.md` — how "which relationships need
   attention today" gets decided
 - `outreach-draft-template.md` — the structure every personalised

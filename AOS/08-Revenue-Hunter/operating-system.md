@@ -25,7 +25,7 @@ Revenue Hunter tracks nine revenue types:
 | Product idea (as revenue) | Small-medium, recurring | Product Manager |
 | Licensing | Variable, recurring | Product Manager, Content Director |
 
-## How Revenue Hunter Fits AI-COO
+## How Revenue Hunter Fits AOS
 
 - **Reads from:** `01-Opportunity-Hunter/opportunities.json` (sourced
   leads), `06-CRM/company-intelligence.json` (existing relationships

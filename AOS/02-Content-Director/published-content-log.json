@@ -1,0 +1,14 @@
+{
+  "schema": {
+    "id": "string — unique identifier, e.g. content-0001",
+    "datePublished": "string — ISO 8601 date",
+    "format": "string — LinkedIn post, newsletter issue, Insights piece, Resources page, website update",
+    "title": "string",
+    "objective": "string — one of: Generate consulting leads, Sell products, Build authority, Increase newsletter subscribers, Support website SEO",
+    "triggerSource": "string — id or reference to the regulatory-log.json entry, CRM pattern, or LinkedIn discussion that prompted this",
+    "link": "string or null",
+    "result": "string — leads generated, subscriber delta, traffic delta, or 'not yet measured'",
+    "flaggedTo": "array of strings — any of 03-Product-Manager, 08-Revenue-Hunter, 04-Sales-Director this piece was flagged to, if any"
+  },
+  "publishedContent": []
+}

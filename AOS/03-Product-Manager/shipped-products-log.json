@@ -1,0 +1,13 @@
+{
+  "schema": {
+    "id": "string — unique identifier, e.g. shipped-0001",
+    "backlogRef": "string — id from product-backlog.json this originated from",
+    "dateShipped": "string — ISO 8601 date",
+    "title": "string",
+    "format": "string — Toolkit, Checklist, Executive Guide, Assessment, Course, Workshop, or Subscription",
+    "originSignal": "string — the recurring signal that justified building this, so the reasoning is never re-derived",
+    "revenueOrLeadResult": "string — actual measured result since shipping",
+    "lastMajorUpdate": "string — ISO 8601 date, or null if unchanged since shipping"
+  },
+  "shippedProducts": []
+}
