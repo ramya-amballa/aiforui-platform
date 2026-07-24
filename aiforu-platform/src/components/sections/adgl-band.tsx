@@ -48,7 +48,7 @@ export function AdglBand() {
               rel="noopener noreferrer"
               className="text-sm text-brand-paper underline underline-offset-4 decoration-brand-paper/30 hover:text-brand-gold hover:decoration-brand-gold"
             >
-              Download Methodology (PDF) &rarr;
+              Download ADGL Framework &rarr;
             </Link>
           </div>
         </BlueprintPanel>

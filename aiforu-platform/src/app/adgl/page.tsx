@@ -13,7 +13,6 @@ import { breadcrumbSchema, organizationSchema } from "@/components/seo/schema";
 import {
   adglDeploymentAgnosticNote,
   adglDeploymentTypes,
-  adglFrameworkProvides,
   adglOperaRelationship,
   adglPhases,
   adglWhyItExists,
@@ -24,7 +23,7 @@ import { site } from "@/lib/constants";
 export const metadata: Metadata = buildMetadata({
   title: "ADGL: The AI Deployment Governance Lifecycle",
   description:
-    "ADGL is AI for U&I's AI deployment governance framework and methodology: five phases for governing Microsoft Copilot, ChatGPT Enterprise, RAG, agentic AI and other AI deployments before production, and operationally afterward.",
+    "ADGL is AI for U&I's AI deployment governance framework: five phases for governing Microsoft Copilot, ChatGPT Enterprise, RAG, agentic AI and other AI deployments before production, and operationally afterward.",
   path: "/adgl",
 });
 
@@ -42,7 +41,7 @@ export default function AdglPage() {
       <PageHero
         eyebrow="ADGL"
         title="AI Deployment Governance Lifecycle (ADGL)"
-        description="A practical methodology for governing AI before production."
+        description="A practical governance methodology for taking AI safely from business approval to production deployment."
       />
 
       {/* Large lifecycle diagram: the visual identity of ADGL */}
@@ -73,36 +72,13 @@ export default function AdglPage() {
 
       <Divider />
 
-      {/* What the framework provides: structure and substance, from the methodology's own summary */}
-      <section className="py-section-sm">
-        <Container size="wide">
-          <SectionHeading eyebrow="What ADGL Provides" title="Structure and Substance, Not a Policy Statement" />
-          <div className="mt-10 grid grid-cols-1 gap-x-10 gap-y-10 sm:grid-cols-2">
-            {adglFrameworkProvides.map((column) => (
-              <div key={column.label} className="border-t border-border pt-6">
-                <p className="text-eyebrow uppercase tracking-widest text-muted">{column.label}</p>
-                <ul className="mt-4 space-y-3">
-                  {column.items.map((item) => (
-                    <li key={item} className="text-sm leading-relaxed text-ink">
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </Container>
-      </section>
-
-      <Divider />
-
-      {/* The Five Phases: detailed breakdown with deliverables */}
+      {/* The Five Phases: detailed breakdown of process, questions and gates. Deliverables are consolidated in their own section below rather than repeated here. */}
       <section className="py-section">
         <Container size="wide">
           <SectionHeading
             eyebrow="Five Phases"
-            title="What Each Phase Answers, and What It Produces"
-            description="Every phase is a governance decision, not a checkbox: a specific question, a defined set of activities, and deliverables a board or regulator can actually review."
+            title="What Each Phase Answers, and When It Gates"
+            description="Every phase is a governance decision, not a checkbox: a specific question, a defined set of activities, and an exit condition before the next phase begins."
           />
           <div className="mt-12 grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-5">
             {adglPhases.map((phase) => (
@@ -128,9 +104,6 @@ export default function AdglPage() {
                     </li>
                   ))}
                 </ul>
-
-                <p className="mt-6 text-eyebrow uppercase tracking-widest text-muted">Key Deliverables</p>
-                <p className="mt-3 text-sm leading-relaxed text-muted">{phase.deliverables.join(", ")}</p>
 
                 <p className="mt-6 border-t border-border pt-4 text-sm leading-relaxed text-ink">{phase.exitSummary}</p>
                 <p className="mt-2 font-serif text-sm text-accent">{phase.gate}</p>
@@ -163,17 +136,46 @@ export default function AdglPage() {
 
       <Divider />
 
-      {/* Download Methodology */}
+      {/* Deliverables: the consolidated artefact list, the one place all of them appear together */}
+      <section className="py-section">
+        <Container size="wide">
+          <SectionHeading
+            eyebrow="Deliverables"
+            title="What You Walk Away With"
+            description="Every phase produces named artefacts a board, regulator or auditor can actually review, not a slide deck."
+          />
+          <div className="mt-12 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-5">
+            {adglPhases.map((phase) => (
+              <div key={phase.step} className="border-t border-border pt-6">
+                <p className="text-eyebrow uppercase tracking-widest text-muted">
+                  {String(phase.step).padStart(2, "0")} — {phase.name}
+                </p>
+                <ul className="mt-4 space-y-2">
+                  {phase.deliverables.map((deliverable) => (
+                    <li key={deliverable} className="text-sm leading-relaxed text-ink">
+                      {deliverable}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      <Divider />
+
+      {/* Get the framework */}
       <section className="py-section-sm">
         <Container size="narrow">
           <SectionHeading
-            eyebrow="Methodology"
-            title="Download the Full ADGL Methodology"
-            description="The complete methodology: five phases, eighteen operational controls, the risk scoring and use case approval model, RACI and a twelve-week delivery schedule, as a single reference document."
+            eyebrow="Get ADGL"
+            title="Download the ADGL Framework"
+            description="Five phases, eighteen operational controls, risk scoring, RACI and a twelve-week delivery schedule, in one reference document."
           />
           <div className="mt-8">
             <Button href="/downloads/adgl-methodology.pdf" target="_blank" rel="noopener noreferrer" variant="primary" size="lg">
-              Download Methodology (PDF)
+              Download ADGL Framework
             </Button>
           </div>
         </Container>
