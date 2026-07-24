@@ -16,7 +16,7 @@ export const resources: Resource[] = [
     accessTier: "Free",
     domainSlugs: ["ai-governance", "responsible-ai"],
     description:
-      "The full AI Deployment Governance Lifecycle (ADGL) methodology: five phases, key deliverables and the production readiness gate, for governing an AI deployment before it reaches production.",
+      "The full AI Deployment Governance Lifecycle (ADGL) methodology: five phases, eighteen operational controls, risk scoring, RACI and a twelve-week delivery schedule, for governing an AI deployment before it reaches production.",
     featured: true,
     fileUrl: "/downloads/adgl-methodology.pdf",
   },

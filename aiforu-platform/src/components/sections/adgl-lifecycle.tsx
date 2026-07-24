@@ -22,7 +22,8 @@ export function AdglLifecycleDiagram() {
             {String(phase.step).padStart(2, "0")}
           </span>
           <p className="font-serif text-title text-ink">{phase.name}</p>
-          <p className="mt-2 text-xs uppercase tracking-wide text-accent">{phase.outcome}</p>
+          <p className="mt-1 font-mono text-xs text-muted">{phase.weeks}</p>
+          <p className="mt-3 text-xs uppercase tracking-wide text-accent">{phase.purpose}</p>
           <p className="mt-4 text-sm leading-relaxed text-muted pretty">{phase.question}</p>
         </li>
       ))}

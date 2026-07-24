@@ -13,6 +13,7 @@ import { breadcrumbSchema, organizationSchema } from "@/components/seo/schema";
 import {
   adglDeploymentAgnosticNote,
   adglDeploymentTypes,
+  adglFrameworkProvides,
   adglOperaRelationship,
   adglPhases,
   adglWhyItExists,
@@ -72,6 +73,29 @@ export default function AdglPage() {
 
       <Divider />
 
+      {/* What the framework provides: structure and substance, from the methodology's own summary */}
+      <section className="py-section-sm">
+        <Container size="wide">
+          <SectionHeading eyebrow="What ADGL Provides" title="Structure and Substance, Not a Policy Statement" />
+          <div className="mt-10 grid grid-cols-1 gap-x-10 gap-y-10 sm:grid-cols-2">
+            {adglFrameworkProvides.map((column) => (
+              <div key={column.label} className="border-t border-border pt-6">
+                <p className="text-eyebrow uppercase tracking-widest text-muted">{column.label}</p>
+                <ul className="mt-4 space-y-3">
+                  {column.items.map((item) => (
+                    <li key={item} className="text-sm leading-relaxed text-ink">
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      <Divider />
+
       {/* The Five Phases: detailed breakdown with deliverables */}
       <section className="py-section">
         <Container size="wide">
@@ -86,8 +110,12 @@ export default function AdglPage() {
                 <span className="absolute -top-3 left-0 flex h-6 w-6 items-center justify-center border border-accent bg-paper font-mono text-[10px] text-accent">
                   {String(phase.step).padStart(2, "0")}
                 </span>
-                <Badge tone="accent">Phase {phase.step}</Badge>
+                <div className="flex flex-wrap items-center gap-2">
+                  <Badge tone="accent">Phase {phase.step}</Badge>
+                  <span className="font-mono text-xs text-muted">{phase.weeks}</span>
+                </div>
                 <h3 className="mt-3 font-serif text-title text-ink">{phase.name}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted pretty">{phase.purpose}</p>
 
                 <p className="mt-6 text-eyebrow uppercase tracking-widest text-muted">Governance Question</p>
                 <p className="mt-3 text-sm leading-relaxed text-ink">{phase.question}</p>
@@ -104,7 +132,8 @@ export default function AdglPage() {
                 <p className="mt-6 text-eyebrow uppercase tracking-widest text-muted">Key Deliverables</p>
                 <p className="mt-3 text-sm leading-relaxed text-muted">{phase.deliverables.join(", ")}</p>
 
-                <p className="mt-6 border-t border-border pt-4 font-serif text-sm text-accent">{phase.outcome}</p>
+                <p className="mt-6 border-t border-border pt-4 text-sm leading-relaxed text-ink">{phase.exitSummary}</p>
+                <p className="mt-2 font-serif text-sm text-accent">{phase.gate}</p>
               </div>
             ))}
           </div>
@@ -140,7 +169,7 @@ export default function AdglPage() {
           <SectionHeading
             eyebrow="Methodology"
             title="Download the Full ADGL Methodology"
-            description="The complete five-phase methodology, with governance questions, activities and deliverables for every phase, as a single reference document."
+            description="The complete methodology: five phases, eighteen operational controls, the risk scoring and use case approval model, RACI and a twelve-week delivery schedule, as a single reference document."
           />
           <div className="mt-8">
             <Button href="/downloads/adgl-methodology.pdf" target="_blank" rel="noopener noreferrer" variant="primary" size="lg">
