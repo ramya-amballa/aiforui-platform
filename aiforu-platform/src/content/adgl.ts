@@ -109,7 +109,7 @@ export const adglPhases: AdglPhase[] = [
     deliverableGroups: [
       { label: "Monitoring", items: ["Monitoring Framework", "AI Incident Management"] },
       { label: "Evidence", items: ["Evidence Repository", "Test Results Pack"] },
-      { label: "Readiness", items: ["Training Record", "Production Readiness Governance"] },
+      { label: "Production Readiness", items: ["Training Record", "Production Readiness Governance"] },
     ],
     gate: "Gate 4 — Authorise production deployment",
     exitSummary: "Readiness checklist approved; deployment approved by committee and recorded.",
@@ -130,7 +130,7 @@ export const adglPhases: AdglPhase[] = [
     deliverableGroups: [
       { label: "Monitoring", items: ["Threshold Tuning Report", "QA Sampling Results"] },
       { label: "Reporting", items: ["Executive Reporting", "Governance Review"] },
-      { label: "Continuous Improvement", items: ["Maturity Roadmap"] },
+      { label: "Governance Improvement", items: ["Maturity Roadmap"] },
     ],
     gate: "Gate 5 — Governance operates without external support",
     exitSummary: "Next use case governed through the same workflow, without bespoke governance work.",
