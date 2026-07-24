@@ -43,6 +43,16 @@ scheduler is the next phase, not this one.
 
 Start with `opportunity-sources.md`, then `opportunity-scoring-engine.md`.
 
+## Execution
+
+`runtime/` is this specification running as code: drop manually
+collected opportunities (Markdown or JSON) into `runtime/inbox/`, run
+`python3 runtime/ingest.py`, and it scores, classifies, routes to
+`08-Revenue-Hunter/pipeline.json` and `06-CRM/company-intelligence.json`,
+and writes the day's report to `runtime/output/` — the same logic
+above, executed rather than described. See the docstring at the top of
+`runtime/ingest.py` for the exact input format.
+
 ## Daily Workflow
 
 1. Check every source in `opportunity-sources.md` for anything new in
