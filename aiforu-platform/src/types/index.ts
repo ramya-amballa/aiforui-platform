@@ -94,6 +94,7 @@ export interface Insight {
 
 export type ResourceType =
   | "Executive Guide"
+  | "Methodology"
   | "Framework"
   | "Checklist"
   | "Whitepaper"

@@ -18,6 +18,7 @@ export const site = {
 
 export const primaryNav: NavItem[] = [
   { label: "Home", href: "/" },
+  { label: "ADGL", href: "/adgl" },
   { label: "Methodology", href: "/methodology" },
   { label: "Selected Engagement Areas", href: "/selected-advisory-engagements" },
   { label: "Governance Domains", href: "/governance-domains" },
@@ -31,6 +32,7 @@ export const footerNav: { title: string; items: NavItem[] }[] = [
   {
     title: "Practice",
     items: [
+      { label: "ADGL", href: "/adgl" },
       { label: "Methodology", href: "/methodology" },
       { label: "Selected Engagement Areas", href: "/selected-advisory-engagements" },
       { label: "Governance Domains", href: "/governance-domains" },

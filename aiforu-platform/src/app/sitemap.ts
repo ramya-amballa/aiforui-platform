@@ -7,6 +7,7 @@ import { site } from "@/lib/constants";
 
 const staticRoutes = [
   "",
+  "/adgl",
   "/methodology",
   "/selected-advisory-engagements",
   "/governance-domains",

@@ -10,6 +10,17 @@ import type { Resource } from "@/types";
  */
 export const resources: Resource[] = [
   {
+    slug: "adgl-methodology",
+    title: "The ADGL Methodology",
+    type: "Methodology",
+    accessTier: "Free",
+    domainSlugs: ["ai-governance", "responsible-ai"],
+    description:
+      "The full AI Deployment Governance Lifecycle (ADGL) methodology: five phases, key deliverables and the production readiness gate, for governing an AI deployment before it reaches production.",
+    featured: true,
+    fileUrl: "/downloads/adgl-methodology.pdf",
+  },
+  {
     slug: "executive-capability-overview",
     title: "Executive Capability Overview",
     type: "Executive Guide",

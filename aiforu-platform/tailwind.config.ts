@@ -18,6 +18,15 @@ const config: Config = {
       },
     },
     extend: {
+      screens: {
+        /**
+         * The primary nav needs more room than Tailwind's default `xl`
+         * (1280px) once it's carrying 7 links plus the logo and CTA;
+         * below this the header falls back to the hamburger menu
+         * rather than wrapping link text onto multiple lines.
+         */
+        nav: "1400px",
+      },
       colors: {
         paper: "hsl(var(--color-paper) / <alpha-value>)",
         ink: "hsl(var(--color-ink) / <alpha-value>)",

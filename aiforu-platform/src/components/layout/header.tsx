@@ -25,7 +25,7 @@ export function Header() {
             {site.name}
           </Link>
 
-          <nav aria-label="Primary" className="hidden items-center gap-8 xl:flex">
+          <nav aria-label="Primary" className="hidden items-center gap-8 nav:flex">
             {primaryNav.slice(1, -1).map((item) => {
               const isActive = pathname === item.href || (item.href !== "/" && pathname.startsWith(item.href));
               return (
@@ -43,7 +43,7 @@ export function Header() {
             })}
           </nav>
 
-          <div className="hidden items-center gap-4 xl:flex">
+          <div className="hidden items-center gap-4 nav:flex">
             <ThemeToggle />
             <Button href={secondaryCta.href} variant="secondary" size="sm">
               {secondaryCta.label}
@@ -52,7 +52,7 @@ export function Header() {
 
           <button
             type="button"
-            className="inline-flex flex-col gap-1.5 p-2 xl:hidden"
+            className="inline-flex flex-col gap-1.5 p-2 nav:hidden"
             aria-label="Toggle navigation menu"
             aria-expanded={isMenuOpen}
             onClick={() => setIsMenuOpen((open) => !open)}
@@ -64,7 +64,7 @@ export function Header() {
       </Container>
 
       {isMenuOpen ? (
-        <div className="border-t border-border xl:hidden">
+        <div className="border-t border-border nav:hidden">
           <Container size="wide">
             <nav aria-label="Mobile" className="flex flex-col gap-1 py-6">
               {primaryNav.map((item) => (

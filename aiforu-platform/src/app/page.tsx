@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { AdvisoryEngagementGrid } from "@/components/advisory/advisory-engagement-grid";
+import { AdglBand } from "@/components/sections/adgl-band";
 import { CtaBand } from "@/components/sections/cta-band";
 import { CurrentPrioritiesSection } from "@/components/sections/current-priorities-section";
 import { PointOfViewSection } from "@/components/sections/point-of-view-section";
@@ -71,6 +72,8 @@ export default function HomePage() {
           </div>
         </Container>
       </section>
+
+      <AdglBand />
 
       <CurrentPrioritiesSection snapshot={currentPriorities} />
 

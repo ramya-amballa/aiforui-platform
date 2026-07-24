@@ -18,6 +18,7 @@ export const metadata: Metadata = buildMetadata({
 
 const types: ResourceType[] = [
   "Executive Guide",
+  "Methodology",
   "Framework",
   "Checklist",
   "Whitepaper",
