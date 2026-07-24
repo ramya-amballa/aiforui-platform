@@ -10,6 +10,11 @@
  * accurate summary that makes the download worth having.
  */
 
+export interface AdglDeliverableGroup {
+  label: string;
+  items: string[];
+}
+
 export interface AdglPhase {
   step: number;
   name: string;
@@ -17,7 +22,9 @@ export interface AdglPhase {
   purpose: string;
   question: string;
   activities: string[];
-  deliverables: string[];
+  /** One sentence: why this phase's deliverables matter, not what they're named. */
+  deliverablesSummary: string;
+  deliverableGroups: AdglDeliverableGroup[];
   gate: string;
   exitSummary: string;
 }
@@ -35,13 +42,11 @@ export const adglPhases: AdglPhase[] = [
       "Map AI data flow end to end, numbered step by step",
       "Review AI application architecture against the codebase",
     ],
-    deliverables: [
-      "AI Asset Inventory",
-      "AI Data Flow Mapping",
-      "Prompt Flow Map",
-      "Architecture Review",
-      "Data Classification",
-      "Findings Log",
+    deliverablesSummary: "Creates the foundational documentation required before risk assessment begins.",
+    deliverableGroups: [
+      { label: "AI Discovery", items: ["AI Asset Inventory", "Architecture Review"] },
+      { label: "Data Understanding", items: ["AI Data Flow Mapping", "Data Classification"] },
+      { label: "Documentation", items: ["Prompt Flow Map", "Findings Log"] },
     ],
     gate: "Gate 1 — Proceed to Assess",
     exitSummary: "Asset inventory completed with named owners; data flow mapped and validated against the codebase.",
@@ -58,7 +63,12 @@ export const adglPhases: AdglPhase[] = [
       "Perform threat modelling with security engineering",
       "Assess the model provider: training use, residency, retention, versioning, exit",
     ],
-    deliverables: ["AI Risk Assessment", "Risk Heat Map", "DPIA", "Threat Model", "Third-Party AI Assessment", "Regulatory Assessment"],
+    deliverablesSummary: "Produces the evidence needed to understand AI risk before governance decisions are made.",
+    deliverableGroups: [
+      { label: "Risk Analysis", items: ["AI Risk Assessment", "Risk Heat Map"] },
+      { label: "Privacy & Security", items: ["DPIA", "Threat Model"] },
+      { label: "Vendor & Regulatory", items: ["Third-Party AI Assessment", "Regulatory Assessment"] },
+    ],
     gate: "Gate 2 — Proceed to Govern",
     exitSummary: "Regulatory classification documented; residual risk accepted in writing by a named owner.",
   },
@@ -74,15 +84,11 @@ export const adglPhases: AdglPhase[] = [
       "Design human oversight tiers and measurement thresholds",
       "Build the control library mapped to existing frameworks",
     ],
-    deliverables: [
-      "Governance Operating Model",
-      "RACI",
-      "Approval Workflow",
-      "Human Oversight Design",
-      "AI Control Library",
-      "AI Policies & Standards",
-      "Logging Specification",
-      "Governance KPIs",
+    deliverablesSummary: "Establishes ownership, controls and decision rights for production deployment.",
+    deliverableGroups: [
+      { label: "Governance Structure", items: ["Governance Operating Model", "RACI", "Approval Workflow"] },
+      { label: "Operational Controls", items: ["AI Control Library", "Logging Specification"] },
+      { label: "Oversight", items: ["Human Oversight Design", "Governance KPIs", "AI Policies & Standards"] },
     ],
     gate: "Gate 3 — Proceed to Deploy",
     exitSummary: "Control library approved and mapped; logging schema accepted by engineering.",
@@ -99,13 +105,11 @@ export const adglPhases: AdglPhase[] = [
       "Build the evidence repository and populate pre-deployment artefacts",
       "Deliver role-based training with scenario assessment",
     ],
-    deliverables: [
-      "Monitoring Framework",
-      "AI Incident Management",
-      "Evidence Repository",
-      "Test Results Pack",
-      "Training Record",
-      "Production Readiness Governance",
+    deliverablesSummary: "Demonstrates that governance controls actually operate before go-live.",
+    deliverableGroups: [
+      { label: "Monitoring", items: ["Monitoring Framework", "AI Incident Management"] },
+      { label: "Evidence", items: ["Evidence Repository", "Test Results Pack"] },
+      { label: "Readiness", items: ["Training Record", "Production Readiness Governance"] },
     ],
     gate: "Gate 4 — Authorise production deployment",
     exitSummary: "Readiness checklist approved; deployment approved by committee and recorded.",
@@ -122,7 +126,12 @@ export const adglPhases: AdglPhase[] = [
       "Produce the quarterly executive and board reporting pack",
       "Route the next AI use case through the approval workflow",
     ],
-    deliverables: ["Threshold Tuning Report", "QA Sampling Results", "Executive Reporting", "Governance Review", "Maturity Roadmap"],
+    deliverablesSummary: "Ensures governance continues after deployment through monitoring and continual improvement.",
+    deliverableGroups: [
+      { label: "Monitoring", items: ["Threshold Tuning Report", "QA Sampling Results"] },
+      { label: "Reporting", items: ["Executive Reporting", "Governance Review"] },
+      { label: "Continuous Improvement", items: ["Maturity Roadmap"] },
+    ],
     gate: "Gate 5 — Governance operates without external support",
     exitSummary: "Next use case governed through the same workflow, without bespoke governance work.",
   },
