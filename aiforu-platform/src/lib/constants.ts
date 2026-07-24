@@ -13,7 +13,6 @@ export const site = {
   linkedin: "https://www.linkedin.com/in/amballa-ramya/",
   substack: "https://aiforui.substack.com",
   github: "https://github.com/ramya-amballa",
-  gumroad: "https://ramyavibes2.gumroad.com",
 } as const;
 
 export const primaryNav: NavItem[] = [

@@ -62,11 +62,6 @@ export function Footer() {
                   GitHub
                 </a>
               </li>
-              <li>
-                <a href={site.gumroad} target="_blank" rel="noopener noreferrer" className="text-sm text-ink/80 hover:text-accent">
-                  Gumroad
-                </a>
-              </li>
             </ul>
           </div>
         </div>
