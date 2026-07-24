@@ -4,21 +4,24 @@ import { adglPhases } from "@/content/adgl";
  * "What ADGL Produces." No deliverable counts anywhere — the names of
  * the deliverables communicate the value, a count does not. Each
  * phase's purpose sentence is always visible; only the grouped
- * artefact names themselves sit behind "View Deliverables."
+ * artefact names sit behind the "+" toggle, matching the Five Phases
+ * accordion's expand affordance rather than a "View Deliverables"
+ * text link, so the phase name always renders on its own line.
  */
 export function AdglDeliverables() {
   return (
     <div className="grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-2 lg:grid-cols-5">
       {adglPhases.map((phase) => (
         <details key={phase.step} className="group border-t border-border pt-6">
-          <summary className="cursor-pointer list-none [&::-webkit-details-marker]:hidden">
-            <span className="font-mono text-xs text-accent">{String(phase.step).padStart(2, "0")}</span>
-            <p className="mt-2 font-serif text-title text-ink">{phase.name}</p>
-            <p className="mt-3 text-sm leading-relaxed text-muted pretty">{phase.deliverablesSummary}</p>
-            <span className="mt-4 inline-block text-xs text-accent underline underline-offset-4 group-open:hidden">
-              View Deliverables &rarr;
+          <summary className="flex cursor-pointer list-none items-start justify-between gap-3 [&::-webkit-details-marker]:hidden">
+            <div>
+              <span className="font-mono text-xs text-accent">{String(phase.step).padStart(2, "0")}</span>
+              <p className="mt-2 font-serif text-title text-ink">{phase.name}</p>
+              <p className="mt-3 text-sm leading-relaxed text-muted pretty">{phase.deliverablesSummary}</p>
+            </div>
+            <span aria-hidden className="mt-1 shrink-0 font-mono text-lg text-accent transition-transform duration-DEFAULT group-open:rotate-45">
+              +
             </span>
-            <span className="mt-4 hidden text-xs text-muted group-open:inline-block">Hide Deliverables</span>
           </summary>
 
           <div className="mt-5">
