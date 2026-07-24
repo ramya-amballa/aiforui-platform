@@ -42,6 +42,7 @@ employee's `operating-manual.md`.
 - `memory-system.md` — the long-term memory architecture: every store, who writes it, and the retrieval rules that keep any employee from starting from scratch
 - `kpi-dashboards/` — one dashboard per employee, rolling up into `kpi-dashboards/ceo-dashboard.md`, AOS's single view of overall business health
 - `08-Revenue-Hunter/revenue-forecasting-engine.md` — probability-weighted monthly revenue forecasting and highest-leverage-action analysis
+- `executive-dashboard/` — the single entry point every morning: revenue, CEO Advisor's top priority, and everything needing attention across Opportunity Hunter, Revenue Hunter and CRM, generated read-only from their live outputs (`executive-dashboard/runtime/generate.py`)
 
 ## Status
 
