@@ -32,7 +32,10 @@
     "lastTouch": "string — ISO 8601 date",
     "nextAction": "string",
     "nextActionDue": "string — ISO 8601 date",
-    "notes": "string"
+    "notes": "string",
+    "autoCollected": "boolean — true if this entry came from the autonomous collection engine (runtime/collect.py) rather than manual entry",
+    "autoScored": "boolean — true if the eleven scores are heuristic estimates from a scraped posting, not a human judgement; treat as a starting point to verify, not a finished score",
+    "matchedKeywords": "array of strings — which configured keywords (runtime/config/keywords.json) matched this posting, present only for auto-collected entries"
   },
   "opportunities": []
 }

@@ -53,6 +53,35 @@ and writes the day's report to `runtime/output/` — the same logic
 above, executed rather than described. See the docstring at the top of
 `runtime/ingest.py` for the exact input format.
 
+## Autonomous Collection
+
+Manual entry into `runtime/inbox/` is no longer required. `runtime/collect.py`
+runs one collector per source (`runtime/collectors/`), each searching
+the keywords in `runtime/config/keywords.json`:
+
+- **Live today, no config needed:** RemoteOK (single global feed)
+- **Live once per-company tokens/slugs are added to `runtime/config/sources.json`:**
+  Greenhouse, Lever, Ashby (each is a real, public, unauthenticated API —
+  add the companies you want to watch)
+- **Live once career-page URLs are added to `runtime/config/sources.json`:**
+  UAE Recruiters, Consulting Firms (generic page scan — no API exists for
+  these)
+- **Connector-ready, needs credentials/access before it returns anything:**
+  Upwork, LinkedIn Jobs, Google Jobs, Wellfound, FlexJobs — each has the
+  full pipeline wired (`collect(keywords, config)`, dedup, routing) but
+  cleanly no-ops until its `apiKey`/`apiSecret` is supplied; wiring the
+  real call later is a small, obvious change, not a rewrite
+
+Every discovered posting is normalised into `opportunity-schema.json`'s
+shape, heuristically scored (flagged `autoScored: true`, since no human
+has judged it yet — treat as a starting point to verify), deduplicated
+against `runtime/dedupe-index.json`, and recorded in
+`runtime/snapshots/` regardless of whether it was new. New postings are
+written to `runtime/inbox/` and immediately handed to `ingest.py` — the
+same scoring, classification and routing manual entries go through, with
+no separate logic path. Run `python3 runtime/collect.py` directly, or
+let `.github/workflows/opportunity-collection.yml` run it daily.
+
 ## Daily Workflow
 
 1. Check every source in `opportunity-sources.md` for anything new in

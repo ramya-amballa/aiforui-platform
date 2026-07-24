@@ -1,0 +1,58 @@
+{
+  "_comment": "Per-connector configuration. 'ready' connectors call a real public API today; 'connectorReady' ones have the full pipeline wired but need credentials or a target list before they return anything. Fill in the empty lists/keys to activate a connector — no code changes needed.",
+  "greenhouse": {
+    "status": "ready",
+    "boardTokens": [],
+    "_note": "Greenhouse's public Job Board API (boards-api.greenhouse.io) has no cross-company search; add each company's board token (the slug in their /jobs page URL) to search it."
+  },
+  "lever": {
+    "status": "ready",
+    "companies": [],
+    "_note": "Lever's public Postings API (api.lever.co) is per-company, same as Greenhouse; add each company's Lever slug."
+  },
+  "ashby": {
+    "status": "ready",
+    "jobBoardNames": [],
+    "_note": "Ashby's public Job Board API (api.ashbyhq.com/posting-api) is per-organisation; add each org's job board name."
+  },
+  "remoteok": {
+    "status": "ready",
+    "_note": "RemoteOK's public API (remoteok.com/api) is a single global feed of remote listings; no per-company config needed."
+  },
+  "upwork": {
+    "status": "connectorReady",
+    "apiKey": null,
+    "apiSecret": null,
+    "_note": "Upwork's public job-search API requires an authenticated developer application; the connector is wired but returns nothing until apiKey/apiSecret are supplied."
+  },
+  "linkedinJobs": {
+    "status": "connectorReady",
+    "apiKey": null,
+    "_note": "LinkedIn has no public, unauthenticated job-search API, and its Terms of Service prohibit scraping. This connector only activates against LinkedIn's official Jobs API/Talent Solutions, if and when that access is provisioned."
+  },
+  "googleJobs": {
+    "status": "connectorReady",
+    "apiKey": null,
+    "_note": "Google for Jobs has no direct public API; this connector is wired for a third-party search API (e.g. a jobs-focused SERP provider) once a provider and key are chosen."
+  },
+  "wellfound": {
+    "status": "connectorReady",
+    "apiKey": null,
+    "_note": "Wellfound (AngelList Talent) has no public API; this connector activates once an access method is identified."
+  },
+  "flexjobs": {
+    "status": "connectorReady",
+    "apiKey": null,
+    "_note": "Connector-ready, as specified: FlexJobs requires a paid account and has no public API."
+  },
+  "uaeRecruiters": {
+    "status": "connectorReady",
+    "careerPageUrls": [],
+    "_note": "Career pages vary per recruiter/agency with no shared API; add each real career-page URL to monitor once identified."
+  },
+  "consultingFirms": {
+    "status": "connectorReady",
+    "careerPageUrls": [],
+    "_note": "Same as uaeRecruiters: add each firm's real career-page URL once identified."
+  }
+}

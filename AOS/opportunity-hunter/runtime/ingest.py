@@ -306,6 +306,9 @@ def process_record(record, existing_opportunities):
         "nextAction": "",
         "nextActionDue": "",
         "notes": record.get("notes", ""),
+        "autoCollected": bool(record.get("autoCollected", False)),
+        "autoScored": bool(record.get("autoScored", False)),
+        "matchedKeywords": record.get("matchedKeywords", []),
         "_expectedRevenueAmount": record.get("expectedRevenueAmount", ""),
     }
     existing_opportunities.append(opportunity)

@@ -1,0 +1,20 @@
+{
+  "_comment": "The configurable keyword set every connector searches with. Edit this list to retune what the collection engine looks for; no code changes needed.",
+  "keywords": [
+    "AI Governance",
+    "AI Deployment",
+    "AI Risk",
+    "AI Compliance",
+    "Responsible AI",
+    "AI Security",
+    "AI Audit",
+    "AI Strategy",
+    "AI Transformation",
+    "NIST AI RMF",
+    "ISO 42001",
+    "Microsoft Copilot",
+    "ChatGPT Enterprise",
+    "RAG",
+    "AI Agents"
+  ]
+}

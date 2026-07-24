@@ -1,0 +1,9 @@
+{
+  "schema": {
+    "key": "string — sha256(url, or source|organisation|title when a source has no URL)[:16]",
+    "firstSeen": "string — ISO 8601 date this key was first discovered",
+    "source": "string",
+    "title": "string"
+  },
+  "seen": {}
+}
