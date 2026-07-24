@@ -11,17 +11,14 @@ export function AdglDeliverables() {
     <div className="grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-2 lg:grid-cols-5">
       {adglPhases.map((phase) => (
         <details key={phase.step} className="group border-t border-border pt-6">
-          <summary className="flex cursor-pointer list-none flex-col gap-2 [&::-webkit-details-marker]:hidden">
-            <div className="flex items-baseline justify-between gap-3">
-              <p className="text-eyebrow uppercase tracking-widest text-muted">
-                {String(phase.step).padStart(2, "0")} — {phase.name}
-              </p>
-              <span className="shrink-0 text-xs text-accent underline underline-offset-4 group-open:hidden">
-                View Deliverables
-              </span>
-              <span className="hidden shrink-0 text-xs text-muted group-open:inline">Hide</span>
-            </div>
-            <p className="text-sm leading-relaxed text-ink pretty">{phase.deliverablesSummary}</p>
+          <summary className="cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+            <span className="font-mono text-xs text-accent">{String(phase.step).padStart(2, "0")}</span>
+            <p className="mt-2 font-serif text-title text-ink">{phase.name}</p>
+            <p className="mt-3 text-sm leading-relaxed text-muted pretty">{phase.deliverablesSummary}</p>
+            <span className="mt-4 inline-block text-xs text-accent underline underline-offset-4 group-open:hidden">
+              View Deliverables &rarr;
+            </span>
+            <span className="mt-4 hidden text-xs text-muted group-open:inline-block">Hide Deliverables</span>
           </summary>
 
           <div className="mt-5">
