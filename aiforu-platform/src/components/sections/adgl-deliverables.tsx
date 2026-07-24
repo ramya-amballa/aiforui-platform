@@ -11,17 +11,17 @@ export function AdglDeliverables() {
     <div className="grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-2 lg:grid-cols-5">
       {adglPhases.map((phase) => (
         <details key={phase.step} className="group border-t border-border pt-6">
-          <summary className="flex cursor-pointer list-none items-start justify-between gap-3 [&::-webkit-details-marker]:hidden">
-            <div>
+          <summary className="flex cursor-pointer list-none flex-col gap-2 [&::-webkit-details-marker]:hidden">
+            <div className="flex items-baseline justify-between gap-3">
               <p className="text-eyebrow uppercase tracking-widest text-muted">
                 {String(phase.step).padStart(2, "0")} — {phase.name}
               </p>
-              <p className="mt-2 text-sm leading-relaxed text-ink pretty">{phase.deliverablesSummary}</p>
+              <span className="shrink-0 text-xs text-accent underline underline-offset-4 group-open:hidden">
+                View Deliverables
+              </span>
+              <span className="hidden shrink-0 text-xs text-muted group-open:inline">Hide</span>
             </div>
-            <span className="mt-1 shrink-0 text-xs text-accent underline underline-offset-4 group-open:hidden">
-              View Deliverables
-            </span>
-            <span className="mt-1 hidden shrink-0 text-xs text-muted group-open:inline">Hide</span>
+            <p className="text-sm leading-relaxed text-ink pretty">{phase.deliverablesSummary}</p>
           </summary>
 
           <div className="mt-5">
