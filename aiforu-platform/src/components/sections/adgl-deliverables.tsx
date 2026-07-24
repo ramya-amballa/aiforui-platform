@@ -1,11 +1,10 @@
 import { adglPhases } from "@/content/adgl";
 
 /**
- * "What you walk away with," collapsed to a count per phase by
- * default. Expanding a phase leads with why its deliverables matter
- * (one sentence), then the artefacts themselves grouped by what they
- * actually establish, not a flat list of document names — the
- * difference between a repository index and a consulting methodology.
+ * "What you walk away with." The count and the one-sentence reason
+ * the deliverables matter are always visible, so "6 Key Deliverables"
+ * never sits there unexplained — only the grouped artefact names
+ * themselves are behind the click.
  */
 export function AdglDeliverables() {
   return (
@@ -15,18 +14,17 @@ export function AdglDeliverables() {
 
         return (
           <details key={phase.step} className="group border-t border-border pt-6">
-            <summary className="flex cursor-pointer list-none items-center justify-between gap-3 [&::-webkit-details-marker]:hidden">
+            <summary className="flex cursor-pointer list-none items-start justify-between gap-3 [&::-webkit-details-marker]:hidden">
               <div>
                 <p className="text-eyebrow uppercase tracking-widest text-muted">
                   {String(phase.step).padStart(2, "0")} — {phase.name}
                 </p>
                 <p className="mt-2 text-sm text-ink">{deliverableCount} Key Deliverables</p>
+                <p className="mt-2 text-sm leading-relaxed text-muted pretty">{phase.deliverablesSummary}</p>
               </div>
-              <span className="shrink-0 text-xs text-accent underline underline-offset-4 group-open:hidden">View</span>
-              <span className="hidden shrink-0 text-xs text-muted group-open:inline">Hide</span>
+              <span className="mt-1 shrink-0 text-xs text-accent underline underline-offset-4 group-open:hidden">View</span>
+              <span className="mt-1 hidden shrink-0 text-xs text-muted group-open:inline">Hide</span>
             </summary>
-
-            <p className="mt-4 text-sm leading-relaxed text-muted pretty">{phase.deliverablesSummary}</p>
 
             <div className="mt-5 space-y-5">
               {phase.deliverableGroups.map((group) => (
