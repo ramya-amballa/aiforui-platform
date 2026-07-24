@@ -129,7 +129,7 @@ export const adglPhases: AdglPhase[] = [
 ];
 
 export const adglWhyItExists =
-  "Most organisations deploying AI already hold ISO 27001, SOC 2 and a GDPR compliance programme. Yet they still lack an operational governance process for deploying AI into production: who owns the decision to accept an AI risk, and where that's recorded; whether personal data in a vector store can be erased on request; whether retrieval is scoped so one customer cannot reach another's data; whether human review is real, or has become a formality. ADGL fills that gap: a practical, implementation-first governance lifecycle that turns AI governance from policy into operational controls.";
+  "Most organisations deploying AI already hold ISO 27001, SOC 2 and a GDPR programme. Yet they still lack an operational process for deploying AI into production: who owns the decision to accept an AI risk, whether retrieval is scoped so one customer cannot reach another's data, whether human review is real or has become a formality. ADGL fills that gap: a practical, implementation-first lifecycle that turns AI governance from policy into operational controls.";
 
 export const adglOperaRelationship =
   "AI for U&I delivers advisory engagements using the OPERA consulting methodology. ADGL is one specialised methodology within AI for U&I, focused specifically on governing AI deployments through production; OPERA remains the operating method behind how an engagement itself is run, including ADGL engagements.";

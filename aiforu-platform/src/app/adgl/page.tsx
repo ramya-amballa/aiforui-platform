@@ -1,22 +1,17 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { AdglDeliverables } from "@/components/sections/adgl-deliverables";
 import { AdglLifecycleDiagram } from "@/components/sections/adgl-lifecycle";
+import { AdglPhaseAccordion } from "@/components/sections/adgl-phase-accordion";
 import { CtaBand } from "@/components/sections/cta-band";
 import { PageHero } from "@/components/sections/page-hero";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { Divider } from "@/components/ui/divider";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { JsonLd } from "@/components/seo/json-ld";
 import { breadcrumbSchema, organizationSchema } from "@/components/seo/schema";
-import {
-  adglDeploymentAgnosticNote,
-  adglDeploymentTypes,
-  adglOperaRelationship,
-  adglPhases,
-  adglWhyItExists,
-} from "@/content/adgl";
+import { adglDeploymentAgnosticNote, adglDeploymentTypes, adglOperaRelationship, adglWhyItExists } from "@/content/adgl";
 import { buildMetadata } from "@/lib/metadata";
 import { site } from "@/lib/constants";
 
@@ -44,14 +39,10 @@ export default function AdglPage() {
         description="A practical governance methodology for taking AI safely from business approval to production deployment."
       />
 
-      {/* Large lifecycle diagram: the visual identity of ADGL */}
-      <section className="py-section">
+      {/* The Lifecycle: name and one line per phase, nothing else. Detail lives in the accordion below. */}
+      <section className="py-section-sm">
         <Container size="wide">
-          <SectionHeading
-            eyebrow="The Lifecycle"
-            title="Discover, Assess, Govern, Deploy, Operate"
-            description="Five phases, each answering one governance decision and producing named deliverables, from the business request that opens a deployment to the assurance evidence that outlasts it."
-          />
+          <SectionHeading eyebrow="The Lifecycle" title="Discover, Assess, Govern, Deploy, Operate" />
           <div className="mt-14">
             <AdglLifecycleDiagram />
           </div>
@@ -72,43 +63,12 @@ export default function AdglPage() {
 
       <Divider />
 
-      {/* The Five Phases: detailed breakdown of process, questions and gates. Deliverables are consolidated in their own section below rather than repeated here. */}
-      <section className="py-section">
+      {/* Five Phases: collapsed by default, one phase's detail visible at a time */}
+      <section className="py-section-sm">
         <Container size="wide">
-          <SectionHeading
-            eyebrow="Five Phases"
-            title="What Each Phase Answers, and When It Gates"
-            description="Every phase is a governance decision, not a checkbox: a specific question, a defined set of activities, and an exit condition before the next phase begins."
-          />
-          <div className="mt-12 grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-5">
-            {adglPhases.map((phase) => (
-              <div key={phase.step} className="relative border-t-2 border-ink pt-8">
-                <span className="absolute -top-3 left-0 flex h-6 w-6 items-center justify-center border border-accent bg-paper font-mono text-[10px] text-accent">
-                  {String(phase.step).padStart(2, "0")}
-                </span>
-                <div className="flex flex-wrap items-center gap-2">
-                  <Badge tone="accent">Phase {phase.step}</Badge>
-                  <span className="font-mono text-xs text-muted">{phase.weeks}</span>
-                </div>
-                <h3 className="mt-3 font-serif text-title text-ink">{phase.name}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted pretty">{phase.purpose}</p>
-
-                <p className="mt-6 text-eyebrow uppercase tracking-widest text-muted">Governance Question</p>
-                <p className="mt-3 text-sm leading-relaxed text-ink">{phase.question}</p>
-
-                <p className="mt-6 text-eyebrow uppercase tracking-widest text-muted">Activities</p>
-                <ul className="mt-3 space-y-2">
-                  {phase.activities.map((activity) => (
-                    <li key={activity} className="text-sm leading-relaxed text-muted">
-                      {activity}
-                    </li>
-                  ))}
-                </ul>
-
-                <p className="mt-6 border-t border-border pt-4 text-sm leading-relaxed text-ink">{phase.exitSummary}</p>
-                <p className="mt-2 font-serif text-sm text-accent">{phase.gate}</p>
-              </div>
-            ))}
+          <SectionHeading eyebrow="Five Phases" title="Explore Each Phase" description="Click a phase for its governance question, activities and gate." />
+          <div className="mt-10">
+            <AdglPhaseAccordion />
           </div>
         </Container>
       </section>
@@ -118,11 +78,7 @@ export default function AdglPage() {
       {/* Typical AI Deployments Supported */}
       <section className="py-section-sm">
         <Container size="wide">
-          <SectionHeading
-            eyebrow="Deployment-Agnostic"
-            title="Typical AI Deployments Supported"
-            description={adglDeploymentAgnosticNote}
-          />
+          <SectionHeading eyebrow="Deployment-Agnostic" title="Supported Deployments" description={adglDeploymentAgnosticNote} />
           <ul className="mt-8 grid grid-cols-1 gap-x-10 gap-y-3 border-t border-border pt-6 sm:grid-cols-2 lg:grid-cols-4">
             {adglDeploymentTypes.map((deployment) => (
               <li key={deployment.name} className="flex items-baseline gap-3 text-sm text-ink">
@@ -136,29 +92,12 @@ export default function AdglPage() {
 
       <Divider />
 
-      {/* Deliverables: the consolidated artefact list, the one place all of them appear together */}
-      <section className="py-section">
+      {/* Deliverables: a count per phase, full list one click away */}
+      <section className="py-section-sm">
         <Container size="wide">
-          <SectionHeading
-            eyebrow="Deliverables"
-            title="What You Walk Away With"
-            description="Every phase produces named artefacts a board, regulator or auditor can actually review, not a slide deck."
-          />
-          <div className="mt-12 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-5">
-            {adglPhases.map((phase) => (
-              <div key={phase.step} className="border-t border-border pt-6">
-                <p className="text-eyebrow uppercase tracking-widest text-muted">
-                  {String(phase.step).padStart(2, "0")} — {phase.name}
-                </p>
-                <ul className="mt-4 space-y-2">
-                  {phase.deliverables.map((deliverable) => (
-                    <li key={deliverable} className="text-sm leading-relaxed text-ink">
-                      {deliverable}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+          <SectionHeading eyebrow="Deliverables" title="What You Walk Away With" />
+          <div className="mt-10">
+            <AdglDeliverables />
           </div>
         </Container>
       </section>

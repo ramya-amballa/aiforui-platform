@@ -5,9 +5,9 @@ import { adglPhases } from "@/content/adgl";
  * site and in future distribution (LinkedIn, the methodology PDF).
  * Uses the same connected-axis, node-on-a-line language as OperaDiagram
  * and GovernanceWorkflow, so ADGL reads as part of one governance
- * visual system rather than a competing graphic, sized up (larger
- * phase names, wider node spacing) since this is the primary diagram
- * on its own page rather than a homepage teaser.
+ * visual system rather than a competing graphic. Deliberately just a
+ * name and a single line per phase, Gartner-diagram style — activities,
+ * questions and gates belong to the accordion below, not here.
  */
 export function AdglLifecycleDiagram() {
   return (
@@ -22,9 +22,7 @@ export function AdglLifecycleDiagram() {
             {String(phase.step).padStart(2, "0")}
           </span>
           <p className="font-serif text-title text-ink">{phase.name}</p>
-          <p className="mt-1 font-mono text-xs text-muted">{phase.weeks}</p>
-          <p className="mt-3 text-xs uppercase tracking-wide text-accent">{phase.purpose}</p>
-          <p className="mt-4 text-sm leading-relaxed text-muted pretty">{phase.question}</p>
+          <p className="mt-3 text-sm leading-relaxed text-muted pretty">{phase.purpose}</p>
         </li>
       ))}
     </ol>
