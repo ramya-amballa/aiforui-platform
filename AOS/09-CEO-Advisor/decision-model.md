@@ -1,7 +1,7 @@
 # CEO Advisor — Decision Model
 
 CEO Advisor does not re-score opportunities from scratch. Each
-employee already scores its own domain (`01-Opportunity-Hunter`,
+employee already scores its own domain (`opportunity-hunter`,
 `08-Revenue-Hunter`, `03-Product-Manager`, `04-Sales-Director`'s
 follow-up priority). CEO Advisor's job is to compare across those
 different scales and pick one winner, using urgency as the deciding
@@ -14,7 +14,7 @@ Convert each candidate's native score to a 0-10 value score:
 | Source | Native scale | Normalisation |
 |---|---|---|
 | `08-Revenue-Hunter/pipeline.json` | 0-100 | divide by 10 |
-| `01-Opportunity-Hunter/opportunities.json` | 0-100 | divide by 10 |
+| `opportunity-hunter/opportunity-schema.json` (`priorityScore`) | 0-100 | divide by 10 |
 | `03-Product-Manager/product-backlog.json` | 0-40 | divide by 4 |
 | `04-Sales-Director` follow-up queue | Hot/Warm/Cooling + overdue | Hot+overdue = 9, Hot = 7, Warm+overdue = 6, Warm = 4 |
 

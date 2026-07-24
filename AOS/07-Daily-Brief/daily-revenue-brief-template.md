@@ -78,7 +78,7 @@ creates}}
 
 ---
 
-*Compiled from `01-Opportunity-Hunter`, `02-Content-Director`,
+*Compiled from `opportunity-hunter`, `02-Content-Director`,
 `03-Product-Manager`, `04-Sales-Director`, `05-Market-Intelligence`,
 `06-CRM/company-intelligence.json`, `08-Revenue-Hunter` and
 `09-CEO-Advisor`.*

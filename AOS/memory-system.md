@@ -17,8 +17,8 @@ employee's own file.
 
 | Store | File | Retains | Owner (writes) |
 |---|---|---|---|
-| Opportunities | `01-Opportunity-Hunter/opportunities.json` | Every opportunity ever logged, including archived ones — never deleted | Opportunity Hunter |
-| Companies (log) | `01-Opportunity-Hunter/companies.md` | A lightweight, human-readable pointer log; links to the CRM record | Opportunity Hunter |
+| Opportunities | `opportunity-hunter/opportunity-schema.json` | Every opportunity ever logged, including archived ones — never deleted | Opportunity Hunter |
+| Companies (log) | `opportunity-hunter/companies.md` | A lightweight, human-readable pointer log; links to the CRM record | Opportunity Hunter |
 | Company Intelligence | `06-CRM/company-intelligence.json` | The single enriched record per organisation: industry, AI maturity, regulations, relationship, recruiter, prior applications, positioning, relationship temperature, full outreach history | Opportunity Hunter, Sales Director, Market Intelligence |
 | Revenue Pipeline | `08-Revenue-Hunter/pipeline.json` | Every revenue-shaped item across all nine types, at every stage, including won/lost/deferred | Revenue Hunter |
 | Regulatory Log | `05-Market-Intelligence/regulatory-log.json` | Every substantive regulatory/standards/security development ever logged, and its triggered actions | Market Intelligence |

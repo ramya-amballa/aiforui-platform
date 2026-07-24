@@ -14,7 +14,7 @@ each morning rather than seven separate reports.
 | Section | Comes from |
 |---|---|
 | Highest priority revenue action | `09-CEO-Advisor/daily-recommendation-template.md` — CEO Advisor's daily pick is authoritative; Daily Brief surfaces it rather than re-deriving it |
-| New consulting opportunities, Recruiters, Upwork opportunities, Speaking opportunities, Grants | `01-Opportunity-Hunter/daily-report-template.md` |
+| New consulting opportunities, Recruiters, Upwork opportunities, Speaking opportunities, Grants | `opportunity-hunter/daily-opportunity-report-template.md` |
 | Pipeline view (by revenue type, priority items) | `08-Revenue-Hunter/revenue-dashboard-template.md` |
 | Product ideas | `03-Product-Manager` |
 | LinkedIn content ideas | `02-Content-Director` |

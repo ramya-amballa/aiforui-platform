@@ -32,9 +32,9 @@ of content, a product, or a stronger record — not a dead end.
              ┌─────────────────┼─────────────────┬─────────────────┐
              ▼                 ▼                 ▼                 ▼
    ┌──────────────────┐ ┌──────────────┐ ┌────────────────────┐ ┌────────────────────┐
-   │ 02-Content-Director│ │03-Product-   │ │01-Opportunity-Hunter│ │  (logged, no       │
-   │  LinkedIn/newsletter│ │  Manager     │ │ consulting angle    │ │   action needed)   │
-   │  idea              │ │ product update│ │                     │ └────────────────────┘
+   │ 02-Content-Director│ │03-Product-   │ │ opportunity-hunter │ │  (logged, no       │
+   │  LinkedIn/newsletter│ │  Manager     │ │  consulting angle  │ │   action needed)   │
+   │  idea              │ │ product update│ │                    │ └────────────────────┘
    └──────────┬──────────┘ └──────┬───────┘ └──────────┬──────────┘
               │                   │                    │
               │                   │                    ▼
@@ -71,22 +71,32 @@ of content, a product, or a stronger record — not a dead end.
 
 ## Triggers, Inputs, Outputs and Hand-offs
 
-### 01-Opportunity-Hunter
-- **Triggers on**: a new posting, referral, CFP, or grant appearing in
-  its monitored sources; a consulting-opportunity flag from Market
-  Intelligence's trigger rule
-- **Inputs**: external sources; `05-Market-Intelligence`'s daily
-  triggers
-- **Outputs**: `opportunities.json`; new/updated entries in
+### opportunity-hunter
+- **Triggers on**: a new posting, referral, CFP or grant appearing in
+  any of its nineteen monitored sources; a consulting-opportunity flag
+  from Market Intelligence's trigger rule
+- **Inputs**: the nineteen sources in `opportunity-sources.md`;
+  `05-Market-Intelligence`'s daily triggers
+- **Outputs**: `opportunity-schema.json`; new/updated entries in
   `companies.md` and `06-CRM/company-intelligence.json`
-- **Hand-off**: `Priority`-scored items → `08-Revenue-Hunter/pipeline.json`
+- **Hand-off**: routed by classification, per
+  `opportunity-scoring-engine.md`'s routing table — `Immediate
+  Proposal`/`Partnership` → `08-Revenue-Hunter/pipeline.json`; `Follow
+  Recruiter`/`Relationship Building` → `06-CRM` and
+  `04-Sales-Director`'s follow-up queue; `Convert into Product Idea` →
+  `03-Product-Manager/product-backlog.json`; `Convert into Content` →
+  `02-Content-Director/content-brief-template.md`. This is v1's
+  distinguishing feature: one classification step reaches five
+  downstream employees directly, not just Revenue Hunter and CRM.
 
 ### 02-Content-Director
 - **Triggers on**: any Market Intelligence trigger requiring a
   LinkedIn/newsletter idea; a client question or engagement pattern
-  worth publishing; a Product Manager launch notification
+  worth publishing; a Product Manager launch notification; an
+  Opportunity Hunter `Convert into Content` classification
 - **Inputs**: `05-Market-Intelligence/regulatory-log.json`; `06-CRM`
-  patterns; `03-Product-Manager` launches
+  patterns; `03-Product-Manager` launches; `opportunity-hunter`'s
+  `Convert into Content` classifications
 - **Outputs**: `content-brief-template.md` entries, calendar updates
 - **Hand-off**: briefs may flag `03-Product-Manager` (a recurring
   question is a product signal) or `08-Revenue-Hunter` (content that
@@ -94,9 +104,11 @@ of content, a product, or a stronger record — not a dead end.
 
 ### 03-Product-Manager
 - **Triggers on**: a Market Intelligence product-update trigger; a
-  recurring signal identified via `product-evaluation-framework.md`
+  recurring signal identified via `product-evaluation-framework.md`;
+  an Opportunity Hunter `Convert into Product Idea` classification
 - **Inputs**: `05-Market-Intelligence`; `06-CRM`; `02-Content-Director`
-  briefs; `04-Sales-Director` flags
+  briefs; `04-Sales-Director` flags; `opportunity-hunter`'s `Convert
+  into Product Idea` classifications
 - **Outputs**: `product-backlog.json`
 - **Hand-off**: score 30+ → notifies `02-Content-Director` (launch
   content needed) and, if it has clear revenue potential, `08-Revenue-Hunter`
@@ -119,12 +131,12 @@ of content, a product, or a stronger record — not a dead end.
 - **Outputs**: `regulatory-log.json`
 - **Hand-off**: every substantive entry fans out to
   `02-Content-Director`, `03-Product-Manager` and
-  `01-Opportunity-Hunter` per the trigger rule
+  `opportunity-hunter` per the trigger rule
 
 ### 06-CRM
 - **Triggers on**: any employee encountering a company for the first
   time, or touching one already on record
-- **Inputs**: writes from `01-Opportunity-Hunter`, `04-Sales-Director`,
+- **Inputs**: writes from `opportunity-hunter`, `04-Sales-Director`,
   `05-Market-Intelligence`
 - **Outputs**: `company-intelligence.json` — the single source of truth
   no other employee duplicates
@@ -141,10 +153,10 @@ of content, a product, or a stronger record — not a dead end.
   founder
 
 ### 08-Revenue-Hunter
-- **Triggers on**: any new item from `01-Opportunity-Hunter`,
+- **Triggers on**: any new item from `opportunity-hunter`,
   `03-Product-Manager`, or `06-CRM` (existing-client upsell); any stage
   change from `04-Sales-Director`
-- **Inputs**: `01-Opportunity-Hunter`, `03-Product-Manager`, `06-CRM`,
+- **Inputs**: `opportunity-hunter`, `03-Product-Manager`, `06-CRM`,
   `04-Sales-Director`
 - **Outputs**: `pipeline.json`, `revenue-dashboard-template.md`
 - **Hand-off**: `Priority`-band items with a near-term
@@ -154,7 +166,7 @@ of content, a product, or a stronger record — not a dead end.
 - **Triggers on**: daily schedule, after the other employees' daily
   cycles produce their candidates
 - **Inputs**: `04-Sales-Director`'s follow-up queue,
-  `08-Revenue-Hunter/pipeline.json`, `01-Opportunity-Hunter/opportunities.json`,
+  `08-Revenue-Hunter/pipeline.json`, `opportunity-hunter/opportunity-schema.json`,
   `03-Product-Manager/product-backlog.json`,
   `05-Market-Intelligence` consulting flags
 - **Outputs**: `daily-recommendation-template.md`, filled in

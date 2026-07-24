@@ -5,7 +5,7 @@
     "type": "string — one of: Consulting Project, Enterprise Contract, Workshop, Speaking Engagement, Paid Advisory Call, Grant, Partnership, Product Idea, Licensing",
     "title": "string",
     "organisation": "string",
-    "sourceRef": "string — id from opportunities.json, company-intelligence.json, or product-backlog.json this came from, if any",
+    "sourceRef": "string — id from opportunity-schema.json, company-intelligence.json, or product-backlog.json this came from, if any",
     "expectedRevenue": "number or string — amount or range, with currency",
     "probabilityOfSuccess": "number — 0-10",
     "effortRequired": "number — 0-10, 10 = lowest effort",

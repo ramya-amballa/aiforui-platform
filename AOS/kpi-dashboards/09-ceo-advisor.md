@@ -3,7 +3,7 @@
 ## Inputs
 
 Sales Director's follow-up queue and escalations, Revenue Hunter's
-`pipeline.json`, Opportunity Hunter's `opportunities.json`, Product
+`pipeline.json`, Opportunity Hunter's `opportunity-schema.json`, Product
 Manager's `product-backlog.json`, Market Intelligence's consulting
 flags.
 

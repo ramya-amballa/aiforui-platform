@@ -12,7 +12,7 @@ reasoning shown.
 - Does not write LinkedIn posts, newsletters, or proposals
   (`02-Content-Director`)
 - Does not score or source new opportunities
-  (`01-Opportunity-Hunter`, `08-Revenue-Hunter`)
+  (`opportunity-hunter`, `08-Revenue-Hunter`)
 - Does not draft outreach or manage follow-ups (`04-Sales-Director`)
 - Does not track regulations or evaluate products
   (`05-Market-Intelligence`, `03-Product-Manager`)
@@ -27,7 +27,7 @@ daily recommendation.
      queue
    - Every `Priority`-band item from `08-Revenue-Hunter/pipeline.json`
      with a `nextActionDue` in the next 7 days
-   - Any `Priority`-band item from `01-Opportunity-Hunter/opportunities.json`
+   - Any `Priority`-band item from `opportunity-hunter/opportunity-schema.json`
    - Any candidate scoring 30+ in `03-Product-Manager/product-backlog.json`
    - Any consulting opportunity flagged by
      `05-Market-Intelligence`'s trigger rule that day

@@ -1,0 +1,38 @@
+{
+  "schema": {
+    "id": "string — unique identifier, e.g. opp-0001, immutable once assigned",
+    "dateFound": "string — ISO 8601 date",
+    "source": "string — one of the 19 sources in opportunity-sources.md, e.g. Upwork, LinkedIn Jobs, UAE Recruiters",
+    "sourceCategory": "string — one of: Marketplace, Professional Network, Recruiter Channel, Consulting Channel, Compliance Programme, Technology Practice, Direct/Referral",
+    "title": "string — role, engagement or opportunity title as found",
+    "organisation": "string — company, agency or body name",
+    "description": "string — raw description as found, unedited",
+    "url": "string or null — link to the original listing",
+    "location": "string — city/country, or 'Not specified'",
+    "remote": "boolean — true if the posting explicitly allows remote delivery",
+    "domainTags": "array of strings — any of: ADGL, AI Deployment Governance, AI Governance, GRC, Technology Risk, Third-Party Risk, Security Governance, DORA, EU AI Act, Fractional Advisory, Government/FedRAMP-GovRAMP-CMMC — used to build the domain-filtered report views",
+    "scores": {
+      "expectedRevenue": "number — 0-10, per opportunity-scoring-engine.md",
+      "probabilityOfWinning": "number — 0-10",
+      "strategicValue": "number — 0-10",
+      "relationshipValue": "number — 0-10",
+      "timeRequired": "number — 0-10, inverted: 10 = least time to pursue",
+      "geography": "number — 0-10",
+      "remoteCompatibility": "number — 0-10",
+      "alignmentAIforUIServices": "number — 0-10",
+      "alignmentADGL": "number — 0-10",
+      "alignmentOPERA": "number — 0-10",
+      "longTermRelationshipPotential": "number — 0-10"
+    },
+    "priorityScore": "number — 0-100, weighted sum per opportunity-scoring-engine.md",
+    "band": "string — Priority (80-100), Active (50-79), or Archived (below 50)",
+    "classification": "string — one of: Apply, Immediate Proposal, Follow Recruiter, Relationship Building, Partnership, Ignore, Convert into Content, Convert into Product Idea",
+    "routedTo": "array of strings — downstream files this entry was written to on classification, e.g. ['08-Revenue-Hunter/pipeline.json', '06-CRM/company-intelligence.json']",
+    "status": "string — new, routed, in-progress, proposal-sent, won, lost, archived",
+    "lastTouch": "string — ISO 8601 date",
+    "nextAction": "string",
+    "nextActionDue": "string — ISO 8601 date",
+    "notes": "string"
+  },
+  "opportunities": []
+}

@@ -27,16 +27,17 @@ defined home in an existing employee's trigger rule.
 ## Step 2: Score Fit and Confidence
 
 Direct revenue opportunities are scored using
-`01-Opportunity-Hunter/scoring-model.md` (0-100, six weighted
-dimensions). That score **is** this engine's confidence measure — it
-already answers "how confident are we this is worth pursuing."
+`opportunity-hunter/opportunity-scoring-engine.md` (0-100, eleven
+weighted dimensions). That score **is** this engine's confidence
+measure — it already answers "how confident are we this is worth
+pursuing."
 
 ## Step 3: The Decision Tree
 
 ```
                     New direct-revenue signal
                               │
-                     Score via scoring-model.md
+                  Score via opportunity-scoring-engine.md
                               │
         ┌─────────────────────┼─────────────────────┐
         │                     │                     │
@@ -89,9 +90,9 @@ question entirely, and can stack on top of any branch in Step 3:
   simultaneously if the recurrence or publishability condition is
   independently true.
 - **Ignore is a real, final decision**, not a default. Everything
-  below 30 is still logged (in `opportunities.json`, archived) so it
-  can be re-scored if new information arrives — nothing is silently
-  discarded, per `01-Opportunity-Hunter/operating-manual.md`.
+  below 30 is still logged (in `opportunity-schema.json`, archived) so
+  it can be re-scored if new information arrives — nothing is silently
+  discarded, per `opportunity-hunter/README.md`.
 - This engine's output feeds directly into
   `daily-operating-workflow.md`'s 06:15 (Opportunity Hunter) and 06:45
   (Product Manager) steps — it is the logic those steps actually run,

@@ -26,7 +26,7 @@ reacts to the outside world before it reacts to itself.
   or noise (a duplicate, a minor edit, a rumor)? Only substantive
   entries proceed past this step.
 - **Hands off to**: `02-Content-Director` (LinkedIn/newsletter idea),
-  `03-Product-Manager` (product update), `01-Opportunity-Hunter`
+  `03-Product-Manager` (product update), `opportunity-hunter`
   (consulting opportunity) — per the trigger rule, every substantive
   entry produces all three, even if one answer is "not applicable"
 - **Failure handling**: if a source is unreachable, log it as
@@ -38,23 +38,28 @@ reacts to the outside world before it reacts to itself.
 
 ### 06:15 — Opportunity Hunter
 
-- **Consumes**: external sources in
-  `01-Opportunity-Hunter/operating-manual.md`; any consulting-opportunity
+- **Consumes**: the nineteen sources in
+  `opportunity-hunter/opportunity-sources.md`; any consulting-opportunity
   trigger from Market Intelligence's 06:00 run
-- **Produces**: new/updated entries in `opportunities.json`; new/updated
-  entries in `companies.md`; new/updated records in
+- **Produces**: new/updated entries in `opportunity-schema.json`;
+  new/updated entries in `companies.md`; new/updated records in
   `06-CRM/company-intelligence.json` for any company not already on file
-- **Decision point**: score each candidate against `scoring-model.md`.
-  `Priority` and `Active` get a first-touch draft from
-  `proposal-template.md`; below-threshold items are archived, not
-  deleted.
-- **Hands off to**: `08-Revenue-Hunter` (every `Priority`-scored item,
-  `sourceRef` pointing back to its id); `06-CRM` (new company records)
+- **Decision point**: score each candidate across all eleven dimensions
+  and classify it, per `opportunity-scoring-engine.md`. `Immediate
+  Proposal` gets a first-touch draft from `proposal-template.md`;
+  `Ignore` is archived, not deleted.
+- **Hands off to**: per classification, exactly as
+  `opportunity-scoring-engine.md`'s routing table specifies —
+  `08-Revenue-Hunter` (`Immediate Proposal`, `Partnership`), `06-CRM`
+  (new company records, `Follow Recruiter`, `Relationship Building`),
+  `03-Product-Manager` (`Convert into Product Idea`), `02-Content-Director`
+  (`Convert into Content`)
 - **Failure handling**: if a source is unreachable, skip it and record
-  which source was skipped in today's `daily-report-template.md` entry.
-  If scoring cannot run (e.g. missing data on a candidate), log the
-  candidate as `unscored` rather than dropping it, and flag it for
-  manual review in the Daily Brief.
+  which source was skipped in today's
+  `daily-opportunity-report-template.md` entry. If scoring cannot run
+  (e.g. missing data on a candidate), log the candidate as `unscored`
+  rather than dropping it, and flag it for manual review in the Daily
+  Brief.
 
 ### 06:30 — Content Director
 
@@ -108,8 +113,9 @@ reacts to the outside world before it reacts to itself.
 - **Hands off to**: `04-Sales-Director` (every item that needs an
   active relationship touch); `09-CEO-Advisor` (Priority-band items
   with a near-term `nextActionDue`)
-- **Failure handling**: if a required upstream file (`opportunities.json`,
-  `product-backlog.json`, or `company-intelligence.json`) is malformed
+- **Failure handling**: if a required upstream file
+  (`opportunity-schema.json`, `product-backlog.json`, or
+  `company-intelligence.json`) is malformed
   or unreadable, Revenue Hunter runs on the last known-good pipeline
   state, flags the read failure explicitly, and does not silently drop
   existing pipeline items.
@@ -139,9 +145,9 @@ reacts to the outside world before it reacts to itself.
 
 - **Consumes**: Sales Director's follow-up queue and escalations;
   Revenue Hunter's `pipeline.json` (Priority band, near-term
-  `nextActionDue`); Opportunity Hunter's `opportunities.json`; Product
-  Manager's `product-backlog.json`; Market Intelligence's consulting
-  flags
+  `nextActionDue`); Opportunity Hunter's `opportunity-schema.json`;
+  Product Manager's `product-backlog.json`; Market Intelligence's
+  consulting flags
 - **Produces**: a completed `daily-recommendation-template.md`
 - **Decision point**: run `decision-model.md` — normalise every
   candidate to a 0-10 value score, apply the urgency overlay, break

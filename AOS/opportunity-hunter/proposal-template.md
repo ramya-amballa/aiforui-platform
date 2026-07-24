@@ -32,7 +32,7 @@ Ramya
 
 ## Internal Notes (not sent)
 
-- Opportunity ref: {{opportunities.json id}}
+- Opportunity ref: {{opportunity-schema.json id}}
 - Score: {{SCORE}} / Band: {{BAND}}
 - Full proposal template to use if this progresses:
   `../templates/proposals/{{DOMAIN}}-proposal-template.md`

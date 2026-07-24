@@ -1,6 +1,6 @@
 # Revenue Hunter — Daily Workflow
 
-1. Pull anything new since yesterday from `01-Opportunity-Hunter/opportunities.json`
+1. Pull anything new since yesterday from `opportunity-hunter/opportunity-schema.json`
    scored Active or Priority.
 2. Pull `06-CRM/company-intelligence.json` for any existing
    relationship where `relationshipTemperature` is hot or warm and no

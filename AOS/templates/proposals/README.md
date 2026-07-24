@@ -3,7 +3,7 @@
 Nine reusable proposal templates, one per practice area. Every
 template shares the same structure so a proposal always reads the
 same way regardless of domain, and every `{{PLACEHOLDER}}` is meant to
-be filled automatically from `01-Opportunity-Hunter/opportunities.json`
+be filled automatically from `opportunity-hunter/opportunity-schema.json`
 and `06-CRM/company-intelligence.json` plus whatever is specific to
 the conversation.
 

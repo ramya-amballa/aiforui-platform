@@ -9,7 +9,7 @@ not just the newest lead.
 
 ## How This Differs From Opportunity Hunter
 
-`01-Opportunity-Hunter` scans external sources and scores individual
+`opportunity-hunter` scans external sources and scores individual
 opportunities as they appear: sourcing, breadth, first contact.
 Revenue Hunter owns the full pipeline: everything Opportunity Hunter
 surfaces, plus recurring or upsell potential from existing clients

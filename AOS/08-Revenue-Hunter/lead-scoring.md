@@ -2,7 +2,7 @@
 
 Every pipeline item is scored 0-100 across four weighted dimensions.
 This is a portfolio-prioritisation score, distinct from
-`01-Opportunity-Hunter/scoring-model.md`, which qualifies whether an
+`opportunity-hunter/opportunity-scoring-engine.md`, which qualifies whether an
 individual lead is worth logging at all.
 
 | Dimension | Weight | 0 | 10 (max) |

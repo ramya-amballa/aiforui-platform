@@ -21,7 +21,7 @@ employee's `operating-manual.md`.
 
 | Folder | AI Employee | Responsibility |
 |---|---|---|
-| `01-Opportunity-Hunter` | Opportunity Hunter | Scans external sources and scores individual revenue opportunities as they appear: consulting engagements, recruiter leads, freelance-platform contracts, speaking invitations, grants |
+| `opportunity-hunter` | Opportunity Hunter | Live operating component: monitors nineteen sources, scores every opportunity across eleven dimensions, classifies it and routes it downstream with no manual reformatting |
 | `02-Content-Director` | Content Director | Runs the editorial operating system: converts regulatory changes, client questions and engagement patterns into LinkedIn posts, newsletters, website updates and downloadable resources |
 | `03-Product-Manager` | Product Manager | Continuously evaluates whether a signal should become a product, and in which format: toolkit, checklist, executive guide, assessment, course, workshop, or subscription |
 | `04-Sales-Director` | Sales Director | Maintains every recruiter, consulting firm, prospect and client relationship after first touch; recommends follow-ups daily and drafts personalised outreach so nothing goes cold |
@@ -47,7 +47,7 @@ employee's `operating-manual.md`.
 
 | AI Employee | Status |
 |---|---|
-| `01-Opportunity-Hunter` | Fully defined: operating manual, scoring model, working files |
+| `opportunity-hunter` | v1 — live operating component: sources, scoring engine, schema, backlog, daily report, integration contract |
 | `02-Content-Director` | Fully defined: editorial operating system, conversion map, brief/calendar templates, published-content log |
 | `03-Product-Manager` | Fully defined: operating manual, evaluation framework, product backlog, shipped-products log |
 | `04-Sales-Director` | Fully defined: operating manual, follow-up priority model, outreach draft template |
@@ -60,7 +60,7 @@ employee's `operating-manual.md`.
 `templates/proposals/` (the Proposal Library) is complete: nine
 domain templates. `prompts/` is structure only.
 
-Working files (`opportunities.json`, `regulatory-log.json`,
+Working files (`opportunity-schema.json`, `regulatory-log.json`,
 `company-intelligence.json`, `companies.md`, `pipeline.json`,
 `product-backlog.json`, `published-content-log.json`,
 `shipped-products-log.json`, daily reports) start empty, with their

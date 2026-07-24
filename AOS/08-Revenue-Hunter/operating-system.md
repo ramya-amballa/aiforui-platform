@@ -27,7 +27,7 @@ Revenue Hunter tracks nine revenue types:
 
 ## How Revenue Hunter Fits AOS
 
-- **Reads from:** `01-Opportunity-Hunter/opportunities.json` (sourced
+- **Reads from:** `opportunity-hunter/opportunity-schema.json` (sourced
   leads), `06-CRM/company-intelligence.json` (existing relationships
   with upsell or renewal potential), `03-Product-Manager` (product and
   licensing ideas with revenue potential), `05-Market-Intelligence`

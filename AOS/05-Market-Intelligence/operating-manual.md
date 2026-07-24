@@ -46,7 +46,7 @@ is "not applicable, here's why":
 | LinkedIn idea | `02-Content-Director` | A post explaining what changed and what it actually means for a practitioner, not a summary of the text |
 | Newsletter idea | `02-Content-Director` | A longer treatment for the next AI for U&I newsletter issue |
 | Product update | `03-Product-Manager` | Does this change an existing framework, playbook or the Executive Capability Overview, or justify a new product? |
-| Consulting opportunity | `01-Opportunity-Hunter`, logged to `08-Revenue-Hunter`'s pipeline if pursued | Who does this create urgency for, and is it worth reaching out to them directly? |
+| Consulting opportunity | `opportunity-hunter`, logged to `08-Revenue-Hunter`'s pipeline if pursued | Who does this create urgency for, and is it worth reaching out to them directly? |
 
 ## Daily Output
 
