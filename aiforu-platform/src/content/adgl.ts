@@ -42,7 +42,7 @@ export const adglPhases: AdglPhase[] = [
       "Map AI data flow end to end, numbered step by step",
       "Review AI application architecture against the codebase",
     ],
-    deliverablesSummary: "Creates the foundational documentation required before risk assessment begins.",
+    deliverablesSummary: "Creates the documentation needed to understand the AI system before governance begins.",
     deliverableGroups: [
       { label: "AI Discovery", items: ["AI Asset Inventory", "Architecture Review"] },
       { label: "Data Understanding", items: ["AI Data Flow Mapping", "Data Classification"] },
@@ -63,7 +63,7 @@ export const adglPhases: AdglPhase[] = [
       "Perform threat modelling with security engineering",
       "Assess the model provider: training use, residency, retention, versioning, exit",
     ],
-    deliverablesSummary: "Produces the evidence needed to understand AI risk before governance decisions are made.",
+    deliverablesSummary: "Produces the evidence needed to evaluate AI risk and regulatory exposure.",
     deliverableGroups: [
       { label: "Risk Analysis", items: ["AI Risk Assessment", "Risk Heat Map"] },
       { label: "Privacy & Security", items: ["DPIA", "Threat Model"] },
@@ -84,7 +84,7 @@ export const adglPhases: AdglPhase[] = [
       "Design human oversight tiers and measurement thresholds",
       "Build the control library mapped to existing frameworks",
     ],
-    deliverablesSummary: "Establishes ownership, controls and decision rights for production deployment.",
+    deliverablesSummary: "Establishes governance structures, operational controls and decision rights.",
     deliverableGroups: [
       { label: "Governance Structure", items: ["Governance Operating Model", "RACI", "Approval Workflow"] },
       { label: "Operational Controls", items: ["AI Control Library", "Logging Specification"] },
@@ -105,7 +105,7 @@ export const adglPhases: AdglPhase[] = [
       "Build the evidence repository and populate pre-deployment artefacts",
       "Deliver role-based training with scenario assessment",
     ],
-    deliverablesSummary: "Demonstrates that governance controls actually operate before go-live.",
+    deliverablesSummary: "Demonstrates that governance controls operate effectively before production.",
     deliverableGroups: [
       { label: "Monitoring", items: ["Monitoring Framework", "AI Incident Management"] },
       { label: "Evidence", items: ["Evidence Repository", "Test Results Pack"] },
@@ -126,7 +126,7 @@ export const adglPhases: AdglPhase[] = [
       "Produce the quarterly executive and board reporting pack",
       "Route the next AI use case through the approval workflow",
     ],
-    deliverablesSummary: "Ensures governance continues after deployment through monitoring and continual improvement.",
+    deliverablesSummary: "Ensures governance remains effective through monitoring, reporting and continual improvement.",
     deliverableGroups: [
       { label: "Monitoring", items: ["Threshold Tuning Report", "QA Sampling Results"] },
       { label: "Reporting", items: ["Executive Reporting", "Governance Review"] },

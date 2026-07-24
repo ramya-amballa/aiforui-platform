@@ -95,7 +95,7 @@ export default function AdglPage() {
       {/* Deliverables: a count per phase, full list one click away */}
       <section className="py-section-sm">
         <Container size="wide">
-          <SectionHeading eyebrow="Deliverables" title="What You Walk Away With" />
+          <SectionHeading eyebrow="Deliverables" title="What ADGL Produces" />
           <div className="mt-10">
             <AdglDeliverables />
           </div>
