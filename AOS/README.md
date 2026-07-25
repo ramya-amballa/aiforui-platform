@@ -55,7 +55,7 @@ employee's `operating-manual.md`.
 
 | AI Employee | Status |
 |---|---|
-| `opportunity-hunter` | v1 — live operating component: sources, scoring engine, relevance engine, schema, backlog, daily report, integration contract |
+| `opportunity-hunter` | v1 — live operating component: sources, scoring engine, relevance engine, schema, backlog, daily report, integration contract; Phase 1 autonomous-collection connectors (`CONNECTOR-CONFIGURATION-GUIDE.md`, `runtime/integration-status-dashboard.md`) for Upwork, LinkedIn Jobs, Wellfound, RemoteOK, Greenhouse, Lever, Ashby |
 | `02-Content-Director` | Fully defined, plus a live draft-generation engine (`content-director/`): editorial operating system, conversion map, brief/calendar templates, published-content log, content-brief queue, drafts feed to CEO Advisor |
 | `03-Product-Manager` | Fully defined, plus a live evaluation engine (`product-manager/`): operating manual, evaluation framework (nine formats), product backlog, shipped-products log |
 | `04-Sales-Director` | Fully defined, plus a live proposal preparation engine (`sales-director/`): operating manual, follow-up priority model, outreach draft template, pricing/confidence model, prepared-proposal feed to CEO Advisor |

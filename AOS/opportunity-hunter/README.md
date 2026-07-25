@@ -44,6 +44,10 @@ scheduler is the next phase, not this one.
   before scoring: a 0-100 relevance score with worked examples, the
   penalties, and the threshold below which an opportunity never reaches
   scoring at all
+- `CONNECTOR-CONFIGURATION-GUIDE.md` — how to activate each Phase 1
+  autonomous-collection connector (Upwork, LinkedIn Jobs, Wellfound,
+  RemoteOK, Greenhouse, Lever, Ashby): what each needs, where to get
+  it, and how to test it independently
 
 Start with `opportunity-sources.md`, then `opportunity-scoring-engine.md`.
 
@@ -85,11 +89,23 @@ the keywords in `runtime/config/keywords.json`:
 - **Live once career-page URLs are added to `runtime/config/sources.json`:**
   UAE Recruiters, Consulting Firms (generic page scan — no API exists for
   these)
-- **Connector-ready, needs credentials/access before it returns anything:**
-  Upwork, LinkedIn Jobs, Google Jobs, Wellfound, FlexJobs — each has the
-  full pipeline wired (`collect(keywords, config)`, dedup, routing) but
-  cleanly no-ops until its `apiKey`/`apiSecret` is supplied; wiring the
-  real call later is a small, obvious change, not a rewrite
+- **Connector-ready, awaiting credentials (real OAuth2 secrets):** Upwork
+  — the OAuth2 token-refresh and GraphQL request code is real and wired
+  (`runtime/collectors/upwork.py`); it activates the moment real
+  credentials are supplied
+- **Connector-ready, awaiting API access (no self-serve path exists):**
+  LinkedIn Jobs (Talent Solutions/Jobs API partner approval required),
+  Wellfound (no public or partner API documented today) — no scraping
+  fallback was built for either, by design
+- **Connector-ready, out of Phase 1 scope, unchanged:** Google Jobs,
+  FlexJobs — same wiring, needs a provider/account before it returns
+  anything
+
+See `CONNECTOR-CONFIGURATION-GUIDE.md` for exactly how to activate each
+Phase 1 connector, `runtime/config/credentials.template.env` for which
+environment variables to set instead of committing real secrets, and
+`runtime/integration-status-dashboard.md` for current status
+(regenerated automatically every run).
 
 Every discovered posting is normalised into `opportunity-schema.json`'s
 shape, heuristically scored (flagged `autoScored: true`, since no human
@@ -99,8 +115,11 @@ against `runtime/dedupe-index.json`, and recorded in
 written to `runtime/inbox/` and immediately handed to `ingest.py` — the
 same relevance filter, scoring, classification and routing manual
 entries go through, with no separate logic path. Run
-`python3 runtime/collect.py` directly, or let
-`.github/workflows/opportunity-collection.yml` run it daily.
+`python3 runtime/collect.py` directly, or let the AOS Orchestrator
+(`AOS/orchestrator/orchestrator.py`, invoked daily by
+`.github/workflows/aos-daily-operations.yml`) run it as one step in its
+fixed sequence — the Orchestrator is the only thing GitHub Actions
+invokes directly.
 
 ## Daily Workflow
 

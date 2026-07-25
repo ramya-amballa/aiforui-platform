@@ -1,19 +1,19 @@
 {
-  "_comment": "Per-connector configuration. 'ready' connectors call a real public API today; 'connectorReady' ones have the full pipeline wired but need credentials or a target list before they return anything. Fill in the empty lists/keys to activate a connector — no code changes needed.",
+  "_comment": "Per-connector configuration. 'ready' connectors call a real public API today; 'connectorReady' ones have the full pipeline wired but need credentials or a target list before they return anything. Fill in the empty lists/keys to activate a connector, or set the equivalent environment variable instead (see config/credentials.template.env) — either way, no code changes needed. See ../../CONNECTOR-CONFIGURATION-GUIDE.md for full activation steps and ../integration-status-dashboard.md for current status.",
   "greenhouse": {
     "status": "ready",
     "boardTokens": [],
-    "_note": "Greenhouse's public Job Board API (boards-api.greenhouse.io) has no cross-company search; add each company's board token (the slug in their /jobs page URL) to search it."
+    "_note": "Greenhouse's public Job Board API (boards-api.greenhouse.io) has no cross-company search; add each company's board token (the slug in their /jobs page URL) to search it. Or set GREENHOUSE_BOARD_TOKENS as a comma-separated list."
   },
   "lever": {
     "status": "ready",
     "companies": [],
-    "_note": "Lever's public Postings API (api.lever.co) is per-company, same as Greenhouse; add each company's Lever slug."
+    "_note": "Lever's public Postings API (api.lever.co) is per-company, same as Greenhouse; add each company's Lever slug. Or set LEVER_COMPANIES as a comma-separated list."
   },
   "ashby": {
     "status": "ready",
     "jobBoardNames": [],
-    "_note": "Ashby's public Job Board API (api.ashbyhq.com/posting-api) is per-organisation; add each org's job board name."
+    "_note": "Ashby's public Job Board API (api.ashbyhq.com/posting-api) is per-organisation; add each org's job board name. Or set ASHBY_JOB_BOARD_NAMES as a comma-separated list."
   },
   "remoteok": {
     "status": "ready",
@@ -23,12 +23,14 @@
     "status": "connectorReady",
     "apiKey": null,
     "apiSecret": null,
-    "_note": "Upwork's public job-search API requires an authenticated developer application; the connector is wired but returns nothing until apiKey/apiSecret are supplied."
+    "refreshToken": null,
+    "graphqlQuery": null,
+    "_note": "Upwork's job-search API requires OAuth2 (an approved developer app plus a refresh token obtained via a real Upwork user authorizing it) and is queried via GraphQL. The connector's OAuth2 token-refresh and GraphQL request code is real and wired; it returns nothing until apiKey/apiSecret/refreshToken are supplied. graphqlQuery lets you override the connector's default query if Upwork's schema has changed — see collectors/upwork.py's docstring and CONNECTOR-CONFIGURATION-GUIDE.md. Prefer setting these via environment variables (UPWORK_API_KEY, UPWORK_API_SECRET, UPWORK_REFRESH_TOKEN) rather than committing real values here — see config/credentials.template.env."
   },
   "linkedinJobs": {
     "status": "connectorReady",
     "apiKey": null,
-    "_note": "LinkedIn has no public, unauthenticated job-search API, and its Terms of Service prohibit scraping. This connector only activates against LinkedIn's official Jobs API/Talent Solutions, if and when that access is provisioned."
+    "_note": "LinkedIn has no public, unauthenticated job-search API, and its Terms of Service prohibit scraping. This connector only activates against LinkedIn's official Jobs API/Talent Solutions, if and when that access is provisioned. Or set LINKEDIN_JOBS_API_KEY."
   },
   "googleJobs": {
     "status": "connectorReady",
@@ -38,7 +40,7 @@
   "wellfound": {
     "status": "connectorReady",
     "apiKey": null,
-    "_note": "Wellfound (AngelList Talent) has no public API; this connector activates once an access method is identified."
+    "_note": "Wellfound (AngelList Talent) has no public API; this connector activates once an access method is identified. Or set WELLFOUND_API_KEY."
   },
   "flexjobs": {
     "status": "connectorReady",

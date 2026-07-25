@@ -1,2 +1,7 @@
 __pycache__/
 *.pyc
+
+# Real connector credentials — copy AOS/opportunity-hunter/runtime/config/
+# credentials.template.env to .env locally and fill in real values there;
+# never commit the filled-in file. Production uses GitHub Actions secrets.
+.env

@@ -28,12 +28,16 @@ For every source configured in config/sources.json:
      opportunities go through. This script does not reimplement any of
      that logic — it only discovers and normalises, then hands off.
 
-Designed to run on a daily GitHub Actions schedule
-(.github/workflows/opportunity-collection.yml).
+Designed to run on a daily schedule via the AOS Orchestrator
+(AOS/orchestrator/orchestrator.py), invoked by
+.github/workflows/aos-daily-operations.yml — the Orchestrator is the
+only thing GitHub Actions runs directly; it invokes this script as one
+step in its fixed sequence, exactly like every other AI employee.
 """
 
 import hashlib
 import json
+import os
 import sys
 from datetime import date
 from pathlib import Path
@@ -72,6 +76,44 @@ COLLECTORS = {
     "consultingFirms": consulting_firms,
 }
 
+# Lets real credentials be supplied as environment variables (e.g.
+# GitHub Actions repository secrets) instead of ever being committed to
+# config/sources.json. Scalar overrides replace a single field;
+# list overrides parse a comma-separated value into a list, replacing
+# whatever's already in sources.json for that field. Only overrides for
+# Phase 1's seven sources — see CONNECTOR-CONFIGURATION-GUIDE.md and
+# config/credentials.template.env for the exact variable names.
+ENV_OVERRIDES_SCALAR = {
+    "UPWORK_API_KEY": ("upwork", "apiKey"),
+    "UPWORK_API_SECRET": ("upwork", "apiSecret"),
+    "UPWORK_REFRESH_TOKEN": ("upwork", "refreshToken"),
+    "LINKEDIN_JOBS_API_KEY": ("linkedinJobs", "apiKey"),
+    "WELLFOUND_API_KEY": ("wellfound", "apiKey"),
+}
+ENV_OVERRIDES_LIST = {
+    "GREENHOUSE_BOARD_TOKENS": ("greenhouse", "boardTokens"),
+    "LEVER_COMPANIES": ("lever", "companies"),
+    "ASHBY_JOB_BOARD_NAMES": ("ashby", "jobBoardNames"),
+}
+
+
+def apply_env_overrides(sources_config):
+    """Never mutates config/sources.json on disk — only the in-memory
+    dict this run uses, so a secret set as an environment variable
+    never gets written back into a committed file."""
+    for env_var, (source_key, field) in ENV_OVERRIDES_SCALAR.items():
+        value = os.environ.get(env_var)
+        if value:
+            sources_config.setdefault(source_key, {})[field] = value
+    for env_var, (source_key, field) in ENV_OVERRIDES_LIST.items():
+        value = os.environ.get(env_var)
+        if value:
+            sources_config.setdefault(source_key, {})[field] = [
+                item.strip() for item in value.split(",") if item.strip()
+            ]
+    return sources_config
+
+
 DEFAULT_DEDUPE_INDEX = {
     "schema": {
         "key": "string — sha256(url, or source|organisation|title when a source has no URL)[:16]",
@@ -108,6 +150,7 @@ def dedupe_key(opportunity):
 def run_collectors(keywords, sources_config):
     all_results = []
     per_source_counts = {}
+    per_source_errors = {}
     for name, module in COLLECTORS.items():
         config = sources_config.get(name, {})
         print(f"Collecting: {name}")
@@ -116,9 +159,10 @@ def run_collectors(keywords, sources_config):
         except Exception as exc:  # one source failing must never stop the run
             print(f"  {name}: collection failed: {exc}", file=sys.stderr)
             results = []
+            per_source_errors[name] = str(exc)
         per_source_counts[name] = len(results)
         all_results.extend(results)
-    return all_results, per_source_counts
+    return all_results, per_source_counts, per_source_errors
 
 
 def main():
@@ -130,15 +174,24 @@ def main():
         print("No keywords configured in config/keywords.json. Nothing to search for.", file=sys.stderr)
         return 1
 
-    all_results, per_source_counts = run_collectors(keywords, sources_config)
+    sources_config = apply_env_overrides(sources_config)
+
+    all_results, per_source_counts, per_source_errors = run_collectors(keywords, sources_config)
 
     SNAPSHOTS_DIR.mkdir(exist_ok=True)
     save_json(SNAPSHOTS_DIR / f"{TODAY}-collection-snapshot.json", {
         "date": TODAY,
         "totalDiscovered": len(all_results),
         "perSource": per_source_counts,
+        "perSourceErrors": per_source_errors,
         "opportunities": all_results,
     })
+
+    try:
+        import integration_status
+        integration_status.main()
+    except Exception as exc:  # the status dashboard must never block real collection
+        print(f"Integration status dashboard generation failed (non-fatal): {exc}", file=sys.stderr)
 
     dedupe_index = load_json(DEDUPE_INDEX_PATH, DEFAULT_DEDUPE_INDEX)
     dedupe_index.setdefault("seen", {})

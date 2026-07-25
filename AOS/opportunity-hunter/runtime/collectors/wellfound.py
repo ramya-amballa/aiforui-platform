@@ -1,14 +1,20 @@
 """
-Wellfound (AngelList Talent) connector — connector-ready, not yet live.
+Wellfound (formerly AngelList Talent) connector — connector-ready,
+awaiting API access.
 
-Wellfound has no public API; access requires whatever official or
-partner integration Wellfound offers once identified. This module is
-fully wired into the collection pipeline (same collect(keywords,
-config) signature as every working connector) so activating it later
-is a config change, not a rewrite: once apiKey is supplied in
-runtime/config/sources.json, replace the body below with a real call
-and normalise each result with collectors.common.build_opportunity(...),
-exactly like greenhouse.py.
+Wellfound does not currently publish a public, self-serve API or RSS
+feed for job search — its earlier AngelList Talent developer API was
+discontinued. No compliant public or partner access path is documented
+today, so this connector deliberately does not scrape Wellfound's
+listings pages. If Wellfound introduces an official API or partner
+integration in the future, this module's collect(keywords, config)
+signature already matches every working connector, so wiring it in is
+a config change plus one implementation, not a rewrite — normalise
+each result with collectors.common.build_opportunity(...), exactly
+like greenhouse.py.
+
+See ../../CONNECTOR-CONFIGURATION-GUIDE.md for how to re-check whether
+an access path has since become available.
 """
 
 SOURCE_NAME = "Wellfound"
@@ -16,8 +22,12 @@ SOURCE_NAME = "Wellfound"
 
 def collect(keywords, config):
     if not config.get("apiKey"):
-        print(f"  {SOURCE_NAME}: connector-ready, no API credentials configured — skipping")
+        print(f"  {SOURCE_NAME}: connector-ready, no known public/partner API to "
+              f"authenticate against yet — skipping")
         return []
-    # Not implemented: requires an identified Wellfound access method.
-    print(f"  {SOURCE_NAME}: credentials present but the API call is not yet implemented")
+    # Not implemented: no documented API contract exists to code against
+    # yet. If an apiKey has been set, an access path has presumably been
+    # identified since this was written — implement the real call here.
+    print(f"  {SOURCE_NAME}: API key present but the API call is not yet implemented "
+          f"— see the module docstring")
     return []
