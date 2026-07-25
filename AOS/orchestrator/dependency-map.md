@@ -14,7 +14,8 @@ each step.
 Market Intelligence (runtime/monitor.py)
       |
       +--> Product Manager (product-backlog.json, unscored candidates)
-      +--> Content Director (content-brief-queue.json)
+      +--> Content Director (content-brief-queue.json, consumed by
+      |    content-director/runtime/generate.py)
       +--> opportunity-hunter/runtime/inbox/ (a normal inbox record,
       |    scored by Opportunity Hunter's own unmodified pipeline —
       |    not a formal dependsOn edge, see below)
@@ -56,7 +57,7 @@ produced anything this run.
 | 4 | CRM | Opportunity Hunter | `company-intelligence.json` is written by the same `ingest.py` (`route_to_crm`) for `Follow Recruiter`/`Relationship Building`/`Partnership`/`Immediate Proposal` |
 | 5 | Sales Director | Opportunity Hunter, Revenue Hunter, CRM | `prepare.py` reads all three to build every proposal package |
 | 6 | Product Manager | Market Intelligence | Product signals originate from tracked regulatory/market developments |
-| 7 | Content Director | Market Intelligence | Content signals originate from the same tracked developments |
+| 7 | Content Director | Market Intelligence | `generate.py` reads Market Intelligence's `content-brief-queue.json` as its primary input, plus Opportunity Hunter's `Convert into Content` opportunities, Product Manager's shipped products, and CEO Advisor's daily priority, all read-only |
 | 8 | CEO Advisor | Sales Director, Revenue Hunter, Opportunity Hunter, CRM | Its decision model (`decision-model.md`) normalises a candidate from each of these |
 | 9 | Daily Brief | Opportunity Hunter, Revenue Hunter, CRM, Sales Director, CEO Advisor | Aggregates every upstream output into one report, last |
 
@@ -69,7 +70,7 @@ this is the cascade that makes the graph real rather than decorative.
 
 ## What Actually Has a Runtime Today
 
-Five of the nine employees have code the Orchestrator can invoke; four
+Six of the nine employees have code the Orchestrator can invoke; three
 do not yet, and are recorded honestly as `NOT_EXECUTABLE` rather than
 simulated:
 
@@ -81,7 +82,7 @@ simulated:
 | CRM | none of its own | `NOT_EXECUTABLE` — same reasoning, `06-CRM/company-intelligence.json` is written by Opportunity Hunter |
 | Sales Director | `sales-director/runtime/prepare.py` | executable |
 | Product Manager | none | `NOT_EXECUTABLE` |
-| Content Director | none | `NOT_EXECUTABLE` |
+| Content Director | `content-director/runtime/generate.py` | executable — `02-Content-Director/` is where Content Director's specification lives; `content-director/` is where it runs, exactly the same split as `04-Sales-Director`/`sales-director`; see `content-director/content-generation-model.md` |
 | CEO Advisor | none of its own | `NOT_EXECUTABLE` — `decision-model.md` has no dedicated script; it is already executed as one section of Daily Brief's own generator (see below), exactly as `09-CEO-Advisor/operating-manual.md` describes ("Pass it to `07-Daily-Brief` as the lead item") |
 | Daily Brief | `executive-dashboard/runtime/generate.py` | executable — `executive-dashboard/` is where Daily Brief's aggregation role and CEO Advisor's decision model both already live as code; see its own module docstring, which documents this explicitly |
 

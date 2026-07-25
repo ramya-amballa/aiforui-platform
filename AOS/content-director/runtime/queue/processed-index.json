@@ -1,0 +1,10 @@
+{
+  "schema": {
+    "processedOpportunities": "array of opportunity-hunter ids already drafted",
+    "processedProducts": "array of shipped-products-log ids already drafted",
+    "processedPriorities": "array of ceo-priority-{date} ids already drafted"
+  },
+  "processedOpportunities": [],
+  "processedProducts": [],
+  "processedPriorities": []
+}

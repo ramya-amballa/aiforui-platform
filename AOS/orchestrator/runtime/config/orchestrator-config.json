@@ -67,9 +67,12 @@
       "key": "content-director",
       "name": "Content Director",
       "folder": "02-Content-Director",
-      "script": null,
+      "script": "content-director/runtime/generate.py",
       "dependsOn": ["market-intelligence"],
-      "note": "No runtime implementation yet."
+      "note": "Implemented in content-director/, not 02-Content-Director/ — see dependency-map.md.",
+      "outputPaths": [
+        "content-director/runtime/output/{date}-content-director-report.md"
+      ]
     },
     {
       "key": "ceo-advisor",

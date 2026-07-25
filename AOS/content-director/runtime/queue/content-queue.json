@@ -1,0 +1,14 @@
+{
+  "schema": {
+    "id": "string — the candidate's naturalId",
+    "dateQueued": "string — ISO 8601 date",
+    "sourceType": "string — regulatory, opportunity, product, or priority",
+    "title": "string",
+    "determinations": "object — the seven booleans",
+    "grounding": "number — 0 or 10, see content-generation-model.md",
+    "score": "number — 0-100",
+    "status": "string — Ready to Publish, Needs Review, or Low Value",
+    "draftPaths": "array of strings"
+  },
+  "queue": []
+}
