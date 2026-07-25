@@ -48,6 +48,7 @@ REPO_ROOT = AOS_DIR.parent
 OPPORTUNITY_SCHEMA_PATH = AOS_DIR / "opportunity-hunter" / "opportunity-schema.json"
 PIPELINE_PATH = AOS_DIR / "08-Revenue-Hunter" / "pipeline.json"
 CRM_PATH = AOS_DIR / "06-CRM" / "company-intelligence.json"
+SERVICE_RECOMMENDATIONS_PATH = AOS_DIR / "service-mapping" / "service-recommendations.json"
 
 CONFIG_DIR = RUNTIME_DIR / "config"
 OUTPUT_DIR = RUNTIME_DIR / "output"
@@ -340,7 +341,7 @@ def client_outreach(opportunity, crm_entry):
     return "\n".join(lines)
 
 
-def build_package(opportunity, pipeline_entry, crm_entry, bank, rate_card):
+def build_package(opportunity, pipeline_entry, crm_entry, bank, rate_card, service_recommendation):
     pricing = recommend_pricing(opportunity, pipeline_entry, rate_card)
     confidence = compute_confidence(opportunity, crm_entry, pricing)
     status = determine_status(confidence, opportunity)
@@ -359,7 +360,38 @@ def build_package(opportunity, pipeline_entry, crm_entry, bank, rate_card):
         "recommendedPricing": pricing,
         "confidenceScore": confidence,
         "status": status,
+        "serviceRecommendation": service_recommendation,
     }
+
+
+def render_service_mapping_section(service_recommendation):
+    """Additive only — service-mapping/'s own recommendation, surfaced
+    read-only. Never affects cover letter, proposal text, pricing,
+    confidence score or status above, all computed exactly as before
+    this section existed."""
+    if not service_recommendation:
+        return ("## Service Mapping\n\n"
+                "_Not yet mapped — the Service Mapping Engine has not processed this "
+                "opportunity yet (it runs before Sales Director in the daily sequence; "
+                "this can happen on the same day an opportunity is first discovered)._")
+    if service_recommendation.get("notApplicable"):
+        return f"## Service Mapping\n\n_Not applicable — {service_recommendation['notApplicableReason']}_"
+
+    r = service_recommendation
+    lines = [
+        "## Service Mapping",
+        "",
+        f"**Primary Service:** {r['primaryService']}  ",
+        f"**Recommended Engagement Type:** {r['recommendedEngagementType']}  ",
+        f"**Estimated Project Size:** {r['estimatedProjectSize']} ({r['projectSizeBasis']})  ",
+        f"**Recommended Proposal Template:** `templates/proposals/{r['recommendedProposalTemplate']}`",
+        "",
+        "**Secondary Services:** " + " → ".join(r["secondaryServices"]) if r["secondaryServices"] else
+        "**Secondary Services:** _none_",
+    ]
+    if r["crossSellOpportunities"]:
+        lines += ["", "**Cross-Sell Opportunities:** " + "; ".join(r["crossSellOpportunities"])]
+    return "\n".join(lines)
 
 
 def render_package_markdown(package):
@@ -371,6 +403,10 @@ def render_package_markdown(package):
         f"**Prepared:** {package['datePrepared']}  ",
         f"**Confidence score:** {package['confidenceScore']}/100  ",
         f"**Status:** {package['status']}",
+        "",
+        "---",
+        "",
+        render_service_mapping_section(package["serviceRecommendation"]),
         "",
         "---",
         "",
@@ -419,6 +455,13 @@ def main():
     crm_data = load_json(CRM_PATH)
     rate_card = load_json(CONFIG_DIR / "rate-card.json")
     bank = load_json(CONFIG_DIR / "practitioner-bank.json")
+    # Read-only, optional — service-mapping/'s own output. Sales Director's
+    # core logic (pricing, confidence, status) is unaffected either way;
+    # this only fills in the additive Service Mapping section (see
+    # render_service_mapping_section()).
+    service_recommendations = load_json(
+        SERVICE_RECOMMENDATIONS_PATH, {"recommendations": {}}
+    ).get("recommendations", {})
     processed_index = load_json(PROCESSED_INDEX_PATH, DEFAULT_PROCESSED_INDEX)
     processed_index.setdefault("processed", {})
 
@@ -442,7 +485,8 @@ def main():
     for opportunity in candidates:
         pipeline_entry = pipeline_by_ref.get(opportunity["id"])
         crm_entry = crm_by_org.get(opportunity["organisation"])
-        package = build_package(opportunity, pipeline_entry, crm_entry, bank, rate_card)
+        service_recommendation = service_recommendations.get(opportunity["id"])
+        package = build_package(opportunity, pipeline_entry, crm_entry, bank, rate_card, service_recommendation)
 
         slug = slugify(f"{opportunity['id']}-{opportunity['organisation']}-{opportunity['title']}")[:80]
         package_path = PACKAGES_DIR / f"{slug}.md"

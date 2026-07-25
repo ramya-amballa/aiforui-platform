@@ -1,0 +1,95 @@
+{
+  "_comment": "Every lookup table the Service Mapping Engine uses. Edit these to retune recommendations — no code change needed. See ../../service-mapping-model.md for the reasoning behind each table and worked examples.",
+
+  "primaryServices": [
+    "AI Deployment Governance (ADGL)",
+    "AI Governance Advisory",
+    "AI Risk Assessment",
+    "AI Governance Operating Model",
+    "Responsible AI Implementation",
+    "AI Third-Party Risk Review",
+    "AI Readiness Assessment",
+    "AI Policy & Control Framework",
+    "Fractional AI Governance Lead",
+    "Executive Workshop"
+  ],
+
+  "fractionalKeywords": ["fractional", "interim advisor", "advisor-in-residence", "part-time ciso", "part time governance", "interim ciso"],
+  "workshopKeywords": ["workshop", "keynote", "speaking engagement"],
+  "trainingKeywords": ["training", "enablement session", "upskilling"],
+
+  "excludedClassifications": {
+    "Ignore": "Not routed anywhere; not a consulting engagement to map.",
+    "Convert into Content": "Content Director's signal, not a service engagement — mapping this would duplicate Content Director's own decision.",
+    "Convert into Product Idea": "Product Manager's signal, not a service engagement — mapping this would duplicate Product Manager's own decision."
+  },
+
+  "secondaryServiceChains": {
+    "AI Deployment Governance (ADGL)": ["AI Governance Operating Model", "AI Control Library", "Fractional Governance Support"],
+    "AI Governance Advisory": ["AI Governance Operating Model", "AI Policy & Control Framework", "Executive Workshop"],
+    "AI Risk Assessment": ["AI Third-Party Risk Review", "AI Policy & Control Framework", "Fractional AI Governance Lead"],
+    "AI Governance Operating Model": ["AI Control Library", "Fractional Governance Support", "Executive Workshop"],
+    "Responsible AI Implementation": ["AI Governance Operating Model", "AI Policy & Control Framework", "Fractional AI Governance Lead"],
+    "AI Third-Party Risk Review": ["AI Risk Assessment", "AI Policy & Control Framework", "AI Governance Operating Model"],
+    "AI Readiness Assessment": ["AI Governance Advisory", "AI Policy & Control Framework", "Executive Workshop"],
+    "AI Policy & Control Framework": ["AI Control Library", "AI Governance Operating Model", "Fractional Governance Support"],
+    "Fractional AI Governance Lead": ["AI Governance Operating Model", "AI Control Library", "Executive Workshop"],
+    "Executive Workshop": ["AI Readiness Assessment", "AI Governance Advisory", "AI Governance Operating Model"]
+  },
+
+  "crossSellComplement": {
+    "_note": "The one complementary Primary Service recommended after any engagement in this row's key, chosen to be genuinely different in shape from the primary (e.g. an assessment-led engagement cross-sells a workshop; a workshop cross-sells an assessment).",
+    "AI Deployment Governance (ADGL)": "Executive Workshop",
+    "AI Governance Advisory": "Executive Workshop",
+    "AI Risk Assessment": "Executive Workshop",
+    "AI Governance Operating Model": "Fractional AI Governance Lead",
+    "Responsible AI Implementation": "Executive Workshop",
+    "AI Third-Party Risk Review": "AI Risk Assessment",
+    "AI Readiness Assessment": "AI Governance Advisory",
+    "AI Policy & Control Framework": "Fractional AI Governance Lead",
+    "Fractional AI Governance Lead": "Executive Workshop",
+    "Executive Workshop": "AI Readiness Assessment"
+  },
+
+  "proposalTemplateByDomainTag": {
+    "_note": "Checked before proposalTemplateByPrimaryService — a direct domainTag match to a dedicated real template (templates/proposals/) is always more specific than a Primary Service default.",
+    "DORA": "dora-proposal-template.md",
+    "EU AI Act": "eu-ai-act-proposal-template.md",
+    "Security Governance": "security-governance-proposal-template.md"
+  },
+  "proposalTemplateByPrimaryService": {
+    "AI Deployment Governance (ADGL)": "ai-governance-proposal-template.md",
+    "AI Governance Advisory": "ai-governance-proposal-template.md",
+    "AI Governance Operating Model": "ai-governance-proposal-template.md",
+    "Responsible AI Implementation": "ai-governance-proposal-template.md",
+    "AI Risk Assessment": "technology-risk-proposal-template.md",
+    "AI Third-Party Risk Review": "third-party-risk-proposal-template.md",
+    "AI Readiness Assessment": "grc-proposal-template.md",
+    "AI Policy & Control Framework": "grc-proposal-template.md",
+    "Fractional AI Governance Lead": "fractional-advisory-proposal-template.md",
+    "Executive Workshop": "enterprise-consulting-proposal-template.md"
+  },
+
+  "projectSizeDefaultByPrimaryService": {
+    "_note": "Used only when pipeline.json has no real, parseable expectedRevenue for this opportunity yet. Adjusted afterward by scores.expectedRevenue (the 0-10 dimension every opportunity already has) — see service-mapping-model.md.",
+    "Executive Workshop": "Small",
+    "AI Readiness Assessment": "Small",
+    "AI Risk Assessment": "Medium",
+    "AI Third-Party Risk Review": "Medium",
+    "AI Governance Advisory": "Medium",
+    "AI Governance Operating Model": "Large",
+    "Responsible AI Implementation": "Large",
+    "AI Policy & Control Framework": "Large",
+    "AI Deployment Governance (ADGL)": "Large",
+    "Fractional AI Governance Lead": "Enterprise"
+  },
+  "projectSizeBands": ["Small", "Medium", "Large", "Enterprise"],
+  "projectSizeRevenueThresholds": {
+    "_note": "Applied to the parsed numeric value of pipeline.json's expectedRevenue when a real, parseable figure exists (parse_currency(), reused verbatim from executive-dashboard/runtime/generate.py). Thresholds are applied to the raw number regardless of currency label — a documented simplification, the same one executive-dashboard's own revenue section already accepts (see its 'mixed_currency_note'), not a new gap this engine introduces.",
+    "small_max": 5000,
+    "medium_max": 25000,
+    "large_max": 100000
+  },
+
+  "engagementTypes": ["Fixed-price project", "Discovery workshop", "Advisory engagement", "Fractional consulting", "Retainer", "Training"]
+}

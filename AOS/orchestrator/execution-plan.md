@@ -21,17 +21,23 @@ individual employee's script directly — see that file.
 ## Execution Sequence
 
 Fixed order, per the founder's instruction — see `dependency-map.md`
-for why this order holds:
+for why this order holds. Sprint 3 inserted the Service Mapping Engine
+as a new step 5 (its only hard dependency is Opportunity Hunter; it
+runs after CRM and before Sales Director so Sales Director can read its
+recommendations the same day), shifting every step from the original
+Sales Director onward down by one — steps 1-4 are unchanged from the
+original nine-step order:
 
 1. Market Intelligence
 2. Opportunity Hunter
 3. Revenue Hunter
 4. CRM
-5. Sales Director
-6. Product Manager
-7. Content Director
-8. CEO Advisor
-9. Daily Brief
+5. Service Mapping Engine
+6. Sales Director
+7. Product Manager
+8. Content Director
+9. CEO Advisor
+10. Daily Brief
 
 ## Per-Step Behaviour
 

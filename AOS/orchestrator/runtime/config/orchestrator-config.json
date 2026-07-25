@@ -54,11 +54,23 @@
       ]
     },
     {
+      "key": "service-mapping",
+      "name": "Service Mapping Engine",
+      "folder": "service-mapping",
+      "script": "service-mapping/runtime/generate.py",
+      "dependsOn": ["opportunity-hunter"],
+      "note": "New in Sprint 3 — deterministically maps every opportunity to a Primary Service, Secondary Services, Recommended Engagement Type, Estimated Project Size, Recommended Proposal Template and Cross-Sell Opportunities. Reads opportunity-schema.json (required) plus pipeline.json/company-intelligence.json (optional enrichment only), all read-only; runs after CRM and before Sales Director so Sales Director can read its output the same day. See service-mapping/service-mapping-model.md.",
+      "outputPaths": [
+        "service-mapping/runtime/output/{date}-service-recommendation-report.md",
+        "service-mapping/runtime/output/service-recommendation-report.md"
+      ]
+    },
+    {
       "key": "sales-director",
       "name": "Sales Director",
       "folder": "sales-director",
       "script": "sales-director/runtime/prepare.py",
-      "dependsOn": ["opportunity-hunter", "revenue-hunter", "crm"],
+      "dependsOn": ["opportunity-hunter", "revenue-hunter", "crm", "service-mapping"],
       "outputPaths": [
         "sales-director/runtime/output/{date}-sales-director-report.md",
         "sales-director/runtime/output/ceo-advisor-feed.json"
