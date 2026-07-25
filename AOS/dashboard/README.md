@@ -25,6 +25,14 @@ are scoped entirely to this dashboard.
 
 ## Running Locally
 
+**Windows, no terminal needed:** double-click `Start_AOS.bat` in this
+folder. See `README_START_HERE.md`. It finds Python, installs any
+missing packages (only the first time), starts the dashboard, and
+opens your browser automatically. If the dashboard is already running,
+it just opens the browser. Double-click `Stop_AOS.bat` to stop it.
+
+**Manual / any OS:**
+
 ```bash
 cd AOS/dashboard
 streamlit run app.py
@@ -47,6 +55,9 @@ to see it.
 
 ```
 AOS/dashboard/
+  Start_AOS.bat            Windows one-click launcher — see README_START_HERE.md.
+  Stop_AOS.bat             Windows one-click stop.
+  README_START_HERE.md     Three-line non-technical quick start.
   app.py                  Home page: date, last execution, system status,
                            employees running, executive summary, top 3
                            priorities, and the 10 business-at-a-glance cards.

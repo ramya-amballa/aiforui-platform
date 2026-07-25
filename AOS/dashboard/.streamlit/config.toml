@@ -7,7 +7,6 @@ textColor = "#14161b"
 font = "sans serif"
 
 [server]
-headless = true
 enableXsrfProtection = true
 
 [browser]
