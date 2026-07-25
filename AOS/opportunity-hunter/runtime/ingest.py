@@ -549,6 +549,20 @@ company-intelligence.json. Full history: rejected/rejected-log.json.*
 """
 
 
+def compute_relevance_for_record(record):
+    """website-intake/'s own records (source == "Website") are exempted
+    from scoring, not scored: opportunity-relevance-engine.md exists to
+    catch a keyword coincidentally appearing in an otherwise-unrelated
+    posting (a scraped "Paralegal" role matching bare "RAG"). A website
+    enquiry is a self-initiated, self-selected contact to AI for U&I's
+    own site — there is no posting to be coincidental about, so the
+    question this engine answers doesn't apply. Every other source is
+    scored exactly as before this function existed."""
+    if record.get("source") == "Website":
+        return {"score": 100, "categoriesMatched": [], "penalties": [], "reason": None}
+    return relevance.compute_relevance(record)
+
+
 def main():
     records, source_files = load_inbox_records()
     if not records:
@@ -565,7 +579,7 @@ def main():
     rejected_today = []
     validation_failures = 0
     for record in records:
-        relevance_result = relevance.compute_relevance(record)
+        relevance_result = compute_relevance_for_record(record)
         if relevance_result["score"] < relevance.RELEVANCE_THRESHOLD:
             entry = build_rejected_entry(record, relevance_result, rejected_log["rejected"])
             rejected_log["rejected"].append(entry)

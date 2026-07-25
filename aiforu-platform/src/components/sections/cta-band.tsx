@@ -5,6 +5,15 @@ import { primaryCta, secondaryCta } from "@/lib/constants";
 interface CtaBandProps {
   title?: string;
   description?: string;
+  /**
+   * Which page this band appears on, e.g. "adgl", "opera",
+   * "selected-engagement-areas" — appended to the secondary CTA's link
+   * to the contact form as `?source=`, so AOS's Website Intake Runtime
+   * can tell which page an enquiry started from. Omit for pages with
+   * no more specific context; the link falls back to the plain
+   * secondaryCta.href unchanged.
+   */
+  sourcePage?: string;
 }
 
 /**
@@ -14,7 +23,12 @@ interface CtaBandProps {
 export function CtaBand({
   title = "Discuss a governance challenge",
   description = "Most engagements begin with a working conversation about a specific problem, not a formal proposal.",
+  sourcePage,
 }: CtaBandProps) {
+  const secondaryHref = sourcePage
+    ? `${secondaryCta.href}?source=${encodeURIComponent(sourcePage)}`
+    : secondaryCta.href;
+
   return (
     <section className="border-t border-border py-section-sm">
       <Container size="wide">
@@ -27,7 +41,7 @@ export function CtaBand({
             <Button href={primaryCta.href} variant="primary" size="lg">
               {primaryCta.label}
             </Button>
-            <Button href={secondaryCta.href} variant="secondary" size="lg">
+            <Button href={secondaryHref} variant="secondary" size="lg">
               {secondaryCta.label}
             </Button>
           </div>

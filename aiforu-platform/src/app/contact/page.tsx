@@ -12,7 +12,13 @@ export const metadata: Metadata = buildMetadata({
   path: "/contact",
 });
 
-export default function ContactPage() {
+interface ContactPageProps {
+  searchParams: Promise<{ source?: string }>;
+}
+
+export default async function ContactPage({ searchParams }: ContactPageProps) {
+  const { source } = await searchParams;
+
   return (
     <section className="py-section">
       <Container size="wide">
@@ -51,7 +57,7 @@ export default function ContactPage() {
           </div>
 
           <div className="lg:col-span-6 lg:col-start-7">
-            <ContactForm />
+            <ContactForm sourcePage={source ?? "contact"} />
           </div>
         </div>
       </Container>

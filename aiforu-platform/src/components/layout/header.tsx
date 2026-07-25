@@ -45,7 +45,7 @@ export function Header() {
 
           <div className="hidden items-center gap-4 nav:flex">
             <ThemeToggle />
-            <Button href={secondaryCta.href} variant="secondary" size="sm">
+            <Button href={`${secondaryCta.href}?source=start-a-conversation`} variant="secondary" size="sm">
               {secondaryCta.label}
             </Button>
           </div>

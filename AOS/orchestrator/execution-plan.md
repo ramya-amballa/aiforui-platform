@@ -22,22 +22,28 @@ individual employee's script directly — see that file.
 
 Fixed order, per the founder's instruction — see `dependency-map.md`
 for why this order holds. Sprint 3 inserted the Service Mapping Engine
-as a new step 5 (its only hard dependency is Opportunity Hunter; it
-runs after CRM and before Sales Director so Sales Director can read its
-recommendations the same day), shifting every step from the original
-Sales Director onward down by one — steps 1-4 are unchanged from the
-original nine-step order:
+as step 5 (its only hard dependency is Opportunity Hunter; it runs
+after CRM and before Sales Director so Sales Director can read its
+recommendations the same day). Sprint 4 inserted the Website Intake
+Runtime as a new step 2 — it is fully self-contained (it invokes
+Opportunity Hunter's, Revenue Hunter's and the Service Mapping
+Engine's own scripts as subprocesses within its own run, rather than
+depending on their separately scheduled steps below), so it has no
+`dependsOn` and runs early enough that every downstream step already
+sees website-sourced opportunities as just another opportunity by the
+time it runs:
 
 1. Market Intelligence
-2. Opportunity Hunter
-3. Revenue Hunter
-4. CRM
-5. Service Mapping Engine
-6. Sales Director
-7. Product Manager
-8. Content Director
-9. CEO Advisor
-10. Daily Brief
+2. Website Intake Runtime
+3. Opportunity Hunter
+4. Revenue Hunter
+5. CRM
+6. Service Mapping Engine
+7. Sales Director
+8. Product Manager
+9. Content Director
+10. CEO Advisor
+11. Daily Brief
 
 ## Per-Step Behaviour
 

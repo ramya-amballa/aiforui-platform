@@ -114,6 +114,7 @@ export default function MethodologyPage() {
       <CtaBand
         title="Apply OPERA to a real governance decision"
         description="See how the methodology maps to a specific engagement area, or start a conversation about your own use case."
+        sourcePage="opera"
       />
     </>
   );

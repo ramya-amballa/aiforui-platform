@@ -52,7 +52,10 @@ export default function HomePage() {
               <Button href={primaryCta.href} variant="primary" size="lg">
                 {primaryCta.label}
               </Button>
-              <Link href={secondaryCta.href} className="text-sm text-ink underline underline-offset-4 decoration-border hover:decoration-accent hover:text-accent">
+              <Link
+                href={`${secondaryCta.href}?source=start-a-conversation`}
+                className="text-sm text-ink underline underline-offset-4 decoration-border hover:decoration-accent hover:text-accent"
+              >
                 {secondaryCta.label} &rarr;
               </Link>
             </div>

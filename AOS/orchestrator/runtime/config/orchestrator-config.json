@@ -17,6 +17,18 @@
       ]
     },
     {
+      "key": "website-intake",
+      "name": "Website Intake Runtime",
+      "folder": "website-intake",
+      "script": "website-intake/runtime/generate.py",
+      "dependsOn": [],
+      "note": "New in Sprint 4 — turns a website enquiry into a Lead ID, an opportunity record, a CRM record, a Revenue Hunter pipeline entry and a Service Mapping recommendation, invoking ingest.py/revenue-hunter's/service-mapping's own generate.py as subprocesses within its own run (all three are idempotent, so this is safe alongside their own separately scheduled steps below). Runs early and has no dependsOn because it is self-contained — every downstream employee below sees website-sourced opportunities as just another opportunity, with no special-casing. See website-intake/website-intake-model.md.",
+      "outputPaths": [
+        "website-intake/runtime/output/{date}-website-intake-report.md",
+        "website-intake/runtime/output/website-intake-report.md"
+      ]
+    },
+    {
       "key": "opportunity-hunter",
       "name": "Opportunity Hunter",
       "folder": "opportunity-hunter",

@@ -198,3 +198,30 @@ homepage, capability map, filtered Insights view and About.
   original frameworks to earn the name; add a Speaking & Writing section
   once external citations exist.
 - Deployment to Vercel — intentionally not done yet.
+
+## 7. AOS Website Intake
+
+The contact form (`src/components/contact/contact-form.tsx` →
+`src/app/api/contact/route.ts`) is also this site's connection to AOS,
+the operating system behind AI for U&I
+(`AOS/website-intake/website-intake-model.md` in this same monorepo).
+Every submission still sends its existing Resend notification email,
+unchanged; in addition, the API route makes a best-effort call to
+commit the submission as a JSON file into `AOS/website-intake/runtime/
+inbox/` via the GitHub Contents API, so AOS can turn it into a Lead ID,
+an opportunity record, a CRM record, a Revenue Hunter pipeline entry
+and a Service Mapping recommendation automatically.
+
+This is connector-ready, not required: without `AOS_INTAKE_GITHUB_TOKEN`
+and `AOS_INTAKE_REPO` set (see `.env.example`), the contact form works
+exactly as it always has — the AOS call cleanly no-ops, logged
+server-side only, and never affects the response a visitor sees.
+
+**`sourcePage`**: `CtaBand` (`src/components/sections/cta-band.tsx`)
+accepts an optional `sourcePage` prop, appended to its link to `/contact`
+as `?source=...` — set on the ADGL, Methodology (OPERA) and Selected
+Advisory Engagements pages, and on both global "Start a Conversation"
+buttons (header nav, homepage hero). The Contact page reads that query
+param server-side and passes it to `ContactForm` as a hidden field, so
+AOS can tell which page (or which global CTA) an enquiry started from.
+A direct visit to `/contact` with no query param defaults to `"contact"`.

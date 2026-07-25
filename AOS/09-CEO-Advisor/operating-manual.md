@@ -38,6 +38,9 @@ daily recommendation.
    - Every entry in `content-director/runtime/output/ceo-advisor-feed.json`
      — its `status` only (`Ready to Publish`, `Needs Review`, or
      `Low Value`); the drafts themselves are never opened here
+   - Every entry in `website-intake/runtime/output/ceo-advisor-feed.json`
+     — its `urgency` only (`High`, `Medium`, or `Low`); the full lead
+     record in `website-intake/leads.json` is never opened here
    - Any employee listed in `orchestrator/status.json`'s `failures` for
      that day's run — a broken pipeline is a candidate action in its
      own right

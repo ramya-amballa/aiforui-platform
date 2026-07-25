@@ -1,0 +1,97 @@
+{
+  "_comment": "Every lookup table the Website Intake Runtime uses. Edit these to retune classification/qualification — no code change needed. See ../../website-intake-model.md for the reasoning behind each table.",
+
+  "leadClassifications": [
+    "ADGL enquiry", "AI Governance Advisory", "AI Risk Assessment",
+    "Fractional Consulting", "Training", "Workshop", "Partnership", "Speaking", "Unknown"
+  ],
+
+  "sourcePageClassification": {
+    "_note": "The website page a visitor was on when they clicked through to the contact form — the strongest single signal, checked before any keyword match. 'contact' and 'start-a-conversation' carry no page-specific signal, so they fall through to keyword matching.",
+    "adgl": "ADGL enquiry",
+    "opera": "AI Governance Advisory",
+    "selected-engagement-areas": "AI Governance Advisory"
+  },
+
+  "classificationKeywords": {
+    "_note": "Checked in this order (first match wins) when sourcePage doesn't already determine a classification.",
+    "Fractional Consulting": ["fractional", "interim advisor", "interim ciso", "part-time", "part time governance"],
+    "Speaking": ["speaking", "keynote", "conference", "panel", "podcast"],
+    "Workshop": ["workshop", "training session", "enablement session"],
+    "Training": ["training", "upskilling", "enablement"],
+    "Partnership": ["partnership", "partner with", "subcontract", "whitelabel", "white-label", "referral partner", "collaborate"],
+    "ADGL enquiry": ["adgl", "deployment governance", "ai deployment"],
+    "AI Risk Assessment": ["risk assessment", "ai risk", "technology risk", "third-party risk", "third party risk", "vendor risk"],
+    "AI Governance Advisory": ["ai governance", "responsible ai", "governance operating model", "opera"]
+  },
+
+  "domainTagsByClassification": {
+    "ADGL enquiry": ["ADGL", "AI Deployment Governance"],
+    "AI Governance Advisory": ["AI Governance"],
+    "AI Risk Assessment": ["Technology Risk"],
+    "Fractional Consulting": ["Fractional Advisory"],
+    "Training": ["AI Governance"],
+    "Workshop": ["AI Governance"],
+    "Partnership": [],
+    "Speaking": [],
+    "Unknown": []
+  },
+
+  "sourceCategoryByClassification": {
+    "_note": "opportunity-schema.json's sourceCategory enum is Marketplace/Professional Network/Recruiter Channel/Consulting Channel/Compliance Programme/Technology Practice/Direct/Referral. Every website lead is Direct/Referral except Partnership, which is Consulting Channel (matches ingest.py's classify() Consulting Channel + high strategicValue -> Partnership rule).",
+    "default": "Direct/Referral",
+    "Partnership": "Consulting Channel"
+  },
+
+  "urgencyKeywords": {
+    "High": ["urgent", "asap", "this week", "immediately", "deadline", "time-sensitive", "time sensitive"],
+    "Medium": ["this month", "soon", "next few weeks", "in the coming weeks"]
+  },
+
+  "industryKeywords": {
+    "_note": "Best-effort inference from the submitted message/organisation only — 'Not specified' when nothing matches, never guessed beyond what the text actually says.",
+    "Financial Services": ["bank", "banking", "insurer", "insurance", "asset management", "financial services", "fintech"],
+    "Healthcare": ["hospital", "healthcare", "health system", "pharma", "life sciences", "biotech"],
+    "Government": ["government", "public sector", "ministry", "federal", "municipal", "agency"],
+    "Technology": ["saas", "software company", "tech company", "startup", "platform"],
+    "Energy": ["energy", "utility", "utilities", "oil and gas", "renewables"],
+    "Retail": ["retail", "e-commerce", "ecommerce", "consumer goods"],
+    "Manufacturing": ["manufacturing", "industrial", "supply chain"]
+  },
+
+  "geographyKeywords": {
+    "_note": "Same served-geography vocabulary opportunity-hunter/runtime/collectors/common.py already uses, reused for consistency.",
+    "UAE": ["uae", "united arab emirates", "dubai", "abu dhabi"],
+    "United States": ["us", "usa", "united states", "america"],
+    "United Kingdom": ["uk", "united kingdom", "britain"],
+    "India": ["india"],
+    "Europe": ["eu", "europe", "european union"]
+  },
+
+  "discoveryCallAgendaByClassification": {
+    "_note": "A real, structured discovery-call agenda per Lead Classification — the opening/closing structure every AI for U&I discovery call already follows (context, scope, next steps); the middle section's questions reuse sales-director/runtime/prepare.py's own clarifying_questions() logic pattern, not a second invented question set.",
+    "default": [
+      "Introductions and context: what prompted reaching out now",
+      "Understand the current state: what exists today, who owns it, what's changed recently",
+      "Clarify scope: fixed engagement, ongoing advisory, or still exploratory",
+      "Discuss timeline and any deadline driving urgency",
+      "Outline AI for U&I's relevant experience and approach",
+      "Agree next steps and who owns each one"
+    ]
+  },
+
+  "followUpTasksByUrgency": {
+    "High": ["Respond within 4 business hours", "Offer discovery call times within 48 hours", "Log CRM record", "Flag to CEO Advisor as same-day priority"],
+    "Medium": ["Respond within 1 business day", "Offer discovery call times within the week", "Log CRM record"],
+    "Low": ["Respond within 3 business days", "Log CRM record"]
+  },
+
+  "qualificationDefaults": {
+    "_note": "Documented, adjustable defaults for the 0-10 dimensions a raw enquiry gives no direct signal for — the same kind of labelled default used throughout AOS (rate-card.json, revenue-hunter's CRM-sourced defaults). A self-initiated website enquiry is treated as moderately higher relationship/probability than a cold scraped posting, since the visitor reached out first.",
+    "relationshipValue": 6,
+    "remoteCompatibility": 8,
+    "longTermRelationshipPotential": 6,
+    "probabilityOfWinningBase": 5,
+    "strategicValueBase": 5
+  }
+}

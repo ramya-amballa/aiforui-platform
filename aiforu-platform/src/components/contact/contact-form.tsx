@@ -8,11 +8,21 @@ const fieldStyles =
 
 type Status = "idle" | "submitting" | "success" | "error";
 
+interface ContactFormProps {
+  /**
+   * Which page the visitor came from (adgl, opera,
+   * selected-engagement-areas, start-a-conversation, or contact) —
+   * carried as a hidden field so AOS's Website Intake Runtime can
+   * classify the enquiry accordingly. See ../sections/cta-band.tsx.
+   */
+  sourcePage?: string;
+}
+
 /**
  * Submits to /api/contact, which delivers the message by email via
  * Resend. See that route for the required environment variables.
  */
-export function ContactForm() {
+export function ContactForm({ sourcePage = "contact" }: ContactFormProps) {
   const [status, setStatus] = useState<Status>("idle");
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
@@ -104,6 +114,8 @@ export function ContactForm() {
 
       {/* Honeypot: hidden from real visitors, filled in only by bots. */}
       <input type="text" name="company" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden="true" />
+
+      <input type="hidden" name="sourcePage" value={sourcePage} />
 
       {status === "error" && <p className="text-sm text-signal">{errorMessage}</p>}
 

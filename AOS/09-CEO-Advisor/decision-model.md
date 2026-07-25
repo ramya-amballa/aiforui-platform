@@ -21,6 +21,7 @@ Convert each candidate's native score to a 0-10 value score:
 | `orchestrator/status.json` (`failures`) | present / absent | any entry present = 9, regardless of which employee failed |
 | `05-Market-Intelligence/runtime/output/ceo-advisor-feed.json` (six checks) | boolean combination | `consultingOpportunity` true = 7, else `newProduct` true = 5, else `linkedinContent`/`websiteUpdate` only = 3 |
 | `content-director/runtime/output/ceo-advisor-feed.json` (draft status) | Ready to Publish / Needs Review / Low Value | Ready to Publish = 6, Needs Review = 3, Low Value = 1 |
+| `website-intake/runtime/output/ceo-advisor-feed.json` (lead urgency) | High / Medium / Low | High = 8, Medium = 6, Low = 4 |
 
 CEO Advisor reads only the `status` field from the prepared-proposal
 feed — never the drafts themselves. A `Needs Review` item still
@@ -32,7 +33,11 @@ independent of any single opportunity's value; see
 `orchestrator/execution-plan.md`'s "Notify CEO Advisor" section. Market
 Intelligence's feed is read for its six booleans only — the underlying
 regulatory-log.json entry is never opened here, same as every other
-feed above.
+feed above. Website Intake Runtime's feed is read for `urgency` only —
+even its lowest band (Low = 4) still surfaces, since every entry is a
+real, self-initiated enquiry from AI for U&I's own site, not a
+speculative lead; the full lead record (`website-intake/leads.json`)
+is never opened here either.
 
 ## Step 2: Apply the Urgency Overlay
 

@@ -31,6 +31,7 @@ employee's `operating-manual.md`.
 | `08-Revenue-Hunter` | Revenue Hunter | Live operating component: owns the full, unified revenue pipeline, admits new Active/Priority opportunities and CRM upsell signals, advances stage as Sales Director prepares proposals, and produces a real probability-weighted revenue dashboard and monthly forecast — no financial assumption fabricated |
 | `09-CEO-Advisor` | CEO Advisor | Writes no content; every morning selects the single highest-ROI action across all other employees' output |
 | `service-mapping` | Service Mapping Engine | Added in Sprint 3, not one of the founder's original nine — deterministically maps every opportunity to a Primary Service, Secondary Services, Recommended Engagement Type, Estimated Project Size, Recommended Proposal Template and Cross-Sell Opportunities; read read-only by Sales Director |
+| `website-intake` | Website Intake Runtime | Added in Sprint 4, not one of the founder's original nine — turns a website enquiry into a Lead ID, an opportunity record, a CRM record, a Revenue Hunter pipeline entry, a Service Mapping recommendation and a CEO Advisor notification, automatically; sends no email |
 
 ## Shared Structure
 
@@ -51,13 +52,14 @@ employee's `operating-manual.md`.
 - `revenue-hunter/` — Revenue Hunter's financial-intelligence engine: runs `lead-scoring.md`, `decision-tree.md` and `revenue-forecasting-engine.md` against real pipeline, opportunity, CRM, Sales Director and Product Manager data, producing a real revenue dashboard and monthly forecast — no financial assumption is ever fabricated (`revenue-hunter/runtime/generate.py`)
 - `crm/` — CRM's relationship-intelligence engine: a read-only report generator over `06-CRM/company-intelligence.json`, cross-referenced with real opportunity history (Opportunity Hunter), proposal history (Sales Director) and pipeline history (Revenue Hunter), producing a daily follow-up queue, relationship health report and stale-relationship alerts — never writes `relationshipTemperature`/`nextFollowUpDue`/`outreachHistory`, which stay Sales Director's exclusively (`crm/runtime/generate.py`)
 - `service-mapping/` — the Service Mapping Engine: deterministically maps every opportunity to a Primary Service, Secondary Services, Recommended Engagement Type, Estimated Project Size, Recommended Proposal Template and Cross-Sell Opportunities, read read-only by `sales-director/runtime/prepare.py` (`service-mapping/runtime/generate.py`)
+- `website-intake/` — the Website Intake Runtime: turns a website enquiry into a Lead ID, an opportunity record, a CRM record, a Revenue Hunter pipeline entry, a Service Mapping recommendation and a CEO Advisor notification by invoking `ingest.py`/Revenue Hunter's/Service Mapping's own `generate.py` as subprocesses within its own run — sends no email (`website-intake/runtime/generate.py`)
 - `orchestrator/` — the single entry point for daily operations: runs every employee with a live runtime in dependency order, retries failures, logs everything, and produces the Daily Execution Report (`orchestrator/orchestrator.py`) — see below
 
 ## Status
 
 | AI Employee | Status |
 |---|---|
-| `opportunity-hunter` | v1 — live operating component: sources, scoring engine, relevance engine, schema, backlog, daily report, integration contract; Phase 1 autonomous-collection connectors (`CONNECTOR-CONFIGURATION-GUIDE.md`, `runtime/integration-status-dashboard.md`) for Upwork, LinkedIn Jobs, Wellfound, RemoteOK, Greenhouse, Lever, Ashby |
+| `opportunity-hunter` | v1 — live operating component: sources, scoring engine, relevance engine, schema, backlog, daily report, integration contract; Phase 1 autonomous-collection connectors (`CONNECTOR-CONFIGURATION-GUIDE.md`, `runtime/integration-status-dashboard.md`) for Upwork, LinkedIn Jobs, Wellfound, RemoteOK, Greenhouse, Lever, Ashby; `ingest.py` now exempts `website-intake/`'s own records from relevance scoring (see `website-intake/website-intake-model.md`) — every other source is scored exactly as before |
 | `02-Content-Director` | Fully defined, plus a live draft-generation engine (`content-director/`): editorial operating system, conversion map, brief/calendar templates, published-content log, content-brief queue, drafts feed to CEO Advisor |
 | `03-Product-Manager` | Fully defined, plus a live evaluation engine (`product-manager/`): operating manual, evaluation framework (nine formats), product backlog, shipped-products log |
 | `04-Sales-Director` | Fully defined, plus a live proposal preparation engine (`sales-director/`): operating manual, follow-up priority model, outreach draft template, pricing/confidence model, prepared-proposal feed to CEO Advisor; every package now also surfaces `service-mapping/`'s recommended template, engagement type, project size and cross-sell opportunities |
@@ -67,6 +69,7 @@ employee's `operating-manual.md`.
 | `08-Revenue-Hunter` | Fully defined, plus a live financial-intelligence engine (`revenue-hunter/`): operating system, decision tree, lead scoring, pipeline, forecasting engine, real dashboard and forecast |
 | `09-CEO-Advisor` | Fully defined: operating manual, decision model, daily recommendation template |
 | `service-mapping` | v1.0 — live operating component, new in Sprint 3: deterministic service-mapping model, service catalogue, `service-recommendations.json`, daily Service Recommendation Report, read read-only by Sales Director |
+| `website-intake` | v1.0 — live operating component, new in Sprint 4: website-intake model, config, `leads.json`, daily Website Intake Report; one additive change to `opportunity-hunter/runtime/ingest.py` (website-sourced records bypass relevance scoring — see `website-intake/website-intake-model.md`) |
 
 `templates/proposals/` (the Proposal Library) is complete: nine
 domain templates. `prompts/` is structure only.

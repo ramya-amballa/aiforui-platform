@@ -136,6 +136,7 @@ export default function AdglPage() {
       <CtaBand
         title="Deploying AI?"
         description={`Let's build governance before production. Start a working conversation about a specific AI deployment with ${site.advisorName}.`}
+        sourcePage="adgl"
       />
     </>
   );
