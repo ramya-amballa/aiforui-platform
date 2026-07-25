@@ -44,9 +44,14 @@
       "key": "crm",
       "name": "CRM",
       "folder": "06-CRM",
-      "script": null,
-      "dependsOn": ["opportunity-hunter"],
-      "note": "No independent runtime; company-intelligence.json is written as a side effect of Opportunity Hunter's ingest.py."
+      "script": "crm/runtime/generate.py",
+      "dependsOn": ["opportunity-hunter", "revenue-hunter"],
+      "note": "Implemented in crm/, not 06-CRM/ — see dependency-map.md. Read-only report generator over company-intelligence.json; never writes relationshipTemperature/nextFollowUpDue/outreachHistory, which remain Sales Director's exclusively. Also reads sales-director/runtime/processed-index.json for proposal history, but CRM runs before Sales Director in the fixed order, so that read reflects the previous run's state, not this run's — a one-cycle-behind limitation, not a dependsOn edge (see crm-runtime-notes.md and revenue-hunter-runtime-notes.md for the same pattern).",
+      "outputPaths": [
+        "crm/runtime/output/{date}-daily-follow-up-queue.md",
+        "crm/runtime/output/{date}-relationship-health-report.md",
+        "crm/runtime/output/{date}-stale-relationship-alerts.md"
+      ]
     },
     {
       "key": "sales-director",

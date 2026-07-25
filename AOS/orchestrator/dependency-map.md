@@ -23,7 +23,11 @@ Market Intelligence (runtime/monitor.py)
 Opportunity Hunter (self-contained: collects, filters, scores, routes)
       |
       +--> Revenue Hunter (pipeline.json, written by Opportunity Hunter)
-      +--> CRM (company-intelligence.json, written by Opportunity Hunter)
+              |
+              v
+        CRM (company-intelligence.json, written by Opportunity Hunter;
+             crm/runtime/generate.py additionally reads
+             opportunity-schema.json and pipeline.json, read-only)
               |
               v
         Sales Director (reads all three above)
@@ -54,7 +58,7 @@ produced anything this run.
 | 1 | Market Intelligence | — | No upstream dependency; earliest signal source |
 | 2 | Opportunity Hunter | — | Self-contained: collects from its own sources, runs its own relevance filter and scoring |
 | 3 | Revenue Hunter | Opportunity Hunter | `pipeline.json` is written by Opportunity Hunter's `ingest.py` (`route_to_revenue_hunter`) for `Immediate Proposal`/`Partnership` classifications; `revenue-hunter/runtime/generate.py` admits the `Active`/`Priority` opportunities that classification never routes there, applying `lead-scoring.md`'s own weights |
-| 4 | CRM | Opportunity Hunter | `company-intelligence.json` is written by the same `ingest.py` (`route_to_crm`) for `Follow Recruiter`/`Relationship Building`/`Partnership`/`Immediate Proposal` |
+| 4 | CRM | Opportunity Hunter, Revenue Hunter | `company-intelligence.json` itself is written by `ingest.py` (`route_to_crm`) for `Follow Recruiter`/`Relationship Building`/`Partnership`/`Immediate Proposal`; `crm/runtime/generate.py` additionally cross-references `opportunity-hunter/opportunity-schema.json` and `08-Revenue-Hunter/pipeline.json` (both read-only, both already written earlier in the fixed order) to build real opportunity/pipeline history per company. It also reads `sales-director/runtime/processed-index.json` for proposal history, but Sales Director runs *after* CRM (step 5), so that read is one cycle behind, like Revenue Hunter's own read of Sales Director's state — not a `dependsOn` edge, since a step can't depend on one that hasn't run yet |
 | 5 | Sales Director | Opportunity Hunter, Revenue Hunter, CRM | `prepare.py` reads all three to build every proposal package |
 | 6 | Product Manager | Market Intelligence | `generate.py` evaluates Market Intelligence's own unscored backlog candidates, plus Opportunity Hunter's `Convert into Product Idea` opportunities, a real recurring-domain-tag count from Sales Director's prepared proposals, and Content Director's queued signals, all read-only except filling in the score Market Intelligence's own schema reserved for it |
 | 7 | Content Director | Market Intelligence | `generate.py` reads Market Intelligence's `content-brief-queue.json` as its primary input, plus Opportunity Hunter's `Convert into Content` opportunities, Product Manager's shipped products, and CEO Advisor's daily priority, all read-only |
@@ -70,8 +74,8 @@ this is the cascade that makes the graph real rather than decorative.
 
 ## What Actually Has a Runtime Today
 
-Seven of the nine employees have code the Orchestrator can invoke; two
-do not yet, and are recorded honestly as `NOT_EXECUTABLE` rather than
+Eight of the nine employees have code the Orchestrator can invoke; one
+does not yet, and is recorded honestly as `NOT_EXECUTABLE` rather than
 simulated:
 
 | Employee | Runtime | Status |
@@ -79,7 +83,7 @@ simulated:
 | Market Intelligence | `05-Market-Intelligence/runtime/monitor.py` | executable — checks every configured source, classifies every new development against six deterministic checks, and routes structured records to Content Director, Product Manager, Opportunity Hunter and CEO Advisor; see `market-intelligence-classification-model.md` |
 | Opportunity Hunter | `opportunity-hunter/runtime/collect.py` | executable — this single entry point already chains collection → relevance filtering → scoring → routing (`ingest.py`'s `main()`), so invoking it is the entire Opportunity Hunter pipeline, not a partial one |
 | Revenue Hunter | `revenue-hunter/runtime/generate.py` | executable — `08-Revenue-Hunter/` is where `lead-scoring.md`, `decision-tree.md` and `revenue-forecasting-engine.md` live; `revenue-hunter/` is where they run, the same split as Sales Director, Product Manager and Content Director; see `revenue-hunter/revenue-hunter-runtime-notes.md` |
-| CRM | none of its own | `NOT_EXECUTABLE` — same reasoning, `06-CRM/company-intelligence.json` is written by Opportunity Hunter |
+| CRM | `crm/runtime/generate.py` | executable — `06-CRM/` is where the specification and `company-intelligence.json` (the relationship record itself) live; `crm/` is where the read-only report generator runs, the same split as Sales Director, Product Manager, Content Director and Revenue Hunter; see `crm/crm-runtime-notes.md` |
 | Sales Director | `sales-director/runtime/prepare.py` | executable |
 | Product Manager | `product-manager/runtime/generate.py` | executable — `03-Product-Manager/` is where the specification and `product-evaluation-framework.md` live; `product-manager/` is where it runs, the same split as Sales Director and Content Director; see `product-manager/product-manager-runtime-notes.md` |
 | Content Director | `content-director/runtime/generate.py` | executable — `02-Content-Director/` is where Content Director's specification lives; `content-director/` is where it runs, exactly the same split as `04-Sales-Director`/`sales-director`; see `content-director/content-generation-model.md` |
