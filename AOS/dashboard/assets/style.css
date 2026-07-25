@@ -1,0 +1,125 @@
+/*
+  AOS Command Center theme.
+  Colors are the real AI for U&I brand tokens, copied from
+  aiforu-platform/src/app/globals.css (converted from HSL to hex) so the
+  dashboard matches the actual public site rather than an invented palette.
+
+    --color-paper   40 20% 98%  -> #faf9f6   near-white background
+    --color-ink     220 20% 9%  -> #14161b   near-black body text
+    --color-surface 40 14% 95%  -> #f2f1ed   grey card surface
+    --color-border  220 12% 85% -> #d3d5da   light grey border
+    --color-muted   220 8% 40%  -> #5c6068   grey secondary text
+    --color-accent  217 46% 20% -> #1a2c4d   dark blue (headings)
+    --color-signal  38 42% 34%  -> #7c6231   muted gold, used sparingly
+*/
+
+:root {
+  --aos-paper: #faf9f6;
+  --aos-ink: #14161b;
+  --aos-surface: #f2f1ed;
+  --aos-border: #d3d5da;
+  --aos-muted: #5c6068;
+  --aos-accent: #1a2c4d;
+  --aos-accent-muted: #3d5480;
+  --aos-signal: #7c6231;
+}
+
+html, body, [data-testid="stAppViewContainer"] {
+  background-color: var(--aos-paper) !important;
+  color: var(--aos-ink) !important;
+}
+
+[data-testid="stSidebar"] {
+  background-color: var(--aos-surface) !important;
+  border-right: 1px solid var(--aos-border);
+}
+
+h1, h2, h3, h4, h5 {
+  color: var(--aos-accent) !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.01em;
+}
+
+[data-testid="stMetricValue"] {
+  color: var(--aos-accent) !important;
+}
+
+[data-testid="stMetricLabel"] {
+  color: var(--aos-muted) !important;
+}
+
+/* Metric / content cards */
+.aos-card {
+  background-color: var(--aos-surface);
+  border: 1px solid var(--aos-border);
+  border-radius: 6px;
+  padding: 1.1rem 1.3rem;
+  margin-bottom: 0.9rem;
+}
+
+.aos-card h4 {
+  margin: 0 0 0.35rem 0;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--aos-muted) !important;
+}
+
+.aos-card .aos-card-value {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--aos-accent);
+}
+
+.aos-card .aos-card-sub {
+  font-size: 0.82rem;
+  color: var(--aos-muted);
+  margin-top: 0.2rem;
+}
+
+.aos-status-pill {
+  display: inline-block;
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: 1px solid var(--aos-border);
+}
+
+.aos-status-ok { background: #eef2ea; color: #3a5a34; border-color: #c9d8c3; }
+.aos-status-warn { background: #f7f0e2; color: var(--aos-signal); border-color: #e6d6b3; }
+.aos-status-fail { background: #f4e6e5; color: #7a2f2b; border-color: #e3c4c2; }
+.aos-status-idle { background: var(--aos-surface); color: var(--aos-muted); }
+
+/* Buttons: flat, no gradients */
+div.stButton > button {
+  background-color: var(--aos-accent);
+  color: var(--aos-paper);
+  border: 1px solid var(--aos-accent);
+  border-radius: 4px;
+  font-weight: 500;
+  transition: none;
+}
+
+div.stButton > button:hover {
+  background-color: var(--aos-accent-muted);
+  border-color: var(--aos-accent-muted);
+  color: var(--aos-paper);
+}
+
+div.stDownloadButton > button {
+  background-color: var(--aos-paper);
+  color: var(--aos-accent);
+  border: 1px solid var(--aos-accent);
+  border-radius: 4px;
+}
+
+hr {
+  border-color: var(--aos-border) !important;
+}
+
+/* Tables */
+[data-testid="stDataFrame"] {
+  border: 1px solid var(--aos-border);
+  border-radius: 4px;
+}

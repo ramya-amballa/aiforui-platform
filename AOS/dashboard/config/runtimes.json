@@ -1,0 +1,166 @@
+{
+  "_comment": "Central button-to-runtime manifest for the AOS Command Center. 'script' and 'cwd' are relative to AOS/ (resolved via utils/paths.py's aos_path()); every button invokes 'script' as its own subprocess run from 'cwd', exactly mirroring AOS/orchestrator/orchestrator.py's own run_attempt() — the dashboard never imports a runtime module in-process. 'outputs' are the well-known files/dirs the page reads afterward for display, purely by existence/content, never by re-deriving business logic. This file documents the answer to the README's required 'how every button maps to the existing AOS runtime' section.",
+  "orchestrator": {
+    "label": "Run Full AOS",
+    "script": "orchestrator/orchestrator.py",
+    "cwd": "orchestrator",
+    "timeoutSeconds": 900,
+    "statusFile": "orchestrator/status.json",
+    "logsDir": "orchestrator/logs",
+    "reportsDir": "orchestrator/reports"
+  },
+  "employees": {
+    "market-intelligence": {
+      "name": "Market Intelligence",
+      "buttonLabel": "Check Market",
+      "script": "05-Market-Intelligence/runtime/monitor.py",
+      "cwd": "05-Market-Intelligence/runtime",
+      "timeoutSeconds": 300,
+      "outputs": [
+        "05-Market-Intelligence/runtime/output/{date}-market-intelligence-report.md"
+      ],
+      "outputDir": "05-Market-Intelligence/runtime/output"
+    },
+    "website-intake": {
+      "name": "Website Intake Runtime",
+      "buttonLabel": "Refresh Website Leads",
+      "script": "website-intake/runtime/generate.py",
+      "cwd": "website-intake/runtime",
+      "timeoutSeconds": 300,
+      "outputs": [
+        "website-intake/runtime/output/{date}-website-intake-report.md",
+        "website-intake/runtime/output/website-intake-report.md"
+      ],
+      "outputDir": "website-intake/runtime/output",
+      "dataFile": "website-intake/leads.json"
+    },
+    "opportunity-hunter": {
+      "name": "Opportunity Hunter",
+      "buttonLabel": "Scan Opportunities",
+      "script": "opportunity-hunter/runtime/collect.py",
+      "cwd": "opportunity-hunter/runtime",
+      "timeoutSeconds": 600,
+      "outputs": [
+        "opportunity-hunter/runtime/output/{date}-daily-report.md",
+        "opportunity-hunter/runtime/rejected/{date}-rejected-report.md",
+        "opportunity-hunter/runtime/snapshots/{date}-collection-snapshot.json"
+      ],
+      "outputDir": "opportunity-hunter/runtime/output",
+      "dataFile": "opportunity-hunter/opportunity-schema.json"
+    },
+    "revenue-hunter": {
+      "name": "Revenue Hunter",
+      "buttonLabel": "Update Forecast",
+      "script": "revenue-hunter/runtime/generate.py",
+      "cwd": "revenue-hunter/runtime",
+      "timeoutSeconds": 300,
+      "outputs": [
+        "revenue-hunter/runtime/output/{date}-revenue-dashboard.md",
+        "revenue-hunter/runtime/output/{date}-revenue-forecast.md",
+        "revenue-hunter/runtime/output/revenue-dashboard.md",
+        "revenue-hunter/runtime/output/revenue-forecast.md"
+      ],
+      "outputDir": "revenue-hunter/runtime/output",
+      "dataFile": "08-Revenue-Hunter/pipeline.json"
+    },
+    "crm": {
+      "name": "CRM",
+      "buttonLabel": "Open CRM",
+      "script": "crm/runtime/generate.py",
+      "cwd": "crm/runtime",
+      "timeoutSeconds": 300,
+      "outputs": [
+        "crm/runtime/output/{date}-daily-follow-up-queue.md",
+        "crm/runtime/output/{date}-relationship-health-report.md",
+        "crm/runtime/output/{date}-stale-relationship-alerts.md"
+      ],
+      "outputDir": "crm/runtime/output",
+      "dataFile": "06-CRM/company-intelligence.json"
+    },
+    "service-mapping": {
+      "name": "Service Mapping Engine",
+      "buttonLabel": "Run Service Mapping",
+      "script": "service-mapping/runtime/generate.py",
+      "cwd": "service-mapping/runtime",
+      "timeoutSeconds": 300,
+      "outputs": [
+        "service-mapping/runtime/output/{date}-service-recommendation-report.md",
+        "service-mapping/runtime/output/service-recommendation-report.md"
+      ],
+      "outputDir": "service-mapping/runtime/output",
+      "dataFile": "service-mapping/service-recommendations.json"
+    },
+    "sales-director": {
+      "name": "Sales Director",
+      "buttonLabel": "Generate Proposal",
+      "script": "sales-director/runtime/prepare.py",
+      "cwd": "sales-director/runtime",
+      "timeoutSeconds": 300,
+      "outputs": [
+        "sales-director/runtime/output/{date}-sales-director-report.md",
+        "sales-director/runtime/output/ceo-advisor-feed.json"
+      ],
+      "outputDir": "sales-director/runtime/output"
+    },
+    "product-manager": {
+      "name": "Product Manager",
+      "buttonLabel": "Review Product Ideas",
+      "script": "product-manager/runtime/generate.py",
+      "cwd": "product-manager/runtime",
+      "timeoutSeconds": 300,
+      "outputs": [
+        "product-manager/runtime/output/{date}-product-manager-report.md"
+      ],
+      "outputDir": "product-manager/runtime/output",
+      "dataFile": "03-Product-Manager/product-backlog.json"
+    },
+    "content-director": {
+      "name": "Content Director",
+      "buttonLabel": "Generate Content",
+      "script": "content-director/runtime/generate.py",
+      "cwd": "content-director/runtime",
+      "timeoutSeconds": 300,
+      "outputs": [
+        "content-director/runtime/output/{date}-content-director-report.md"
+      ],
+      "outputDir": "content-director/runtime/output"
+    },
+    "daily-brief": {
+      "name": "Daily Brief",
+      "buttonLabel": "Generate Daily Brief",
+      "script": "executive-dashboard/runtime/generate.py",
+      "cwd": "executive-dashboard/runtime",
+      "timeoutSeconds": 300,
+      "outputs": [
+        "executive-dashboard/executive-dashboard.md",
+        "executive-dashboard/executive-dashboard.html",
+        "executive-dashboard/runtime/output/{date}-executive-dashboard.md",
+        "executive-dashboard/runtime/output/{date}-executive-dashboard.html"
+      ],
+      "outputDir": "executive-dashboard/runtime/output"
+    },
+    "ceo-advisor": {
+      "name": "CEO Advisor",
+      "buttonLabel": "Run CEO Advisor",
+      "script": "ceo-advisor/runtime/generate.py",
+      "cwd": "ceo-advisor/runtime",
+      "timeoutSeconds": 300,
+      "outputs": [
+        "ceo-advisor/runtime/output/{date}-ceo-daily-report.md",
+        "ceo-advisor/runtime/output/ceo-daily-report.md",
+        "ceo-advisor/runtime/output/ceo-weekly-report.md",
+        "ceo-advisor/runtime/output/ceo-monthly-business-review.md"
+      ],
+      "outputDir": "ceo-advisor/runtime/output"
+    }
+  },
+  "reports": {
+    "_comment": "Files the Reports page offers for download, in the order requested.",
+    "CEO Daily Report": "ceo-advisor/runtime/output/ceo-daily-report.md",
+    "CEO Weekly Report": "ceo-advisor/runtime/output/ceo-weekly-report.md",
+    "CEO Monthly Report": "ceo-advisor/runtime/output/ceo-monthly-business-review.md",
+    "Revenue Report": "revenue-hunter/runtime/output/revenue-dashboard.md",
+    "Opportunity Report": "opportunity-hunter/runtime/output/{date}-daily-report.md",
+    "Pipeline Report": "revenue-hunter/runtime/output/revenue-forecast.md"
+  }
+}
