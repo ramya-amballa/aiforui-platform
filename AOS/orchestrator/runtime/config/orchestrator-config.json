@@ -10,9 +10,11 @@
       "key": "market-intelligence",
       "name": "Market Intelligence",
       "folder": "05-Market-Intelligence",
-      "script": null,
+      "script": "05-Market-Intelligence/runtime/monitor.py",
       "dependsOn": [],
-      "note": "No runtime implementation yet; operating-manual.md is a manual process."
+      "outputPaths": [
+        "05-Market-Intelligence/runtime/output/{date}-market-intelligence-report.md"
+      ]
     },
     {
       "key": "opportunity-hunter",

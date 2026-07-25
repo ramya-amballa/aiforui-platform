@@ -1,0 +1,15 @@
+{
+  "schema": {
+    "id": "string — unique identifier, e.g. brief-0001",
+    "dateFlagged": "string — ISO 8601 date",
+    "regulatoryLogRef": "string — id in 05-Market-Intelligence/regulatory-log.json",
+    "source": "string — the Market Intelligence source that triggered this",
+    "developmentSummary": "string — factual, from the source, not a drafted angle",
+    "url": "string or null",
+    "triggeredBy": "array of strings — linkedinContent and/or websiteUpdate, see 05-Market-Intelligence/market-intelligence-classification-model.md",
+    "affectsADGL": "boolean",
+    "affectsOPERA": "boolean",
+    "status": "string — queued, briefed, published, declined"
+  },
+  "queue": []
+}

@@ -11,10 +11,13 @@ each step.
 ## The Graph
 
 ```
-Market Intelligence
+Market Intelligence (runtime/monitor.py)
       |
-      +--> Product Manager
-      +--> Content Director
+      +--> Product Manager (product-backlog.json, unscored candidates)
+      +--> Content Director (content-brief-queue.json)
+      +--> opportunity-hunter/runtime/inbox/ (a normal inbox record,
+      |    scored by Opportunity Hunter's own unmodified pipeline —
+      |    not a formal dependsOn edge, see below)
       |
 Opportunity Hunter (self-contained: collects, filters, scores, routes)
       |
@@ -25,18 +28,23 @@ Opportunity Hunter (self-contained: collects, filters, scores, routes)
         Sales Director (reads all three above)
               |
               v
-        CEO Advisor (reads Sales Director's feed + all upstream)
+        CEO Advisor (reads Sales Director's feed + Market
+                     Intelligence's feed + all upstream)
               |
               v
         Daily Brief (reads everything upstream, last)
 ```
 
-Market Intelligence has no downstream dependency on Opportunity
-Hunter's branch today, and vice versa — they are parallel in principle.
-The fixed execution order in `execution-plan.md` runs Market
-Intelligence first anyway, since it is intended to be the earliest
-signal source once it has a runtime; this costs nothing today because
-neither branch currently blocks on the other except where marked below.
+Market Intelligence has no formal `dependsOn` edge into Opportunity
+Hunter's branch, even though it can now write a real inbox record
+there: the fixed execution order already runs Market Intelligence
+first, so anything it writes is sitting in
+`opportunity-hunter/runtime/inbox/` before Opportunity Hunter's step
+starts. Making it a hard dependency would mean an unrelated Market
+Intelligence failure could block Opportunity Hunter's own, entirely
+self-contained collection — the opposite of "continue where possible."
+Opportunity Hunter runs regardless of whether Market Intelligence
+produced anything this run.
 
 ## Dependency Table (what the Orchestrator enforces)
 
@@ -61,13 +69,13 @@ this is the cascade that makes the graph real rather than decorative.
 
 ## What Actually Has a Runtime Today
 
-Four of the nine employees have code the Orchestrator can invoke;
-five do not yet, and are recorded honestly as `NOT_EXECUTABLE` rather
-than simulated:
+Five of the nine employees have code the Orchestrator can invoke; four
+do not yet, and are recorded honestly as `NOT_EXECUTABLE` rather than
+simulated:
 
 | Employee | Runtime | Status |
 |---|---|---|
-| Market Intelligence | none | `NOT_EXECUTABLE` — `05-Market-Intelligence/operating-manual.md` is a manual process |
+| Market Intelligence | `05-Market-Intelligence/runtime/monitor.py` | executable — checks every configured source, classifies every new development against six deterministic checks, and routes structured records to Content Director, Product Manager, Opportunity Hunter and CEO Advisor; see `market-intelligence-classification-model.md` |
 | Opportunity Hunter | `opportunity-hunter/runtime/collect.py` | executable — this single entry point already chains collection → relevance filtering → scoring → routing (`ingest.py`'s `main()`), so invoking it is the entire Opportunity Hunter pipeline, not a partial one |
 | Revenue Hunter | none of its own | `NOT_EXECUTABLE` — its data is a side effect of Opportunity Hunter; there is no `08-Revenue-Hunter/runtime/` to run independently, and the Orchestrator does not invent one |
 | CRM | none of its own | `NOT_EXECUTABLE` — same reasoning, `06-CRM/company-intelligence.json` is written by Opportunity Hunter |

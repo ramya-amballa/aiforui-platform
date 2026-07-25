@@ -1,0 +1,83 @@
+{
+  "_comment": "Thirteen tracked sources. 'feedUrls' is empty by default for every one — no URL here is guessed; add each source's real RSS/Atom feed to activate it, no code change needed. Each source also carries the domainTags a routed opportunity/content-queue/product-backlog entry should use.",
+  "sources": [
+    {
+      "name": "EU AI Act",
+      "feedUrls": [],
+      "domainTags": ["EU AI Act", "AI Governance"],
+      "_note": "e.g. the EU Commission's AI Office news feed or EUR-Lex's own publication feed for the AI Act, once identified."
+    },
+    {
+      "name": "ISO 42001",
+      "feedUrls": [],
+      "domainTags": ["AI Governance", "GRC"],
+      "_note": "ISO's own news feed, or a certification body's ISO 42001 update feed."
+    },
+    {
+      "name": "NIST AI RMF",
+      "feedUrls": [],
+      "domainTags": ["AI Governance", "GRC"],
+      "_note": "NIST's AI RMF resource-centre feed, once identified."
+    },
+    {
+      "name": "DORA",
+      "feedUrls": [],
+      "domainTags": ["DORA", "Third-Party Risk"],
+      "_note": "ESAs' (EBA/ESMA/EIOPA) DORA news feed, once identified."
+    },
+    {
+      "name": "GDPR",
+      "feedUrls": [],
+      "domainTags": ["GRC"],
+      "_note": "EDPB or a national DPA's enforcement/guidance feed, once identified."
+    },
+    {
+      "name": "CBUAE",
+      "feedUrls": [],
+      "domainTags": ["AI Governance", "GRC"],
+      "_note": "Central Bank of the UAE's own news/circulars feed, once identified."
+    },
+    {
+      "name": "RBI",
+      "feedUrls": [],
+      "domainTags": ["AI Governance", "GRC"],
+      "_note": "Reserve Bank of India's own press releases/notifications feed, once identified."
+    },
+    {
+      "name": "Microsoft AI",
+      "feedUrls": [],
+      "domainTags": ["ADGL", "AI Deployment Governance"],
+      "_note": "Microsoft's AI blog RSS feed, once its exact URL is confirmed."
+    },
+    {
+      "name": "OpenAI Enterprise",
+      "feedUrls": [],
+      "domainTags": ["ADGL", "AI Deployment Governance"],
+      "_note": "OpenAI's blog/news RSS feed, once its exact URL is confirmed."
+    },
+    {
+      "name": "Anthropic",
+      "feedUrls": [],
+      "domainTags": ["ADGL", "AI Deployment Governance"],
+      "_note": "Anthropic's news RSS feed, once its exact URL is confirmed."
+    },
+    {
+      "name": "AI Security",
+      "feedUrls": [],
+      "domainTags": ["Security Governance"],
+      "_note": "A security-news aggregator or vendor advisory feed scoped to AI, once identified."
+    },
+    {
+      "name": "AI Governance",
+      "feedUrls": [],
+      "domainTags": ["AI Governance"],
+      "_note": "A general AI-governance news/practice feed not tied to a single regulator or vendor, once identified."
+    },
+    {
+      "name": "Responsible AI",
+      "feedUrls": [],
+      "domainTags": ["AI Governance"],
+      "_note": "A responsible/ethical-AI practice feed, once identified."
+    }
+  ]
+}

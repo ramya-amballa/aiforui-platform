@@ -19,5 +19,11 @@ made.
 - `published-content-log.json` — the permanent organisational record of
   everything actually published, its objective, and its result; part
   of AOS's long-term memory system
+- `content-brief-queue.json` — structured triggers written by
+  `05-Market-Intelligence/runtime/monitor.py`: which development, which
+  check fired (LinkedIn content and/or a website update), and the
+  source link. No Key Point, Supporting Detail or Call to Action is
+  pre-filled — those are drafted from `content-brief-template.md` by
+  judgement, not generated upstream
 
 Start with `editorial-operating-system.md`.

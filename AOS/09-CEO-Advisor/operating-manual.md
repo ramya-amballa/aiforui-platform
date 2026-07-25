@@ -29,8 +29,9 @@ daily recommendation.
      with a `nextActionDue` in the next 7 days
    - Any `Priority`-band item from `opportunity-hunter/opportunity-schema.json`
    - Any candidate scoring 30+ in `03-Product-Manager/product-backlog.json`
-   - Any consulting opportunity flagged by
-     `05-Market-Intelligence`'s trigger rule that day
+   - Every entry in `05-Market-Intelligence/runtime/output/ceo-advisor-feed.json`
+     — the six checks only (see `decision-model.md`); the underlying
+     `regulatory-log.json` entry is never opened here
    - Every entry in `sales-director/runtime/output/ceo-advisor-feed.json`
      — its `status` only (`Ready To Send`, `Proposal Ready`, or
      `Needs Review`); the underlying package is never opened here

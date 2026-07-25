@@ -19,6 +19,7 @@ Convert each candidate's native score to a 0-10 value score:
 | `04-Sales-Director` follow-up queue | Hot/Warm/Cooling + overdue | Hot+overdue = 9, Hot = 7, Warm+overdue = 6, Warm = 4 |
 | `sales-director/runtime/output/ceo-advisor-feed.json` (prepared-proposal status) | Ready To Send / Proposal Ready / Needs Review | Ready To Send = 9, Proposal Ready = 6, Needs Review = 3 |
 | `orchestrator/status.json` (`failures`) | present / absent | any entry present = 9, regardless of which employee failed |
+| `05-Market-Intelligence/runtime/output/ceo-advisor-feed.json` (six checks) | boolean combination | `consultingOpportunity` true = 7, else `newProduct` true = 5, else `linkedinContent`/`websiteUpdate` only = 3 |
 
 CEO Advisor reads only the `status` field from the prepared-proposal
 feed — never the drafts themselves. A `Needs Review` item still
@@ -27,7 +28,10 @@ before it's send-ready is still worth surfacing, just not as
 send-ready. A pipeline failure in `orchestrator/status.json` always
 normalises to 9 — a broken daily run is itself an urgency signal,
 independent of any single opportunity's value; see
-`orchestrator/execution-plan.md`'s "Notify CEO Advisor" section.
+`orchestrator/execution-plan.md`'s "Notify CEO Advisor" section. Market
+Intelligence's feed is read for its six booleans only — the underlying
+regulatory-log.json entry is never opened here, same as every other
+feed above.
 
 ## Step 2: Apply the Urgency Overlay
 

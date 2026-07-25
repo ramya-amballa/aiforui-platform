@@ -22,8 +22,18 @@ consulting angle has been noticed but not used.
   processing
 - **CBUAE AI Principles** — UAE central bank AI governance guidance
 - **RBI AI guidance** — Reserve Bank of India AI/fintech risk guidance
+- **Microsoft AI** — Copilot/Azure AI governance, licensing and
+  enterprise-deployment guidance
+- **OpenAI Enterprise** — enterprise product, policy and usage-governance
+  announcements
+- **Anthropic** — enterprise product, policy and responsible-deployment
+  announcements
 - **AI security news** — significant incidents, vulnerabilities or
   attack patterns relevant to AI systems in production
+- **AI Governance** — general governance discourse and practice
+  developments not tied to a single regulator or vendor
+- **Responsible AI** — responsible/ethical AI practice developments not
+  tied to a single regulator or vendor
 
 ## Daily Workflow
 
@@ -54,6 +64,19 @@ is "not applicable, here's why":
 - A "Regulations Published Today" entry for
   `07-Daily-Brief/daily-revenue-brief-template.md`, including the
   triggered actions and which AI employee owns each
+
+## Execution
+
+`runtime/monitor.py` is this specification running as code: it checks
+every source in `runtime/config/sources.json`, applies
+`market-intelligence-classification-model.md`'s six checks to every
+new development, logs it to `regulatory-log.json`, and routes
+structured (never drafted) records to `02-Content-Director`,
+`03-Product-Manager`, `opportunity-hunter`, and `09-CEO-Advisor`. Run
+it with `python3 runtime/monitor.py`, or let the AOS Orchestrator run
+it as step 1 of the daily sequence. See
+`market-intelligence-classification-model.md` for the model and
+`runtime/monitor.py`'s own docstring for the exact mechanics.
 
 ## Success Metrics
 

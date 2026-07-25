@@ -2,7 +2,7 @@
   "schema": {
     "id": "string — unique identifier, e.g. reg-0001",
     "date": "string — ISO 8601 date",
-    "source": "string — one of: EU AI Act, ISO 42001, NIST AI RMF, DORA, GDPR, CBUAE AI Principles, RBI AI guidance, AI security news",
+    "source": "string — one of: EU AI Act, ISO 42001, NIST AI RMF, DORA, GDPR, CBUAE AI Principles, RBI AI guidance, Microsoft AI, OpenAI Enterprise, Anthropic, AI security news, AI Governance, Responsible AI",
     "summary": "string — what changed, in plain language",
     "url": "string — link to the original publication",
     "substantive": "boolean — false for minor edits or duplicate reports",
@@ -11,7 +11,17 @@
       "newsletterIdea": "string or null",
       "productUpdate": "string or null — which product/resource, or 'not applicable' with a reason",
       "consultingOpportunity": "string or null — who this creates urgency for, or 'not applicable' with a reason"
-    }
+    },
+    "checks": {
+      "consultingOpportunity": "boolean — see market-intelligence-classification-model.md, check 1",
+      "linkedinContent": "boolean — check 2",
+      "websiteUpdate": "boolean — check 3",
+      "newProduct": "boolean — check 4",
+      "affectsADGL": "boolean — check 5",
+      "affectsOPERA": "boolean — check 6",
+      "reasons": "object — one short factual reason string per check key above, never drafted content"
+    },
+    "routedTo": "array of strings — any of 02-Content-Director/content-brief-queue.json, 03-Product-Manager/product-backlog.json, opportunity-hunter/runtime/inbox, 09-CEO-Advisor (via runtime/output/ceo-advisor-feed.json) this entry was actually written to"
   },
   "log": []
 }

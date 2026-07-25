@@ -25,7 +25,7 @@ employee's `operating-manual.md`.
 | `02-Content-Director` | Content Director | Runs the editorial operating system: converts regulatory changes, client questions and engagement patterns into LinkedIn posts, newsletters, website updates and downloadable resources |
 | `03-Product-Manager` | Product Manager | Continuously evaluates whether a signal should become a product, and in which format: toolkit, checklist, executive guide, assessment, course, workshop, or subscription |
 | `04-Sales-Director` | Sales Director | Maintains every recruiter, consulting firm, prospect and client relationship after first touch; recommends follow-ups daily and drafts personalised outreach so nothing goes cold |
-| `05-Market-Intelligence` | Market Intelligence | Tracks regulatory, competitive and market developments (EU AI Act, ISO 42001, NIST AI RMF, DORA, GDPR, CBUAE, RBI, AI security news) and triggers content, product and consulting signals |
+| `05-Market-Intelligence` | Market Intelligence | Live operating component: monitors thirteen regulatory/vendor/theme sources (EU AI Act, ISO 42001, NIST AI RMF, DORA, GDPR, CBUAE, RBI, Microsoft AI, OpenAI Enterprise, Anthropic, AI Security, AI Governance, Responsible AI), classifies every development against six checks, and routes structured signals to Content Director, Product Manager, Opportunity Hunter and CEO Advisor |
 | `06-CRM` | CRM | Maintains the single record of contacts, companies and relationship status across the pipeline |
 | `07-Daily-Brief` | Daily Brief | Assembles the Daily Revenue Brief from every other AI employee's output |
 | `08-Revenue-Hunter` | Revenue Hunter | Owns the full, unified revenue pipeline across every opportunity type and prioritises it by expected revenue, probability, effort and strategic value |
@@ -54,7 +54,7 @@ employee's `operating-manual.md`.
 | `02-Content-Director` | Fully defined: editorial operating system, conversion map, brief/calendar templates, published-content log |
 | `03-Product-Manager` | Fully defined: operating manual, evaluation framework, product backlog, shipped-products log |
 | `04-Sales-Director` | Fully defined, plus a live proposal preparation engine (`sales-director/`): operating manual, follow-up priority model, outreach draft template, pricing/confidence model, prepared-proposal feed to CEO Advisor |
-| `05-Market-Intelligence` | Fully defined: operating manual, regulatory log |
+| `05-Market-Intelligence` | v1.0 — live operating component: thirteen tracked sources, classification model, regulatory log, runtime, routes to four downstream employees |
 | `06-CRM` | Fully defined: company intelligence knowledge base |
 | `07-Daily-Brief` | Fully defined: daily revenue brief template |
 | `08-Revenue-Hunter` | Fully defined: operating system, decision tree, lead scoring, pipeline, forecasting engine |
