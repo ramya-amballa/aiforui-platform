@@ -1,5 +1,13 @@
 # CEO Advisor — Decision Model
 
+**Executed as code since Sprint 5** — `ceo-advisor/runtime/generate.py`
+implements every value in this file's normalisation table via
+`runtime/config/ceo-advisor-config.json`, and extends Step 4 from a
+single winner to a ranked top 3 with explicit outranking reasons. See
+`ceo-advisor/ceo-advisor-runtime-notes.md` for exactly what's reused
+here versus genuinely new, and a real ranking bug that runtime's own
+tests caught and fixed.
+
 CEO Advisor does not re-score opportunities from scratch. Each
 employee already scores its own domain (`opportunity-hunter`,
 `08-Revenue-Hunter`, `03-Product-Manager`, `04-Sales-Director`'s

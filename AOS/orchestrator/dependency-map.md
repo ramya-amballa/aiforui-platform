@@ -50,11 +50,12 @@ Opportunity Hunter (self-contained: collects, filters, scores, routes)
                         and Service Mapping Engine's recommendations)
               |
               v
-        CEO Advisor (reads Sales Director's feed + Market
-                     Intelligence's feed + all upstream)
+        Daily Brief (reads everything upstream)
               |
               v
-        Daily Brief (reads everything upstream, last)
+        CEO Advisor (reads all eight named sources, including Daily
+                     Brief's own summary — see below; genuinely the
+                     final step, per Sprint 5's explicit instruction)
 ```
 
 Market Intelligence has no formal `dependsOn` edge into Opportunity
@@ -81,8 +82,8 @@ produced anything this run.
 | 7 | Sales Director | Opportunity Hunter, Revenue Hunter, CRM, Service Mapping Engine | `prepare.py` reads all four — the first three to build every proposal package as before, plus Service Mapping Engine's recommendation to surface the recommended template/engagement type/size/cross-sell in an additive section of each package |
 | 8 | Product Manager | Market Intelligence | `generate.py` evaluates Market Intelligence's own unscored backlog candidates, plus Opportunity Hunter's `Convert into Product Idea` opportunities, a real recurring-domain-tag count from Sales Director's prepared proposals, and Content Director's queued signals, all read-only except filling in the score Market Intelligence's own schema reserved for it |
 | 9 | Content Director | Market Intelligence | `generate.py` reads Market Intelligence's `content-brief-queue.json` as its primary input, plus Opportunity Hunter's `Convert into Content` opportunities, Product Manager's shipped products, and CEO Advisor's daily priority, all read-only |
-| 10 | CEO Advisor | Sales Director, Revenue Hunter, Opportunity Hunter, CRM | Its decision model (`decision-model.md`) normalises a candidate from each of these, plus Website Intake Runtime's own feed (see below) |
-| 11 | Daily Brief | Opportunity Hunter, Revenue Hunter, CRM, Sales Director, CEO Advisor | Aggregates every upstream output into one report, last |
+| 10 | Daily Brief | Opportunity Hunter, Revenue Hunter, CRM, Sales Director | Aggregates every upstream output into one report. No longer depends on CEO Advisor (see below) |
+| 11 | CEO Advisor | Market Intelligence, Website Intake, Opportunity Hunter, Revenue Hunter, CRM, Service Mapping Engine, Sales Director, Product Manager, Content Director, Daily Brief | `ceo-advisor/runtime/generate.py` genuinely depends on every other employee, to guarantee it is the final step per Sprint 5's explicit instruction — though it only *reads* eight of these ten (see `ceo-advisor/ceo-advisor-runtime-notes.md`; Product Manager and Content Director are dependency-only, for ordering, not read) |
 
 A step only runs once every entry in its `dependsOn` has finished with
 status `SUCCESS` or `NOT_EXECUTABLE` (see below — a documented-only
@@ -93,9 +94,8 @@ this is the cascade that makes the graph real rather than decorative.
 
 ## What Actually Has a Runtime Today
 
-Ten of the eleven employees have code the Orchestrator can invoke; one
-does not yet, and is recorded honestly as `NOT_EXECUTABLE` rather than
-simulated:
+All eleven employees now have code the Orchestrator can invoke — CEO
+Advisor was the last `NOT_EXECUTABLE` one, closed in Sprint 5:
 
 | Employee | Runtime | Status |
 |---|---|---|
@@ -108,12 +108,14 @@ simulated:
 | Sales Director | `sales-director/runtime/prepare.py` | executable |
 | Product Manager | `product-manager/runtime/generate.py` | executable — `03-Product-Manager/` is where the specification and `product-evaluation-framework.md` live; `product-manager/` is where it runs, the same split as Sales Director and Content Director; see `product-manager/product-manager-runtime-notes.md` |
 | Content Director | `content-director/runtime/generate.py` | executable — `02-Content-Director/` is where Content Director's specification lives; `content-director/` is where it runs, exactly the same split as `04-Sales-Director`/`sales-director`; see `content-director/content-generation-model.md` |
-| CEO Advisor | none of its own | `NOT_EXECUTABLE` — `decision-model.md` has no dedicated script; it is already executed as one section of Daily Brief's own generator (see below), exactly as `09-CEO-Advisor/operating-manual.md` describes ("Pass it to `07-Daily-Brief` as the lead item") |
-| Daily Brief | `executive-dashboard/runtime/generate.py` | executable — `executive-dashboard/` is where Daily Brief's aggregation role and CEO Advisor's decision model both already live as code; see its own module docstring, which documents this explicitly |
+| Daily Brief | `executive-dashboard/runtime/generate.py` | executable — `executive-dashboard/` is where Daily Brief's aggregation role and its own embedded "Today's Priorities" section both already live as code; see its own module docstring |
+| CEO Advisor | `ceo-advisor/runtime/generate.py` | executable — new in Sprint 5, the same split as Sales Director/Revenue Hunter/CRM/Product Manager/Content Director (`09-CEO-Advisor/` stays the specification, `ceo-advisor/` is where it runs); see `ceo-advisor/ceo-advisor-runtime-notes.md` for exactly what changed, including the Daily Brief/CEO Advisor position swap this required |
 
-Treating an employee as `NOT_EXECUTABLE` is not a failure and does not
-retry. It is the Orchestrator being honest that no runtime exists yet,
-rather than fabricating a step that would duplicate business logic
-that hasn't been built. When one of these employees gets a real
-`runtime/` script in a future build, only `runtime/config/orchestrator-config.json`
-needs a `script` path added — no change to `orchestrator.py` itself.
+No employee is `NOT_EXECUTABLE` as of Sprint 5. When that was still
+true of some employee, it was recorded honestly rather than
+fabricating a step that would duplicate business logic that hadn't
+been built yet — see git history for that convention if it's needed
+again for a genuinely new future employee. Adding a real `runtime/`
+script to an employee is always just a `script` path added to
+`runtime/config/orchestrator-config.json` — no change to
+`orchestrator.py` itself.

@@ -6,6 +6,11 @@ a regulation. It reads what every other employee has already produced
 and answers one question, every morning: **what is the highest-ROI
 thing Ramya should do today?**
 
+**Live operating component since Sprint 5** — see `../ceo-advisor/` for
+the executable runtime (`ceo-advisor/runtime/generate.py`), which now
+runs as the final step of every Orchestrator sequence, after Daily
+Brief. This folder remains the specification.
+
 It exists because seven employees each optimising their own function
 (sourcing, pipeline, content, product, sales, CRM, market watch) can
 each be individually right and still leave the founder without a clear

@@ -22,7 +22,7 @@ individual employee's script directly — see that file.
 
 Fixed order, per the founder's instruction — see `dependency-map.md`
 for why this order holds. Sprint 3 inserted the Service Mapping Engine
-as step 5 (its only hard dependency is Opportunity Hunter; it runs
+as step 6 (its only hard dependency is Opportunity Hunter; it runs
 after CRM and before Sales Director so Sales Director can read its
 recommendations the same day). Sprint 4 inserted the Website Intake
 Runtime as a new step 2 — it is fully self-contained (it invokes
@@ -31,7 +31,12 @@ Engine's own scripts as subprocesses within its own run, rather than
 depending on their separately scheduled steps below), so it has no
 `dependsOn` and runs early enough that every downstream step already
 sees website-sourced opportunities as just another opportunity by the
-time it runs:
+time it runs. Sprint 5 swapped Daily Brief and CEO Advisor: the
+founder's explicit instruction was "CEO Advisor must become the final
+step of every AOS execution cycle," with Daily Brief itself listed as
+one of CEO Advisor's own inputs — so Daily Brief now runs second-to-
+last and CEO Advisor genuinely last, reading Daily Brief's output
+rather than feeding it (see `09-CEO-Advisor/operating-manual.md`):
 
 1. Market Intelligence
 2. Website Intake Runtime
@@ -42,8 +47,8 @@ time it runs:
 7. Sales Director
 8. Product Manager
 9. Content Director
-10. CEO Advisor
-11. Daily Brief
+10. Daily Brief
+11. CEO Advisor
 
 ## Per-Step Behaviour
 
@@ -91,7 +96,10 @@ For each employee, in order:
   and `operating-manual.md` were given one additive line each pointing
   at this file, so a pipeline failure surfaces as a candidate action
   the same way an at-risk relationship or a stalled deal does — see
-  those files for the exact normalisation. The Orchestrator does not
+  those files for the exact normalisation. Since Sprint 5,
+  `ceo-advisor/runtime/generate.py` reads this list for real, as its
+  own run's last step, and always treats any failure as urgent
+  regardless of which employee failed. The Orchestrator does not
   modify `09-CEO-Advisor`'s or `executive-dashboard`'s scoring logic to
   do this; it only makes the failure discoverable where CEO Advisor
   already looks.

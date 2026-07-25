@@ -1,0 +1,41 @@
+{
+  "_comment": "Every threshold and normalisation value CEO Advisor's runtime uses. Values here reuse 09-CEO-Advisor/decision-model.md's own documented normalisation table verbatim — this file does not introduce a second model, it makes the existing one config-driven. See ../../ceo-advisor-runtime-notes.md for what's new versus reused.",
+
+  "urgencyFactors": {
+    "within48Hours": 1.5,
+    "dueThisWeek": 1.2,
+    "dueThisMonth": 1.0,
+    "noDeadline": 0.8
+  },
+  "tieBreakThresholdPct": 10,
+
+  "salesDirectorFeedValue": {"Ready To Send": 9, "Proposal Ready": 6, "Needs Review": 3},
+  "salesDirectorDefaultEffort": 6,
+
+  "crmFollowUpValue": {"hotOverdue": 9, "hot": 7, "warmOverdue": 6, "warm": 4},
+  "crmDefaultEffort": 8,
+
+  "websiteIntakeUrgencyValue": {"High": 8, "Medium": 6, "Low": 4},
+
+  "marketIntelligenceValue": {"consultingOpportunity": 7, "newProduct": 5, "contentOnly": 3},
+  "marketIntelligenceDefaultEffort": 6,
+
+  "orchestratorFailureValue": 9,
+  "orchestratorFailureEffort": 4,
+
+  "opportunityHunterDefaultEffort": 5,
+
+  "executiveSummaryMaxWords": 300,
+
+  "trendWindowDays": 7,
+  "adglDemandIncreaseThreshold": 2,
+  "recruiterSlowdownThreshold": 0.5,
+  "productOpportunityRecurrenceThreshold": 3,
+  "websiteSilenceDays": 7,
+
+  "staleColdDays": 90,
+  "ignoreListLowConfidenceThreshold": 40,
+
+  "weeklyWindowDays": 7,
+  "monthlyWindowDays": 30
+}

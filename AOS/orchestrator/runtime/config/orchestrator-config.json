@@ -111,20 +111,12 @@
       ]
     },
     {
-      "key": "ceo-advisor",
-      "name": "CEO Advisor",
-      "folder": "09-CEO-Advisor",
-      "script": null,
-      "dependsOn": ["sales-director", "revenue-hunter", "opportunity-hunter", "crm"],
-      "note": "No independent runtime; decision-model.md is executed as one section of Daily Brief's generator (executive-dashboard/runtime/generate.py)."
-    },
-    {
       "key": "daily-brief",
       "name": "Daily Brief",
       "folder": "07-Daily-Brief",
       "script": "executive-dashboard/runtime/generate.py",
-      "dependsOn": ["opportunity-hunter", "revenue-hunter", "crm", "sales-director", "ceo-advisor"],
-      "note": "Implemented in executive-dashboard/, not 07-Daily-Brief/ — see dependency-map.md.",
+      "dependsOn": ["opportunity-hunter", "revenue-hunter", "crm", "sales-director"],
+      "note": "Implemented in executive-dashboard/, not 07-Daily-Brief/ — see dependency-map.md. Sprint 5 moved CEO Advisor to run after Daily Brief (see below), so Daily Brief's dependsOn no longer includes ceo-advisor — a step cannot depend on one that has not run yet. Daily Brief's own embedded 'Today's Priorities' section (unchanged since its original build) still runs here, independent of and unaffected by CEO Advisor's own, separate, later analysis.",
       "outputPaths": [
         "executive-dashboard/executive-dashboard.md",
         "executive-dashboard/executive-dashboard.html",
@@ -134,6 +126,21 @@
         "daily-briefs/{date_path}/executive-dashboard.html"
       ],
       "businessImpactSource": "executive-dashboard/executive-dashboard.md"
+    },
+    {
+      "key": "ceo-advisor",
+      "name": "CEO Advisor",
+      "folder": "09-CEO-Advisor",
+      "script": "ceo-advisor/runtime/generate.py",
+      "dependsOn": ["market-intelligence", "website-intake", "opportunity-hunter", "revenue-hunter", "crm",
+                    "service-mapping", "sales-director", "product-manager", "content-director", "daily-brief"],
+      "note": "Implemented in ceo-advisor/, not 09-CEO-Advisor/ — see dependency-map.md. New in Sprint 5, and now genuinely the final step of every Orchestrator run, per explicit instruction — dependsOn lists every other employee to guarantee that, even though its own reads (see ceo-advisor/ceo-advisor-runtime-notes.md) are scoped to exactly Sprint 5's eight named sources (Product Manager and Content Director are depended-on for ordering only, not read).",
+      "outputPaths": [
+        "ceo-advisor/runtime/output/{date}-ceo-daily-report.md",
+        "ceo-advisor/runtime/output/ceo-daily-report.md",
+        "ceo-advisor/runtime/output/ceo-weekly-report.md",
+        "ceo-advisor/runtime/output/ceo-monthly-business-review.md"
+      ]
     }
   ]
 }

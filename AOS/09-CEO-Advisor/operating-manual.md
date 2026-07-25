@@ -7,6 +7,17 @@ priority: the single highest-ROI action Ramya should take today. Not a
 list, not a summary of everything happening, one answer, with the
 reasoning shown.
 
+**Since Sprint 5** (`ceo-advisor/runtime/generate.py`), this mission is
+executed as code, as the final step of every Orchestrator run — after
+every other employee, including Daily Brief, has already produced its
+own output for the day. See `ceo-advisor/ceo-advisor-runtime-notes.md`
+for exactly how; the workflow below still describes the model
+correctly, with one change: step 5 no longer passes anything to Daily
+Brief, since Daily Brief has already run by the time CEO Advisor does.
+CEO Advisor's own output — the CEO Daily Report, CEO Weekly Report,
+and CEO Monthly Business Review — is now the final artefact of each
+day's run, not an input to one.
+
 ## What CEO Advisor Does Not Do
 
 - Does not write LinkedIn posts, newsletters, or proposals
@@ -24,11 +35,23 @@ daily recommendation.
 
 1. Pull the candidate list:
    - Every `hot` or overdue item from `04-Sales-Director`'s follow-up
-     queue
+     queue — computed today by `crm/runtime/generate.py`'s
+     `crm_follow_up_status()` (reused verbatim by
+     `ceo-advisor/runtime/generate.py`) over
+     `06-CRM/company-intelligence.json`'s Sales-Director-owned
+     `relationshipTemperature`/`nextFollowUpDue` fields; CRM computes
+     the queue, Sales Director still owns the fields it's computed
+     from
    - Every `Priority`-band item from `08-Revenue-Hunter/pipeline.json`
      with a `nextActionDue` in the next 7 days
    - Any `Priority`-band item from `opportunity-hunter/opportunity-schema.json`
    - Any candidate scoring 30+ in `03-Product-Manager/product-backlog.json`
+     — documented here, but not yet read by `ceo-advisor/runtime/
+     generate.py` v1, which implements exactly Sprint 5's named eight
+     sources (Opportunity Hunter, Market Intelligence, CRM, Revenue
+     Hunter, Service Mapping Engine, Sales Director, Website Intake,
+     Daily Brief); adding Product Manager and Content Director to the
+     runtime is a future extension, not a redesign
    - Every entry in `05-Market-Intelligence/runtime/output/ceo-advisor-feed.json`
      — the six checks only (see `decision-model.md`); the underlying
      `regulatory-log.json` entry is never opened here
@@ -37,7 +60,9 @@ daily recommendation.
      `Needs Review`); the underlying package is never opened here
    - Every entry in `content-director/runtime/output/ceo-advisor-feed.json`
      — its `status` only (`Ready to Publish`, `Needs Review`, or
-     `Low Value`); the drafts themselves are never opened here
+     `Low Value`); the drafts themselves are never opened here.
+     Documented here for the same reason as Product Manager above —
+     not yet read by the v1 runtime.
    - Every entry in `website-intake/runtime/output/ceo-advisor-feed.json`
      — its `urgency` only (`High`, `Medium`, or `Low`); the full lead
      record in `website-intake/leads.json` is never opened here
@@ -47,8 +72,15 @@ daily recommendation.
 2. Run every candidate through `decision-model.md`.
 3. Select exactly one action as today's highest-value action; list the
    next 2-3 as runners-up, not as co-priorities.
-4. Produce today's entry using `daily-recommendation-template.md`.
-5. Pass it to `07-Daily-Brief` as the lead item.
+4. Produce today's entry using `daily-recommendation-template.md` — now
+   embedded as the CEO Daily Report's "Top 3 Priorities" section,
+   ranked rather than a single pick plus unranked runners-up.
+5. Write the CEO Daily Report (and refresh the rolling CEO Weekly
+   Report and CEO Monthly Business Review) to
+   `ceo-advisor/runtime/output/`. Daily Brief has already run and
+   produced its own dashboard for the day by this point — CEO Advisor
+   reads it (its "## Daily Summary" section, quoted, never recomputed)
+   rather than feeding it.
 
 ## Success Metrics
 
