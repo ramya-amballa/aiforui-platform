@@ -47,6 +47,18 @@ scheduler is the next phase, not this one.
 
 Start with `opportunity-sources.md`, then `opportunity-scoring-engine.md`.
 
+## Historical Migrations
+
+`runtime/cleanup_relevance_v1.py` — a one-time, already-run migration
+that reprocessed every opportunity logged before the relevance engine
+existed. Fourteen false positives from the first live Collection
+Engine run (all false-positive matches on the keyword `RAG`) were
+removed from `opportunity-schema.json`, `08-Revenue-Hunter/pipeline.json`
+and `06-CRM/company-intelligence.json`. Nothing was deleted — every
+removed record, its relevance score, its rejection reason, and the run
+timestamp are archived in `runtime/archive/relevance-cleanup-v1/`. Not
+part of any ongoing workflow; kept for reproducibility and audit.
+
 ## Execution
 
 `runtime/` is this specification running as code: drop manually
