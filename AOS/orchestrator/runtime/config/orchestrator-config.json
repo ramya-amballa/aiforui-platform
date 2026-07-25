@@ -32,9 +32,13 @@
       "key": "revenue-hunter",
       "name": "Revenue Hunter",
       "folder": "08-Revenue-Hunter",
-      "script": null,
+      "script": "revenue-hunter/runtime/generate.py",
       "dependsOn": ["opportunity-hunter"],
-      "note": "No independent runtime; pipeline.json is written as a side effect of Opportunity Hunter's ingest.py."
+      "note": "Implemented in revenue-hunter/, not 08-Revenue-Hunter/ — see dependency-map.md.",
+      "outputPaths": [
+        "revenue-hunter/runtime/output/{date}-revenue-dashboard.md",
+        "revenue-hunter/runtime/output/{date}-revenue-forecast.md"
+      ]
     },
     {
       "key": "crm",

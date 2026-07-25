@@ -1,0 +1,8 @@
+{
+  "schema": {
+    "addedFromOpportunities": "array of opportunity-hunter ids already admitted to pipeline.json",
+    "addedFromCrm": "array of CRM companyName values already admitted as upsell/renewal candidates"
+  },
+  "addedFromOpportunities": [],
+  "addedFromCrm": []
+}

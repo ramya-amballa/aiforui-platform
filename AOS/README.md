@@ -28,7 +28,7 @@ employee's `operating-manual.md`.
 | `05-Market-Intelligence` | Market Intelligence | Live operating component: monitors thirteen regulatory/vendor/theme sources (EU AI Act, ISO 42001, NIST AI RMF, DORA, GDPR, CBUAE, RBI, Microsoft AI, OpenAI Enterprise, Anthropic, AI Security, AI Governance, Responsible AI), classifies every development against six checks, and routes structured signals to Content Director, Product Manager, Opportunity Hunter and CEO Advisor |
 | `06-CRM` | CRM | Maintains the single record of contacts, companies and relationship status across the pipeline |
 | `07-Daily-Brief` | Daily Brief | Assembles the Daily Revenue Brief from every other AI employee's output |
-| `08-Revenue-Hunter` | Revenue Hunter | Owns the full, unified revenue pipeline across every opportunity type and prioritises it by expected revenue, probability, effort and strategic value |
+| `08-Revenue-Hunter` | Revenue Hunter | Live operating component: owns the full, unified revenue pipeline, admits new Active/Priority opportunities and CRM upsell signals, advances stage as Sales Director prepares proposals, and produces a real probability-weighted revenue dashboard and monthly forecast — no financial assumption fabricated |
 | `09-CEO-Advisor` | CEO Advisor | Writes no content; every morning selects the single highest-ROI action across all other employees' output |
 
 ## Shared Structure
@@ -46,6 +46,7 @@ employee's `operating-manual.md`.
 - `sales-director/` — Sales Director's proposal preparation engine: turns every `Immediate Proposal`/`Apply`/`Partnership`/`Follow Recruiter` opportunity into a cover letter, proposal, recruiter/client outreach, clarifying questions, recommended pricing and a confidence score, preparation only, never sent (`sales-director/runtime/prepare.py`)
 - `content-director/` — Content Director's draft-generation engine: turns Market Intelligence signals, recurring opportunity patterns, shipped products and CEO Advisor's daily priority into LinkedIn/newsletter/website-insight/product-announcement drafts grounded in real practitioner experience and the product catalogue, never publishes (`content-director/runtime/generate.py`)
 - `product-manager/` — Product Manager's evaluation engine: runs `03-Product-Manager/product-evaluation-framework.md` (Steps 2-4) against real signals from Market Intelligence, Opportunity Hunter, Sales Director and Content Director, producing a real 0-40 score and format per candidate in `product-backlog.json` (`product-manager/runtime/generate.py`)
+- `revenue-hunter/` — Revenue Hunter's financial-intelligence engine: runs `lead-scoring.md`, `decision-tree.md` and `revenue-forecasting-engine.md` against real pipeline, opportunity, CRM, Sales Director and Product Manager data, producing a real revenue dashboard and monthly forecast — no financial assumption is ever fabricated (`revenue-hunter/runtime/generate.py`)
 - `orchestrator/` — the single entry point for daily operations: runs every employee with a live runtime in dependency order, retries failures, logs everything, and produces the Daily Execution Report (`orchestrator/orchestrator.py`) — see below
 
 ## Status
@@ -59,7 +60,7 @@ employee's `operating-manual.md`.
 | `05-Market-Intelligence` | v1.0 — live operating component: thirteen tracked sources, classification model, regulatory log, runtime, routes to four downstream employees |
 | `06-CRM` | Fully defined: company intelligence knowledge base |
 | `07-Daily-Brief` | Fully defined: daily revenue brief template |
-| `08-Revenue-Hunter` | Fully defined: operating system, decision tree, lead scoring, pipeline, forecasting engine |
+| `08-Revenue-Hunter` | Fully defined, plus a live financial-intelligence engine (`revenue-hunter/`): operating system, decision tree, lead scoring, pipeline, forecasting engine, real dashboard and forecast |
 | `09-CEO-Advisor` | Fully defined: operating manual, decision model, daily recommendation template |
 
 `templates/proposals/` (the Proposal Library) is complete: nine
