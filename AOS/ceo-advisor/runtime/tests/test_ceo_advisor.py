@@ -102,6 +102,36 @@ class CandidateCollectionTests(unittest.TestCase):
         candidates = generate.candidates_from_orchestrator_failures(status, CONFIG)
         self.assertEqual(candidates[0]["urgencyFactor"], CONFIG["urgencyFactors"]["within48Hours"])
 
+    def test_demand_intelligence_organisations_very_high_band_most_urgent(self):
+        feed = {"organisations": [
+            {"organisation": "Acme", "demandSignal": "Failure Trigger", "buyingReadinessScore": 90,
+             "buyingReadinessBand": "Very High", "opportunityNarrative": "n", "recommendedServices": ["AI Risk Assessment"],
+             "recommendedAction": "Prepare Proposal", "recommendedActionReason": "r", "overallDemandScore": 100},
+            {"organisation": "Beta Co", "demandSignal": "Funding Trigger", "buyingReadinessScore": 40,
+             "buyingReadinessBand": "Low", "opportunityNarrative": "n", "recommendedServices": ["AI Readiness Assessment"],
+             "recommendedAction": "Monitor", "recommendedActionReason": "r", "overallDemandScore": 50},
+        ]}
+        candidates = generate.candidates_from_demand_intelligence_organisations(feed, CONFIG)
+        self.assertEqual(candidates[0]["urgencyFactor"], CONFIG["urgencyFactors"]["within48Hours"])
+        self.assertEqual(candidates[1]["urgencyFactor"], CONFIG["urgencyFactors"]["noDeadline"])
+
+    def test_top_organisations_this_week_ranks_and_explains(self):
+        feed = {"organisations": [
+            {"organisation": "Acme", "demandSignal": "Failure Trigger", "buyingReadinessScore": 90,
+             "buyingReadinessBand": "Very High", "opportunityNarrative": "n", "recommendedServices": ["AI Risk Assessment"],
+             "recommendedAction": "Prepare Proposal", "recommendedActionReason": "r", "overallDemandScore": 100},
+            {"organisation": "Beta Co", "demandSignal": "Funding Trigger", "buyingReadinessScore": 40,
+             "buyingReadinessBand": "Low", "opportunityNarrative": "n", "recommendedServices": ["AI Readiness Assessment"],
+             "recommendedAction": "Monitor", "recommendedActionReason": "r", "overallDemandScore": 50},
+        ]}
+        top = generate.top_organisations_this_week(feed, CONFIG, count=10)
+        self.assertEqual(top[0]["organisation"], "Acme")
+        self.assertIn("whyItOutranksTheNext", top[0])
+
+    def test_render_top_organisations_section_handles_empty_feed(self):
+        lines = generate.render_top_organisations_section([])
+        self.assertTrue(any("No demand-signal organisations" in line for line in lines))
+
 
 class RevenueImpactTests(unittest.TestCase):
     def test_highest_value_opportunity_uses_roi_not_raw_amount(self):

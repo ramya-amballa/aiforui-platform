@@ -37,7 +37,9 @@
       "outputPaths": [
         "demand-intelligence/runtime/output/{date}-daily-report.md",
         "demand-intelligence/runtime/rejected/{date}-rejected-report.md",
-        "demand-intelligence/runtime/snapshots/{date}-collection-snapshot.json"
+        "demand-intelligence/runtime/snapshots/{date}-collection-snapshot.json",
+        "demand-intelligence/organisation-profiles.json",
+        "demand-intelligence/runtime/output/top-organisations-this-week.json"
       ]
     },
     {

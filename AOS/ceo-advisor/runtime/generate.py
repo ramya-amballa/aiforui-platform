@@ -53,6 +53,7 @@ MARKET_INTELLIGENCE_FEED_PATH = AOS_DIR / "05-Market-Intelligence" / "runtime" /
 SALES_DIRECTOR_FEED_PATH = AOS_DIR / "sales-director" / "runtime" / "output" / "ceo-advisor-feed.json"
 WEBSITE_INTAKE_FEED_PATH = AOS_DIR / "website-intake" / "runtime" / "output" / "ceo-advisor-feed.json"
 SERVICE_RECOMMENDATIONS_PATH = AOS_DIR / "service-mapping" / "service-recommendations.json"
+TOP_ORGANISATIONS_PATH = AOS_DIR / "demand-intelligence" / "runtime" / "output" / "top-organisations-this-week.json"
 DAILY_BRIEF_PATH = AOS_DIR / "executive-dashboard" / "executive-dashboard.md"
 ORCHESTRATOR_STATUS_PATH = AOS_DIR / "orchestrator" / "status.json"
 
@@ -233,6 +234,53 @@ def candidates_from_demand_intelligence(schema_data, config):
                         f"classification {opp.get('classification')}",
         })
     return candidates
+
+
+def candidates_from_demand_intelligence_organisations(top_organisations_feed, config):
+    """AOS Sprint 6 (Demand Intelligence v2), Part 6 — "Top 10
+    Organizations This Week". A separate, additive pool from
+    candidates_from_demand_intelligence() above: that function surfaces
+    individual Priority-band opportunities already in
+    opportunity-schema.json; this one surfaces the organisation-level
+    consulting-demand analysis (Buying Readiness Score, Opportunity
+    Narrative, recommended service/action) demand_engine.py computes
+    and writes to top-organisations-this-week.json, which
+    opportunity-schema.json itself has no room for. Reuses the same
+    band vocabulary (Very High/High/Medium/Low) as
+    config["urgencyFactors"]'s within48Hours/dueThisWeek/dueThisMonth/
+    noDeadline bands rather than inventing a second urgency scale."""
+    band_to_urgency = {
+        "Very High": config["urgencyFactors"]["within48Hours"],
+        "High": config["urgencyFactors"]["dueThisWeek"],
+        "Medium": config["urgencyFactors"]["dueThisMonth"],
+        "Low": config["urgencyFactors"]["noDeadline"],
+    }
+    candidates = []
+    for org in top_organisations_feed.get("organisations", []):
+        candidates.append({
+            "source": "Demand Intelligence", "sourceFile": "demand-intelligence/runtime/output/top-organisations-this-week.json",
+            "label": org["organisation"],
+            "organisation": org.get("organisation"),
+            "demandSignal": org.get("demandSignal", ""),
+            "buyingReadinessScore": org.get("buyingReadinessScore", 0),
+            "buyingReadinessBand": org.get("buyingReadinessBand", "Low"),
+            "opportunityNarrative": org.get("opportunityNarrative", ""),
+            "recommendedServices": org.get("recommendedServices", []),
+            "recommendedAction": org.get("recommendedAction", "Monitor"),
+            "recommendedActionReason": org.get("recommendedActionReason", ""),
+            "normalisedValue": org.get("overallDemandScore", 0) / 10,
+            "urgencyFactor": band_to_urgency.get(org.get("buyingReadinessBand", "Low"), 0.8),
+            "effort": 5,  # an insight-led first-touch approach, consistently quick to prepare — see demand_engine.py
+            "evidence": f"Buying readiness {org.get('buyingReadinessScore', 0)}/100 "
+                        f"({org.get('buyingReadinessBand', 'Low')}), signal(s): {org.get('demandSignal', 'none')}",
+        })
+    return candidates
+
+
+def top_organisations_this_week(top_organisations_feed, config, count=10):
+    candidates = candidates_from_demand_intelligence_organisations(top_organisations_feed, config)
+    ranked = rank_candidates(candidates, config)
+    return top_priorities_with_reasons(ranked, count=count)
 
 
 def candidates_from_sales_director(feed, schema_by_id, config):
@@ -646,7 +694,40 @@ def build_executive_summary(top3, revenue_impact, alerts, daily_brief_summary, c
 # Rendering
 # --------------------------------------------------------------------------
 
-def render_daily_report(exec_summary, top3, revenue_impact, alerts, ignore_list, weekly_recommendation):
+def render_top_organisations_section(top_orgs):
+    lines = ["## Top 10 Organizations This Week", ""]
+    if not top_orgs:
+        lines.append("_No demand-signal organisations identified this week — Demand Intelligence's "
+                      "Demand Signals connector may not be configured (needs ANTHROPIC_API_KEY) or "
+                      "found nothing new in the last 7 days._")
+        lines.append("")
+        return lines
+
+    lines.append("| # | Organization | Demand Signal | Buying Score | Recommended Service | "
+                  "Recommended Action | Est. Strategic Value | Why this outranks the next |")
+    lines.append("|---|---|---|---|---|---|---|---|")
+    for i, org in enumerate(top_orgs, start=1):
+        top_service = org["recommendedServices"][0] if org.get("recommendedServices") else "—"
+        lines.append(
+            f"| {i} | {org['organisation']} | {org['demandSignal']} | "
+            f"{org['buyingReadinessScore']}/100 ({org['buyingReadinessBand']}) | {top_service} | "
+            f"{org['recommendedAction']} | {org['normalisedValue'] * 10:.0f}/100 | "
+            f"{org['whyItOutranksTheNext']} |"
+        )
+    lines.append("")
+
+    for i, org in enumerate(top_orgs, start=1):
+        lines.append(f"### {i}. {org['organisation']} — Opportunity Narrative")
+        lines.append("")
+        lines.append(org["opportunityNarrative"])
+        lines.append("")
+        lines.append(f"**Recommended action:** {org['recommendedAction']} — {org['recommendedActionReason']}")
+        lines.append("")
+
+    return lines
+
+
+def render_daily_report(exec_summary, top3, revenue_impact, alerts, ignore_list, weekly_recommendation, top_orgs):
     lines = [
         "# CEO Daily Report",
         "",
@@ -675,6 +756,8 @@ def render_daily_report(exec_summary, top3, revenue_impact, alerts, ignore_list,
     else:
         lines.append("_No priority candidates today across any source._")
         lines.append("")
+
+    lines += render_top_organisations_section(top_orgs)
 
     lines += ["## Revenue Impact", ""]
     lines.append(f"- **Revenue at risk:** {revenue_impact['revenueAtRisk']}")
@@ -763,6 +846,7 @@ def main():
     website_intake_feed = load_json(WEBSITE_INTAKE_FEED_PATH, {"feed": []})
     website_leads = load_json(AOS_DIR / "website-intake" / "leads.json", {"leads": {}}).get("leads", {})
     service_recommendations = load_json(SERVICE_RECOMMENDATIONS_PATH, {"recommendations": {}}).get("recommendations", {})
+    top_organisations_feed = load_json(TOP_ORGANISATIONS_PATH, {"organisations": []})
     status_data = load_json(ORCHESTRATOR_STATUS_PATH, {"failures": []})
 
     schema_by_id = {o["id"]: o for o in schema_data.get("opportunities", [])}
@@ -780,6 +864,7 @@ def main():
 
     ranked = rank_candidates(candidates, config)
     top3 = top_priorities_with_reasons(ranked, count=3)
+    top_orgs = top_organisations_this_week(top_organisations_feed, config, count=10)
 
     cold_risk_orgs = {c["companyName"] for c in crm_status["cold_risk"]}
     revenue_impact = compute_revenue_impact(pipeline, cold_risk_orgs)
@@ -791,7 +876,7 @@ def main():
     exec_summary = build_executive_summary(top3, revenue_impact, alerts, daily_brief_summary, config)
 
     OUTPUT_DIR.mkdir(exist_ok=True)
-    daily_report = render_daily_report(exec_summary, top3, revenue_impact, alerts, ignore_list, weekly_recommendation)
+    daily_report = render_daily_report(exec_summary, top3, revenue_impact, alerts, ignore_list, weekly_recommendation, top_orgs)
     (OUTPUT_DIR / f"{TODAY.isoformat()}-ceo-daily-report.md").write_text(daily_report, encoding="utf-8")
     (OUTPUT_DIR / "ceo-daily-report.md").write_text(daily_report, encoding="utf-8")
 

@@ -1,0 +1,106 @@
+{
+  "_comment": "AOS Sprint 6 — the five deterministic demand-signal categories. 'keywords' are matched case-insensitively, whole-phrase, against an article's title+summary (same convention as opportunity-relevance-engine.md and market-intelligence-classification-model.md's six checks) to decide which categories a signal belongs to — pure text matching, no model call. 'baseScore' feeds demand_engine.py's weighted Overall Demand Score aggregation. Edit this file to retune categories/keywords/scores — no code change needed.",
+  "categories": {
+    "ai_adoption": {
+      "label": "AI Adoption",
+      "baseScore": 70,
+      "keywords": [
+        "copilot rollout", "microsoft copilot", "chatgpt enterprise", "enterprise genai",
+        "genai deployment", "internal ai assistant", "ai assistant launch",
+        "rag implementation", "retrieval-augmented generation", "ai-enabled customer service",
+        "deployed copilot", "rolled out copilot", "ai agent deployment", "enterprise ai deployment"
+      ]
+    },
+    "governance_trigger": {
+      "label": "Governance Trigger",
+      "baseScore": 85,
+      "keywords": [
+        "responsible ai programme", "responsible ai program", "ai governance office",
+        "chief ai officer", "ai ethics committee", "ai policy", "ai governance framework",
+        "ai governance council", "head of ai governance"
+      ]
+    },
+    "funding_trigger": {
+      "label": "Funding Trigger",
+      "baseScore": 75,
+      "keywords": [
+        "series a", "series b", "series c", "venture funding", "venture round",
+        "ai expansion funding", "digital transformation funding", "raised funding",
+        "funding round", "growth equity"
+      ]
+    },
+    "regulatory_trigger": {
+      "label": "Regulatory Trigger",
+      "baseScore": 95,
+      "keywords": [
+        "eu ai act", "iso 42001", "ai compliance programme", "ai compliance program",
+        "ai audit", "dora", "cbuae ai principles", "nist ai rmf", "ai regulatory readiness",
+        "ai act compliance"
+      ]
+    },
+    "failure_trigger": {
+      "label": "Failure Trigger",
+      "baseScore": 100,
+      "keywords": [
+        "ai incident", "ai bias", "ai hallucination", "data leakage", "regulatory investigation",
+        "ai lawsuit", "ai compliance failure", "algorithmic bias", "model failure", "data breach"
+      ]
+    }
+  },
+
+  "aggregationWeights": {
+    "_note": "Overall Demand Score = min(100, weighted sum). Each matched category contributes its baseScore times this weight; multiple matched categories aggregate (a company matching more categories scores higher, but with diminishing per-category weight so no single very-high-scoring category alone can't exceed 100, and stacking several confirms rather than just repeats one signal).",
+    "primaryCategoryWeight": 1.0,
+    "additionalCategoryWeight": 0.35
+  },
+
+  "confidenceMultiplier": {
+    "high": 1.0,
+    "medium": 0.7,
+    "low": 0.4
+  },
+
+  "buyingReadinessBands": {
+    "_note": "0-100 score bucketed into the four bands Part 4 requires.",
+    "veryHigh": 85,
+    "high": 65,
+    "medium": 40
+  },
+
+  "buyingReadinessWeights": {
+    "_note": "Deterministic weighted formula, each component 0-10, weights sum to 1.0. See demand_engine.py's compute_buying_readiness_score().",
+    "deploymentStage": 0.15,
+    "organisationSize": 0.10,
+    "regulatoryPressure": 0.20,
+    "publicAiMaturity": 0.15,
+    "governanceTrigger": 0.15,
+    "strategicImportance": 0.15,
+    "urgency": 0.10
+  },
+
+  "nextActionByBand": {
+    "_note": "Deterministic first pass; demand_engine.py's recommend_next_action() overrides this for failure/regulatory triggers regardless of band, since those warrant faster action than a generic band mapping would suggest.",
+    "Very High": "Schedule Outreach",
+    "High": "Prepare Executive Brief",
+    "Medium": "Prepare Insight Article",
+    "Low": "Monitor"
+  },
+
+  "categoryToServices": {
+    "_note": "Deterministic ranked service prediction per category, in priority order. Names are Service Mapping Engine's own canonical primaryServices (service-mapping/runtime/config/service-catalogue.json) — reused, not a second taxonomy invented for Demand Intelligence. Where the founder's brief used a near-synonym (e.g. 'ADGL Readiness Assessment', 'AI Compliance Assessment'), the closest canonical entry is used instead so every part of AOS names services the same way.",
+    "ai_adoption": ["AI Deployment Governance (ADGL)", "AI Risk Assessment", "AI Governance Advisory"],
+    "governance_trigger": ["AI Governance Operating Model", "Responsible AI Implementation", "AI Policy & Control Framework", "Executive Workshop"],
+    "funding_trigger": ["AI Governance Operating Model", "AI Readiness Assessment", "Executive Workshop"],
+    "regulatory_trigger": ["AI Policy & Control Framework", "AI Third-Party Risk Review", "AI Governance Advisory"],
+    "failure_trigger": ["AI Risk Assessment", "AI Policy & Control Framework", "AI Third-Party Risk Review", "Executive Workshop"]
+  },
+
+  "governanceNeedByCategory": {
+    "_note": "The 'organisations at this stage typically require...' clause in the templated Opportunity Narrative (demand_engine.py's build_opportunity_narrative()) — factual, not marketing copy.",
+    "ai_adoption": "governance around deployment assurance, human oversight, operational controls, privacy, monitoring and AI risk management",
+    "governance_trigger": "structured governance operating models, policy frameworks and independent assurance that the new function or programme is complete and defensible",
+    "funding_trigger": "an AI governance operating model and readiness assessment established before the newly-funded AI expansion scales beyond what informal oversight can manage",
+    "regulatory_trigger": "a compliance assessment and control framework mapped directly to the named regulatory obligation, plus independent third-party risk review where vendors are involved",
+    "failure_trigger": "an independent risk assessment, root-cause review and control-framework remediation to prevent recurrence and demonstrate the issue has been addressed"
+  }
+}

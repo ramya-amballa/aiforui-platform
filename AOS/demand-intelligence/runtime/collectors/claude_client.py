@@ -1,11 +1,23 @@
 """
 Minimal, dependency-free Claude API client (urllib + json only, no
-`anthropic` package) — used solely by demand_signals.py to read a news
-item and decide whether it names a real organisation adopting an AI
-tool at scale. This is AOS's first runtime with an external paid API
-dependency; every other employee stays stdlib-only. Never called
-unless ANTHROPIC_API_KEY is set — its absence is a clean skip, not an
-error, matching every other connector's credential-missing behaviour.
+`anthropic` package) — used solely by demand_signals.py to confirm a
+news item names a real, specific organisation and extract that name.
+This is AOS's first runtime with an external paid API dependency;
+every other employee stays stdlib-only. Never called unless
+ANTHROPIC_API_KEY is set — its absence is a clean skip, not an error,
+matching every other connector's credential-missing behaviour.
+
+Sprint 6 (Demand Intelligence v2) widened what this extracts: it used
+to be scoped narrowly to "AI tool adoption at scale" articles. Which
+of the five demand-signal categories (AI Adoption, Governance Trigger,
+Funding Trigger, Regulatory Trigger, Failure Trigger) an article
+belongs to is now decided beforehand by demand_engine.classify_categories()
+— pure deterministic keyword matching, no model call — and this
+extraction only runs at all once that deterministic gate has already
+matched something. Claude's job stays exactly the kind of task it
+always did: given a passage of English text already flagged as
+relevant, confirm there is a real, specific, named organisation in it
+and pull out that name — never deciding the category itself.
 """
 
 import json
@@ -20,33 +32,40 @@ DEFAULT_MODEL = "claude-haiku-4-5-20251001"
 EXTRACTION_TOOL = {
     "name": "extract_demand_signal",
     "description": (
-        "Decide whether this news item describes a SPECIFIC, NAMED organisation "
-        "(not the AI vendor itself) deploying, adopting, or rolling out an AI tool "
-        "or system at meaningful scale (e.g. across many employees or a whole "
-        "department) — the kind of event that signals that organisation will soon "
-        "need AI governance, human oversight, deployment controls, or risk "
-        "assessment. A generic product-feature announcement, a vendor's own "
-        "roadmap post, or vague/speculative coverage with no named adopting "
-        "organisation is NOT a demand signal."
+        "This news item's text already matched at least one deterministic "
+        "keyword rule for a demand-signal category (AI adoption at scale, a "
+        "governance trigger, a funding round, a regulatory trigger, or an AI "
+        "failure/incident). Decide whether it genuinely names a SPECIFIC, "
+        "REAL organisation experiencing that event — not the vendor being "
+        "reported on, not a generic industry trend piece, not speculative or "
+        "hypothetical coverage with no named organisation at all — and "
+        "extract that organisation's name and a short factual summary of "
+        "what was reported."
     ),
     "input_schema": {
         "type": "object",
         "properties": {
             "isDemandSignal": {
                 "type": "boolean",
-                "description": "true only if a specific, named organisation is described as adopting/deploying an AI tool at scale",
+                "description": "true only if a specific, real, named organisation is described experiencing the matched event",
             },
             "organisation": {
                 "type": "string",
-                "description": "the named organisation adopting the AI tool; empty string if isDemandSignal is false",
+                "description": "the named organisation; empty string if isDemandSignal is false",
+            },
+            "eventSummary": {
+                "type": "string",
+                "description": "one factual sentence stating what was reported about this organisation, e.g. "
+                                "'Acme Corp deployed Microsoft Copilot to 40,000 employees.' — no marketing "
+                                "language, no speculation beyond what the text states; empty string if isDemandSignal is false",
             },
             "aiTool": {
                 "type": "string",
-                "description": "the AI tool/product being adopted, e.g. 'Microsoft Copilot'; empty string if unknown",
+                "description": "the AI tool/product named, if any (e.g. 'Microsoft Copilot'); empty string if not applicable to this event type",
             },
             "scale": {
                 "type": "string",
-                "description": "the scale mentioned, verbatim if possible, e.g. '40,000 employees'; empty string if not stated",
+                "description": "a scale figure mentioned, verbatim if possible, e.g. '40,000 employees'; empty string if not stated",
             },
             "industry": {
                 "type": "string",
@@ -55,10 +74,10 @@ EXTRACTION_TOOL = {
             "confidence": {
                 "type": "string",
                 "enum": ["high", "medium", "low"],
-                "description": "high only if the organisation and the at-scale adoption are both stated plainly and unambiguously in the text",
+                "description": "high only if the named organisation and the event are both stated plainly and unambiguously in the text",
             },
         },
-        "required": ["isDemandSignal", "organisation", "aiTool", "scale", "industry", "confidence"],
+        "required": ["isDemandSignal", "organisation", "eventSummary", "aiTool", "scale", "industry", "confidence"],
     },
 }
 

@@ -10,6 +10,10 @@ Daily Brief reports: AI for U&I's pipeline is currently empty — no opportuniti
 
 _No priority candidates today across any source._
 
+## Top 10 Organizations This Week
+
+_No demand-signal organisations identified this week — Demand Intelligence's Demand Signals connector may not be configured (needs ANTHROPIC_API_KEY) or found nothing new in the last 7 days._
+
 ## Revenue Impact
 
 - **Revenue at risk:** unestimated

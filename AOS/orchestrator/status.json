@@ -9,9 +9,9 @@
     "reportPath": "string — this run's Daily Execution Report, relative to the repo root",
     "logPath": "string — this run's full log, relative to the repo root"
   },
-  "startedAt": "2026-07-25T18:19:02.348198+00:00",
-  "finishedAt": "2026-07-25T18:19:03.099166+00:00",
-  "durationSeconds": 0.75,
+  "startedAt": "2026-07-25T18:45:19.787645+00:00",
+  "finishedAt": "2026-07-25T18:45:20.590164+00:00",
+  "durationSeconds": 0.8,
   "employees": [
     {
       "key": "market-intelligence",
@@ -36,7 +36,7 @@
       "name": "Demand Intelligence",
       "status": "SUCCESS",
       "attempts": 1,
-      "durationSeconds": 0.41,
+      "durationSeconds": 0.44,
       "error": null,
       "outputs": [
         "demand-intelligence/runtime/snapshots/2026-07-25-collection-snapshot.json"
@@ -104,7 +104,7 @@
       "name": "Daily Brief",
       "status": "SUCCESS",
       "attempts": 1,
-      "durationSeconds": 0.03,
+      "durationSeconds": 0.04,
       "error": null,
       "outputs": [
         "executive-dashboard/executive-dashboard.md",
@@ -120,7 +120,7 @@
       "name": "CEO Advisor",
       "status": "SUCCESS",
       "attempts": 1,
-      "durationSeconds": 0.03,
+      "durationSeconds": 0.04,
       "error": null,
       "outputs": [
         "ceo-advisor/runtime/output/2026-07-25-ceo-daily-report.md",
@@ -133,5 +133,5 @@
   "overallStatus": "SUCCESS",
   "failures": [],
   "reportPath": "AOS/orchestrator/runtime/reports/2026-07-25-daily-execution-report.md",
-  "logPath": "AOS/orchestrator/logs/2026-07-25-181902-orchestrator.log"
+  "logPath": "AOS/orchestrator/logs/2026-07-25-184519-orchestrator.log"
 }
