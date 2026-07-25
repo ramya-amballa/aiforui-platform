@@ -1,0 +1,111 @@
+{
+  "_comment": "The only source of real AI for U&I content every generated document is allowed to quote from. practitionerExperience is drawn verbatim from aiforu-platform's /about page; products is drawn verbatim from aiforu-platform/src/content/resources.ts. Each entry is tagged with the opportunity domainTags it applies to, so selection in runtime/prepare.py is a tag match, never an invented claim.",
+  "practitionerExperience": [
+    {
+      "id": "thirteen-years-grc",
+      "text": "Ramya Amballa spent thirteen years across PwC, Wells Fargo, JPMorgan Chase and Viatris, running enterprise technology risk, cyber risk, GRC, third-party risk and audit readiness programmes across banking, professional services and life sciences.",
+      "domainTags": ["AI Governance", "GRC", "Technology Risk", "Third-Party Risk", "ADGL", "AI Deployment Governance"]
+    },
+    {
+      "id": "pwc-control-testing",
+      "text": "At PwC, she tested controls across 300+ business-critical applications and cut residual risk exposure by 35% in a single programme.",
+      "domainTags": ["Technology Risk", "GRC", "Security Governance"]
+    },
+    {
+      "id": "tprm-vendor-governance",
+      "text": "At Wells Fargo and Viatris, she ran third-party risk governance for hundreds of vendor relationships end-to-end, including the part of the relationship most programmes stop watching once onboarding is signed off.",
+      "domainTags": ["Third-Party Risk"]
+    },
+    {
+      "id": "jpmc-kyc-sanctions",
+      "text": "At JPMorgan Chase, she ran global KYC and sanctions operations across multiple jurisdictions.",
+      "domainTags": ["GRC", "Government/FedRAMP-GovRAMP-CMMC"]
+    },
+    {
+      "id": "certifications",
+      "text": "She holds NIST AI RMF, CAISR, EU GDPR Practitioner, and Microsoft AI Transformation Leader certifications.",
+      "domainTags": ["AI Governance", "EU AI Act", "ADGL", "AI Deployment Governance", "DORA"]
+    },
+    {
+      "id": "sector-breadth",
+      "text": "She has advised across Government & Public Sector, Energy & Critical Infrastructure, Financial Services and Enterprise SaaS environments.",
+      "domainTags": ["Government/FedRAMP-GovRAMP-CMMC", "Security Governance"]
+    }
+  ],
+  "products": [
+    {
+      "slug": "adgl-methodology",
+      "title": "The ADGL Methodology",
+      "description": "The full AI Deployment Governance Lifecycle methodology: five phases, eighteen operational controls, risk scoring, RACI and a twelve-week delivery schedule, for governing an AI deployment before it reaches production.",
+      "domainTags": ["ADGL", "AI Deployment Governance", "AI Governance"]
+    },
+    {
+      "slug": "executive-capability-overview",
+      "title": "Executive Capability Overview",
+      "description": "A concise overview of AI for U&I's advisory approach, governance methodology, engagement models, and practitioner experience for executive decision makers.",
+      "domainTags": ["AI Governance", "Fractional Advisory"]
+    },
+    {
+      "slug": "ai-governance-maturity-framework",
+      "title": "AI Governance Maturity Framework",
+      "description": "Assess where AI governance actually stands, across ownership, risk evaluation and assurance, built on the OPERA methodology.",
+      "domainTags": ["AI Governance"]
+    },
+    {
+      "slug": "ai-governance-decision-playbook",
+      "title": "AI Governance Decision Playbook",
+      "description": "Use-case risk evaluation, escalation triggers and sign-off criteria for the decisions AI governance actually requires.",
+      "domainTags": ["AI Governance", "ADGL", "AI Deployment Governance"]
+    },
+    {
+      "slug": "third-party-risk-assessment-checklist",
+      "title": "Third-Party Risk Assessment Checklist",
+      "description": "Assess vendor risk proportional to criticality and data access, from onboarding through ongoing monitoring.",
+      "domainTags": ["Third-Party Risk"]
+    },
+    {
+      "slug": "dpdp-readiness-briefing",
+      "title": "DPDP Readiness Briefing",
+      "description": "India's Digital Personal Data Protection Act, framed around the governance decisions it actually requires.",
+      "domainTags": ["GRC"]
+    },
+    {
+      "slug": "dpdp-compliance-toolkit",
+      "title": "DPDP Compliance Toolkit",
+      "description": "Data processing inventory, consent mapping and accountability structure templates for DPDP compliance.",
+      "domainTags": ["GRC"]
+    },
+    {
+      "slug": "governance-operating-model-template",
+      "title": "Governance Operating Model Template",
+      "description": "Document decision rights, ownership and escalation paths for a governance operating model redesign.",
+      "domainTags": ["AI Governance", "GRC"]
+    },
+    {
+      "slug": "technology-risk-whitepaper",
+      "title": "Technology Risk Whitepaper",
+      "description": "Building risk appetite statements and control ownership models that hold up under audit.",
+      "domainTags": ["Technology Risk"]
+    },
+    {
+      "slug": "cyber-governance-reference-architecture",
+      "title": "Cyber Governance Reference Architecture",
+      "description": "The governance layer behind a cyber security programme: control ownership, gap prioritisation, assessment readiness.",
+      "domainTags": ["Security Governance"]
+    },
+    {
+      "slug": "government-digital-governance-artefact-pack",
+      "title": "Government Digital Governance Artefact Pack",
+      "description": "Ownership maps, oversight reporting templates and statutory alignment checklists for public-sector accountability.",
+      "domainTags": ["Government/FedRAMP-GovRAMP-CMMC"]
+    },
+    {
+      "slug": "audit-readiness-checklist",
+      "title": "Audit Readiness Checklist",
+      "description": "Build continuous audit evidence into day-to-day control operation, so audit becomes validation, not discovery.",
+      "domainTags": ["GRC", "Third-Party Risk"]
+    }
+  ],
+  "adglPhases": ["Discover", "Assess", "Govern", "Deploy", "Operate"],
+  "operaPhases": ["Opportunity", "People", "Evaluation", "Response", "Assurance"]
+}

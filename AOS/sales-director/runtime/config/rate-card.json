@@ -1,0 +1,22 @@
+{
+  "_comment": "Starting-point day-rate card used only when Revenue Hunter has not already estimated a real figure in pipeline.json. Every figure this produces is labelled 'rate-card-estimate' and flagged to confirm before sending — adjust the numbers below to reflect actual rates; no code change is needed.",
+  "defaultCurrency": "USD",
+  "types": {
+    "Consulting Project": {"dayRate": 850, "typicalDays": {"min": 10, "max": 40}, "unit": "per day"},
+    "Enterprise Contract": {"dayRate": 950, "typicalDays": {"min": 30, "max": 120}, "unit": "per day"},
+    "Workshop": {"dayRate": 3500, "typicalDays": {"min": 1, "max": 2}, "unit": "flat, per workshop"},
+    "Speaking Engagement": {"dayRate": 2500, "typicalDays": {"min": 1, "max": 1}, "unit": "flat, per engagement"},
+    "Paid Advisory Call": {"dayRate": 350, "typicalDays": {"min": 1, "max": 1}, "unit": "per hour"},
+    "Grant": {"note": "Grant-funded; price per the grant's own terms, not a day rate."},
+    "Partnership": {"note": "Revenue-share or co-delivery; price per the partnership's own terms, not a day rate."},
+    "Product Idea": {"note": "Productised offer; price per unit or licence, not a day rate."},
+    "Licensing": {"licenseFeeRange": {"min": 5000, "max": 25000}, "unit": "annual licence fee"}
+  },
+  "effortAdjustment": {
+    "lowEffortThreshold": 7,
+    "highEffortDiscount": 0.9,
+    "highOverheadThreshold": 4,
+    "highOverheadUplift": 1.15,
+    "_note": "scores.timeRequired (0-10, inverted) >= lowEffortThreshold scales the estimate down (fast-converting); below highOverheadThreshold scales it up (long-running)."
+  }
+}

@@ -300,6 +300,7 @@ def process_record(record, existing_opportunities):
         "priorityScore": priority_score,
         "band": band,
         "classification": classification,
+        "scopedEngagement": scoped_engagement,
         "routedTo": [],
         "status": "archived" if classification == "Ignore" else "routed",
         "lastTouch": TODAY,

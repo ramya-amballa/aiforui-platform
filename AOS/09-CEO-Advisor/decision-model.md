@@ -17,6 +17,13 @@ Convert each candidate's native score to a 0-10 value score:
 | `opportunity-hunter/opportunity-schema.json` (`priorityScore`) | 0-100 | divide by 10 |
 | `03-Product-Manager/product-backlog.json` | 0-40 | divide by 4 |
 | `04-Sales-Director` follow-up queue | Hot/Warm/Cooling + overdue | Hot+overdue = 9, Hot = 7, Warm+overdue = 6, Warm = 4 |
+| `sales-director/runtime/output/ceo-advisor-feed.json` (prepared-proposal status) | Ready To Send / Proposal Ready / Needs Review | Ready To Send = 9, Proposal Ready = 6, Needs Review = 3 |
+
+CEO Advisor reads only the `status` field from the prepared-proposal
+feed — never the drafts themselves. A `Needs Review` item still
+normalises to a value (3, not 0): a package that needs a human look
+before it's send-ready is still worth surfacing, just not as
+send-ready.
 
 ## Step 2: Apply the Urgency Overlay
 

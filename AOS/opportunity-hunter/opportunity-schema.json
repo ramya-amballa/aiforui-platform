@@ -27,6 +27,7 @@
     "priorityScore": "number — 0-100, weighted sum per opportunity-scoring-engine.md",
     "band": "string — Priority (80-100), Active (50-79), or Archived (below 50)",
     "classification": "string — one of: Apply, Immediate Proposal, Follow Recruiter, Relationship Building, Partnership, Ignore, Convert into Content, Convert into Product Idea",
+    "scopedEngagement": "boolean — is this a named, scoped engagement rather than a general lead? Set at ingestion (see runtime/ingest.py's INPUT FORMAT), used both to classify and, downstream, by sales-director/runtime/prepare.py to decide pricing and send-readiness",
     "routedTo": "array of strings — downstream files this entry was written to on classification, e.g. ['08-Revenue-Hunter/pipeline.json', '06-CRM/company-intelligence.json']",
     "status": "string — new, routed, in-progress, proposal-sent, won, lost, archived",
     "lastTouch": "string — ISO 8601 date",

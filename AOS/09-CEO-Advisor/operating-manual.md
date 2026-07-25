@@ -31,6 +31,9 @@ daily recommendation.
    - Any candidate scoring 30+ in `03-Product-Manager/product-backlog.json`
    - Any consulting opportunity flagged by
      `05-Market-Intelligence`'s trigger rule that day
+   - Every entry in `sales-director/runtime/output/ceo-advisor-feed.json`
+     — its `status` only (`Ready To Send`, `Proposal Ready`, or
+     `Needs Review`); the underlying package is never opened here
 2. Run every candidate through `decision-model.md`.
 3. Select exactly one action as today's highest-value action; list the
    next 2-3 as runners-up, not as co-priorities.

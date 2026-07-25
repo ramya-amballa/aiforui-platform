@@ -43,6 +43,7 @@ employee's `operating-manual.md`.
 - `kpi-dashboards/` — one dashboard per employee, rolling up into `kpi-dashboards/ceo-dashboard.md`, AOS's single view of overall business health
 - `08-Revenue-Hunter/revenue-forecasting-engine.md` — probability-weighted monthly revenue forecasting and highest-leverage-action analysis
 - `executive-dashboard/` — the single entry point every morning: revenue, CEO Advisor's top priority, and everything needing attention across Opportunity Hunter, Revenue Hunter and CRM, generated read-only from their live outputs (`executive-dashboard/runtime/generate.py`)
+- `sales-director/` — Sales Director's proposal preparation engine: turns every `Immediate Proposal`/`Apply`/`Partnership`/`Follow Recruiter` opportunity into a cover letter, proposal, recruiter/client outreach, clarifying questions, recommended pricing and a confidence score, preparation only, never sent (`sales-director/runtime/prepare.py`)
 
 ## Status
 
@@ -51,7 +52,7 @@ employee's `operating-manual.md`.
 | `opportunity-hunter` | v1 — live operating component: sources, scoring engine, schema, backlog, daily report, integration contract |
 | `02-Content-Director` | Fully defined: editorial operating system, conversion map, brief/calendar templates, published-content log |
 | `03-Product-Manager` | Fully defined: operating manual, evaluation framework, product backlog, shipped-products log |
-| `04-Sales-Director` | Fully defined: operating manual, follow-up priority model, outreach draft template |
+| `04-Sales-Director` | Fully defined, plus a live proposal preparation engine (`sales-director/`): operating manual, follow-up priority model, outreach draft template, pricing/confidence model, prepared-proposal feed to CEO Advisor |
 | `05-Market-Intelligence` | Fully defined: operating manual, regulatory log |
 | `06-CRM` | Fully defined: company intelligence knowledge base |
 | `07-Daily-Brief` | Fully defined: daily revenue brief template |
