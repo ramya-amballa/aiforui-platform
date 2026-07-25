@@ -59,9 +59,12 @@
       "key": "product-manager",
       "name": "Product Manager",
       "folder": "03-Product-Manager",
-      "script": null,
+      "script": "product-manager/runtime/generate.py",
       "dependsOn": ["market-intelligence"],
-      "note": "No runtime implementation yet."
+      "note": "Implemented in product-manager/, not 03-Product-Manager/ — see dependency-map.md.",
+      "outputPaths": [
+        "product-manager/runtime/output/{date}-product-manager-report.md"
+      ]
     },
     {
       "key": "content-director",

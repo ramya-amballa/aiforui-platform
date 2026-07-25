@@ -1,0 +1,10 @@
+{
+  "schema": {
+    "processedOpportunities": "array of opportunity-hunter ids already evaluated",
+    "processedPatterns": "array of domainTag pattern keys already evaluated",
+    "processedContentSignals": "array of content-director content-queue ids already evaluated"
+  },
+  "processedOpportunities": [],
+  "processedPatterns": [],
+  "processedContentSignals": []
+}

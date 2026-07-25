@@ -23,7 +23,7 @@ employee's `operating-manual.md`.
 |---|---|---|
 | `opportunity-hunter` | Opportunity Hunter | Live operating component: monitors nineteen sources, scores every opportunity across eleven dimensions, classifies it and routes it downstream with no manual reformatting |
 | `02-Content-Director` | Content Director | Live operating component: converts Market Intelligence signals, recurring opportunity patterns, shipped products and CEO Advisor's daily priority into publish-ready LinkedIn, newsletter, website-insight and product-announcement drafts — never publishes automatically |
-| `03-Product-Manager` | Product Manager | Continuously evaluates whether a signal should become a product, and in which format: toolkit, checklist, executive guide, assessment, course, workshop, or subscription |
+| `03-Product-Manager` | Product Manager | Live operating component: evaluates real signals from Market Intelligence, Opportunity Hunter, Sales Director and Content Director into a real 0-40 score and one of nine formats (toolkit, checklist, executive guide, assessment, course, workshop, subscription, ADGL extension, OPERA module) |
 | `04-Sales-Director` | Sales Director | Maintains every recruiter, consulting firm, prospect and client relationship after first touch; recommends follow-ups daily and drafts personalised outreach so nothing goes cold |
 | `05-Market-Intelligence` | Market Intelligence | Live operating component: monitors thirteen regulatory/vendor/theme sources (EU AI Act, ISO 42001, NIST AI RMF, DORA, GDPR, CBUAE, RBI, Microsoft AI, OpenAI Enterprise, Anthropic, AI Security, AI Governance, Responsible AI), classifies every development against six checks, and routes structured signals to Content Director, Product Manager, Opportunity Hunter and CEO Advisor |
 | `06-CRM` | CRM | Maintains the single record of contacts, companies and relationship status across the pipeline |
@@ -45,6 +45,7 @@ employee's `operating-manual.md`.
 - `executive-dashboard/` — the single entry point every morning: revenue, CEO Advisor's top priority, and everything needing attention across Opportunity Hunter, Revenue Hunter and CRM, generated read-only from their live outputs (`executive-dashboard/runtime/generate.py`)
 - `sales-director/` — Sales Director's proposal preparation engine: turns every `Immediate Proposal`/`Apply`/`Partnership`/`Follow Recruiter` opportunity into a cover letter, proposal, recruiter/client outreach, clarifying questions, recommended pricing and a confidence score, preparation only, never sent (`sales-director/runtime/prepare.py`)
 - `content-director/` — Content Director's draft-generation engine: turns Market Intelligence signals, recurring opportunity patterns, shipped products and CEO Advisor's daily priority into LinkedIn/newsletter/website-insight/product-announcement drafts grounded in real practitioner experience and the product catalogue, never publishes (`content-director/runtime/generate.py`)
+- `product-manager/` — Product Manager's evaluation engine: runs `03-Product-Manager/product-evaluation-framework.md` (Steps 2-4) against real signals from Market Intelligence, Opportunity Hunter, Sales Director and Content Director, producing a real 0-40 score and format per candidate in `product-backlog.json` (`product-manager/runtime/generate.py`)
 - `orchestrator/` — the single entry point for daily operations: runs every employee with a live runtime in dependency order, retries failures, logs everything, and produces the Daily Execution Report (`orchestrator/orchestrator.py`) — see below
 
 ## Status
@@ -53,7 +54,7 @@ employee's `operating-manual.md`.
 |---|---|
 | `opportunity-hunter` | v1 — live operating component: sources, scoring engine, relevance engine, schema, backlog, daily report, integration contract |
 | `02-Content-Director` | Fully defined, plus a live draft-generation engine (`content-director/`): editorial operating system, conversion map, brief/calendar templates, published-content log, content-brief queue, drafts feed to CEO Advisor |
-| `03-Product-Manager` | Fully defined: operating manual, evaluation framework, product backlog, shipped-products log |
+| `03-Product-Manager` | Fully defined, plus a live evaluation engine (`product-manager/`): operating manual, evaluation framework (nine formats), product backlog, shipped-products log |
 | `04-Sales-Director` | Fully defined, plus a live proposal preparation engine (`sales-director/`): operating manual, follow-up priority model, outreach draft template, pricing/confidence model, prepared-proposal feed to CEO Advisor |
 | `05-Market-Intelligence` | v1.0 — live operating component: thirteen tracked sources, classification model, regulatory log, runtime, routes to four downstream employees |
 | `06-CRM` | Fully defined: company intelligence knowledge base |
