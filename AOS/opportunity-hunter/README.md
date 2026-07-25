@@ -40,6 +40,10 @@ scheduler is the next phase, not this one.
   `06-CRM/company-intelligence.json`
 - `proposal-template.md` — the first-touch note used for anything
   classified `Immediate Proposal`
+- `opportunity-relevance-engine.md` — the second-stage filter that runs
+  before scoring: a 0-100 relevance score with worked examples, the
+  penalties, and the threshold below which an opportunity never reaches
+  scoring at all
 
 Start with `opportunity-sources.md`, then `opportunity-scoring-engine.md`.
 
@@ -47,7 +51,10 @@ Start with `opportunity-sources.md`, then `opportunity-scoring-engine.md`.
 
 `runtime/` is this specification running as code: drop manually
 collected opportunities (Markdown or JSON) into `runtime/inbox/`, run
-`python3 runtime/ingest.py`, and it scores, classifies, routes to
+`python3 runtime/ingest.py`, and it runs every record through the
+relevance filter first (`runtime/relevance.py`) — anything below the
+threshold goes to `runtime/rejected/` with a reason and stops there.
+Everything that clears it scores, classifies, routes to
 `08-Revenue-Hunter/pipeline.json` and `06-CRM/company-intelligence.json`,
 and writes the day's report to `runtime/output/` — the same logic
 above, executed rather than described. See the docstring at the top of
@@ -78,9 +85,10 @@ has judged it yet — treat as a starting point to verify), deduplicated
 against `runtime/dedupe-index.json`, and recorded in
 `runtime/snapshots/` regardless of whether it was new. New postings are
 written to `runtime/inbox/` and immediately handed to `ingest.py` — the
-same scoring, classification and routing manual entries go through, with
-no separate logic path. Run `python3 runtime/collect.py` directly, or
-let `.github/workflows/opportunity-collection.yml` run it daily.
+same relevance filter, scoring, classification and routing manual
+entries go through, with no separate logic path. Run
+`python3 runtime/collect.py` directly, or let
+`.github/workflows/opportunity-collection.yml` run it daily.
 
 ## Daily Workflow
 

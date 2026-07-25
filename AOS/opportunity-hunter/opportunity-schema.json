@@ -24,6 +24,7 @@
       "alignmentOPERA": "number — 0-10",
       "longTermRelationshipPotential": "number — 0-10"
     },
+    "relevanceScore": "number — 0-100, per opportunity-relevance-engine.md; every entry here already cleared the relevance threshold (50) — opportunities that didn't are in runtime/rejected/rejected-log.json instead, never here",
     "priorityScore": "number — 0-100, weighted sum per opportunity-scoring-engine.md",
     "band": "string — Priority (80-100), Active (50-79), or Archived (below 50)",
     "classification": "string — one of: Apply, Immediate Proposal, Follow Recruiter, Relationship Building, Partnership, Ignore, Convert into Content, Convert into Product Idea",

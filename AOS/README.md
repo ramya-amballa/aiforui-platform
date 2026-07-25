@@ -49,7 +49,7 @@ employee's `operating-manual.md`.
 
 | AI Employee | Status |
 |---|---|
-| `opportunity-hunter` | v1 — live operating component: sources, scoring engine, schema, backlog, daily report, integration contract |
+| `opportunity-hunter` | v1 — live operating component: sources, scoring engine, relevance engine, schema, backlog, daily report, integration contract |
 | `02-Content-Director` | Fully defined: editorial operating system, conversion map, brief/calendar templates, published-content log |
 | `03-Product-Manager` | Fully defined: operating manual, evaluation framework, product backlog, shipped-products log |
 | `04-Sales-Director` | Fully defined, plus a live proposal preparation engine (`sales-director/`): operating manual, follow-up priority model, outreach draft template, pricing/confidence model, prepared-proposal feed to CEO Advisor |

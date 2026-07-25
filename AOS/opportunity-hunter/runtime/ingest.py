@@ -5,11 +5,14 @@ Opportunity Hunter — Daily Ingestion Workflow (execution mode)
 Usage:
     python3 ingest.py
 
-Reads every file in runtime/inbox/ (Markdown or JSON), scores each
-opportunity with the exact model in ../opportunity-scoring-engine.md,
-classifies it with the same decision tree, appends it to
-../opportunity-schema.json, and routes it downstream with no manual
-reformatting into:
+Reads every file in runtime/inbox/ (Markdown or JSON). Each record
+first passes through relevance.py's relevance filter (see
+../opportunity-relevance-engine.md) — below relevance.RELEVANCE_THRESHOLD,
+it is written to runtime/rejected/rejected-log.json with a reason and
+never scored at all. Everything that clears the threshold is scored
+with the exact model in ../opportunity-scoring-engine.md, classified
+with the same decision tree, appended to ../opportunity-schema.json,
+and routed downstream with no manual reformatting into:
   - 08-Revenue-Hunter/pipeline.json   (Immediate Proposal, Partnership)
   - 06-CRM/company-intelligence.json (Follow Recruiter, Relationship
     Building, Partnership, Immediate Proposal)
@@ -18,9 +21,10 @@ reformatting into:
 
 Then writes today's report to runtime/output/ with the six required
 views (Top 10, Highest Revenue, Highest ADGL, Highest AI Deployment
-Governance, Immediate Application, Relationship Building), and moves
-processed inbox files into runtime/processed/ so a re-run never
-double-ingests the same file.
+Governance, Immediate Application, Relationship Building) for whatever
+passed relevance filtering, a same-day rejected report in
+runtime/rejected/ for whatever didn't, and moves processed inbox files
+into runtime/processed/ so a re-run never double-ingests the same file.
 
 INPUT FORMAT
 
@@ -62,6 +66,8 @@ import sys
 from datetime import date, timedelta
 from pathlib import Path
 
+import relevance
+
 RUNTIME_DIR = Path(__file__).resolve().parent
 OPPORTUNITY_HUNTER_DIR = RUNTIME_DIR.parent
 AOS_DIR = OPPORTUNITY_HUNTER_DIR.parent
@@ -69,12 +75,30 @@ AOS_DIR = OPPORTUNITY_HUNTER_DIR.parent
 INBOX_DIR = RUNTIME_DIR / "inbox"
 PROCESSED_DIR = RUNTIME_DIR / "processed"
 OUTPUT_DIR = RUNTIME_DIR / "output"
+REJECTED_DIR = RUNTIME_DIR / "rejected"
 
 OPPORTUNITY_SCHEMA_PATH = OPPORTUNITY_HUNTER_DIR / "opportunity-schema.json"
 PIPELINE_PATH = AOS_DIR / "08-Revenue-Hunter" / "pipeline.json"
 CRM_PATH = AOS_DIR / "06-CRM" / "company-intelligence.json"
+REJECTED_LOG_PATH = REJECTED_DIR / "rejected-log.json"
 
 TODAY = date.today().isoformat()
+
+DEFAULT_REJECTED_LOG = {
+    "schema": {
+        "id": "string — unique identifier, e.g. rej-0001",
+        "dateRejected": "string — ISO 8601 date",
+        "source": "string",
+        "sourceCategory": "string",
+        "title": "string",
+        "organisation": "string",
+        "url": "string or null",
+        "relevanceScore": "number — 0-100, per ../opportunity-relevance-engine.md",
+        "categoriesMatched": "array of strings — which relevance categories matched, if any",
+        "reason": "string — human-readable explanation of why this fell below the relevance threshold",
+    },
+    "rejected": [],
+}
 
 # opportunity-scoring-engine.md, Step 1
 SCORE_WEIGHTS = {
@@ -271,7 +295,22 @@ def classify(score, scores, source_category, scoped_engagement, recurrence_patte
     return "Apply"
 
 
-def process_record(record, existing_opportunities):
+def build_rejected_entry(record, relevance_result, existing_rejected):
+    return {
+        "id": next_id(existing_rejected, "rej"),
+        "dateRejected": TODAY,
+        "source": record.get("source", ""),
+        "sourceCategory": record.get("sourceCategory", ""),
+        "title": record.get("title", "untitled"),
+        "organisation": record.get("organisation", ""),
+        "url": record.get("url"),
+        "relevanceScore": relevance_result["score"],
+        "categoriesMatched": relevance_result["categoriesMatched"],
+        "reason": relevance_result["reason"],
+    }
+
+
+def process_record(record, existing_opportunities, relevance_score):
     missing = [f for f in REQUIRED_FIELDS if not record.get(f)]
     if missing:
         raise ValueError(f"missing required field(s): {', '.join(missing)}")
@@ -297,6 +336,7 @@ def process_record(record, existing_opportunities):
         "remote": bool(record.get("remote", False)),
         "domainTags": record.get("domainTags", []),
         "scores": scores,
+        "relevanceScore": relevance_score,
         "priorityScore": priority_score,
         "band": band,
         "classification": classification,
@@ -492,6 +532,23 @@ to at least one downstream file. See each opportunity's `routedTo` in
 # Main
 # --------------------------------------------------------------------------
 
+def generate_rejected_report(rejected_today):
+    rows_out = [{"Title": r["title"], "Organisation": r["organisation"], "Relevance": r["relevanceScore"], "Reason": r["reason"]} for r in rejected_today]
+    return f"""# Opportunity Relevance Engine — Daily Rejections
+
+**Date:** {TODAY}
+**Rejected today:** {len(rejected_today)}
+
+{render_table(rows_out, ["Title", "Organisation", "Relevance", "Reason"])}
+
+---
+
+*Rejected before scoring — see opportunity-relevance-engine.md for the model.
+Nothing here was written to opportunity-schema.json, pipeline.json or
+company-intelligence.json. Full history: rejected/rejected-log.json.*
+"""
+
+
 def main():
     records, source_files = load_inbox_records()
     if not records:
@@ -501,36 +558,64 @@ def main():
     schema_data = load_json(OPPORTUNITY_SCHEMA_PATH)
     pipeline_data = load_json(PIPELINE_PATH)
     crm_data = load_json(CRM_PATH)
+    rejected_log = load_json(REJECTED_LOG_PATH) if REJECTED_LOG_PATH.exists() else DEFAULT_REJECTED_LOG
+    rejected_log.setdefault("rejected", [])
 
     processed = []
+    rejected_today = []
+    validation_failures = 0
     for record in records:
+        relevance_result = relevance.compute_relevance(record)
+        if relevance_result["score"] < relevance.RELEVANCE_THRESHOLD:
+            entry = build_rejected_entry(record, relevance_result, rejected_log["rejected"])
+            rejected_log["rejected"].append(entry)
+            rejected_today.append(entry)
+            print(f"  [rejected] {entry['title']} -> relevance {entry['relevanceScore']}/100 — {entry['reason']}")
+            continue
+
         try:
-            opportunity = process_record(record, schema_data["opportunities"])
+            opportunity = process_record(record, schema_data["opportunities"], relevance_result["score"])
             route(opportunity, pipeline_data, crm_data)
             opportunity.pop("_expectedRevenueAmount", None)
             processed.append(opportunity)
-            print(f"  {opportunity['id']}: {opportunity['title']} -> {opportunity['priorityScore']}/100 "
-                  f"({opportunity['band']}) -> {opportunity['classification']}")
+            print(f"  {opportunity['id']}: {opportunity['title']} -> relevance {relevance_result['score']}/100, "
+                  f"priority {opportunity['priorityScore']}/100 ({opportunity['band']}) -> {opportunity['classification']}")
         except ValueError as exc:
+            validation_failures += 1
             print(f"  skip record ({record.get('title', 'untitled')}): {exc}", file=sys.stderr)
 
-    if not processed:
+    if not processed and not rejected_today:
         print("Every record in the inbox failed validation. Nothing was written.", file=sys.stderr)
         return 1
 
-    save_json(OPPORTUNITY_SCHEMA_PATH, schema_data)
-    save_json(PIPELINE_PATH, pipeline_data)
-    save_json(CRM_PATH, crm_data)
+    if rejected_today:
+        REJECTED_DIR.mkdir(exist_ok=True)
+        save_json(REJECTED_LOG_PATH, rejected_log)
+        rejected_report_path = REJECTED_DIR / f"{TODAY}-rejected-report.md"
+        rejected_report_path.write_text(generate_rejected_report(rejected_today), encoding="utf-8")
 
-    OUTPUT_DIR.mkdir(exist_ok=True)
-    report_path = OUTPUT_DIR / f"{TODAY}-daily-report.md"
-    report_path.write_text(generate_report(processed), encoding="utf-8")
+    report_path = None
+    if processed:
+        save_json(OPPORTUNITY_SCHEMA_PATH, schema_data)
+        save_json(PIPELINE_PATH, pipeline_data)
+        save_json(CRM_PATH, crm_data)
+
+        OUTPUT_DIR.mkdir(exist_ok=True)
+        report_path = OUTPUT_DIR / f"{TODAY}-daily-report.md"
+        report_path.write_text(generate_report(processed), encoding="utf-8")
 
     PROCESSED_DIR.mkdir(exist_ok=True)
     for path in sorted(set(source_files)):
         path.rename(PROCESSED_DIR / path.name)
 
-    print(f"\n{len(processed)} opportunities processed. Report: {report_path.relative_to(AOS_DIR.parent)}")
+    summary = f"\n{len(processed)} opportunities processed, {len(rejected_today)} rejected by the relevance engine"
+    if validation_failures:
+        summary += f", {validation_failures} skipped (validation)"
+    if report_path:
+        summary += f". Report: {report_path.relative_to(AOS_DIR.parent)}"
+    else:
+        summary += ". No daily report written (nothing passed the relevance threshold)."
+    print(summary)
     return 0
 
 
