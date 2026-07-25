@@ -54,7 +54,7 @@ show_table(
     rows,
     columns=["title", "organisation", "primaryService", "secondaryServices", "recommendedEngagementType",
              "estimatedProjectSize", "recommendedProposalTemplate", "crossSellOpportunities"],
-    empty_message="No service recommendations yet. Click **Run Service Mapping** above (requires Opportunity Hunter to have run first).",
+    empty_message="No service recommendations yet. Click **Run Service Mapping** above (requires Demand Intelligence to have run first).",
 )
 
 st.divider()

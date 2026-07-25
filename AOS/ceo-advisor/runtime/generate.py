@@ -6,7 +6,7 @@ Usage:
     python3 generate.py
 
 The final step of every AOS Orchestrator run. Reads, read-only, the
-output of every other employee — Opportunity Hunter, Market
+output of every other employee — Demand Intelligence, Market
 Intelligence, CRM, Revenue Hunter, Service Mapping Engine, Sales
 Director, Website Intake, and Daily Brief — and produces three reports:
 
@@ -46,7 +46,7 @@ CONFIG_DIR = RUNTIME_DIR / "config"
 OUTPUT_DIR = RUNTIME_DIR / "output"
 LOGS_DIR = RUNTIME_DIR / "logs"
 
-OPPORTUNITY_SCHEMA_PATH = AOS_DIR / "opportunity-hunter" / "opportunity-schema.json"
+OPPORTUNITY_SCHEMA_PATH = AOS_DIR / "demand-intelligence" / "opportunity-schema.json"
 PIPELINE_PATH = AOS_DIR / "08-Revenue-Hunter" / "pipeline.json"
 CRM_PATH = AOS_DIR / "06-CRM" / "company-intelligence.json"
 MARKET_INTELLIGENCE_FEED_PATH = AOS_DIR / "05-Market-Intelligence" / "runtime" / "output" / "ceo-advisor-feed.json"
@@ -215,14 +215,14 @@ def candidates_from_revenue_hunter(pipeline, config):
     return candidates
 
 
-def candidates_from_opportunity_hunter(schema_data, config):
+def candidates_from_demand_intelligence(schema_data, config):
     candidates = []
     for opp in schema_data.get("opportunities", []):
         if opp.get("band") != "Priority":
             continue
         days_left = days_until(opp.get("nextActionDue"))
         candidates.append({
-            "source": "Opportunity Hunter", "sourceFile": "opportunity-hunter/opportunity-schema.json",
+            "source": "Demand Intelligence", "sourceFile": "demand-intelligence/opportunity-schema.json",
             "label": f"{opp['title']} ({opp['organisation']})",
             "organisation": opp.get("organisation"),
             "opportunityId": opp.get("id"),
@@ -453,7 +453,7 @@ def compute_revenue_impact(pipeline, crm_cold_risk_orgs):
 # --------------------------------------------------------------------------
 # Strategic Alerts — deterministic trend detection over dated real
 # records only; no alert fires without a real, computed threshold
-# crossing (opportunity-hunter/opportunity-schema.json's own
+# crossing (demand-intelligence/opportunity-schema.json's own
 # domainTags/dateFound/classification/source, all real fields).
 # --------------------------------------------------------------------------
 
@@ -483,7 +483,7 @@ def detect_strategic_alerts(schema_data, website_leads, config):
             "type": "ADGL demand increasing",
             "evidence": f"{adgl_recent} ADGL/AI Deployment Governance opportunities in the last {window} days "
                         f"vs {adgl_prior} in the {window} days before that",
-            "source": "Opportunity Hunter (opportunity-hunter/opportunity-schema.json)",
+            "source": "Demand Intelligence (demand-intelligence/opportunity-schema.json)",
         })
 
     recruiter_recent = sum(1 for o in opportunities if o.get("sourceCategory") == "Recruiter Channel"
@@ -495,7 +495,7 @@ def detect_strategic_alerts(schema_data, website_leads, config):
             "type": "Recruiter activity slowing",
             "evidence": f"{recruiter_recent} recruiter-sourced opportunities in the last {window} days "
                         f"vs {recruiter_prior} in the {window} days before that",
-            "source": "Opportunity Hunter (opportunity-hunter/opportunity-schema.json)",
+            "source": "Demand Intelligence (demand-intelligence/opportunity-schema.json)",
         })
 
     recent_leads = [l for l in website_leads.values() if _in_window(l.get("dateReceived"), config["websiteSilenceDays"], 0)]
@@ -517,7 +517,7 @@ def detect_strategic_alerts(schema_data, website_leads, config):
                 "type": "Product opportunity detected",
                 "evidence": f"\"{tag}\" appeared in {count} opportunities in the last {window} days — "
                             f"a recurring pattern worth a productised offer",
-                "source": "Opportunity Hunter (opportunity-hunter/opportunity-schema.json)",
+                "source": "Demand Intelligence (demand-intelligence/opportunity-schema.json)",
             })
 
     classification_recent = {}
@@ -535,7 +535,7 @@ def detect_strategic_alerts(schema_data, website_leads, config):
                 "type": "Consulting demand shift",
                 "evidence": f"\"{classification}\" classification doubled: {recent_count} in the last {window} "
                             f"days vs {prior_count} before",
-                "source": "Opportunity Hunter (opportunity-hunter/opportunity-schema.json)",
+                "source": "Demand Intelligence (demand-intelligence/opportunity-schema.json)",
             })
 
     return alerts
@@ -552,7 +552,7 @@ def build_ignore_list(schema_data, companies, sales_director_feed, config):
             ignore.append({
                 "item": f"{o['title']} ({o['organisation']})",
                 "reason": f"Archived band, priorityScore {o.get('priorityScore', 0)}/100",
-                "source": "Opportunity Hunter (opportunity-hunter/opportunity-schema.json)",
+                "source": "Demand Intelligence (demand-intelligence/opportunity-schema.json)",
             })
 
     for c in companies:
@@ -588,7 +588,7 @@ def build_ignore_list(schema_data, companies, sales_director_feed, config):
 
 def build_weekly_strategic_recommendation(alerts, revenue_impact, period_label="this week"):
     if not alerts:
-        return (f"No strong pattern detected {period_label} across Opportunity Hunter, CRM, or Website Intake — "
+        return (f"No strong pattern detected {period_label} across Demand Intelligence, CRM, or Website Intake — "
                 f"maintain current outreach cadence rather than changing direction on a quiet period.")
 
     priority_order = ["Product opportunity detected", "ADGL demand increasing", "Consulting demand shift",
@@ -769,7 +769,7 @@ def main():
 
     candidates = []
     candidates += candidates_from_revenue_hunter(pipeline, config)
-    candidates += candidates_from_opportunity_hunter(schema_data, config)
+    candidates += candidates_from_demand_intelligence(schema_data, config)
     candidates += candidates_from_sales_director(sales_director_feed, schema_by_id, config)
     crm_candidates, crm_status = candidates_from_crm(crm_data.get("companies", []), config)
     candidates += crm_candidates

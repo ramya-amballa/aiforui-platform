@@ -2,14 +2,14 @@
 
 Turns "an opportunity was found" into "here is the consulting
 engagement it should become." For every opportunity in
-`opportunity-hunter/opportunity-schema.json`, deterministically
+`demand-intelligence/opportunity-schema.json`, deterministically
 computes: Primary Service, Secondary Services, Recommended Engagement
 Type, Estimated Project Size, Recommended Proposal Template, and
 Cross-Sell Opportunities.
 
-Introduced in AOS Sprint 3, after Opportunity Hunter, Revenue Hunter
+Introduced in AOS Sprint 3, after Demand Intelligence, Revenue Hunter
 and Sales Director were already live. This engine does not change any
-of them — it reads Opportunity Hunter's schema read-only, and Sales
+of them — it reads Demand Intelligence's schema read-only, and Sales
 Director reads this engine's output read-only in turn.
 
 ## Files
@@ -30,7 +30,7 @@ Director reads this engine's output read-only in turn.
 
 ## How It Fits AOS
 
-- **Reads from:** `opportunity-hunter/opportunity-schema.json`
+- **Reads from:** `demand-intelligence/opportunity-schema.json`
   (required), `08-Revenue-Hunter/pipeline.json` and
   `06-CRM/company-intelligence.json` (both optional enrichment only —
   a real revenue figure or an active-client relationship, when

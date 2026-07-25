@@ -1,6 +1,6 @@
 {
   "schema": {
-    "opportunityId": "string — matches opportunity-hunter/opportunity-schema.json's id",
+    "opportunityId": "string — matches demand-intelligence/opportunity-schema.json's id",
     "datePrepared": "string — ISO 8601 date",
     "status": "string — Proposal Ready, Needs Review, or Ready To Send",
     "packagePath": "string — path to the generated package, relative to the repo root"

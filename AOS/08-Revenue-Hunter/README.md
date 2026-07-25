@@ -7,11 +7,11 @@ grants, partnerships, product ideas, and licensing, so the founder
 always knows the highest-value next move across the whole business,
 not just the newest lead.
 
-## How This Differs From Opportunity Hunter
+## How This Differs From Demand Intelligence
 
-`opportunity-hunter` scans external sources and scores individual
+`demand-intelligence` scans external sources and scores individual
 opportunities as they appear: sourcing, breadth, first contact.
-Revenue Hunter owns the full pipeline: everything Opportunity Hunter
+Revenue Hunter owns the full pipeline: everything Demand Intelligence
 surfaces, plus recurring or upsell potential from existing clients
 (from `06-CRM`), partnership and licensing possibilities, and product
 ideas with revenue potential (from `03-Product-Manager`). Revenue

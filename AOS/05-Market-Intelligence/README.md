@@ -21,6 +21,6 @@ Start with `operating-manual.md`.
 `runtime/` is this specification running as code: `python3
 runtime/monitor.py` checks every configured source, classifies every
 new development, and routes structured records to Content Director,
-Product Manager, Opportunity Hunter and CEO Advisor. See
+Product Manager, Demand Intelligence and CEO Advisor. See
 `market-intelligence-classification-model.md`, then `runtime/monitor.py`'s
 own docstring.

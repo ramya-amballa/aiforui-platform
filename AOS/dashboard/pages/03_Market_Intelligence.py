@@ -13,7 +13,7 @@ from utils.state import bump_refresh
 apply_page_config("Market Intelligence", "◇")
 
 st.title("Market Intelligence")
-st.caption("Monitors configured sources for regulatory, competitive, and consulting-demand signals, and routes structured records to Content Director, Product Manager, Opportunity Hunter, and CEO Advisor.")
+st.caption("Monitors configured sources for regulatory, competitive, and consulting-demand signals, and routes structured records to Content Director, Product Manager, Demand Intelligence, and CEO Advisor.")
 
 if st.button("Check Market", type="primary"):
     with st.spinner("Checking configured sources..."):

@@ -23,7 +23,7 @@ state, not a mutation of the record itself.
 | Source | What's read | Why this isn't duplicated logic |
 |---|---|---|
 | `06-CRM/company-intelligence.json` | Every field on every company record | The relationship record itself — read, never written |
-| `opportunity-hunter/opportunity-schema.json` | Every opportunity, grouped by `organisation`, for a real opportunity history | A count and a most-recent date of real records, not a re-scored opinion about them |
+| `demand-intelligence/opportunity-schema.json` | Every opportunity, grouped by `organisation`, for a real opportunity history | A count and a most-recent date of real records, not a re-scored opinion about them |
 | `sales-director/runtime/processed-index.json` | Every prepared package, cross-referenced to its opportunity's `organisation` | A real proposal history — which company, when, and Sales Director's own status, never re-interpreted |
 | `08-Revenue-Hunter/pipeline.json` | Every open item, grouped by `organisation` | A real open-pipeline count and weighted value per company, using the same currency parser Revenue Hunter and Executive Dashboard already ship |
 

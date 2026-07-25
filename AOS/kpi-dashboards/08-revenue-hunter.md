@@ -2,7 +2,7 @@
 
 ## Inputs
 
-Opportunity Hunter's `Priority` items, Product Manager's 30+-scored
+Demand Intelligence's `Priority` items, Product Manager's 30+-scored
 candidates, CRM upsell signals, Sales Director stage changes.
 
 ## Outputs

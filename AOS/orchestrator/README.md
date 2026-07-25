@@ -1,7 +1,7 @@
 # AOS Orchestrator (v1.0)
 
 The single entry point for daily AOS operations. Before this build, each
-live employee (`opportunity-hunter/runtime/collect.py`,
+live employee (`demand-intelligence/runtime/collect.py`,
 `sales-director/runtime/prepare.py`, `executive-dashboard/runtime/generate.py`)
 was invoked separately, by hand or by its own GitHub Actions workflow.
 This is the coordination layer that turns those independent scripts

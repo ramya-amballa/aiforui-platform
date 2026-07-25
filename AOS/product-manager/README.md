@@ -3,7 +3,7 @@
 The executable half of Product Manager: runs
 `03-Product-Manager/product-evaluation-framework.md` — the existing,
 already-specified four-dimension scoring model — against real signals
-from Market Intelligence, Opportunity Hunter, Sales Director and
+from Market Intelligence, Demand Intelligence, Sales Director and
 Content Director, and decides `candidate` / `in-development` / `parked`
 for each. Nothing here is a new framework; it's the existing one,
 executed for the first time.
@@ -22,7 +22,7 @@ there. This folder is the newer, narrower half of the same employee.
 ## How It Fits AOS
 
 - **Reads from:** `product-backlog.json` (its own unscored entries),
-  `opportunity-hunter/opportunity-schema.json`,
+  `demand-intelligence/opportunity-schema.json`,
   `sales-director/runtime/processed-index.json`,
   `content-director/runtime/queue/content-queue.json`,
   `sales-director/runtime/config/practitioner-bank.json` — all

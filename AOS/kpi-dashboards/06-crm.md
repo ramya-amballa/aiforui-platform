@@ -2,7 +2,7 @@
 
 ## Inputs
 
-Every company/contact encounter reported by Opportunity Hunter, Sales
+Every company/contact encounter reported by Demand Intelligence, Sales
 Director and Market Intelligence.
 
 ## Outputs
@@ -37,6 +37,6 @@ organisation.
 
 The CRM is why the practice never starts from scratch on a company it
 has already met. A gap here silently costs every other employee time
-and quality — Sales Director drafts generically, Opportunity Hunter
+and quality — Sales Director drafts generically, Demand Intelligence
 re-qualifies from zero, Revenue Hunter under-values a relationship it
 doesn't have context on.

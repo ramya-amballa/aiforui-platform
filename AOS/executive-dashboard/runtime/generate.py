@@ -7,7 +7,7 @@ Usage:
 
 Reads the three live outputs that already exist — nothing new is
 computed or stored as a separate source of truth:
-  - opportunity-hunter/opportunity-schema.json
+  - demand-intelligence/opportunity-schema.json
   - 08-Revenue-Hunter/pipeline.json
   - 06-CRM/company-intelligence.json
 
@@ -41,7 +41,7 @@ RUNTIME_DIR = Path(__file__).resolve().parent
 DASHBOARD_DIR = RUNTIME_DIR.parent
 AOS_DIR = DASHBOARD_DIR.parent
 
-OPPORTUNITY_SCHEMA_PATH = AOS_DIR / "opportunity-hunter" / "opportunity-schema.json"
+OPPORTUNITY_SCHEMA_PATH = AOS_DIR / "demand-intelligence" / "opportunity-schema.json"
 PIPELINE_PATH = AOS_DIR / "08-Revenue-Hunter" / "pipeline.json"
 CRM_PATH = AOS_DIR / "06-CRM" / "company-intelligence.json"
 
@@ -219,7 +219,7 @@ def ceo_advisor_candidates(opportunities, pipeline, crm_status):
             "label": f"Act on {opp.get('classification', 'opportunity').lower()} — {opp.get('organisation')} ({opp.get('title')})",
             "value": value,
             "effort": opp.get("scores", {}).get("timeRequired", 5),
-            "reason": f"Opportunity Hunter Priority band (score {opp.get('priorityScore')}/100), "
+            "reason": f"Demand Intelligence Priority band (score {opp.get('priorityScore')}/100), "
                       f"classified {opp.get('classification')}",
             "estimated_value": None,
         })
@@ -319,7 +319,7 @@ def generate(opportunities, pipeline, crm):
     lines.append("")
     lines.append(f"**Generated:** {TODAY.isoformat()}")
     lines.append("")
-    lines.append("*Read-only view over `opportunity-hunter/opportunity-schema.json`, "
+    lines.append("*Read-only view over `demand-intelligence/opportunity-schema.json`, "
                   "`08-Revenue-Hunter/pipeline.json` and `06-CRM/company-intelligence.json`. "
                   "Regenerate with `python3 runtime/generate.py`; do not hand-edit.*")
     lines.append("")
@@ -351,12 +351,12 @@ def generate(opportunities, pipeline, crm):
             for r in runners_up:
                 lines.append(f"- {r['label']} — {r['reason']}")
     else:
-        lines.append("_No Priority-band candidates yet. Run Opportunity Hunter's ingestion "
+        lines.append("_No Priority-band candidates yet. Run Demand Intelligence's ingestion "
                       "workflow to populate live data._")
     lines.append("")
 
-    # Opportunity Hunter
-    lines.append("## Opportunity Hunter")
+    # Demand Intelligence
+    lines.append("## Demand Intelligence")
     lines.append("")
     lines.append("### Top 10 Opportunities")
     lines.append(table([{"Title": o["title"], "Organisation": o["organisation"], "Score": o["priorityScore"],
@@ -428,7 +428,7 @@ def generate(opportunities, pipeline, crm):
 def daily_summary(rev, priorities, crm_status, open_opps, open_pipe):
     if not open_opps and not open_pipe:
         return ("AI for U&I's pipeline is currently empty — no opportunities have been logged yet. "
-                "Run Opportunity Hunter's ingestion workflow (`opportunity-hunter/runtime/ingest.py`) "
+                "Run Demand Intelligence's ingestion workflow (`demand-intelligence/runtime/ingest.py`) "
                 "to begin populating live data before this summary reflects real activity.")
 
     parts = [

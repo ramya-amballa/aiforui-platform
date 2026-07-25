@@ -29,15 +29,15 @@
       ]
     },
     {
-      "key": "opportunity-hunter",
-      "name": "Opportunity Hunter",
-      "folder": "opportunity-hunter",
-      "script": "opportunity-hunter/runtime/collect.py",
+      "key": "demand-intelligence",
+      "name": "Demand Intelligence",
+      "folder": "demand-intelligence",
+      "script": "demand-intelligence/runtime/collect.py",
       "dependsOn": [],
       "outputPaths": [
-        "opportunity-hunter/runtime/output/{date}-daily-report.md",
-        "opportunity-hunter/runtime/rejected/{date}-rejected-report.md",
-        "opportunity-hunter/runtime/snapshots/{date}-collection-snapshot.json"
+        "demand-intelligence/runtime/output/{date}-daily-report.md",
+        "demand-intelligence/runtime/rejected/{date}-rejected-report.md",
+        "demand-intelligence/runtime/snapshots/{date}-collection-snapshot.json"
       ]
     },
     {
@@ -45,7 +45,7 @@
       "name": "Revenue Hunter",
       "folder": "08-Revenue-Hunter",
       "script": "revenue-hunter/runtime/generate.py",
-      "dependsOn": ["opportunity-hunter"],
+      "dependsOn": ["demand-intelligence"],
       "note": "Implemented in revenue-hunter/, not 08-Revenue-Hunter/ — see dependency-map.md.",
       "outputPaths": [
         "revenue-hunter/runtime/output/{date}-revenue-dashboard.md",
@@ -57,7 +57,7 @@
       "name": "CRM",
       "folder": "06-CRM",
       "script": "crm/runtime/generate.py",
-      "dependsOn": ["opportunity-hunter", "revenue-hunter"],
+      "dependsOn": ["demand-intelligence", "revenue-hunter"],
       "note": "Implemented in crm/, not 06-CRM/ — see dependency-map.md. Read-only report generator over company-intelligence.json; never writes relationshipTemperature/nextFollowUpDue/outreachHistory, which remain Sales Director's exclusively. Also reads sales-director/runtime/processed-index.json for proposal history, but CRM runs before Sales Director in the fixed order, so that read reflects the previous run's state, not this run's — a one-cycle-behind limitation, not a dependsOn edge (see crm-runtime-notes.md and revenue-hunter-runtime-notes.md for the same pattern).",
       "outputPaths": [
         "crm/runtime/output/{date}-daily-follow-up-queue.md",
@@ -70,7 +70,7 @@
       "name": "Service Mapping Engine",
       "folder": "service-mapping",
       "script": "service-mapping/runtime/generate.py",
-      "dependsOn": ["opportunity-hunter"],
+      "dependsOn": ["demand-intelligence"],
       "note": "New in Sprint 3 — deterministically maps every opportunity to a Primary Service, Secondary Services, Recommended Engagement Type, Estimated Project Size, Recommended Proposal Template and Cross-Sell Opportunities. Reads opportunity-schema.json (required) plus pipeline.json/company-intelligence.json (optional enrichment only), all read-only; runs after CRM and before Sales Director so Sales Director can read its output the same day. See service-mapping/service-mapping-model.md.",
       "outputPaths": [
         "service-mapping/runtime/output/{date}-service-recommendation-report.md",
@@ -82,7 +82,7 @@
       "name": "Sales Director",
       "folder": "sales-director",
       "script": "sales-director/runtime/prepare.py",
-      "dependsOn": ["opportunity-hunter", "revenue-hunter", "crm", "service-mapping"],
+      "dependsOn": ["demand-intelligence", "revenue-hunter", "crm", "service-mapping"],
       "outputPaths": [
         "sales-director/runtime/output/{date}-sales-director-report.md",
         "sales-director/runtime/output/ceo-advisor-feed.json"
@@ -115,7 +115,7 @@
       "name": "Daily Brief",
       "folder": "07-Daily-Brief",
       "script": "executive-dashboard/runtime/generate.py",
-      "dependsOn": ["opportunity-hunter", "revenue-hunter", "crm", "sales-director"],
+      "dependsOn": ["demand-intelligence", "revenue-hunter", "crm", "sales-director"],
       "note": "Implemented in executive-dashboard/, not 07-Daily-Brief/ — see dependency-map.md. Sprint 5 moved CEO Advisor to run after Daily Brief (see below), so Daily Brief's dependsOn no longer includes ceo-advisor — a step cannot depend on one that has not run yet. Daily Brief's own embedded 'Today's Priorities' section (unchanged since its original build) still runs here, independent of and unaffected by CEO Advisor's own, separate, later analysis.",
       "outputPaths": [
         "executive-dashboard/executive-dashboard.md",
@@ -132,7 +132,7 @@
       "name": "CEO Advisor",
       "folder": "09-CEO-Advisor",
       "script": "ceo-advisor/runtime/generate.py",
-      "dependsOn": ["market-intelligence", "website-intake", "opportunity-hunter", "revenue-hunter", "crm",
+      "dependsOn": ["market-intelligence", "website-intake", "demand-intelligence", "revenue-hunter", "crm",
                     "service-mapping", "sales-director", "product-manager", "content-director", "daily-brief"],
       "note": "Implemented in ceo-advisor/, not 09-CEO-Advisor/ — see dependency-map.md. New in Sprint 5, and now genuinely the final step of every Orchestrator run, per explicit instruction — dependsOn lists every other employee to guarantee that, even though its own reads (see ceo-advisor/ceo-advisor-runtime-notes.md) are scoped to exactly Sprint 5's eight named sources (Product Manager and Content Director are depended-on for ordering only, not read).",
       "outputPaths": [

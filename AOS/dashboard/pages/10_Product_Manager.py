@@ -14,7 +14,7 @@ from utils.state import bump_refresh
 apply_page_config("Product Manager", "◫")
 
 st.title("Product Manager")
-st.caption("Evaluates product candidates from Market Intelligence, Opportunity Hunter, Sales Director's recurring domains, and Content Director's signals.")
+st.caption("Evaluates product candidates from Market Intelligence, Demand Intelligence, Sales Director's recurring domains, and Content Director's signals.")
 
 if st.button("Review Product Ideas", type="primary"):
     with st.spinner("Evaluating backlog candidates..."):

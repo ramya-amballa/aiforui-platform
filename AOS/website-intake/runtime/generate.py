@@ -19,7 +19,7 @@ mechanism). For each one, in order:
      potential, urgency, industry, geography — organisation size is
      always "Unknown", since the form collects nothing that could
      support even a heuristic guess at it).
-  4. Builds a real opportunity-hunter/runtime/inbox/-shaped record and
+  4. Builds a real demand-intelligence/runtime/inbox/-shaped record and
      hands off to ingest.py (subprocess, exactly as the Orchestrator
      itself invokes every employee) — the SAME relevance filter,
      scoring, classification and routing to Revenue Hunter's
@@ -42,7 +42,7 @@ mechanism). For each one, in order:
      discovery call agenda, follow-up tasks) and a CEO Advisor feed
      entry.
 
-Never re-implements Opportunity Hunter's relevance/scoring/
+Never re-implements Demand Intelligence's relevance/scoring/
 classification, Revenue Hunter's scoring, CRM's schema, or the Service
 Mapping Engine's decision tables — every one of those is invoked as
 its own already-built script, exactly as documented above.
@@ -75,12 +75,12 @@ OUTPUT_DIR = RUNTIME_DIR / "output"
 LOGS_DIR = RUNTIME_DIR / "logs"
 LEADS_PATH = WEBSITE_INTAKE_DIR / "leads.json"
 
-OPPORTUNITY_HUNTER_INBOX = AOS_DIR / "opportunity-hunter" / "runtime" / "inbox"
-OPPORTUNITY_SCHEMA_PATH = AOS_DIR / "opportunity-hunter" / "opportunity-schema.json"
+DEMAND_INTELLIGENCE_INBOX = AOS_DIR / "demand-intelligence" / "runtime" / "inbox"
+OPPORTUNITY_SCHEMA_PATH = AOS_DIR / "demand-intelligence" / "opportunity-schema.json"
 CRM_PATH = AOS_DIR / "06-CRM" / "company-intelligence.json"
 SERVICE_RECOMMENDATIONS_PATH = AOS_DIR / "service-mapping" / "service-recommendations.json"
 
-INGEST_SCRIPT = AOS_DIR / "opportunity-hunter" / "runtime" / "ingest.py"
+INGEST_SCRIPT = AOS_DIR / "demand-intelligence" / "runtime" / "ingest.py"
 REVENUE_HUNTER_SCRIPT = AOS_DIR / "revenue-hunter" / "runtime" / "generate.py"
 SERVICE_MAPPING_SCRIPT = AOS_DIR / "service-mapping" / "runtime" / "generate.py"
 
@@ -104,7 +104,7 @@ DEFAULT_LEADS = {
             "geography": "string — best-effort keyword inference from the message, or 'Not specified'",
             "organisationSize": "string — always 'Unknown'; the form collects nothing that could support even a heuristic guess",
         },
-        "opportunityId": "string or null — the opportunity-hunter/opportunity-schema.json id this lead became, once ingest.py has processed it",
+        "opportunityId": "string or null — the demand-intelligence/opportunity-schema.json id this lead became, once ingest.py has processed it",
         "salesPackage": {
             "crmRecordExists": "boolean",
             "recommendedService": "string or null — from service-mapping/service-recommendations.json, once mapped",
@@ -274,7 +274,7 @@ def build_opportunity_scores(lead_classification, qualification, raw, config):
 
 
 # --------------------------------------------------------------------------
-# 4. Build the opportunity-hunter inbox record and hand off to ingest.py
+# 4. Build the demand-intelligence inbox record and hand off to ingest.py
 # --------------------------------------------------------------------------
 
 def organisation_from(raw):
@@ -498,14 +498,14 @@ def main():
         domain_tags = config["domainTagsByClassification"].get(lead_classification, [])
 
         opportunity_input = build_opportunity_input_record(raw, lead_id, lead_classification, qualification, config)
-        OPPORTUNITY_HUNTER_INBOX.mkdir(exist_ok=True)
-        inbox_path = OPPORTUNITY_HUNTER_INBOX / f"{TODAY.isoformat()}-website-lead-{lead_id}.json"
+        DEMAND_INTELLIGENCE_INBOX.mkdir(exist_ok=True)
+        inbox_path = DEMAND_INTELLIGENCE_INBOX / f"{TODAY.isoformat()}-website-lead-{lead_id}.json"
         save_json(inbox_path, [opportunity_input])
 
         print(f"  {lead_id}: {organisation} -> {lead_classification} ({reason})")
         fh.write(f"{lead_id}: {organisation} -> {lead_classification} ({reason})\n")
 
-        # Hand off to Opportunity Hunter's own ingestion — relevance
+        # Hand off to Demand Intelligence's own ingestion — relevance
         # filter, scoring, classification, routing to Revenue
         # Hunter/CRM, all unchanged and untouched by this script.
         run_script(INGEST_SCRIPT, fh)

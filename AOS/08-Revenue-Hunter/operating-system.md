@@ -15,19 +15,19 @@ Revenue Hunter tracks nine revenue types:
 
 | Type | Typical size | Typical source |
 |---|---|---|
-| Consulting project | Medium-large | Opportunity Hunter, referral, inbound |
-| Enterprise contract | Large | Opportunity Hunter, CRM upsell |
+| Consulting project | Medium-large | Demand Intelligence, referral, inbound |
+| Enterprise contract | Large | Demand Intelligence, CRM upsell |
 | Workshop | Small-medium | Content, referral |
-| Speaking engagement | Small direct, large indirect (authority) | Opportunity Hunter, CRM |
+| Speaking engagement | Small direct, large indirect (authority) | Demand Intelligence, CRM |
 | Paid advisory call | Small | Website, LinkedIn, newsletter |
-| Grant | Medium | Opportunity Hunter |
+| Grant | Medium | Demand Intelligence |
 | Partnership | Variable, often indirect | Market Intelligence, referral |
 | Product idea (as revenue) | Small-medium, recurring | Product Manager |
 | Licensing | Variable, recurring | Product Manager, Content Director |
 
 ## How Revenue Hunter Fits AOS
 
-- **Reads from:** `opportunity-hunter/opportunity-schema.json` (sourced
+- **Reads from:** `demand-intelligence/opportunity-schema.json` (sourced
   leads), `06-CRM/company-intelligence.json` (existing relationships
   with upsell or renewal potential), `03-Product-Manager` (product and
   licensing ideas with revenue potential), `05-Market-Intelligence`

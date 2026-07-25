@@ -5,7 +5,7 @@ Sales Director — Proposal Preparation Engine (execution mode)
 Usage:
     python3 prepare.py
 
-Reads every opportunity in ../../opportunity-hunter/opportunity-schema.json
+Reads every opportunity in ../../demand-intelligence/opportunity-schema.json
 classified Immediate Proposal, Apply, Partnership or Follow Recruiter,
 and — for any not already prepared — writes a full package to
 output/packages/: cover letter, proposal, recruiter outreach, client
@@ -45,7 +45,7 @@ SALES_DIRECTOR_DIR = RUNTIME_DIR.parent
 AOS_DIR = SALES_DIRECTOR_DIR.parent
 REPO_ROOT = AOS_DIR.parent
 
-OPPORTUNITY_SCHEMA_PATH = AOS_DIR / "opportunity-hunter" / "opportunity-schema.json"
+OPPORTUNITY_SCHEMA_PATH = AOS_DIR / "demand-intelligence" / "opportunity-schema.json"
 PIPELINE_PATH = AOS_DIR / "08-Revenue-Hunter" / "pipeline.json"
 CRM_PATH = AOS_DIR / "06-CRM" / "company-intelligence.json"
 SERVICE_RECOMMENDATIONS_PATH = AOS_DIR / "service-mapping" / "service-recommendations.json"
@@ -58,7 +58,7 @@ CEO_FEED_PATH = OUTPUT_DIR / "ceo-advisor-feed.json"
 
 TODAY = date.today().isoformat()
 
-# opportunity-hunter/opportunity-scoring-engine.md's eight classifications;
+# demand-intelligence/opportunity-scoring-engine.md's eight classifications;
 # these four are the ones an outbound package makes sense for.
 TARGET_CLASSIFICATIONS = {"Immediate Proposal", "Apply", "Partnership", "Follow Recruiter"}
 
@@ -72,7 +72,7 @@ CONFIDENCE_WEIGHTS = {
 
 DEFAULT_PROCESSED_INDEX = {
     "schema": {
-        "opportunityId": "string — matches opportunity-hunter/opportunity-schema.json's id",
+        "opportunityId": "string — matches demand-intelligence/opportunity-schema.json's id",
         "datePrepared": "string — ISO 8601 date",
         "status": "string — Proposal Ready, Needs Review, or Ready To Send",
         "packagePath": "string — path to the generated package, relative to the repo root",

@@ -2,7 +2,7 @@
 
 The executable half of CRM: a read-only report generator over
 `06-CRM/company-intelligence.json`, enriched with real opportunity,
-proposal, and pipeline history from Opportunity Hunter, Sales Director
+proposal, and pipeline history from Demand Intelligence, Sales Director
 and Revenue Hunter. Never writes to the relationship record itself —
 see `crm-runtime-notes.md`'s "The One Rule."
 
@@ -20,7 +20,7 @@ see `crm-runtime-notes.md`'s "The One Rule."
 ## How It Fits AOS
 
 - **Reads from:** `06-CRM/company-intelligence.json`,
-  `opportunity-hunter/opportunity-schema.json`,
+  `demand-intelligence/opportunity-schema.json`,
   `sales-director/runtime/processed-index.json`,
   `08-Revenue-Hunter/pipeline.json` — all read-only
 - **Writes to:** `runtime/output/`, `runtime/logs/` only

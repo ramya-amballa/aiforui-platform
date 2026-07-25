@@ -1,0 +1,72 @@
+{
+  "_comment": "Per-connector configuration. 'ready' connectors call a real public API today; 'connectorReady' ones have the full pipeline wired but need credentials or a target list before they return anything; 'deprioritized' connectors are real and working but the founder has explicitly decided not to keep investing effort chasing their activation, either because automation is prohibited (LinkedIn) or because a generic job-board feed is low-value for this consulting model (proven by RemoteOK returning 13 postings with 0 above the relevance threshold on a real run — see runtime/logs). Fill in the empty lists/keys to activate a connector, or set the equivalent environment variable instead (see config/credentials.template.env) — either way, no code changes needed. See ../../CONNECTOR-CONFIGURATION-GUIDE.md for full activation steps and ../integration-status-dashboard.md for current status. demandSignals is the primary discovery mode now — see collectors/demand_signals.py.",
+  "demandSignals": {
+    "status": "ready",
+    "feedUrls": [
+      "https://www.microsoft.com/en-us/microsoft-copilot/blog/copilot-studio/feed/",
+      "https://www.microsoft.com/en-us/microsoft-copilot/blog/feed/",
+      "https://openai.com/news/rss.xml",
+      "https://venturebeat.com/category/ai/feed/",
+      "https://techcrunch.com/category/artificial-intelligence/feed/"
+    ],
+    "model": "claude-haiku-4-5-20251001",
+    "_note": "Requires ANTHROPIC_API_KEY (see config/credentials.template.env) — without it this connector skips cleanly, like any other missing-credential connector. The Microsoft Copilot Studio feed (first URL) is confirmed live and does carry named-enterprise-adoption stories (verified 2026-07-25). The OpenAI/VentureBeat/TechCrunch URLs are each publisher's standard, long-standing feed path but could not be independently fetched from this build environment's restricted network — verify reachability once running in production before relying on them. No official Anthropic RSS feed exists (only unofficial third-party scrapers) — deliberately not added rather than depending on something unofficial and fragile."
+  },
+  "greenhouse": {
+    "status": "ready",
+    "boardTokens": [],
+    "_note": "Greenhouse's public Job Board API (boards-api.greenhouse.io) has no cross-company search; add each company's board token (the slug in their /jobs page URL) to search it. Or set GREENHOUSE_BOARD_TOKENS as a comma-separated list."
+  },
+  "lever": {
+    "status": "ready",
+    "companies": [],
+    "_note": "Lever's public Postings API (api.lever.co) is per-company, same as Greenhouse; add each company's Lever slug. Or set LEVER_COMPANIES as a comma-separated list."
+  },
+  "ashby": {
+    "status": "ready",
+    "jobBoardNames": [],
+    "_note": "Ashby's public Job Board API (api.ashbyhq.com/posting-api) is per-organisation; add each org's job board name. Or set ASHBY_JOB_BOARD_NAMES as a comma-separated list."
+  },
+  "remoteok": {
+    "status": "ready",
+    "_note": "RemoteOK's public API (remoteok.com/api) is a single global feed of remote listings; no per-company config needed."
+  },
+  "upwork": {
+    "status": "connectorReady",
+    "apiKey": null,
+    "apiSecret": null,
+    "refreshToken": null,
+    "graphqlQuery": null,
+    "_note": "Upwork's job-search API requires OAuth2 (an approved developer app plus a refresh token obtained via a real Upwork user authorizing it) and is queried via GraphQL. The connector's OAuth2 token-refresh and GraphQL request code is real and wired; it returns nothing until apiKey/apiSecret/refreshToken are supplied. graphqlQuery lets you override the connector's default query if Upwork's schema has changed — see collectors/upwork.py's docstring and CONNECTOR-CONFIGURATION-GUIDE.md. Prefer setting these via environment variables (UPWORK_API_KEY, UPWORK_API_SECRET, UPWORK_REFRESH_TOKEN) rather than committing real values here — see config/credentials.template.env."
+  },
+  "linkedinJobs": {
+    "status": "deprioritized",
+    "apiKey": null,
+    "_note": "Deprioritized by explicit founder decision (2026-07-25): LinkedIn's Terms of Service prohibit scraping, and its official Jobs API/Talent Solutions requires a partner-approval process with no self-serve path — not worth continued pursuit for an employment-intelligence use case Demand Signals has superseded anyway. Code stays wired in case partner access is ever granted for an unrelated reason; not being actively chased."
+  },
+  "googleJobs": {
+    "status": "deprioritized",
+    "apiKey": null,
+    "_note": "Deprioritized by explicit founder decision (2026-07-25): a generic jobs aggregator has the same low-signal problem RemoteOK demonstrated on a real run (13 postings, 0 above the relevance threshold) — not worth a paid third-party SERP API for this consulting model. Demand Signals is the primary discovery mode now."
+  },
+  "wellfound": {
+    "status": "deprioritized",
+    "apiKey": null,
+    "_note": "Deprioritized by explicit founder decision (2026-07-25): Wellfound has no public API and is startup-hiring-focused — low-value for an AI governance consulting model even if access existed. Demand Signals is the primary discovery mode now."
+  },
+  "flexjobs": {
+    "status": "deprioritized",
+    "apiKey": null,
+    "_note": "Deprioritized by explicit founder decision (2026-07-25): requires a paid account for a generic remote-jobs board with the same low-signal problem RemoteOK demonstrated. Demand Signals is the primary discovery mode now."
+  },
+  "uaeRecruiters": {
+    "status": "connectorReady",
+    "careerPageUrls": [],
+    "_note": "Career pages vary per recruiter/agency with no shared API; add each real career-page URL to monitor once identified."
+  },
+  "consultingFirms": {
+    "status": "connectorReady",
+    "careerPageUrls": [],
+    "_note": "Same as uaeRecruiters: add each firm's real career-page URL once identified."
+  }
+}

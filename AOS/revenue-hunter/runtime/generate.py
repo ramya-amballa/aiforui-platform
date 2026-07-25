@@ -44,7 +44,7 @@ AOS_DIR = REVENUE_HUNTER_DIR.parent
 REPO_ROOT = AOS_DIR.parent
 
 PIPELINE_PATH = AOS_DIR / "08-Revenue-Hunter" / "pipeline.json"
-OPPORTUNITY_SCHEMA_PATH = AOS_DIR / "opportunity-hunter" / "opportunity-schema.json"
+OPPORTUNITY_SCHEMA_PATH = AOS_DIR / "demand-intelligence" / "opportunity-schema.json"
 CRM_PATH = AOS_DIR / "06-CRM" / "company-intelligence.json"
 SALES_DIRECTOR_PROCESSED_PATH = AOS_DIR / "sales-director" / "runtime" / "processed-index.json"
 PRODUCT_BACKLOG_PATH = AOS_DIR / "03-Product-Manager" / "product-backlog.json"
@@ -69,7 +69,7 @@ CRM_UNCLEAR_EXPECTED_REVENUE = 3
 
 DEFAULT_PROCESSED_INDEX = {
     "schema": {
-        "addedFromOpportunities": "array of opportunity-hunter ids already admitted to pipeline.json",
+        "addedFromOpportunities": "array of demand-intelligence ids already admitted to pipeline.json",
         "addedFromCrm": "array of CRM companyName values already admitted as upsell/renewal candidates",
     },
     "addedFromOpportunities": [],

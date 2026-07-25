@@ -56,7 +56,7 @@ is "not applicable, here's why":
 | LinkedIn idea | `02-Content-Director` | A post explaining what changed and what it actually means for a practitioner, not a summary of the text |
 | Newsletter idea | `02-Content-Director` | A longer treatment for the next AI for U&I newsletter issue |
 | Product update | `03-Product-Manager` | Does this change an existing framework, playbook or the Executive Capability Overview, or justify a new product? |
-| Consulting opportunity | `opportunity-hunter`, logged to `08-Revenue-Hunter`'s pipeline if pursued | Who does this create urgency for, and is it worth reaching out to them directly? |
+| Consulting opportunity | `demand-intelligence`, logged to `08-Revenue-Hunter`'s pipeline if pursued | Who does this create urgency for, and is it worth reaching out to them directly? |
 
 ## Daily Output
 
@@ -72,7 +72,7 @@ every source in `runtime/config/sources.json`, applies
 `market-intelligence-classification-model.md`'s six checks to every
 new development, logs it to `regulatory-log.json`, and routes
 structured (never drafted) records to `02-Content-Director`,
-`03-Product-Manager`, `opportunity-hunter`, and `09-CEO-Advisor`. Run
+`03-Product-Manager`, `demand-intelligence`, and `09-CEO-Advisor`. Run
 it with `python3 runtime/monitor.py`, or let the AOS Orchestrator run
 it as step 1 of the daily sequence. See
 `market-intelligence-classification-model.md` for the model and

@@ -22,11 +22,11 @@ individual employee's script directly — see that file.
 
 Fixed order, per the founder's instruction — see `dependency-map.md`
 for why this order holds. Sprint 3 inserted the Service Mapping Engine
-as step 6 (its only hard dependency is Opportunity Hunter; it runs
+as step 6 (its only hard dependency is Demand Intelligence; it runs
 after CRM and before Sales Director so Sales Director can read its
 recommendations the same day). Sprint 4 inserted the Website Intake
 Runtime as a new step 2 — it is fully self-contained (it invokes
-Opportunity Hunter's, Revenue Hunter's and the Service Mapping
+Demand Intelligence's, Revenue Hunter's and the Service Mapping
 Engine's own scripts as subprocesses within its own run, rather than
 depending on their separately scheduled steps below), so it has no
 `dependsOn` and runs early enough that every downstream step already
@@ -40,7 +40,7 @@ rather than feeding it (see `09-CEO-Advisor/operating-manual.md`):
 
 1. Market Intelligence
 2. Website Intake Runtime
-3. Opportunity Hunter
+3. Demand Intelligence
 4. Revenue Hunter
 5. CRM
 6. Service Mapping Engine
@@ -89,7 +89,7 @@ For each employee, in order:
 - **Continue where possible**: a failed employee does not stop the
   run. Only employees that actually depend on the failed one are
   skipped (`SKIPPED_DEPENDENCY_FAILED`); everything else still runs.
-  For example, if Opportunity Hunter fails, Market Intelligence,
+  For example, if Demand Intelligence fails, Market Intelligence,
   Product Manager and Content Director are unaffected and still run.
 - **Notify CEO Advisor**: any `FAILED` employee is written into
   `status.json`'s `failures` list. `09-CEO-Advisor/decision-model.md`

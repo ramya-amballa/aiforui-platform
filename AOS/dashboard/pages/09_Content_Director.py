@@ -14,7 +14,7 @@ from utils.state import bump_refresh
 apply_page_config("Content Director", "✎")
 
 st.title("Content Director")
-st.caption("Turns Market Intelligence signals, Opportunity Hunter's content-worthy items, and Product Manager's shipped products into ready drafts: LinkedIn, newsletter, and website.")
+st.caption("Turns Market Intelligence signals, Demand Intelligence's content-worthy items, and Product Manager's shipped products into ready drafts: LinkedIn, newsletter, and website.")
 
 if st.button("Generate Content", type="primary"):
     with st.spinner("Generating drafts..."):

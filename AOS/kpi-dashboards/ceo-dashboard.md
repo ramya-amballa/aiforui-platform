@@ -9,7 +9,7 @@ composite reads.
 
 | Read | Rolls up | Green | Yellow | Red |
 |---|---|---|---|---|
-| **Top-of-Funnel Health** | Opportunity Hunter's weekly opportunities logged, Market Intelligence's consulting flags | 10+/week, growing | 5-9/week, flat | Under 5/week or falling |
+| **Top-of-Funnel Health** | Demand Intelligence's weekly opportunities logged, Market Intelligence's consulting flags | 10+/week, growing | 5-9/week, flat | Under 5/week or falling |
 | **Pipeline Health** | Revenue Hunter's total weighted pipeline value and type concentration | Growing, no type over 60% | Flat, or one type 60-80% | Falling, or one type over 80% |
 | **Relationship Health** | Sales Director's overdue-record count and warm-to-active conversion | 0 overdue, converting | 1-2 overdue, some conversion | 3+ overdue or no conversions this month |
 | **Authority & Demand Health** | Content Director's publish cadence and CRM record completeness | On cadence, all objectives covered | Behind cadence or one objective neglected | No publication in 2+ weeks |

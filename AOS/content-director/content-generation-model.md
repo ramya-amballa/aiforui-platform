@@ -18,7 +18,7 @@ input below is read as-is, from wherever it already lives:
 |---|---|---|
 | `02-Content-Director/content-brief-queue.json` | Market Intelligence's structured triggers: `triggeredBy`, `affectsADGL`, `affectsOPERA` | These booleans are already computed by `monitor.py`'s six checks — Content Director reads them, never recomputes them |
 | `05-Market-Intelligence/regulatory-log.json` | The full entry behind each queued trigger (`regulatoryLogRef`), for the real summary and link | Read-only cross-reference, same log Market Intelligence already wrote |
-| `opportunity-hunter/opportunity-schema.json` | Every entry with `classification: "Convert into Content"` | This classification is `opportunity-scoring-engine.md`'s own decision tree, made when `recurrencePattern: "content"` is set at ingestion — Content Director consumes the label, it doesn't decide when a theme has recurred |
+| `demand-intelligence/opportunity-schema.json` | Every entry with `classification: "Convert into Content"` | This classification is `opportunity-scoring-engine.md`'s own decision tree, made when `recurrencePattern: "content"` is set at ingestion — Content Director consumes the label, it doesn't decide when a theme has recurred |
 | `03-Product-Manager/shipped-products-log.json` | Every shipped product, for a product-announcement candidate | Read-only; Product Manager owns what counts as "shipped" |
 | `executive-dashboard/executive-dashboard.md` | The `## Today's Priorities` section only | Same read-only text extraction the Orchestrator already does for its Business Impact section — CEO Advisor's own decision model, already executed, quoted verbatim |
 | `sales-director/runtime/config/practitioner-bank.json` | Practitioner-experience bullets, the product catalogue, ADGL's five phases, OPERA's five phases | The exact real content bank Sales Director already built from the live site and AOS itself — reused, not re-collected, so there is exactly one source of truth for what AI for U&I actually knows and has done |
@@ -168,6 +168,6 @@ Publish**.
   writes a sentence claiming experience, a credential, or a result
   that isn't already real and on file.
 - **Never re-scores or re-classifies an upstream signal.** Market
-  Intelligence's six checks, Opportunity Hunter's classification, and
+  Intelligence's six checks, Demand Intelligence's classification, and
   CEO Advisor's decision model are read as final answers, not
   candidates for a second opinion.

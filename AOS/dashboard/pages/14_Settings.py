@@ -43,7 +43,7 @@ st.divider()
 st.subheader("API Keys & Connector Credentials")
 st.caption("Shows whether each environment variable is set — never its value. Set real values as GitHub Actions repository secrets, or a local `.env` (already gitignored), per the credentials template.")
 
-template_path = aos_path("opportunity-hunter", "runtime", "config", "credentials.template.env")
+template_path = aos_path("demand-intelligence", "runtime", "config", "credentials.template.env")
 if template_path.exists():
     env_var_names = re.findall(r'^([A-Z][A-Z0-9_]*)=', template_path.read_text(encoding="utf-8"), re.MULTILINE)
     rows = []
@@ -57,15 +57,15 @@ else:
 st.divider()
 
 # ---------------------------------------------------------------------------
-# Connector status (Opportunity Hunter's own Integration Status Dashboard)
+# Connector status (Demand Intelligence's own Integration Status Dashboard)
 # ---------------------------------------------------------------------------
 
 st.subheader("Connector Status")
-connector_text, connector_exists = load_text_safe("opportunity-hunter/runtime/integration-status-dashboard.md")
+connector_text, connector_exists = load_text_safe("demand-intelligence/runtime/integration-status-dashboard.md")
 if connector_exists:
     st.markdown(connector_text)
 else:
-    st.info("No integration status dashboard yet — it regenerates automatically at the end of every Opportunity Hunter run.")
+    st.info("No integration status dashboard yet — it regenerates automatically at the end of every Demand Intelligence run.")
 
 st.divider()
 

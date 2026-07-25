@@ -13,9 +13,9 @@ encountered.
 ## Who Writes to This
 
 Any AI employee that encounters a company (most often
-`opportunity-hunter`, but also `04-Sales-Director` and
+`demand-intelligence`, but also `04-Sales-Director` and
 `05-Market-Intelligence`) adds or updates its entry here rather than
-keeping its own separate copy. `opportunity-hunter/companies.md`
+keeping its own separate copy. `demand-intelligence/companies.md`
 stays a lightweight log that links back to the full record here.
 
 `04-Sales-Director` owns `relationshipTemperature`, `nextFollowUpDue`

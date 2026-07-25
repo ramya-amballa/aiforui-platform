@@ -92,7 +92,7 @@ st.divider()
 
 st.subheader("Business at a Glance")
 
-opportunities = list_data_records("opportunity-hunter/opportunity-schema.json", "opportunities")
+opportunities = list_data_records("demand-intelligence/opportunity-schema.json", "opportunities")
 pipeline = list_data_records("08-Revenue-Hunter/pipeline.json", "pipeline")
 companies = list_data_records("06-CRM/company-intelligence.json", "companies")
 

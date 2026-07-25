@@ -63,7 +63,7 @@ leaves that judgement-call open for a human:
 | Demand signal strength | `min(10, 4 + 2 * occurrenceCount)` — `occurrenceCount` is 1 for a single flagged signal, or the real count of Sales-Director-prepared opportunities sharing the same `domainTags` for a recurring-pattern signal (never invented — it's a count of real records) |
 | Build effort (inverted: 10 = least effort) | 8 if the matched format is ADGL Extension or OPERA Module (extending something that already exists); 7 if the signal's own text matches 2+ of `toolkit`/`checklist`/`template`/`framework` (suggesting it assembles from existing engagement artefacts); 5 otherwise |
 | Differentiation | 6 if the signal matched a real practitioner-experience bullet or product in `sales-director/runtime/config/practitioner-bank.json` (see Content Director's identical grounding gate — the same real content bank, reused, not re-collected); 3 if nothing matched, since ungrounded claims are exactly the "generic, available elsewhere" case this dimension is meant to catch |
-| Revenue or lead potential | 7 if the signal originated from Opportunity Hunter's own `Convert into Product Idea` classification (a real, already-qualified opportunity, not a cold signal) or from 2+ recurring Sales Director records; 5 for everything else |
+| Revenue or lead potential | 7 if the signal originated from Demand Intelligence's own `Convert into Product Idea` classification (a real, already-qualified opportunity, not a cold signal) or from 2+ recurring Sales Director records; 5 for everything else |
 
 ### Worked Example
 

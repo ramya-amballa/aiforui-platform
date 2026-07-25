@@ -7,7 +7,7 @@ nine up into a single view of AI for U&I's overall business health.
 
 | File | Employee |
 |---|---|
-| `01-opportunity-hunter.md` | Opportunity Hunter |
+| `01-demand-intelligence.md` | Demand Intelligence |
 | `02-content-director.md` | Content Director |
 | `03-product-manager.md` | Product Manager |
 | `04-sales-director.md` | Sales Director |

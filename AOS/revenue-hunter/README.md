@@ -22,14 +22,14 @@ of the same employee.
 
 ## How It Fits AOS
 
-- **Reads from:** `opportunity-hunter/opportunity-schema.json`,
+- **Reads from:** `demand-intelligence/opportunity-schema.json`,
   `06-CRM/company-intelligence.json`,
   `sales-director/runtime/processed-index.json`,
   `03-Product-Manager/product-backlog.json` and
   `shipped-products-log.json` — all read-only
 - **Writes to:** `08-Revenue-Hunter/pipeline.json` (new items this
   runtime adds per `daily-workflow.md`, and `stage` advances for items
-  Sales Director has prepared — the same file Opportunity Hunter's
+  Sales Director has prepared — the same file Demand Intelligence's
   `ingest.py` already writes to), `runtime/output/`, `runtime/logs/`
 - **Feeds:** `09-CEO-Advisor`, which already reads `pipeline.json`
   directly (`decision-model.md`'s pre-existing 0-100 → divide-by-10

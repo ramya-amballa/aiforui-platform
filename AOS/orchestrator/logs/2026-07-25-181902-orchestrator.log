@@ -1,0 +1,81 @@
+[2026-07-25T18:19:02.348545+00:00] AOS Orchestrator v1.0 — run started 2026-07-25T18:19:02.348198+00:00
+[2026-07-25T18:19:02.348627+00:00] Market Intelligence: attempt 1/3 -> 05-Market-Intelligence/runtime/monitor.py
+  EU AI Act: no feed URLs configured, skipping
+  ISO 42001: no feed URLs configured, skipping
+  NIST AI RMF: no feed URLs configured, skipping
+  DORA: no feed URLs configured, skipping
+  GDPR: no feed URLs configured, skipping
+  CBUAE: no feed URLs configured, skipping
+  RBI: no feed URLs configured, skipping
+  Microsoft AI: no feed URLs configured, skipping
+  OpenAI Enterprise: no feed URLs configured, skipping
+  Anthropic: no feed URLs configured, skipping
+  AI Security: no feed URLs configured, skipping
+  AI Governance: no feed URLs configured, skipping
+  Responsible AI: no feed URLs configured, skipping
+No new developments across any configured source. Nothing to do.
+[2026-07-25T18:19:02.409543+00:00] Market Intelligence: SUCCESS after 1 attempt(s), 0.06s
+[2026-07-25T18:19:02.409783+00:00] Website Intake Runtime: attempt 1/3 -> website-intake/runtime/generate.py
+No new website submissions in runtime/inbox/. Nothing to do.
+[2026-07-25T18:19:02.448071+00:00] Website Intake Runtime: SUCCESS after 1 attempt(s), 0.04s
+[2026-07-25T18:19:02.448265+00:00] Demand Intelligence: attempt 1/3 -> demand-intelligence/runtime/collect.py
+Collecting: demandSignals
+    Demand Signals: connector-ready, no ANTHROPIC_API_KEY configured — skipping
+Collecting: greenhouse
+  Greenhouse: no boardTokens configured, skipping (add company tokens to sources.json)
+Collecting: lever
+  Lever: no companies configured, skipping (add company slugs to sources.json)
+Collecting: ashby
+  Ashby: no jobBoardNames configured, skipping (add org names to sources.json)
+Collecting: remoteok
+    fetch failed (https://remoteok.com/api): <urlopen error Tunnel connection failed: 403 Forbidden>
+Collecting: upwork
+  Upwork: connector-ready, no credentials configured — skipping
+Collecting: linkedinJobs
+  LinkedIn Jobs: connector-ready, awaiting Talent Solutions/Jobs API partner access — skipping
+Collecting: googleJobs
+  Google Jobs: connector-ready, no API credentials configured — skipping
+Collecting: wellfound
+  Wellfound: connector-ready, no known public/partner API to authenticate against yet — skipping
+Collecting: flexjobs
+  FlexJobs: connector-ready, no API credentials configured — skipping
+Collecting: uaeRecruiters
+  UAE Recruiters: no career page URLs configured, skipping
+Collecting: consultingFirms
+  Consulting Firms: no career page URLs configured, skipping
+Integration Status Dashboard written to AOS/demand-intelligence/runtime/integration-status-dashboard.md
+Collection Verification Report written to AOS/demand-intelligence/runtime/output/2026-07-25-collection-verification-report.md
+
+Discovered 0 postings across 12 sources; 0 are new after dedup.
+No new opportunities. Nothing sent to ingest.
+[2026-07-25T18:19:02.854513+00:00] Demand Intelligence: SUCCESS after 1 attempt(s), 0.41s
+[2026-07-25T18:19:02.854783+00:00] Revenue Hunter: attempt 1/3 -> revenue-hunter/runtime/generate.py
+No new pipeline entries or stage changes this run.
+
+0 opportunity-sourced entries added, 0 CRM-sourced entries added, 0 stage(s) advanced. Dashboard and forecast written to AOS/revenue-hunter/runtime/output
+[2026-07-25T18:19:02.884681+00:00] Revenue Hunter: SUCCESS after 1 attempt(s), 0.03s
+[2026-07-25T18:19:02.884865+00:00] CRM: attempt 1/3 -> crm/runtime/generate.py
+No companies on record in company-intelligence.json yet. Nothing to report.
+[2026-07-25T18:19:02.911875+00:00] CRM: SUCCESS after 1 attempt(s), 0.03s
+[2026-07-25T18:19:02.912063+00:00] Service Mapping Engine: attempt 1/3 -> service-mapping/runtime/generate.py
+No new opportunities to map. Nothing to do.
+[2026-07-25T18:19:02.940293+00:00] Service Mapping Engine: SUCCESS after 1 attempt(s), 0.03s
+[2026-07-25T18:19:02.940455+00:00] Sales Director: attempt 1/3 -> sales-director/runtime/prepare.py
+No new classified opportunities to prepare. Nothing to do.
+[2026-07-25T18:19:02.969429+00:00] Sales Director: SUCCESS after 1 attempt(s), 0.03s
+[2026-07-25T18:19:02.969634+00:00] Product Manager: attempt 1/3 -> product-manager/runtime/generate.py
+No new or unscored signals from any source. Nothing to do.
+[2026-07-25T18:19:02.999325+00:00] Product Manager: SUCCESS after 1 attempt(s), 0.03s
+[2026-07-25T18:19:02.999520+00:00] Content Director: attempt 1/3 -> content-director/runtime/generate.py
+No new signals from any source. Nothing to do.
+[2026-07-25T18:19:03.029898+00:00] Content Director: SUCCESS after 1 attempt(s), 0.03s
+[2026-07-25T18:19:03.030064+00:00] Daily Brief: attempt 1/3 -> executive-dashboard/runtime/generate.py
+Executive Dashboard written to /home/user/aiforui-platform/AOS/executive-dashboard/executive-dashboard.md and /home/user/aiforui-platform/AOS/executive-dashboard/executive-dashboard.html
+Daily Executive Brief archived to AOS/daily-briefs/2026/07/25
+[2026-07-25T18:19:03.064149+00:00] Daily Brief: SUCCESS after 1 attempt(s), 0.03s
+[2026-07-25T18:19:03.064408+00:00] CEO Advisor: attempt 1/3 -> ceo-advisor/runtime/generate.py
+No priority candidates today.
+Revenue winnable today: unestimated; at risk: unestimated
+1 strategic alert(s); 0 item(s) on the ignore list.
+[2026-07-25T18:19:03.098629+00:00] CEO Advisor: SUCCESS after 1 attempt(s), 0.03s
+[2026-07-25T18:19:03.099567+00:00] Run finished: SUCCESS. Report: AOS/orchestrator/runtime/reports/2026-07-25-daily-execution-report.md

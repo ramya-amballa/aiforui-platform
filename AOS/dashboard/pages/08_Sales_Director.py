@@ -15,7 +15,7 @@ from utils.state import bump_refresh
 apply_page_config("Sales Director", "▣")
 
 st.title("Sales Director")
-st.caption("Prepares one proposal package per qualified opportunity, reading Opportunity Hunter, Revenue Hunter, CRM, and Service Mapping's recommendations.")
+st.caption("Prepares one proposal package per qualified opportunity, reading Demand Intelligence, Revenue Hunter, CRM, and Service Mapping's recommendations.")
 
 if st.button("Generate Proposal", type="primary"):
     with st.spinner("Preparing proposal packages..."):
@@ -38,7 +38,7 @@ st.subheader(f"Proposal Packages ({len(items)})")
 show_table(
     items,
     columns=["opportunityId", "title", "organisation", "status"],
-    empty_message="No proposal packages yet. Click **Generate Proposal** above (requires Opportunity Hunter, Revenue Hunter, and CRM to have run first).",
+    empty_message="No proposal packages yet. Click **Generate Proposal** above (requires Demand Intelligence, Revenue Hunter, and CRM to have run first).",
 )
 
 if items:

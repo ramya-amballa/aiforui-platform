@@ -6,7 +6,7 @@ invokes the existing AI employees exactly as a human would run them by
 hand, and displays whatever they already write to disk. It does not
 contain, duplicate, or modify any scoring, classification, routing, or
 business logic — every one of the eleven AI employees (Market
-Intelligence, Website Intake, Opportunity Hunter, Revenue Hunter, CRM,
+Intelligence, Website Intake, Demand Intelligence, Revenue Hunter, CRM,
 Service Mapping, Sales Director, Product Manager, Content Director,
 Daily Brief, CEO Advisor) is treated as a black-box service.
 
@@ -39,7 +39,7 @@ streamlit run app.py
 ```
 
 Opens at `http://localhost:8501`. The sidebar lists every page in the
-order specified for AOS v1.0: Home, CEO Advisor, Opportunity Hunter,
+order specified for AOS v1.0: Home, CEO Advisor, Demand Intelligence,
 Market Intelligence, Website Leads, CRM, Revenue Hunter, Service
 Mapping, Sales Director, Content Director, Product Manager, Execution,
 Reports, Charts, Settings, Logs.
@@ -119,7 +119,7 @@ to running it by hand from the terminal.
 | Page | Button | Script (via `runtime_runner`) | Primary output read |
 |---|---|---|---|
 | CEO Advisor | Run CEO Advisor | `ceo-advisor/runtime/generate.py` | `ceo-advisor/runtime/output/ceo-daily-report.md` (+ weekly/monthly) |
-| Opportunity Hunter | Scan Opportunities | `opportunity-hunter/runtime/collect.py` | `opportunity-hunter/opportunity-schema.json`, today's daily report |
+| Demand Intelligence | Scan Opportunities | `demand-intelligence/runtime/collect.py` | `demand-intelligence/opportunity-schema.json`, today's daily report |
 | Market Intelligence | Check Market | `05-Market-Intelligence/runtime/monitor.py` | today's market intelligence report |
 | Website Leads | Refresh Website Leads | `website-intake/runtime/generate.py` | `website-intake/leads.json` |
 | CRM | Open CRM | `crm/runtime/generate.py` | `06-CRM/company-intelligence.json`, today's CRM reports |
@@ -167,7 +167,7 @@ Designed to move from a laptop to a hosted domain (e.g.
   and never persists a secret to any file the dashboard controls. Real
   credentials are environment variables / GitHub Actions repository
   secrets, exactly as every connector already expects (see
-  `opportunity-hunter/runtime/config/credentials.template.env`).
+  `demand-intelligence/runtime/config/credentials.template.env`).
 
 ## What This Dashboard Deliberately Does Not Do
 

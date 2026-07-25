@@ -30,7 +30,7 @@ with zero or more feed URLs:
 | Responsible AI | Theme | `AI Governance` |
 
 Each source is checked the same way every other AOS collector checks
-its sources (`opportunity-hunter/runtime/collectors/`): a real,
+its sources (`demand-intelligence/runtime/collectors/`): a real,
 working, dependency-free RSS/Atom fetch (`runtime/feeds.py`) against
 whatever feed URLs are configured. A source with no feed URL yet prints
 "no feed URLs configured, skipping" and returns nothing — connector-
@@ -53,7 +53,7 @@ treated as substantive and run through all six checks below.
 
 Each check is a deterministic keyword/source rule against the entry's
 title + summary (whole-word matching, the same convention as
-`opportunity-hunter/opportunity-relevance-engine.md`, for the same
+`demand-intelligence/opportunity-relevance-engine.md`, for the same
 reason — a 3-letter keyword substring match is a false positive
 waiting to happen — with a trailing optional "s" tolerated, e.g. "ai
 deployment" also matches "ai deployments", since regulatory text is
@@ -62,7 +62,7 @@ would otherwise miss most of it).
 
 | # | Check | Owner it routes to | Default | Overridden true by |
 |---|---|---|---|---|
-| 1 | Consulting opportunity | `opportunity-hunter` | false | Terms: enforcement action, penalty, fine, compliance deadline, mandatory, must comply, audit requirement, certification required |
+| 1 | Consulting opportunity | `demand-intelligence` | false | Terms: enforcement action, penalty, fine, compliance deadline, mandatory, must comply, audit requirement, certification required |
 | 2 | LinkedIn content | `02-Content-Director` | true | — (default true for every substantive item, per `operating-manual.md`'s trigger rule); flipped false by: corrigendum, typographical, housekeeping, minor amendment |
 | 3 | Website update | `02-Content-Director` | false | Terms: supersedes, replaces, new version, revises, updated requirements |
 | 4 | New product | `03-Product-Manager` | false | Two or more of: framework, toolkit, assessment, certification, mandatory, requirement (a single generic hit isn't enough — same "isolated buzzword" reasoning as the relevance engine) |
@@ -96,13 +96,13 @@ Intelligence drafting anything about it.
   names "Market Intelligence" as a valid `signalSource`; it just
   arrives unscored, exactly as any other newly-flagged candidate would
   before evaluation.
-- **`opportunity-hunter`**: if check 1 is true, write a normal
-  opportunity record to `opportunity-hunter/runtime/inbox/`, in the
+- **`demand-intelligence`**: if check 1 is true, write a normal
+  opportunity record to `demand-intelligence/runtime/inbox/`, in the
   exact JSON shape `ingest.py`'s own docstring already documents
   (`sourceCategory: "Compliance Programme"`, `domainTags` from the
   table above, `scopedEngagement: false` — this is a general
   market-wide signal, not a named scoped ask). The next Orchestrator
-  run's Opportunity Hunter step scores, classifies and routes it
+  run's Demand Intelligence step scores, classifies and routes it
   through the exact same relevance engine and scoring model every
   other opportunity goes through. Market Intelligence does not score
   or classify this itself.
@@ -115,18 +115,18 @@ Intelligence drafting anything about it.
 ## Opportunity Handoff Scores
 
 `opportunity-scoring-engine.md`'s eleven dimensions need a 0-10 value
-each before Opportunity Hunter's existing, unmodified scoring can run.
+each before Demand Intelligence's existing, unmodified scoring can run.
 A market-wide regulatory signal has no specific company or contact yet,
 so these are conservative heuristics — the same honesty convention as
 the Collection Engine's `heuristic_scores()`
-(`opportunity-hunter/runtime/collectors/common.py`): `expectedRevenue`
+(`demand-intelligence/runtime/collectors/common.py`): `expectedRevenue`
 5, `probabilityOfWinning` 3 (lower than a named lead — nobody specific
 has been contacted yet), `strategicValue` 7 if check 1 fired else 5,
 `relationshipValue` 2, `timeRequired` 6, `geography` 6,
 `remoteCompatibility` 8, `alignmentAIforUIServices` 8,
 `alignmentADGL` 8 if check 5 (ADGL) is true else 4, `alignmentOPERA` 8,
 `longTermRelationshipPotential` 5. The record is written with
-`autoScored: true`, so a human — or Opportunity Hunter's own downstream
+`autoScored: true`, so a human — or Demand Intelligence's own downstream
 consumers — knows these are estimates to verify, not a finished
 judgement.
 
@@ -137,7 +137,7 @@ Risk Management Framework certification requirement for federal AI
 deployments", summary mentions "enforcement" and "audit requirement".
 
 - Check 1 (consulting): "audit requirement" matches → **true** → an
-  opportunity record is written to `opportunity-hunter/runtime/inbox/`.
+  opportunity record is written to `demand-intelligence/runtime/inbox/`.
 - Check 2 (LinkedIn): substantive, no minor-update override → **true**
   → queued to Content Director.
 - Check 3 (website): no supersedes/replaces/revises term → **false**.
@@ -148,7 +148,7 @@ deployments", summary mentions "enforcement" and "audit requirement".
 - Check 6 (OPERA): **true**, always, per the rule above.
 
 This entry is logged once in `regulatory-log.json` with all six
-results, and produces three routed records (Opportunity Hunter, Content
+results, and produces three routed records (Demand Intelligence, Content
 Director, Product Manager) plus one CEO Advisor feed row — four
 structured hand-offs from one development, none of them drafted
 content.
@@ -162,8 +162,8 @@ content.
   (see the founder's own sequencing: Content Director Runtime, Product
   Manager Runtime, Revenue Hunter Runtime and CRM Runtime come after
   this one).
-- Does not score or classify the opportunity it hands to Opportunity
-  Hunter — `opportunity-scoring-engine.md`'s existing, unmodified
+- Does not score or classify the opportunity it hands to Demand
+  Intelligence — `opportunity-scoring-engine.md`'s existing, unmodified
   engine does that on the next run.
 - Does not guess a feed URL for any source. Every one is left empty
   until the founder supplies and verifies it.

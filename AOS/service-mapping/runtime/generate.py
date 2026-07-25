@@ -5,7 +5,7 @@ Service Mapping Engine — execution mode
 Usage:
     python3 generate.py
 
-Reads every opportunity in ../../opportunity-hunter/opportunity-schema.json
+Reads every opportunity in ../../demand-intelligence/opportunity-schema.json
 (read-only) and, for every one not already mapped, deterministically
 computes: Primary Service, Secondary Services, Recommended Engagement
 Type, Estimated Project Size, Recommended Proposal Template, and
@@ -23,7 +23,7 @@ Also reads, read-only, two files it never writes to:
     type to Retainer
 
 Never re-scores, re-classifies, or re-routes an opportunity — those
-stay Opportunity Hunter's (ingest.py) job alone, exactly as before this
+stay Demand Intelligence's (ingest.py) job alone, exactly as before this
 engine existed. Never touches Revenue Hunter's pipeline.json or CRM's
 company-intelligence.json.
 
@@ -52,7 +52,7 @@ SERVICE_MAPPING_DIR = RUNTIME_DIR.parent
 AOS_DIR = SERVICE_MAPPING_DIR.parent
 REPO_ROOT = AOS_DIR.parent
 
-OPPORTUNITY_SCHEMA_PATH = AOS_DIR / "opportunity-hunter" / "opportunity-schema.json"
+OPPORTUNITY_SCHEMA_PATH = AOS_DIR / "demand-intelligence" / "opportunity-schema.json"
 PIPELINE_PATH = AOS_DIR / "08-Revenue-Hunter" / "pipeline.json"
 CRM_PATH = AOS_DIR / "06-CRM" / "company-intelligence.json"
 
@@ -72,7 +72,7 @@ DEFAULT_PROCESSED_INDEX = {
 
 DEFAULT_RECOMMENDATIONS = {
     "schema": {
-        "opportunityId": "string — matches opportunity-hunter/opportunity-schema.json's id",
+        "opportunityId": "string — matches demand-intelligence/opportunity-schema.json's id",
         "title": "string", "organisation": "string",
         "dateMapped": "string — ISO 8601 date",
         "notApplicable": "boolean — true for Ignore/Convert into Content/Convert into Product Idea; every field below is null when true",

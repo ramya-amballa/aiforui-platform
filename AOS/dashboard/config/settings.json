@@ -1,5 +1,5 @@
 {
-  "_comment": "UI-only dashboard preferences. Never stores API keys or secrets — those belong in environment variables / GitHub Actions repository secrets, per opportunity-hunter/runtime/config/credentials.template.env.",
+  "_comment": "UI-only dashboard preferences. Never stores API keys or secrets — those belong in environment variables / GitHub Actions repository secrets, per demand-intelligence/runtime/config/credentials.template.env.",
   "tableDensity": "comfortable",
   "defaultLandingPage": "Home"
 }

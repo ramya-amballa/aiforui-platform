@@ -16,7 +16,7 @@ apply_page_config("Charts", "▦")
 st.title("Executive Charts")
 st.caption("Read directly from existing AOS output files. An empty chart means the underlying runtime hasn't produced data yet — never a fabricated placeholder.")
 
-opportunities = list_data_records("opportunity-hunter/opportunity-schema.json", "opportunities")
+opportunities = list_data_records("demand-intelligence/opportunity-schema.json", "opportunities")
 pipeline = list_data_records("08-Revenue-Hunter/pipeline.json", "pipeline")
 service_recs_data, service_recs_exist = load_json_safe("service-mapping/service-recommendations.json")
 service_recs = service_recs_data.get("recommendations", {}) if service_recs_exist and isinstance(service_recs_data, dict) else {}

@@ -9,8 +9,8 @@ Reads four already-classified signal sources (never re-classifying any
 of them — see ../content-generation-model.md):
   - 02-Content-Director/content-brief-queue.json (Market Intelligence's
     linkedinContent/websiteUpdate/affectsADGL/affectsOPERA triggers)
-  - opportunity-hunter/opportunity-schema.json, filtered to
-    classification == "Convert into Content" (Opportunity Hunter's own
+  - demand-intelligence/opportunity-schema.json, filtered to
+    classification == "Convert into Content" (Demand Intelligence's own
     existing decision tree)
   - 03-Product-Manager/shipped-products-log.json (Product Manager's own
     "shipped" record)
@@ -48,7 +48,7 @@ AOS_DIR = CONTENT_DIRECTOR_DIR.parent
 REPO_ROOT = AOS_DIR.parent
 
 CONTENT_BRIEF_QUEUE_PATH = AOS_DIR / "02-Content-Director" / "content-brief-queue.json"
-OPPORTUNITY_SCHEMA_PATH = AOS_DIR / "opportunity-hunter" / "opportunity-schema.json"
+OPPORTUNITY_SCHEMA_PATH = AOS_DIR / "demand-intelligence" / "opportunity-schema.json"
 SHIPPED_PRODUCTS_PATH = AOS_DIR / "03-Product-Manager" / "shipped-products-log.json"
 EXECUTIVE_DASHBOARD_PATH = AOS_DIR / "executive-dashboard" / "executive-dashboard.md"
 PRACTITIONER_BANK_PATH = AOS_DIR / "sales-director" / "runtime" / "config" / "practitioner-bank.json"
@@ -98,7 +98,7 @@ SOURCE_STRENGTH = {"product": 9, "regulatory": 7, "opportunity": 6, "priority": 
 
 DEFAULT_PROCESSED_INDEX = {
     "schema": {
-        "processedOpportunities": "array of opportunity-hunter ids already drafted",
+        "processedOpportunities": "array of demand-intelligence ids already drafted",
         "processedProducts": "array of shipped-products-log ids already drafted",
         "processedPriorities": "array of ceo-priority-{date} ids already drafted",
     },
@@ -207,7 +207,7 @@ def collect_opportunity_candidates(opportunity_schema, processed_index):
             "domainTags": domain_tags,
             "linkedin": True, "newsletter": True, "website": False, "github": False,
             "adgl": "ADGL" in domain_tags, "opera": True, "productAnnouncement": False,
-            "sourceLabel": f"Opportunity Hunter (recurring theme: {opp['organisation']})",
+            "sourceLabel": f"Demand Intelligence (recurring theme: {opp['organisation']})",
         })
     return candidates
 
@@ -247,7 +247,7 @@ def collect_priority_candidate(processed_index):
     text = EXECUTIVE_DASHBOARD_PATH.read_text(encoding="utf-8")
     if "## Today's Priorities" not in text:
         return []
-    section = text.split("## Today's Priorities", 1)[1].split("## Opportunity Hunter", 1)[0]
+    section = text.split("## Today's Priorities", 1)[1].split("## Demand Intelligence", 1)[0]
     match = re.search(r"\*\*Highest-value action:\*\*\s*(.+)", section)
     if not match:
         return []

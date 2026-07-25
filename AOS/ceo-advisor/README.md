@@ -22,7 +22,7 @@ and what's explicitly not worth the time.
 
 ## How It Fits AOS
 
-- **Reads from** (all read-only): Opportunity Hunter, Market
+- **Reads from** (all read-only): Demand Intelligence, Market
   Intelligence, CRM, Revenue Hunter, Service Mapping Engine, Sales
   Director, Website Intake, Daily Brief, and `orchestrator/status.json`
 - **Writes to:** `runtime/output/`, `runtime/logs/` only
@@ -43,8 +43,8 @@ Not a second scoring or classification engine — every number is read
 from the employee that already computed it and cited to its source
 file, never recomputed. Not an outreach or content tool — nothing here
 drafts or sends anything; every report is a file on disk for the
-founder to read. Not a redesign of any other employee — Opportunity
-Hunter, Revenue Hunter, CRM, Sales Director, Market Intelligence,
+founder to read. Not a redesign of any other employee — Demand
+Intelligence, Revenue Hunter, CRM, Sales Director, Market Intelligence,
 Website Intake, Service Mapping, and Daily Brief are all read exactly
 as they already exist.
 

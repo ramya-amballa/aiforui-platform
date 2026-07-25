@@ -210,7 +210,7 @@ to revisit, not silently baked in:
 
 ## What This Engine Does Not Do
 
-- Does not change Opportunity Hunter's collection, relevance
+- Does not change Demand Intelligence's collection, relevance
   filtering, scoring, or classification — `ingest.py` is untouched.
 - Does not change Revenue Hunter's scoring or forecasting logic —
   `pipeline.json` is read, never written.

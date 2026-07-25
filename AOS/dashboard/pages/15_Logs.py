@@ -69,7 +69,7 @@ st.subheader("Per-Employee Log Directories")
 employee_log_dirs = {
     "Market Intelligence": "05-Market-Intelligence/runtime/logs",
     "Website Intake": "website-intake/runtime/logs",
-    "Opportunity Hunter": "opportunity-hunter/runtime",
+    "Demand Intelligence": "demand-intelligence/runtime",
     "Revenue Hunter": "revenue-hunter/runtime/logs",
     "CRM": "crm/runtime/logs",
     "Service Mapping": "service-mapping/runtime/logs",

@@ -1,7 +1,7 @@
 # Sales Director
 
 AI employee #4. Owns every recruiter, consulting firm, prospect and
-client interaction after the first touch. Where `opportunity-hunter`
+client interaction after the first touch. Where `demand-intelligence`
 finds an opportunity and `08-Revenue-Hunter` decides it's worth
 pursuing, Sales Director makes sure nothing pursued is ever allowed to
 go quiet. It recommends a follow-up for every open relationship every

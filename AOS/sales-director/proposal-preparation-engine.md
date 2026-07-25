@@ -7,7 +7,7 @@ Advisor is allowed to see.
 
 ## Input
 
-Every opportunity in `opportunity-hunter/opportunity-schema.json` whose
+Every opportunity in `demand-intelligence/opportunity-schema.json` whose
 `classification` is one of:
 
 - `Immediate Proposal`
@@ -103,7 +103,7 @@ other AOS scoring model, then multiplied by 10 for a score out of 100:
 
 | Input | Weight | What it measures |
 |---|---|---|
-| `probabilityOfWinning` (from the opportunity's own scores) | 30% | Opportunity Hunter's own read on how likely this is to convert |
+| `probabilityOfWinning` (from the opportunity's own scores) | 30% | Demand Intelligence's own read on how likely this is to convert |
 | `priorityScore / 10` | 30% | The opportunity's overall fit, already computed |
 | Data completeness | 25% | How many of five real-world facts are known: organisation, description, a domain tag, a contact/recruiter on record in the CRM, and a real (non-estimated) revenue figure. Each present fact is worth 2 points, 0-10 total. |
 | Scoped-engagement bonus | 15% | 10 if `scopedEngagement` is true (a defined ask), 4 if not (a general lead) |
@@ -120,7 +120,7 @@ confidence = round(
 ### Worked Example
 
 A LinkedIn recruiter opens a fractional AI Governance advisory role,
-already scoped to three months. Opportunity Hunter scored it
+already scoped to three months. Demand Intelligence scored it
 `priorityScore: 82` (`probabilityOfWinning: 8`). The company is on
 record in the CRM with a named recruiter, and Revenue Hunter has
 already estimated `AED 45,000` in `pipeline.json`. All five data-

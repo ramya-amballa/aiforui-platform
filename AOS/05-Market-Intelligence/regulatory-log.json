@@ -21,7 +21,7 @@
       "affectsOPERA": "boolean — check 6",
       "reasons": "object — one short factual reason string per check key above, never drafted content"
     },
-    "routedTo": "array of strings — any of 02-Content-Director/content-brief-queue.json, 03-Product-Manager/product-backlog.json, opportunity-hunter/runtime/inbox, 09-CEO-Advisor (via runtime/output/ceo-advisor-feed.json) this entry was actually written to"
+    "routedTo": "array of strings — any of 02-Content-Director/content-brief-queue.json, 03-Product-Manager/product-backlog.json, demand-intelligence/runtime/inbox, 09-CEO-Advisor (via runtime/output/ceo-advisor-feed.json) this entry was actually written to"
   },
   "log": []
 }

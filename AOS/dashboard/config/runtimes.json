@@ -34,19 +34,19 @@
       "outputDir": "website-intake/runtime/output",
       "dataFile": "website-intake/leads.json"
     },
-    "opportunity-hunter": {
-      "name": "Opportunity Hunter",
+    "demand-intelligence": {
+      "name": "Demand Intelligence",
       "buttonLabel": "Scan Opportunities",
-      "script": "opportunity-hunter/runtime/collect.py",
-      "cwd": "opportunity-hunter/runtime",
+      "script": "demand-intelligence/runtime/collect.py",
+      "cwd": "demand-intelligence/runtime",
       "timeoutSeconds": 600,
       "outputs": [
-        "opportunity-hunter/runtime/output/{date}-daily-report.md",
-        "opportunity-hunter/runtime/rejected/{date}-rejected-report.md",
-        "opportunity-hunter/runtime/snapshots/{date}-collection-snapshot.json"
+        "demand-intelligence/runtime/output/{date}-daily-report.md",
+        "demand-intelligence/runtime/rejected/{date}-rejected-report.md",
+        "demand-intelligence/runtime/snapshots/{date}-collection-snapshot.json"
       ],
-      "outputDir": "opportunity-hunter/runtime/output",
-      "dataFile": "opportunity-hunter/opportunity-schema.json"
+      "outputDir": "demand-intelligence/runtime/output",
+      "dataFile": "demand-intelligence/opportunity-schema.json"
     },
     "revenue-hunter": {
       "name": "Revenue Hunter",
@@ -160,7 +160,7 @@
     "CEO Weekly Report": "ceo-advisor/runtime/output/ceo-weekly-report.md",
     "CEO Monthly Report": "ceo-advisor/runtime/output/ceo-monthly-business-review.md",
     "Revenue Report": "revenue-hunter/runtime/output/revenue-dashboard.md",
-    "Opportunity Report": "opportunity-hunter/runtime/output/{date}-daily-report.md",
+    "Opportunity Report": "demand-intelligence/runtime/output/{date}-daily-report.md",
     "Pipeline Report": "revenue-hunter/runtime/output/revenue-forecast.md"
   }
 }

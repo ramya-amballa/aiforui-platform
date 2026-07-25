@@ -24,7 +24,7 @@ and a confidence score — so nothing is drafted from scratch by hand.
 
 ## How It Fits AOS
 
-- **Reads from:** `opportunity-hunter/opportunity-schema.json` (which
+- **Reads from:** `demand-intelligence/opportunity-schema.json` (which
   opportunities and their classification), `08-Revenue-Hunter/pipeline.json`
   (real revenue estimates, where one exists), `06-CRM/company-intelligence.json`
   (relationship context)

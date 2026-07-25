@@ -51,7 +51,7 @@ regardless of whether the GitHub commit succeeds.
 `lead-{sha256(email|submittedAt|sourcePage|message)[:12]}` —
 content-derived and deterministic, so the same raw submission (if it
 somehow reappeared) always yields the same Lead ID, the same
-convention `opportunity-hunter/runtime/collect.py`'s `dedupe_key()`
+convention `demand-intelligence/runtime/collect.py`'s `dedupe_key()`
 already uses. This is a distinct identifier from the opportunity id
 `ingest.py` separately assigns (`opp-XXXX`) — the two are
 cross-referenced via `notes`, see below.
@@ -94,7 +94,7 @@ forced into a category the text doesn't support.
   energy, retail, manufacturing) — `"Not specified"` when nothing
   matches, never guessed beyond what the text actually says.
 - **Geography**: same approach, against the same served-geography
-  vocabulary `opportunity-hunter/runtime/collectors/common.py` already
+  vocabulary `demand-intelligence/runtime/collectors/common.py` already
   uses (UAE, US, UK, India, Europe) — `"Not specified"` otherwise.
 - **Organisation Size**: always **"Unknown"**. The contact form
   collects nothing — no employee count, no revenue, no headcount
@@ -110,7 +110,7 @@ raw enquiry gives no signal for at all: `relationshipValue` = 6,
 `remoteCompatibility` = 8 — a self-initiated enquiry implies some
 relationship intent already, and advisory work is generally
 remote-compatible). The resulting record is written to
-`opportunity-hunter/runtime/inbox/` in the exact shape `ingest.py`
+`demand-intelligence/runtime/inbox/` in the exact shape `ingest.py`
 already accepts, and `ingest.py` is invoked as its own subprocess —
 the same relevance filter, scoring, classification and routing to
 Revenue Hunter/CRM every other source already goes through, completely
@@ -199,7 +199,7 @@ already-interested prospect, not a speculative lead.
   output is a file on disk. The one email in this entire flow (the
   founder's own internal notification) is the website's pre-existing
   Resend call, unrelated to and unchanged by this runtime.
-- Does not re-implement Opportunity Hunter's scoring or classification,
+- Does not re-implement Demand Intelligence's scoring or classification,
   Revenue Hunter's forecasting, CRM's schema, or the Service Mapping
   Engine's decision tables — every one of those is invoked as its own
   already-built script.

@@ -13,7 +13,7 @@ financial model — see below for exactly what's reused from where.
 `expectedRevenue` figure exists (founder-entered, or already estimated
 by another employee), it's used. Where none exists, the field is set
 to the literal string `"Not yet estimated"` — exactly the convention
-`opportunity-hunter/runtime/ingest.py` already uses — and excluded from
+`demand-intelligence/runtime/ingest.py` already uses — and excluded from
 every dollar sum. It is still counted and surfaced ("N items pending a
 revenue estimate") so nothing silently disappears from view. This
 runtime never guesses a number to fill the gap, not even a labelled
@@ -26,7 +26,7 @@ downstream sum.
 
 | Source | What's read | Why this isn't duplicated logic |
 |---|---|---|
-| `opportunity-hunter/opportunity-schema.json` | Every `Active`/`Priority`-band opportunity with no existing `pipeline.json` entry (`sourceRef`) | `Immediate Proposal`/`Partnership` opportunities already got a pipeline entry from `ingest.py`'s own `route_to_revenue_hunter` — this runtime only adds the ones that classification never routes there (`Apply`, `Follow Recruiter`, `Relationship Building`), exactly as `daily-workflow.md` step 1 already specifies |
+| `demand-intelligence/opportunity-schema.json` | Every `Active`/`Priority`-band opportunity with no existing `pipeline.json` entry (`sourceRef`) | `Immediate Proposal`/`Partnership` opportunities already got a pipeline entry from `ingest.py`'s own `route_to_revenue_hunter` — this runtime only adds the ones that classification never routes there (`Apply`, `Follow Recruiter`, `Relationship Building`), exactly as `daily-workflow.md` step 1 already specifies |
 | `06-CRM/company-intelligence.json` | Every `hot`/`warm` relationship with no open pipeline item | `daily-workflow.md` step 2, never run as code before |
 | `sales-director/runtime/processed-index.json` | Every opportunity Sales Director has prepared a package for | Advances that pipeline item's `stage` to `in-progress` — Sales Director's own status is never re-read or re-interpreted, only its existence |
 | `03-Product-Manager/product-backlog.json`, `shipped-products-log.json` | `in-development` candidates and shipped products' own `revenueOrLeadResult` | Surfaced as-is in the Product Revenue Potential section — a real, already-measured result, never a projection this runtime invents |
@@ -37,8 +37,8 @@ downstream sum.
   same weights `ingest.py`'s `route_to_revenue_hunter` already applies
   (0.35 expected-revenue-clarity, 0.30 probability, 0.20 effort
   inverted, 0.15 strategic value — identical to `lead-scoring.md`'s own
-  table), against the same opportunity `scores` fields Opportunity
-  Hunter already computed. This runtime does not introduce a second
+  table), against the same opportunity `scores` fields Demand
+  Intelligence already computed. This runtime does not introduce a second
   scoring formula; it applies the one that already exists to the
   entries it doesn't yet cover.
 - **Decision tree** — `decision-tree.md`'s stage/action rules are

@@ -2,14 +2,14 @@
 
 AI for U&I's website — Contact/"Start a Conversation," and the ADGL,
 OPERA/Methodology and Selected Engagement Areas pages that link
-through to it — as a first-class Opportunity Hunter source. Every
+through to it — as a first-class Demand Intelligence source. Every
 enquiry becomes a Lead ID, a real opportunity record, a CRM record, a
 Revenue Hunter pipeline entry, a Service Mapping recommendation, and a
 CEO Advisor notification, automatically. No email is ever sent from
 this runtime.
 
 Introduced in AOS Sprint 4, after Service Mapping was already live.
-This runtime hands off to Opportunity Hunter, Revenue Hunter, the
+This runtime hands off to Demand Intelligence, Revenue Hunter, the
 Service Mapping Engine, and CRM's own established writers — it does
 not re-implement any of them.
 
@@ -34,16 +34,16 @@ not re-implement any of them.
 - **Reads from:** raw submission files in `runtime/inbox/` (written by
   the website's `/api/contact` route — see `website-intake-model.md`)
 - **Invokes** (as its own subprocess, never imported, exactly how the
-  Orchestrator itself invokes every employee): `opportunity-hunter/
+  Orchestrator itself invokes every employee): `demand-intelligence/
   runtime/ingest.py`, `revenue-hunter/runtime/generate.py`,
   `service-mapping/runtime/generate.py` — none of their scoring,
   forecasting or mapping logic is duplicated here
-- **Writes to:** `opportunity-hunter/runtime/inbox/` (a new record for
+- **Writes to:** `demand-intelligence/runtime/inbox/` (a new record for
   ingest.py to process), `06-CRM/company-intelligence.json` (only when
   a record doesn't already exist for the organisation — see the model
   doc's "Guaranteeing a CRM Record"), `leads.json`, `runtime/output/`,
   `runtime/logs/`
-- **One change to `opportunity-hunter/runtime/ingest.py`**: records
+- **One change to `demand-intelligence/runtime/ingest.py`**: records
   with `source == "Website"` are exempted from relevance scoring — see
   the model doc for exactly why, and why every other source is
   unaffected

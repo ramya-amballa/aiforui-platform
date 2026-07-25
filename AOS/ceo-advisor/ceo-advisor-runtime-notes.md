@@ -47,7 +47,7 @@ runtime's read scope, since Sprint 5 didn't name them):
 
 | Source | File(s) | What's read |
 |---|---|---|
-| Opportunity Hunter | `opportunity-hunter/opportunity-schema.json` | Priority-band opportunities as candidates; every opportunity's `domainTags`/`dateFound`/`classification`/`sourceCategory` for Strategic Alerts; Archived-band opportunities for the Ignore List |
+| Demand Intelligence | `demand-intelligence/opportunity-schema.json` | Priority-band opportunities as candidates; every opportunity's `domainTags`/`dateFound`/`classification`/`sourceCategory` for Strategic Alerts; Archived-band opportunities for the Ignore List |
 | Market Intelligence | `05-Market-Intelligence/runtime/output/ceo-advisor-feed.json` | The six booleans only, per `decision-model.md` — the underlying `regulatory-log.json` entry is never opened |
 | CRM | `06-CRM/company-intelligence.json` | Every company record, via `crm_follow_up_status()` (reused verbatim, see below) for candidates and the Ignore List's stale-cold check |
 | Revenue Hunter | `08-Revenue-Hunter/pipeline.json` | Priority-band pipeline items as candidates; every open item for Revenue Impact |

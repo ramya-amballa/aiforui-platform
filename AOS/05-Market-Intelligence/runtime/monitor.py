@@ -7,7 +7,7 @@ Usage:
 
 Checks every source configured in config/sources.json (a source with
 no feed URLs yet prints a skip message and is left alone — connector-
-ready, not simulated, exactly like opportunity-hunter's collectors).
+ready, not simulated, exactly like demand-intelligence's collectors).
 Every entry not already in seen-index.json is substantive by
 definition (see ../market-intelligence-classification-model.md) and is
 run through six deterministic checks: consultingOpportunity,
@@ -15,10 +15,10 @@ linkedinContent, websiteUpdate, newProduct, affectsADGL, affectsOPERA.
 
 Every substantive entry is logged to ../regulatory-log.json. Structured
 (never drafted) records are then routed:
-  - consultingOpportunity  -> opportunity-hunter/runtime/inbox/
+  - consultingOpportunity  -> demand-intelligence/runtime/inbox/
                               (scored/classified by the existing,
                               unmodified opportunity-scoring-engine.md
-                              on the next Opportunity Hunter run)
+                              on the next Demand Intelligence run)
   - linkedinContent or
     websiteUpdate           -> 02-Content-Director/content-brief-queue.json
   - newProduct              -> 03-Product-Manager/product-backlog.json
@@ -32,7 +32,7 @@ Also writes output/{date}-market-intelligence-report.md, a plain
 summary of what ran today.
 
 This script does not draft content, does not score or classify the
-opportunities it hands to Opportunity Hunter, and does not evaluate or
+opportunities it hands to Demand Intelligence, and does not evaluate or
 format the candidates it hands to Product Manager. See
 ../market-intelligence-classification-model.md, "What This Runtime
 Does Not Do."
@@ -60,7 +60,7 @@ CEO_FEED_PATH = OUTPUT_DIR / "ceo-advisor-feed.json"
 
 CONTENT_QUEUE_PATH = AOS_DIR / "02-Content-Director" / "content-brief-queue.json"
 PRODUCT_BACKLOG_PATH = AOS_DIR / "03-Product-Manager" / "product-backlog.json"
-OPPORTUNITY_INBOX_DIR = AOS_DIR / "opportunity-hunter" / "runtime" / "inbox"
+OPPORTUNITY_INBOX_DIR = AOS_DIR / "demand-intelligence" / "runtime" / "inbox"
 
 TODAY = date.today().isoformat()
 
@@ -191,7 +191,7 @@ def classify(title, summary, source_name):
 def opportunity_scores(checks):
     """Heuristic 0-10 scores for a market-wide (not a specific named
     lead) consulting signal — same honesty convention as
-    opportunity-hunter/runtime/collectors/common.py's heuristic_scores:
+    demand-intelligence/runtime/collectors/common.py's heuristic_scores:
     conservative, documented, and flagged autoScored so a human knows
     to verify rather than treat it as finished."""
     return {
@@ -204,7 +204,7 @@ def opportunity_scores(checks):
     }
 
 
-def route_to_opportunity_hunter(source_name, source_config, entry, checks, inbox_batch):
+def route_to_demand_intelligence(source_name, source_config, entry, checks, inbox_batch):
     domain_tags = source_config.get("domainTags") or ["AI Governance"]
     raw_summary = entry.get("summary") or entry["title"]
     description = (
@@ -307,8 +307,8 @@ def main():
         routed_to = []
 
         if checks["consultingOpportunity"]:
-            route_to_opportunity_hunter(source_name, source_config, entry, checks, inbox_batch)
-            routed_to.append("opportunity-hunter/runtime/inbox")
+            route_to_demand_intelligence(source_name, source_config, entry, checks, inbox_batch)
+            routed_to.append("demand-intelligence/runtime/inbox")
         if checks["linkedinContent"] or checks["websiteUpdate"]:
             route_to_content_director(log_id, source_name, entry, checks, content_queue)
             routed_to.append("02-Content-Director/content-brief-queue.json")
@@ -334,7 +334,7 @@ def main():
                 "linkedinIdea": "Queued to Content Director" if checks["linkedinContent"] else None,
                 "newsletterIdea": None,
                 "productUpdate": "Queued to Product Manager" if checks["newProduct"] else "not applicable — did not meet the new-product threshold",
-                "consultingOpportunity": "Routed to Opportunity Hunter" if checks["consultingOpportunity"] else "not applicable — no enforcement/compliance-deadline language found",
+                "consultingOpportunity": "Routed to Demand Intelligence" if checks["consultingOpportunity"] else "not applicable — no enforcement/compliance-deadline language found",
             },
             "checks": checks,
             "routedTo": routed_to + ["09-CEO-Advisor"],

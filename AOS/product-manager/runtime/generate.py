@@ -13,8 +13,8 @@ which question and why none of it re-decides another employee's work:
   - product-backlog.json entries Market Intelligence already wrote
     with score: null — evaluated in place (the only write this script
     makes outside product-manager/)
-  - opportunity-hunter/opportunity-schema.json entries classified
-    "Convert into Product Idea" (Opportunity Hunter's own decision
+  - demand-intelligence/opportunity-schema.json entries classified
+    "Convert into Product Idea" (Demand Intelligence's own decision
     tree, never re-derived here)
   - sales-director/runtime/processed-index.json, grouped by domainTags
     to detect a real recurring pattern (a count of real records, not
@@ -48,7 +48,7 @@ AOS_DIR = PRODUCT_MANAGER_DIR.parent
 REPO_ROOT = AOS_DIR.parent
 
 PRODUCT_BACKLOG_PATH = AOS_DIR / "03-Product-Manager" / "product-backlog.json"
-OPPORTUNITY_SCHEMA_PATH = AOS_DIR / "opportunity-hunter" / "opportunity-schema.json"
+OPPORTUNITY_SCHEMA_PATH = AOS_DIR / "demand-intelligence" / "opportunity-schema.json"
 SALES_DIRECTOR_PROCESSED_PATH = AOS_DIR / "sales-director" / "runtime" / "processed-index.json"
 CONTENT_QUEUE_LOG_PATH = AOS_DIR / "content-director" / "runtime" / "queue" / "content-queue.json"
 PRACTITIONER_BANK_PATH = AOS_DIR / "sales-director" / "runtime" / "config" / "practitioner-bank.json"
@@ -74,7 +74,7 @@ BUILD_EFFORT_KEYWORDS = ["toolkit", "checklist", "template", "framework"]
 
 DEFAULT_PROCESSED_INDEX = {
     "schema": {
-        "processedOpportunities": "array of opportunity-hunter ids already evaluated",
+        "processedOpportunities": "array of demand-intelligence ids already evaluated",
         "processedPatterns": "array of domainTag pattern keys already evaluated",
         "processedContentSignals": "array of content-director content-queue ids already evaluated",
     },
@@ -306,7 +306,7 @@ def main():
         new_entry = {
             "id": next_id(product_backlog["backlog"], "prod"),
             "dateAdded": TODAY,
-            "signalSource": {"opportunity": "Opportunity Hunter", "sales-director-pattern": "Sales Director",
+            "signalSource": {"opportunity": "Demand Intelligence", "sales-director-pattern": "Sales Director",
                               "content-director": "Content Director"}[signal["signalType"]],
             "signalDescription": signal["signalDescription"],
             "proposedFormat": matched_format,

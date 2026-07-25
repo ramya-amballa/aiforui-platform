@@ -12,7 +12,7 @@ exclusively.
 
 Generates three reports from company-intelligence.json enriched with
 real, read-only history from three other employees:
-  - opportunity-hunter/opportunity-schema.json (opportunity history per
+  - demand-intelligence/opportunity-schema.json (opportunity history per
     organisation)
   - sales-director/runtime/processed-index.json (proposal history per
     organisation)
@@ -48,7 +48,7 @@ AOS_DIR = CRM_RUNTIME_OWNER_DIR.parent
 REPO_ROOT = AOS_DIR.parent
 
 CRM_PATH = AOS_DIR / "06-CRM" / "company-intelligence.json"
-OPPORTUNITY_SCHEMA_PATH = AOS_DIR / "opportunity-hunter" / "opportunity-schema.json"
+OPPORTUNITY_SCHEMA_PATH = AOS_DIR / "demand-intelligence" / "opportunity-schema.json"
 SALES_DIRECTOR_PROCESSED_PATH = AOS_DIR / "sales-director" / "runtime" / "processed-index.json"
 PIPELINE_PATH = AOS_DIR / "08-Revenue-Hunter" / "pipeline.json"
 

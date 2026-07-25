@@ -1,7 +1,7 @@
 # Content Director — Draft Generation Engine (Runtime v1.0)
 
 The executable half of Content Director: turns already-classified
-signals (Market Intelligence's checks, Opportunity Hunter's `Convert
+signals (Market Intelligence's checks, Demand Intelligence's `Convert
 into Content` opportunities, shipped products, CEO Advisor's daily
 priority) into publish-ready drafts, without deciding relevance itself
 and without ever publishing anything.
@@ -24,7 +24,7 @@ actual draft.
 
 - **Reads from:** `02-Content-Director/content-brief-queue.json`,
   `05-Market-Intelligence/regulatory-log.json`,
-  `opportunity-hunter/opportunity-schema.json`,
+  `demand-intelligence/opportunity-schema.json`,
   `03-Product-Manager/shipped-products-log.json`,
   `executive-dashboard/executive-dashboard.md`,
   `sales-director/runtime/config/practitioner-bank.json` — all

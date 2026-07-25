@@ -60,7 +60,7 @@
   },
 
   "geographyKeywords": {
-    "_note": "Same served-geography vocabulary opportunity-hunter/runtime/collectors/common.py already uses, reused for consistency.",
+    "_note": "Same served-geography vocabulary demand-intelligence/runtime/collectors/common.py already uses, reused for consistency.",
     "UAE": ["uae", "united arab emirates", "dubai", "abu dhabi"],
     "United States": ["us", "usa", "united states", "america"],
     "United Kingdom": ["uk", "united kingdom", "britain"],

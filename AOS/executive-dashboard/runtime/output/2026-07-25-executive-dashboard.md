@@ -2,7 +2,7 @@
 
 **Generated:** 2026-07-25
 
-*Read-only view over `opportunity-hunter/opportunity-schema.json`, `08-Revenue-Hunter/pipeline.json` and `06-CRM/company-intelligence.json`. Regenerate with `python3 runtime/generate.py`; do not hand-edit.*
+*Read-only view over `demand-intelligence/opportunity-schema.json`, `08-Revenue-Hunter/pipeline.json` and `06-CRM/company-intelligence.json`. Regenerate with `python3 runtime/generate.py`; do not hand-edit.*
 
 ---
 
@@ -14,9 +14,9 @@
 
 ## Today's Priorities
 
-_No Priority-band candidates yet. Run Opportunity Hunter's ingestion workflow to populate live data._
+_No Priority-band candidates yet. Run Demand Intelligence's ingestion workflow to populate live data._
 
-## Opportunity Hunter
+## Demand Intelligence
 
 ### Top 10 Opportunities
 _No open opportunities logged yet._
@@ -51,4 +51,4 @@ _No open pipeline items yet._
 
 ## Daily Summary
 
-AI for U&I's pipeline is currently empty — no opportunities have been logged yet. Run Opportunity Hunter's ingestion workflow (`opportunity-hunter/runtime/ingest.py`) to begin populating live data before this summary reflects real activity.
+AI for U&I's pipeline is currently empty — no opportunities have been logged yet. Run Demand Intelligence's ingestion workflow (`demand-intelligence/runtime/ingest.py`) to begin populating live data before this summary reflects real activity.
