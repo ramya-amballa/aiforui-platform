@@ -54,8 +54,8 @@ with tab_all:
 with tab_signals:
     show_table(
         demand_signal_opps, columns=columns,
-        empty_message="No demand signals yet. Requires ANTHROPIC_API_KEY to be configured (see Settings) — "
-                       "click **Scan Opportunities** above once it is.",
+        empty_message="No demand signals yet. Runs fully offline by default (spaCy — see Settings for status) "
+                       "with no API key required; click **Scan Opportunities** above.",
     )
 
 with tab_engine:
@@ -71,8 +71,9 @@ with tab_engine:
 
     if not organisations:
         st.info(
-            "No organisations identified yet. Requires ANTHROPIC_API_KEY (see Settings) and at least one "
-            "matching article in a configured Demand Signals feed — click **Scan Opportunities** above."
+            "No organisations identified yet. Runs fully offline by default (spaCy — see Settings for "
+            "status) — needs at least one matching article in a configured Demand Signals feed; click "
+            "**Scan Opportunities** above."
         )
     else:
         st.subheader("Filters")

@@ -1,8 +1,8 @@
 # Daily Execution Report
 
 **Date:** 2026-07-25
-**Run started:** 2026-07-25T18:45:19.787645+00:00
-**Total duration:** 0.8s
+**Run started:** 2026-07-25T19:59:07.471379+00:00
+**Total duration:** 4.24s
 
 ## Employees Executed
 
@@ -10,15 +10,15 @@
 |---|---|---|---|---|
 | 1 | Market Intelligence | SUCCESS | 1 | 0.06s |
 | 2 | Website Intake Runtime | SUCCESS | 1 | 0.04s |
-| 3 | Demand Intelligence | SUCCESS | 1 | 0.44s |
-| 4 | Revenue Hunter | SUCCESS | 1 | 0.03s |
-| 5 | CRM | SUCCESS | 1 | 0.03s |
-| 6 | Service Mapping Engine | SUCCESS | 1 | 0.03s |
-| 7 | Sales Director | SUCCESS | 1 | 0.03s |
-| 8 | Product Manager | SUCCESS | 1 | 0.03s |
-| 9 | Content Director | SUCCESS | 1 | 0.03s |
+| 3 | Demand Intelligence | SUCCESS | 1 | 3.62s |
+| 4 | Revenue Hunter | SUCCESS | 1 | 0.04s |
+| 5 | CRM | SUCCESS | 1 | 0.04s |
+| 6 | Service Mapping Engine | SUCCESS | 1 | 0.04s |
+| 7 | Sales Director | SUCCESS | 1 | 0.04s |
+| 8 | Product Manager | SUCCESS | 1 | 0.22s |
+| 9 | Content Director | SUCCESS | 1 | 0.04s |
 | 10 | Daily Brief | SUCCESS | 1 | 0.04s |
-| 11 | CEO Advisor | SUCCESS | 1 | 0.04s |
+| 11 | CEO Advisor | SUCCESS | 1 | 0.05s |
 
 ## Failures
 
@@ -31,6 +31,8 @@ _None needed._
 ## Outputs Generated
 
 - **Demand Intelligence**: `demand-intelligence/runtime/snapshots/2026-07-25-collection-snapshot.json`
+- **Demand Intelligence**: `demand-intelligence/organisation-profiles.json`
+- **Demand Intelligence**: `demand-intelligence/runtime/output/top-organisations-this-week.json`
 - **Revenue Hunter**: `revenue-hunter/runtime/output/2026-07-25-revenue-dashboard.md`
 - **Revenue Hunter**: `revenue-hunter/runtime/output/2026-07-25-revenue-forecast.md`
 - **Daily Brief**: `executive-dashboard/executive-dashboard.md`

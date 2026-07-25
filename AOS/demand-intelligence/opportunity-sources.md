@@ -10,7 +10,7 @@ never requires re-reading raw listings.
 
 | Source | What it is | Signal produced | Cadence |
 |---|---|---|---|
-| Demand Signal | AI-vendor and tech-news RSS feeds, read by the Claude API (`collectors/demand_signals.py`) | A named organisation reported adopting an AI tool at scale (e.g. "Company X deployed Copilot to 40,000 employees") — treated as evidence they'll soon need AI governance, human oversight, deployment controls, ADGL, and AI risk assessment, before any vacancy is ever advertised | Daily |
+| Demand Signal | AI-vendor and tech-news RSS feeds, read offline by default via spaCy NER + deterministic rules, with Claude as an optional opt-in backend (`collectors/demand_signals.py`, see `demand-signal-categories.md`'s "AOS Sprint 7" section) | A named organisation reported adopting an AI tool at scale (e.g. "Company X deployed Copilot to 40,000 employees") — treated as evidence they'll soon need AI governance, human oversight, deployment controls, ADGL, and AI risk assessment, before any vacancy is ever advertised | Daily |
 
 This is the answer to "who in the world is most likely to need AI for
 U&I's services this week" — a fundamentally different question from

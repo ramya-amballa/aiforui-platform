@@ -9,8 +9,9 @@
       "https://venturebeat.com/category/ai/feed/",
       "https://techcrunch.com/category/artificial-intelligence/feed/"
     ],
-    "model": "claude-haiku-4-5-20251001",
-    "_note": "Requires ANTHROPIC_API_KEY (see config/credentials.template.env) — without it this connector skips cleanly, like any other missing-credential connector. The Microsoft Copilot Studio feed (first URL) is confirmed live and does carry named-enterprise-adoption stories (verified 2026-07-25). The OpenAI/VentureBeat/TechCrunch URLs are each publisher's standard, long-standing feed path but could not be independently fetched from this build environment's restricted network — verify reachability once running in production before relying on them. No official Anthropic RSS feed exists (only unofficial third-party scrapers) — deliberately not added rather than depending on something unofficial and fragile."
+    "extractionBackend": "deterministic",
+    "model": "en_core_web_sm",
+    "_note": "AOS Sprint 7: fully offline by default — no paid API required. extractionBackend 'deterministic' (collectors/extractors/deterministic_extractor.py) uses spaCy Named Entity Recognition plus deterministic keyword/regex rules to confirm an article names a real organisation; 'model' is the spaCy model name (needs `pip install spacy` and `python3 -m spacy download en_core_web_sm` once — see requirements.txt). Set extractionBackend to 'claude' to opt into the Claude API instead (extractors/claude_extractor.py) — stronger language understanding, but a paid API and ANTHROPIC_API_KEY, no longer the default. The Microsoft Copilot Studio feed (first URL) is confirmed live and does carry named-enterprise-adoption stories (verified 2026-07-25). The OpenAI/VentureBeat/TechCrunch URLs are each publisher's standard, long-standing feed path but could not be independently fetched from this build environment's restricted network — verify reachability once running in production before relying on them. No official Anthropic RSS feed exists (only unofficial third-party scrapers) — deliberately not added rather than depending on something unofficial and fragile."
   },
   "greenhouse": {
     "status": "ready",

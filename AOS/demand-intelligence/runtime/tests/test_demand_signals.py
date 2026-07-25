@@ -51,12 +51,18 @@ HIGH_CONFIDENCE_EXTRACTION = {
 class ConnectorSkipTests(unittest.TestCase):
     def test_no_api_key_skips_cleanly(self):
         with patch("collectors.claude_client.api_key_configured", return_value=False):
-            results = demand_signals.collect([], {"feedUrls": ["https://example.com/feed"]})
+            results = demand_signals.collect(
+                [], {"feedUrls": ["https://example.com/feed"], "extractionBackend": "claude"})
         self.assertEqual(results, [])
 
     def test_no_feed_urls_skips_cleanly(self):
         with patch("collectors.claude_client.api_key_configured", return_value=True):
             results = demand_signals.collect([], {"feedUrls": []})
+        self.assertEqual(results, [])
+
+    def test_unavailable_deterministic_model_skips_cleanly(self):
+        with patch("collectors.demand_signals.deterministic_extractor.model_available", return_value=False):
+            results = demand_signals.collect([], {"feedUrls": ["https://example.com/feed"]})
         self.assertEqual(results, [])
 
 
@@ -78,7 +84,8 @@ class ExtractionGatingTests(unittest.TestCase):
              patch("demand_engine.CRM_PATH", self.tmp_path / "company-intelligence.json"), \
              patch("demand_engine.PIPELINE_PATH", self.tmp_path / "pipeline.json"), \
              patch("demand_engine.SALES_FEED_PATH", self.tmp_path / "ceo-advisor-feed.json"):
-            return demand_signals.collect([], {"feedUrls": ["https://example.com/feed"]})
+            return demand_signals.collect(
+                [], {"feedUrls": ["https://example.com/feed"], "extractionBackend": "claude"})
 
     def test_high_confidence_creates_a_record(self):
         results = self._collect_with(HIGH_CONFIDENCE_EXTRACTION)
@@ -113,7 +120,8 @@ class ExtractionGatingTests(unittest.TestCase):
              patch("demand_engine.CRM_PATH", self.tmp_path / "company-intelligence.json"), \
              patch("demand_engine.PIPELINE_PATH", self.tmp_path / "pipeline.json"), \
              patch("demand_engine.SALES_FEED_PATH", self.tmp_path / "ceo-advisor-feed.json"):
-            demand_signals.collect([], {"feedUrls": ["https://example.com/feed"]})
+            demand_signals.collect(
+                [], {"feedUrls": ["https://example.com/feed"], "extractionBackend": "claude"})
 
         profiles = demand_engine.load_json(self.tmp_path / "organisation-profiles.json", {})
         self.assertIn("Land O'Lakes", profiles.get("organisations", {}))
@@ -131,7 +139,8 @@ class ExtractionGatingTests(unittest.TestCase):
              patch("collectors.demand_signals.SEEN_ARTICLES_PATH", self.tmp_path / "seen.json"), \
              patch("demand_engine.PROFILES_PATH", self.tmp_path / "organisation-profiles.json"), \
              patch("demand_engine.TOP_ORGANISATIONS_PATH", self.tmp_path / "top-organisations-this-week.json"):
-            results = demand_signals.collect([], {"feedUrls": ["https://example.com/feed"]})
+            results = demand_signals.collect(
+                [], {"feedUrls": ["https://example.com/feed"], "extractionBackend": "claude"})
         mock_extract.assert_not_called()
         self.assertEqual(results, [])
 

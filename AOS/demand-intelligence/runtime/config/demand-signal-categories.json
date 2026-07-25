@@ -5,10 +5,11 @@
       "label": "AI Adoption",
       "baseScore": 70,
       "keywords": [
-        "copilot rollout", "microsoft copilot", "chatgpt enterprise", "enterprise genai",
+        "copilot rollout", "chatgpt enterprise", "enterprise genai",
         "genai deployment", "internal ai assistant", "ai assistant launch",
         "rag implementation", "retrieval-augmented generation", "ai-enabled customer service",
-        "deployed copilot", "rolled out copilot", "ai agent deployment", "enterprise ai deployment"
+        "deployed copilot", "rolled out copilot", "ai agent deployment", "enterprise ai deployment",
+        "deployed microsoft copilot", "rolled out microsoft copilot", "adopted microsoft copilot"
       ]
     },
     "governance_trigger": {

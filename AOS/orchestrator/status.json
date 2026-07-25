@@ -9,9 +9,9 @@
     "reportPath": "string — this run's Daily Execution Report, relative to the repo root",
     "logPath": "string — this run's full log, relative to the repo root"
   },
-  "startedAt": "2026-07-25T18:45:19.787645+00:00",
-  "finishedAt": "2026-07-25T18:45:20.590164+00:00",
-  "durationSeconds": 0.8,
+  "startedAt": "2026-07-25T19:59:07.471379+00:00",
+  "finishedAt": "2026-07-25T19:59:11.710622+00:00",
+  "durationSeconds": 4.24,
   "employees": [
     {
       "key": "market-intelligence",
@@ -36,10 +36,12 @@
       "name": "Demand Intelligence",
       "status": "SUCCESS",
       "attempts": 1,
-      "durationSeconds": 0.44,
+      "durationSeconds": 3.62,
       "error": null,
       "outputs": [
-        "demand-intelligence/runtime/snapshots/2026-07-25-collection-snapshot.json"
+        "demand-intelligence/runtime/snapshots/2026-07-25-collection-snapshot.json",
+        "demand-intelligence/organisation-profiles.json",
+        "demand-intelligence/runtime/output/top-organisations-this-week.json"
       ]
     },
     {
@@ -47,7 +49,7 @@
       "name": "Revenue Hunter",
       "status": "SUCCESS",
       "attempts": 1,
-      "durationSeconds": 0.03,
+      "durationSeconds": 0.04,
       "error": null,
       "outputs": [
         "revenue-hunter/runtime/output/2026-07-25-revenue-dashboard.md",
@@ -59,7 +61,7 @@
       "name": "CRM",
       "status": "SUCCESS",
       "attempts": 1,
-      "durationSeconds": 0.03,
+      "durationSeconds": 0.04,
       "error": null,
       "outputs": []
     },
@@ -68,7 +70,7 @@
       "name": "Service Mapping Engine",
       "status": "SUCCESS",
       "attempts": 1,
-      "durationSeconds": 0.03,
+      "durationSeconds": 0.04,
       "error": null,
       "outputs": []
     },
@@ -77,7 +79,7 @@
       "name": "Sales Director",
       "status": "SUCCESS",
       "attempts": 1,
-      "durationSeconds": 0.03,
+      "durationSeconds": 0.04,
       "error": null,
       "outputs": []
     },
@@ -86,7 +88,7 @@
       "name": "Product Manager",
       "status": "SUCCESS",
       "attempts": 1,
-      "durationSeconds": 0.03,
+      "durationSeconds": 0.22,
       "error": null,
       "outputs": []
     },
@@ -95,7 +97,7 @@
       "name": "Content Director",
       "status": "SUCCESS",
       "attempts": 1,
-      "durationSeconds": 0.03,
+      "durationSeconds": 0.04,
       "error": null,
       "outputs": []
     },
@@ -120,7 +122,7 @@
       "name": "CEO Advisor",
       "status": "SUCCESS",
       "attempts": 1,
-      "durationSeconds": 0.04,
+      "durationSeconds": 0.05,
       "error": null,
       "outputs": [
         "ceo-advisor/runtime/output/2026-07-25-ceo-daily-report.md",
@@ -133,5 +135,5 @@
   "overallStatus": "SUCCESS",
   "failures": [],
   "reportPath": "AOS/orchestrator/runtime/reports/2026-07-25-daily-execution-report.md",
-  "logPath": "AOS/orchestrator/logs/2026-07-25-184519-orchestrator.log"
+  "logPath": "AOS/orchestrator/logs/2026-07-25-195907-orchestrator.log"
 }

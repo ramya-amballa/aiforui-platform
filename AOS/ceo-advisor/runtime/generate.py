@@ -698,8 +698,9 @@ def render_top_organisations_section(top_orgs):
     lines = ["## Top 10 Organizations This Week", ""]
     if not top_orgs:
         lines.append("_No demand-signal organisations identified this week — Demand Intelligence's "
-                      "Demand Signals connector may not be configured (needs ANTHROPIC_API_KEY) or "
-                      "found nothing new in the last 7 days._")
+                      "Demand Signals connector may not be configured (needs feedUrls, and either "
+                      "spaCy installed for its default offline backend or ANTHROPIC_API_KEY if set "
+                      "to the optional Claude backend) or found nothing new in the last 7 days._")
         lines.append("")
         return lines
 

@@ -16,15 +16,27 @@ Three-stage pipeline per feed entry:
   2. Deterministic keyword classification (demand_engine.classify_categories)
      against the article's own title+summary — no model call. An
      article matching none of the five categories is skipped before
-     ever reaching Claude, saving the API cost entirely.
+     ever reaching entity extraction, saving that work entirely.
   3. Only for articles that matched at least one category, and not
      already seen (own seen-articles index, separate from collect.py's
-     own opportunity-level dedupe-index.json): Claude
-     (claude_client.extract_demand_signal) confirms there's a real,
-     specific named organisation and extracts it — the one and only
-     non-deterministic step in this whole pipeline. Only "high"
-     confidence extractions become a lead; "medium"/"low" are logged,
-     never fabricated into one.
+     own opportunity-level dedupe-index.json): the configured
+     extraction backend confirms there's a real, specific named
+     organisation and extracts it. Only "high" confidence extractions
+     become a lead; "medium"/"low" are logged, never fabricated into
+     one.
+
+AOS Sprint 7 made the extraction backend a config choice, not a hard
+dependency: config/sources.json's demandSignals.extractionBackend is
+"deterministic" by default — extractors/deterministic_extractor.py,
+fully offline, no paid API, spaCy Named Entity Recognition plus
+deterministic keyword/regex rules (see that module's own docstring for
+exactly how it decides an article names a real organisation). Setting
+it to "claude" opts into extractors/claude_extractor.py instead — the
+same Claude API call this connector always had, now an explicitly
+optional plugin, still gated on ANTHROPIC_API_KEY. Either way,
+collectors/demand_signals.py calls extractor.extract(title, summary,
+model=model) and only cares that the return shape matches; it does
+not know or care which backend actually ran.
 
 Every extracted signal's scores are a genuine function of its own
 analysis (demand_engine.opportunity_scores_from_result) — a weak
@@ -34,14 +46,16 @@ classification, entirely through the unmodified scoring/classification
 pipeline every other opportunity already goes through. No change to
 ingest.py's scoring or classification logic was needed or made.
 
-If ANTHROPIC_API_KEY is not set, this connector skips cleanly, exactly
-like every other credential-gated connector.
+If the configured backend's own dependency is missing (spaCy/its model
+for "deterministic", ANTHROPIC_API_KEY for "claude"), this connector
+skips cleanly, exactly like every other credential-gated connector.
 """
 
 from pathlib import Path
 
 import demand_engine
-from . import claude_client
+from .extractors import base as extractor_base
+from .extractors import claude_extractor, deterministic_extractor
 from .feed_fetch import fetch_feed_entries
 
 SOURCE_NAME = "Demand Signal"
@@ -51,6 +65,12 @@ RUNTIME_DIR = COLLECTORS_DIR.parent
 SEEN_ARTICLES_PATH = RUNTIME_DIR / "config" / "demand-signals-seen-articles.json"
 
 NEEDED_SERVICES_DOMAIN_TAGS = ["ADGL", "AI Deployment Governance", "AI Governance", "Technology Risk"]
+
+EXTRACTORS = {
+    "deterministic": deterministic_extractor,
+    "claude": claude_extractor,
+}
+DEFAULT_BACKEND = "deterministic"
 
 
 def load_json(path, default):
@@ -74,14 +94,40 @@ def build_title(organisation, matched_categories, config):
     return f"{organisation} — {', '.join(labels)}" if labels else f"{organisation} — AI governance opportunity"
 
 
-def collect(keywords, config):
-    if not claude_client.api_key_configured():
-        print("    Demand Signals: connector-ready, no ANTHROPIC_API_KEY configured — skipping")
-        return []
+def resolve_extractor(config):
+    """Returns the configured extractor module, or None (with a
+    printed reason) if its own dependency isn't available — never
+    raises, and callers treat None exactly like any other
+    missing-dependency connector: a clean skip."""
+    backend_name = config.get("extractionBackend", DEFAULT_BACKEND)
+    extractor = EXTRACTORS.get(backend_name)
+    if extractor is None:
+        print(f"    Demand Signals: unknown extractionBackend '{backend_name}', skipping")
+        return None
 
+    if backend_name == "deterministic":
+        model_name = config.get("model") or "en_core_web_sm"
+        if not deterministic_extractor.model_available(model_name):
+            print(f"    Demand Signals: spaCy or its '{model_name}' model isn't installed — skipping. "
+                  f"Run: pip install spacy && python3 -m spacy download {model_name}")
+            return None
+    elif backend_name == "claude":
+        if not claude_extractor.model_available():
+            print("    Demand Signals: extractionBackend is 'claude' but ANTHROPIC_API_KEY isn't "
+                  "configured — skipping")
+            return None
+
+    return extractor
+
+
+def collect(keywords, config):
     feed_urls = config.get("feedUrls", [])
     if not feed_urls:
         print("    Demand Signals: no feed URLs configured, skipping")
+        return []
+
+    extractor = resolve_extractor(config)
+    if extractor is None:
         return []
 
     model = config.get("model")
@@ -100,19 +146,20 @@ def collect(keywords, config):
                 continue
             seen["seen"][article_key] = {"checked": True}
 
-            text = f"{entry.get('title', '')} {entry.get('summary', '')}"
+            title = extractor_base.strip_html(entry.get("title", ""))
+            summary = extractor_base.strip_html(entry.get("summary", ""))
+
+            text = f"{title} {summary}"
             matched_categories = demand_engine.classify_categories(text, categories_config)
             if not matched_categories:
-                continue  # no deterministic category matched — never spend a Claude call on this
+                continue  # no deterministic category matched — never spend extraction effort on this
 
-            extraction = claude_client.extract_demand_signal(
-                entry.get("title", ""), entry.get("summary", ""), model=model,
-            )
+            extraction = extractor.extract(title, summary, model=model)
             if not extraction or not extraction.get("isDemandSignal"):
                 continue
             if extraction.get("confidence") != "high":
                 print(f"    [skipped, confidence={extraction.get('confidence')}] "
-                      f"{extraction.get('organisation') or entry.get('title')}")
+                      f"{extraction.get('organisation') or title}")
                 continue
             organisation = extraction.get("organisation")
             if not organisation:

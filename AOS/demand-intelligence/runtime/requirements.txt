@@ -1,0 +1,14 @@
+spacy>=3.7.0
+
+# After installing, download the small English model once:
+#   python3 -m spacy download en_core_web_sm
+#
+# Only needed for Demand Signals' default extractionBackend
+# ("deterministic" — see config/sources.json and
+# collectors/extractors/deterministic_extractor.py). AOS's first
+# non-dashboard Python dependency, and the deliberate trade-off for
+# removing the paid Claude API as a hard requirement: offline Named
+# Entity Recognition needs a trained model, which can't be done in
+# pure stdlib. If extractionBackend is set to "claude" instead, spaCy
+# is not required at all — see collectors/extractors/claude_extractor.py
+# and ANTHROPIC_API_KEY in config/credentials.template.env.

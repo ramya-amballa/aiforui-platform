@@ -2,11 +2,16 @@
 
 How Demand Intelligence answers "which organisations are most likely
 to need AI for U&I's services this week, and why" — built on top of
-Sprint 5's Demand Signals connector without changing its architecture,
-its RSS feeds, or the one non-deterministic step it already had
-(Claude confirming a named organisation from an article). Everything
-in this document is implemented in `runtime/demand_engine.py`; the
-lookup tables live in `runtime/config/demand-signal-categories.json`.
+Sprint 5's Demand Signals connector without changing its architecture
+or its RSS feeds. Everything in this document is implemented in
+`runtime/demand_engine.py`; the lookup tables live in
+`runtime/config/demand-signal-categories.json`.
+
+**AOS Sprint 7 update:** the organisation-extraction step described in
+Part 1 below is no longer a hard Claude API dependency — see "AOS
+Sprint 7 — Offline-First Extraction" further down. Everything else on
+this page (Parts 1-8's scoring, narrative, prediction, and learning
+logic) is unchanged by that sprint.
 
 ## What Changed Versus Sprint 5
 
@@ -51,13 +56,12 @@ at 100 — scaled by extraction confidence
 multiplier.
 
 Classification into these five categories is 100% keyword-based, run
-on every article regardless of whether Claude is even configured.
-Claude only enters once a category has already matched, to confirm a
-real, specific named organisation is what the article is about and
-extract it (`claude_client.extract_demand_signal`) — the one
-non-deterministic step, unchanged in kind from Sprint 5, just widened
-in scope from "AI adoption articles only" to "any of the five
-categories' matched articles."
+on every article regardless of which extraction backend is configured
+or even installed. Only once a category has already matched does the
+configured extraction backend run, to confirm a real, specific named
+organisation is what the article is about and extract it — see "AOS
+Sprint 7 — Offline-First Extraction" below for what that step actually
+is now.
 
 ## Part 2 — Opportunity Narrative
 
@@ -185,6 +189,74 @@ multiplier is always fully auditable by reading
 `organisation-profiles.json` alone, and every input to it already
 exists as real, already-written AOS data.
 
+## AOS Sprint 7 — Offline-First Extraction
+
+The founder's instruction: remove Anthropic API dependencies from AOS
+entirely, make AI APIs optional plugins rather than core dependencies,
+so the whole operating system functions without any paid external AI
+service. Demand Signals was the only place in AOS that had one.
+
+**Pluggable extraction backend.** `collectors/demand_signals.py` no
+longer calls Claude directly — it calls whichever module
+`config/sources.json`'s `demandSignals.extractionBackend` names
+(`collectors/extractors/`), through one shared interface:
+`extract(title, summary, model=None)` returning
+`{isDemandSignal, organisation, eventSummary, aiTool, scale, industry,
+confidence}`, plus `model_available(...)` so the connector can skip
+cleanly, exactly like every other credential-gated connector, if the
+backend's own dependency isn't installed/configured.
+
+- **`deterministic`** (the default): `extractors/deterministic_extractor.py`.
+  Fully offline, no network call beyond the RSS fetch, no API key.
+  Uses spaCy Named Entity Recognition (ORG entities) over the
+  article's own title+summary, filtered through a vendor blocklist
+  (`extractors/base.py`'s `VENDOR_BLOCKLIST` — so the AI vendor a feed
+  is published by, or the tool it names, is never mistaken for the
+  organisation *adopting* something) and a generic-word filter (bare
+  acronyms/role titles like "AI", "CEO" are never a candidate on their
+  own). Falls back to a regex capitalized-phrase heuristic only when
+  NER finds nothing at all — a real, common gap for less-well-known
+  company names on the small English model. Confidence is purely
+  candidate-count: exactly one clean candidate survives filtering =
+  "high", two = "medium", zero or three+ = "low"/rejected — real short
+  news text rarely names more than one or two organisations cleanly,
+  so ambiguity itself is the signal this extraction isn't trustworthy.
+  Requires `pip install spacy && python3 -m spacy download
+  en_core_web_sm` once (see `requirements.txt`) — AOS's first
+  non-dashboard Python dependency, and the honest trade-off for
+  removing the paid API: offline NER needs a trained model, which
+  can't be done in pure stdlib.
+- **`claude`** (optional): `extractors/claude_extractor.py`, the same
+  Claude API call Demand Signals always had, now an explicit opt-in via
+  `extractionBackend: "claude"` in `config/sources.json`, still gated
+  on `ANTHROPIC_API_KEY`. Stronger language understanding than the
+  deterministic backend, but a paid API and no longer the default.
+
+**Known limitation, documented rather than hidden:** spaCy's small
+English model reliably recognises well-known companies far better than
+uncommon or synthetic-sounding ones, and can occasionally tag a
+vendor/product name as the ORG entity instead of the real target
+organisation — the guardrails above (vendor blocklist, generic-word
+filter, single-clean-candidate confidence rule) exist specifically to
+catch those failure modes rather than trust raw NER output. Missing a
+real signal (a false negative) is accepted as preferable to fabricating
+one (a false positive) — the same "never fabricate" convention every
+other part of AOS follows.
+
+**A real bug this design caught and fixed:** RSS feed summaries
+routinely carry raw, unstripped HTML, including a WordPress-style
+auto-generated footer ("The post ... appeared first on ... Blog.") on
+every single entry regardless of its actual content. Before
+`demand_signals.py` stripped HTML tags (`extractors.base.strip_html()`)
+and before `ai_adoption`'s keyword list was tightened to require an
+action verb directly adjacent to a vendor name (e.g. "deployed
+microsoft copilot", not a bare "microsoft copilot"), a live test
+against the Microsoft Copilot Studio feed found every one of 8 fetched
+entries spuriously matched `ai_adoption` — purely because the feed's
+own blog name contained that bare keyword, not because any of the 8
+were genuine customer-adoption stories. Both fixes are in
+`extractors/base.py` and `config/demand-signal-categories.json`.
+
 ## What This Sprint Deliberately Does Not Do
 
 - Does not change `ingest.py`'s scoring formula, classification
@@ -200,3 +272,6 @@ exists as real, already-written AOS data.
   trained model.
 - Does not draft or send outreach — Part 5 recommends a next action
   and states why; a human still writes anything that gets sent.
+- Does not require any paid API to run at all (AOS Sprint 7) — the
+  default `deterministic` extraction backend is fully offline; Claude
+  is an explicit, optional opt-in via `config/sources.json`.

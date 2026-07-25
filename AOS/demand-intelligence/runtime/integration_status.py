@@ -37,6 +37,8 @@ import sys
 from datetime import date
 from pathlib import Path
 
+from collectors.extractors import claude_extractor, deterministic_extractor
+
 RUNTIME_DIR = Path(__file__).resolve().parent
 DEMAND_INTELLIGENCE_DIR = RUNTIME_DIR.parent
 AOS_DIR = DEMAND_INTELLIGENCE_DIR.parent
@@ -65,8 +67,13 @@ PHASE_1_SOURCES = [
     {
         "key": "demandSignals", "name": "Demand Signals",
         "requiredInputKeys": ["feedUrls"],
-        "requiredEnvVar": "ANTHROPIC_API_KEY",
-        "credentialNature": "ANTHROPIC_API_KEY (real secret) — feed URLs are already committed",
+        # AOS Sprint 7: the extraction backend is a config choice, not a
+        # fixed requirement — compute_status() below checks whichever
+        # backend config/sources.json's extractionBackend actually
+        # names (deterministic's spaCy model, or claude's API key),
+        # rather than hardcoding ANTHROPIC_API_KEY as if it were the
+        # only option.
+        "credentialNature": "backend-dependent — see compute_status()",
         "accessPath": "credentials",
     },
     {
@@ -128,13 +135,33 @@ def is_input_present(config, key):
     return bool(value)
 
 
+def demand_signals_missing(config):
+    """AOS Sprint 7: extractionBackend picks which dependency actually
+    gates this connector — 'deterministic' (the default) needs spaCy
+    and its model installed, no paid API or env var at all;
+    'claude' needs ANTHROPIC_API_KEY. Reuses each backend's own
+    model_available() rather than re-implementing the check here."""
+    backend = config.get("extractionBackend", "deterministic")
+    if backend == "claude":
+        if not claude_extractor.model_available():
+            return ["ANTHROPIC_API_KEY"]
+        return []
+    model_name = config.get("model") or "en_core_web_sm"
+    if not deterministic_extractor.model_available(model_name):
+        return [f"spacy + {model_name} (pip install spacy && python3 -m spacy download {model_name})"]
+    return []
+
+
 def compute_status(source_def, config):
     if config.get("status") == "deprioritized":
         return DEPRIORITIZED, []
     missing = [k for k in source_def["requiredInputKeys"] if not is_input_present(config, k)]
-    env_var = source_def.get("requiredEnvVar")
-    if env_var and not os.environ.get(env_var):
-        missing = missing + [env_var]
+    if source_def["key"] == "demandSignals":
+        missing = missing + demand_signals_missing(config)
+    else:
+        env_var = source_def.get("requiredEnvVar")
+        if env_var and not os.environ.get(env_var):
+            missing = missing + [env_var]
     if not missing:
         return CONNECTED, []
     if source_def["accessPath"] == "api_access":
@@ -153,11 +180,14 @@ def render_dashboard(sources_config, snapshot):
         count_note = ""
         if source_def["key"] in per_source_counts:
             count_note = f" ({per_source_counts[source_def['key']]} found in last run)"
+        if source_def["key"] == "demandSignals":
+            requires = ", ".join(missing) if missing else "already configured"
+        else:
+            requires = source_def["credentialNature"] if missing or status != CONNECTED else "already configured"
         rows.append({
             "name": source_def["name"],
             "status": status,
-            "requires": source_def["credentialNature"] if missing or status != CONNECTED
-                        else "already configured",
+            "requires": requires,
             "note": count_note,
         })
 
