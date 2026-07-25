@@ -10,6 +10,14 @@ Nothing else should be invoked directly — not by a human's daily
 routine, not by GitHub Actions. Everything below is what happens
 inside that one command.
 
+## Scheduling
+
+`.github/workflows/aos-daily-operations.yml` runs this exact command
+automatically every day at **06:00 IST** (`cron: "30 0 * * *"` — 00:30
+UTC, since IST is UTC+5:30), plus `workflow_dispatch` for an on-demand
+manual run. No other workflow exists, and no workflow invokes an
+individual employee's script directly — see that file.
+
 ## Execution Sequence
 
 Fixed order, per the founder's instruction — see `dependency-map.md`
@@ -96,7 +104,10 @@ run, and includes exactly what was asked for:
 - **Duration** — total and per-employee
 - **Failures** — which employees, which error, how many attempts
 - **Retries** — how many retries each employee needed
-- **Outputs generated** — the detected files from step 5 above
+- **Outputs generated** — the detected files from step 5 above,
+  including Daily Brief's Markdown and HTML dashboard in both their
+  stable location and their immutable dated archive copy under
+  `AOS/daily-briefs/YYYY/MM/DD/`
 - **Business impact** — Daily Brief's own "## Daily Summary" paragraph,
   quoted verbatim (see step 5) — the Orchestrator does not have its own
   business-impact model and does not build one; that would duplicate

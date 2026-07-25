@@ -28,6 +28,35 @@ employee's own logic.
 - `status.json` — the latest run's completion status, overwritten each
   run
 
+## Production Hardening (v1.0.1)
+
+Everything above was already true from the original build. This pass
+made it safe to run unattended, every day, with nobody watching:
+
+- **Schedule** — `.github/workflows/aos-daily-operations.yml` runs on
+  `cron: "30 0 * * *"` — 00:30 UTC, i.e. 06:00 IST — plus
+  `workflow_dispatch` for a manual run. GitHub Actions still invokes
+  only this one script, nothing else.
+- **Config-load failures are now logged, not bare tracebacks** — if
+  `runtime/config/orchestrator-config.json` itself fails to parse,
+  `orchestrator.py` still opens a log, records the failure, and writes
+  a `FAILED` `status.json`, rather than crashing before there's
+  anywhere to record why.
+- **Per-employee bookkeeping is now exception-safe** — an unexpected
+  error in the Orchestrator's own per-employee handling (not the
+  employee's own subprocess, which was already isolated) is caught,
+  logged, and recorded as that one employee's `FAILED`, so every
+  independent employee still downstream gets its own chance to run —
+  see `../../AOS/deployment-checklist.md` for the failure-injection
+  tests this was verified against.
+- **The Daily Executive Brief is now archived immutably** — every run,
+  Daily Brief's generator writes the same report into
+  `AOS/daily-briefs/YYYY/MM/DD/` (both `.md` and a new self-contained
+  `.html` rendering), in addition to the stable and dated locations it
+  already wrote. `orchestrator-config.json`'s `daily-brief` entry lists
+  the new paths so the Daily Execution Report's "Outputs Generated"
+  section detects them too.
+
 ## Usage
 
 ```

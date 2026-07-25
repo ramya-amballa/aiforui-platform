@@ -23,10 +23,14 @@ other executable home yet:
 
 This script does not write to any of the three source files. It is a
 read-only view, safe to re-run at any time; the only output is
-executive-dashboard.md (always overwritten in place) and a dated copy
-in runtime/output/ for history.
+executive-dashboard.md (always overwritten in place), a dated copy in
+runtime/output/ for history, an HTML rendering of the same content
+(same two locations, plus below), and an immutable dated archive copy
+of both formats under AOS/daily-briefs/YYYY/MM/DD/ — this is the one
+Daily Executive Brief the Orchestrator's "Daily Brief" step produces.
 """
 
+import html
 import json
 import re
 import sys
@@ -42,7 +46,9 @@ PIPELINE_PATH = AOS_DIR / "08-Revenue-Hunter" / "pipeline.json"
 CRM_PATH = AOS_DIR / "06-CRM" / "company-intelligence.json"
 
 STABLE_OUTPUT_PATH = DASHBOARD_DIR / "executive-dashboard.md"
+STABLE_HTML_PATH = DASHBOARD_DIR / "executive-dashboard.html"
 OUTPUT_DIR = RUNTIME_DIR / "output"
+DAILY_BRIEFS_DIR = AOS_DIR / "daily-briefs"
 
 TODAY = date.today()
 
@@ -441,6 +447,145 @@ def daily_summary(rev, priorities, crm_status, open_opps, open_pipe):
     return " ".join(parts)
 
 
+def _inline_html(text):
+    """Escape, then apply the small set of inline styles this report's
+    own markdown actually uses: `code`, **bold**, *italic*. Escaping
+    first means a literal & or < in a real company/opportunity name
+    can never be interpreted as markup."""
+    escaped = html.escape(text, quote=False)
+    escaped = re.sub(r"`([^`]+)`", r"<code>\1</code>", escaped)
+    escaped = re.sub(r"\*\*([^*]+)\*\*", r"<strong>\1</strong>", escaped)
+    escaped = re.sub(r"\*([^*]+)\*", r"<em>\1</em>", escaped)
+    return escaped
+
+
+def _line_html(line):
+    """Whole-line underscore italics — this generator's own empty-state
+    lines (e.g. "_No open pipeline items yet._") always wrap the
+    entire line, never mid-sentence, so this is anchored to the full
+    line rather than a general inline substitution: a real company or
+    opportunity title containing an underscore (e.g. "ACME_Corp") must
+    never be partially italicised."""
+    stripped = line.strip()
+    if len(stripped) > 2 and stripped.startswith("_") and stripped.endswith("_"):
+        return f"<em>{_inline_html(stripped[1:-1])}</em>"
+    return _inline_html(line)
+
+
+def markdown_to_html(report_md, title):
+    """A small, deterministic renderer for exactly the markdown
+    constructs generate() itself produces (headings, tables, bullet
+    lists, bold/italic/code, horizontal rules, plain paragraphs) — not
+    a general-purpose markdown parser, and not a second copy of the
+    report's business logic: it renders the same lines generate()
+    already computed, so there is exactly one place that decides what
+    the Daily Executive Brief says."""
+    lines = report_md.split("\n")
+    html_parts = []
+    i = 0
+    in_list = False
+
+    def close_list():
+        nonlocal in_list
+        if in_list:
+            html_parts.append("</ul>")
+            in_list = False
+
+    while i < len(lines):
+        line = lines[i]
+
+        if line.startswith("|"):
+            close_list()
+            table_lines = []
+            while i < len(lines) and lines[i].startswith("|"):
+                table_lines.append(lines[i])
+                i += 1
+            header_cells = [c.strip() for c in table_lines[0].strip("|").split("|")]
+            html_parts.append("<table>")
+            html_parts.append("<thead><tr>" + "".join(f"<th>{_inline_html(c)}</th>" for c in header_cells) + "</tr></thead>")
+            html_parts.append("<tbody>")
+            for row_line in table_lines[2:]:
+                cells = [c.strip() for c in row_line.strip("|").split("|")]
+                html_parts.append("<tr>" + "".join(f"<td>{_inline_html(c)}</td>" for c in cells) + "</tr>")
+            html_parts.append("</tbody></table>")
+            continue
+
+        if line.startswith("### "):
+            close_list()
+            html_parts.append(f"<h3>{_inline_html(line[4:])}</h3>")
+        elif line.startswith("## "):
+            close_list()
+            html_parts.append(f"<h2>{_inline_html(line[3:])}</h2>")
+        elif line.startswith("# "):
+            close_list()
+            html_parts.append(f"<h1>{_inline_html(line[2:])}</h1>")
+        elif line.strip() == "---":
+            close_list()
+            html_parts.append("<hr>")
+        elif line.startswith("- "):
+            if not in_list:
+                html_parts.append("<ul>")
+                in_list = True
+            html_parts.append(f"<li>{_line_html(line[2:])}</li>")
+        elif line.strip() == "":
+            close_list()
+        else:
+            close_list()
+            html_parts.append(f"<p>{_line_html(line)}</p>")
+        i += 1
+
+    close_list()
+    body = "\n".join(html_parts)
+
+    return f"""<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>{html.escape(title, quote=False)}</title>
+<style>
+  body {{ font-family: -apple-system, Segoe UI, Helvetica, Arial, sans-serif;
+          max-width: 960px; margin: 2rem auto; padding: 0 1.5rem;
+          color: #1a1a1a; background: #fff; line-height: 1.5; }}
+  h1 {{ font-size: 1.6rem; border-bottom: 2px solid #222; padding-bottom: 0.4rem; }}
+  h2 {{ font-size: 1.25rem; margin-top: 2rem; border-bottom: 1px solid #ccc; padding-bottom: 0.3rem; }}
+  h3 {{ font-size: 1.05rem; margin-top: 1.5rem; }}
+  table {{ border-collapse: collapse; width: 100%; margin: 0.75rem 0; }}
+  th, td {{ border: 1px solid #ccc; padding: 0.4rem 0.6rem; text-align: left; font-size: 0.92rem; }}
+  th {{ background: #f2f2f2; }}
+  code {{ background: #f2f2f2; padding: 0.1rem 0.3rem; border-radius: 3px; font-size: 0.9em; }}
+  hr {{ border: none; border-top: 1px solid #ddd; margin: 1.5rem 0; }}
+  ul {{ margin: 0.5rem 0; }}
+  @media (prefers-color-scheme: dark) {{
+    body {{ color: #e6e6e6; background: #1a1a1a; }}
+    h1 {{ border-color: #555; }}
+    h2 {{ border-color: #444; }}
+    th, td {{ border-color: #444; }}
+    th {{ background: #2a2a2a; }}
+    code {{ background: #2a2a2a; }}
+    hr {{ border-top-color: #444; }}
+  }}
+</style>
+</head>
+<body>
+{body}
+</body>
+</html>
+"""
+
+
+def archive_daily_brief(report_md, report_html, today):
+    """AOS/daily-briefs/YYYY/MM/DD/ — an immutable dated archive of the
+    one Daily Executive Brief this run produced, in both formats.
+    Additive only: the stable executive-dashboard.md/.html and the
+    dated runtime/output/ copies this script already wrote are
+    untouched."""
+    day_dir = DAILY_BRIEFS_DIR / f"{today.year:04d}" / f"{today.month:02d}" / f"{today.day:02d}"
+    day_dir.mkdir(parents=True, exist_ok=True)
+    (day_dir / "executive-dashboard.md").write_text(report_md, encoding="utf-8")
+    (day_dir / "executive-dashboard.html").write_text(report_html, encoding="utf-8")
+    return day_dir
+
+
 def main():
     try:
         opportunities = load_json(OPPORTUNITY_SCHEMA_PATH)["opportunities"]
@@ -451,12 +596,18 @@ def main():
         return 1
 
     report = generate(opportunities, pipeline, crm)
+    report_html = markdown_to_html(report, "AOS Executive Dashboard")
 
     STABLE_OUTPUT_PATH.write_text(report, encoding="utf-8")
+    STABLE_HTML_PATH.write_text(report_html, encoding="utf-8")
     OUTPUT_DIR.mkdir(exist_ok=True)
     (OUTPUT_DIR / f"{TODAY.isoformat()}-executive-dashboard.md").write_text(report, encoding="utf-8")
+    (OUTPUT_DIR / f"{TODAY.isoformat()}-executive-dashboard.html").write_text(report_html, encoding="utf-8")
 
-    print(f"Executive Dashboard written to {STABLE_OUTPUT_PATH}")
+    day_dir = archive_daily_brief(report, report_html, TODAY)
+
+    print(f"Executive Dashboard written to {STABLE_OUTPUT_PATH} and {STABLE_HTML_PATH}")
+    print(f"Daily Executive Brief archived to {day_dir.relative_to(AOS_DIR.parent)}")
     return 0
 
 

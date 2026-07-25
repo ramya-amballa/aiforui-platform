@@ -103,7 +103,11 @@
       "note": "Implemented in executive-dashboard/, not 07-Daily-Brief/ — see dependency-map.md.",
       "outputPaths": [
         "executive-dashboard/executive-dashboard.md",
-        "executive-dashboard/runtime/output/{date}-executive-dashboard.md"
+        "executive-dashboard/executive-dashboard.html",
+        "executive-dashboard/runtime/output/{date}-executive-dashboard.md",
+        "executive-dashboard/runtime/output/{date}-executive-dashboard.html",
+        "daily-briefs/{date_path}/executive-dashboard.md",
+        "daily-briefs/{date_path}/executive-dashboard.html"
       ],
       "businessImpactSource": "executive-dashboard/executive-dashboard.md"
     }

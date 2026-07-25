@@ -9,12 +9,107 @@
     "reportPath": "string — this run's Daily Execution Report, relative to the repo root",
     "logPath": "string — this run's full log, relative to the repo root"
   },
-  "startedAt": null,
-  "finishedAt": null,
-  "durationSeconds": null,
-  "employees": [],
-  "overallStatus": "NEVER_RUN",
+  "startedAt": "2026-07-25T12:11:13.469078+00:00",
+  "finishedAt": "2026-07-25T12:11:14.167163+00:00",
+  "durationSeconds": 0.7,
+  "employees": [
+    {
+      "key": "market-intelligence",
+      "name": "Market Intelligence",
+      "status": "SUCCESS",
+      "attempts": 1,
+      "durationSeconds": 0.06,
+      "error": null,
+      "outputs": []
+    },
+    {
+      "key": "opportunity-hunter",
+      "name": "Opportunity Hunter",
+      "status": "SUCCESS",
+      "attempts": 1,
+      "durationSeconds": 0.45,
+      "error": null,
+      "outputs": [
+        "opportunity-hunter/runtime/output/2026-07-25-daily-report.md",
+        "opportunity-hunter/runtime/snapshots/2026-07-25-collection-snapshot.json"
+      ]
+    },
+    {
+      "key": "revenue-hunter",
+      "name": "Revenue Hunter",
+      "status": "SUCCESS",
+      "attempts": 1,
+      "durationSeconds": 0.03,
+      "error": null,
+      "outputs": [
+        "revenue-hunter/runtime/output/2026-07-25-revenue-dashboard.md",
+        "revenue-hunter/runtime/output/2026-07-25-revenue-forecast.md"
+      ]
+    },
+    {
+      "key": "crm",
+      "name": "CRM",
+      "status": "SUCCESS",
+      "attempts": 1,
+      "durationSeconds": 0.03,
+      "error": null,
+      "outputs": []
+    },
+    {
+      "key": "sales-director",
+      "name": "Sales Director",
+      "status": "SUCCESS",
+      "attempts": 1,
+      "durationSeconds": 0.03,
+      "error": null,
+      "outputs": []
+    },
+    {
+      "key": "product-manager",
+      "name": "Product Manager",
+      "status": "SUCCESS",
+      "attempts": 1,
+      "durationSeconds": 0.03,
+      "error": null,
+      "outputs": []
+    },
+    {
+      "key": "content-director",
+      "name": "Content Director",
+      "status": "SUCCESS",
+      "attempts": 1,
+      "durationSeconds": 0.03,
+      "error": null,
+      "outputs": []
+    },
+    {
+      "key": "ceo-advisor",
+      "name": "CEO Advisor",
+      "status": "NOT_EXECUTABLE",
+      "attempts": 0,
+      "durationSeconds": 0,
+      "error": null,
+      "outputs": []
+    },
+    {
+      "key": "daily-brief",
+      "name": "Daily Brief",
+      "status": "SUCCESS",
+      "attempts": 1,
+      "durationSeconds": 0.03,
+      "error": null,
+      "outputs": [
+        "executive-dashboard/executive-dashboard.md",
+        "executive-dashboard/executive-dashboard.html",
+        "executive-dashboard/runtime/output/2026-07-25-executive-dashboard.md",
+        "executive-dashboard/runtime/output/2026-07-25-executive-dashboard.html",
+        "daily-briefs/2026/07/25/executive-dashboard.md",
+        "daily-briefs/2026/07/25/executive-dashboard.html"
+      ]
+    }
+  ],
+  "overallStatus": "SUCCESS",
   "failures": [],
-  "reportPath": null,
-  "logPath": null
+  "reportPath": "AOS/orchestrator/runtime/reports/2026-07-25-daily-execution-report.md",
+  "logPath": "AOS/orchestrator/logs/2026-07-25-121113-orchestrator.log"
 }

@@ -76,7 +76,10 @@ def log(fh, message):
 
 
 def resolve_output_paths(output_paths, date_str):
-    return [p.replace("{date}", date_str) for p in (output_paths or [])]
+    # {date_path} supports the dated AOS/daily-briefs/YYYY/MM/DD/ archive
+    # structure — the same date, just folder-shaped instead of dash-joined.
+    date_path = date_str.replace("-", "/")
+    return [p.replace("{date}", date_str).replace("{date_path}", date_path) for p in (output_paths or [])]
 
 
 def detect_outputs(employee, aos_dir, date_str):
@@ -221,10 +224,33 @@ def overall_status(results):
 
 
 def main():
-    config = load_config()
-    defaults = config["defaults"]
-    employees = config["employees"]
-    by_key = {e["key"]: e for e in employees}
+    # The config load happens before there is anywhere to log to, so a
+    # broken config file must still produce a diagnosable failure rather
+    # than a bare Python traceback with no record in status.json/logs/.
+    try:
+        config = load_config()
+        defaults = config["defaults"]
+        employees = config["employees"]
+        by_key = {e["key"]: e for e in employees}
+    except Exception as exc:
+        log_path, fh = open_log()
+        log(fh, f"AOS Orchestrator v1.0 — run started {RUN_STARTED.isoformat()}")
+        log(fh, f"FAILED before any employee could run — could not load orchestrator-config.json: {exc}")
+        fh.close()
+        with open(STATUS_PATH, "w", encoding="utf-8") as f:
+            json.dump({
+                "startedAt": RUN_STARTED.isoformat(),
+                "finishedAt": datetime.now(timezone.utc).isoformat(),
+                "durationSeconds": 0,
+                "employees": [],
+                "overallStatus": STATUS_FAILED,
+                "failures": [{"key": "orchestrator", "name": "Orchestrator", "status": STATUS_FAILED,
+                              "error": f"could not load orchestrator-config.json: {exc}"}],
+                "reportPath": None,
+                "logPath": str(log_path.relative_to(REPO_ROOT)),
+            }, f, indent=2, ensure_ascii=False)
+            f.write("\n")
+        return 1
 
     log_path, fh = open_log()
     log(fh, f"AOS Orchestrator v1.0 — run started {RUN_STARTED.isoformat()}")
@@ -244,7 +270,20 @@ def main():
                       "durationSeconds": 0, "error": f"upstream failure: {', '.join(unmet_names)}",
                       "outputs": []}
         else:
-            result = run_employee(employee, defaults, AOS_DIR, fh)
+            # Every employee's own script is already isolated as its own
+            # subprocess (a crash there can't reach here). This guards the
+            # other half: if something in the Orchestrator's own
+            # bookkeeping for THIS employee raises unexpectedly (a bad
+            # config entry, an I/O error detecting outputs), it must not
+            # abort the whole run — every independent employee still
+            # downstream needs its own chance to run.
+            try:
+                result = run_employee(employee, defaults, AOS_DIR, fh)
+            except Exception as exc:
+                log(fh, f"{employee['name']}: FAILED — unexpected Orchestrator error: {exc}")
+                result = {"key": employee["key"], "name": employee["name"],
+                          "status": STATUS_FAILED, "attempts": 0, "durationSeconds": 0,
+                          "error": f"unexpected Orchestrator error: {exc}", "outputs": []}
 
         results.append(result)
         status_by_key[employee["key"]] = result["status"]

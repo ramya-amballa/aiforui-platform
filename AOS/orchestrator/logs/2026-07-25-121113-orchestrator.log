@@ -1,0 +1,67 @@
+[2026-07-25T12:11:13.469449+00:00] AOS Orchestrator v1.0 — run started 2026-07-25T12:11:13.469078+00:00
+[2026-07-25T12:11:13.469634+00:00] Market Intelligence: attempt 1/3 -> 05-Market-Intelligence/runtime/monitor.py
+  EU AI Act: no feed URLs configured, skipping
+  ISO 42001: no feed URLs configured, skipping
+  NIST AI RMF: no feed URLs configured, skipping
+  DORA: no feed URLs configured, skipping
+  GDPR: no feed URLs configured, skipping
+  CBUAE: no feed URLs configured, skipping
+  RBI: no feed URLs configured, skipping
+  Microsoft AI: no feed URLs configured, skipping
+  OpenAI Enterprise: no feed URLs configured, skipping
+  Anthropic: no feed URLs configured, skipping
+  AI Security: no feed URLs configured, skipping
+  AI Governance: no feed URLs configured, skipping
+  Responsible AI: no feed URLs configured, skipping
+No new developments across any configured source. Nothing to do.
+[2026-07-25T12:11:13.531532+00:00] Market Intelligence: SUCCESS after 1 attempt(s), 0.06s
+[2026-07-25T12:11:13.531662+00:00] Opportunity Hunter: attempt 1/3 -> opportunity-hunter/runtime/collect.py
+Collecting: greenhouse
+  Greenhouse: no boardTokens configured, skipping (add company tokens to sources.json)
+Collecting: lever
+  Lever: no companies configured, skipping (add company slugs to sources.json)
+Collecting: ashby
+  Ashby: no jobBoardNames configured, skipping (add org names to sources.json)
+Collecting: remoteok
+    fetch failed (https://remoteok.com/api): <urlopen error Tunnel connection failed: 403 Forbidden>
+Collecting: upwork
+  Upwork: connector-ready, no API credentials configured — skipping
+Collecting: linkedinJobs
+  LinkedIn Jobs: connector-ready, no API credentials configured — skipping
+Collecting: googleJobs
+  Google Jobs: connector-ready, no API credentials configured — skipping
+Collecting: wellfound
+  Wellfound: connector-ready, no API credentials configured — skipping
+Collecting: flexjobs
+  FlexJobs: connector-ready, no API credentials configured — skipping
+Collecting: uaeRecruiters
+  UAE Recruiters: no career page URLs configured, skipping
+Collecting: consultingFirms
+  Consulting Firms: no career page URLs configured, skipping
+
+Discovered 0 postings across 11 sources; 0 are new after dedup.
+No new opportunities. Nothing sent to ingest.
+[2026-07-25T12:11:13.980378+00:00] Opportunity Hunter: SUCCESS after 1 attempt(s), 0.45s
+[2026-07-25T12:11:13.980607+00:00] Revenue Hunter: attempt 1/3 -> revenue-hunter/runtime/generate.py
+No new pipeline entries or stage changes this run.
+
+0 opportunity-sourced entries added, 0 CRM-sourced entries added, 0 stage(s) advanced. Dashboard and forecast written to AOS/revenue-hunter/runtime/output
+[2026-07-25T12:11:14.013083+00:00] Revenue Hunter: SUCCESS after 1 attempt(s), 0.03s
+[2026-07-25T12:11:14.013209+00:00] CRM: attempt 1/3 -> crm/runtime/generate.py
+No companies on record in company-intelligence.json yet. Nothing to report.
+[2026-07-25T12:11:14.042845+00:00] CRM: SUCCESS after 1 attempt(s), 0.03s
+[2026-07-25T12:11:14.043249+00:00] Sales Director: attempt 1/3 -> sales-director/runtime/prepare.py
+No new classified opportunities to prepare. Nothing to do.
+[2026-07-25T12:11:14.072582+00:00] Sales Director: SUCCESS after 1 attempt(s), 0.03s
+[2026-07-25T12:11:14.072738+00:00] Product Manager: attempt 1/3 -> product-manager/runtime/generate.py
+No new or unscored signals from any source. Nothing to do.
+[2026-07-25T12:11:14.102735+00:00] Product Manager: SUCCESS after 1 attempt(s), 0.03s
+[2026-07-25T12:11:14.102884+00:00] Content Director: attempt 1/3 -> content-director/runtime/generate.py
+No new signals from any source. Nothing to do.
+[2026-07-25T12:11:14.132501+00:00] Content Director: SUCCESS after 1 attempt(s), 0.03s
+[2026-07-25T12:11:14.132719+00:00] CEO Advisor: NOT_EXECUTABLE — No independent runtime; decision-model.md is executed as one section of Daily Brief's generator (executive-dashboard/runtime/generate.py).
+[2026-07-25T12:11:14.132786+00:00] Daily Brief: attempt 1/3 -> executive-dashboard/runtime/generate.py
+Executive Dashboard written to /home/user/aiforui-platform/AOS/executive-dashboard/executive-dashboard.md and /home/user/aiforui-platform/AOS/executive-dashboard/executive-dashboard.html
+Daily Executive Brief archived to AOS/daily-briefs/2026/07/25
+[2026-07-25T12:11:14.166791+00:00] Daily Brief: SUCCESS after 1 attempt(s), 0.03s
+[2026-07-25T12:11:14.167507+00:00] Run finished: SUCCESS. Report: AOS/orchestrator/runtime/reports/2026-07-25-daily-execution-report.md

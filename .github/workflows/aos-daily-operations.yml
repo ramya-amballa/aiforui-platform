@@ -2,8 +2,8 @@ name: AOS Daily Operations
 
 on:
   schedule:
-    # 06:00 UAE time (UTC+4) every day.
-    - cron: "0 2 * * *"
+    # 06:00 IST (UTC+5:30) every day == 00:30 UTC.
+    - cron: "30 0 * * *"
   workflow_dispatch: {}
 
 jobs:
