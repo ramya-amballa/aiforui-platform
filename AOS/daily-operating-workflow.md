@@ -188,6 +188,17 @@ day's 06:00 run.
 
 ## Automation Mapping
 
+**This section is the original design; `orchestrator/` is where it
+became real.** `AOS/orchestrator/orchestrator.py` (v1.0) is the actual,
+running implementation of the idea below — one process, invoked once
+by GitHub Actions, that enforces a dependency graph and retries
+failures. Its graph differs from the sketch here in one respect worth
+knowing: only three employees (Opportunity Hunter, Sales Director,
+Daily Brief) have a real runtime script to invoke today, so most of the
+job names below are executed as honest no-ops (`NOT_EXECUTABLE`) rather
+than actual jobs, until they get one. See `orchestrator/dependency-map.md`
+for the graph as it's actually enforced today.
+
 This sequence is a dependency chain, not a fixed clock schedule — each
 step's real dependency is "the step before it has produced its output
 today," not "15 minutes have passed." Mapped to GitHub Actions:

@@ -34,6 +34,9 @@ daily recommendation.
    - Every entry in `sales-director/runtime/output/ceo-advisor-feed.json`
      — its `status` only (`Ready To Send`, `Proposal Ready`, or
      `Needs Review`); the underlying package is never opened here
+   - Any employee listed in `orchestrator/status.json`'s `failures` for
+     that day's run — a broken pipeline is a candidate action in its
+     own right
 2. Run every candidate through `decision-model.md`.
 3. Select exactly one action as today's highest-value action; list the
    next 2-3 as runners-up, not as co-priorities.

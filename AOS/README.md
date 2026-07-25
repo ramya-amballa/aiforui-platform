@@ -44,6 +44,7 @@ employee's `operating-manual.md`.
 - `08-Revenue-Hunter/revenue-forecasting-engine.md` — probability-weighted monthly revenue forecasting and highest-leverage-action analysis
 - `executive-dashboard/` — the single entry point every morning: revenue, CEO Advisor's top priority, and everything needing attention across Opportunity Hunter, Revenue Hunter and CRM, generated read-only from their live outputs (`executive-dashboard/runtime/generate.py`)
 - `sales-director/` — Sales Director's proposal preparation engine: turns every `Immediate Proposal`/`Apply`/`Partnership`/`Follow Recruiter` opportunity into a cover letter, proposal, recruiter/client outreach, clarifying questions, recommended pricing and a confidence score, preparation only, never sent (`sales-director/runtime/prepare.py`)
+- `orchestrator/` — the single entry point for daily operations: runs every employee with a live runtime in dependency order, retries failures, logs everything, and produces the Daily Execution Report (`orchestrator/orchestrator.py`) — see below
 
 ## Status
 
@@ -68,3 +69,9 @@ Working files (`opportunity-schema.json`, `regulatory-log.json`,
 `shipped-products-log.json`, daily reports) start empty, with their
 schema documented in the file itself, and are populated as the AI
 employees actually run.
+
+## Running AOS
+
+`python3 AOS/orchestrator/orchestrator.py` is the single command that
+runs a day of AOS operations — the only thing GitHub Actions or a human
+should invoke. See `orchestrator/README.md`.

@@ -1,0 +1,20 @@
+{
+  "schema": {
+    "startedAt": "string — ISO 8601 timestamp, UTC",
+    "finishedAt": "string — ISO 8601 timestamp, UTC",
+    "durationSeconds": "number",
+    "employees": "array — one entry per employee, in execution order: key, name, status (SUCCESS, FAILED, NOT_EXECUTABLE, SKIPPED_DEPENDENCY_FAILED), attempts, durationSeconds, error, outputs",
+    "overallStatus": "string — SUCCESS, PARTIAL_FAILURE, or FAILED",
+    "failures": "array — employees with status FAILED this run, for 09-CEO-Advisor to read as candidate actions (see decision-model.md)",
+    "reportPath": "string — this run's Daily Execution Report, relative to the repo root",
+    "logPath": "string — this run's full log, relative to the repo root"
+  },
+  "startedAt": null,
+  "finishedAt": null,
+  "durationSeconds": null,
+  "employees": [],
+  "overallStatus": "NEVER_RUN",
+  "failures": [],
+  "reportPath": null,
+  "logPath": null
+}

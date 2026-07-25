@@ -1,0 +1,94 @@
+{
+  "_comment": "The employee registry, in fixed execution order. 'script' is a path relative to AOS/, run as its own subprocess from its own directory; null means no runtime exists yet and the step is recorded NOT_EXECUTABLE, never simulated. 'dependsOn' lists employee keys that must finish SUCCESS or NOT_EXECUTABLE before this one runs. 'outputPaths' are well-known files (supporting a {date} placeholder) the Orchestrator checks for after a SUCCESS, purely by filesystem existence, never parsed for business logic. See ../../dependency-map.md for the reasoning behind every entry.",
+  "defaults": {
+    "maxRetries": 2,
+    "retryBackoffSeconds": 5,
+    "timeoutSeconds": 600
+  },
+  "employees": [
+    {
+      "key": "market-intelligence",
+      "name": "Market Intelligence",
+      "folder": "05-Market-Intelligence",
+      "script": null,
+      "dependsOn": [],
+      "note": "No runtime implementation yet; operating-manual.md is a manual process."
+    },
+    {
+      "key": "opportunity-hunter",
+      "name": "Opportunity Hunter",
+      "folder": "opportunity-hunter",
+      "script": "opportunity-hunter/runtime/collect.py",
+      "dependsOn": [],
+      "outputPaths": [
+        "opportunity-hunter/runtime/output/{date}-daily-report.md",
+        "opportunity-hunter/runtime/rejected/{date}-rejected-report.md",
+        "opportunity-hunter/runtime/snapshots/{date}-collection-snapshot.json"
+      ]
+    },
+    {
+      "key": "revenue-hunter",
+      "name": "Revenue Hunter",
+      "folder": "08-Revenue-Hunter",
+      "script": null,
+      "dependsOn": ["opportunity-hunter"],
+      "note": "No independent runtime; pipeline.json is written as a side effect of Opportunity Hunter's ingest.py."
+    },
+    {
+      "key": "crm",
+      "name": "CRM",
+      "folder": "06-CRM",
+      "script": null,
+      "dependsOn": ["opportunity-hunter"],
+      "note": "No independent runtime; company-intelligence.json is written as a side effect of Opportunity Hunter's ingest.py."
+    },
+    {
+      "key": "sales-director",
+      "name": "Sales Director",
+      "folder": "sales-director",
+      "script": "sales-director/runtime/prepare.py",
+      "dependsOn": ["opportunity-hunter", "revenue-hunter", "crm"],
+      "outputPaths": [
+        "sales-director/runtime/output/{date}-sales-director-report.md",
+        "sales-director/runtime/output/ceo-advisor-feed.json"
+      ]
+    },
+    {
+      "key": "product-manager",
+      "name": "Product Manager",
+      "folder": "03-Product-Manager",
+      "script": null,
+      "dependsOn": ["market-intelligence"],
+      "note": "No runtime implementation yet."
+    },
+    {
+      "key": "content-director",
+      "name": "Content Director",
+      "folder": "02-Content-Director",
+      "script": null,
+      "dependsOn": ["market-intelligence"],
+      "note": "No runtime implementation yet."
+    },
+    {
+      "key": "ceo-advisor",
+      "name": "CEO Advisor",
+      "folder": "09-CEO-Advisor",
+      "script": null,
+      "dependsOn": ["sales-director", "revenue-hunter", "opportunity-hunter", "crm"],
+      "note": "No independent runtime; decision-model.md is executed as one section of Daily Brief's generator (executive-dashboard/runtime/generate.py)."
+    },
+    {
+      "key": "daily-brief",
+      "name": "Daily Brief",
+      "folder": "07-Daily-Brief",
+      "script": "executive-dashboard/runtime/generate.py",
+      "dependsOn": ["opportunity-hunter", "revenue-hunter", "crm", "sales-director", "ceo-advisor"],
+      "note": "Implemented in executive-dashboard/, not 07-Daily-Brief/ — see dependency-map.md.",
+      "outputPaths": [
+        "executive-dashboard/executive-dashboard.md",
+        "executive-dashboard/runtime/output/{date}-executive-dashboard.md"
+      ],
+      "businessImpactSource": "executive-dashboard/executive-dashboard.md"
+    }
+  ]
+}
