@@ -1,0 +1,190 @@
+{
+  "schema": {
+    "id": "string — unique identifier, e.g. rej-0001",
+    "dateRejected": "string — ISO 8601 date",
+    "source": "string",
+    "sourceCategory": "string",
+    "title": "string",
+    "organisation": "string",
+    "url": "string or null",
+    "relevanceScore": "number — 0-100, per ../opportunity-relevance-engine.md",
+    "categoriesMatched": "array of strings — which relevance categories matched, if any",
+    "reason": "string — human-readable explanation of why this fell below the relevance threshold"
+  },
+  "rejected": [
+    {
+      "id": "rej-0001",
+      "dateRejected": "2026-07-26",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Brand Designer",
+      "organisation": "CoâStar",
+      "url": "https://remoteOK.com/remote-jobs/remote-brand-designer-co-star-1135383",
+      "relevanceScore": 0,
+      "categoriesMatched": [
+        "aiContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: aiContext; Isolated weak-keyword penalty (-15))."
+    },
+    {
+      "id": "rej-0002",
+      "dateRejected": "2026-07-26",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Social Community Representative",
+      "organisation": "CELSIUS",
+      "url": "https://remoteOK.com/remote-jobs/remote-social-community-representative-celsius-1135380",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0003",
+      "dateRejected": "2026-07-26",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Head of Operations",
+      "organisation": "OpenTrack",
+      "url": "https://remoteOK.com/remote-jobs/remote-head-of-operations-opentrack-1135384",
+      "relevanceScore": 18,
+      "categoriesMatched": [
+        "consultingContext",
+        "governanceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: consultingContext, governanceContext; no penalties)."
+    },
+    {
+      "id": "rej-0004",
+      "dateRejected": "2026-07-26",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "VP of Strategic Partnerships &amp; Growth",
+      "organisation": "HealthCorps",
+      "url": "https://remoteOK.com/remote-jobs/remote-vp-of-strategic-partnerships-amp-growth-healthcorps-1135381",
+      "relevanceScore": 18,
+      "categoriesMatched": [
+        "complianceContext",
+        "consultingContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: complianceContext, consultingContext; no penalties)."
+    },
+    {
+      "id": "rej-0005",
+      "dateRejected": "2026-07-26",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Paralegal",
+      "organisation": "Giga Energy",
+      "url": "https://remoteOK.com/remote-jobs/remote-paralegal-giga-energy-1135386",
+      "relevanceScore": 0,
+      "categoriesMatched": [
+        "governanceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: governanceContext; Legal role penalty (-20); Healthcare role penalty (-20))."
+    },
+    {
+      "id": "rej-0006",
+      "dateRejected": "2026-07-26",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Manager International Customer Supply Chain rhode",
+      "organisation": "e.l.f. Beauty",
+      "url": "https://remoteOK.com/remote-jobs/remote-manager-international-customer-supply-chain-rhode-e-l-f-beauty-1135330",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0007",
+      "dateRejected": "2026-07-26",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Onboarding Specialist",
+      "organisation": "INNERGY",
+      "url": "https://remoteOK.com/remote-jobs/remote-onboarding-specialist-innergy-1135339",
+      "relevanceScore": 18,
+      "categoriesMatched": [
+        "complianceContext",
+        "consultingContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: complianceContext, consultingContext; no penalties)."
+    },
+    {
+      "id": "rej-0008",
+      "dateRejected": "2026-07-26",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Animal Cruelty Case Specialist",
+      "organisation": "Rose, Klein &amp; Marias",
+      "url": "https://remoteOK.com/remote-jobs/remote-animal-cruelty-case-specialist-rose-klein-amp-marias-1135388",
+      "relevanceScore": 0,
+      "categoriesMatched": [
+        "complianceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: complianceContext; Legal role penalty (-20); Healthcare role penalty (-20))."
+    },
+    {
+      "id": "rej-0009",
+      "dateRejected": "2026-07-26",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Gestionnaire administratif et financier F H",
+      "organisation": "UniversitÃ© de Bordeaux",
+      "url": "https://remoteOK.com/remote-jobs/remote-gestionnaire-administratif-et-financier-f-h-universite-de-bordeaux-1135352",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0010",
+      "dateRejected": "2026-07-26",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Life",
+      "organisation": "Kaim Pharmaceuticals",
+      "url": "https://remoteOK.com/remote-jobs/remote-life-kaim-pharmaceuticals-1135367",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0011",
+      "dateRejected": "2026-07-26",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "UFC GYM Jurnior Graphic Designer",
+      "organisation": "UFC GYM",
+      "url": "https://remoteOK.com/remote-jobs/remote-ufc-gym-jurnior-graphic-designer-ufc-gym-1135299",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0012",
+      "dateRejected": "2026-07-26",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Vice President Field Services",
+      "organisation": "Verra Mobility",
+      "url": "https://remoteOK.com/remote-jobs/remote-vice-president-field-services-verra-mobility-1135301",
+      "relevanceScore": 20,
+      "categoriesMatched": [
+        "complianceContext",
+        "governanceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: complianceContext, governanceContext; no penalties)."
+    },
+    {
+      "id": "rej-0013",
+      "dateRejected": "2026-07-26",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Handyperson Driver",
+      "organisation": "NHS Ayrshire &amp; Arran",
+      "url": "https://remoteOK.com/remote-jobs/remote-handyperson-driver-nhs-ayrshire-amp-arran-1135246",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    }
+  ]
+}

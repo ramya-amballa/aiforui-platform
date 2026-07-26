@@ -1,0 +1,95 @@
+[2026-07-26T04:04:28.409572+00:00] AOS Orchestrator v1.0 — run started 2026-07-26T04:04:28.409319+00:00
+[2026-07-26T04:04:28.409630+00:00] Market Intelligence: attempt 1/3 -> 05-Market-Intelligence/runtime/monitor.py
+  EU AI Act: no feed URLs configured, skipping
+  ISO 42001: no feed URLs configured, skipping
+  NIST AI RMF: no feed URLs configured, skipping
+  DORA: no feed URLs configured, skipping
+  GDPR: no feed URLs configured, skipping
+  CBUAE: no feed URLs configured, skipping
+  RBI: no feed URLs configured, skipping
+  Microsoft AI: no feed URLs configured, skipping
+  OpenAI Enterprise: no feed URLs configured, skipping
+  Anthropic: no feed URLs configured, skipping
+  AI Security: no feed URLs configured, skipping
+  AI Governance: no feed URLs configured, skipping
+  Responsible AI: no feed URLs configured, skipping
+No new developments across any configured source. Nothing to do.
+[2026-07-26T04:04:29.041073+00:00] Market Intelligence: SUCCESS after 1 attempt(s), 0.63s
+[2026-07-26T04:04:29.041172+00:00] Website Intake Runtime: attempt 1/3 -> website-intake/runtime/generate.py
+No new website submissions in runtime/inbox/. Nothing to do.
+[2026-07-26T04:04:29.074682+00:00] Website Intake Runtime: SUCCESS after 1 attempt(s), 0.03s
+[2026-07-26T04:04:29.074787+00:00] Demand Intelligence: attempt 1/3 -> demand-intelligence/runtime/collect.py
+Collecting: demandSignals
+    Demand Signals: spaCy or its 'en_core_web_sm' model isn't installed — skipping. Run: pip install spacy && python3 -m spacy download en_core_web_sm
+Collecting: greenhouse
+  Greenhouse: no boardTokens configured, skipping (add company tokens to sources.json)
+Collecting: lever
+  Lever: no companies configured, skipping (add company slugs to sources.json)
+Collecting: ashby
+  Ashby: no jobBoardNames configured, skipping (add org names to sources.json)
+Collecting: remoteok
+Collecting: upwork
+  Upwork: connector-ready, no credentials configured — skipping
+Collecting: linkedinJobs
+  LinkedIn Jobs: connector-ready, awaiting Talent Solutions/Jobs API partner access — skipping
+Collecting: googleJobs
+  Google Jobs: connector-ready, no API credentials configured — skipping
+Collecting: wellfound
+  Wellfound: connector-ready, no known public/partner API to authenticate against yet — skipping
+Collecting: flexjobs
+  FlexJobs: connector-ready, no API credentials configured — skipping
+Collecting: uaeRecruiters
+  UAE Recruiters: no career page URLs configured, skipping
+Collecting: consultingFirms
+  Consulting Firms: no career page URLs configured, skipping
+Integration Status Dashboard written to AOS/demand-intelligence/runtime/integration-status-dashboard.md
+Collection Verification Report written to AOS/demand-intelligence/runtime/output/2026-07-26-collection-verification-report.md
+
+Discovered 13 postings across 12 sources; 13 are new after dedup.
+Wrote 13 new opportunities to AOS/demand-intelligence/runtime/inbox/2026-07-26-collected.json
+  [rejected] Brand Designer -> relevance 0/100 — Weak/insufficient relevance signal (matched: aiContext; Isolated weak-keyword penalty (-15)).
+  [rejected] Social Community Representative -> relevance 0/100 — No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity.
+  [rejected] Head of Operations -> relevance 18/100 — Weak/insufficient relevance signal (matched: consultingContext, governanceContext; no penalties).
+  [rejected] VP of Strategic Partnerships &amp; Growth -> relevance 18/100 — Weak/insufficient relevance signal (matched: complianceContext, consultingContext; no penalties).
+  [rejected] Paralegal -> relevance 0/100 — Weak/insufficient relevance signal (matched: governanceContext; Legal role penalty (-20); Healthcare role penalty (-20)).
+  [rejected] Manager International Customer Supply Chain rhode -> relevance 0/100 — No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity.
+  [rejected] Onboarding Specialist -> relevance 18/100 — Weak/insufficient relevance signal (matched: complianceContext, consultingContext; no penalties).
+  [rejected] Animal Cruelty Case Specialist -> relevance 0/100 — Weak/insufficient relevance signal (matched: complianceContext; Legal role penalty (-20); Healthcare role penalty (-20)).
+  [rejected] Gestionnaire administratif et financier F H -> relevance 0/100 — No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity.
+  [rejected] Life -> relevance 0/100 — No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity.
+  [rejected] UFC GYM Jurnior Graphic Designer -> relevance 0/100 — No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity.
+  [rejected] Vice President Field Services -> relevance 20/100 — Weak/insufficient relevance signal (matched: complianceContext, governanceContext; no penalties).
+  [rejected] Handyperson Driver -> relevance 0/100 — No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity.
+
+0 opportunities processed, 13 rejected by the relevance engine. No daily report written (nothing passed the relevance threshold).
+[2026-07-26T04:04:30.158102+00:00] Demand Intelligence: SUCCESS after 1 attempt(s), 1.08s
+[2026-07-26T04:04:30.158257+00:00] Revenue Hunter: attempt 1/3 -> revenue-hunter/runtime/generate.py
+No new pipeline entries or stage changes this run.
+
+0 opportunity-sourced entries added, 0 CRM-sourced entries added, 0 stage(s) advanced. Dashboard and forecast written to AOS/revenue-hunter/runtime/output
+[2026-07-26T04:04:30.185911+00:00] Revenue Hunter: SUCCESS after 1 attempt(s), 0.03s
+[2026-07-26T04:04:30.185976+00:00] CRM: attempt 1/3 -> crm/runtime/generate.py
+No companies on record in company-intelligence.json yet. Nothing to report.
+[2026-07-26T04:04:30.210424+00:00] CRM: SUCCESS after 1 attempt(s), 0.02s
+[2026-07-26T04:04:30.210486+00:00] Service Mapping Engine: attempt 1/3 -> service-mapping/runtime/generate.py
+No new opportunities to map. Nothing to do.
+[2026-07-26T04:04:30.236563+00:00] Service Mapping Engine: SUCCESS after 1 attempt(s), 0.03s
+[2026-07-26T04:04:30.236640+00:00] Sales Director: attempt 1/3 -> sales-director/runtime/prepare.py
+No new classified opportunities to prepare. Nothing to do.
+[2026-07-26T04:04:30.261170+00:00] Sales Director: SUCCESS after 1 attempt(s), 0.02s
+[2026-07-26T04:04:30.261236+00:00] Product Manager: attempt 1/3 -> product-manager/runtime/generate.py
+No new or unscored signals from any source. Nothing to do.
+[2026-07-26T04:04:30.285106+00:00] Product Manager: SUCCESS after 1 attempt(s), 0.02s
+[2026-07-26T04:04:30.285151+00:00] Content Director: attempt 1/3 -> content-director/runtime/generate.py
+No new signals from any source. Nothing to do.
+[2026-07-26T04:04:30.309825+00:00] Content Director: SUCCESS after 1 attempt(s), 0.02s
+[2026-07-26T04:04:30.309868+00:00] Daily Brief: attempt 1/3 -> executive-dashboard/runtime/generate.py
+Executive Dashboard written to /home/runner/work/aiforui-platform/aiforui-platform/AOS/executive-dashboard/executive-dashboard.md and /home/runner/work/aiforui-platform/aiforui-platform/AOS/executive-dashboard/executive-dashboard.html
+Daily Executive Brief archived to AOS/daily-briefs/2026/07/26
+[2026-07-26T04:04:30.348856+00:00] Daily Brief: SUCCESS after 1 attempt(s), 0.04s
+[2026-07-26T04:04:30.348941+00:00] CEO Advisor: attempt 1/3 -> ceo-advisor/runtime/generate.py
+No priority candidates today.
+Revenue winnable today: unestimated; at risk: unestimated
+1 strategic alert(s); 0 item(s) on the ignore list.
+[2026-07-26T04:04:30.378271+00:00] CEO Advisor: SUCCESS after 1 attempt(s), 0.03s
+[2026-07-26T04:04:30.378827+00:00] Run finished: SUCCESS. Report: AOS/orchestrator/runtime/reports/2026-07-26-daily-execution-report.md
