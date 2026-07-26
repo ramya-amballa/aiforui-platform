@@ -41,28 +41,69 @@ show_table(
     empty_message="No proposal packages yet. Click **Generate Proposal** above (requires Demand Intelligence, Revenue Hunter, and CRM to have run first).",
 )
 
+# One standalone file per artifact (prepare.py's write_package_files()),
+# so each can be previewed/copied/downloaded independently rather than
+# only as one combined package.
+SECTIONS = [
+    ("📄", "Proposal", "proposalPath"),
+    ("📧", "Cover Letter", "coverLetterPath"),
+    ("💬", "Recruiter Message", "recruiterMessagePath"),
+    ("📧", "Client Outreach", "clientOutreachPath"),
+]
+
+
+def resolve(selected, path_key):
+    # Every path prepare.py writes (packagePath and the four section
+    # paths below) is relative to the repo root, not AOS/ — resolve via
+    # REPO_ROOT, not aos_path() (which is AOS/-relative and would
+    # double the "AOS/" prefix).
+    value = selected.get(path_key)
+    return REPO_ROOT / value if value else None
+
+
 if items:
-    st.subheader("Download a Proposal")
+    st.subheader("Proposal Package")
     labels = [f"{i['organisation']} — {i['title']} ({i['status']})" for i in items]
     choice = st.selectbox("Select a package", options=range(len(items)), format_func=lambda i: labels[i])
     selected = items[choice]
-    # packagePath is written by prepare.py relative to the repo root (not
-    # AOS/), since it's stored via package_path.relative_to(REPO_ROOT) —
-    # resolve it the same way here, not through aos_path() (which is
-    # AOS/-relative and would double the "AOS/" prefix).
-    package_path = REPO_ROOT / selected["packagePath"] if "packagePath" in selected else None
-    if package_path and package_path.exists():
-        content = package_path.read_text(encoding="utf-8")
+
+    for emoji, label, path_key in SECTIONS:
+        st.markdown(f"#### {emoji} {label}")
+        section_path = resolve(selected, path_key)
+        if not section_path or not section_path.exists():
+            st.warning(f"{label} file not found on disk.")
+            st.divider()
+            continue
+
+        content = section_path.read_text(encoding="utf-8")
         with st.expander("Preview", expanded=True):
             st.markdown(content)
-        st.download_button(
-            "Download Proposal",
-            data=content,
-            file_name=package_path.name,
-            mime="text/markdown",
-        )
-    else:
-        st.warning("Package file not found on disk.")
+
+        col_download, col_copy = st.columns(2)
+        with col_download:
+            st.download_button(
+                "Download",
+                data=content,
+                file_name=section_path.name,
+                mime="text/markdown",
+                key=f"download-{path_key}-{choice}",
+            )
+        with col_copy:
+            with st.popover("Copy"):
+                st.caption("Click the copy icon in the top-right corner of the box below.")
+                st.code(content, language=None)
+        st.divider()
+
+    package_path = resolve(selected, "packagePath")
+    if package_path and package_path.exists():
+        with st.expander("Full combined package (all sections in one file)"):
+            st.download_button(
+                "Download Full Package",
+                data=package_path.read_text(encoding="utf-8"),
+                file_name=package_path.name,
+                mime="text/markdown",
+                key=f"download-full-{choice}",
+            )
 
 st.divider()
 st.subheader("Sales Director Report")

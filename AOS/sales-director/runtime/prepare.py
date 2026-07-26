@@ -7,12 +7,23 @@ Usage:
 
 Reads every opportunity in ../../demand-intelligence/opportunity-schema.json
 classified Immediate Proposal, Apply, Partnership or Follow Recruiter,
-and — for any not already prepared — writes a full package to
-output/packages/: cover letter, proposal, recruiter outreach, client
-outreach, clarifying questions, recommended pricing and a proposal
-confidence score. The model behind pricing and confidence is documented
-in ../proposal-preparation-engine.md; read that first if a number here
+and — for any not already prepared — writes to output/packages/: one
+combined package file (cover letter, proposal, recruiter outreach,
+client outreach, clarifying questions, recommended pricing and a
+proposal confidence score, all in one document) plus one standalone
+file per artifact (-proposal.md, -cover-letter.md, -recruiter-message.md,
+-client-outreach.md) so the dashboard can preview/copy/download each
+piece on its own. write_package_files() is the one place any of these
+five files gets written — every prepared package always gets all five;
+there is no code path that records a path without writing the file it
+points to. The model behind pricing and confidence is documented in
+../proposal-preparation-engine.md; read that first if a number here
 looks wrong.
+
+Also repairs (backfills) any already-processed opportunity whose
+recorded paths predate the four standalone files above — regenerates
+just the missing files and adds the missing path keys, without
+duplicating its feed entry or changing a status already recorded.
 
 Every opportunity is enriched (never re-scored) from two files it may
 already appear in: ../../08-Revenue-Hunter/pipeline.json (a real
@@ -34,6 +45,7 @@ packaged, so a re-run only prepares opportunities that are new since
 the last run.
 """
 
+import copy
 import json
 import re
 import sys
@@ -75,7 +87,11 @@ DEFAULT_PROCESSED_INDEX = {
         "opportunityId": "string — matches demand-intelligence/opportunity-schema.json's id",
         "datePrepared": "string — ISO 8601 date",
         "status": "string — Proposal Ready, Needs Review, or Ready To Send",
-        "packagePath": "string — path to the generated package, relative to the repo root",
+        "packagePath": "string — path to the combined package (all sections in one file), relative to the repo root",
+        "proposalPath": "string — path to just the proposal document, relative to the repo root",
+        "coverLetterPath": "string — path to just the cover letter, relative to the repo root",
+        "recruiterMessagePath": "string — path to just the recruiter outreach message, relative to the repo root",
+        "clientOutreachPath": "string — path to just the client outreach message, relative to the repo root",
     },
     "processed": {},
 }
@@ -86,16 +102,37 @@ DEFAULT_CEO_FEED = {
         "title": "string",
         "organisation": "string",
         "status": "string — Proposal Ready, Needs Review, or Ready To Send — the only field 09-CEO-Advisor reads",
-        "packagePath": "string — where the founder reviews the full package; CEO Advisor does not open this itself",
+        "packagePath": "string — the combined package (all sections in one file); CEO Advisor does not open this itself",
+        "proposalPath": "string — standalone proposal document, so the dashboard can preview/copy/download it alone",
+        "coverLetterPath": "string — standalone cover letter",
+        "recruiterMessagePath": "string — standalone recruiter outreach message",
+        "clientOutreachPath": "string — standalone client outreach message",
     },
     "feed": [],
 }
+
+# (path_key, package content key, human label, filename suffix) for each
+# standalone artifact file written alongside the combined package.md —
+# lets the dashboard preview/copy/download each piece independently
+# instead of only the combined file.
+SECTION_SPECS = [
+    ("proposalPath", "proposal", "Proposal", "proposal"),
+    ("coverLetterPath", "coverLetter", "Cover Letter", "cover-letter"),
+    ("recruiterMessagePath", "recruiterOutreach", "Recruiter Message", "recruiter-message"),
+    ("clientOutreachPath", "clientOutreach", "Client Outreach", "client-outreach"),
+]
 
 
 def load_json(path, default=None):
     if not path.exists():
         if default is not None:
-            return default
+            # Deep-copy, never the caller's own object - DEFAULT_PROCESSED_INDEX
+            # and DEFAULT_CEO_FEED are module-level constants callers reuse on
+            # every invocation; returning them directly would let main()'s own
+            # in-place mutations (processed_index["processed"][...] = ...,
+            # ceo_feed["feed"].append(...)) silently corrupt that shared
+            # constant for every later call in the same process.
+            return copy.deepcopy(default)
         raise FileNotFoundError(path)
     with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
@@ -445,6 +482,40 @@ def render_package_markdown(package):
     return "\n".join(lines)
 
 
+def write_package_files(package, slug):
+    """Writes the combined package.md (unchanged - full package review) plus
+    one standalone file per artifact (proposal, cover letter, recruiter
+    message, client outreach), so the dashboard can preview/copy/download
+    each piece on its own instead of only the combined file. Every prepared
+    package always gets all five files - there is no code path that records
+    a path without writing the file it points to. Returns every path
+    (relative to REPO_ROOT) to store in the feed/processed-index record."""
+    package_path = PACKAGES_DIR / f"{slug}.md"
+    package_path.write_text(render_package_markdown(package), encoding="utf-8")
+    paths = {"packagePath": str(package_path.relative_to(REPO_ROOT))}
+
+    for path_key, content_key, label, file_suffix in SECTION_SPECS:
+        section_path = PACKAGES_DIR / f"{slug}-{file_suffix}.md"
+        body = package[content_key]
+        # proposal_document() already opens with its own "## Proposal —
+        # ..." heading; the other three are plain letters/messages with
+        # no heading of their own, so they need one added for context
+        # when downloaded standalone.
+        heading = "" if body.lstrip().startswith("#") else f"# {label} — {package['title']} ({package['organisation']})\n\n"
+        section_path.write_text(heading + body, encoding="utf-8")
+        paths[path_key] = str(section_path.relative_to(REPO_ROOT))
+
+    return paths
+
+
+def missing_section_paths(processed_record):
+    """True if a processed-index record predates the standalone section
+    files above (written only a combined packagePath) - the exact real
+    state that made the dashboard's per-section preview/download show
+    "file not found" for a package prepared before this existed."""
+    return any(key not in processed_record for key, _, _, _ in SECTION_SPECS)
+
+
 # --------------------------------------------------------------------------
 # Main
 # --------------------------------------------------------------------------
@@ -465,13 +536,23 @@ def main():
     processed_index = load_json(PROCESSED_INDEX_PATH, DEFAULT_PROCESSED_INDEX)
     processed_index.setdefault("processed", {})
 
-    candidates = [
-        o for o in schema_data["opportunities"]
-        if o.get("classification") in TARGET_CLASSIFICATIONS and o["id"] not in processed_index["processed"]
-    ]
+    new_candidates = []
+    backfill_candidates = []
+    for o in schema_data["opportunities"]:
+        if o.get("classification") not in TARGET_CLASSIFICATIONS:
+            continue
+        record = processed_index["processed"].get(o["id"])
+        if record is None:
+            new_candidates.append(o)
+        elif missing_section_paths(record):
+            # Prepared by a version of this script that only wrote the
+            # combined package.md - the exact state that made the
+            # dashboard's per-section preview/download show "file not
+            # found on disk". Repair it below rather than skip it forever.
+            backfill_candidates.append(o)
 
-    if not candidates:
-        print("No new classified opportunities to prepare. Nothing to do.")
+    if not new_candidates and not backfill_candidates:
+        print("No new classified opportunities to prepare, and no existing packages missing their proposal files. Nothing to do.")
         return 0
 
     pipeline_by_ref = {e["sourceRef"]: e for e in pipeline_data["pipeline"] if e.get("sourceRef")}
@@ -480,33 +561,52 @@ def main():
     PACKAGES_DIR.mkdir(parents=True, exist_ok=True)
     ceo_feed = load_json(CEO_FEED_PATH, DEFAULT_CEO_FEED)
     ceo_feed.setdefault("feed", [])
+    feed_by_id = {e["opportunityId"]: e for e in ceo_feed["feed"]}
 
     prepared = []
-    for opportunity in candidates:
+    for opportunity in new_candidates:
         pipeline_entry = pipeline_by_ref.get(opportunity["id"])
         crm_entry = crm_by_org.get(opportunity["organisation"])
         service_recommendation = service_recommendations.get(opportunity["id"])
         package = build_package(opportunity, pipeline_entry, crm_entry, bank, rate_card, service_recommendation)
 
         slug = slugify(f"{opportunity['id']}-{opportunity['organisation']}-{opportunity['title']}")[:80]
-        package_path = PACKAGES_DIR / f"{slug}.md"
-        package_path.write_text(render_package_markdown(package), encoding="utf-8")
-        relative_path = str(package_path.relative_to(REPO_ROOT))
+        paths = write_package_files(package, slug)
 
         ceo_feed["feed"].append({
             "opportunityId": opportunity["id"],
             "title": opportunity["title"],
             "organisation": opportunity["organisation"],
             "status": package["status"],
-            "packagePath": relative_path,
+            **paths,
         })
         processed_index["processed"][opportunity["id"]] = {
             "datePrepared": TODAY,
             "status": package["status"],
-            "packagePath": relative_path,
+            **paths,
         }
         prepared.append(package)
         print(f"  {opportunity['id']}: {opportunity['title']} -> confidence {package['confidenceScore']}/100 -> {package['status']}")
+
+    backfilled = []
+    for opportunity in backfill_candidates:
+        pipeline_entry = pipeline_by_ref.get(opportunity["id"])
+        crm_entry = crm_by_org.get(opportunity["organisation"])
+        service_recommendation = service_recommendations.get(opportunity["id"])
+        package = build_package(opportunity, pipeline_entry, crm_entry, bank, rate_card, service_recommendation)
+
+        slug = slugify(f"{opportunity['id']}-{opportunity['organisation']}-{opportunity['title']}")[:80]
+        paths = write_package_files(package, slug)
+
+        # Only add the missing path fields - never overwrite a status the
+        # founder may already have acted on just because it's being
+        # repaired today.
+        processed_index["processed"][opportunity["id"]].update(paths)
+        feed_entry = feed_by_id.get(opportunity["id"])
+        if feed_entry is not None:
+            feed_entry.update(paths)
+        backfilled.append(opportunity)
+        print(f"  (backfill) {opportunity['id']}: {opportunity['title']} -> regenerated missing proposal files")
 
     save_json(CEO_FEED_PATH, ceo_feed)
     save_json(PROCESSED_INDEX_PATH, processed_index)
@@ -517,13 +617,16 @@ def main():
         "",
         f"**Date:** {TODAY}",
         f"**Packages prepared:** {len(prepared)}",
+        f"**Packages repaired (missing proposal files backfilled):** {len(backfilled)}",
         "",
     ]
     for p in prepared:
         report_lines.append(f"- **{p['title']}** ({p['organisation']}) — {p['confidenceScore']}/100 — {p['status']}")
+    for o in backfilled:
+        report_lines.append(f"- (backfill) **{o['title']}** ({o['organisation']})")
     report_path.write_text("\n".join(report_lines) + "\n", encoding="utf-8")
 
-    print(f"\n{len(prepared)} packages prepared. Report: {report_path.relative_to(REPO_ROOT)}")
+    print(f"\n{len(prepared)} packages prepared, {len(backfilled)} repaired. Report: {report_path.relative_to(REPO_ROOT)}")
     return 0
 
 
