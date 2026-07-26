@@ -9,7 +9,7 @@ from components.data_loader import load_json_safe, load_text_safe, resolve_dated
 from components.runtime_runner import run_script
 from components.tables import show_table
 from components.theme import apply_page_config
-from utils.paths import aos_path
+from utils.paths import REPO_ROOT
 from utils.state import bump_refresh
 
 apply_page_config("Sales Director", "▣")
@@ -46,7 +46,11 @@ if items:
     labels = [f"{i['organisation']} — {i['title']} ({i['status']})" for i in items]
     choice = st.selectbox("Select a package", options=range(len(items)), format_func=lambda i: labels[i])
     selected = items[choice]
-    package_path = aos_path(selected["packagePath"]) if "packagePath" in selected else None
+    # packagePath is written by prepare.py relative to the repo root (not
+    # AOS/), since it's stored via package_path.relative_to(REPO_ROOT) —
+    # resolve it the same way here, not through aos_path() (which is
+    # AOS/-relative and would double the "AOS/" prefix).
+    package_path = REPO_ROOT / selected["packagePath"] if "packagePath" in selected else None
     if package_path and package_path.exists():
         content = package_path.read_text(encoding="utf-8")
         with st.expander("Preview", expanded=True):
