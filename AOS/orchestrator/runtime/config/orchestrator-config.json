@@ -115,6 +115,18 @@
       ]
     },
     {
+      "key": "recruiter-intelligence",
+      "name": "Recruiter Intelligence",
+      "folder": "recruiter-intelligence",
+      "script": "recruiter-intelligence/runtime/generate.py",
+      "dependsOn": ["demand-intelligence", "revenue-hunter", "crm"],
+      "note": "New in Sprint 10. generate.py scans demand-intelligence/opportunity-schema.json's Recruiter/Consulting Channel entries and crm/company-intelligence.json's recruiter-attributed companies (both read-only) to build/refresh recruiter-profiles.json and the four requested views (Weekly Follow-up List, Dormant Relationships, Priority Recruiters, Recruiters hiring AI Governance/GRC/Fractional Consultants). Unlike Sprint 8/9, CEO Advisor genuinely reads this step's output (recruiter-intelligence-feed.json) to recommend recruiter follow-ups, per explicit instruction — see ceo-advisor/generate.py's recruiter_followups_this_week().",
+      "outputPaths": [
+        "recruiter-intelligence/runtime/output/{date}-recruiter-intelligence-report.md",
+        "recruiter-intelligence/runtime/output/recruiter-intelligence-feed.json"
+      ]
+    },
+    {
       "key": "product-manager",
       "name": "Product Manager",
       "folder": "03-Product-Manager",
@@ -160,8 +172,8 @@
       "script": "ceo-advisor/runtime/generate.py",
       "dependsOn": ["market-intelligence", "website-intake", "demand-intelligence", "revenue-hunter", "crm",
                     "service-mapping", "sales-director", "account-intelligence", "reverse-job-hunt",
-                    "product-manager", "content-director", "daily-brief"],
-      "note": "Implemented in ceo-advisor/, not 09-CEO-Advisor/ — see dependency-map.md. New in Sprint 5, and now genuinely the final step of every Orchestrator run, per explicit instruction — dependsOn lists every other employee to guarantee that, even though its own reads (see ceo-advisor/ceo-advisor-runtime-notes.md) are scoped to exactly Sprint 5's eight named sources (Product Manager, Content Director, Sprint 8's Account Intelligence and Sprint 9's Reverse Job Hunt are depended-on for ordering only, not read).",
+                    "recruiter-intelligence", "product-manager", "content-director", "daily-brief"],
+      "note": "Implemented in ceo-advisor/, not 09-CEO-Advisor/ — see dependency-map.md. New in Sprint 5, and now genuinely the final step of every Orchestrator run, per explicit instruction — dependsOn lists every other employee to guarantee that. Its own reads (see ceo-advisor/ceo-advisor-runtime-notes.md) are scoped to Sprint 5's eight named sources plus Sprint 10's Recruiter Intelligence (genuinely read, for the Recruiter Follow-ups section) — Product Manager, Content Director, Sprint 8's Account Intelligence and Sprint 9's Reverse Job Hunt remain dependency-only, for ordering, not read.",
       "outputPaths": [
         "ceo-advisor/runtime/output/{date}-ceo-daily-report.md",
         "ceo-advisor/runtime/output/ceo-daily-report.md",

@@ -132,6 +132,25 @@ class CandidateCollectionTests(unittest.TestCase):
         lines = generate.render_top_organisations_section([])
         self.assertTrue(any("No demand-signal organisations" in line for line in lines))
 
+    def test_recruiter_followups_this_week_splits_due_and_dormant(self):
+        recruiter_feed = {
+            "contacts": [
+                {"recruiter": "Acme Recruiters", "contactType": "Recruiter", "relationshipBand": "Warm",
+                 "priorityScore": 70, "nextFollowUp": "2026-08-01", "lastInteraction": "2026-07-20"},
+                {"recruiter": "Stale Co", "contactType": "Consulting Firm", "relationshipBand": "Cold",
+                 "priorityScore": 10, "nextFollowUp": None, "lastInteraction": "2020-01-01"},
+            ],
+            "weeklyFollowUpList": ["Acme Recruiters"],
+            "dormantRelationships": ["Stale Co"],
+        }
+        due, dormant = generate.recruiter_followups_this_week(recruiter_feed)
+        self.assertEqual([c["recruiter"] for c in due], ["Acme Recruiters"])
+        self.assertEqual([c["recruiter"] for c in dormant], ["Stale Co"])
+
+    def test_render_recruiter_followups_section_handles_empty_feed(self):
+        lines = generate.render_recruiter_followups_section([], [])
+        self.assertTrue(any("No recruiter or consulting-contact follow-ups" in line for line in lines))
+
 
 class RevenueImpactTests(unittest.TestCase):
     def test_highest_value_opportunity_uses_roi_not_raw_amount(self):

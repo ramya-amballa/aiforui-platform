@@ -129,6 +129,18 @@
       ],
       "outputDir": "reverse-job-hunt/runtime/output"
     },
+    "recruiter-intelligence": {
+      "name": "Recruiter Intelligence",
+      "buttonLabel": "Refresh Recruiter Intelligence",
+      "script": "recruiter-intelligence/runtime/generate.py",
+      "cwd": "recruiter-intelligence/runtime",
+      "timeoutSeconds": 300,
+      "outputs": [
+        "recruiter-intelligence/runtime/output/{date}-recruiter-intelligence-report.md",
+        "recruiter-intelligence/runtime/output/recruiter-intelligence-feed.json"
+      ],
+      "outputDir": "recruiter-intelligence/runtime/output"
+    },
     "product-manager": {
       "name": "Product Manager",
       "buttonLabel": "Review Product Ideas",

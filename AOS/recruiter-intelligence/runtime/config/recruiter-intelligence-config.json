@@ -1,0 +1,25 @@
+{
+  "_comment": "AOS Sprint 10 — Recruiter Intelligence Engine. Recruiter/consulting-contact knowledge base built by scanning real, already-existing data (demand-intelligence/opportunity-schema.json's Recruiter Channel/Consulting Channel entries, crm/company-intelligence.json's recruiter field and relationship data) — never a second, independently-collected source. Reuses CRM's own relationshipTemperature vocabulary rather than inventing a second one.",
+
+  "relationshipTemperatureScore": {
+    "_note": "Converts CRM's own relationshipTemperature (hot/warm/cooling/cold) into a 0-100 number for sorting only — the label itself is CRM's, not recomputed here.",
+    "hot": 90, "warm": 65, "cooling": 35, "cold": 10, "unknown": 0
+  },
+
+  "dormancyThresholdDays": 60,
+  "weeklyFollowUpWindowDays": 7,
+
+  "priorityWeights": {
+    "_note": "Priority Recruiters ranking — a simple, documented weighted sum, not a hidden formula. relationshipStrength and responseRate/successRate are each 0-100 (missing values treated as 0, never guessed).",
+    "relationshipStrength": 0.4,
+    "responseRate": 0.3,
+    "successRate": 0.3
+  },
+
+  "hiringDomainTags": {
+    "_note": "Section filters — 'Recruiters hiring X' — matched against the domainTags already recorded on this contact's sourced opportunities, the same vocabulary every other AOS employee already uses.",
+    "aiGovernance": ["AI Governance", "ADGL", "AI Deployment Governance"],
+    "grc": ["GRC", "Technology Risk", "Third-Party Risk"],
+    "fractionalConsultants": ["Fractional Advisory"]
+  }
+}

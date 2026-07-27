@@ -54,6 +54,7 @@ SALES_DIRECTOR_FEED_PATH = AOS_DIR / "sales-director" / "runtime" / "output" / "
 WEBSITE_INTAKE_FEED_PATH = AOS_DIR / "website-intake" / "runtime" / "output" / "ceo-advisor-feed.json"
 SERVICE_RECOMMENDATIONS_PATH = AOS_DIR / "service-mapping" / "service-recommendations.json"
 TOP_ORGANISATIONS_PATH = AOS_DIR / "demand-intelligence" / "runtime" / "output" / "top-organisations-this-week.json"
+RECRUITER_INTELLIGENCE_FEED_PATH = AOS_DIR / "recruiter-intelligence" / "runtime" / "output" / "recruiter-intelligence-feed.json"
 DAILY_BRIEF_PATH = AOS_DIR / "executive-dashboard" / "executive-dashboard.md"
 ORCHESTRATOR_STATUS_PATH = AOS_DIR / "orchestrator" / "status.json"
 
@@ -728,7 +729,45 @@ def render_top_organisations_section(top_orgs):
     return lines
 
 
-def render_daily_report(exec_summary, top3, revenue_impact, alerts, ignore_list, weekly_recommendation, top_orgs):
+def recruiter_followups_this_week(recruiter_feed):
+    """AOS Sprint 10 — reads Recruiter Intelligence's own already-computed
+    weeklyFollowUpList/dormantRelationships (recruiter-intelligence-feed.json)
+    read-only, and cross-references its own contacts list for display
+    detail. No new scoring here — every field is Recruiter Intelligence's
+    own, unchanged."""
+    contacts_by_name = {c["recruiter"]: c for c in recruiter_feed.get("contacts", [])}
+    due = [contacts_by_name[name] for name in recruiter_feed.get("weeklyFollowUpList", []) if name in contacts_by_name]
+    dormant = [contacts_by_name[name] for name in recruiter_feed.get("dormantRelationships", []) if name in contacts_by_name]
+    return due, dormant
+
+
+def render_recruiter_followups_section(due, dormant):
+    lines = ["## Recruiter Follow-ups", ""]
+    if not due and not dormant:
+        lines.append("_No recruiter or consulting-contact follow-ups due this week, and none dormant — "
+                      "Recruiter Intelligence may not have run yet, or has nothing to flag._")
+        lines.append("")
+        return lines
+
+    if due:
+        lines.append("**Due this week:**")
+        lines.append("")
+        for c in due:
+            lines.append(f"- **{c['recruiter']}** ({c['contactType']}) — next follow-up {c['nextFollowUp']}, "
+                          f"relationship {c['relationshipBand']}, priority {c['priorityScore']}/100")
+        lines.append("")
+    if dormant:
+        lines.append("**Dormant (worth reactivating or archiving):**")
+        lines.append("")
+        for c in dormant:
+            last = c.get("lastInteraction") or "never"
+            lines.append(f"- **{c['recruiter']}** ({c['contactType']}) — last interaction {last}")
+        lines.append("")
+    return lines
+
+
+def render_daily_report(exec_summary, top3, revenue_impact, alerts, ignore_list, weekly_recommendation, top_orgs,
+                         recruiter_due, recruiter_dormant):
     lines = [
         "# CEO Daily Report",
         "",
@@ -759,6 +798,7 @@ def render_daily_report(exec_summary, top3, revenue_impact, alerts, ignore_list,
         lines.append("")
 
     lines += render_top_organisations_section(top_orgs)
+    lines += render_recruiter_followups_section(recruiter_due, recruiter_dormant)
 
     lines += ["## Revenue Impact", ""]
     lines.append(f"- **Revenue at risk:** {revenue_impact['revenueAtRisk']}")
@@ -848,6 +888,7 @@ def main():
     website_leads = load_json(AOS_DIR / "website-intake" / "leads.json", {"leads": {}}).get("leads", {})
     service_recommendations = load_json(SERVICE_RECOMMENDATIONS_PATH, {"recommendations": {}}).get("recommendations", {})
     top_organisations_feed = load_json(TOP_ORGANISATIONS_PATH, {"organisations": []})
+    recruiter_feed = load_json(RECRUITER_INTELLIGENCE_FEED_PATH, {"contacts": [], "weeklyFollowUpList": [], "dormantRelationships": []})
     status_data = load_json(ORCHESTRATOR_STATUS_PATH, {"failures": []})
 
     schema_by_id = {o["id"]: o for o in schema_data.get("opportunities", [])}
@@ -866,6 +907,7 @@ def main():
     ranked = rank_candidates(candidates, config)
     top3 = top_priorities_with_reasons(ranked, count=3)
     top_orgs = top_organisations_this_week(top_organisations_feed, config, count=10)
+    recruiter_due, recruiter_dormant = recruiter_followups_this_week(recruiter_feed)
 
     cold_risk_orgs = {c["companyName"] for c in crm_status["cold_risk"]}
     revenue_impact = compute_revenue_impact(pipeline, cold_risk_orgs)
@@ -877,7 +919,8 @@ def main():
     exec_summary = build_executive_summary(top3, revenue_impact, alerts, daily_brief_summary, config)
 
     OUTPUT_DIR.mkdir(exist_ok=True)
-    daily_report = render_daily_report(exec_summary, top3, revenue_impact, alerts, ignore_list, weekly_recommendation, top_orgs)
+    daily_report = render_daily_report(exec_summary, top3, revenue_impact, alerts, ignore_list, weekly_recommendation,
+                                        top_orgs, recruiter_due, recruiter_dormant)
     (OUTPUT_DIR / f"{TODAY.isoformat()}-ceo-daily-report.md").write_text(daily_report, encoding="utf-8")
     (OUTPUT_DIR / "ceo-daily-report.md").write_text(daily_report, encoding="utf-8")
 
