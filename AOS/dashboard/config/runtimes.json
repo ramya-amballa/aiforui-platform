@@ -177,6 +177,18 @@
       ],
       "outputDir": "tender-intelligence/runtime/output"
     },
+    "executive-brand-intelligence": {
+      "name": "Executive Brand Intelligence",
+      "buttonLabel": "Refresh Executive Brand Intelligence",
+      "script": "executive-brand-intelligence/runtime/generate.py",
+      "cwd": "executive-brand-intelligence/runtime",
+      "timeoutSeconds": 300,
+      "outputs": [
+        "executive-brand-intelligence/runtime/output/{date}-executive-brand-intelligence-report.md",
+        "executive-brand-intelligence/runtime/output/executive-brand-intelligence-feed.json"
+      ],
+      "outputDir": "executive-brand-intelligence/runtime/output"
+    },
     "product-manager": {
       "name": "Product Manager",
       "buttonLabel": "Review Product Ideas",

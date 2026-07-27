@@ -56,6 +56,7 @@ SERVICE_RECOMMENDATIONS_PATH = AOS_DIR / "service-mapping" / "service-recommenda
 TOP_ORGANISATIONS_PATH = AOS_DIR / "demand-intelligence" / "runtime" / "output" / "top-organisations-this-week.json"
 RECRUITER_INTELLIGENCE_FEED_PATH = AOS_DIR / "recruiter-intelligence" / "runtime" / "output" / "recruiter-intelligence-feed.json"
 RELATIONSHIP_INTELLIGENCE_FEED_PATH = AOS_DIR / "relationship-intelligence" / "runtime" / "output" / "relationship-intelligence-feed.json"
+EXECUTIVE_BRAND_INTELLIGENCE_FEED_PATH = AOS_DIR / "executive-brand-intelligence" / "runtime" / "output" / "executive-brand-intelligence-feed.json"
 DAILY_BRIEF_PATH = AOS_DIR / "executive-dashboard" / "executive-dashboard.md"
 ORCHESTRATOR_STATUS_PATH = AOS_DIR / "orchestrator" / "status.json"
 
@@ -815,8 +816,51 @@ def render_relationship_action_section(action):
     return lines
 
 
+def branding_action_today(brand_feed):
+    """AOS Sprint 15 — recommends one branding action per day, rotating
+    deterministically through this week's already-computed Weekly Brand
+    Plan (executive-brand-intelligence-feed.json, read-only — no new
+    scoring here) so the same item isn't repeated every day. Candidates
+    are only the plan's own sections that actually have something to
+    say; TODAY's ordinal picks which one, so the choice is stable
+    within a day and rotates day to day."""
+    plan = brand_feed.get("weeklyPlan")
+    if not plan:
+        return None
+
+    candidates = []
+    if plan.get("topicsToWrite"):
+        candidates.append({"type": "Topic to Write", "detail": plan["topicsToWrite"][0]})
+    if plan.get("productsToUpdate"):
+        p = plan["productsToUpdate"][0]
+        candidates.append({"type": "Product to Update", "detail": f"{p['title']} ({p['type']})"})
+    if plan.get("conferencesToMonitor"):
+        c = plan["conferencesToMonitor"][0]
+        candidates.append({"type": "Conference to Monitor", "detail": f"{c['name']} — {c.get('date') or 'date not specified'}"})
+    if plan.get("linkedinStrategy"):
+        candidates.append({"type": "LinkedIn Strategy", "detail": plan["linkedinStrategy"]})
+    if plan.get("githubImprovements"):
+        candidates.append({"type": "GitHub Improvement", "detail": plan["githubImprovements"]})
+
+    if not candidates:
+        return None
+    return candidates[TODAY.toordinal() % len(candidates)]
+
+
+def render_branding_action_section(action):
+    lines = ["## Branding Action Today", ""]
+    if not action:
+        lines.append("_Nothing to recommend today — Executive Brand Intelligence may not have run yet, "
+                      "or has nothing to flag._")
+        lines.append("")
+        return lines
+    lines.append(f"**{action['type']}** — {action['detail']}")
+    lines.append("")
+    return lines
+
+
 def render_daily_report(exec_summary, top3, revenue_impact, alerts, ignore_list, weekly_recommendation, top_orgs,
-                         recruiter_due, recruiter_dormant, relationship_action):
+                         recruiter_due, recruiter_dormant, relationship_action, branding_action):
     lines = [
         "# CEO Daily Report",
         "",
@@ -849,6 +893,7 @@ def render_daily_report(exec_summary, top3, revenue_impact, alerts, ignore_list,
     lines += render_top_organisations_section(top_orgs)
     lines += render_recruiter_followups_section(recruiter_due, recruiter_dormant)
     lines += render_relationship_action_section(relationship_action)
+    lines += render_branding_action_section(branding_action)
 
     lines += ["## Revenue Impact", ""]
     lines.append(f"- **Revenue at risk:** {revenue_impact['revenueAtRisk']}")
@@ -940,6 +985,7 @@ def main():
     top_organisations_feed = load_json(TOP_ORGANISATIONS_PATH, {"organisations": []})
     recruiter_feed = load_json(RECRUITER_INTELLIGENCE_FEED_PATH, {"contacts": [], "weeklyFollowUpList": [], "dormantRelationships": []})
     relationship_feed = load_json(RELATIONSHIP_INTELLIGENCE_FEED_PATH, {"people": []})
+    brand_feed = load_json(EXECUTIVE_BRAND_INTELLIGENCE_FEED_PATH, {"weeklyPlan": None})
     status_data = load_json(ORCHESTRATOR_STATUS_PATH, {"failures": []})
 
     schema_by_id = {o["id"]: o for o in schema_data.get("opportunities", [])}
@@ -960,6 +1006,7 @@ def main():
     top_orgs = top_organisations_this_week(top_organisations_feed, config, count=10)
     recruiter_due, recruiter_dormant = recruiter_followups_this_week(recruiter_feed)
     relationship_action = relationship_action_today(relationship_feed)
+    branding_action = branding_action_today(brand_feed)
 
     cold_risk_orgs = {c["companyName"] for c in crm_status["cold_risk"]}
     revenue_impact = compute_revenue_impact(pipeline, cold_risk_orgs)
@@ -972,7 +1019,7 @@ def main():
 
     OUTPUT_DIR.mkdir(exist_ok=True)
     daily_report = render_daily_report(exec_summary, top3, revenue_impact, alerts, ignore_list, weekly_recommendation,
-                                        top_orgs, recruiter_due, recruiter_dormant, relationship_action)
+                                        top_orgs, recruiter_due, recruiter_dormant, relationship_action, branding_action)
     (OUTPUT_DIR / f"{TODAY.isoformat()}-ceo-daily-report.md").write_text(daily_report, encoding="utf-8")
     (OUTPUT_DIR / "ceo-daily-report.md").write_text(daily_report, encoding="utf-8")
 

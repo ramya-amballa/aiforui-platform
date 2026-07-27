@@ -12,7 +12,9 @@ Run with:
 
 import sys
 import unittest
+from datetime import date
 from pathlib import Path
+from unittest.mock import patch
 
 RUNTIME_DIR = Path(__file__).resolve().parent.parent
 if str(RUNTIME_DIR) not in sys.path:
@@ -183,6 +185,33 @@ class CandidateCollectionTests(unittest.TestCase):
     def test_render_relationship_action_section_handles_no_action(self):
         lines = generate.render_relationship_action_section(None)
         self.assertTrue(any("Nothing due today" in line for line in lines))
+
+    def test_branding_action_today_none_when_no_weekly_plan(self):
+        self.assertIsNone(generate.branding_action_today({"weeklyPlan": None}))
+
+    def test_branding_action_today_picks_from_available_candidates_only(self):
+        brand_feed = {"weeklyPlan": {
+            "topicsToWrite": [], "productsToUpdate": [], "conferencesToMonitor": [],
+            "linkedinStrategy": "2 of 3 qualified accounts point to Thought Leadership.",
+            "githubImprovements": "Not enough signal this week to recommend a specific GitHub update.",
+        }}
+        action = generate.branding_action_today(brand_feed)
+        self.assertIn(action["type"], ("LinkedIn Strategy", "GitHub Improvement"))
+
+    def test_branding_action_today_rotates_deterministically_by_day(self):
+        brand_feed = {"weeklyPlan": {
+            "topicsToWrite": ["Topic A"], "productsToUpdate": [{"title": "ADGL", "type": "Methodology"}],
+            "conferencesToMonitor": [], "linkedinStrategy": None, "githubImprovements": None,
+        }}
+        with patch("generate.TODAY", date(2026, 7, 27)):
+            first = generate.branding_action_today(brand_feed)
+        with patch("generate.TODAY", date(2026, 7, 28)):
+            second = generate.branding_action_today(brand_feed)
+        self.assertNotEqual(first["type"], second["type"])
+
+    def test_render_branding_action_section_handles_no_action(self):
+        lines = generate.render_branding_action_section(None)
+        self.assertTrue(any("Nothing to recommend today" in line for line in lines))
 
 
 class RevenueImpactTests(unittest.TestCase):

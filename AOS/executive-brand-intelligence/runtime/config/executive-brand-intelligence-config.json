@@ -1,0 +1,11 @@
+{
+  "_comment": "Thresholds for executive-brand-intelligence-engine.md's Weekly Brand Plan. Every input is real data already computed by another employee (Demand Intelligence, Account Intelligence, Relationship Intelligence, the shared supporting-assets catalogue) — this file only tunes how many items surface and where the Visibility/Lead Generation/Consulting Influence heuristic tiers fall.",
+  "windowDays": 7,
+  "monthlyWindowDays": 30,
+  "companiesToEngageCount": 5,
+  "topicsToWriteCount": 3,
+  "assetsToUpdateCount": 4,
+  "visibilityImpactThresholds": {"high": 8, "medium": 3},
+  "leadGenerationThresholds": {"high": 4, "medium": 1},
+  "consultingInfluenceThresholds": {"high": 3, "medium": 1}
+}

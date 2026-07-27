@@ -164,6 +164,18 @@
       ]
     },
     {
+      "key": "executive-brand-intelligence",
+      "name": "Executive Brand Intelligence",
+      "folder": "executive-brand-intelligence",
+      "script": "executive-brand-intelligence/runtime/generate.py",
+      "dependsOn": ["demand-intelligence", "account-intelligence", "relationship-intelligence"],
+      "note": "New in Sprint 15 — additive, read-only across all three dependencies (organisation-profiles.json, account-intelligence-feed.json, relationship-profiles.json) plus the shared supporting-assets.json catalogue. Builds a Weekly Brand Plan (Companies to Engage, Executives to Follow, Topics to Write, Products to Update, Whitepapers to Publish, Conferences to Monitor, Newsletter Themes, GitHub Improvements, LinkedIn Strategy) entirely from real data those employees already computed — never a fabricated name, figure or event — plus a Monthly Authority Report rolled up from a persistent brand-plan-history.json. CEO Advisor genuinely reads this step's output to recommend one branding action per day. See executive-brand-intelligence/executive-brand-intelligence-engine.md.",
+      "outputPaths": [
+        "executive-brand-intelligence/runtime/output/{date}-executive-brand-intelligence-report.md",
+        "executive-brand-intelligence/runtime/output/executive-brand-intelligence-feed.json"
+      ]
+    },
+    {
       "key": "product-manager",
       "name": "Product Manager",
       "folder": "03-Product-Manager",
@@ -210,8 +222,9 @@
       "dependsOn": ["market-intelligence", "website-intake", "demand-intelligence", "revenue-hunter", "crm",
                     "service-mapping", "sales-director", "account-intelligence", "reverse-job-hunt",
                     "recruiter-intelligence", "fractional-advisory-radar", "relationship-intelligence",
-                    "tender-intelligence", "product-manager", "content-director", "daily-brief"],
-      "note": "Implemented in ceo-advisor/, not 09-CEO-Advisor/ — see dependency-map.md. New in Sprint 5, and now genuinely the final step of every Orchestrator run, per explicit instruction — dependsOn lists every other employee to guarantee that. Its own reads (see ceo-advisor/ceo-advisor-runtime-notes.md) are scoped to Sprint 5's eight named sources plus Sprint 10's Recruiter Intelligence and Sprint 13's Relationship Intelligence (both genuinely read) — Product Manager, Content Director, Sprint 8's Account Intelligence, Sprint 9's Reverse Job Hunt and Sprint 14's Tender Intelligence remain dependency-only, for ordering, not read (no explicit instruction to wire Tender Intelligence into a CEO Advisor section).",
+                    "tender-intelligence", "executive-brand-intelligence", "product-manager", "content-director",
+                    "daily-brief"],
+      "note": "Implemented in ceo-advisor/, not 09-CEO-Advisor/ — see dependency-map.md. New in Sprint 5, and now genuinely the final step of every Orchestrator run, per explicit instruction — dependsOn lists every other employee to guarantee that. Its own reads (see ceo-advisor/ceo-advisor-runtime-notes.md) are scoped to Sprint 5's eight named sources plus Sprint 10's Recruiter Intelligence, Sprint 13's Relationship Intelligence and Sprint 15's Executive Brand Intelligence (all genuinely read) — Product Manager, Content Director, Sprint 8's Account Intelligence, Sprint 9's Reverse Job Hunt and Sprint 14's Tender Intelligence remain dependency-only, for ordering, not read (no explicit instruction to wire those into a CEO Advisor section).",
       "outputPaths": [
         "ceo-advisor/runtime/output/{date}-ceo-daily-report.md",
         "ceo-advisor/runtime/output/ceo-daily-report.md",
