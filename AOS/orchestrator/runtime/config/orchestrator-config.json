@@ -152,6 +152,18 @@
       ]
     },
     {
+      "key": "tender-intelligence",
+      "name": "Tender & RFP Intelligence",
+      "folder": "tender-intelligence",
+      "script": "tender-intelligence/runtime/generate.py",
+      "dependsOn": [],
+      "note": "New in Sprint 14 — self-contained, no dependency on any other employee's data. Monitors real, founder-configured procurement RSS/Atom feeds (config/tender-intelligence-config.json's feedUrls — empty by default, does nothing until configured, same pattern as Demand Intelligence's Demand Signals connector) for tenders matching one of seven deterministic domain keywords (AI Governance, Responsible AI, Technology Risk, GRC, Cyber Risk, Vendor Risk, Compliance). Estimated value, deadline and required-partner flags are parsed from each tender's own text or honestly reported 'Not specified' — never invented. Fit Score is an explicit relevance heuristic, not a claim of true win probability. See tender-intelligence/tender-intelligence-engine.md.",
+      "outputPaths": [
+        "tender-intelligence/runtime/output/{date}-tender-intelligence-report.md",
+        "tender-intelligence/runtime/output/tender-intelligence-feed.json"
+      ]
+    },
+    {
       "key": "product-manager",
       "name": "Product Manager",
       "folder": "03-Product-Manager",
@@ -198,8 +210,8 @@
       "dependsOn": ["market-intelligence", "website-intake", "demand-intelligence", "revenue-hunter", "crm",
                     "service-mapping", "sales-director", "account-intelligence", "reverse-job-hunt",
                     "recruiter-intelligence", "fractional-advisory-radar", "relationship-intelligence",
-                    "product-manager", "content-director", "daily-brief"],
-      "note": "Implemented in ceo-advisor/, not 09-CEO-Advisor/ — see dependency-map.md. New in Sprint 5, and now genuinely the final step of every Orchestrator run, per explicit instruction — dependsOn lists every other employee to guarantee that. Its own reads (see ceo-advisor/ceo-advisor-runtime-notes.md) are scoped to Sprint 5's eight named sources plus Sprint 10's Recruiter Intelligence and Sprint 13's Relationship Intelligence (both genuinely read) — Product Manager, Content Director, Sprint 8's Account Intelligence and Sprint 9's Reverse Job Hunt remain dependency-only, for ordering, not read.",
+                    "tender-intelligence", "product-manager", "content-director", "daily-brief"],
+      "note": "Implemented in ceo-advisor/, not 09-CEO-Advisor/ — see dependency-map.md. New in Sprint 5, and now genuinely the final step of every Orchestrator run, per explicit instruction — dependsOn lists every other employee to guarantee that. Its own reads (see ceo-advisor/ceo-advisor-runtime-notes.md) are scoped to Sprint 5's eight named sources plus Sprint 10's Recruiter Intelligence and Sprint 13's Relationship Intelligence (both genuinely read) — Product Manager, Content Director, Sprint 8's Account Intelligence, Sprint 9's Reverse Job Hunt and Sprint 14's Tender Intelligence remain dependency-only, for ordering, not read (no explicit instruction to wire Tender Intelligence into a CEO Advisor section).",
       "outputPaths": [
         "ceo-advisor/runtime/output/{date}-ceo-daily-report.md",
         "ceo-advisor/runtime/output/ceo-daily-report.md",

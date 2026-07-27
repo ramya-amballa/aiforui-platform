@@ -165,6 +165,18 @@
       ],
       "outputDir": "relationship-intelligence/runtime/output"
     },
+    "tender-intelligence": {
+      "name": "Tender & RFP Intelligence",
+      "buttonLabel": "Refresh Tender Intelligence",
+      "script": "tender-intelligence/runtime/generate.py",
+      "cwd": "tender-intelligence/runtime",
+      "timeoutSeconds": 300,
+      "outputs": [
+        "tender-intelligence/runtime/output/{date}-tender-intelligence-report.md",
+        "tender-intelligence/runtime/output/tender-intelligence-feed.json"
+      ],
+      "outputDir": "tender-intelligence/runtime/output"
+    },
     "product-manager": {
       "name": "Product Manager",
       "buttonLabel": "Review Product Ideas",
