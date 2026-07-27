@@ -140,6 +140,18 @@
       ]
     },
     {
+      "key": "relationship-intelligence",
+      "name": "Relationship Intelligence",
+      "folder": "relationship-intelligence",
+      "script": "relationship-intelligence/runtime/generate.py",
+      "dependsOn": ["demand-intelligence", "crm"],
+      "note": "New in Sprint 13 — reads a founder-maintained, persistent, person-level record (relationship-profiles.json, exactly like 06-CRM/company-intelligence.json is for companies; nothing here is auto-collected, there is no LinkedIn/email/calendar integration in AOS) and turns it into daily intelligence: reconnect recommendations, birthday/work anniversary/conference reminders, and a relationship health score/risk/opportunity per person. crm and demand-intelligence are read-only, optional cross-references for the Relationship Opportunity section only. CEO Advisor genuinely reads this step's output to recommend one relationship action per day, same pattern as Sprint 10's Recruiter Follow-ups. See relationship-intelligence/relationship-intelligence-engine.md.",
+      "outputPaths": [
+        "relationship-intelligence/runtime/output/{date}-relationship-intelligence-report.md",
+        "relationship-intelligence/runtime/output/relationship-intelligence-feed.json"
+      ]
+    },
+    {
       "key": "product-manager",
       "name": "Product Manager",
       "folder": "03-Product-Manager",
@@ -185,9 +197,9 @@
       "script": "ceo-advisor/runtime/generate.py",
       "dependsOn": ["market-intelligence", "website-intake", "demand-intelligence", "revenue-hunter", "crm",
                     "service-mapping", "sales-director", "account-intelligence", "reverse-job-hunt",
-                    "recruiter-intelligence", "fractional-advisory-radar", "product-manager",
-                    "content-director", "daily-brief"],
-      "note": "Implemented in ceo-advisor/, not 09-CEO-Advisor/ — see dependency-map.md. New in Sprint 5, and now genuinely the final step of every Orchestrator run, per explicit instruction — dependsOn lists every other employee to guarantee that. Its own reads (see ceo-advisor/ceo-advisor-runtime-notes.md) are scoped to Sprint 5's eight named sources plus Sprint 10's Recruiter Intelligence (genuinely read, for the Recruiter Follow-ups section) — Product Manager, Content Director, Sprint 8's Account Intelligence and Sprint 9's Reverse Job Hunt remain dependency-only, for ordering, not read.",
+                    "recruiter-intelligence", "fractional-advisory-radar", "relationship-intelligence",
+                    "product-manager", "content-director", "daily-brief"],
+      "note": "Implemented in ceo-advisor/, not 09-CEO-Advisor/ — see dependency-map.md. New in Sprint 5, and now genuinely the final step of every Orchestrator run, per explicit instruction — dependsOn lists every other employee to guarantee that. Its own reads (see ceo-advisor/ceo-advisor-runtime-notes.md) are scoped to Sprint 5's eight named sources plus Sprint 10's Recruiter Intelligence and Sprint 13's Relationship Intelligence (both genuinely read) — Product Manager, Content Director, Sprint 8's Account Intelligence and Sprint 9's Reverse Job Hunt remain dependency-only, for ordering, not read.",
       "outputPaths": [
         "ceo-advisor/runtime/output/{date}-ceo-daily-report.md",
         "ceo-advisor/runtime/output/ceo-daily-report.md",

@@ -55,6 +55,7 @@ WEBSITE_INTAKE_FEED_PATH = AOS_DIR / "website-intake" / "runtime" / "output" / "
 SERVICE_RECOMMENDATIONS_PATH = AOS_DIR / "service-mapping" / "service-recommendations.json"
 TOP_ORGANISATIONS_PATH = AOS_DIR / "demand-intelligence" / "runtime" / "output" / "top-organisations-this-week.json"
 RECRUITER_INTELLIGENCE_FEED_PATH = AOS_DIR / "recruiter-intelligence" / "runtime" / "output" / "recruiter-intelligence-feed.json"
+RELATIONSHIP_INTELLIGENCE_FEED_PATH = AOS_DIR / "relationship-intelligence" / "runtime" / "output" / "relationship-intelligence-feed.json"
 DAILY_BRIEF_PATH = AOS_DIR / "executive-dashboard" / "executive-dashboard.md"
 ORCHESTRATOR_STATUS_PATH = AOS_DIR / "orchestrator" / "status.json"
 
@@ -766,8 +767,56 @@ def render_recruiter_followups_section(due, dormant):
     return lines
 
 
+def relationship_action_today(relationship_feed):
+    """AOS Sprint 13 — a single highest-priority relationship action for
+    today, chosen from Relationship Intelligence's own already-computed
+    reminders/recommendations (relationship-intelligence-feed.json) read
+    only — no new scoring here. Priority order: conference reminders,
+    then birthdays, then work anniversaries (all time-fixed calendar
+    events), then the most-overdue reconnect recommendation
+    (discretionary — can happen any day this week, so it only wins when
+    nothing calendar-fixed is due)."""
+    people = relationship_feed.get("people", [])
+
+    conferences = sorted((p for p in people if p.get("conferenceReminderDue")), key=lambda p: p.get("conferenceDate") or "")
+    if conferences:
+        p = conferences[0]
+        return {"type": "Conference", "person": p["person"], "company": p["company"],
+                "detail": f"{p['conferenceName']} on {p['conferenceDate']}."}
+
+    birthdays = sorted((p for p in people if p.get("birthdayDue")), key=lambda p: p.get("birthdayDate") or "")
+    if birthdays:
+        p = birthdays[0]
+        return {"type": "Birthday", "person": p["person"], "company": p["company"],
+                "detail": f"{p['person']}'s birthday is {p['birthdayDate']}."}
+
+    anniversaries = sorted((p for p in people if p.get("workAnniversaryDue")), key=lambda p: p.get("workAnniversaryDate") or "")
+    if anniversaries:
+        p = anniversaries[0]
+        return {"type": "Work Anniversary", "person": p["person"], "company": p["company"],
+                "detail": f"{p['person']}'s work anniversary is {p['workAnniversaryDate']}."}
+
+    reconnects = sorted((p for p in people if p.get("reconnectRecommended")), key=lambda p: p.get("lastInteraction") or "")
+    if reconnects:
+        p = reconnects[0]
+        return {"type": "Reconnect", "person": p["person"], "company": p["company"], "detail": p["reconnectReason"]}
+
+    return None
+
+
+def render_relationship_action_section(action):
+    lines = ["## Relationship Action Today", ""]
+    if not action:
+        lines.append("_Nothing due today — Relationship Intelligence may not have run yet, or has nothing to flag._")
+        lines.append("")
+        return lines
+    lines.append(f"**{action['type']}** — **{action['person']}** ({action['company']}): {action['detail']}")
+    lines.append("")
+    return lines
+
+
 def render_daily_report(exec_summary, top3, revenue_impact, alerts, ignore_list, weekly_recommendation, top_orgs,
-                         recruiter_due, recruiter_dormant):
+                         recruiter_due, recruiter_dormant, relationship_action):
     lines = [
         "# CEO Daily Report",
         "",
@@ -799,6 +848,7 @@ def render_daily_report(exec_summary, top3, revenue_impact, alerts, ignore_list,
 
     lines += render_top_organisations_section(top_orgs)
     lines += render_recruiter_followups_section(recruiter_due, recruiter_dormant)
+    lines += render_relationship_action_section(relationship_action)
 
     lines += ["## Revenue Impact", ""]
     lines.append(f"- **Revenue at risk:** {revenue_impact['revenueAtRisk']}")
@@ -889,6 +939,7 @@ def main():
     service_recommendations = load_json(SERVICE_RECOMMENDATIONS_PATH, {"recommendations": {}}).get("recommendations", {})
     top_organisations_feed = load_json(TOP_ORGANISATIONS_PATH, {"organisations": []})
     recruiter_feed = load_json(RECRUITER_INTELLIGENCE_FEED_PATH, {"contacts": [], "weeklyFollowUpList": [], "dormantRelationships": []})
+    relationship_feed = load_json(RELATIONSHIP_INTELLIGENCE_FEED_PATH, {"people": []})
     status_data = load_json(ORCHESTRATOR_STATUS_PATH, {"failures": []})
 
     schema_by_id = {o["id"]: o for o in schema_data.get("opportunities", [])}
@@ -908,6 +959,7 @@ def main():
     top3 = top_priorities_with_reasons(ranked, count=3)
     top_orgs = top_organisations_this_week(top_organisations_feed, config, count=10)
     recruiter_due, recruiter_dormant = recruiter_followups_this_week(recruiter_feed)
+    relationship_action = relationship_action_today(relationship_feed)
 
     cold_risk_orgs = {c["companyName"] for c in crm_status["cold_risk"]}
     revenue_impact = compute_revenue_impact(pipeline, cold_risk_orgs)
@@ -920,7 +972,7 @@ def main():
 
     OUTPUT_DIR.mkdir(exist_ok=True)
     daily_report = render_daily_report(exec_summary, top3, revenue_impact, alerts, ignore_list, weekly_recommendation,
-                                        top_orgs, recruiter_due, recruiter_dormant)
+                                        top_orgs, recruiter_due, recruiter_dormant, relationship_action)
     (OUTPUT_DIR / f"{TODAY.isoformat()}-ceo-daily-report.md").write_text(daily_report, encoding="utf-8")
     (OUTPUT_DIR / "ceo-daily-report.md").write_text(daily_report, encoding="utf-8")
 

@@ -153,6 +153,18 @@
       ],
       "outputDir": "fractional-advisory-radar/runtime/output"
     },
+    "relationship-intelligence": {
+      "name": "Relationship Intelligence",
+      "buttonLabel": "Refresh Relationship Intelligence",
+      "script": "relationship-intelligence/runtime/generate.py",
+      "cwd": "relationship-intelligence/runtime",
+      "timeoutSeconds": 300,
+      "outputs": [
+        "relationship-intelligence/runtime/output/{date}-relationship-intelligence-report.md",
+        "relationship-intelligence/runtime/output/relationship-intelligence-feed.json"
+      ],
+      "outputDir": "relationship-intelligence/runtime/output"
+    },
     "product-manager": {
       "name": "Product Manager",
       "buttonLabel": "Review Product Ideas",

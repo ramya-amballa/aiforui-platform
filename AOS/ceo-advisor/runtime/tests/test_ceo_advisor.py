@@ -151,6 +151,39 @@ class CandidateCollectionTests(unittest.TestCase):
         lines = generate.render_recruiter_followups_section([], [])
         self.assertTrue(any("No recruiter or consulting-contact follow-ups" in line for line in lines))
 
+    def test_relationship_action_today_prefers_conference_over_reconnect(self):
+        relationship_feed = {"people": [
+            {"person": "Jane Doe", "company": "Acme", "reconnectRecommended": True,
+             "reconnectReason": "It has been 40 days.", "lastInteraction": "2026-06-18",
+             "conferenceReminderDue": False, "birthdayDue": False, "workAnniversaryDue": False},
+            {"person": "John Roe", "company": "BBVA", "reconnectRecommended": False,
+             "conferenceReminderDue": True, "conferenceName": "AI Summit", "conferenceDate": "2026-08-01",
+             "birthdayDue": False, "workAnniversaryDue": False},
+        ]}
+        action = generate.relationship_action_today(relationship_feed)
+        self.assertEqual(action["type"], "Conference")
+        self.assertEqual(action["person"], "John Roe")
+
+    def test_relationship_action_today_picks_most_overdue_reconnect_when_no_reminders_due(self):
+        relationship_feed = {"people": [
+            {"person": "Jane Doe", "company": "Acme", "reconnectRecommended": True,
+             "reconnectReason": "It has been 40 days.", "lastInteraction": "2026-06-18",
+             "conferenceReminderDue": False, "birthdayDue": False, "workAnniversaryDue": False},
+            {"person": "John Roe", "company": "BBVA", "reconnectRecommended": True,
+             "reconnectReason": "It has been 90 days.", "lastInteraction": "2026-04-29",
+             "conferenceReminderDue": False, "birthdayDue": False, "workAnniversaryDue": False},
+        ]}
+        action = generate.relationship_action_today(relationship_feed)
+        self.assertEqual(action["type"], "Reconnect")
+        self.assertEqual(action["person"], "John Roe")
+
+    def test_relationship_action_today_none_when_nothing_due(self):
+        self.assertIsNone(generate.relationship_action_today({"people": []}))
+
+    def test_render_relationship_action_section_handles_no_action(self):
+        lines = generate.render_relationship_action_section(None)
+        self.assertTrue(any("Nothing due today" in line for line in lines))
+
 
 class RevenueImpactTests(unittest.TestCase):
     def test_highest_value_opportunity_uses_roi_not_raw_amount(self):

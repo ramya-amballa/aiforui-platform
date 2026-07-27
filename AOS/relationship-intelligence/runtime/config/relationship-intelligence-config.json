@@ -1,0 +1,17 @@
+{
+  "_comment": "Thresholds for relationship-intelligence-engine.md's Relationship Health Score, reminders and reconnect logic. Adjust the numbers below to retune; no code change is needed.",
+  "staleThresholdDays": 45,
+  "reconnectThresholdDays": 30,
+  "reminderWindowDays": 14,
+  "dormancyThresholdDays": 90,
+  "healthWeights": {
+    "recency": 0.40,
+    "responseRate": 0.30,
+    "channelDiversity": 0.30
+  },
+  "healthBandThresholds": {
+    "strong": 75,
+    "healthy": 50,
+    "cooling": 25
+  }
+}
