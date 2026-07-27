@@ -32,6 +32,7 @@ employee's `operating-manual.md`.
 | `09-CEO-Advisor` | CEO Advisor | Writes no content; live operating component since Sprint 5 (`ceo-advisor/`) — the final step of every day's run, producing a CEO Daily Report (Executive Summary, ranked Top 3 Priorities, Revenue Impact, Strategic Alerts, Ignore List, Weekly Strategic Recommendation), a rolling CEO Weekly Report and CEO Monthly Business Review |
 | `service-mapping` | Service Mapping Engine | Added in Sprint 3, not one of the founder's original nine — deterministically maps every opportunity to a Primary Service, Secondary Services, Recommended Engagement Type, Estimated Project Size, Recommended Proposal Template and Cross-Sell Opportunities; read read-only by Sales Director |
 | `website-intake` | Website Intake Runtime | Added in Sprint 4, not one of the founder's original nine — turns a website enquiry into a Lead ID, an opportunity record, a CRM record, a Revenue Hunter pipeline entry, a Service Mapping recommendation and a CEO Advisor notification, automatically; sends no email |
+| `account-intelligence` | Account Intelligence | Added in Sprint 8, additive and downstream of Demand Intelligence only, never modifies it — for every organisation Demand Intelligence has already qualified, generates a ten-section Executive Account Intelligence Brief (company profile, AI deployment intelligence, governance risk assessment, service fit, decision-maker titles, outreach strategy, conversation starters, supporting assets, opportunity scorecard, 300-word executive summary) to prepare AI for U&I before any outreach — not a proposal |
 
 ## Shared Structure
 
@@ -71,6 +72,7 @@ employee's `operating-manual.md`.
 | `09-CEO-Advisor` | Fully defined, plus a live decision engine (`ceo-advisor/`) since Sprint 5: operating manual, decision model (now executed as code), daily recommendation template, CEO Daily/Weekly/Monthly reports |
 | `service-mapping` | v1.0 — live operating component, new in Sprint 3: deterministic service-mapping model, service catalogue, `service-recommendations.json`, daily Service Recommendation Report, read read-only by Sales Director |
 | `website-intake` | v1.0 — live operating component, new in Sprint 4: website-intake model, config, `leads.json`, daily Website Intake Report; one additive change to `demand-intelligence/runtime/ingest.py` (website-sourced records bypass relevance scoring — see `website-intake/website-intake-model.md`) |
+| `account-intelligence` | v1.0 — live operating component, new in Sprint 8: ten-section Executive Account Intelligence Brief per organisation Demand Intelligence has already qualified, config, `supporting-assets.json`, per-organisation briefs, daily Account Intelligence Report; purely additive — no change to any other employee's code or data (see `account-intelligence/account-intelligence-engine.md`) |
 
 `templates/proposals/` (the Proposal Library) is complete: nine
 domain templates. `prompts/` is structure only.

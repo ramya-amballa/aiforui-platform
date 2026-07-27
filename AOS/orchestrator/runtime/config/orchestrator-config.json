@@ -91,6 +91,18 @@
       ]
     },
     {
+      "key": "account-intelligence",
+      "name": "Account Intelligence",
+      "folder": "account-intelligence",
+      "script": "account-intelligence/runtime/generate.py",
+      "dependsOn": ["demand-intelligence", "crm", "sales-director"],
+      "note": "New in Sprint 8 — additive, downstream of Demand Intelligence only; never modifies demand-intelligence/organisation-profiles.json or any other employee's output. For every organisation already qualified there (every key in organisation-profiles.json), (re)generates a ten-section Executive Account Intelligence Brief to output/account-briefs/ plus a searchable account-intelligence-feed.json the dashboard reads. crm and sales-director are depended on for optional read-only cross-references (existing relationship/proposal status), not required inputs — a run with neither yet still produces honest briefs. See account-intelligence/account-intelligence-engine.md.",
+      "outputPaths": [
+        "account-intelligence/runtime/output/{date}-account-intelligence-report.md",
+        "account-intelligence/runtime/output/account-intelligence-feed.json"
+      ]
+    },
+    {
       "key": "product-manager",
       "name": "Product Manager",
       "folder": "03-Product-Manager",
@@ -135,8 +147,9 @@
       "folder": "09-CEO-Advisor",
       "script": "ceo-advisor/runtime/generate.py",
       "dependsOn": ["market-intelligence", "website-intake", "demand-intelligence", "revenue-hunter", "crm",
-                    "service-mapping", "sales-director", "product-manager", "content-director", "daily-brief"],
-      "note": "Implemented in ceo-advisor/, not 09-CEO-Advisor/ — see dependency-map.md. New in Sprint 5, and now genuinely the final step of every Orchestrator run, per explicit instruction — dependsOn lists every other employee to guarantee that, even though its own reads (see ceo-advisor/ceo-advisor-runtime-notes.md) are scoped to exactly Sprint 5's eight named sources (Product Manager and Content Director are depended-on for ordering only, not read).",
+                    "service-mapping", "sales-director", "account-intelligence", "product-manager",
+                    "content-director", "daily-brief"],
+      "note": "Implemented in ceo-advisor/, not 09-CEO-Advisor/ — see dependency-map.md. New in Sprint 5, and now genuinely the final step of every Orchestrator run, per explicit instruction — dependsOn lists every other employee to guarantee that, even though its own reads (see ceo-advisor/ceo-advisor-runtime-notes.md) are scoped to exactly Sprint 5's eight named sources (Product Manager, Content Director and Sprint 8's Account Intelligence are depended-on for ordering only, not read).",
       "outputPaths": [
         "ceo-advisor/runtime/output/{date}-ceo-daily-report.md",
         "ceo-advisor/runtime/output/ceo-daily-report.md",

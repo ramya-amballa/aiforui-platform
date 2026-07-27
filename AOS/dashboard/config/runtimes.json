@@ -105,6 +105,18 @@
       ],
       "outputDir": "sales-director/runtime/output"
     },
+    "account-intelligence": {
+      "name": "Account Intelligence",
+      "buttonLabel": "Generate Briefs",
+      "script": "account-intelligence/runtime/generate.py",
+      "cwd": "account-intelligence/runtime",
+      "timeoutSeconds": 300,
+      "outputs": [
+        "account-intelligence/runtime/output/{date}-account-intelligence-report.md",
+        "account-intelligence/runtime/output/account-intelligence-feed.json"
+      ],
+      "outputDir": "account-intelligence/runtime/output"
+    },
     "product-manager": {
       "name": "Product Manager",
       "buttonLabel": "Review Product Ideas",

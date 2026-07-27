@@ -1,0 +1,32 @@
+{
+  "_comment": "AOS Sprint 8, Section 8 — the real, existing AI for U&I assets this brief can point to, never an invented one. 'products' entries are copied verbatim (id/title/domainTags from sales-director/runtime/config/practitioner-bank.json's own products list; 'type' from aiforu-platform/src/content/resources.ts's own 'type' field for the same slug) rather than a second content bank. 'websitePages' and 'channels' are copied verbatim from aiforu-platform/src/lib/constants.ts's real primaryNav routes and real site.linkedin/substack/github links — this repo's actual, deployed website, not a placeholder. URLs are relative site paths (https://aiforui.org is the real domain per constants.ts) since account_intelligence_engine.py never fabricates an absolute URL beyond what that file already states. isGeneral entries are relevance-agnostic fallbacks (always potentially useful) used only to fill out Section 8 when fewer than five domain-matched assets exist for an organisation — never ranked above a genuine domain match.",
+
+  "products": [
+    {"id": "adgl-methodology", "title": "The ADGL Methodology", "type": "Methodology", "url": "/resources/adgl-methodology", "domainTags": ["ADGL", "AI Deployment Governance", "AI Governance"]},
+    {"id": "executive-capability-overview", "title": "Executive Capability Overview", "type": "Executive Guide", "url": "/resources/executive-capability-overview", "domainTags": ["AI Governance", "Fractional Advisory"]},
+    {"id": "ai-governance-maturity-framework", "title": "AI Governance Maturity Framework", "type": "Framework", "url": "/resources/ai-governance-maturity-framework", "domainTags": ["AI Governance"]},
+    {"id": "ai-governance-decision-playbook", "title": "AI Governance Decision Playbook", "type": "Playbook", "url": "/resources/ai-governance-decision-playbook", "domainTags": ["AI Governance", "ADGL", "AI Deployment Governance"]},
+    {"id": "third-party-risk-assessment-checklist", "title": "Third-Party Risk Assessment Checklist", "type": "Checklist", "url": "/resources/third-party-risk-assessment-checklist", "domainTags": ["Third-Party Risk"]},
+    {"id": "dpdp-readiness-briefing", "title": "DPDP Readiness Briefing", "type": "Briefing", "url": "/resources/dpdp-readiness-briefing", "domainTags": ["GRC"]},
+    {"id": "dpdp-compliance-toolkit", "title": "DPDP Compliance Toolkit", "type": "Toolkit", "url": "/resources/dpdp-compliance-toolkit", "domainTags": ["GRC"]},
+    {"id": "governance-operating-model-template", "title": "Governance Operating Model Template", "type": "Template", "url": "/resources/governance-operating-model-template", "domainTags": ["AI Governance", "GRC"]},
+    {"id": "technology-risk-whitepaper", "title": "Technology Risk Whitepaper", "type": "Whitepaper", "url": "/resources/technology-risk-whitepaper", "domainTags": ["Technology Risk"]},
+    {"id": "cyber-governance-reference-architecture", "title": "Cyber Governance Reference Architecture", "type": "Reference Architecture", "url": "/resources/cyber-governance-reference-architecture", "domainTags": ["Security Governance"]},
+    {"id": "government-digital-governance-artefact-pack", "title": "Government Digital Governance Artefact Pack", "type": "Toolkit", "url": "/resources/government-digital-governance-artefact-pack", "domainTags": ["Government/FedRAMP-GovRAMP-CMMC"]},
+    {"id": "audit-readiness-checklist", "title": "Audit Readiness Checklist", "type": "Checklist", "url": "/resources/audit-readiness-checklist", "domainTags": ["GRC", "Third-Party Risk"]}
+  ],
+
+  "websitePages": [
+    {"id": "adgl-page", "title": "ADGL", "type": "Website Page", "url": "/adgl", "domainTags": ["ADGL", "AI Deployment Governance", "AI Governance"]},
+    {"id": "methodology-page", "title": "Methodology (OPERA)", "type": "Website Page", "url": "/methodology", "domainTags": ["AI Governance", "GRC"]},
+    {"id": "governance-domains-page", "title": "Governance Domains", "type": "Website Page", "url": "/governance-domains", "domainTags": ["AI Governance", "GRC", "Technology Risk", "Third-Party Risk", "Security Governance"]},
+    {"id": "selected-advisory-engagements-page", "title": "Selected Engagement Areas", "type": "Website Page", "url": "/selected-advisory-engagements", "domainTags": [], "isGeneral": true},
+    {"id": "insights-page", "title": "Insights", "type": "Website Page (Thought Leadership)", "url": "/insights", "domainTags": [], "isGeneral": true}
+  ],
+
+  "channels": [
+    {"id": "linkedin-profile", "title": "LinkedIn (Ramya Amballa)", "type": "LinkedIn", "url": "https://www.linkedin.com/in/amballa-ramya/", "domainTags": [], "isGeneral": true},
+    {"id": "substack-newsletter", "title": "AI for U&I Substack", "type": "Newsletter", "url": "https://aiforui.substack.com", "domainTags": [], "isGeneral": true},
+    {"id": "github-profile", "title": "GitHub (Ramya Amballa)", "type": "GitHub", "url": "https://github.com/ramya-amballa", "domainTags": [], "isGeneral": true}
+  ]
+}

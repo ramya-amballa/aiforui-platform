@@ -1,0 +1,143 @@
+{
+  "_comment": "AOS Sprint 8 — Account Intelligence Engine. Every table here is a deterministic lookup keyed by demand-intelligence's own five category keys (config/demand-signal-categories.json) so Account Intelligence never re-derives which category a signal belongs to, only what that category implies for a briefing. Edit this file to retune wording/mappings — no code change needed.",
+
+  "categoryToDomainTags": {
+    "_note": "Bridges demand-intelligence's category keys to the domainTags vocabulary sales-director/runtime/config/practitioner-bank.json and this engine's own supporting-assets.json already use, so Section 8's asset ranking can reuse that real, existing tag set rather than inventing a second one.",
+    "ai_adoption": ["ADGL", "AI Deployment Governance", "AI Governance"],
+    "governance_trigger": ["AI Governance", "GRC"],
+    "funding_trigger": ["AI Governance", "Fractional Advisory"],
+    "regulatory_trigger": ["EU AI Act", "DORA", "GRC", "Technology Risk"],
+    "failure_trigger": ["Technology Risk", "Security Governance", "GRC", "Third-Party Risk"]
+  },
+
+  "categoryToGovernanceRisks": {
+    "_note": "Section 3 — which of the nine canonical governance-risk items are likely relevant per matched category, each with a factual why-template ({organisation} and {categoryLabel} are substituted). A category can imply more than one risk; an organisation matching several categories gets the union, de-duplicated, ordered by the strongest matched category first.",
+    "ai_adoption": [
+      {"risk": "Human oversight", "why": "{organisation}'s AI is reported live at scale — live systems need a defined human-in-the-loop point, not just a design-time review."},
+      {"risk": "Operational controls", "why": "Day-two operation of a deployed AI system needs its own controls; a successful rollout is exactly when informal, ad hoc handling stops scaling."},
+      {"risk": "Privacy", "why": "An AI system operating at scale is very likely processing personal or customer data as part of normal use."},
+      {"risk": "Monitoring", "why": "A live deployment needs ongoing performance/drift monitoring — a one-time launch review is not sufficient once it is in production."}
+    ],
+    "governance_trigger": [
+      {"risk": "Model governance", "why": "{organisation} is visibly building a formal AI governance function — that function needs a real model-governance framework to be defensible, not just a title or committee."},
+      {"risk": "Audit evidence", "why": "A newly-announced governance programme will be expected to produce evidence it is operating, not just that it exists."},
+      {"risk": "Operational controls", "why": "Standing up a governance function is the moment operational controls either get formalised properly or stay ad hoc under a new label."}
+    ],
+    "funding_trigger": [
+      {"risk": "Operational controls", "why": "Newly-funded AI expansion typically scales faster than informal, founder-level oversight can track."},
+      {"risk": "Model governance", "why": "Growth-stage AI expansion is the point where model governance either gets built in early or becomes expensive to retrofit later."},
+      {"risk": "Monitoring", "why": "Scaling AI use after a funding round usually means more systems and more usage to monitor than before."}
+    ],
+    "regulatory_trigger": [
+      {"risk": "Regulatory readiness", "why": "{organisation} has a named external regulatory or compliance obligation on record — readiness needs to be demonstrable, not assumed."},
+      {"risk": "Audit evidence", "why": "Regulatory obligations are typically evidenced through audit trails, not asserted after the fact."},
+      {"risk": "Third-party AI risk", "why": "Most named regulatory obligations (e.g. EU AI Act, DORA) explicitly extend to third-party/vendor AI, not just internally-built systems."},
+      {"risk": "Privacy", "why": "The regulatory frameworks this signal typically maps to (EU AI Act, DORA, data-protection law) usually have a privacy dimension."}
+    ],
+    "failure_trigger": [
+      {"risk": "Incident management", "why": "{organisation} has a reported AI incident or failure on record — incident management is the immediate, not eventual, need."},
+      {"risk": "Model governance", "why": "A failure event usually surfaces a gap in the model governance that should have caught it beforehand."},
+      {"risk": "Audit evidence", "why": "Post-incident, {organisation} will very likely need to demonstrate remediation with evidence, to regulators, customers or its own board."},
+      {"risk": "Monitoring", "why": "An incident that became public usually means existing monitoring did not catch it early enough."},
+      {"risk": "Third-party AI risk", "why": "AI incidents frequently originate in or involve a third-party vendor's model or data, not only internally-built systems."}
+    ]
+  },
+
+  "categoryToStakeholderTitles": {
+    "_note": "Section 5 — titles only, never invented names. Ordered by relevance to that category; aggregated across an organisation's matched categories and de-duplicated, strongest matched category first.",
+    "ai_adoption": ["Head of AI", "Head Digital Transformation", "Chief Data Officer"],
+    "governance_trigger": ["Chief AI Officer", "Director Responsible AI", "Chief Data Officer"],
+    "funding_trigger": ["Head Digital Transformation", "Chief Data Officer"],
+    "regulatory_trigger": ["Chief Risk Officer", "Head of Technology Risk", "CISO"],
+    "failure_trigger": ["CISO", "Head Model Risk", "Chief Risk Officer"]
+  },
+
+  "categoryDeploymentStage": {
+    "_note": "Section 2 — a human-readable deployment-stage label per category, alongside demand_engine.py's own numeric DEPLOYMENT_STAGE_BY_CATEGORY (this is a label layer, not a second scoring scale).",
+    "ai_adoption": "Active deployment / scaling",
+    "governance_trigger": "Formalising governance function",
+    "funding_trigger": "Funded expansion",
+    "regulatory_trigger": "Compliance preparation",
+    "failure_trigger": "Post-incident remediation"
+  },
+
+  "categoryAiMaturityLabel": {
+    "_note": "Section 1 'AI maturity level' — one label per organisation, taken from its single strongest matched category (same baseScore-descending priority demand_engine.py's own compute_overall_demand_score() already uses to pick the 'primary' category), never averaged or invented beyond what that category implies.",
+    "ai_adoption": "Adopting / scaling AI",
+    "governance_trigger": "Governance-formalising",
+    "funding_trigger": "Early / expanding",
+    "regulatory_trigger": "Compliance-driven",
+    "failure_trigger": "Reactive (post-incident)"
+  },
+
+  "categoryStrategicObjective": {
+    "_note": "Section 2's 'strategic objective of the deployment' and Section 1's 'business priorities' both reuse this same table — never two separate guesses at the same underlying fact.",
+    "ai_adoption": "Operational efficiency and/or improved customer experience through applied AI",
+    "governance_trigger": "Establishing accountable oversight and structure for existing or planned AI use",
+    "funding_trigger": "Scaling AI capability with newly-raised capital",
+    "regulatory_trigger": "Meeting a named external regulatory or audit obligation",
+    "failure_trigger": "Containing and remediating a reported AI-related incident or failure"
+  },
+
+  "regionRegulatoryContext": {
+    "_note": "Section 1 'regulatory environment' — best-effort, from the region demand-intelligence already infers (organisation-profiles.json's own 'region' field); 'Not specified' is left honest, never guessed at.",
+    "UAE": "CBUAE AI Principles and UAE data-protection law",
+    "US": "State-level AI regulation (e.g. Colorado AI Act) and sector frameworks such as NIST AI RMF",
+    "UK": "UK's principles-based AI regulation (sector regulators) and UK GDPR",
+    "India": "DPDP Act 2023, plus sector-specific RBI/SEBI guidance where applicable",
+    "Europe": "EU AI Act and GDPR",
+    "Not specified": "Not specified — no explicit regulatory jurisdiction identified from public signals"
+  },
+
+  "outreachStrategy": {
+    "_note": "Section 6 — six-value vocabulary, deterministically derived in account_intelligence_engine.py from the SAME buyingReadinessBand/confidence fields demand_engine.py's own recommend_next_action() already computed (a re-labelling for the relationship-opening question this brief answers, not a second scoring engine). Reason templates below, {band} and {confidence} substituted.",
+    "reasons": {
+      "Wait": "Confidence in the underlying signal is low ({confidence}) — no outreach is warranted until a clearer, corroborating signal appears.",
+      "Direct proposal": "Buying readiness is Very High, or an incident/failure signal is on record — this organisation is ready for a direct conversation about engaging now.",
+      "Discovery workshop": "Buying readiness is High — a structured discovery workshop is a better opening than a cold direct proposal, and warmer than pure content.",
+      "Thought leadership": "Buying readiness is Medium with a high-confidence signal — sharing relevant insight content is a credible way to open the door.",
+      "Connection first": "Buying readiness is Medium but confidence in the signal is only medium — worth a light relationship-building connection before any content or ask.",
+      "Monitor": "Buying readiness is Low — not yet worth any direct outreach; keep watching for a stronger signal."
+    }
+  },
+
+  "conversationStarterTemplates": {
+    "_note": "Section 7 — professional, non-salesy openers, never a sales pitch. Category-specific templates use {organisation}; generic templates are used to fill out exactly 3 starters when fewer than 3 categories are matched.",
+    "ai_adoption": [
+      "I noticed {organisation}'s recent move to deploy AI at scale — one thing many organisations discover at that stage is that governance needs to catch up faster than expected once usage grows."
+    ],
+    "governance_trigger": [
+      "I saw {organisation} is formalising its AI governance function — an interesting governance question at that stage is usually how to make the new structure demonstrably operating, not just announced."
+    ],
+    "funding_trigger": [
+      "Congratulations to {organisation} on the recent funding — one thing many newly-funded AI programmes discover is that governance is easier to build in early than to retrofit once scaling starts."
+    ],
+    "regulatory_trigger": [
+      "I noticed {organisation}'s work toward its regulatory obligations — an interesting question there is usually how much of that readiness can be evidenced today versus asserted."
+    ],
+    "failure_trigger": [
+      "I saw the recent AI-related incident involving {organisation} — one thing many organisations find after an event like that is the root cause sits upstream of the specific system that failed."
+    ],
+    "generic": [
+      "One thing many organisations in {organisation}'s position discover is that AI governance questions surface earlier than expected once a system moves from pilot to production.",
+      "An interesting governance question worth raising with {organisation} is how oversight responsibility is currently split between technology and risk functions.",
+      "I noticed {organisation}'s public activity in this space — worth a conversation on how governance is being approached as it develops."
+    ]
+  },
+
+  "opportunityScorecard": {
+    "_note": "Section 9. estimatedSalesCycleByBand and competitionRisk are Account Intelligence's own honest, modest heuristics (not reused from elsewhere, since nothing else in AOS estimates either of these) — documented here as heuristics, not guarantees.",
+    "estimatedSalesCycleByBand": {
+      "Very High": "Short (2-6 weeks)",
+      "High": "Medium (6-12 weeks)",
+      "Medium": "Long (3-6 months)",
+      "Low": "Extended (6+ months)"
+    },
+    "competitionRiskBySignalCount": {
+      "_note": "More public signals on record plausibly means more advisory firms have already noticed the same organisation; a rough proxy, not a market-intelligence claim.",
+      "threshold": 3,
+      "atOrAboveThreshold": "Elevated — multiple public signals on record; other advisory firms may already be circling.",
+      "belowThreshold": "Low to moderate — limited public signal volume so far."
+    }
+  }
+}
