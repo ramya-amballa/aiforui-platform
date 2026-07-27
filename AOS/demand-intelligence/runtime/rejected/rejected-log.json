@@ -185,6 +185,46 @@
       "relevanceScore": 0,
       "categoriesMatched": [],
       "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0014",
+      "dateRejected": "2026-07-27",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Technical Recruiter 2026 New Graduate",
+      "organisation": "Radiant Industries",
+      "url": "https://remoteOK.com/remote-jobs/remote-technical-recruiter-2026-new-graduate-radiant-industries-1135414",
+      "relevanceScore": 21,
+      "categoriesMatched": [
+        "companyIndustry",
+        "complianceContext",
+        "llm"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: companyIndustry, complianceContext, llm; no penalties)."
+    },
+    {
+      "id": "rej-0015",
+      "dateRejected": "2026-07-27",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Dubai UAE",
+      "organisation": "å¯é»ä¹å½éè´¸æï¼ä¸æµ·ï¼æéå¬å¸",
+      "url": "https://remoteOK.com/remote-jobs/remote-dubai-uae-1135451",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0016",
+      "dateRejected": "2026-07-27",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Content Creator DAZN",
+      "organisation": "DAZN",
+      "url": "https://remoteOK.com/remote-jobs/remote-content-creator-dazn-dazn-1135444",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
     }
   ]
 }
