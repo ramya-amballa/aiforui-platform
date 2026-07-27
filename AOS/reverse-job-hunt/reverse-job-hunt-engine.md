@@ -106,23 +106,48 @@ elsewhere in AOS.
   (Account Intelligence: how to *frame* the first touch; this engine:
   which *channel* to use and what to do over 90 days).
 
+## Sprint 16 — Client Acquisition Engine (Consolidated Here)
+
+Per explicit instruction ("consolidate into existing"), the requested
+Client Acquisition Engine is not a new standalone employee — it is
+Section 11 of this engine's own strategy, since five of its eight
+requested capabilities were already this engine's or Account
+Intelligence's own sections:
+
+| Requested capability | Where it comes from |
+|---|---|
+| Research the company / decision-makers | Account Intelligence's own Company Profile and Decision Makers sections (unchanged) |
+| Recommend which asset to share first | Account Intelligence's own already-ranked Supporting Assets — the top-ranked item, never a second ranking |
+| Build a 30/60/90-day engagement plan | This engine's own Section 10 (unchanged) — the campaign's plan *is* that sequence |
+| Predict conversion probability | This engine's own Section 7 (unchanged) |
+| Draft LinkedIn connection requests | **New.** Uses a real, founder-tracked person from `relationship-intelligence/relationship-profiles.json` when one exists for that organisation; otherwise a generic-by-title draft from Account Intelligence's decision-maker titles (never an invented name) |
+| Draft follow-up messages | **New.** Ties directly to Section 10's own first 90-day-sequence step — never a second, independently-invented cadence |
+| Track every touchpoint until won/closed | **New.** A founder-maintained, persistent `touchpoint-log.json` (sibling to `organisation-profiles.json`'s own pattern — exactly like `company-intelligence.json`'s `outreachHistory` is founder-maintained, never auto-collected). Read-only; this engine reports the status/touchpoints on record, never invents one |
+
+`touchpoint-log.json` schema: `{"campaigns": {organisation: {"status":
+"Open"|"Won"|"Closed", "touchpoints": [{"date", "channel", "summary"}]}}}`.
+An organisation with no campaign record shows `"Not started"`,
+distinct from `"Open"`, so the two states are never confused.
+
 ## What This Sprint Deliberately Does Not Do
 
 - Does not modify `organisation-profiles.json`, `opportunity-schema.json`,
   `company-intelligence.json`, `account-intelligence-feed.json`,
-  `pipeline.json`, or any other employee's output — every read is
-  read-only.
+  `pipeline.json`, `relationship-profiles.json`, or any other
+  employee's output — every read is read-only, including of its own
+  `touchpoint-log.json` (founder-maintained, this engine never writes
+  to it).
 - Does not touch or recompute any existing scoring formula
   (`ingest.py`'s `compute_priority_score()`, `demand_engine.py`'s
   Overall Demand Score/Buying Readiness Score, Account Intelligence's
   Opportunity Scorecard) — Expected Consulting ROI is a new,
   separately-labelled number for this engine's own dashboard sort only.
-- Does not draft or send outreach — Section 9/10 recommend an action
-  and a sequence; a human still writes and sends anything real.
+- Does not send outreach — Section 9/10/11 draft/recommend an action,
+  a sequence, and message text; a human still sends anything real.
 - Does not invent a consulting-potential dollar figure, a stakeholder
-  name, or a probability beyond what an upstream employee's own
-  already-computed field or this engine's own clearly-labelled
-  heuristic already established.
+  name, a touchpoint, or a probability beyond what an upstream
+  employee's own already-computed field, a founder-maintained record,
+  or this engine's own clearly-labelled heuristic already established.
 - Does not wire into CEO Advisor's own report in this sprint — it is
   listed in CEO Advisor's `dependsOn` for run-ordering only, matching
   the same pattern Product Manager, Content Director and Account
@@ -133,9 +158,10 @@ elsewhere in AOS.
 The Command Center's new **Reverse Job Hunt** page: a "Generate
 Strategies" button, a table of every qualified organisation sorted by
 Expected Consulting ROI (industry, buying-readiness band, entry point,
-probability of engagement, recommended timeline, last seen), searchable
-by company, and the full ten-section strategy for whichever
-organisation is selected, with a Download button. Reads
-`reverse-job-hunt-feed.json` and the individual strategy files directly
-(read-only, same as every other dashboard page) — never re-derives or
-duplicates the scoring above.
+probability of engagement, recommended timeline, last seen, and —
+Sprint 16 — campaign status, touchpoint count, and the asset recommended
+to share first), searchable by company, and the full eleven-section
+strategy for whichever organisation is selected, with a Download
+button. Reads `reverse-job-hunt-feed.json` and the individual strategy
+files directly (read-only, same as every other dashboard page) — never
+re-derives or duplicates the scoring above.

@@ -238,6 +238,101 @@ class BuildStrategyIntegrationTests(unittest.TestCase):
             DEMAND_CATEGORIES_CONFIG, CONFIG)
         self.assertNotIn("Cross-reference", markdown)
 
+    def test_client_acquisition_campaign_section_present(self):
+        profile = make_profile()
+        markdown, feed_entry = engine.build_strategy(
+            profile, {"opportunities": []}, {"pipeline": []}, {"companies": []}, {"briefs": []},
+            DEMAND_CATEGORIES_CONFIG, CONFIG)
+        self.assertIn("## 11. Client Acquisition Campaign", markdown)
+        self.assertEqual(feed_entry["campaignStatus"], "Not started")
+        self.assertEqual(feed_entry["touchpointCount"], 0)
+        self.assertIsNone(feed_entry["assetToShareFirst"])
+
+    def test_client_acquisition_uses_real_relationship_contact_and_touchpoints(self):
+        profile = make_profile()
+        ai_feed = {"briefs": [{"organisation": "BBVA", "decisionMakerTitles": ["Chief Risk Officer"],
+                                "supportingAssets": [{"title": "ADGL Methodology", "type": "Methodology", "url": "/resources/adgl"}]}]}
+        relationship_profiles = {"people": {"Jane Doe": {"person": "Jane Doe", "company": "BBVA", "role": "CRO"}}}
+        touchpoint_log = {"campaigns": {"BBVA": {"status": "Open", "touchpoints": [
+            {"date": "2026-07-01", "channel": "LinkedIn", "summary": "Sent connection request"},
+        ]}}}
+        markdown, feed_entry = engine.build_strategy(
+            profile, {"opportunities": []}, {"pipeline": []}, {"companies": []}, ai_feed,
+            DEMAND_CATEGORIES_CONFIG, CONFIG, relationship_profiles, touchpoint_log)
+        self.assertIn("Jane Doe", markdown)
+        self.assertIn("ADGL Methodology", markdown)
+        self.assertIn("Sent connection request", markdown)
+        self.assertEqual(feed_entry["campaignStatus"], "Open")
+        self.assertEqual(feed_entry["touchpointCount"], 1)
+        self.assertEqual(feed_entry["assetToShareFirst"], "ADGL Methodology")
+
+
+class ClientAcquisitionEngineTests(unittest.TestCase):
+    """AOS Sprint 16 — Client Acquisition Engine, consolidated into
+    Reverse Job Hunt per explicit instruction rather than a new
+    standalone employee."""
+
+    def test_crm_path_points_to_the_real_crm_directory(self):
+        # Regression: this constant once pointed to a nonexistent
+        # AOS/crm/ directory (the same wrong-directory bug already
+        # caught once in recruiter_intelligence_engine.py), silently
+        # making every CRM cross-reference (entry_point's relationship
+        # check included) see an empty default forever.
+        self.assertEqual(engine.CRM_PATH.parts[-2:], ("06-CRM", "company-intelligence.json"))
+
+    def test_linkedin_request_uses_real_tracked_contact_when_available(self):
+        contact = {"person": "Jane Doe", "company": "BBVA", "role": "Chief Risk Officer"}
+        result = engine.linkedin_connection_request("BBVA", ["Chief Risk Officer"], contact)
+        self.assertIn("Jane Doe", result)
+        self.assertIn("Chief Risk Officer", result)
+
+    def test_linkedin_request_falls_back_to_title_when_no_contact_tracked(self):
+        result = engine.linkedin_connection_request("BBVA", ["Chief Risk Officer"], None)
+        self.assertIn("Chief Risk Officer", result)
+        self.assertNotIn("Jane Doe", result)
+
+    def test_linkedin_request_is_honest_when_nothing_available(self):
+        result = engine.linkedin_connection_request("BBVA", [], None)
+        self.assertIn("Not enough signal", result)
+
+    def test_follow_up_message_ties_to_first_sequence_step(self):
+        result = engine.follow_up_message("BBVA", ["Send a LinkedIn connection request", "Share ADGL resource"])
+        self.assertIn("Send a LinkedIn connection request", result)
+
+    def test_follow_up_message_honest_when_no_sequence(self):
+        result = engine.follow_up_message("BBVA", [])
+        self.assertIn("Not enough signal", result)
+
+    def test_asset_to_share_first_is_top_ranked_asset(self):
+        ai_feed_entry = {"supportingAssets": [{"title": "ADGL Methodology", "type": "Methodology", "url": "/x"},
+                                                {"title": "Whitepaper", "type": "Whitepaper", "url": "/y"}]}
+        result = engine.asset_to_share_first(ai_feed_entry)
+        self.assertEqual(result["title"], "ADGL Methodology")
+
+    def test_asset_to_share_first_none_when_no_brief(self):
+        self.assertIsNone(engine.asset_to_share_first(None))
+        self.assertIsNone(engine.asset_to_share_first({"supportingAssets": []}))
+
+    def test_campaign_status_not_started_when_no_record(self):
+        result = engine.campaign_status("BBVA", {"campaigns": {}})
+        self.assertEqual(result["status"], "Not started")
+        self.assertEqual(result["touchpoints"], [])
+
+    def test_campaign_status_reflects_real_touchpoint_log(self):
+        touchpoint_log = {"campaigns": {"BBVA": {"status": "Won", "touchpoints": [
+            {"date": "2026-07-01", "channel": "Email", "summary": "Sent proposal"},
+        ]}}}
+        result = engine.campaign_status("BBVA", touchpoint_log)
+        self.assertEqual(result["status"], "Won")
+        self.assertEqual(len(result["touchpoints"]), 1)
+
+    def test_find_relationship_contact_matches_by_company(self):
+        profiles = {"people": {"Jane Doe": {"person": "Jane Doe", "company": "BBVA"},
+                                 "John Roe": {"person": "John Roe", "company": "Acme"}}}
+        found = engine._find_relationship_contact("BBVA", profiles)
+        self.assertEqual(found["person"], "Jane Doe")
+        self.assertIsNone(engine._find_relationship_contact("Nonexistent Co", profiles))
+
 
 class GenerateMainTests(unittest.TestCase):
     def setUp(self):
@@ -253,6 +348,8 @@ class GenerateMainTests(unittest.TestCase):
             patch("reverse_job_hunt_engine.PIPELINE_PATH", self.tmp_path / "pipeline.json"),
             patch("reverse_job_hunt_engine.CRM_PATH", self.tmp_path / "crm.json"),
             patch("reverse_job_hunt_engine.ACCOUNT_INTELLIGENCE_FEED_PATH", self.tmp_path / "ai_feed.json"),
+            patch("reverse_job_hunt_engine.RELATIONSHIP_PROFILES_PATH", self.tmp_path / "relationship_profiles.json"),
+            patch("reverse_job_hunt_engine.TOUCHPOINT_LOG_PATH", self.tmp_path / "touchpoint_log.json"),
             patch("reverse_job_hunt_engine.STRATEGIES_DIR", self.tmp_path / "strategies"),
             patch("reverse_job_hunt_engine.FEED_PATH", self.tmp_path / "feed.json"),
             patch("reverse_job_hunt_engine.REPO_ROOT", self.tmp_path),

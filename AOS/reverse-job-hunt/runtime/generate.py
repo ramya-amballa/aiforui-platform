@@ -54,6 +54,13 @@ def main():
     pipeline_data = engine.load_json(engine.PIPELINE_PATH, {"pipeline": []})
     crm_data = engine.load_json(engine.CRM_PATH, {"companies": []})
     ai_feed = engine.load_json(engine.ACCOUNT_INTELLIGENCE_FEED_PATH, {"briefs": []})
+    # AOS Sprint 16 — Client Acquisition Engine, consolidated here. Both
+    # read-only: relationship_profiles is Relationship Intelligence's
+    # own founder-maintained record (real names, never invented);
+    # touchpoint_log is this engine's own founder-maintained campaign
+    # record (see reverse-job-hunt-engine.md).
+    relationship_profiles = engine.load_json(engine.RELATIONSHIP_PROFILES_PATH, {"people": {}})
+    touchpoint_log = engine.load_json(engine.TOUCHPOINT_LOG_PATH, {"campaigns": {}})
     demand_categories_config = engine.load_demand_categories_config()
     config = engine.load_config()
 
@@ -65,6 +72,8 @@ def main():
             "recommendedTimeline": "string", "consultingPotentialEstimate": "string",
             "expectedConsultingRoi": "number 0-10 or null — dashboard sort key",
             "lastSeen": "string ISO date", "strategyPath": "string — relative to the repo root",
+            "campaignStatus": "string — Not started | Open | Won | Closed (from touchpoint-log.json)",
+            "touchpointCount": "number", "assetToShareFirst": "string or null",
         },
         "strategies": [],
     }
@@ -72,7 +81,7 @@ def main():
     for organisation, profile in organisations.items():
         markdown, feed_entry = engine.build_strategy(
             profile, opportunity_schema, pipeline_data, crm_data, ai_feed,
-            demand_categories_config, config)
+            demand_categories_config, config, relationship_profiles, touchpoint_log)
 
         slug = engine.slugify(organisation)
         strategy_path = engine.STRATEGIES_DIR / f"{slug}.md"

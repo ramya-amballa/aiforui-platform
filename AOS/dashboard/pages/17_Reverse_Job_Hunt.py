@@ -18,8 +18,10 @@ st.title("Reverse Job Hunt")
 st.caption(
     "Proactive business development, not reactive opportunity finding. For every organisation Demand "
     "Intelligence has already qualified: why to pursue them, entry point, probability of engagement, "
-    "timeline and a 90-day action sequence — an internal playbook, not a proposal. Additive and "
-    "downstream only; does not modify any existing scoring logic."
+    "timeline and a 90-day action sequence — an internal playbook, not a proposal. Each strategy now also "
+    "includes a Client Acquisition Campaign (Sprint 16): a draft LinkedIn connection request, a follow-up "
+    "message, the recommended asset to share first, and campaign status tracked in touchpoint-log.json. "
+    "Additive and downstream only; does not modify any existing scoring logic."
 )
 
 if st.button("Generate Strategies", type="primary"):
@@ -56,7 +58,8 @@ else:
     show_table(
         filtered,
         columns=["organisation", "industry", "expectedConsultingRoi", "buyingReadinessBand",
-                 "entryPoint", "probabilityOfEngagement", "recommendedTimeline", "lastSeen"],
+                 "entryPoint", "probabilityOfEngagement", "recommendedTimeline", "lastSeen",
+                 "campaignStatus", "touchpointCount", "assetToShareFirst"],
         empty_message="No organisation matches that search.",
     )
 

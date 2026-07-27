@@ -48,11 +48,18 @@ OPPORTUNITY_SCHEMA_PATH = DEMAND_INTELLIGENCE_DIR / "opportunity-schema.json"
 DEMAND_CATEGORIES_CONFIG_PATH = DEMAND_INTELLIGENCE_DIR / "runtime" / "config" / "demand-signal-categories.json"
 
 ACCOUNT_INTELLIGENCE_FEED_PATH = AOS_DIR / "account-intelligence" / "runtime" / "output" / "account-intelligence-feed.json"
-CRM_PATH = AOS_DIR / "crm" / "company-intelligence.json"
+CRM_PATH = AOS_DIR / "06-CRM" / "company-intelligence.json"
 PIPELINE_PATH = AOS_DIR / "08-Revenue-Hunter" / "pipeline.json"
+RELATIONSHIP_PROFILES_PATH = AOS_DIR / "relationship-intelligence" / "relationship-profiles.json"
 
 STRATEGIES_DIR = RUNTIME_DIR / "output" / "strategies"
 FEED_PATH = RUNTIME_DIR / "output" / "reverse-job-hunt-feed.json"
+# AOS Sprint 16 — Client Acquisition Engine, consolidated into Reverse
+# Job Hunt per explicit instruction ("consolidate into existing")
+# rather than a new standalone employee. Founder-maintained, persistent
+# touchpoint record per organisation — exactly like company-intelligence.json's
+# outreachHistory is founder-maintained, never auto-collected or invented.
+TOUCHPOINT_LOG_PATH = REVERSE_JOB_HUNT_DIR / "touchpoint-log.json"
 
 
 def load_json(path, default=None):
@@ -326,12 +333,78 @@ def expected_consulting_roi(consulting_potential_score, probability_pct):
 
 
 # --------------------------------------------------------------------------
+# AOS Sprint 16 — Client Acquisition Engine (consolidated here, per
+# explicit instruction, rather than a new standalone employee). Every
+# field below reuses another section's or employee's own already-
+# computed data — never a second, independent guess, and never an
+# invented name.
+# --------------------------------------------------------------------------
+
+def _find_relationship_contact(organisation, relationship_profiles):
+    """A real, founder-tracked person at this organisation, if
+    Relationship Intelligence (Sprint 13) has one — read-only. Never
+    invented; Account Intelligence's own decision-maker titles (never
+    names) are the fallback when no real contact is tracked yet."""
+    for person in relationship_profiles.get("people", {}).values():
+        if person.get("company") == organisation:
+            return person
+    return None
+
+
+def linkedin_connection_request(organisation, decision_maker_titles, relationship_contact):
+    if relationship_contact and relationship_contact.get("person"):
+        name = relationship_contact["person"]
+        role = relationship_contact.get("role") or (decision_maker_titles[0] if decision_maker_titles else "leadership")
+        return (f"Hi {name} — I've been following {organisation}'s recent AI activity and would welcome "
+                f"connecting, given your role as {role}. I work with organisations navigating exactly this "
+                f"kind of AI governance challenge.")
+    if decision_maker_titles:
+        title = decision_maker_titles[0]
+        return (f"No specific decision-maker is tracked yet for {organisation} in Relationship Intelligence — "
+                f"target a {title}. Suggested opening: introduce AI for U&I's AI governance advisory work, "
+                f"referencing {organisation}'s own recent AI activity as the reason for reaching out.")
+    return (f"Not enough signal yet to draft a specific connection request for {organisation} — no "
+            f"decision-maker titles (Account Intelligence) or tracked contact (Relationship Intelligence) "
+            f"on record.")
+
+
+def follow_up_message(organisation, sequence):
+    """Ties directly to Section 10's own 90-day sequence — never a
+    second, independently-invented cadence."""
+    if not sequence:
+        return "Not enough signal yet to draft a follow-up message — no 90-day sequence available."
+    return (f"Follow-up for {organisation}, tied to the 90-day sequence's first step "
+            f"(\"{sequence[0]}\"): a short note referencing that action, sent 5-7 days after first contact "
+            f"if there's been no response.")
+
+
+def asset_to_share_first(ai_feed_entry):
+    """Account Intelligence's own already-ranked Supporting Assets
+    (Section 8 there) — the top-ranked item, never a second,
+    independent ranking."""
+    assets = (ai_feed_entry or {}).get("supportingAssets", [])
+    return assets[0] if assets else None
+
+
+def campaign_status(organisation, touchpoint_log):
+    """Reads the founder-maintained touchpoint-log.json read-only —
+    status and every touchpoint are exactly what the founder recorded,
+    never inferred or invented. 'Not started' (not 'Open') when no
+    campaign record exists yet, so the two are never confused."""
+    campaign = touchpoint_log.get("campaigns", {}).get(organisation)
+    if not campaign:
+        return {"status": "Not started", "touchpoints": []}
+    return {"status": campaign.get("status", "Open"), "touchpoints": campaign.get("touchpoints", [])}
+
+
+# --------------------------------------------------------------------------
 # Rendering
 # --------------------------------------------------------------------------
 
 def render_strategy_markdown(profile, pursuit, potential, relevance, ai_mat, gov_mat,
                               entry_point_value, entry_point_reason, probability_pct,
-                              timeline, touch, sequence, roi, ai_feed_entry):
+                              timeline, touch, sequence, roi, ai_feed_entry,
+                              connection_request, follow_up, asset, campaign):
     organisation = profile.get("organisation", "Unknown")
     lines = [
         f"# Reverse Job Hunt Strategy — {organisation}",
@@ -382,12 +455,38 @@ def render_strategy_markdown(profile, pursuit, potential, relevance, ai_mat, gov
             "Shown for consistency-checking only — this engine's own Section 6 recommendation above is not overridden by it.",
         ]
 
+    lines += ["", "---", "", "## 11. Client Acquisition Campaign", "",
+              "*AOS Sprint 16 — consolidated into this engine's own strategy rather than a separate campaign document.*",
+              "", "**Draft LinkedIn Connection Request**", "", connection_request,
+              "", "**Draft Follow-up Message**", "", follow_up]
+
+    lines += ["", "**Recommended Asset to Share First**", ""]
+    if asset:
+        lines.append(f"- **{asset['title']}** ({asset['type']}) — {asset['url']}")
+    else:
+        lines.append("- Not enough signal yet — no ranked Supporting Assets available from Account Intelligence.")
+
+    lines += ["", "**30/60/90-Day Engagement Plan**", "",
+              "_The same 90-day sequence as Section 10 above — this campaign's plan is that sequence, not a second one._"]
+
+    lines += ["", "**Campaign Status**", "", f"Status: **{campaign['status']}**", ""]
+    if campaign["touchpoints"]:
+        lines.append("Touchpoints on record:")
+        lines.append("")
+        for tp in campaign["touchpoints"]:
+            lines.append(f"- {tp.get('date', 'Not specified')} — {tp.get('channel', 'Not specified')}: {tp.get('summary', '')}")
+    else:
+        lines.append("_No touchpoints logged yet in touchpoint-log.json — this campaign hasn't started, or isn't tracked yet._")
+
     lines += ["", "---", "", "*Preparation only — nothing here is sent automatically.*"]
     return "\n".join(lines)
 
 
 def build_strategy(profile, opportunity_schema, pipeline_data, crm_data, ai_feed,
-                    demand_categories_config, config):
+                    demand_categories_config, config, relationship_profiles=None, touchpoint_log=None):
+    relationship_profiles = relationship_profiles or {"people": {}}
+    touchpoint_log = touchpoint_log or {"campaigns": {}}
+
     organisation = profile.get("organisation", "Unknown")
     crm_entry = _find_crm_entry(organisation, crm_data)
     ai_feed_entry = _find_account_intelligence_entry(organisation, ai_feed)
@@ -404,10 +503,19 @@ def build_strategy(profile, opportunity_schema, pipeline_data, crm_data, ai_feed
     sequence = ninety_day_sequence(entry_point_value, config)
     roi = expected_consulting_roi(potential.get("score"), probability_pct)
 
+    # AOS Sprint 16 — Client Acquisition Engine, consolidated here.
+    relationship_contact = _find_relationship_contact(organisation, relationship_profiles)
+    decision_maker_titles = (ai_feed_entry or {}).get("decisionMakerTitles", [])
+    connection_request = linkedin_connection_request(organisation, decision_maker_titles, relationship_contact)
+    follow_up = follow_up_message(organisation, sequence)
+    asset = asset_to_share_first(ai_feed_entry)
+    campaign = campaign_status(organisation, touchpoint_log)
+
     markdown = render_strategy_markdown(
         profile, pursuit, potential, relevance, ai_mat, gov_mat,
         entry_point_value, entry_point_reason, probability_pct,
         timeline, touch, sequence, roi, ai_feed_entry,
+        connection_request, follow_up, asset, campaign,
     )
 
     feed_entry = {
@@ -421,5 +529,9 @@ def build_strategy(profile, opportunity_schema, pipeline_data, crm_data, ai_feed
         "expectedConsultingRoi": roi,
         "lastSeen": profile.get("lastSeen", ""),
         "strategyPath": None,  # filled in by generate.py once the file path is known
+        # AOS Sprint 16 — Client Acquisition Engine fields.
+        "campaignStatus": campaign["status"],
+        "touchpointCount": len(campaign["touchpoints"]),
+        "assetToShareFirst": asset["title"] if asset else None,
     }
     return markdown, feed_entry
