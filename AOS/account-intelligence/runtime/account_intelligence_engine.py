@@ -586,5 +586,16 @@ def build_brief(profile, opportunity_schema, demand_categories_config, config, a
         "lastSeen": profile.get("lastSeen", ""),
         "briefPath": None,  # filled in by generate.py once the file path is known
         "executiveSummary": summary,
+        # AOS Sprint 12 — additive, structured fields so downstream
+        # consumers (Sales Director's Executive Proposal Generator)
+        # can trace every proposal section back to this brief's own
+        # already-computed data, without parsing the rendered markdown.
+        "companyProfile": company,
+        "deploymentStage": deployment["stage"],
+        "aiInitiatives": company["publicAiInitiatives"],
+        "governanceRisks": risks,
+        "serviceFit": services,
+        "decisionMakerTitles": titles,
+        "supportingAssets": assets_ranked,
     }
     return markdown, feed_entry

@@ -151,6 +151,52 @@ Send`. CEO Advisor's `decision-model.md` normalises this status
 alongside its other three inputs — see that file for the exact
 weighting.
 
+## Executive Proposal Generator (Sprint 12)
+
+`proposal_document()` above is the generic proposal, used whenever
+`account-intelligence/`'s feed (`account-intelligence-feed.json`) has
+no brief yet for the opportunity's organisation. When one exists,
+`executive_proposal_document()` replaces it with a Tier-1-style
+executive proposal — every fact-bearing section is a read of that
+brief's own already-computed data, never a second, independent guess
+at the same facts:
+
+| Proposal section | Sourced from (Account Intelligence brief field) |
+|---|---|
+| Executive Summary | `executiveSummary` (already capped at 300 words there) |
+| Business Context | `companyProfile` (industry, geographic footprint, approximate size, regulatory environment) and `deploymentStage` |
+| Observed AI Initiatives | `aiInitiatives` |
+| Likely Governance Challenges | `governanceRisks` |
+| Recommended Engagement | `serviceFit` |
+| Appendices | `supportingAssets` |
+
+Deliverables, Timeline and Success Metrics are fixed, honest
+boilerplate (a findings report, a roadmap, an executive briefing; a
+short scoping call; that gaps get a named owner) — not claims that
+require a data source, so they aren't drawn from anywhere per-brief.
+
+**Commercial Options** are the four options every executive proposal
+offers, each grounded in `rate-card.json`'s own real day-rate figures
+(never a fabricated number): Discovery reuses the `Workshop` rate,
+Assessment reuses `Consulting Project`, Implementation reuses
+`Enterprise Contract`, and Retainer uses the new `Fractional Retainer`
+entry (same day rate as `Consulting Project`, framed as an ongoing
+monthly commitment instead of a fixed-scope project).
+
+Any missing field in the brief renders honestly ("Not specified" /
+"None recorded yet" / "Not enough signal yet to assess") — nothing is
+invented to fill a section the brief hasn't populated.
+
+**Read timing.** Account Intelligence's feed is read read-only and
+optionally — Sales Director runs *before* Account Intelligence in the
+Orchestrator's fixed order (see `orchestrator-config.json`), so this
+read is one cycle behind (today's brief, if any, reflects yesterday's
+run). This is the same accepted limitation as CRM's read of Sales
+Director's own `processed-index.json` (see `crm-runtime-notes.md`),
+not a `dependsOn` edge — Account Intelligence itself optionally reads
+Sales Director's feed too, so a hard dependency either way would create
+a circular ordering requirement.
+
 ## What This Engine Does Not Do
 
 - Does not send anything. `channelOutreach` fields that don't fit the

@@ -156,3 +156,15 @@ for whichever organisation is selected, with a Download button. Reads
 `account-intelligence-feed.json` and the individual brief files
 directly (read-only, same as every other dashboard page) — never
 re-derives or duplicates the scoring above.
+
+## Downstream Consumers
+
+`account-intelligence-feed.json`'s per-organisation entry carries the
+brief's already-computed structured fields (`companyProfile`,
+`deploymentStage`, `aiInitiatives`, `governanceRisks`, `serviceFit`,
+`decisionMakerTitles`, `supportingAssets`), not just the rendered
+markdown — so a downstream consumer can trace facts back to this
+brief without re-parsing prose. Sales Director's Executive Proposal
+Generator (Sprint 12, `sales-director/proposal-preparation-engine.md`)
+is the first to read these, read-only and one cycle behind (see that
+document for the exact ordering reasoning).

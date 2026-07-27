@@ -85,6 +85,7 @@
       "folder": "sales-director",
       "script": "sales-director/runtime/prepare.py",
       "dependsOn": ["demand-intelligence", "revenue-hunter", "crm", "service-mapping"],
+      "note": "AOS Sprint 12 — also reads account-intelligence/runtime/output/account-intelligence-feed.json (read-only, optional) to upgrade a prepared package's proposal document into an Executive Proposal traced back to that organisation's Account Intelligence brief. Sales Director runs before Account Intelligence in this fixed order, so that read is one cycle behind (today's brief, if any, is yesterday's) — the same accepted-limitation pattern as CRM's read of Sales Director's own processed-index.json (see crm-runtime-notes.md). Not added as a dependsOn edge because Account Intelligence itself optionally reads Sales Director's own feed (see account-intelligence's dependsOn below) — making it a hard dependency either way would create a circular ordering requirement. When no brief exists yet for an organisation, the original generic proposal is used, never a blank.",
       "outputPaths": [
         "sales-director/runtime/output/{date}-sales-director-report.md",
         "sales-director/runtime/output/ceo-advisor-feed.json"

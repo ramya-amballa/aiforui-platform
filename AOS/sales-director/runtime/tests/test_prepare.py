@@ -85,6 +85,7 @@ class ProposalFileGenerationTests(unittest.TestCase):
             patch("prepare.PIPELINE_PATH", self.tmp_path / "pipeline.json"),
             patch("prepare.CRM_PATH", self.tmp_path / "company-intelligence.json"),
             patch("prepare.SERVICE_RECOMMENDATIONS_PATH", self.tmp_path / "service-recommendations.json"),
+            patch("prepare.ACCOUNT_INTELLIGENCE_FEED_PATH", self.tmp_path / "account-intelligence-feed.json"),
             patch("prepare.OUTPUT_DIR", self.tmp_path),
             patch("prepare.PACKAGES_DIR", self.packages_dir),
             patch("prepare.PROCESSED_INDEX_PATH", self.tmp_path / "processed-index.json"),
@@ -229,6 +230,115 @@ class ProposalFileGenerationTests(unittest.TestCase):
             for key in ALL_PATH_KEYS:
                 self.assertTrue((prepare.REPO_ROOT / record[key]).exists(),
                                 f"processed-index record claims {key} but no file exists")
+
+
+AI_ENTRY = {
+    "organisation": "BBVA",
+    "executiveSummary": "BBVA is deploying AI at scale with an emerging AI Governance function.",
+    "deploymentStage": "Scaling",
+    "companyProfile": {
+        "industry": "Banking",
+        "geographicFootprint": "Europe",
+        "approximateSize": "Enterprise (10,000+ employees)",
+        "regulatoryEnvironment": "EU AI Act, GDPR",
+    },
+    "aiInitiatives": ["Enterprise-wide Copilot rollout", "AI Governance Committee announced"],
+    "governanceRisks": [
+        {"risk": "No documented AI inventory", "why": "BBVA has not published an AI system inventory."},
+    ],
+    "serviceFit": [
+        {"service": "AI Governance Assessment", "confidence": "High"},
+    ],
+    "supportingAssets": [
+        {"title": "AI Governance Maturity Scale", "type": "Diagram", "url": "https://aiforui.org/methodology"},
+    ],
+}
+
+
+class ExecutiveProposalGeneratorTests(unittest.TestCase):
+    """AOS Sprint 12 — the Executive Proposal Generator upgrades a
+    prepared package's proposal document to trace back to Account
+    Intelligence's own already-computed brief (never a second,
+    independent guess at the same facts), and falls back to the
+    original generic proposal when no brief exists yet for that
+    organisation."""
+
+    def setUp(self):
+        self._tmpdir = tempfile.TemporaryDirectory()
+        self.addCleanup(self._tmpdir.cleanup)
+        self.tmp_path = Path(self._tmpdir.name)
+        self.packages_dir = self.tmp_path / "packages"
+
+        patches = [
+            patch("prepare.REPO_ROOT", self.tmp_path),
+            patch("prepare.OPPORTUNITY_SCHEMA_PATH", self.tmp_path / "opportunity-schema.json"),
+            patch("prepare.PIPELINE_PATH", self.tmp_path / "pipeline.json"),
+            patch("prepare.CRM_PATH", self.tmp_path / "company-intelligence.json"),
+            patch("prepare.SERVICE_RECOMMENDATIONS_PATH", self.tmp_path / "service-recommendations.json"),
+            patch("prepare.ACCOUNT_INTELLIGENCE_FEED_PATH", self.tmp_path / "account-intelligence-feed.json"),
+            patch("prepare.OUTPUT_DIR", self.tmp_path),
+            patch("prepare.PACKAGES_DIR", self.packages_dir),
+            patch("prepare.PROCESSED_INDEX_PATH", self.tmp_path / "processed-index.json"),
+            patch("prepare.CEO_FEED_PATH", self.tmp_path / "ceo-advisor-feed.json"),
+        ]
+        for p in patches:
+            p.start()
+            self.addCleanup(p.stop)
+
+        prepare.save_json(self.tmp_path / "pipeline.json", {"pipeline": []})
+        prepare.save_json(self.tmp_path / "company-intelligence.json", {"companies": []})
+        prepare.save_json(self.tmp_path / "service-recommendations.json", {"recommendations": {}})
+
+    def _write_opportunities(self, opportunities):
+        prepare.save_json(self.tmp_path / "opportunity-schema.json", {"opportunities": opportunities})
+
+    def test_uses_executive_proposal_when_account_intelligence_brief_exists(self):
+        prepare.save_json(self.tmp_path / "account-intelligence-feed.json", {"briefs": [AI_ENTRY]})
+        self._write_opportunities([DIRECT_OPPORTUNITY])
+        prepare.main()
+
+        feed = prepare.load_json(self.tmp_path / "ceo-advisor-feed.json")
+        entry = feed["feed"][0]
+        proposal = (prepare.REPO_ROOT / entry["proposalPath"]).read_text(encoding="utf-8")
+        self.assertIn("# Executive Proposal", proposal)
+        self.assertIn("BBVA is deploying AI at scale", proposal)
+        self.assertIn("No documented AI inventory", proposal)
+        self.assertIn("AI Governance Assessment", proposal)
+        self.assertIn("AI Governance Maturity Scale", proposal)
+        self.assertIn("## Commercial Options", proposal)
+
+    def test_commercial_options_are_grounded_in_real_rate_card_figures(self):
+        """The real rate-card.json figures, not the 'see rate-card note'
+        fallback that would appear if commercial_options() ever silently
+        received an empty rate_card dict."""
+        prepare.save_json(self.tmp_path / "account-intelligence-feed.json", {"briefs": [AI_ENTRY]})
+        self._write_opportunities([DIRECT_OPPORTUNITY])
+        prepare.main()
+
+        feed = prepare.load_json(self.tmp_path / "ceo-advisor-feed.json")
+        entry = feed["feed"][0]
+        proposal = (prepare.REPO_ROOT / entry["proposalPath"]).read_text(encoding="utf-8")
+        self.assertIn("USD 3,500", proposal)  # Workshop -> Discovery
+        self.assertIn("USD 850", proposal)  # Consulting Project -> Assessment / Fractional Retainer -> Retainer
+        self.assertIn("USD 950", proposal)  # Enterprise Contract -> Implementation
+        self.assertNotIn("see rate-card note", proposal)
+
+    def test_falls_back_to_generic_proposal_when_no_account_intelligence_brief(self):
+        prepare.save_json(self.tmp_path / "account-intelligence-feed.json", {"briefs": []})
+        self._write_opportunities([DIRECT_OPPORTUNITY])
+        prepare.main()
+
+        feed = prepare.load_json(self.tmp_path / "ceo-advisor-feed.json")
+        entry = feed["feed"][0]
+        proposal = (prepare.REPO_ROOT / entry["proposalPath"]).read_text(encoding="utf-8")
+        self.assertIn("## Proposal —", proposal)
+        self.assertNotIn("# Executive Proposal", proposal)
+
+    def test_find_account_intelligence_entry_matches_by_organisation_only(self):
+        feed = {"briefs": [AI_ENTRY, dict(AI_ENTRY, organisation="Acme Corp")]}
+        found = prepare.find_account_intelligence_entry("Acme Corp", feed)
+        self.assertEqual(found["organisation"], "Acme Corp")
+        self.assertIsNone(prepare.find_account_intelligence_entry("Nonexistent Co", feed))
 
 
 if __name__ == "__main__":

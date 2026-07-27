@@ -61,6 +61,7 @@ OPPORTUNITY_SCHEMA_PATH = AOS_DIR / "demand-intelligence" / "opportunity-schema.
 PIPELINE_PATH = AOS_DIR / "08-Revenue-Hunter" / "pipeline.json"
 CRM_PATH = AOS_DIR / "06-CRM" / "company-intelligence.json"
 SERVICE_RECOMMENDATIONS_PATH = AOS_DIR / "service-mapping" / "service-recommendations.json"
+ACCOUNT_INTELLIGENCE_FEED_PATH = AOS_DIR / "account-intelligence" / "runtime" / "output" / "account-intelligence-feed.json"
 
 CONFIG_DIR = RUNTIME_DIR / "config"
 OUTPUT_DIR = RUNTIME_DIR / "output"
@@ -341,6 +342,134 @@ def proposal_document(opportunity, bank, pricing):
     return "\n".join(sections)
 
 
+def find_account_intelligence_entry(organisation, ai_feed):
+    for entry in ai_feed.get("briefs", []):
+        if entry.get("organisation") == organisation:
+            return entry
+    return None
+
+
+def commercial_options(pricing, rate_card):
+    """AOS Sprint 12 — the four Commercial Options every Executive
+    Proposal offers, each grounded in rate-card.json's own real,
+    already-existing figures (never a fabricated number). Discovery
+    and Assessment/Implementation reuse the same day-rate types
+    recommend_pricing() already draws from; Retainer uses the new
+    'Fractional Retainer' rate-card entry (same day rate as Consulting
+    Project, framed as an ongoing monthly commitment)."""
+    types = rate_card.get("types", {})
+    currency = rate_card.get("defaultCurrency", "USD")
+
+    def describe(type_name, label):
+        card = types.get(type_name, {})
+        if "dayRate" not in card:
+            return f"{label}: see rate-card note — {card.get('note', 'pricing to be confirmed')}."
+        rate = card["dayRate"]
+        low, high = card["typicalDays"]["min"], card["typicalDays"]["max"]
+        unit = card.get("unit", "per day")
+        return f"{label}: {currency} {rate:,} {unit}, typically {low}-{high} {'days' if 'day' in unit else 'units'}."
+
+    return {
+        "Discovery": describe("Workshop", "Discovery Workshop"),
+        "Assessment": describe("Consulting Project", "Assessment"),
+        "Implementation": describe("Enterprise Contract", "Implementation"),
+        "Retainer": describe("Fractional Retainer", "Retainer"),
+    }
+
+
+def executive_proposal_document(opportunity, ai_entry, service_recommendation, pricing, bank, rate_card):
+    """AOS Sprint 12 — the Executive Proposal Generator. Every fact-
+    bearing section traces back to Account Intelligence's own already-
+    computed brief data (ai_entry) — company profile, AI initiatives,
+    governance risks, service fit, supporting assets — never a second,
+    independent guess at the same facts, and nothing here is invented
+    beyond what that brief already established. Returns None when no
+    Account Intelligence brief exists yet for this organisation, so the
+    caller can fall back to the pre-Sprint-12 generic proposal rather
+    than fabricate these sections from nothing."""
+    if not ai_entry:
+        return None
+
+    company = ai_entry.get("companyProfile", {})
+    risks = ai_entry.get("governanceRisks", [])
+    services = ai_entry.get("serviceFit", [])
+    assets = ai_entry.get("supportingAssets", [])
+    initiatives = ai_entry.get("aiInitiatives", [])
+    experience = select_bank_items(bank["practitionerExperience"], opportunity.get("domainTags", []))
+
+    lines = [
+        f"# Executive Proposal — {opportunity['organisation']}",
+        "",
+        f"**Prepared by:** AI for U&I  ",
+        f"**Date:** {TODAY}  ",
+        f"**Reference:** {opportunity['id']}",
+        "",
+        "---",
+        "",
+        "## Executive Summary",
+        "",
+        ai_entry.get("executiveSummary", "Not yet available."),
+        "",
+        "---",
+        "",
+        "## Business Context",
+        "",
+        f"- **Industry:** {company.get('industry', 'Not specified')}",
+        f"- **Geographic footprint:** {company.get('geographicFootprint', 'Not specified')}",
+        f"- **Approximate size:** {company.get('approximateSize', 'Not specified')}",
+        f"- **Regulatory environment:** {company.get('regulatoryEnvironment', 'Not specified')}",
+        f"- **Deployment stage:** {ai_entry.get('deploymentStage', 'Not specified')}",
+        "",
+        "---",
+        "",
+        "## Observed AI Initiatives",
+        "",
+    ]
+    lines += [f"- {i}" for i in initiatives] or ["- None recorded yet."]
+
+    lines += ["", "---", "", "## Likely Governance Challenges", ""]
+    lines += [f"- **{r['risk']}** — {r['why']}" for r in risks] or ["- Not enough signal yet to assess."]
+
+    lines += ["", "---", "", "## Recommended Engagement", ""]
+    lines += [f"- **{s['service']}** — {s['confidence']} confidence" for s in services] or ["- Not enough signal yet to rank service fit."]
+
+    lines += [
+        "", "---", "", "## Deliverables", "",
+        "- A findings report scoped to the governance challenges above",
+        "- A prioritised remediation/implementation roadmap",
+        "- Executive briefing session to walk through findings and recommendations",
+    ]
+
+    lines += [
+        "", "---", "", "## Timeline", "",
+        "A short scoping call to confirm scope and sequencing before any formal engagement begins.",
+    ]
+
+    lines += [
+        "", "---", "", "## Success Metrics", "",
+        "- Governance gaps identified above have a named owner and a documented remediation plan",
+        "- Recommended service(s) above are scoped into a signed statement of work",
+        "- No material governance gap remains undocumented at engagement close",
+    ]
+
+    options = commercial_options(pricing, rate_card)
+    lines += ["", "---", "", "## Commercial Options", ""]
+    for label in ("Discovery", "Assessment", "Implementation", "Retainer"):
+        lines.append(f"- **{label}:** {options[label]}")
+    if pricing.get("note"):
+        lines.append(f"\n*{pricing['note']}*")
+
+    lines += ["", "---", "", "## Appendices — Relevant AI for U&I Resources", ""]
+    lines += [f"- **{a['title']}** ({a['type']}) — {a['url']}" for a in assets] or ["- None specifically relevant identified yet."]
+
+    if experience:
+        lines += ["", "---", "", "## Practitioner Experience", ""]
+        lines += [f"- {item['text']}" for item in experience]
+
+    lines += ["", "---", "", "*This proposal is preparation only. Review and send by hand — nothing here is sent automatically.*"]
+    return "\n".join(lines)
+
+
 def recruiter_outreach(opportunity, crm_entry):
     has_recruiter = opportunity.get("sourceCategory") == "Recruiter Channel" or (crm_entry or {}).get("recruiter")
     if not has_recruiter:
@@ -378,10 +507,17 @@ def client_outreach(opportunity, crm_entry):
     return "\n".join(lines)
 
 
-def build_package(opportunity, pipeline_entry, crm_entry, bank, rate_card, service_recommendation):
+def build_package(opportunity, pipeline_entry, crm_entry, bank, rate_card, service_recommendation, ai_entry=None):
     pricing = recommend_pricing(opportunity, pipeline_entry, rate_card)
     confidence = compute_confidence(opportunity, crm_entry, pricing)
     status = determine_status(confidence, opportunity)
+
+    # AOS Sprint 12 — an Executive Proposal (traced back to Account
+    # Intelligence's own brief) whenever one exists for this organisation;
+    # otherwise the original generic proposal_document(), never a blank.
+    proposal = executive_proposal_document(
+        opportunity, ai_entry, service_recommendation, pricing, bank, rate_card
+    ) or proposal_document(opportunity, bank, pricing)
 
     return {
         "opportunityId": opportunity["id"],
@@ -390,7 +526,7 @@ def build_package(opportunity, pipeline_entry, crm_entry, bank, rate_card, servi
         "classification": opportunity["classification"],
         "datePrepared": TODAY,
         "coverLetter": cover_letter(opportunity, crm_entry, bank),
-        "proposal": proposal_document(opportunity, bank, pricing),
+        "proposal": proposal,
         "recruiterOutreach": recruiter_outreach(opportunity, crm_entry),
         "clientOutreach": client_outreach(opportunity, crm_entry),
         "clarifyingQuestions": clarifying_questions(opportunity, pricing),
@@ -533,6 +669,14 @@ def main():
     service_recommendations = load_json(
         SERVICE_RECOMMENDATIONS_PATH, {"recommendations": {}}
     ).get("recommendations", {})
+    # Read-only, optional — account-intelligence/'s own brief, one cycle
+    # behind (Sales Director runs before Account Intelligence in the fixed
+    # order; see orchestrator-config.json's sales-director note). Same
+    # accepted-limitation pattern as CRM's read of Sales Director's own
+    # processed-index.json — see crm-runtime-notes.md. When a brief exists
+    # it upgrades the proposal to an Executive Proposal; when it doesn't
+    # yet, the original generic proposal is used, never a blank.
+    ai_feed = load_json(ACCOUNT_INTELLIGENCE_FEED_PATH, {"briefs": []})
     processed_index = load_json(PROCESSED_INDEX_PATH, DEFAULT_PROCESSED_INDEX)
     processed_index.setdefault("processed", {})
 
@@ -568,7 +712,8 @@ def main():
         pipeline_entry = pipeline_by_ref.get(opportunity["id"])
         crm_entry = crm_by_org.get(opportunity["organisation"])
         service_recommendation = service_recommendations.get(opportunity["id"])
-        package = build_package(opportunity, pipeline_entry, crm_entry, bank, rate_card, service_recommendation)
+        ai_entry = find_account_intelligence_entry(opportunity["organisation"], ai_feed)
+        package = build_package(opportunity, pipeline_entry, crm_entry, bank, rate_card, service_recommendation, ai_entry)
 
         slug = slugify(f"{opportunity['id']}-{opportunity['organisation']}-{opportunity['title']}")[:80]
         paths = write_package_files(package, slug)
@@ -593,7 +738,8 @@ def main():
         pipeline_entry = pipeline_by_ref.get(opportunity["id"])
         crm_entry = crm_by_org.get(opportunity["organisation"])
         service_recommendation = service_recommendations.get(opportunity["id"])
-        package = build_package(opportunity, pipeline_entry, crm_entry, bank, rate_card, service_recommendation)
+        ai_entry = find_account_intelligence_entry(opportunity["organisation"], ai_feed)
+        package = build_package(opportunity, pipeline_entry, crm_entry, bank, rate_card, service_recommendation, ai_entry)
 
         slug = slugify(f"{opportunity['id']}-{opportunity['organisation']}-{opportunity['title']}")[:80]
         paths = write_package_files(package, slug)

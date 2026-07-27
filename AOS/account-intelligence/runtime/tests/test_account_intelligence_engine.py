@@ -313,6 +313,16 @@ class BuildBriefIntegrationTests(unittest.TestCase):
         self.assertEqual(feed_entry["organisation"], "BBVA")
         self.assertIsNone(feed_entry["briefPath"])  # generate.py fills this in, not the engine
 
+    def test_feed_entry_exposes_structured_fields_for_downstream_consumers(self):
+        """AOS Sprint 12 — Sales Director's Executive Proposal Generator
+        traces every proposal section back to this brief's own data via
+        these structured feed fields, not by parsing rendered markdown."""
+        profile = make_profile()
+        _, feed_entry = engine.build_brief(profile, {"opportunities": []}, DEMAND_CATEGORIES_CONFIG, CONFIG, ASSETS)
+        for key in ("companyProfile", "deploymentStage", "aiInitiatives", "governanceRisks",
+                    "serviceFit", "decisionMakerTitles", "supportingAssets"):
+            self.assertIn(key, feed_entry)
+
     def test_brief_never_mentions_a_sales_pitch_verb_in_conversation_starters_section(self):
         profile = make_profile()
         markdown, _ = engine.build_brief(profile, {"opportunities": []}, DEMAND_CATEGORIES_CONFIG, CONFIG, ASSETS)
