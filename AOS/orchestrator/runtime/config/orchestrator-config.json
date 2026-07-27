@@ -103,6 +103,18 @@
       ]
     },
     {
+      "key": "reverse-job-hunt",
+      "name": "Reverse Job Hunt",
+      "folder": "reverse-job-hunt",
+      "script": "reverse-job-hunt/runtime/generate.py",
+      "dependsOn": ["demand-intelligence", "crm", "sales-director", "account-intelligence"],
+      "note": "New in Sprint 9 — additive, downstream of Demand Intelligence only; never modifies demand-intelligence/organisation-profiles.json, opportunity-schema.json, company-intelligence.json, account-intelligence-feed.json, pipeline.json, or any other employee's output, and does not touch any existing scoring formula. For every organisation already qualified by Demand Intelligence, generates a Reverse Job Hunt Strategy (why pursue, consulting potential, relevance, AI/governance maturity, entry point, probability of engagement, timeline, first touch, 90-day sequence) to output/strategies/ plus a reverse-job-hunt-feed.json sortable by Expected Consulting ROI, a new heuristic this employee introduces. crm, sales-director and account-intelligence are depended on for optional read-only cross-references, not required inputs. See reverse-job-hunt/reverse-job-hunt-engine.md.",
+      "outputPaths": [
+        "reverse-job-hunt/runtime/output/{date}-reverse-job-hunt-report.md",
+        "reverse-job-hunt/runtime/output/reverse-job-hunt-feed.json"
+      ]
+    },
+    {
       "key": "product-manager",
       "name": "Product Manager",
       "folder": "03-Product-Manager",
@@ -147,9 +159,9 @@
       "folder": "09-CEO-Advisor",
       "script": "ceo-advisor/runtime/generate.py",
       "dependsOn": ["market-intelligence", "website-intake", "demand-intelligence", "revenue-hunter", "crm",
-                    "service-mapping", "sales-director", "account-intelligence", "product-manager",
-                    "content-director", "daily-brief"],
-      "note": "Implemented in ceo-advisor/, not 09-CEO-Advisor/ — see dependency-map.md. New in Sprint 5, and now genuinely the final step of every Orchestrator run, per explicit instruction — dependsOn lists every other employee to guarantee that, even though its own reads (see ceo-advisor/ceo-advisor-runtime-notes.md) are scoped to exactly Sprint 5's eight named sources (Product Manager, Content Director and Sprint 8's Account Intelligence are depended-on for ordering only, not read).",
+                    "service-mapping", "sales-director", "account-intelligence", "reverse-job-hunt",
+                    "product-manager", "content-director", "daily-brief"],
+      "note": "Implemented in ceo-advisor/, not 09-CEO-Advisor/ — see dependency-map.md. New in Sprint 5, and now genuinely the final step of every Orchestrator run, per explicit instruction — dependsOn lists every other employee to guarantee that, even though its own reads (see ceo-advisor/ceo-advisor-runtime-notes.md) are scoped to exactly Sprint 5's eight named sources (Product Manager, Content Director, Sprint 8's Account Intelligence and Sprint 9's Reverse Job Hunt are depended-on for ordering only, not read).",
       "outputPaths": [
         "ceo-advisor/runtime/output/{date}-ceo-daily-report.md",
         "ceo-advisor/runtime/output/ceo-daily-report.md",

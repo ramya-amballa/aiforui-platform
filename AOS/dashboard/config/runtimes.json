@@ -117,6 +117,18 @@
       ],
       "outputDir": "account-intelligence/runtime/output"
     },
+    "reverse-job-hunt": {
+      "name": "Reverse Job Hunt",
+      "buttonLabel": "Generate Strategies",
+      "script": "reverse-job-hunt/runtime/generate.py",
+      "cwd": "reverse-job-hunt/runtime",
+      "timeoutSeconds": 300,
+      "outputs": [
+        "reverse-job-hunt/runtime/output/{date}-reverse-job-hunt-report.md",
+        "reverse-job-hunt/runtime/output/reverse-job-hunt-feed.json"
+      ],
+      "outputDir": "reverse-job-hunt/runtime/output"
+    },
     "product-manager": {
       "name": "Product Manager",
       "buttonLabel": "Review Product Ideas",

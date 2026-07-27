@@ -1,0 +1,104 @@
+{
+  "_comment": "AOS Sprint 9 — Reverse Job Hunt Engine. Every table here is a deterministic lookup keyed by demand-intelligence's own five category keys, or by Buying Readiness Band, or by this engine's own new six-value entry-point vocabulary. Does not modify demand_engine.py, ingest.py or account_intelligence_engine.py's scoring in any way; every number here is either read directly from an upstream employee's own already-computed field, or a small, clearly-labelled new heuristic. Edit this file to retune wording/mappings — no code change needed.",
+
+  "categoryAiMaturityLabel": {
+    "_note": "Credited, verbatim copy of account-intelligence/runtime/config/account-intelligence-config.json's own categoryAiMaturityLabel table — the same deterministic label, reused here so both employees describe the same underlying fact identically rather than risk drifting apart.",
+    "ai_adoption": "Adopting / scaling AI",
+    "governance_trigger": "Governance-formalising",
+    "funding_trigger": "Early / expanding",
+    "regulatory_trigger": "Compliance-driven",
+    "failure_trigger": "Reactive (post-incident)"
+  },
+
+  "categoryGovernanceMaturityLabel": {
+    "_note": "A distinct question from AI maturity: how developed is this organisation's AI GOVERNANCE specifically, not its AI adoption. New in Sprint 9 — Account Intelligence (Sprint 8) only asked about AI maturity, not governance maturity separately.",
+    "ai_adoption": "Ad hoc / informal — no governance signal on record yet, only deployment",
+    "governance_trigger": "Developing — a governance function is being stood up, not yet mature",
+    "funding_trigger": "Initial — not yet formalised, funding is outpacing governance",
+    "regulatory_trigger": "Developing, compliance-driven — maturity is being built specifically to meet a named obligation",
+    "failure_trigger": "Immature / reactive — a gap already caused a real incident"
+  },
+
+  "categoryPursuitReason": {
+    "_note": "Section 1 'why pursue' — one factual clause per matched category, combined across all matched categories.",
+    "ai_adoption": "it is already deploying AI at scale, which reliably outpaces informal governance",
+    "governance_trigger": "it is actively building a formal AI governance function right now, the exact window where an external advisor's input has the most influence",
+    "funding_trigger": "newly-raised capital is about to fund AI expansion faster than internal oversight can track",
+    "regulatory_trigger": "it has a named external regulatory or compliance obligation on record, which creates a hard deadline rather than a discretionary one",
+    "failure_trigger": "a public AI-related incident has already occurred, which is the single strongest, most time-sensitive pursuit trigger this engine tracks"
+  },
+
+  "categoryRelevanceReason": {
+    "_note": "Section 3 'why AI for U&I is relevant' — pairs each category with the specific practice-area relevance, distinct from Section 1's pursuit urgency.",
+    "ai_adoption": "AI for U&I's ADGL methodology exists specifically for organisations at this deployment stage",
+    "governance_trigger": "AI for U&I's AI Governance Operating Model and Executive Workshop are built for exactly this stand-up moment",
+    "funding_trigger": "an AI Governance Operating Model established now is materially cheaper than retrofitting one after scaling",
+    "regulatory_trigger": "AI for U&I's AI Policy & Control Framework and Third-Party Risk Review map directly to named regulatory obligations",
+    "failure_trigger": "AI for U&I's AI Risk Assessment and Policy & Control Framework are built for post-incident remediation and evidencing corrective action"
+  },
+
+  "entryPoint": {
+    "_note": "Section 6 — six-value vocabulary. Precedence, top to bottom: an existing CRM relationship always wins (a warm path beats any cold one); otherwise low confidence in the underlying signal always means the lightest-touch option regardless of band; otherwise Buying Readiness Band plus whether an urgent category (governance/regulatory/failure trigger) is present decides the rest. Every value below is genuinely reachable — see tests/test_reverse_job_hunt_engine.py's EntryPointTests.",
+    "options": ["LinkedIn relationship", "Warm introduction", "Conference", "Executive briefing", "Discovery workshop", "Fractional advisory"]
+  },
+
+  "timelineByBand": {
+    "_note": "Section 8 'recommended timeline' — when to START outreach, not how long the deal will take to close (that is a different question; see opportunity_scorecard-style estimatedSalesCycle in account-intelligence, which this engine deliberately does not duplicate).",
+    "Very High": "Immediate — this week",
+    "High": "2-4 weeks",
+    "Medium": "4-8 weeks",
+    "Low": "8-16 weeks"
+  },
+
+  "firstTouchTemplateByEntryPoint": {
+    "_note": "Section 9 'recommended first touch' — one concrete, low-risk next action per entry point, parameterised only by {organisation} and {categoryLabel} (the organisation's own strongest matched category label) — never a drafted sales pitch.",
+    "LinkedIn relationship": "Send a LinkedIn connection request to a relevant stakeholder at {organisation}, referencing their public {categoryLabel} activity — no ask, just visibility.",
+    "Warm introduction": "Ask the existing CRM contact/recruiter for {organisation} for a direct introduction to the relevant stakeholder.",
+    "Conference": "Identify a governance/AI-risk conference or event {organisation}'s stakeholders are likely to attend, and plan an in-person introduction there.",
+    "Executive briefing": "Offer a short, no-obligation executive briefing on the governance implications of {organisation}'s {categoryLabel} activity.",
+    "Discovery workshop": "Propose a structured discovery workshop to scope {organisation}'s governance gap directly.",
+    "Fractional advisory": "Propose a fractional advisory conversation — {organisation}'s signal strength and category warrant discussing an ongoing arrangement, not just a one-off engagement."
+  },
+
+  "ninetyDaySequenceByEntryPoint": {
+    "_note": "Section 10 — a three-phase, 90-day sequence per entry point. Deliberately conditional in phrasing (\"if engaged... if not...\") since this engine has no response-tracking data to branch on deterministically; a human decides which branch applies as it unfolds.",
+    "LinkedIn relationship": [
+      "Days 1-30: Send the connection request (Section 9); if accepted, engage lightly with their public posts — no direct ask.",
+      "Days 31-60: If engagement continues, share one relevant AI for U&I resource (Section 8 of the Account Intelligence brief, if one exists); if no response, move to Conference as a second, lower-pressure channel.",
+      "Days 61-90: If a real conversation has started, propose a short executive briefing; if not, keep the connection warm and re-evaluate at the next signal."
+    ],
+    "Warm introduction": [
+      "Days 1-30: Request the introduction (Section 9); follow up once if no response within two weeks.",
+      "Days 31-60: Once introduced, offer a short, no-obligation conversation about their current governance approach.",
+      "Days 61-90: If the conversation confirmed genuine need, propose a discovery workshop; if not yet, stay in light touch via the referring contact."
+    ],
+    "Conference": [
+      "Days 1-30: Identify the specific event and confirm attendance plans; request a brief introduction on-site if a mutual contact exists.",
+      "Days 31-60: Follow up after the event referencing the specific conversation, not a generic pitch.",
+      "Days 61-90: If interest was genuine, propose an executive briefing; if not, keep on the LinkedIn relationship track instead."
+    ],
+    "Executive briefing": [
+      "Days 1-30: Offer the briefing directly (Section 9); confirm a date within the first two weeks if accepted.",
+      "Days 31-60: Deliver the briefing; follow up within a week with the specific governance risks discussed.",
+      "Days 61-90: If the briefing lands well, propose a discovery workshop or fractional advisory conversation; if not, de-prioritise to Monitor."
+    ],
+    "Discovery workshop": [
+      "Days 1-30: Propose the workshop directly (Section 9), with a concrete agenda scoped to their strongest matched category.",
+      "Days 31-60: Run the workshop; document findings and a recommended next step.",
+      "Days 61-90: Convert workshop findings into a formal proposal if warranted; if not ready, schedule a check-in at day 90."
+    ],
+    "Fractional advisory": [
+      "Days 1-30: Propose the fractional advisory conversation directly (Section 9), framed around their most urgent matched category.",
+      "Days 31-60: If there is interest, scope a fractional engagement structure and cadence.",
+      "Days 61-90: Finalise terms if genuinely ready; otherwise fall back to a discovery workshop as a lower-commitment alternative."
+    ]
+  },
+
+  "consultingPotentialScaleThresholds": {
+    "_note": "Section 2 fallback only — used when no real opportunity-schema.json record exists for this organisation yet. Same regex convention demand_engine.py's own _extract_scale_number() already uses (first number in the profile's scale text), reimplemented locally rather than imported, keeping this employee's runtime self-contained like every other AOS employee.",
+    "veryLargeThreshold": 10000, "veryLargeLabel": "High (10 — large-scale deployment implies a substantial governance programme)",
+    "largeThreshold": 1000, "largeLabel": "Medium-High (7)",
+    "midThreshold": 100, "midLabel": "Medium (5)",
+    "unclearLabel": "Unclear — insufficient scale data (3, conservative default)"
+  }
+}
