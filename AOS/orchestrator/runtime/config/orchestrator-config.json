@@ -127,6 +127,18 @@
       ]
     },
     {
+      "key": "fractional-advisory-radar",
+      "name": "Fractional Advisory Radar",
+      "folder": "fractional-advisory-radar",
+      "script": "fractional-advisory-radar/runtime/generate.py",
+      "dependsOn": ["demand-intelligence", "revenue-hunter"],
+      "note": "New in Sprint 11 — reuses Demand Intelligence's own five signal categories (organisation-profiles.json) rather than re-scanning the same public signals with a second taxonomy. Classifies every qualified organisation into a stage (Emerging/Growing/Enterprise/Urgent), estimates Fractional Advisory Potential, recommends an engagement model, and estimates expected consulting revenue (preferring a real pipeline.json/opportunity-schema.json figure over a heuristic). Purely additive/read-only. See fractional-advisory-radar/fractional-advisory-radar-engine.md.",
+      "outputPaths": [
+        "fractional-advisory-radar/runtime/output/{date}-fractional-advisory-radar-report.md",
+        "fractional-advisory-radar/runtime/output/fractional-advisory-radar-feed.json"
+      ]
+    },
+    {
       "key": "product-manager",
       "name": "Product Manager",
       "folder": "03-Product-Manager",
@@ -172,7 +184,8 @@
       "script": "ceo-advisor/runtime/generate.py",
       "dependsOn": ["market-intelligence", "website-intake", "demand-intelligence", "revenue-hunter", "crm",
                     "service-mapping", "sales-director", "account-intelligence", "reverse-job-hunt",
-                    "recruiter-intelligence", "product-manager", "content-director", "daily-brief"],
+                    "recruiter-intelligence", "fractional-advisory-radar", "product-manager",
+                    "content-director", "daily-brief"],
       "note": "Implemented in ceo-advisor/, not 09-CEO-Advisor/ — see dependency-map.md. New in Sprint 5, and now genuinely the final step of every Orchestrator run, per explicit instruction — dependsOn lists every other employee to guarantee that. Its own reads (see ceo-advisor/ceo-advisor-runtime-notes.md) are scoped to Sprint 5's eight named sources plus Sprint 10's Recruiter Intelligence (genuinely read, for the Recruiter Follow-ups section) — Product Manager, Content Director, Sprint 8's Account Intelligence and Sprint 9's Reverse Job Hunt remain dependency-only, for ordering, not read.",
       "outputPaths": [
         "ceo-advisor/runtime/output/{date}-ceo-daily-report.md",

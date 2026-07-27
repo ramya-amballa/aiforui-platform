@@ -141,6 +141,18 @@
       ],
       "outputDir": "recruiter-intelligence/runtime/output"
     },
+    "fractional-advisory-radar": {
+      "name": "Fractional Advisory Radar",
+      "buttonLabel": "Refresh Radar",
+      "script": "fractional-advisory-radar/runtime/generate.py",
+      "cwd": "fractional-advisory-radar/runtime",
+      "timeoutSeconds": 300,
+      "outputs": [
+        "fractional-advisory-radar/runtime/output/{date}-fractional-advisory-radar-report.md",
+        "fractional-advisory-radar/runtime/output/fractional-advisory-radar-feed.json"
+      ],
+      "outputDir": "fractional-advisory-radar/runtime/output"
+    },
     "product-manager": {
       "name": "Product Manager",
       "buttonLabel": "Review Product Ideas",
