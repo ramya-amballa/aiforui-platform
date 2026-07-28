@@ -225,6 +225,30 @@
       "relevanceScore": 0,
       "categoriesMatched": [],
       "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0017",
+      "dateRejected": "2026-07-28",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Digital Designer",
+      "organisation": "Revlytic",
+      "url": "https://remoteOK.com/remote-jobs/remote-digital-designer-revlytic-1135456",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0018",
+      "dateRejected": "2026-07-28",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Video Editor",
+      "organisation": "Here Now Films",
+      "url": "https://remoteOK.com/remote-jobs/remote-video-editor-here-now-films-1135515",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
     }
   ]
 }

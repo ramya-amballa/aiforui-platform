@@ -1,0 +1,22 @@
+{
+  "schema": {
+    "recruiter": "string — key, from the opportunity 'source' field",
+    "firm": "string — same as recruiter unless the current data model distinguishes them (it doesn't yet)",
+    "contactType": "string — Recruiter | Consulting Firm",
+    "specialisation": "array of strings — ranked domainTags observed across this contact's sourced opportunities",
+    "industries": "array of strings — industries of companies this contact introduced (from CRM)",
+    "countries": "array of strings — regions inferred from sourced opportunities' location/description text",
+    "rolesHired": "array of strings — opportunity titles sourced from this contact",
+    "responseHistory": "array — {date, company, channel, summary}, from CRM outreachHistory for attributed companies",
+    "lastInteraction": "string ISO date or null",
+    "nextFollowUp": "string ISO date or null",
+    "relationshipStrength": "number 0-100, from CRM's own relationshipTemperature",
+    "relationshipBand": "string — Hot | Warm | Cooling | Cold | Unknown",
+    "responseRate": "number 0-100 or null — % of attributed companies with existingRelationship beyond 'none'",
+    "successRate": "number 0-100 or null — % of sourced opportunities whose pipeline stage is 'won'",
+    "opportunityCount": "number",
+    "firstSeen": "string ISO date",
+    "lastSeen": "string ISO date"
+  },
+  "recruiters": {}
+}

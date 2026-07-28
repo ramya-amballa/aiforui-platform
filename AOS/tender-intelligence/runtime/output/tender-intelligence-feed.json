@@ -1,0 +1,13 @@
+{
+  "schema": {
+    "title": "string",
+    "sourceType": "string",
+    "matchedDomains": "array of strings",
+    "estimatedValue": "string",
+    "fitScore": "number 0-100",
+    "fitBand": "string — High | Medium | Low",
+    "deadline": "string or 'Not specified'",
+    "recommendedResponse": "string"
+  },
+  "tenders": []
+}
