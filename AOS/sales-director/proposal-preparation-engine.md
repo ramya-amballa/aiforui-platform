@@ -197,6 +197,46 @@ not a `dependsOn` edge — Account Intelligence itself optionally reads
 Sales Director's feed too, so a hard dependency either way would create
 a circular ordering requirement.
 
+## Opportunity Qualification Engine (Sprint 18)
+
+Every package's first section, before even the Service Mapping
+recommendation, answers one question the founder asked for directly:
+**is this opportunity worth my time?** Not a second scoring system —
+every input is a real, already-computed 0-10 score from
+`opportunity-schema.json` (per `opportunity-scoring-engine.md`), or a
+real cross-reference to Account Intelligence/CRM. Nothing here is a
+second, independently-invented number:
+
+- **Estimated project value** — `recommendedPricing`'s own already-
+  computed figure, reused verbatim.
+- **Probability of winning** — `scores.probabilityOfWinning` (0-10),
+  reused verbatim.
+- **Strategic value** — `scores.strategicValue` (0-10), reused
+  verbatim.
+- **Brand value** — "High" when Account Intelligence's own
+  `buyingReadinessBand` is High/Very High; "Medium" when CRM records an
+  existing relationship; otherwise the honest "Not enough signal yet"
+  — never a guessed rating.
+- **Repeat business potential** — `scores.longTermRelationshipPotential`
+  (0-10), cross-referenced with CRM's own `previousApplications` count.
+- **Time investment** — `scores.timeRequired` (0-10, already inverted:
+  10 = least time), given a human label.
+- **Competition level** — always the honest "Not tracked — AOS has no
+  data source for competitor activity on this opportunity." AOS
+  genuinely has no signal here; this field exists to say so plainly
+  rather than silently omit it.
+
+These five real inputs (probability, strategic value, repeat business,
+time investment, estimated value) are combined via
+`config/opportunity-qualification-config.json`'s own weights into one
+**Pursue / Consider / Ignore** verdict. Change the weights or
+thresholds there to retune it — no code change needed.
+
+**Advisory only.** The verdict never changes whether a package gets
+prepared — that remains classification's job, upstream, entirely
+untouched by this engine. It only gives the founder a starting
+judgement, first, before the rest of the package.
+
 ## What This Engine Does Not Do
 
 - Does not send anything. `channelOutreach` fields that don't fit the
@@ -208,6 +248,10 @@ a circular ordering requirement.
   apply.
 - Does not re-score the opportunity. `priorityScore`, `probabilityOfWinning`
   and `classification` are read from `opportunity-schema.json` as-is.
+- Does not use the Opportunity Qualification verdict to suppress or gate
+  a package. Every classified opportunity still gets a full package —
+  even one qualified "Ignore" — because classification, not this
+  advisory verdict, decides what gets prepared.
 - Does not touch `04-Sales-Director`'s existing relationship/follow-up
   workflow (`follow-up-priority-model.md`, `outreach-draft-template.md`).
   That cadence continues to run on `06-CRM/company-intelligence.json`

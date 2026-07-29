@@ -37,7 +37,7 @@ items = feed.get("feed", []) if feed_exists and isinstance(feed, dict) else []
 st.subheader(f"Proposal Packages ({len(items)})")
 show_table(
     items,
-    columns=["opportunityId", "title", "organisation", "status"],
+    columns=["opportunityId", "title", "organisation", "status", "qualificationVerdict", "qualificationScore"],
     empty_message="No proposal packages yet. Click **Generate Proposal** above (requires Demand Intelligence, Revenue Hunter, and CRM to have run first).",
 )
 
@@ -66,6 +66,14 @@ if items:
     labels = [f"{i['organisation']} — {i['title']} ({i['status']})" for i in items]
     choice = st.selectbox("Select a package", options=range(len(items)), format_func=lambda i: labels[i])
     selected = items[choice]
+
+    if "qualificationVerdict" in selected:
+        st.metric("Opportunity Qualification", f"{selected['qualificationVerdict']} ({selected.get('qualificationScore', '?')}/10)")
+        st.caption(
+            "Advisory only, from the Opportunity Qualification Engine — full seven-dimension breakdown "
+            "(estimated value, probability of winning, strategic value, brand value, repeat business "
+            "potential, time investment, competition level) is in the Full Combined Package below."
+        )
 
     for emoji, label, path_key in SECTIONS:
         st.markdown(f"#### {emoji} {label}")

@@ -240,6 +240,108 @@ def determine_status(confidence, opportunity):
 
 
 # --------------------------------------------------------------------------
+# Opportunity Qualification Engine (AOS Sprint 18) — "is this worth my
+# time?" Every input below is a real, already-computed score from
+# opportunity-schema.json (per opportunity-scoring-engine.md) or a real
+# cross-reference to Account Intelligence/CRM — never a second,
+# independently-invented number. This is advisory only: it never
+# changes whether a package gets prepared (that's classification's
+# job, upstream, untouched here); it only tells the founder, up front,
+# whether this opportunity is worth pursuing.
+# --------------------------------------------------------------------------
+
+def brand_value(ai_entry, crm_entry):
+    if ai_entry and ai_entry.get("buyingReadinessBand") in ("High", "Very High"):
+        return f"High — Account Intelligence records {ai_entry['buyingReadinessBand']} buying readiness"
+    if crm_entry and (crm_entry.get("existingRelationship") or "none").lower() != "none":
+        return f"Medium — CRM records an existing relationship ({crm_entry['existingRelationship']})"
+    return "Not enough signal yet"
+
+
+def repeat_business_potential(opportunity, crm_entry):
+    score = opportunity.get("scores", {}).get("longTermRelationshipPotential", 0)
+    prior_count = len((crm_entry or {}).get("previousApplications", []))
+    detail = (
+        f"{prior_count} prior application(s) on record in CRM" if prior_count
+        else "No prior applications on record in CRM"
+    )
+    return {"score": score, "detail": detail}
+
+
+def time_investment_label(opportunity):
+    # timeRequired is already inverted per opportunity-scoring-engine.md — 10 = least time.
+    score = opportunity.get("scores", {}).get("timeRequired", 5)
+    if score >= 7:
+        label = "Low — quick to deliver"
+    elif score >= 4:
+        label = "Medium"
+    else:
+        label = "High — a longer engagement"
+    return score, label
+
+
+def competition_level():
+    # Always honest: AOS has no data source for competing bids on any opportunity.
+    return "Not tracked — AOS has no data source for competitor activity on this opportunity."
+
+
+def qualification_verdict(opportunity, pricing, ai_entry, crm_entry, config):
+    scores = opportunity.get("scores", {})
+    probability = scores.get("probabilityOfWinning", 0)
+    strategic = scores.get("strategicValue", 0)
+    repeat = repeat_business_potential(opportunity, crm_entry)
+    time_score, time_label = time_investment_label(opportunity)
+    expected_revenue_score = scores.get("expectedRevenue", 0)
+
+    weights = config.get("weights", {})
+    weighted = (
+        probability * weights.get("probabilityOfWinning", 0)
+        + strategic * weights.get("strategicValue", 0)
+        + repeat["score"] * weights.get("repeatBusinessPotential", 0)
+        + time_score * weights.get("timeInvestment", 0)
+        + expected_revenue_score * weights.get("estimatedValue", 0)
+    )
+
+    thresholds = config.get("verdictThresholds", {})
+    if weighted >= thresholds.get("pursue", 7.0):
+        verdict = "Pursue"
+    elif weighted >= thresholds.get("consider", 4.5):
+        verdict = "Consider"
+    else:
+        verdict = "Ignore"
+
+    return {
+        "verdict": verdict,
+        "weightedScore": round(weighted, 1),
+        "estimatedProjectValue": pricing["amount"],
+        "probabilityOfWinning": probability,
+        "strategicValue": strategic,
+        "brandValue": brand_value(ai_entry, crm_entry),
+        "repeatBusinessPotential": repeat["score"],
+        "repeatBusinessDetail": repeat["detail"],
+        "timeInvestment": time_label,
+        "competitionLevel": competition_level(),
+    }
+
+
+def render_qualification_section(qualification):
+    return "\n".join([
+        f"## Opportunity Qualification — {qualification['verdict']} ({qualification['weightedScore']}/10)",
+        "",
+        f"- **Estimated project value:** {qualification['estimatedProjectValue']}",
+        f"- **Probability of winning:** {qualification['probabilityOfWinning']}/10",
+        f"- **Strategic value:** {qualification['strategicValue']}/10",
+        f"- **Brand value:** {qualification['brandValue']}",
+        f"- **Repeat business potential:** {qualification['repeatBusinessPotential']}/10 — {qualification['repeatBusinessDetail']}",
+        f"- **Time investment:** {qualification['timeInvestment']}",
+        f"- **Competition level:** {qualification['competitionLevel']}",
+        "",
+        "*Advisory only — this verdict never changes whether a package is prepared; "
+        "it's a starting judgement for the founder, not a filter.*",
+    ])
+
+
+# --------------------------------------------------------------------------
 # Document generation
 # --------------------------------------------------------------------------
 
@@ -507,10 +609,12 @@ def client_outreach(opportunity, crm_entry):
     return "\n".join(lines)
 
 
-def build_package(opportunity, pipeline_entry, crm_entry, bank, rate_card, service_recommendation, ai_entry=None):
+def build_package(opportunity, pipeline_entry, crm_entry, bank, rate_card, service_recommendation, ai_entry=None,
+                   qualification_config=None):
     pricing = recommend_pricing(opportunity, pipeline_entry, rate_card)
     confidence = compute_confidence(opportunity, crm_entry, pricing)
     status = determine_status(confidence, opportunity)
+    qualification = qualification_verdict(opportunity, pricing, ai_entry, crm_entry, qualification_config or {})
 
     # AOS Sprint 12 — an Executive Proposal (traced back to Account
     # Intelligence's own brief) whenever one exists for this organisation;
@@ -534,6 +638,7 @@ def build_package(opportunity, pipeline_entry, crm_entry, bank, rate_card, servi
         "confidenceScore": confidence,
         "status": status,
         "serviceRecommendation": service_recommendation,
+        "qualification": qualification,
     }
 
 
@@ -576,6 +681,10 @@ def render_package_markdown(package):
         f"**Prepared:** {package['datePrepared']}  ",
         f"**Confidence score:** {package['confidenceScore']}/100  ",
         f"**Status:** {package['status']}",
+        "",
+        "---",
+        "",
+        render_qualification_section(package["qualification"]),
         "",
         "---",
         "",
@@ -662,6 +771,8 @@ def main():
     crm_data = load_json(CRM_PATH)
     rate_card = load_json(CONFIG_DIR / "rate-card.json")
     bank = load_json(CONFIG_DIR / "practitioner-bank.json")
+    # AOS Sprint 18 — Opportunity Qualification Engine's weights/thresholds.
+    qualification_config = load_json(CONFIG_DIR / "opportunity-qualification-config.json", {})
     # Read-only, optional — service-mapping/'s own output. Sales Director's
     # core logic (pricing, confidence, status) is unaffected either way;
     # this only fills in the additive Service Mapping section (see
@@ -713,7 +824,8 @@ def main():
         crm_entry = crm_by_org.get(opportunity["organisation"])
         service_recommendation = service_recommendations.get(opportunity["id"])
         ai_entry = find_account_intelligence_entry(opportunity["organisation"], ai_feed)
-        package = build_package(opportunity, pipeline_entry, crm_entry, bank, rate_card, service_recommendation, ai_entry)
+        package = build_package(opportunity, pipeline_entry, crm_entry, bank, rate_card, service_recommendation, ai_entry,
+                                 qualification_config)
 
         slug = slugify(f"{opportunity['id']}-{opportunity['organisation']}-{opportunity['title']}")[:80]
         paths = write_package_files(package, slug)
@@ -723,6 +835,8 @@ def main():
             "title": opportunity["title"],
             "organisation": opportunity["organisation"],
             "status": package["status"],
+            "qualificationVerdict": package["qualification"]["verdict"],
+            "qualificationScore": package["qualification"]["weightedScore"],
             **paths,
         })
         processed_index["processed"][opportunity["id"]] = {
@@ -739,18 +853,24 @@ def main():
         crm_entry = crm_by_org.get(opportunity["organisation"])
         service_recommendation = service_recommendations.get(opportunity["id"])
         ai_entry = find_account_intelligence_entry(opportunity["organisation"], ai_feed)
-        package = build_package(opportunity, pipeline_entry, crm_entry, bank, rate_card, service_recommendation, ai_entry)
+        package = build_package(opportunity, pipeline_entry, crm_entry, bank, rate_card, service_recommendation, ai_entry,
+                                 qualification_config)
 
         slug = slugify(f"{opportunity['id']}-{opportunity['organisation']}-{opportunity['title']}")[:80]
         paths = write_package_files(package, slug)
 
         # Only add the missing path fields - never overwrite a status the
         # founder may already have acted on just because it's being
-        # repaired today.
+        # repaired today. setdefault, not a plain assignment, for the
+        # same reason — qualificationVerdict/qualificationScore are new
+        # fields older feed entries lack, but a founder-visible value
+        # already present must never be silently replaced.
         processed_index["processed"][opportunity["id"]].update(paths)
         feed_entry = feed_by_id.get(opportunity["id"])
         if feed_entry is not None:
             feed_entry.update(paths)
+            feed_entry.setdefault("qualificationVerdict", package["qualification"]["verdict"])
+            feed_entry.setdefault("qualificationScore", package["qualification"]["weightedScore"])
         backfilled.append(opportunity)
         print(f"  (backfill) {opportunity['id']}: {opportunity['title']} -> regenerated missing proposal files")
 

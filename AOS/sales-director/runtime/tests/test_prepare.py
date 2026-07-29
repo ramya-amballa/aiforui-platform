@@ -341,5 +341,162 @@ class ExecutiveProposalGeneratorTests(unittest.TestCase):
         self.assertIsNone(prepare.find_account_intelligence_entry("Nonexistent Co", feed))
 
 
+QUALIFICATION_OPPORTUNITY = dict(
+    DIRECT_OPPORTUNITY,
+    id="test-qual-001",
+    scores={
+        "probabilityOfWinning": 8, "timeRequired": 8, "strategicValue": 9,
+        "expectedRevenue": 8, "longTermRelationshipPotential": 7,
+    },
+)
+
+QUALIFICATION_CONFIG = {
+    "weights": {"probabilityOfWinning": 0.30, "strategicValue": 0.20, "repeatBusinessPotential": 0.20,
+                "timeInvestment": 0.15, "estimatedValue": 0.15},
+    "verdictThresholds": {"pursue": 7.0, "consider": 4.5},
+}
+
+
+class OpportunityQualificationEngineTests(unittest.TestCase):
+    """AOS Sprint 18 — the Opportunity Qualification Engine. Every input
+    is a real, already-computed score from opportunity-schema.json or a
+    real cross-reference to Account Intelligence/CRM — never a second,
+    independently-invented number. Advisory only: never changes whether
+    a package is prepared."""
+
+    def test_brand_value_prefers_account_intelligence_buying_readiness(self):
+        ai_entry = {"buyingReadinessBand": "High"}
+        self.assertIn("High", prepare.brand_value(ai_entry, None))
+
+    def test_brand_value_falls_back_to_crm_relationship(self):
+        crm_entry = {"existingRelationship": "prior client"}
+        self.assertIn("Medium", prepare.brand_value(None, crm_entry))
+
+    def test_brand_value_honest_when_neither_available(self):
+        self.assertEqual(prepare.brand_value(None, None), "Not enough signal yet")
+        self.assertEqual(prepare.brand_value({}, {"existingRelationship": "none"}), "Not enough signal yet")
+
+    def test_repeat_business_potential_reuses_real_score_and_crm_count(self):
+        crm_entry = {"previousApplications": [{"date": "2026-01-01"}, {"date": "2026-03-01"}]}
+        result = prepare.repeat_business_potential(QUALIFICATION_OPPORTUNITY, crm_entry)
+        self.assertEqual(result["score"], 7)
+        self.assertIn("2 prior application", result["detail"])
+
+    def test_repeat_business_potential_honest_with_no_crm_entry(self):
+        result = prepare.repeat_business_potential(QUALIFICATION_OPPORTUNITY, None)
+        self.assertIn("No prior applications", result["detail"])
+
+    def test_time_investment_label_reflects_inverted_score(self):
+        score, label = prepare.time_investment_label({"scores": {"timeRequired": 9}})
+        self.assertEqual(score, 9)
+        self.assertIn("Low", label)
+        score, label = prepare.time_investment_label({"scores": {"timeRequired": 2}})
+        self.assertIn("High", label)
+
+    def test_competition_level_is_always_honest(self):
+        self.assertIn("Not tracked", prepare.competition_level())
+
+    def test_qualification_verdict_pursue_for_strong_opportunity(self):
+        pricing = {"basis": "rate-card-estimate", "amount": "USD 10,000 - USD 20,000 (Consulting Project, per day)"}
+        crm_entry = {"previousApplications": [{"date": "2026-01-01"}]}
+        ai_entry = {"buyingReadinessBand": "Very High"}
+        qualification = prepare.qualification_verdict(QUALIFICATION_OPPORTUNITY, pricing, ai_entry, crm_entry, QUALIFICATION_CONFIG)
+        self.assertEqual(qualification["verdict"], "Pursue")
+        self.assertEqual(qualification["estimatedProjectValue"], pricing["amount"])
+        self.assertIn("Very High", qualification["brandValue"])
+
+    def test_qualification_verdict_ignore_for_weak_opportunity(self):
+        weak_opportunity = dict(QUALIFICATION_OPPORTUNITY, scores={
+            "probabilityOfWinning": 1, "timeRequired": 1, "strategicValue": 1,
+            "expectedRevenue": 1, "longTermRelationshipPotential": 1,
+        })
+        pricing = {"basis": "rate-card-estimate", "amount": "USD 1,000"}
+        qualification = prepare.qualification_verdict(weak_opportunity, pricing, None, None, QUALIFICATION_CONFIG)
+        self.assertEqual(qualification["verdict"], "Ignore")
+
+    def test_qualification_verdict_never_fabricates_competition_data(self):
+        pricing = {"basis": "rate-card-estimate", "amount": "USD 1,000"}
+        qualification = prepare.qualification_verdict(QUALIFICATION_OPPORTUNITY, pricing, None, None, QUALIFICATION_CONFIG)
+        self.assertIn("Not tracked", qualification["competitionLevel"])
+
+    def test_render_qualification_section_includes_all_seven_dimensions(self):
+        pricing = {"basis": "rate-card-estimate", "amount": "USD 1,000"}
+        qualification = prepare.qualification_verdict(QUALIFICATION_OPPORTUNITY, pricing, None, None, QUALIFICATION_CONFIG)
+        section = prepare.render_qualification_section(qualification)
+        for label in ("Estimated project value", "Probability of winning", "Strategic value", "Brand value",
+                      "Repeat business potential", "Time investment", "Competition level"):
+            self.assertIn(label, section)
+        self.assertIn("Advisory only", section)
+
+
+class OpportunityQualificationEndToEndTests(unittest.TestCase):
+    """Confirms qualification actually reaches the rendered package and
+    the CEO Advisor feed via main() — not just the pure functions above."""
+
+    def setUp(self):
+        self._tmpdir = tempfile.TemporaryDirectory()
+        self.addCleanup(self._tmpdir.cleanup)
+        self.tmp_path = Path(self._tmpdir.name)
+        self.packages_dir = self.tmp_path / "packages"
+
+        patches = [
+            patch("prepare.REPO_ROOT", self.tmp_path),
+            patch("prepare.OPPORTUNITY_SCHEMA_PATH", self.tmp_path / "opportunity-schema.json"),
+            patch("prepare.PIPELINE_PATH", self.tmp_path / "pipeline.json"),
+            patch("prepare.CRM_PATH", self.tmp_path / "company-intelligence.json"),
+            patch("prepare.SERVICE_RECOMMENDATIONS_PATH", self.tmp_path / "service-recommendations.json"),
+            patch("prepare.ACCOUNT_INTELLIGENCE_FEED_PATH", self.tmp_path / "account-intelligence-feed.json"),
+            patch("prepare.OUTPUT_DIR", self.tmp_path),
+            patch("prepare.PACKAGES_DIR", self.packages_dir),
+            patch("prepare.PROCESSED_INDEX_PATH", self.tmp_path / "processed-index.json"),
+            patch("prepare.CEO_FEED_PATH", self.tmp_path / "ceo-advisor-feed.json"),
+        ]
+        for p in patches:
+            p.start()
+            self.addCleanup(p.stop)
+
+        prepare.save_json(self.tmp_path / "pipeline.json", {"pipeline": []})
+        prepare.save_json(self.tmp_path / "company-intelligence.json", {"companies": []})
+        prepare.save_json(self.tmp_path / "service-recommendations.json", {"recommendations": {}})
+        prepare.save_json(self.tmp_path / "account-intelligence-feed.json", {"briefs": []})
+        prepare.save_json(self.tmp_path / "opportunity-schema.json", {"opportunities": [QUALIFICATION_OPPORTUNITY]})
+
+    def test_qualification_reaches_the_rendered_package_and_feed(self):
+        prepare.main()
+
+        feed = prepare.load_json(self.tmp_path / "ceo-advisor-feed.json")
+        entry = feed["feed"][0]
+        self.assertIn("qualificationVerdict", entry)
+        self.assertIn("qualificationScore", entry)
+
+        package_markdown = (prepare.REPO_ROOT / entry["packagePath"]).read_text(encoding="utf-8")
+        self.assertIn("## Opportunity Qualification", package_markdown)
+        self.assertIn(entry["qualificationVerdict"], package_markdown)
+
+    def test_backfill_adds_qualification_fields_without_touching_status(self):
+        prepare.main()
+        feed = prepare.load_json(self.tmp_path / "ceo-advisor-feed.json")
+        entry = feed["feed"][0]
+        # Simulate a legacy feed entry from before Sprint 18, missing
+        # the qualification fields and one artifact file, to confirm
+        # backfill adds them without disturbing a status the founder
+        # may have already acted on.
+        del entry["qualificationVerdict"]
+        del entry["qualificationScore"]
+        entry["status"] = "Ready To Send"  # founder already acted on this
+        (prepare.REPO_ROOT / entry["proposalPath"]).unlink()
+        prepare.save_json(self.tmp_path / "ceo-advisor-feed.json", feed)
+        processed = prepare.load_json(self.tmp_path / "processed-index.json")
+        del processed["processed"][entry["opportunityId"]]["proposalPath"]
+        prepare.save_json(self.tmp_path / "processed-index.json", processed)
+
+        prepare.main()
+
+        feed = prepare.load_json(self.tmp_path / "ceo-advisor-feed.json")
+        entry = feed["feed"][0]
+        self.assertIn("qualificationVerdict", entry)
+        self.assertEqual(entry["status"], "Ready To Send")  # never overwritten by backfill
+
+
 if __name__ == "__main__":
     unittest.main()
