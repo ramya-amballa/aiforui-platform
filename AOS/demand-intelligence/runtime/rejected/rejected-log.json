@@ -249,6 +249,106 @@
       "relevanceScore": 0,
       "categoriesMatched": [],
       "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0019",
+      "dateRejected": "2026-07-29",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Influencer Marketing Associate Director",
+      "organisation": "Newhouse",
+      "url": "https://remoteOK.com/remote-jobs/remote-influencer-marketing-associate-director-newhouse-1135546",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0020",
+      "dateRejected": "2026-07-29",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "People Operations Manager",
+      "organisation": "Evio",
+      "url": "https://remoteOK.com/remote-jobs/remote-people-operations-manager-evio-1135545",
+      "relevanceScore": 0,
+      "categoriesMatched": [
+        "complianceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: complianceContext; Healthcare role penalty (-20); HR role penalty (-20))."
+    },
+    {
+      "id": "rej-0021",
+      "dateRejected": "2026-07-29",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Transportation Analyst",
+      "organisation": "RemoteFront",
+      "url": "https://remoteOK.com/remote-jobs/remote-transportation-analyst-remotefront-1135538",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0022",
+      "dateRejected": "2026-07-29",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Market Research Analyst",
+      "organisation": "Blend",
+      "url": "https://remoteOK.com/remote-jobs/remote-market-research-analyst-blend-1135535",
+      "relevanceScore": 0,
+      "categoriesMatched": [
+        "aiContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: aiContext; Healthcare role penalty (-20); Isolated weak-keyword penalty (-15))."
+    },
+    {
+      "id": "rej-0023",
+      "dateRejected": "2026-07-29",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Social Media and Video Content Manager",
+      "organisation": "Ajaia | AI Consultancy",
+      "url": "https://remoteOK.com/remote-jobs/remote-social-media-and-video-content-manager-ajaia-ai-consultancy-1135536",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: AI Strategy, RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0024",
+      "dateRejected": "2026-07-29",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "VP Revenue",
+      "organisation": "Mongoose",
+      "url": "https://remoteOK.com/remote-jobs/remote-vp-revenue-mongoose-1135531",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0025",
+      "dateRejected": "2026-07-29",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Junior Account Manager",
+      "organisation": "Future Beauty Brands (formerly PPI Beauty)",
+      "url": "https://remoteOK.com/remote-jobs/remote-junior-account-manager-future-beauty-brands-formerly-ppi-beauty-1135518",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0026",
+      "dateRejected": "2026-07-29",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Bilingual Sales Development Representative German English",
+      "organisation": "Huzzle",
+      "url": "https://remoteOK.com/remote-jobs/remote-bilingual-sales-development-representative-german-english-huzzle-1135460",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
     }
   ]
 }
