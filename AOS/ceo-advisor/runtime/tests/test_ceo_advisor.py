@@ -320,6 +320,23 @@ class PrioritiesLogTests(unittest.TestCase):
         self.assertEqual(existing["log"], [])
 
 
+class CapacityStatusSectionTests(unittest.TestCase):
+    """AOS Sprint 22 — read-only, one cycle behind Capacity Management;
+    never changes ranking, purely informational."""
+
+    def test_renders_real_status_and_weeks(self):
+        feed = {"capacityStatus": "Near Capacity", "weeksOfCommittedWorkMin": 6.5, "weeksOfCommittedWorkMax": 12.0,
+                "foundersAvailableDaysPerWeek": 4}
+        section = "\n".join(generate.render_capacity_status_section(feed))
+        self.assertIn("Near Capacity", section)
+        self.assertIn("6.5-12.0", section)
+        self.assertIn("4 days/week", section)
+
+    def test_honest_message_when_capacity_management_has_not_run_yet(self):
+        section = "\n".join(generate.render_capacity_status_section({"capacityStatus": None}))
+        self.assertIn("may not have run yet", section)
+
+
 class ExecutiveSummaryTests(unittest.TestCase):
     def test_capped_at_max_words(self):
         top3 = [{"label": "A" * 5, "source": "Revenue Hunter"}]

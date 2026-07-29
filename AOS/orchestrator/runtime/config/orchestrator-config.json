@@ -225,6 +225,18 @@
       ]
     },
     {
+      "key": "capacity-management",
+      "name": "Capacity Management",
+      "folder": "capacity-management",
+      "script": "capacity-management/runtime/generate.py",
+      "dependsOn": ["revenue-hunter", "delivery-intelligence", "sales-director", "service-mapping"],
+      "note": "New in Sprint 22 — the sixth and final founder-ordered capability, a pure read-only aggregator. AI for U&I is one person; before this employee was designed, a full-codebase search confirmed CEO Advisor ranks priorities with zero regard for how much delivery work is already committed, and no config anywhere records the founder's own available days per week. Active Engagement Load: pipeline.json stage=='won' entries not yet Closed in delivery-log.json, mapped through Sales Director's own rate-card.json typicalDays for that entry's real type. Incoming Pipeline Load: sales-director's own feed at Ready To Send/Proposal Ready, mapped through Service Mapping's recommendedEngagementType to the same rate-card lookup. Capacity Status: total committed days over a new founder-tunable capacity-config.json's foundersAvailableDaysPerWeek, banded into Available/Near/Over Capacity. Advisory only — never blocks a proposal or changes a ranking. One additive change outside its own folder: ceo-advisor/runtime/generate.py gained render_capacity_status_section(), reading this employee's own feed read-only, one cycle behind (same accepted-lag pattern as Executive Memory/Company 360). See capacity-management/capacity-management-engine.md.",
+      "outputPaths": [
+        "capacity-management/runtime/output/{date}-capacity-report.md",
+        "capacity-management/runtime/output/capacity-feed.json"
+      ]
+    },
+    {
       "key": "product-manager",
       "name": "Product Manager",
       "folder": "03-Product-Manager",
@@ -272,9 +284,9 @@
                     "service-mapping", "sales-director", "account-intelligence", "reverse-job-hunt",
                     "recruiter-intelligence", "fractional-advisory-radar", "relationship-intelligence",
                     "tender-intelligence", "executive-brand-intelligence", "delivery-intelligence",
-                    "company-360", "executive-memory", "market-positioning-intelligence",
+                    "company-360", "executive-memory", "market-positioning-intelligence", "capacity-management",
                     "product-manager", "content-director", "daily-brief"],
-      "note": "Implemented in ceo-advisor/, not 09-CEO-Advisor/ — see dependency-map.md. New in Sprint 5, and now genuinely the final step of every Orchestrator run, per explicit instruction — dependsOn lists every other employee to guarantee that. Its own reads (see ceo-advisor/ceo-advisor-runtime-notes.md) are scoped to Sprint 5's eight named sources plus Sprint 10's Recruiter Intelligence, Sprint 13's Relationship Intelligence and Sprint 15's Executive Brand Intelligence (all genuinely read) — Product Manager, Content Director, Sprint 8's Account Intelligence, Sprint 9's Reverse Job Hunt, Sprint 14's Tender Intelligence, Sprint 17's Delivery Intelligence, Sprint 19's Company 360, Sprint 20's Executive Memory and Sprint 21's Market Positioning Intelligence remain dependency-only, for ordering, not read (no explicit instruction yet to wire those into a CEO Advisor section). Note the inverse relationship with Sprint 20: CEO Advisor writes daily-priorities-log.json every run, and Executive Memory reads it — but one cycle behind, since Executive Memory necessarily runs before CEO Advisor in this same fixed order to keep CEO Advisor genuinely last.",
+      "note": "Implemented in ceo-advisor/, not 09-CEO-Advisor/ — see dependency-map.md. New in Sprint 5, and now genuinely the final step of every Orchestrator run, per explicit instruction — dependsOn lists every other employee to guarantee that. Its own reads (see ceo-advisor/ceo-advisor-runtime-notes.md) are scoped to Sprint 5's eight named sources plus Sprint 10's Recruiter Intelligence, Sprint 13's Relationship Intelligence, Sprint 15's Executive Brand Intelligence and Sprint 22's Capacity Management (all genuinely read) — Product Manager, Content Director, Sprint 8's Account Intelligence, Sprint 9's Reverse Job Hunt, Sprint 14's Tender Intelligence, Sprint 17's Delivery Intelligence, Sprint 19's Company 360, Sprint 20's Executive Memory and Sprint 21's Market Positioning Intelligence remain dependency-only, for ordering, not read (no explicit instruction yet to wire those into a CEO Advisor section). Note the inverse relationship with Sprint 20 and Sprint 22: CEO Advisor writes daily-priorities-log.json every run and Executive Memory reads it, while Capacity Management writes capacity-feed.json and CEO Advisor reads it — both one cycle behind in whichever direction, since CEO Advisor must stay genuinely last in this fixed order.",
       "outputPaths": [
         "ceo-advisor/runtime/output/{date}-ceo-daily-report.md",
         "ceo-advisor/runtime/output/ceo-daily-report.md",

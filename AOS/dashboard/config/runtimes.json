@@ -237,6 +237,18 @@
       ],
       "outputDir": "market-positioning-intelligence/runtime/output"
     },
+    "capacity-management": {
+      "name": "Capacity Management",
+      "buttonLabel": "Refresh Capacity Management",
+      "script": "capacity-management/runtime/generate.py",
+      "cwd": "capacity-management/runtime",
+      "timeoutSeconds": 300,
+      "outputs": [
+        "capacity-management/runtime/output/{date}-capacity-report.md",
+        "capacity-management/runtime/output/capacity-feed.json"
+      ],
+      "outputDir": "capacity-management/runtime/output"
+    },
     "product-manager": {
       "name": "Product Manager",
       "buttonLabel": "Review Product Ideas",

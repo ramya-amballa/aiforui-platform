@@ -57,6 +57,7 @@ TOP_ORGANISATIONS_PATH = AOS_DIR / "demand-intelligence" / "runtime" / "output" 
 RECRUITER_INTELLIGENCE_FEED_PATH = AOS_DIR / "recruiter-intelligence" / "runtime" / "output" / "recruiter-intelligence-feed.json"
 RELATIONSHIP_INTELLIGENCE_FEED_PATH = AOS_DIR / "relationship-intelligence" / "runtime" / "output" / "relationship-intelligence-feed.json"
 EXECUTIVE_BRAND_INTELLIGENCE_FEED_PATH = AOS_DIR / "executive-brand-intelligence" / "runtime" / "output" / "executive-brand-intelligence-feed.json"
+CAPACITY_FEED_PATH = AOS_DIR / "capacity-management" / "runtime" / "output" / "capacity-feed.json"
 DAILY_BRIEF_PATH = AOS_DIR / "executive-dashboard" / "executive-dashboard.md"
 ORCHESTRATOR_STATUS_PATH = AOS_DIR / "orchestrator" / "status.json"
 
@@ -876,8 +877,31 @@ def render_branding_action_section(action):
     return lines
 
 
+def render_capacity_status_section(capacity_feed):
+    """AOS Sprint 22 — Capacity Management's own already-computed
+    status, read-only and one cycle behind (Capacity Management runs
+    before CEO Advisor in the fixed orchestrator order, same accepted-
+    lag pattern as Executive Memory's daily-priorities-log.json read).
+    Never re-derives the status or changes how Top 3 is ranked — purely
+    informational, so the founder sees it before deciding whether to
+    act on today's recommendations."""
+    lines = ["## Capacity Status", ""]
+    status = capacity_feed.get("capacityStatus")
+    if not status:
+        lines.append("_Not available yet — Capacity Management may not have run yet._")
+        lines.append("")
+        return lines
+    lines.append(f"**{status}**")
+    min_weeks, max_weeks = capacity_feed.get("weeksOfCommittedWorkMin"), capacity_feed.get("weeksOfCommittedWorkMax")
+    if min_weeks is not None:
+        lines.append(f"  — {min_weeks}-{max_weeks} weeks of committed work at "
+                      f"{capacity_feed.get('foundersAvailableDaysPerWeek')} days/week")
+    lines.append("")
+    return lines
+
+
 def render_daily_report(exec_summary, top3, revenue_impact, alerts, ignore_list, weekly_recommendation, top_orgs,
-                         recruiter_due, recruiter_dormant, relationship_action, branding_action):
+                         recruiter_due, recruiter_dormant, relationship_action, branding_action, capacity_feed):
     lines = [
         "# CEO Daily Report",
         "",
@@ -911,6 +935,7 @@ def render_daily_report(exec_summary, top3, revenue_impact, alerts, ignore_list,
     lines += render_recruiter_followups_section(recruiter_due, recruiter_dormant)
     lines += render_relationship_action_section(relationship_action)
     lines += render_branding_action_section(branding_action)
+    lines += render_capacity_status_section(capacity_feed)
 
     lines += ["## Revenue Impact", ""]
     lines.append(f"- **Revenue at risk:** {revenue_impact['revenueAtRisk']}")
@@ -1003,6 +1028,10 @@ def main():
     recruiter_feed = load_json(RECRUITER_INTELLIGENCE_FEED_PATH, {"contacts": [], "weeklyFollowUpList": [], "dormantRelationships": []})
     relationship_feed = load_json(RELATIONSHIP_INTELLIGENCE_FEED_PATH, {"people": []})
     brand_feed = load_json(EXECUTIVE_BRAND_INTELLIGENCE_FEED_PATH, {"weeklyPlan": None})
+    # AOS Sprint 22 — read-only, one cycle behind (Capacity Management
+    # runs before CEO Advisor in the fixed orchestrator order). Purely
+    # informational: never changes candidate ranking or Top 3 selection.
+    capacity_feed = load_json(CAPACITY_FEED_PATH, {"capacityStatus": None})
     status_data = load_json(ORCHESTRATOR_STATUS_PATH, {"failures": []})
 
     schema_by_id = {o["id"]: o for o in schema_data.get("opportunities", [])}
@@ -1045,7 +1074,8 @@ def main():
     save_json(OUTPUT_DIR / "daily-priorities-log.json", priorities_log)
 
     daily_report = render_daily_report(exec_summary, top3, revenue_impact, alerts, ignore_list, weekly_recommendation,
-                                        top_orgs, recruiter_due, recruiter_dormant, relationship_action, branding_action)
+                                        top_orgs, recruiter_due, recruiter_dormant, relationship_action, branding_action,
+                                        capacity_feed)
     (OUTPUT_DIR / f"{TODAY.isoformat()}-ceo-daily-report.md").write_text(daily_report, encoding="utf-8")
     (OUTPUT_DIR / "ceo-daily-report.md").write_text(daily_report, encoding="utf-8")
 

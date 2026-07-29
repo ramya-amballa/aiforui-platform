@@ -1,0 +1,8 @@
+{
+  "_comment": "AOS Sprint 22 — Capacity Management. foundersAvailableDaysPerWeek is a starting-point assumption for a solo consultant (roughly one day/week reserved for business development, admin and AOS review out of a 5-day week) — edit it to reflect your real available bandwidth; no code change needed. weeksOfCommittedWorkThresholds bands the 'weeks of committed work at your available pace' figure into a status: Available Capacity below nearCapacity, Near Capacity between the two thresholds, Over Capacity at or above overCapacity.",
+  "foundersAvailableDaysPerWeek": 4,
+  "weeksOfCommittedWorkThresholds": {
+    "nearCapacity": 6,
+    "overCapacity": 10
+  }
+}
