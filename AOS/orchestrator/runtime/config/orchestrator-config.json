@@ -188,6 +188,19 @@
       ]
     },
     {
+      "key": "company-360",
+      "name": "Company 360",
+      "folder": "company-360",
+      "script": "company-360/runtime/generate.py",
+      "dependsOn": ["demand-intelligence", "account-intelligence", "crm", "relationship-intelligence",
+                    "reverse-job-hunt", "revenue-hunter", "service-mapping", "delivery-intelligence"],
+      "note": "New in Sprint 19 — a pure read-only rollup, computing nothing new. For every organisation demand-intelligence/organisation-profiles.json already knows about, joins in whatever already exists across Account Intelligence, CRM, Relationship Intelligence, Reverse Job Hunt, Revenue Hunter's pipeline, Service Mapping and Delivery Intelligence into one 360 view. Where two employees independently estimate the same kind of thing (e.g. Account Intelligence's overallPriority vs Reverse Job Hunt's consultingPotentialEstimate, both 'deal size' before a real pipeline record exists), both are shown labelled by source, never averaged or merged into a third number. Regenerated in full every run — nothing here is founder-edited, unlike Sales Director's proposals or Delivery Intelligence's kits, so there is nothing to protect from being overwritten. See company-360/company-360-engine.md.",
+      "outputPaths": [
+        "company-360/runtime/output/{date}-company-360-report.md",
+        "company-360/runtime/output/company-360-feed.json"
+      ]
+    },
+    {
       "key": "product-manager",
       "name": "Product Manager",
       "folder": "03-Product-Manager",
@@ -235,8 +248,8 @@
                     "service-mapping", "sales-director", "account-intelligence", "reverse-job-hunt",
                     "recruiter-intelligence", "fractional-advisory-radar", "relationship-intelligence",
                     "tender-intelligence", "executive-brand-intelligence", "delivery-intelligence",
-                    "product-manager", "content-director", "daily-brief"],
-      "note": "Implemented in ceo-advisor/, not 09-CEO-Advisor/ — see dependency-map.md. New in Sprint 5, and now genuinely the final step of every Orchestrator run, per explicit instruction — dependsOn lists every other employee to guarantee that. Its own reads (see ceo-advisor/ceo-advisor-runtime-notes.md) are scoped to Sprint 5's eight named sources plus Sprint 10's Recruiter Intelligence, Sprint 13's Relationship Intelligence and Sprint 15's Executive Brand Intelligence (all genuinely read) — Product Manager, Content Director, Sprint 8's Account Intelligence, Sprint 9's Reverse Job Hunt, Sprint 14's Tender Intelligence and Sprint 17's Delivery Intelligence remain dependency-only, for ordering, not read (no explicit instruction yet to wire those into a CEO Advisor section).",
+                    "company-360", "product-manager", "content-director", "daily-brief"],
+      "note": "Implemented in ceo-advisor/, not 09-CEO-Advisor/ — see dependency-map.md. New in Sprint 5, and now genuinely the final step of every Orchestrator run, per explicit instruction — dependsOn lists every other employee to guarantee that. Its own reads (see ceo-advisor/ceo-advisor-runtime-notes.md) are scoped to Sprint 5's eight named sources plus Sprint 10's Recruiter Intelligence, Sprint 13's Relationship Intelligence and Sprint 15's Executive Brand Intelligence (all genuinely read) — Product Manager, Content Director, Sprint 8's Account Intelligence, Sprint 9's Reverse Job Hunt, Sprint 14's Tender Intelligence, Sprint 17's Delivery Intelligence and Sprint 19's Company 360 remain dependency-only, for ordering, not read (no explicit instruction yet to wire those into a CEO Advisor section).",
       "outputPaths": [
         "ceo-advisor/runtime/output/{date}-ceo-daily-report.md",
         "ceo-advisor/runtime/output/ceo-daily-report.md",

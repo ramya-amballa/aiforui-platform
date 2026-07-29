@@ -201,6 +201,18 @@
       ],
       "outputDir": "delivery-intelligence/runtime/output"
     },
+    "company-360": {
+      "name": "Company 360",
+      "buttonLabel": "Refresh Company 360",
+      "script": "company-360/runtime/generate.py",
+      "cwd": "company-360/runtime",
+      "timeoutSeconds": 300,
+      "outputs": [
+        "company-360/runtime/output/{date}-company-360-report.md",
+        "company-360/runtime/output/company-360-feed.json"
+      ],
+      "outputDir": "company-360/runtime/output"
+    },
     "product-manager": {
       "name": "Product Manager",
       "buttonLabel": "Review Product Ideas",
