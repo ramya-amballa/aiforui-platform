@@ -10,7 +10,7 @@
     "url": "string or null — link to the original listing",
     "location": "string — city/country, or 'Not specified'",
     "remote": "boolean — true if the posting explicitly allows remote delivery",
-    "domainTags": "array of strings — any of: ADGL, AI Deployment Governance, AI Governance, GRC, Technology Risk, Third-Party Risk, Security Governance, DORA, EU AI Act, Fractional Advisory, Government/FedRAMP-GovRAMP-CMMC — used to build the domain-filtered report views",
+    "domainTags": "array of strings — any of: ADGL, AI Deployment Governance, AI Governance, GRC, Technology Risk, Third-Party Risk, Security Governance, DORA, EU AI Act, ISO 42001, Fractional Advisory, Government/FedRAMP-GovRAMP-CMMC — used to build the domain-filtered report views",
     "scores": {
       "expectedRevenue": "number — 0-10, per opportunity-scoring-engine.md",
       "probabilityOfWinning": "number — 0-10",

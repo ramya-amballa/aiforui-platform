@@ -23,10 +23,25 @@ client. Decision-maker titles already on record for this account:
 
 **Legend:** R = Responsible, A = Accountable, C = Consulted, I = Informed
 
+**Validation rule** (check before treating this RACI as final): exactly
+one **A** per row — accountability that's shared is accountability
+that's held by no one — and at least one **R** per row. If a row fails
+either check, resolve it with the client before Roadmap Phase 3 exits.
+
 ## Named Assignments
 
-{{NAMED_ASSIGNMENTS: fill in the actual person's name and title
-against each column once confirmed — never invented by AOS}}
+Real names and titles only, confirmed with the client — never invented
+by AOS. This is what Roadmap Phase 3's exit criterion actually checks
+against; a RACI with titles only, no names, does not satisfy it.
+
+| Role Column | Name | Title | Confirmed Date |
+|---|---|---|---|
+| Sponsor | {{NAME}} | | |
+| Client Project Lead | {{NAME}} | | |
+| AI for U&I Consultant | {{PREPARED_BY}} | | |
+| IT / Security | {{NAME}} | | |
+| Legal / Compliance | {{NAME}} | | |
+| Business Owner | {{NAME}} | | |
 
 ---
 

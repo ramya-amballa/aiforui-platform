@@ -201,6 +201,18 @@ class RegulatoryFrameworkTests(unittest.TestCase):
         note = engine.regulatory_framework_reporting_note("DORA", FRAMEWORK_CONFIG)
         self.assertIn("ICT third-party monitoring", note)
 
+    def test_iso_42001_is_a_real_entry_in_the_live_annex_file(self):
+        """AOS Sprint 24 — Quality Elevation added ISO 42001 as the
+        fourth core framework; confirms it's wired the same way the
+        other six frameworks already are, using the real, live
+        annexes file (not a test fixture)."""
+        framework_config = engine.load_json(engine.REGULATORY_FRAMEWORK_ANNEXES_PATH, {})
+        iso_opportunity = dict(OPPORTUNITY, domainTags=["ISO 42001"])
+        selected = engine.select_regulatory_framework(iso_opportunity, framework_config)
+        self.assertEqual(selected, "ISO 42001")
+        questions = engine.regulatory_framework_discovery_questions(selected, framework_config)
+        self.assertIn("Annex A", questions)
+
 
 class RenderArtifactTests(unittest.TestCase):
     """Uses the real templates/delivery/ files — the shared, static IP

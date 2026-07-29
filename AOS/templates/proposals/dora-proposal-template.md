@@ -38,9 +38,27 @@ obligations:
 {{PLACEHOLDER: ICT third parties in scope, resilience testing
 obligations, incident reporting processes}}
 
+## Assumptions & Out of Scope
+
+- Assumes {{CLIENT_NAME}} can provide a current ICT third-party
+  contract register and incident log within the first week; the
+  timeline below is contingent on that
+- Legal review of contractual language with ICT third parties is out
+  of scope — this engagement identifies the gap and drafts the
+  requirement; {{CLIENT_NAME}}'s own legal counsel executes the
+  contractual change
+- Penetration testing, resilience testing execution itself, and any
+  third-party audit fees are out of scope unless separately agreed
+
 ## Deliverables
 
-- Risk Register: DORA readiness gap assessment
+Every risk below is scored on a defined Likelihood x Impact matrix, not
+left as an unscored list — the same methodology used throughout
+delivery, so the Board Reporting Pack reads consistently cycle to
+cycle:
+
+- Risk Register: DORA readiness gap assessment, Likelihood/Impact/Risk
+  Rating scored per critical ICT third party
 - Operating Model for ICT third-party governance
 - Evidence Register for ongoing monitoring and incident reporting
 - Board Reporting Pack
@@ -50,6 +68,10 @@ obligations, incident reporting processes}}
 ## Timeline
 
 {{PLACEHOLDER: phases and duration}}
+
+**Governance cadence:** steering committee reporting on a RAG
+(Red/Amber/Green) basis, agreed at kickoff, with any Red-rated item
+escalated within 2 business days rather than held for the next cycle.
 
 ## Fees
 

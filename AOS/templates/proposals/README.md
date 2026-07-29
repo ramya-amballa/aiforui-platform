@@ -1,6 +1,6 @@
 # Proposal Library
 
-Nine reusable proposal templates, one per practice area. Every
+Ten reusable proposal templates, one per practice area. Every
 template shares the same structure so a proposal always reads the
 same way regardless of domain, and every `{{PLACEHOLDER}}` is meant to
 be filled automatically from `demand-intelligence/opportunity-schema.json`
@@ -16,6 +16,7 @@ the conversation.
 - `security-governance-proposal-template.md`
 - `dora-proposal-template.md`
 - `eu-ai-act-proposal-template.md`
+- `iso-42001-proposal-template.md`
 - `fractional-advisory-proposal-template.md`
 - `enterprise-consulting-proposal-template.md`
 

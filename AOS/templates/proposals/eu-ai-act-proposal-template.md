@@ -36,11 +36,30 @@ Run through OPERA, adapted to EU AI Act risk tiering:
 {{PLACEHOLDER: AI systems in scope, risk tier(s), conformity
 assessment timeline if applicable}}
 
+## Assumptions & Out of Scope
+
+- Assumes risk-tier classification is performed jointly with
+  {{CLIENT_NAME}}'s own technical owners — a classification made
+  without them is not defensible to a regulator or notified body
+- Formal conformity assessment execution (where an external notified
+  body is legally required) is out of scope; this engagement prepares
+  the evidence and documentation that assessment will require
+- Model-level technical remediation (retraining, bias correction) is
+  out of scope — gaps are identified and assigned an owner, not
+  engineered by this engagement unless separately agreed
+
 ## Deliverables
 
+Every risk below is scored on a defined Likelihood x Impact matrix, not
+left as an unscored list — the same methodology used throughout
+delivery, so the Board Reporting Pack reads consistently cycle to
+cycle:
+
 - AI Inventory classified by EU AI Act risk tier
-- Risk Register and technical documentation structure
-- RACI Matrix for AI governance decisions
+- Risk Register, Likelihood/Impact/Risk Rating scored per AI system,
+  and technical documentation structure
+- RACI Matrix for AI governance decisions, with real named individuals
+  confirmed, not titles only
 - Board Reporting Pack
 
 *Adjust to the agreed scope.*
@@ -48,6 +67,10 @@ assessment timeline if applicable}}
 ## Timeline
 
 {{PLACEHOLDER: phases and duration}}
+
+**Governance cadence:** steering committee reporting on a RAG
+(Red/Amber/Green) basis, agreed at kickoff, with any Red-rated item
+escalated within 2 business days rather than held for the next cycle.
 
 ## Fees
 

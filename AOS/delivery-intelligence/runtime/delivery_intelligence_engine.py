@@ -154,16 +154,31 @@ def governance_risks_list(ai_entry):
     return "\n".join(f"- **{r['risk']}** — {r['why']}" for r in risks)
 
 
+RISK_TABLE_HEADER = ("| # | Risk | Likelihood (1-5) | Impact (1-5) | Risk Rating | Owner | Mitigation | Target Closure | Status |\n"
+                     "|---|---|---|---|---|---|---|---|---|")
+
+
+def _risk_table_rows(risks, empty_message):
+    """AOS Sprint 24 — Quality Elevation. Shared table format for every
+    risk source feeding a Risk Register — company-specific (Account
+    Intelligence) and framework-standard (regulatory-framework-annexes.json)
+    rows read identically, scored against the same Risk Scoring
+    Methodology (see the template's own appendix), never a second,
+    inconsistent register format. Likelihood, Impact, Risk Rating,
+    Owner, Mitigation and Target Closure are always left blank — real
+    engagement judgement, never invented."""
+    if not risks:
+        return f"{RISK_TABLE_HEADER}\n| — | {empty_message} | | | | | | | |"
+    lines = [RISK_TABLE_HEADER]
+    for i, r in enumerate(risks, start=1):
+        lines.append(f"| {i} | {r['risk']} — {r['why']} | {{LIKELIHOOD}} | {{IMPACT}} | {{RISK_RATING}} | "
+                      f"{{OWNER}} | {{MITIGATION}} | {{TARGET_CLOSURE}} | Open |")
+    return "\n".join(lines)
+
+
 def risk_register_rows(ai_entry):
     risks = (ai_entry or {}).get("governanceRisks", [])
-    if not risks:
-        return ("| # | Risk | Likelihood | Impact | Owner | Mitigation | Status |\n"
-                "|---|---|---|---|---|---|---|\n"
-                "| — | Not enough signal yet — to be identified during Discovery. | | | | | |")
-    lines = ["| # | Risk | Likelihood | Impact | Owner | Mitigation | Status |", "|---|---|---|---|---|---|---|"]
-    for i, r in enumerate(risks, start=1):
-        lines.append(f"| {i} | {r['risk']} — {r['why']} | {{LIKELIHOOD}} | {{IMPACT}} | {{OWNER}} | {{MITIGATION}} | Open |")
-    return "\n".join(lines)
+    return _risk_table_rows(risks, "Not enough signal yet — to be identified during Discovery.")
 
 
 def primary_service(service_recommendation, ai_entry):
@@ -226,9 +241,7 @@ def regulatory_framework_seed_risks(framework_key, framework_config):
     frameworks = framework_config.get("frameworks", {})
     key = framework_key if framework_key in frameworks else "AI Deployment Governance (ADGL)"
     risks = frameworks.get(key, {}).get("riskSeedRisks", [])
-    if not risks:
-        return "- Not enough signal yet — no framework-specific starting risks on record."
-    return "\n".join(f"- **{r['risk']}** — {r['why']}" for r in risks)
+    return _risk_table_rows(risks, "Not enough signal yet — no framework-specific starting risks on record.")
 
 
 def regulatory_framework_reporting_note(framework_key, framework_config):

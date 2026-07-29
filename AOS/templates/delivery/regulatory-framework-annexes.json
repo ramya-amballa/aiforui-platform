@@ -1,6 +1,6 @@
 {
   "_comment": "AOS Sprint 23 — Engagement Templates. Delivery-kit annexes for the six domainTags that already have real, founder-authored proposal content in templates/proposals/ (DORA, EU AI Act, Security Governance, Third-Party Risk, GRC, Technology Risk), plus a general default for AI Deployment Governance (ADGL) when no more specific tag applies. Every discovery question, seed risk and reporting note below is a faithful paraphrase of that same real .md content — never a new, independently-invented regulatory claim. frameworkPriority is checked in order (mirrors service-catalogue.json's own domainTag-before-primaryService precedent) since an opportunity can carry more than one domainTag; the first match wins.",
-  "frameworkPriority": ["DORA", "EU AI Act", "Security Governance", "Third-Party Risk", "GRC", "Technology Risk", "AI Deployment Governance (ADGL)"],
+  "frameworkPriority": ["DORA", "EU AI Act", "ISO 42001", "Security Governance", "Third-Party Risk", "GRC", "Technology Risk", "AI Deployment Governance (ADGL)"],
   "frameworks": {
     "DORA": {
       "frameworkLabel": "DORA (Digital Operational Resilience Act)",
@@ -27,6 +27,22 @@
         {"risk": "Technical documentation gap", "why": "A conformity assessment or notified body review requires documentation a working system rarely maintains by default."}
       ],
       "reportingNote": "Reporting should track technical documentation and evidence-trail readiness per AI system risk tier, since that is what a conformity assessment will examine."
+    },
+    "ISO 42001": {
+      "frameworkLabel": "ISO/IEC 42001 (AI Management System)",
+      "discoveryQuestions": [
+        "What is the defined scope and boundary of the AI Management System — which AI systems, teams and sites are included?",
+        "Who holds AIMS leadership accountability under Clause 5, and is the AI policy formally approved and communicated?",
+        "Has an AI risk assessment and AI system impact assessment been performed per Clause 6, and how recently?",
+        "Which Annex A controls are currently in place, and which are formally excluded with documented justification?",
+        "Is there a functioning internal audit programme and management review cadence for the AIMS today?"
+      ],
+      "riskSeedRisks": [
+        {"risk": "No documented Applicability Statement", "why": "Without a documented, justified position on each Annex A control, an auditor cannot verify the AIMS's actual scope of conformance."},
+        {"risk": "AI risk assessment not distinct from general IT risk assessment", "why": "Clause 6 expects an AI-specific risk and impact assessment, not a generic risk register with AI systems added to it."},
+        {"risk": "No internal audit or management review cadence", "why": "A certification or surveillance audit tests whether the AIMS is operating continuously, not whether it existed once at kickoff."}
+      ],
+      "reportingNote": "Reporting should track Applicability Statement completeness, AI risk/impact assessment currency, and internal audit finding closure — the three things a certification or surveillance audit will sample first."
     },
     "Security Governance": {
       "frameworkLabel": "Security Governance",

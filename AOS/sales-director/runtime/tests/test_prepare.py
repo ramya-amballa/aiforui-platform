@@ -399,6 +399,17 @@ class RegulatoryDeliverablesTests(unittest.TestCase):
         rec = {"notApplicable": False}
         self.assertIsNone(prepare.regulatory_deliverables(rec, self.LIBRARY))
 
+    def test_iso_42001_is_a_real_entry_in_the_live_library(self):
+        """AOS Sprint 24 — Quality Elevation added ISO 42001 as the
+        fourth core framework; confirms it's wired the same way the
+        other five domainTag-mapped templates already are, using the
+        real, live library file (not a test fixture)."""
+        library = prepare.load_json(prepare.PROPOSAL_CONTENT_LIBRARY_PATH, {})
+        rec = {"notApplicable": False, "recommendedProposalTemplate": "iso-42001-proposal-template.md"}
+        deliverables = prepare.regulatory_deliverables(rec, library)
+        self.assertIsNotNone(deliverables)
+        self.assertTrue(any("Annex A" in d for d in deliverables))
+
 
 QUALIFICATION_OPPORTUNITY = dict(
     DIRECT_OPPORTUNITY,

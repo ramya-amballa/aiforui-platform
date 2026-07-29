@@ -52,10 +52,14 @@
   },
 
   "proposalTemplateByDomainTag": {
-    "_note": "Checked before proposalTemplateByPrimaryService — a direct domainTag match to a dedicated real template (templates/proposals/) is always more specific than a Primary Service default.",
+    "_note": "Checked before proposalTemplateByPrimaryService — a direct domainTag match to a dedicated real template (templates/proposals/) is always more specific than a Primary Service default. Every domainTag with a dedicated template is listed here directly (not left to fall through primaryService) so selection stays correct even when an opportunity's primaryService drifts from its domainTag.",
     "DORA": "dora-proposal-template.md",
     "EU AI Act": "eu-ai-act-proposal-template.md",
-    "Security Governance": "security-governance-proposal-template.md"
+    "ISO 42001": "iso-42001-proposal-template.md",
+    "Security Governance": "security-governance-proposal-template.md",
+    "Third-Party Risk": "third-party-risk-proposal-template.md",
+    "GRC": "grc-proposal-template.md",
+    "Technology Risk": "technology-risk-proposal-template.md"
   },
   "proposalTemplateByPrimaryService": {
     "AI Deployment Governance (ADGL)": "ai-governance-proposal-template.md",

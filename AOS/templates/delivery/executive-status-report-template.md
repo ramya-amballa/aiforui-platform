@@ -7,8 +7,9 @@
 
 ## Overall Status
 
-{{STATUS: On Track / At Risk / Delayed — to be set each reporting
-cycle, never assumed}}
+**RAG:** {{STATUS: Green (On Track) / Amber (At Risk) / Red (Delayed)
+— the same RAG convention as steering-committee-pack-template.md; set
+each reporting cycle, never assumed}}
 
 ## Progress vs. Roadmap
 
@@ -21,7 +22,8 @@ not started this cycle — see governance-roadmap-template.md}}
 
 ## Risks & Issues
 
-{{RISKS_THIS_PERIOD: pull open items from risk-register-template.md}}
+{{RISKS_THIS_PERIOD: pull open Critical/High-rated items from
+risk-register-template.md first, per its own Risk Scoring Methodology}}
 
 ## Decisions Needed From Sponsor
 

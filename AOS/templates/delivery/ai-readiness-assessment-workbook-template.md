@@ -9,7 +9,14 @@ A scoring scaffold, not a scored result — every score below is left
 blank for the founder to complete from real discovery findings, never
 estimated or fabricated.
 
-## Scoring Dimensions (0-5 each: 0 = not started, 5 = mature and evidenced)
+## Scoring Dimensions
+
+Each dimension is scored on COBIT's Process Assessment Model (PAM)
+0-5 scale — the same model and the same score discovery-questionnaire-
+template.md's Maturity Model section defines and the client's own
+Discovery answers were rated against. Carry those scores forward here
+rather than re-scoring: 0 Incomplete, 1 Initial, 2 Repeatable, 3
+Defined, 4 Managed, 5 Optimised.
 
 | Dimension | Score (0-5) | Evidence / Notes |
 |---|---|---|

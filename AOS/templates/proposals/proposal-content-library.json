@@ -13,7 +13,7 @@
   "dora-proposal-template.md": {
     "challengeFraming": "{{CLIENT_NAME}} needs to demonstrate digital operational resilience under DORA, specifically around {{SPECIFIC_CONTEXT, e.g. \"ICT third-party risk management,\" \"incident reporting readiness,\" \"resilience testing obligations\"}}. DORA changes what monitoring has to mean for ICT third parties: a vendor compliant at onboarding can drift out of alignment as the obligation itself evolves, with no commercial breach involved.",
     "keyDeliverables": [
-      "Risk Register: DORA readiness gap assessment",
+      "Risk Register: DORA readiness gap assessment, Likelihood/Impact/Risk Rating scored per critical ICT third party",
       "Operating Model for ICT third-party governance",
       "Evidence Register for ongoing monitoring and incident reporting",
       "Board Reporting Pack"
@@ -29,12 +29,23 @@
       "Board Reporting Pack"
     ]
   },
+  "iso-42001-proposal-template.md": {
+    "challengeFraming": "{{CLIENT_NAME}} needs to stand up or mature an AI Management System (AIMS) against ISO/IEC 42001 for {{SPECIFIC_CONTEXT, e.g. \"a certification readiness assessment,\" \"closing gaps identified in a prior internal audit,\" \"building the AIMS from scratch ahead of a customer or regulator asking for it\"}}. ISO 42001 is a management-system standard, not a technical checklist: the hard part is rarely Annex A's control list, it is the Clause 4-10 operating system around it.",
+    "keyDeliverables": [
+      "AIMS Scope Statement and Applicability Statement (Annex A control applicability, with justification for any exclusion)",
+      "AI Risk Assessment and AI System Impact Assessment, Likelihood/Impact/Risk Rating scored per AI system, per Clause 6",
+      "Gap Assessment against ISO 42001 Clauses 4-10 and Annex A",
+      "Documented Information Set (AIMS policy, procedures, records templates) sufficient for an internal or certification audit",
+      "Internal Audit Programme and Management Review cadence",
+      "Board Reporting Pack"
+    ]
+  },
   "eu-ai-act-proposal-template.md": {
     "challengeFraming": "{{CLIENT_NAME}} needs to operationalise the EU AI Act's risk-tiered obligations for {{SPECIFIC_CONTEXT, e.g. \"a specific high-risk AI system,\" \"an AI inventory across multiple business units,\" \"conformity assessment preparation\"}}. The Act is rarely the hard part to understand; it is translating risk-tier obligations into ownership, evidence and an operating rhythm that a regulator or notified body can actually examine.",
     "keyDeliverables": [
       "AI Inventory classified by EU AI Act risk tier",
-      "Risk Register and technical documentation structure",
-      "RACI Matrix for AI governance decisions",
+      "Risk Register, Likelihood/Impact/Risk Rating scored per AI system, and technical documentation structure",
+      "RACI Matrix for AI governance decisions, with real named individuals confirmed, not titles only",
       "Board Reporting Pack"
     ]
   },
@@ -76,7 +87,7 @@
   "third-party-risk-proposal-template.md": {
     "challengeFraming": "{{CLIENT_NAME}}'s third-party risk programme is {{SPECIFIC_CONTEXT, e.g. \"strong at onboarding, weak at everything after,\" \"unclear on who owns a vendor relationship once onboarding ends,\" \"not proportional to vendor criticality\"}}. The risk that actually materialises usually lives after signature, not at onboarding: a subprocessor changes, a data flow expands, a control lapses, and nothing triggers review unless someone is assigned to look for it.",
     "keyDeliverables": [
-      "Risk Register segmented by vendor criticality and data access",
+      "Risk Register segmented by vendor criticality and data access, Likelihood/Impact/Risk Rating scored per vendor tier",
       "Operating Model for the third-party governance framework",
       "Evidence Register for ongoing monitoring and re-assessment",
       "Exit and offboarding governance checklist"

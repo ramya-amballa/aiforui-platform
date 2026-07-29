@@ -27,7 +27,11 @@ are:}}
    through: {{ADGL_PHASES_LIST}}
 6. **Roles & Access** (10 min) — confirm who owns each ADGL phase (see
    `raci-template.md`)
-7. **Timeline & Next Steps** (10 min) — confirm the Discovery
+7. **Operating Rhythm Agreement** (10 min) — agree the steering
+   committee frequency, the RAG (Red/Amber/Green) reporting convention
+   used throughout this kit, and the 2-business-day escalation SLA for
+   any item newly rated Red
+8. **Timeline & Next Steps** (10 min) — confirm the Discovery
    Questionnaire due date and the next scheduled session
 
 ## Pre-Reads Shared With Client

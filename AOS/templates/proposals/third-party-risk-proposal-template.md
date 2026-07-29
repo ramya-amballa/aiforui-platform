@@ -36,9 +36,26 @@ Run through OPERA, adapted to the full vendor lifecycle:
 {{PLACEHOLDER: number of vendors, vendor tiers, or business units in
 scope}}
 
+## Assumptions & Out of Scope
+
+- Assumes {{CLIENT_NAME}} can provide a current vendor inventory and
+  contract register within the first week; segmentation cannot start
+  without it
+- On-site vendor audits and technical penetration testing of vendor
+  environments are out of scope unless separately agreed
+- Contract renegotiation is out of scope — this engagement identifies
+  the required contractual terms; {{CLIENT_NAME}}'s own procurement
+  and legal functions execute the renegotiation
+
 ## Deliverables
 
-- Risk Register segmented by vendor criticality and data access
+Every risk below is scored on a defined Likelihood x Impact matrix, not
+left as an unscored list — the same methodology used throughout
+delivery, so the Board Reporting Pack reads consistently cycle to
+cycle:
+
+- Risk Register segmented by vendor criticality and data access,
+  Likelihood/Impact/Risk Rating scored per vendor tier
 - Operating Model for the third-party governance framework
 - Evidence Register for ongoing monitoring and re-assessment
 - Exit and offboarding governance checklist
@@ -48,6 +65,10 @@ scope}}
 ## Timeline
 
 {{PLACEHOLDER: phases and duration}}
+
+**Governance cadence:** steering committee reporting on a RAG
+(Red/Amber/Green) basis, agreed at kickoff, with any Red-rated item
+escalated within 2 business days rather than held for the next cycle.
 
 ## Fees
 
