@@ -39,11 +39,12 @@ employee's `operating-manual.md`.
 | `relationship-intelligence` | Relationship Intelligence | Added in Sprint 13 — a founder-maintained, persistent, person-level relationship record (`relationship-profiles.json`), exactly like CRM's company-level record but for people; nothing is auto-collected (no LinkedIn/email/calendar integration). Generates reconnect recommendations, birthday/work anniversary/conference reminders, and a relationship health score/risk/opportunity per person. CEO Advisor genuinely reads this employee's output to recommend one relationship action per day |
 | `tender-intelligence` | Tender & RFP Intelligence | Added in Sprint 14, self-contained (no dependency on any other employee) — monitors real, founder-configured procurement RSS/Atom feeds (Government/Banking/Healthcare/UN/World Bank/ADB/EU/UAE/Public AI Governance) for tenders matching AI Governance, Responsible AI, Technology Risk, GRC, Cyber Risk, Vendor Risk or Compliance; estimated value/deadline/required-partner are parsed from the tender's own text or honestly "Not specified", never invented; ranked by estimated value |
 | `executive-brand-intelligence` | Executive Brand Intelligence | Added in Sprint 15, additive and read-only across Demand Intelligence, Account Intelligence and Relationship Intelligence — builds a weekly thought-leadership plan (Companies to Engage, Executives to Follow, Topics to Write, Products to Update, Whitepapers to Publish, Conferences to Monitor, Newsletter Themes, GitHub Improvements, LinkedIn Strategy) entirely from real data those employees already computed, plus Visibility/Lead-Generation/Consulting-Influence heuristics grounded in real counts, and a persisted Monthly Authority Report. CEO Advisor genuinely reads this employee's output to recommend one branding action per day |
+| `delivery-intelligence` | Delivery Intelligence (Consulting Delivery Engine) | Added in Sprint 17 — the first capability past the proposal. Triggers on Revenue Hunter's own `pipeline.json` `stage == "won"`; generates a ten-artifact delivery kit per engagement (kickoff agenda, discovery questionnaire, AI readiness assessment workbook, governance roadmap, RACI, risk register, workshop materials, executive status report, steering committee pack, project closure report) from the reusable, ADGL/OPERA-aligned template library in `templates/delivery/`. Every kit is generated exactly once and never overwritten — these are living documents the founder edits by hand during real delivery |
 
 ## Shared Structure
 
 - `prompts/` — prompts shared across AI employees, rather than duplicated per folder
-- `templates/` — templates shared across AI employees, including the Proposal Library (`templates/proposals/`)
+- `templates/` — templates shared across AI employees, including the Proposal Library (`templates/proposals/`) and the Delivery Template Library (`templates/delivery/`, ten ADGL/OPERA-aligned delivery artifacts — Sprint 17)
 - Each numbered folder is one AI employee: its own `README.md`, `operating-manual.md` (or equivalent), and working files
 - `interaction-architecture.md` — how all nine employees communicate: triggers, dependencies, inputs, outputs and hand-offs
 - `daily-operating-workflow.md` — the exact 06:00-start daily sequence every employee follows, written to be lifted directly into a scheduler (GitHub Actions or otherwise)
@@ -85,14 +86,18 @@ employee's `operating-manual.md`.
 | `relationship-intelligence` | v1.0 — live operating component, new in Sprint 13: founder-maintained person-level relationship record (`relationship-profiles.json`), config, daily Relationship Intelligence Report; one additive change outside its own folder — `ceo-advisor/runtime/generate.py` gained `relationship_action_today()`/`render_relationship_action_section()` to recommend one relationship action per day, per explicit instruction (see `relationship-intelligence/relationship-intelligence-engine.md`) |
 | `tender-intelligence` | v1.0 — live operating component, new in Sprint 14: real RSS/Atom procurement-feed connector (empty `feedUrls` by default, does nothing until configured), seven-domain keyword classification, fit-score heuristic, persistent `tender-intelligence-feed.json`, daily Tender & RFP Intelligence Report; purely additive/self-contained, no change to any other employee's code or data (see `tender-intelligence/tender-intelligence-engine.md`) |
 | `executive-brand-intelligence` | v1.0 — live operating component, new in Sprint 15: Weekly Brand Plan + Monthly Authority Report built from real Demand Intelligence/Account Intelligence/Relationship Intelligence data, config, persistent `brand-plan-history.json`; one additive change outside its own folder — `ceo-advisor/runtime/generate.py` gained `branding_action_today()`/`render_branding_action_section()` to recommend one branding action per day, per explicit instruction (see `executive-brand-intelligence/executive-brand-intelligence-engine.md`) |
+| `delivery-intelligence` | v1.0 — live operating component, new in Sprint 17 (the Consulting Delivery Engine): ten-artifact delivery kit per won engagement, rendered from `templates/delivery/`'s reusable ADGL/OPERA-aligned templates, persistent `processed-index.json` and founder-maintained `delivery-log.json`; kits generate once and are never overwritten, only backfilled if an artifact is missing (see `delivery-intelligence/delivery-intelligence-engine.md`) |
 
 `templates/proposals/` (the Proposal Library) is complete: nine
-domain templates. `prompts/` is structure only.
+domain templates. `templates/delivery/` (the Delivery Template Library,
+Sprint 17) is complete: ten ADGL/OPERA-aligned delivery artifact
+templates. `prompts/` is structure only.
 
 Working files (`opportunity-schema.json`, `regulatory-log.json`,
 `company-intelligence.json`, `companies.md`, `pipeline.json`,
 `product-backlog.json`, `published-content-log.json`,
-`shipped-products-log.json`, `relationship-profiles.json`, daily
+`shipped-products-log.json`, `relationship-profiles.json`,
+`touchpoint-log.json`, `delivery-log.json`, daily
 reports) start empty, with their
 schema documented in the file itself, and are populated as the AI
 employees actually run.

@@ -189,6 +189,18 @@
       ],
       "outputDir": "executive-brand-intelligence/runtime/output"
     },
+    "delivery-intelligence": {
+      "name": "Delivery Intelligence",
+      "buttonLabel": "Refresh Delivery Intelligence",
+      "script": "delivery-intelligence/runtime/generate.py",
+      "cwd": "delivery-intelligence/runtime",
+      "timeoutSeconds": 300,
+      "outputs": [
+        "delivery-intelligence/runtime/output/{date}-delivery-intelligence-report.md",
+        "delivery-intelligence/runtime/output/delivery-intelligence-feed.json"
+      ],
+      "outputDir": "delivery-intelligence/runtime/output"
+    },
     "product-manager": {
       "name": "Product Manager",
       "buttonLabel": "Review Product Ideas",

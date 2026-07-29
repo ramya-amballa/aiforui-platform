@@ -176,6 +176,18 @@
       ]
     },
     {
+      "key": "delivery-intelligence",
+      "name": "Delivery Intelligence",
+      "folder": "delivery-intelligence",
+      "script": "delivery-intelligence/runtime/generate.py",
+      "dependsOn": ["demand-intelligence", "revenue-hunter", "account-intelligence", "service-mapping"],
+      "note": "New in Sprint 17 — the Consulting Delivery Engine. Triggers on Revenue Hunter's own pipeline.json stage == 'won' (never a second, independently-invented 'signed' flag) and generates a ten-artifact delivery kit per engagement (kickoff agenda, discovery questionnaire, readiness workbook, roadmap, RACI, risk register, workshop materials, status report, steering committee pack, closure report), rendered from templates/delivery/'s own reusable, ADGL/OPERA-aligned templates. Account Intelligence and Service Mapping are read-only, optional cross-references (governance risks, decision-maker titles, recommended service) — a kit still generates honestly with 'Not specified'/'Not enough signal yet' placeholders if neither has run yet for that organisation. Kits are generated exactly once and never overwritten on a re-run — they are living documents the founder edits by hand during real delivery; a re-run only backfills a missing artifact file. See delivery-intelligence/delivery-intelligence-engine.md.",
+      "outputPaths": [
+        "delivery-intelligence/runtime/output/{date}-delivery-intelligence-report.md",
+        "delivery-intelligence/runtime/output/delivery-intelligence-feed.json"
+      ]
+    },
+    {
       "key": "product-manager",
       "name": "Product Manager",
       "folder": "03-Product-Manager",
@@ -222,9 +234,9 @@
       "dependsOn": ["market-intelligence", "website-intake", "demand-intelligence", "revenue-hunter", "crm",
                     "service-mapping", "sales-director", "account-intelligence", "reverse-job-hunt",
                     "recruiter-intelligence", "fractional-advisory-radar", "relationship-intelligence",
-                    "tender-intelligence", "executive-brand-intelligence", "product-manager", "content-director",
-                    "daily-brief"],
-      "note": "Implemented in ceo-advisor/, not 09-CEO-Advisor/ — see dependency-map.md. New in Sprint 5, and now genuinely the final step of every Orchestrator run, per explicit instruction — dependsOn lists every other employee to guarantee that. Its own reads (see ceo-advisor/ceo-advisor-runtime-notes.md) are scoped to Sprint 5's eight named sources plus Sprint 10's Recruiter Intelligence, Sprint 13's Relationship Intelligence and Sprint 15's Executive Brand Intelligence (all genuinely read) — Product Manager, Content Director, Sprint 8's Account Intelligence, Sprint 9's Reverse Job Hunt and Sprint 14's Tender Intelligence remain dependency-only, for ordering, not read (no explicit instruction to wire those into a CEO Advisor section).",
+                    "tender-intelligence", "executive-brand-intelligence", "delivery-intelligence",
+                    "product-manager", "content-director", "daily-brief"],
+      "note": "Implemented in ceo-advisor/, not 09-CEO-Advisor/ — see dependency-map.md. New in Sprint 5, and now genuinely the final step of every Orchestrator run, per explicit instruction — dependsOn lists every other employee to guarantee that. Its own reads (see ceo-advisor/ceo-advisor-runtime-notes.md) are scoped to Sprint 5's eight named sources plus Sprint 10's Recruiter Intelligence, Sprint 13's Relationship Intelligence and Sprint 15's Executive Brand Intelligence (all genuinely read) — Product Manager, Content Director, Sprint 8's Account Intelligence, Sprint 9's Reverse Job Hunt, Sprint 14's Tender Intelligence and Sprint 17's Delivery Intelligence remain dependency-only, for ordering, not read (no explicit instruction yet to wire those into a CEO Advisor section).",
       "outputPaths": [
         "ceo-advisor/runtime/output/{date}-ceo-daily-report.md",
         "ceo-advisor/runtime/output/ceo-daily-report.md",

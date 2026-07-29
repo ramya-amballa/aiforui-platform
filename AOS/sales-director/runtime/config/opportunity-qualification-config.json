@@ -1,0 +1,14 @@
+{
+  "_comment": "AOS Sprint 17 — Opportunity Qualification Engine. Weights apply to opportunity-schema.json's own already-computed 0-10 scores (probabilityOfWinning, strategicValue, longTermRelationshipPotential, timeRequired, expectedRevenue) — never a second, independently-invented number. Adjust weights/thresholds to retune; no code change is needed.",
+  "weights": {
+    "probabilityOfWinning": 0.30,
+    "strategicValue": 0.20,
+    "repeatBusinessPotential": 0.20,
+    "timeInvestment": 0.15,
+    "estimatedValue": 0.15
+  },
+  "verdictThresholds": {
+    "pursue": 7.0,
+    "consider": 4.5
+  }
+}
