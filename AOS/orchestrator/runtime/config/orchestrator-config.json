@@ -201,6 +201,18 @@
       ]
     },
     {
+      "key": "executive-memory",
+      "name": "Executive Memory",
+      "folder": "executive-memory",
+      "script": "executive-memory/runtime/generate.py",
+      "dependsOn": ["delivery-intelligence", "account-intelligence"],
+      "note": "New in Sprint 20 — a pure read-only aggregator, computing nothing new. Reads ceo-advisor/runtime/output/daily-priorities-log.json (added this sprint — CEO Advisor's own self-log of its daily Top 3/alerts, via update_priorities_log()) to count recurring priorities/alerts across real history; reads Delivery Intelligence's completed project-closure-report.md files for a real Lessons Learned Library (never fabricated — a closure report still showing the raw {{LESSONS_LEARNED}} placeholder contributes nothing); reads Account Intelligence's already-fixed governance risk vocabulary to surface risks recurring across two or more organisations. Also reads a new founder-maintained executive-memory/decision-log.json, the same read-only pattern as relationship-profiles.json/touchpoint-log.json/delivery-log.json. Not a dependsOn edge on ceo-advisor itself — ceo-advisor's own dependsOn lists every other employee to guarantee it stays genuinely last, so nothing can depend on it in the same pass without breaking that. Executive Memory reads daily-priorities-log.json one cycle behind instead, the same accepted-lag pattern Delivery Intelligence already uses for Account Intelligence's own feed. See executive-memory/executive-memory-engine.md.",
+      "outputPaths": [
+        "executive-memory/runtime/output/{date}-executive-memory-report.md",
+        "executive-memory/runtime/output/executive-memory-feed.json"
+      ]
+    },
+    {
       "key": "product-manager",
       "name": "Product Manager",
       "folder": "03-Product-Manager",
@@ -248,8 +260,8 @@
                     "service-mapping", "sales-director", "account-intelligence", "reverse-job-hunt",
                     "recruiter-intelligence", "fractional-advisory-radar", "relationship-intelligence",
                     "tender-intelligence", "executive-brand-intelligence", "delivery-intelligence",
-                    "company-360", "product-manager", "content-director", "daily-brief"],
-      "note": "Implemented in ceo-advisor/, not 09-CEO-Advisor/ — see dependency-map.md. New in Sprint 5, and now genuinely the final step of every Orchestrator run, per explicit instruction — dependsOn lists every other employee to guarantee that. Its own reads (see ceo-advisor/ceo-advisor-runtime-notes.md) are scoped to Sprint 5's eight named sources plus Sprint 10's Recruiter Intelligence, Sprint 13's Relationship Intelligence and Sprint 15's Executive Brand Intelligence (all genuinely read) — Product Manager, Content Director, Sprint 8's Account Intelligence, Sprint 9's Reverse Job Hunt, Sprint 14's Tender Intelligence, Sprint 17's Delivery Intelligence and Sprint 19's Company 360 remain dependency-only, for ordering, not read (no explicit instruction yet to wire those into a CEO Advisor section).",
+                    "company-360", "executive-memory", "product-manager", "content-director", "daily-brief"],
+      "note": "Implemented in ceo-advisor/, not 09-CEO-Advisor/ — see dependency-map.md. New in Sprint 5, and now genuinely the final step of every Orchestrator run, per explicit instruction — dependsOn lists every other employee to guarantee that. Its own reads (see ceo-advisor/ceo-advisor-runtime-notes.md) are scoped to Sprint 5's eight named sources plus Sprint 10's Recruiter Intelligence, Sprint 13's Relationship Intelligence and Sprint 15's Executive Brand Intelligence (all genuinely read) — Product Manager, Content Director, Sprint 8's Account Intelligence, Sprint 9's Reverse Job Hunt, Sprint 14's Tender Intelligence, Sprint 17's Delivery Intelligence, Sprint 19's Company 360 and Sprint 20's Executive Memory remain dependency-only, for ordering, not read (no explicit instruction yet to wire those into a CEO Advisor section). Note the inverse relationship with Sprint 20: CEO Advisor writes daily-priorities-log.json every run, and Executive Memory reads it — but one cycle behind, since Executive Memory necessarily runs before CEO Advisor in this same fixed order to keep CEO Advisor genuinely last.",
       "outputPaths": [
         "ceo-advisor/runtime/output/{date}-ceo-daily-report.md",
         "ceo-advisor/runtime/output/ceo-daily-report.md",

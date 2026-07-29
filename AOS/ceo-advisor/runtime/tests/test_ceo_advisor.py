@@ -287,6 +287,39 @@ class IgnoreListTests(unittest.TestCase):
         self.assertEqual(len(ignore_list), 0)
 
 
+class PrioritiesLogTests(unittest.TestCase):
+    """AOS Sprint 20 — Executive Memory reads this read-only; every
+    property it depends on (append-only, idempotent, real data only)
+    is tested here."""
+
+    TOP3 = [{"label": "AI Governance Advisory (BBVA)", "organisation": "BBVA", "source": "Revenue Hunter"}]
+    ALERTS = [{"type": "ADGL demand increasing", "evidence": "test", "source": "Demand Intelligence"}]
+
+    def test_appends_a_new_day_entry(self):
+        result = generate.update_priorities_log({"log": []}, "2026-07-29", self.TOP3, self.ALERTS)
+        self.assertEqual(len(result["log"]), 1)
+        entry = result["log"][0]
+        self.assertEqual(entry["date"], "2026-07-29")
+        self.assertEqual(entry["top3"], [{"label": "AI Governance Advisory (BBVA)", "organisation": "BBVA", "source": "Revenue Hunter"}])
+        self.assertEqual(entry["alertTypes"], ["ADGL demand increasing"])
+
+    def test_same_day_rerun_does_not_duplicate(self):
+        first = generate.update_priorities_log({"log": []}, "2026-07-29", self.TOP3, self.ALERTS)
+        second = generate.update_priorities_log(first, "2026-07-29", self.TOP3, self.ALERTS)
+        self.assertEqual(len(second["log"]), 1)
+
+    def test_never_deletes_a_past_days_entry(self):
+        existing = {"log": [{"date": "2026-07-28", "top3": [], "alertTypes": []}]}
+        result = generate.update_priorities_log(existing, "2026-07-29", self.TOP3, self.ALERTS)
+        self.assertEqual(len(result["log"]), 2)
+        self.assertEqual(result["log"][0]["date"], "2026-07-28")
+
+    def test_does_not_mutate_the_input_dict(self):
+        existing = {"log": []}
+        generate.update_priorities_log(existing, "2026-07-29", self.TOP3, self.ALERTS)
+        self.assertEqual(existing["log"], [])
+
+
 class ExecutiveSummaryTests(unittest.TestCase):
     def test_capped_at_max_words(self):
         top3 = [{"label": "A" * 5, "source": "Revenue Hunter"}]

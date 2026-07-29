@@ -455,6 +455,23 @@ def top_priorities_with_reasons(ranked, count=3):
     return top
 
 
+def update_priorities_log(priorities_log, today_str, top3, alerts):
+    """AOS Sprint 20 — appends today's Top 3/alerts to CEO Advisor's own
+    daily-priorities-log.json, the one place its recommendations survive
+    past tomorrow's overwrite of ceo-daily-report.md. Append-only (never
+    deletes a past day's entry) and idempotent (a same-day re-run
+    doesn't duplicate today's entry) — returns a new dict, never
+    mutates the one passed in."""
+    log = list(priorities_log.get("log", []))
+    if not any(e["date"] == today_str for e in log):
+        log.append({
+            "date": today_str,
+            "top3": [{"label": c["label"], "organisation": c.get("organisation"), "source": c["source"]} for c in top3],
+            "alertTypes": [a["type"] for a in alerts],
+        })
+    return {"log": log}
+
+
 # --------------------------------------------------------------------------
 # Revenue Impact
 # --------------------------------------------------------------------------
@@ -1018,6 +1035,15 @@ def main():
     exec_summary = build_executive_summary(top3, revenue_impact, alerts, daily_brief_summary, config)
 
     OUTPUT_DIR.mkdir(exist_ok=True)
+
+    # AOS Sprint 20 — Executive Memory reads this read-only to answer
+    # "has this been recommended before, and how often" — CEO Advisor's
+    # own daily Top 3/alerts otherwise vanish once ceo-daily-report.md
+    # is overwritten tomorrow.
+    priorities_log = load_json(OUTPUT_DIR / "daily-priorities-log.json", {"log": []})
+    priorities_log = update_priorities_log(priorities_log, TODAY.isoformat(), top3, alerts)
+    save_json(OUTPUT_DIR / "daily-priorities-log.json", priorities_log)
+
     daily_report = render_daily_report(exec_summary, top3, revenue_impact, alerts, ignore_list, weekly_recommendation,
                                         top_orgs, recruiter_due, recruiter_dormant, relationship_action, branding_action)
     (OUTPUT_DIR / f"{TODAY.isoformat()}-ceo-daily-report.md").write_text(daily_report, encoding="utf-8")

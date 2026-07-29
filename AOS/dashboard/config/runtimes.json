@@ -213,6 +213,18 @@
       ],
       "outputDir": "company-360/runtime/output"
     },
+    "executive-memory": {
+      "name": "Executive Memory",
+      "buttonLabel": "Refresh Executive Memory",
+      "script": "executive-memory/runtime/generate.py",
+      "cwd": "executive-memory/runtime",
+      "timeoutSeconds": 300,
+      "outputs": [
+        "executive-memory/runtime/output/{date}-executive-memory-report.md",
+        "executive-memory/runtime/output/executive-memory-feed.json"
+      ],
+      "outputDir": "executive-memory/runtime/output"
+    },
     "product-manager": {
       "name": "Product Manager",
       "buttonLabel": "Review Product Ideas",

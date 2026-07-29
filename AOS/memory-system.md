@@ -25,6 +25,19 @@ employee's own file.
 | Published Content | `02-Content-Director/published-content-log.json` | Every piece of content actually published, its objective, its trigger, and its measured result | Content Director |
 | Product Backlog | `03-Product-Manager/product-backlog.json` | Every product candidate ever evaluated, at any score, including parked ones | Product Manager |
 | Shipped Products | `03-Product-Manager/shipped-products-log.json` | Every product actually shipped, the signal that justified it, and its result since | Product Manager |
+| Relationship Profiles | `relationship-intelligence/relationship-profiles.json` | Founder-maintained, per-person: meetings, calls, messages, shared interests, birthdays/work anniversaries | Founder only (Relationship Intelligence reads it read-only) |
+| Touchpoint Log | `reverse-job-hunt/touchpoint-log.json` | Founder-maintained, per-organisation BD campaign status and every logged touchpoint | Founder only (Reverse Job Hunt reads it read-only) |
+| Delivery Log | `delivery-intelligence/delivery-log.json` | Founder-maintained, per-organisation delivery phase (Kickoff through Closed) and free-text progress notes | Founder only (Delivery Intelligence and Company 360 read it read-only) |
+| Daily Priorities Log | `ceo-advisor/runtime/output/daily-priorities-log.json` | One entry per day: CEO Advisor's own Top 3 and fired alert types — the one place its daily advice survives past tomorrow's overwrite | CEO Advisor (Executive Memory reads it read-only, one cycle behind) |
+| Decision Log | `executive-memory/decision-log.json` | Founder-maintained, standalone institutional decisions/rules not tied to one engagement | Founder only (Executive Memory reads it read-only) |
+
+Note: the five stores above are institutional/relationship memory — who
+said what, what phase an engagement is in, what was decided — distinct
+from the eight operational stores above them, which are the facts each
+employee needs to avoid re-collecting. `executive-memory/executive-memory-engine.md`
+covers institutional memory in more depth: recurring patterns across
+CEO Advisor's own history, a real Lessons Learned library, and
+governance risks recurring across organisations.
 
 ## Retention Principle
 
@@ -47,6 +60,7 @@ same dead-end being re-explored from zero a year later.
 | Revenue Hunter scores a pipeline item | `06-CRM/company-intelligence.json` (for relationship context) and `sourceRef`'d origin record | Strategic value depends on relationship depth already on file |
 | Market Intelligence logs a development | `05-Market-Intelligence/regulatory-log.json` | Avoid logging a duplicate of something already tracked under a different headline |
 | CEO Advisor picks the daily action | All of the above, via each employee's own daily output | CEO Advisor's decision quality is bounded by how completely the memory system was consulted upstream |
+| Executive Memory aggregates a pattern | CEO Advisor's `daily-priorities-log.json`, Delivery Intelligence's completed closure reports, Account Intelligence's governance risks, and `decision-log.json` | A pattern is only reported once it's genuinely recurred in real, already-persisted history — never inferred from a single occurrence |
 
 ## Freshness, Not Expiry
 
