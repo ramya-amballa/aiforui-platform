@@ -213,6 +213,18 @@
       ]
     },
     {
+      "key": "market-positioning-intelligence",
+      "name": "Market Positioning Intelligence",
+      "folder": "market-positioning-intelligence",
+      "script": "market-positioning-intelligence/runtime/generate.py",
+      "dependsOn": ["service-mapping", "market-intelligence", "revenue-hunter"],
+      "note": "New in Sprint 21 — a pure read-only aggregator. A full-codebase search before this employee was designed confirmed there is no real competitor, market-share, win/loss, or competitive-pricing data anywhere in AOS, so this does not invent any. Instead: counts service-mapping's own already-computed primaryService recommendations per catalogue service (a service with 0 recommendations is flagged honestly as unvalidated by real demand, not omitted); counts market-intelligence's own regulatory-log.json substantive developments per source; and states the same honest 'Not tracked' competitive-signal Sales Director's competition_level() already uses, plus the one real data point AOS has — a count of Revenue Hunter's pipeline.json stage=='lost' entries (organisation and title only, never a fabricated reason or competitor name). See market-positioning-intelligence/market-positioning-intelligence-engine.md.",
+      "outputPaths": [
+        "market-positioning-intelligence/runtime/output/{date}-market-positioning-report.md",
+        "market-positioning-intelligence/runtime/output/market-positioning-feed.json"
+      ]
+    },
+    {
       "key": "product-manager",
       "name": "Product Manager",
       "folder": "03-Product-Manager",
@@ -260,8 +272,9 @@
                     "service-mapping", "sales-director", "account-intelligence", "reverse-job-hunt",
                     "recruiter-intelligence", "fractional-advisory-radar", "relationship-intelligence",
                     "tender-intelligence", "executive-brand-intelligence", "delivery-intelligence",
-                    "company-360", "executive-memory", "product-manager", "content-director", "daily-brief"],
-      "note": "Implemented in ceo-advisor/, not 09-CEO-Advisor/ — see dependency-map.md. New in Sprint 5, and now genuinely the final step of every Orchestrator run, per explicit instruction — dependsOn lists every other employee to guarantee that. Its own reads (see ceo-advisor/ceo-advisor-runtime-notes.md) are scoped to Sprint 5's eight named sources plus Sprint 10's Recruiter Intelligence, Sprint 13's Relationship Intelligence and Sprint 15's Executive Brand Intelligence (all genuinely read) — Product Manager, Content Director, Sprint 8's Account Intelligence, Sprint 9's Reverse Job Hunt, Sprint 14's Tender Intelligence, Sprint 17's Delivery Intelligence, Sprint 19's Company 360 and Sprint 20's Executive Memory remain dependency-only, for ordering, not read (no explicit instruction yet to wire those into a CEO Advisor section). Note the inverse relationship with Sprint 20: CEO Advisor writes daily-priorities-log.json every run, and Executive Memory reads it — but one cycle behind, since Executive Memory necessarily runs before CEO Advisor in this same fixed order to keep CEO Advisor genuinely last.",
+                    "company-360", "executive-memory", "market-positioning-intelligence",
+                    "product-manager", "content-director", "daily-brief"],
+      "note": "Implemented in ceo-advisor/, not 09-CEO-Advisor/ — see dependency-map.md. New in Sprint 5, and now genuinely the final step of every Orchestrator run, per explicit instruction — dependsOn lists every other employee to guarantee that. Its own reads (see ceo-advisor/ceo-advisor-runtime-notes.md) are scoped to Sprint 5's eight named sources plus Sprint 10's Recruiter Intelligence, Sprint 13's Relationship Intelligence and Sprint 15's Executive Brand Intelligence (all genuinely read) — Product Manager, Content Director, Sprint 8's Account Intelligence, Sprint 9's Reverse Job Hunt, Sprint 14's Tender Intelligence, Sprint 17's Delivery Intelligence, Sprint 19's Company 360, Sprint 20's Executive Memory and Sprint 21's Market Positioning Intelligence remain dependency-only, for ordering, not read (no explicit instruction yet to wire those into a CEO Advisor section). Note the inverse relationship with Sprint 20: CEO Advisor writes daily-priorities-log.json every run, and Executive Memory reads it — but one cycle behind, since Executive Memory necessarily runs before CEO Advisor in this same fixed order to keep CEO Advisor genuinely last.",
       "outputPaths": [
         "ceo-advisor/runtime/output/{date}-ceo-daily-report.md",
         "ceo-advisor/runtime/output/ceo-daily-report.md",

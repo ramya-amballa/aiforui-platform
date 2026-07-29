@@ -225,6 +225,18 @@
       ],
       "outputDir": "executive-memory/runtime/output"
     },
+    "market-positioning-intelligence": {
+      "name": "Market Positioning Intelligence",
+      "buttonLabel": "Refresh Market Positioning Intelligence",
+      "script": "market-positioning-intelligence/runtime/generate.py",
+      "cwd": "market-positioning-intelligence/runtime",
+      "timeoutSeconds": 300,
+      "outputs": [
+        "market-positioning-intelligence/runtime/output/{date}-market-positioning-report.md",
+        "market-positioning-intelligence/runtime/output/market-positioning-feed.json"
+      ],
+      "outputDir": "market-positioning-intelligence/runtime/output"
+    },
     "product-manager": {
       "name": "Product Manager",
       "buttonLabel": "Review Product Ideas",
