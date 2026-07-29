@@ -62,6 +62,7 @@ PIPELINE_PATH = AOS_DIR / "08-Revenue-Hunter" / "pipeline.json"
 CRM_PATH = AOS_DIR / "06-CRM" / "company-intelligence.json"
 SERVICE_RECOMMENDATIONS_PATH = AOS_DIR / "service-mapping" / "service-recommendations.json"
 ACCOUNT_INTELLIGENCE_FEED_PATH = AOS_DIR / "account-intelligence" / "runtime" / "output" / "account-intelligence-feed.json"
+PROPOSAL_CONTENT_LIBRARY_PATH = AOS_DIR / "templates" / "proposals" / "proposal-content-library.json"
 
 CONFIG_DIR = RUNTIME_DIR / "config"
 OUTPUT_DIR = RUNTIME_DIR / "output"
@@ -479,7 +480,25 @@ def commercial_options(pricing, rate_card):
     }
 
 
-def executive_proposal_document(opportunity, ai_entry, service_recommendation, pricing, bank, rate_card):
+def regulatory_deliverables(service_recommendation, proposal_content_library):
+    """AOS Sprint 23 — Engagement Templates. Reuses templates/proposals/'s
+    own already-authored, framework-specific deliverable list — via
+    service-mapping's own already-computed recommendedProposalTemplate,
+    never a second, independent template selection — instead of the
+    generic three-bullet fallback. None when no service recommendation
+    exists yet, or its template isn't in the library, so the caller can
+    fall back to the generic list rather than fabricate one."""
+    if not service_recommendation or service_recommendation.get("notApplicable"):
+        return None
+    template_filename = service_recommendation.get("recommendedProposalTemplate")
+    if not template_filename:
+        return None
+    entry = proposal_content_library.get(template_filename)
+    return entry.get("keyDeliverables") if entry else None
+
+
+def executive_proposal_document(opportunity, ai_entry, service_recommendation, pricing, bank, rate_card,
+                                 proposal_content_library=None):
     """AOS Sprint 12 — the Executive Proposal Generator. Every fact-
     bearing section traces back to Account Intelligence's own already-
     computed brief data (ai_entry) — company profile, AI initiatives,
@@ -535,12 +554,16 @@ def executive_proposal_document(opportunity, ai_entry, service_recommendation, p
     lines += ["", "---", "", "## Recommended Engagement", ""]
     lines += [f"- **{s['service']}** — {s['confidence']} confidence" for s in services] or ["- Not enough signal yet to rank service fit."]
 
-    lines += [
-        "", "---", "", "## Deliverables", "",
-        "- A findings report scoped to the governance challenges above",
-        "- A prioritised remediation/implementation roadmap",
-        "- Executive briefing session to walk through findings and recommendations",
-    ]
+    tailored_deliverables = regulatory_deliverables(service_recommendation, proposal_content_library or {})
+    lines += ["", "---", "", "## Deliverables", ""]
+    if tailored_deliverables:
+        lines += [f"- {d}" for d in tailored_deliverables]
+    else:
+        lines += [
+            "- A findings report scoped to the governance challenges above",
+            "- A prioritised remediation/implementation roadmap",
+            "- Executive briefing session to walk through findings and recommendations",
+        ]
 
     lines += [
         "", "---", "", "## Timeline", "",
@@ -610,7 +633,7 @@ def client_outreach(opportunity, crm_entry):
 
 
 def build_package(opportunity, pipeline_entry, crm_entry, bank, rate_card, service_recommendation, ai_entry=None,
-                   qualification_config=None):
+                   qualification_config=None, proposal_content_library=None):
     pricing = recommend_pricing(opportunity, pipeline_entry, rate_card)
     confidence = compute_confidence(opportunity, crm_entry, pricing)
     status = determine_status(confidence, opportunity)
@@ -620,7 +643,7 @@ def build_package(opportunity, pipeline_entry, crm_entry, bank, rate_card, servi
     # Intelligence's own brief) whenever one exists for this organisation;
     # otherwise the original generic proposal_document(), never a blank.
     proposal = executive_proposal_document(
-        opportunity, ai_entry, service_recommendation, pricing, bank, rate_card
+        opportunity, ai_entry, service_recommendation, pricing, bank, rate_card, proposal_content_library
     ) or proposal_document(opportunity, bank, pricing)
 
     return {
@@ -773,6 +796,9 @@ def main():
     bank = load_json(CONFIG_DIR / "practitioner-bank.json")
     # AOS Sprint 18 — Opportunity Qualification Engine's weights/thresholds.
     qualification_config = load_json(CONFIG_DIR / "opportunity-qualification-config.json", {})
+    # AOS Sprint 23 — Engagement Templates. Static, shared config; see
+    # templates/proposals/proposal-content-library.json's own comment.
+    proposal_content_library = load_json(PROPOSAL_CONTENT_LIBRARY_PATH, {})
     # Read-only, optional — service-mapping/'s own output. Sales Director's
     # core logic (pricing, confidence, status) is unaffected either way;
     # this only fills in the additive Service Mapping section (see
@@ -825,7 +851,7 @@ def main():
         service_recommendation = service_recommendations.get(opportunity["id"])
         ai_entry = find_account_intelligence_entry(opportunity["organisation"], ai_feed)
         package = build_package(opportunity, pipeline_entry, crm_entry, bank, rate_card, service_recommendation, ai_entry,
-                                 qualification_config)
+                                 qualification_config, proposal_content_library)
 
         slug = slugify(f"{opportunity['id']}-{opportunity['organisation']}-{opportunity['title']}")[:80]
         paths = write_package_files(package, slug)
@@ -854,7 +880,7 @@ def main():
         service_recommendation = service_recommendations.get(opportunity["id"])
         ai_entry = find_account_intelligence_entry(opportunity["organisation"], ai_feed)
         package = build_package(opportunity, pipeline_entry, crm_entry, bank, rate_card, service_recommendation, ai_entry,
-                                 qualification_config)
+                                 qualification_config, proposal_content_library)
 
         slug = slugify(f"{opportunity['id']}-{opportunity['organisation']}-{opportunity['title']}")[:80]
         paths = write_package_files(package, slug)

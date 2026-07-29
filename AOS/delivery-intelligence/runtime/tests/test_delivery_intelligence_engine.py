@@ -51,6 +51,32 @@ SERVICE_RECOMMENDATION = {
     "recommendedEngagementType": "Consulting Project", "estimatedProjectSize": "Medium",
 }
 
+DORA_OPPORTUNITY = dict(OPPORTUNITY, id="opp-0002", domainTags=["DORA", "Third-Party Risk"])
+
+FRAMEWORK_CONFIG = {
+    "frameworkPriority": ["DORA", "EU AI Act", "Third-Party Risk", "AI Deployment Governance (ADGL)"],
+    "frameworks": {
+        "DORA": {
+            "frameworkLabel": "DORA (Digital Operational Resilience Act)",
+            "discoveryQuestions": ["Which ICT third parties are in scope for DORA resilience testing?"],
+            "riskSeedRisks": [{"risk": "ICT third-party concentration risk", "why": "DORA holds the entity accountable regardless of vendor status."}],
+            "reportingNote": "Reporting should track ongoing ICT third-party monitoring status.",
+        },
+        "Third-Party Risk": {
+            "frameworkLabel": "Third-Party Risk",
+            "discoveryQuestions": ["How are vendors segmented by criticality today?"],
+            "riskSeedRisks": [{"risk": "Post-onboarding ownership gap", "why": "Risk materialises after signature, not at onboarding."}],
+            "reportingNote": "Reporting should track vendor monitoring cadence.",
+        },
+        "AI Deployment Governance (ADGL)": {
+            "frameworkLabel": "AI Deployment Governance (ADGL) — general",
+            "discoveryQuestions": ["Is there a named owner for AI governance decisions today?"],
+            "riskSeedRisks": [{"risk": "No consistent risk evaluation across AI use cases", "why": "Inconsistent scrutiny without one risk model."}],
+            "reportingNote": "Reporting should track named ownership and approval gates.",
+        },
+    },
+}
+
 
 class WonEngagementsTests(unittest.TestCase):
     def test_filters_to_won_stage_only(self):
@@ -126,11 +152,54 @@ class PlaceholderAssemblyTests(unittest.TestCase):
     def test_build_placeholders_assembles_real_data(self):
         bank = {"adglPhases": ["Discover", "Assess", "Govern", "Deploy", "Operate"],
                 "operaPhases": ["Opportunity", "People", "Evaluation", "Response", "Assurance"]}
-        placeholders = engine.build_placeholders(WON_ENTRY, OPPORTUNITY, AI_ENTRY, SERVICE_RECOMMENDATION, bank)
+        placeholders = engine.build_placeholders(WON_ENTRY, OPPORTUNITY, AI_ENTRY, SERVICE_RECOMMENDATION, bank, FRAMEWORK_CONFIG)
         self.assertEqual(placeholders["{{CLIENT_NAME}}"], "BBVA")
         self.assertEqual(placeholders["{{INDUSTRY}}"], "Banking")
         self.assertIn("Discover", placeholders["{{ADGL_PHASES_LIST}}"])
         self.assertIn("Opportunity", placeholders["{{OPERA_PHASES_LIST}}"])
+        # OPPORTUNITY has no DORA/EU AI Act/Third-Party Risk tag -> ADGL default
+        self.assertEqual(placeholders["{{REGULATORY_FRAMEWORK_LABEL}}"], "AI Deployment Governance (ADGL) — general")
+
+    def test_build_placeholders_honest_defaults_without_framework_config(self):
+        bank = {"adglPhases": [], "operaPhases": []}
+        placeholders = engine.build_placeholders(WON_ENTRY, OPPORTUNITY, AI_ENTRY, SERVICE_RECOMMENDATION, bank)
+        self.assertIn("Not enough signal yet", placeholders["{{REGULATORY_FRAMEWORK_DISCOVERY_QUESTIONS}}"])
+        self.assertIn("Not enough signal yet", placeholders["{{REGULATORY_FRAMEWORK_SEED_RISKS}}"])
+
+
+class RegulatoryFrameworkTests(unittest.TestCase):
+    """AOS Sprint 23 — Engagement Templates. select_regulatory_framework()
+    reuses the opportunity's own real domainTags — the identical field
+    service-mapping's determine_proposal_template() already selects a
+    proposal template from — never a second, independent detection."""
+
+    def test_selects_the_higher_priority_tag_when_two_match(self):
+        # DORA_OPPORTUNITY carries both DORA and Third-Party Risk tags;
+        # frameworkPriority lists DORA first.
+        self.assertEqual(engine.select_regulatory_framework(DORA_OPPORTUNITY, FRAMEWORK_CONFIG), "DORA")
+
+    def test_falls_through_priority_order_to_the_next_match(self):
+        opp = dict(OPPORTUNITY, domainTags=["Third-Party Risk"])
+        self.assertEqual(engine.select_regulatory_framework(opp, FRAMEWORK_CONFIG), "Third-Party Risk")
+
+    def test_none_when_no_recognised_tag(self):
+        opp = dict(OPPORTUNITY, domainTags=["GRC"])
+        self.assertIsNone(engine.select_regulatory_framework(opp, FRAMEWORK_CONFIG))
+
+    def test_label_falls_back_to_general_adgl_when_no_match(self):
+        self.assertEqual(engine.regulatory_framework_label(None, FRAMEWORK_CONFIG), "AI Deployment Governance (ADGL) — general")
+
+    def test_discovery_questions_are_real_and_framework_specific(self):
+        questions = engine.regulatory_framework_discovery_questions("DORA", FRAMEWORK_CONFIG)
+        self.assertIn("ICT third parties", questions)
+
+    def test_seed_risks_are_real_and_framework_specific(self):
+        risks = engine.regulatory_framework_seed_risks("DORA", FRAMEWORK_CONFIG)
+        self.assertIn("ICT third-party concentration risk", risks)
+
+    def test_reporting_note_is_real_and_framework_specific(self):
+        note = engine.regulatory_framework_reporting_note("DORA", FRAMEWORK_CONFIG)
+        self.assertIn("ICT third-party monitoring", note)
 
 
 class RenderArtifactTests(unittest.TestCase):
@@ -139,7 +208,8 @@ class RenderArtifactTests(unittest.TestCase):
 
     def setUp(self):
         self.bank = engine.load_json(engine.PRACTITIONER_BANK_PATH, {})
-        self.placeholders = engine.build_placeholders(WON_ENTRY, OPPORTUNITY, AI_ENTRY, SERVICE_RECOMMENDATION, self.bank)
+        self.placeholders = engine.build_placeholders(WON_ENTRY, OPPORTUNITY, AI_ENTRY, SERVICE_RECOMMENDATION, self.bank, FRAMEWORK_CONFIG)
+        self.dora_placeholders = engine.build_placeholders(WON_ENTRY, DORA_OPPORTUNITY, AI_ENTRY, SERVICE_RECOMMENDATION, self.bank, FRAMEWORK_CONFIG)
 
     def test_kickoff_agenda_fills_real_placeholders(self):
         text = engine.render_artifact("kickoff-agenda-template.md", self.placeholders)
@@ -157,15 +227,35 @@ class RenderArtifactTests(unittest.TestCase):
             text = engine.render_artifact(template_filename, self.placeholders)
             self.assertIn("BBVA", text, f"{suffix} did not fill in the client name")
 
+    def test_discovery_questionnaire_carries_the_dora_annex_for_a_dora_opportunity(self):
+        text = engine.render_artifact("discovery-questionnaire-template.md", self.dora_placeholders)
+        self.assertIn("DORA (Digital Operational Resilience Act)", text)
+        self.assertIn("ICT third parties", text)
+        self.assertNotIn("{{REGULATORY_FRAMEWORK", text)
+
+    def test_discovery_questionnaire_carries_the_general_annex_for_a_generic_opportunity(self):
+        text = engine.render_artifact("discovery-questionnaire-template.md", self.placeholders)
+        self.assertIn("AI Deployment Governance (ADGL) — general", text)
+        self.assertNotIn("DORA", text)
+
+    def test_risk_register_carries_the_framework_seed_risks(self):
+        text = engine.render_artifact("risk-register-template.md", self.dora_placeholders)
+        self.assertIn("ICT third-party concentration risk", text)
+
+    def test_steering_committee_pack_carries_the_reporting_note(self):
+        text = engine.render_artifact("steering-committee-pack-template.md", self.dora_placeholders)
+        self.assertIn("ICT third-party monitoring status", text)
+
 
 class BuildDeliveryKitTests(unittest.TestCase):
     def test_builds_all_ten_artifacts_and_a_feed_entry(self):
         bank = engine.load_json(engine.PRACTITIONER_BANK_PATH, {})
         artifacts, feed_entry = engine.build_delivery_kit(
-            WON_ENTRY, OPPORTUNITY, AI_ENTRY, SERVICE_RECOMMENDATION, bank, {"engagements": {}})
+            WON_ENTRY, OPPORTUNITY, AI_ENTRY, SERVICE_RECOMMENDATION, bank, {"engagements": {}}, FRAMEWORK_CONFIG)
         self.assertEqual(len(artifacts), 10)
         self.assertEqual(feed_entry["organisation"], "BBVA")
         self.assertEqual(feed_entry["phase"], "Not started")
+        self.assertEqual(feed_entry["regulatoryFramework"], "AI Deployment Governance (ADGL) — general")
         self.assertIsNone(feed_entry["kitPath"])  # generate.py fills this in
 
 

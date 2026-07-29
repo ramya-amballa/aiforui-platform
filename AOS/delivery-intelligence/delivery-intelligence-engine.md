@@ -81,12 +81,41 @@ Closed) and free-text progress notes. This engine reads it read-only
 every run to refresh the feed's phase field — it never writes to it,
 since only the founder knows the engagement's actual real-world state.
 
+## Regulatory Framework Annexes (AOS Sprint 23 — Engagement Templates)
+
+Three of the ten artifacts — Discovery Questionnaire, Risk Register,
+Steering Committee Pack — now carry a regulatory-framework-specific
+annex, resolved from the same real `domainTags` field service-mapping's
+own `determine_proposal_template()` already selects a proposal
+template from (never a second, independent detection). Discovery gets
+framework-specific questions appended to the Governance Baseline
+section; the Risk Register gets a second, clearly-labelled block of
+framework-standard starting risks (distinct from Account Intelligence's
+own company-specific risks above it); the Steering Committee Pack gets
+a framework-specific reporting-considerations note.
+
+`templates/delivery/regulatory-framework-annexes.json` holds one entry
+per domainTag that already has real, founder-authored content in
+`templates/proposals/` (DORA, EU AI Act, Security Governance,
+Third-Party Risk, GRC, Technology Risk), plus a general default for AI
+Deployment Governance (ADGL) when no more specific tag applies — every
+question, seed risk and reporting note is a faithful paraphrase of
+that same real proposal content, never a new, independently-invented
+regulatory claim. `frameworkPriority` resolves ties deterministically
+when an opportunity carries more than one recognised tag.
+
+This is IP reuse, not a new fact: the same six frameworks Sales
+Director's proposal library already covers now shape the delivery kit
+too, so the founder never re-derives "what to ask a DORA client" or
+"what to watch for in an EU AI Act engagement" a second time.
+
 ## Dashboard
 
 **Delivery Intelligence** page: one row per won engagement (phase,
-primary service, kit path), and — for the selected engagement — every
-one of the ten artifacts with Preview/Download, so the founder can
-open, edit and track each one from the Command Center.
+primary service, regulatory framework, kit path), and — for the
+selected engagement — every one of the ten artifacts with
+Preview/Download, so the founder can open, edit and track each one
+from the Command Center.
 
 ## What This Engine Does Not Do
 

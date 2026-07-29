@@ -170,10 +170,41 @@ at the same facts:
 | Recommended Engagement | `serviceFit` |
 | Appendices | `supportingAssets` |
 
-Deliverables, Timeline and Success Metrics are fixed, honest
-boilerplate (a findings report, a roadmap, an executive briefing; a
-short scoping call; that gaps get a named owner) — not claims that
-require a data source, so they aren't drawn from anywhere per-brief.
+Timeline and Success Metrics are fixed, honest boilerplate (a short
+scoping call; that gaps get a named owner) — not claims that require a
+data source, so they aren't drawn from anywhere per-brief. Deliverables
+is tailored per regulatory framework — see Engagement Templates below
+— falling back to the same generic three-bullet boilerplate (a
+findings report, a roadmap, an executive briefing) only when no
+matching template exists yet.
+
+### Engagement Templates (Sprint 23) — Reusing the Proposal Library's Own Content
+
+`templates/proposals/` already has nine real, founder-authored
+proposal templates, one per practice area — but until Sprint 23,
+Sales Director's generated proposal only *cited* the matching
+filename (service-mapping's own already-computed
+`recommendedProposalTemplate`), it never read the file's content.
+`templates/proposals/proposal-content-library.json` is a faithful,
+structured extraction of each template's `keyDeliverables` list — never
+a new, independently-invented deliverable — keyed by the identical
+filename service-mapping already selects. `regulatory_deliverables()`
+looks that up and, when a match exists, replaces the generic
+Deliverables boilerplate with the real, framework-specific list (e.g.
+a DORA-tagged opportunity gets "Risk Register: DORA readiness gap
+assessment," "Operating Model for ICT third-party governance,"
+"Evidence Register for ongoing monitoring and incident reporting,"
+instead of the generic three bullets).
+
+No opportunity's proposal is ever *replaced* by the static template
+file — the Executive Proposal above (Account Intelligence's
+executiveSummary, governance risks, service fit) is still the body of
+the document. Only the Deliverables list is swapped for the real,
+already-authored, domain-specific one when service-mapping has matched
+a template. `templates/proposals/*.md` remain the master reference
+copies the founder can still open directly; edit those first if the
+underlying pitch changes, and keep `proposal-content-library.json` in
+sync by hand.
 
 **Commercial Options** are the four options every executive proposal
 offers, each grounded in `rate-card.json`'s own real day-rate figures
@@ -252,6 +283,11 @@ judgement, first, before the rest of the package.
   a package. Every classified opportunity still gets a full package —
   even one qualified "Ignore" — because classification, not this
   advisory verdict, decides what gets prepared.
+- Does not invent a deliverable. `regulatory_deliverables()` only ever
+  returns a list already written in `proposal-content-library.json`
+  (itself a faithful extraction of `templates/proposals/*.md`'s own
+  content) — never a new one synthesised for a framework that isn't
+  in the library yet.
 - Does not touch `04-Sales-Director`'s existing relationship/follow-up
   workflow (`follow-up-priority-model.md`, `outreach-draft-template.md`).
   That cadence continues to run on `06-CRM/company-intelligence.json`

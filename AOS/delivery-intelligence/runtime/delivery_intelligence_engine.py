@@ -47,6 +47,7 @@ SERVICE_RECOMMENDATIONS_PATH = AOS_DIR / "service-mapping" / "service-recommenda
 PRACTITIONER_BANK_PATH = AOS_DIR / "sales-director" / "runtime" / "config" / "practitioner-bank.json"
 
 TEMPLATES_DIR = REPO_ROOT / "AOS" / "templates" / "delivery"
+REGULATORY_FRAMEWORK_ANNEXES_PATH = TEMPLATES_DIR / "regulatory-framework-annexes.json"
 DELIVERY_LOG_PATH = DELIVERY_INTELLIGENCE_DIR / "delivery-log.json"
 KITS_DIR = RUNTIME_DIR / "output" / "delivery-kits"
 FEED_PATH = RUNTIME_DIR / "output" / "delivery-intelligence-feed.json"
@@ -187,8 +188,59 @@ def decision_maker_titles_text(ai_entry):
     return ", ".join(titles) if titles else "Not specified"
 
 
-def build_placeholders(pipeline_entry, opportunity, ai_entry, service_recommendation, bank):
+def select_regulatory_framework(opportunity, framework_config):
+    """AOS Sprint 23 — Engagement Templates. Reuses the opportunity's
+    own real domainTags (the identical field service-mapping's
+    determine_proposal_template() already selects a proposal template
+    from — never a second, independent detection rule) against
+    frameworkPriority's stable order, so an opportunity carrying more
+    than one recognised tag resolves to one answer, deterministically.
+    None when no recognised tag is present — the caller falls back to
+    the general ADGL default, never an invented framework."""
+    domain_tags = set((opportunity or {}).get("domainTags", []))
+    frameworks = framework_config.get("frameworks", {})
+    for key in framework_config.get("frameworkPriority", []):
+        if key in domain_tags and key in frameworks:
+            return key
+    return None
+
+
+def regulatory_framework_label(framework_key, framework_config):
+    frameworks = framework_config.get("frameworks", {})
+    if framework_key and framework_key in frameworks:
+        return frameworks[framework_key]["frameworkLabel"]
+    default = frameworks.get("AI Deployment Governance (ADGL)")
+    return default["frameworkLabel"] if default else "General AI Governance"
+
+
+def regulatory_framework_discovery_questions(framework_key, framework_config):
+    frameworks = framework_config.get("frameworks", {})
+    key = framework_key if framework_key in frameworks else "AI Deployment Governance (ADGL)"
+    questions = frameworks.get(key, {}).get("discoveryQuestions", [])
+    if not questions:
+        return "- Not enough signal yet — no framework-specific questions on record."
+    return "\n".join(f"- {q}" for q in questions)
+
+
+def regulatory_framework_seed_risks(framework_key, framework_config):
+    frameworks = framework_config.get("frameworks", {})
+    key = framework_key if framework_key in frameworks else "AI Deployment Governance (ADGL)"
+    risks = frameworks.get(key, {}).get("riskSeedRisks", [])
+    if not risks:
+        return "- Not enough signal yet — no framework-specific starting risks on record."
+    return "\n".join(f"- **{r['risk']}** — {r['why']}" for r in risks)
+
+
+def regulatory_framework_reporting_note(framework_key, framework_config):
+    frameworks = framework_config.get("frameworks", {})
+    key = framework_key if framework_key in frameworks else "AI Deployment Governance (ADGL)"
+    return frameworks.get(key, {}).get("reportingNote", "Not enough signal yet — no framework-specific reporting guidance on record.")
+
+
+def build_placeholders(pipeline_entry, opportunity, ai_entry, service_recommendation, bank, framework_config=None):
+    framework_config = framework_config or {}
     company = (ai_entry or {}).get("companyProfile", {})
+    framework_key = select_regulatory_framework(opportunity, framework_config)
     return {
         "{{CLIENT_NAME}}": pipeline_entry["organisation"],
         "{{DATE}}": TODAY,
@@ -203,6 +255,10 @@ def build_placeholders(pipeline_entry, opportunity, ai_entry, service_recommenda
         "{{RISK_REGISTER_ROWS}}": risk_register_rows(ai_entry),
         "{{ADGL_PHASES_LIST}}": ", ".join(bank.get("adglPhases", [])) or "Not specified",
         "{{OPERA_PHASES_LIST}}": ", ".join(bank.get("operaPhases", [])) or "Not specified",
+        "{{REGULATORY_FRAMEWORK_LABEL}}": regulatory_framework_label(framework_key, framework_config),
+        "{{REGULATORY_FRAMEWORK_DISCOVERY_QUESTIONS}}": regulatory_framework_discovery_questions(framework_key, framework_config),
+        "{{REGULATORY_FRAMEWORK_SEED_RISKS}}": regulatory_framework_seed_risks(framework_key, framework_config),
+        "{{REGULATORY_FRAMEWORK_REPORTING_NOTE}}": regulatory_framework_reporting_note(framework_key, framework_config),
     }
 
 
@@ -214,9 +270,10 @@ def render_artifact(template_filename, placeholders):
     return text
 
 
-def build_delivery_kit(pipeline_entry, opportunity, ai_entry, service_recommendation, bank, delivery_log):
+def build_delivery_kit(pipeline_entry, opportunity, ai_entry, service_recommendation, bank, delivery_log,
+                        framework_config=None):
     organisation = pipeline_entry["organisation"]
-    placeholders = build_placeholders(pipeline_entry, opportunity, ai_entry, service_recommendation, bank)
+    placeholders = build_placeholders(pipeline_entry, opportunity, ai_entry, service_recommendation, bank, framework_config)
     phase, notes = engagement_phase(organisation, delivery_log)
 
     artifacts = {
@@ -228,6 +285,7 @@ def build_delivery_kit(pipeline_entry, opportunity, ai_entry, service_recommenda
         "organisation": organisation,
         "engagementRef": placeholders["{{ENGAGEMENT_REF}}"],
         "primaryService": placeholders["{{PRIMARY_SERVICE}}"],
+        "regulatoryFramework": placeholders["{{REGULATORY_FRAMEWORK_LABEL}}"],
         "phase": phase,
         "noteCount": len(notes),
         "generatedDate": TODAY,

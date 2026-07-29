@@ -29,6 +29,10 @@ signal — confirm, correct or rule out each:
 - Is there an existing AI governance owner, committee, or policy today?
 - What regulatory regimes apply? (On record: {{REGULATORY_ENVIRONMENT}})
 
+### {{REGULATORY_FRAMEWORK_LABEL}} — framework-specific questions
+
+{{REGULATORY_FRAMEWORK_DISCOVERY_QUESTIONS}}
+
 ## 3. Risk & Impact (Assess)
 
 - Which AI use case, if it failed or produced a biased/incorrect

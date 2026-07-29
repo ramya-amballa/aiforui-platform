@@ -1,0 +1,94 @@
+{
+  "_comment": "AOS Sprint 23 — Engagement Templates. Delivery-kit annexes for the six domainTags that already have real, founder-authored proposal content in templates/proposals/ (DORA, EU AI Act, Security Governance, Third-Party Risk, GRC, Technology Risk), plus a general default for AI Deployment Governance (ADGL) when no more specific tag applies. Every discovery question, seed risk and reporting note below is a faithful paraphrase of that same real .md content — never a new, independently-invented regulatory claim. frameworkPriority is checked in order (mirrors service-catalogue.json's own domainTag-before-primaryService precedent) since an opportunity can carry more than one domainTag; the first match wins.",
+  "frameworkPriority": ["DORA", "EU AI Act", "Security Governance", "Third-Party Risk", "GRC", "Technology Risk", "AI Deployment Governance (ADGL)"],
+  "frameworks": {
+    "DORA": {
+      "frameworkLabel": "DORA (Digital Operational Resilience Act)",
+      "discoveryQuestions": [
+        "Which ICT third parties are in scope for DORA resilience testing and monitoring?",
+        "What is the current incident reporting process, and does it meet DORA's notification timelines?",
+        "Is there a documented concentration-risk assessment across critical ICT third parties?"
+      ],
+      "riskSeedRisks": [
+        {"risk": "ICT third-party concentration risk", "why": "DORA holds the regulated entity accountable for critical ICT third parties regardless of the vendor's own compliance status."},
+        {"risk": "Incident notification timeline gap", "why": "A vendor compliant at onboarding can drift out of alignment as the obligation itself evolves, with no commercial breach involved."}
+      ],
+      "reportingNote": "DORA expects an evidence trail that tracks the obligation itself, not just the contract — steering committee reporting should reflect ongoing ICT third-party monitoring status, not a one-time assessment."
+    },
+    "EU AI Act": {
+      "frameworkLabel": "EU AI Act",
+      "discoveryQuestions": [
+        "Which AI systems are in scope, and what risk tier does each fall into under the EU AI Act?",
+        "Is a conformity assessment required for any high-risk system, and on what timeline?",
+        "What technical documentation currently exists to support a conformity assessment?"
+      ],
+      "riskSeedRisks": [
+        {"risk": "AI system risk-tier misclassification", "why": "The Act's obligations vary by risk tier; an unclassified or misclassified system carries the wrong governance requirements."},
+        {"risk": "Technical documentation gap", "why": "A conformity assessment or notified body review requires documentation a working system rarely maintains by default."}
+      ],
+      "reportingNote": "Reporting should track technical documentation and evidence-trail readiness per AI system risk tier, since that is what a conformity assessment will examine."
+    },
+    "Security Governance": {
+      "frameworkLabel": "Security Governance",
+      "discoveryQuestions": [
+        "Which standard or assessment is driving this work (e.g. ISO 27001, SOC 2, NIST CSF), and what does 'ready' mean for it?",
+        "Is control ownership assigned at the level where each control is actually operated?",
+        "Has a gap been discovered during a prior assessment rather than caught in advance?"
+      ],
+      "riskSeedRisks": [
+        {"risk": "Control ownership gap", "why": "A control without an owner at the level it is actually operated is a gap an assessment will find."},
+        {"risk": "Documented policy vs. operating practice gap", "why": "A control can be documented as policy without reflecting how it is actually operated."}
+      ],
+      "reportingNote": "Reporting should track control gap remediation against the target baseline and assessment-readiness status."
+    },
+    "Third-Party Risk": {
+      "frameworkLabel": "Third-Party Risk",
+      "discoveryQuestions": [
+        "How are vendors segmented by criticality and data access today?",
+        "Who owns each vendor relationship after onboarding — through monitoring, renewal and exit?",
+        "What triggers a re-assessment when a vendor's subprocessors, data flows or controls change?"
+      ],
+      "riskSeedRisks": [
+        {"risk": "Post-onboarding ownership gap", "why": "The risk that materialises usually lives after signature, not at onboarding, and nothing triggers review unless someone is assigned to look for it."},
+        {"risk": "Assessment not proportional to vendor criticality", "why": "A single annual questionnaire for every vendor regardless of criticality misses where the real exposure sits."}
+      ],
+      "reportingNote": "Reporting should track vendor monitoring cadence and re-assessment triggers proportional to criticality, not a single annual snapshot."
+    },
+    "GRC": {
+      "frameworkLabel": "Governance, Risk & Compliance (GRC)",
+      "discoveryQuestions": [
+        "Where has governance debt accumulated — duplicated committees, undocumented decisions, paper-only ownership?",
+        "Which governance decisions actually matter most, and are decision rights clear for each?",
+        "What would demonstrate this transformation is working, beyond a redesigned org chart?"
+      ],
+      "riskSeedRisks": [
+        {"risk": "Governance debt", "why": "Duplicated committees, undocumented decisions and paper-only ownership accumulate faster than they get resolved."},
+        {"risk": "Decision-rights ambiguity", "why": "A redesign that starts with reporting lines instead of decision rights usually reproduces the same ambiguity in a new structure."}
+      ],
+      "reportingNote": "Reporting should demonstrate value early through a governance effectiveness metric, not just a completed redesign."
+    },
+    "Technology Risk": {
+      "frameworkLabel": "Technology Risk",
+      "discoveryQuestions": [
+        "What are the specific risk decisions this function needs to make, and who currently makes them?",
+        "Does the current risk taxonomy and control library reflect actual exposure, or a template applied broadly?",
+        "Is assurance evidence produced ahead of audit, or reconstructed after the fact?"
+      ],
+      "riskSeedRisks": [
+        {"risk": "Risk appetite not operational", "why": "A risk appetite statement engineering and business teams cannot apply in practice provides no real control."},
+        {"risk": "Assurance evidence reconstructed after the fact", "why": "Evidence produced only when an audit asks for it is a sign the assurance cycle isn't running continuously."}
+      ],
+      "reportingNote": "Reporting should track whether assurance evidence is produced ahead of audit on an ongoing cycle, not reconstructed reactively."
+    },
+    "AI Deployment Governance (ADGL)": {
+      "frameworkLabel": "AI Deployment Governance (ADGL) — general",
+      "discoveryQuestions": [
+        "Is there a named owner for AI governance decisions today, or is this the first time one is being assigned?"
+      ],
+      "riskSeedRisks": [
+        {"risk": "No consistent risk evaluation across AI use cases", "why": "Without one risk model calibrated to impact and reversibility, use cases get inconsistent scrutiny."}
+      ],
+      "reportingNote": "Reporting should track whether governance decisions have a named owner and a documented approval gate — the core test of whether the operating model is actually in use."
+    }
+  }
+}

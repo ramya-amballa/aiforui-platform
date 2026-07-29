@@ -140,6 +140,23 @@ def find_service_recommendations(organisation, opportunity_schema, service_recom
     ]
 
 
+def find_regulatory_domain_tags(organisation, opportunity_schema):
+    """AOS Sprint 23 — Engagement Templates. Every real domainTag
+    already recorded across this organisation's own opportunities —
+    the identical field service-mapping's determine_proposal_template()
+    and delivery-intelligence's select_regulatory_framework() both
+    already select from, never a second, independent detection.
+    Order-preserving, deduplicated, so the founder sees at a glance
+    which regulatory framework annex/proposal template applies."""
+    tags = []
+    for opp in opportunity_schema.get("opportunities", []):
+        if opp.get("organisation") == organisation:
+            for tag in opp.get("domainTags", []):
+                if tag not in tags:
+                    tags.append(tag)
+    return tags
+
+
 def find_delivery_engagement(organisation, delivery_log, delivery_feed):
     log_entry = delivery_log.get("engagements", {}).get(organisation)
     phase = log_entry.get("phase", "Not started") if log_entry else "Not started"
@@ -166,12 +183,14 @@ def build_company_360(organisation, profile, ai_feed, crm_data, relationship_fee
     pipeline_entries = find_pipeline_entries(organisation, pipeline_data)
     service_recs = find_service_recommendations(organisation, opportunity_schema, service_recommendations)
     delivery = find_delivery_engagement(organisation, delivery_log, delivery_feed)
+    regulatory_domain_tags = find_regulatory_domain_tags(organisation, opportunity_schema)
 
     return {
         "organisation": organisation,
         "industry": profile.get("industry", "Not specified"),
         "region": profile.get("region", "Not specified"),
         "scale": profile.get("scale", "Not specified"),
+        "regulatoryDomainTags": regulatory_domain_tags,
 
         "demandIntelligence": {
             "overallDemandScore": profile.get("overallDemandScore", 0),
@@ -252,6 +271,7 @@ def render_company_360_markdown(entry):
         f"**Industry:** {entry['industry']}  ",
         f"**Region:** {entry['region']}  ",
         f"**Scale:** {entry['scale']}  ",
+        f"**Regulatory domain tags on record:** {', '.join(entry['regulatoryDomainTags']) or 'None yet'}  ",
         f"**Generated:** {TODAY}",
         "",
         "---",

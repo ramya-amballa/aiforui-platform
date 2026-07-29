@@ -73,6 +73,7 @@ def main():
             "industry": company_360["industry"],
             "buyingReadinessBand": company_360["demandIntelligence"]["buyingReadinessBand"],
             "existingRelationship": (company_360["crm"] or {}).get("existingRelationship", "none"),
+            "regulatoryDomainTags": ", ".join(company_360["regulatoryDomainTags"]) or "None yet",
             "deliveryPhase": company_360["deliveryIntelligence"]["phase"],
             "pipelineEntryCount": len(company_360["pipeline"]),
             "profilePath": str(profile_path.relative_to(engine.REPO_ROOT)),

@@ -34,3 +34,18 @@ Charter, Operating Model, RACI Matrix, Risk Register, Evidence
 Register, Decision Framework, Implementation Roadmap, Board Reporting
 Pack. Each template lists the subset most relevant to that domain;
 adjust for the actual scope agreed with the client.
+
+## Programmatic Reuse (Sprint 23 — Engagement Templates)
+
+`proposal-content-library.json` is a faithful, structured extraction
+of each template's `challengeFraming` and `keyDeliverables` — never a
+new, independently-invented deliverable — keyed by the identical
+filename `service-mapping/runtime/generate.py`'s own
+`determine_proposal_template()` already selects.
+`sales-director/runtime/prepare.py`'s `regulatory_deliverables()` looks
+that up and, when service-mapping has matched a template for an
+opportunity, replaces the Executive Proposal's generic Deliverables
+boilerplate with this real, framework-specific list. These `.md` files
+remain the master reference copies the founder can still open
+directly; edit those first if the underlying pitch changes, and keep
+`proposal-content-library.json` in sync by hand.

@@ -50,7 +50,7 @@ if not companies:
 else:
     show_table(
         companies,
-        columns=["organisation", "industry", "buyingReadinessBand", "existingRelationship", "deliveryPhase", "pipelineEntryCount"],
+        columns=["organisation", "industry", "buyingReadinessBand", "existingRelationship", "regulatoryDomainTags", "deliveryPhase", "pipelineEntryCount"],
         empty_message="No organisation matches.",
     )
 

@@ -1,0 +1,85 @@
+{
+  "_comment": "AOS Sprint 23 — Engagement Templates. Structured, faithful extraction of templates/proposals/*.md's own already-authored content (challengeFraming, keyDeliverables) so Sales Director's executive_proposal_document() can reuse this real IP directly instead of only citing the filename. Nothing here is invented — every field is drawn verbatim (or near-verbatim, trimmed) from the matching .md file's own 'Understanding the Challenge' and 'Deliverables' sections. Keyed by the exact filename service-mapping/runtime/generate.py's determine_proposal_template() already selects (service-catalogue.json's proposalTemplateByDomainTag/proposalTemplateByPrimaryService) — never a second, independent selection rule. Edit the .md files first if the underlying pitch changes; keep this file in sync by hand.",
+  "ai-governance-proposal-template.md": {
+    "challengeFraming": "{{CLIENT_NAME}} is deploying or planning to deploy AI capabilities where governance has not kept pace with adoption: {{SPECIFIC_CONTEXT, e.g. \"no named owner per use case,\" \"no consistent risk evaluation across use cases,\" \"policy exists but is not operational\"}}. The gap is rarely the framework; it is translating an AI governance intent into ownership, evidence and an operating rhythm that holds up under board and regulatory scrutiny.",
+    "keyDeliverables": [
+      "AI Use-Case Inventory and Risk Register",
+      "RACI Matrix for AI governance decisions",
+      "Decision Framework covering risk evaluation and approval gates",
+      "Governance Charter",
+      "Board Reporting Pack"
+    ]
+  },
+  "dora-proposal-template.md": {
+    "challengeFraming": "{{CLIENT_NAME}} needs to demonstrate digital operational resilience under DORA, specifically around {{SPECIFIC_CONTEXT, e.g. \"ICT third-party risk management,\" \"incident reporting readiness,\" \"resilience testing obligations\"}}. DORA changes what monitoring has to mean for ICT third parties: a vendor compliant at onboarding can drift out of alignment as the obligation itself evolves, with no commercial breach involved.",
+    "keyDeliverables": [
+      "Risk Register: DORA readiness gap assessment",
+      "Operating Model for ICT third-party governance",
+      "Evidence Register for ongoing monitoring and incident reporting",
+      "Board Reporting Pack"
+    ]
+  },
+  "enterprise-consulting-proposal-template.md": {
+    "challengeFraming": "{{CLIENT_NAME}} needs a broader governance engagement spanning {{SPECIFIC_CONTEXT, e.g. \"multiple domains: AI governance, technology risk and third-party governance together,\" \"an enterprise-wide operating model, not a single-domain fix,\" \"coordination across several business units and committees\"}}. This is scoped as a larger programme rather than a single-domain engagement.",
+    "keyDeliverables": [
+      "Governance Charter covering the full programme mandate",
+      "Operating Model with decision rights across all domains in scope",
+      "RACI Matrix, Risk Register and Evidence Register per domain, rolled up to one Governance Dashboard",
+      "Implementation Roadmap, phased by risk exposure",
+      "Board Reporting Pack"
+    ]
+  },
+  "eu-ai-act-proposal-template.md": {
+    "challengeFraming": "{{CLIENT_NAME}} needs to operationalise the EU AI Act's risk-tiered obligations for {{SPECIFIC_CONTEXT, e.g. \"a specific high-risk AI system,\" \"an AI inventory across multiple business units,\" \"conformity assessment preparation\"}}. The Act is rarely the hard part to understand; it is translating risk-tier obligations into ownership, evidence and an operating rhythm that a regulator or notified body can actually examine.",
+    "keyDeliverables": [
+      "AI Inventory classified by EU AI Act risk tier",
+      "Risk Register and technical documentation structure",
+      "RACI Matrix for AI governance decisions",
+      "Board Reporting Pack"
+    ]
+  },
+  "fractional-advisory-proposal-template.md": {
+    "challengeFraming": "{{CLIENT_NAME}} needs senior AI and technology governance direction without a full-time hire: {{SPECIFIC_CONTEXT, e.g. \"board and committee reporting on AI oversight,\" \"ongoing risk appetite and policy decisions,\" \"a governance function that has no senior owner yet\"}}. Fractional advisory gives that direction on an ongoing, part-time basis, scaled to what the organisation actually needs.",
+    "keyDeliverables": [
+      "Ongoing Decision Register and Governance Dashboard",
+      "Board Reporting Pack, refreshed on the agreed cadence",
+      "RACI Matrix, updated as ownership changes"
+    ]
+  },
+  "grc-proposal-template.md": {
+    "challengeFraming": "{{CLIENT_NAME}}'s governance operating model shows {{SPECIFIC_CONTEXT, e.g. \"governance debt: duplicated committees, undocumented decisions, paper-only ownership,\" \"a redesign that risks stalling delivery,\" \"fragmented reporting lines\"}}. A GRC transformation that tries to fix everything at once usually fixes nothing before executive sponsorship runs out; this proposal sequences by risk exposure instead.",
+    "keyDeliverables": [
+      "Governance debt diagnostic",
+      "Operating Model with a target decision-rights map",
+      "Implementation Roadmap, phased by risk exposure",
+      "Governance Dashboard for effectiveness reporting"
+    ]
+  },
+  "security-governance-proposal-template.md": {
+    "challengeFraming": "{{CLIENT_NAME}}'s cyber security programme has {{SPECIFIC_CONTEXT, e.g. \"strong controls but weak governance layer above them,\" \"no clear control ownership,\" \"gaps discovered at assessment rather than caught in advance\"}}. The governance layer behind a security programme, control ownership, gap prioritisation, assessment readiness, is usually the part that determines whether an assessment goes smoothly or becomes a scramble.",
+    "keyDeliverables": [
+      "Control gap assessment against the target baseline",
+      "Risk Register: prioritised remediation roadmap",
+      "Evidence Register for assessment readiness",
+      "Board Reporting Pack"
+    ]
+  },
+  "technology-risk-proposal-template.md": {
+    "challengeFraming": "{{CLIENT_NAME}}'s technology risk function faces {{SPECIFIC_CONTEXT, e.g. \"a risk appetite statement engineers cannot apply,\" \"a control library that does not match actual exposure,\" \"assurance evidence reconstructed after the fact rather than maintained\"}}. The objective is a risk appetite and control ownership model that holds up under audit, not a document that describes intent without changing practice.",
+    "keyDeliverables": [
+      "Risk Register built from the reset taxonomy and control library",
+      "Decision Framework: risk appetite in operational language",
+      "Evidence Register for control ownership and testing",
+      "Board Reporting Pack"
+    ]
+  },
+  "third-party-risk-proposal-template.md": {
+    "challengeFraming": "{{CLIENT_NAME}}'s third-party risk programme is {{SPECIFIC_CONTEXT, e.g. \"strong at onboarding, weak at everything after,\" \"unclear on who owns a vendor relationship once onboarding ends,\" \"not proportional to vendor criticality\"}}. The risk that actually materialises usually lives after signature, not at onboarding: a subprocessor changes, a data flow expands, a control lapses, and nothing triggers review unless someone is assigned to look for it.",
+    "keyDeliverables": [
+      "Risk Register segmented by vendor criticality and data access",
+      "Operating Model for the third-party governance framework",
+      "Evidence Register for ongoing monitoring and re-assessment",
+      "Exit and offboarding governance checklist"
+    ]
+  }
+}

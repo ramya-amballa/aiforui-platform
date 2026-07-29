@@ -87,8 +87,13 @@ reconnect recommendation); Reverse Job Hunt's BD strategy (entry point,
 consulting potential estimate, campaign status, touchpoints); every
 Revenue Hunter pipeline entry for that organisation; every Service
 Mapping recommendation for that organisation's opportunities (joined
-through `opportunity-schema.json`); and Delivery Intelligence's
-engagement phase.
+through `opportunity-schema.json`); Delivery Intelligence's engagement
+phase; and (Sprint 23 — Engagement Templates) every real `domainTag`
+already recorded across that organisation's own opportunities, so the
+founder can see at a glance which regulatory framework annex and
+proposal template — DORA, EU AI Act, Security Governance, Third-Party
+Risk, GRC, Technology Risk — already applies, without opening Sales
+Director or Delivery Intelligence separately.
 
 ## Regenerated in Full, Every Run
 

@@ -96,6 +96,9 @@ def main():
         engine.SERVICE_RECOMMENDATIONS_PATH, {"recommendations": {}}
     ).get("recommendations", {})
     bank = engine.load_json(engine.PRACTITIONER_BANK_PATH, {})
+    # AOS Sprint 23 — Engagement Templates. Static, shared config; see
+    # templates/delivery/regulatory-framework-annexes.json's own comment.
+    framework_config = engine.load_json(engine.REGULATORY_FRAMEWORK_ANNEXES_PATH, {"frameworkPriority": [], "frameworks": {}})
     # Founder-maintained, read-only — see delivery_intelligence_engine.py's
     # own module docstring. This engine never writes to it.
     delivery_log = engine.load_json(engine.DELIVERY_LOG_PATH, {"engagements": {}})
@@ -115,7 +118,7 @@ def main():
         service_recommendation = engine.find_service_recommendation(opportunity_id, service_recommendations)
 
         artifacts, feed_entry = engine.build_delivery_kit(
-            pipeline_entry, opportunity, ai_entry, service_recommendation, bank, delivery_log,
+            pipeline_entry, opportunity, ai_entry, service_recommendation, bank, delivery_log, framework_config,
         )
 
         record = processed_index["processed"].get(organisation)

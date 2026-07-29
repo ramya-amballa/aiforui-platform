@@ -51,10 +51,11 @@ if not engagements:
 else:
     rows = [
         {"organisation": e["organisation"], "engagementRef": e["engagementRef"], "primaryService": e["primaryService"],
+         "regulatoryFramework": e.get("regulatoryFramework", "Not recorded — regenerate this kit to backfill"),
          "phase": e["phase"], "kitPath": e["kitPath"]}
         for e in engagements
     ]
-    show_table(rows, columns=["organisation", "engagementRef", "primaryService", "phase", "kitPath"],
+    show_table(rows, columns=["organisation", "engagementRef", "primaryService", "regulatoryFramework", "phase", "kitPath"],
                empty_message="No engagement matches.")
 
     names = [e["organisation"] for e in engagements]

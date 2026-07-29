@@ -58,6 +58,18 @@ class FinderTests(unittest.TestCase):
         self.assertEqual(engine.find_account_intelligence_entry("BBVA", feed)["organisation"], "BBVA")
         self.assertIsNone(engine.find_account_intelligence_entry("Nonexistent", feed))
 
+    def test_find_regulatory_domain_tags_deduplicates_and_preserves_order(self):
+        opportunity_schema = {"opportunities": [
+            {"organisation": "BBVA", "domainTags": ["DORA", "ADGL"]},
+            {"organisation": "BBVA", "domainTags": ["ADGL", "GRC"]},
+            {"organisation": "Other Co", "domainTags": ["EU AI Act"]},
+        ]}
+        tags = engine.find_regulatory_domain_tags("BBVA", opportunity_schema)
+        self.assertEqual(tags, ["DORA", "ADGL", "GRC"])
+
+    def test_find_regulatory_domain_tags_honest_empty_when_none(self):
+        self.assertEqual(engine.find_regulatory_domain_tags("BBVA", {"opportunities": []}), [])
+
     def test_find_crm_entry_matches_despite_casing_and_whitespace(self):
         crm_data = {"companies": [{"companyName": "  BBVA  ", "existingRelationship": "prior client"}]}
         found = engine.find_crm_entry("BBVA", crm_data)

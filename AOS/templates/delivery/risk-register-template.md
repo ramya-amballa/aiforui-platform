@@ -12,6 +12,15 @@ taken as already confirmed:
 
 {{RISK_REGISTER_ROWS}}
 
+## {{REGULATORY_FRAMEWORK_LABEL}} — Framework-Standard Starting Risks
+
+A second, distinct source from the rows above: risks standard to this
+regulatory framework generally, not specific to this organisation's
+public signal. Also to be validated, revised or closed during
+Discovery, never taken as already confirmed:
+
+{{REGULATORY_FRAMEWORK_SEED_RISKS}}
+
 ## Additional Risks Identified During Engagement
 
 | # | Risk | Likelihood | Impact | Owner | Mitigation | Status |

@@ -31,7 +31,11 @@ for the committee.)*
 
 {{BUDGET_STATUS}}
 
-## 6. Next Steering Committee
+## 6. {{REGULATORY_FRAMEWORK_LABEL}} — Reporting Considerations
+
+{{REGULATORY_FRAMEWORK_REPORTING_NOTE}}
+
+## 7. Next Steering Committee
 
 {{NEXT_MEETING_DATE}}
 

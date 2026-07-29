@@ -340,6 +340,65 @@ class ExecutiveProposalGeneratorTests(unittest.TestCase):
         self.assertEqual(found["organisation"], "Acme Corp")
         self.assertIsNone(prepare.find_account_intelligence_entry("Nonexistent Co", feed))
 
+    def test_uses_regulatory_deliverables_when_a_real_service_recommendation_matches(self):
+        prepare.save_json(self.tmp_path / "account-intelligence-feed.json", {"briefs": [AI_ENTRY]})
+        prepare.save_json(self.tmp_path / "service-recommendations.json", {"recommendations": {
+            DIRECT_OPPORTUNITY["id"]: {
+                "opportunityId": DIRECT_OPPORTUNITY["id"], "notApplicable": False,
+                "primaryService": "AI Deployment Governance (ADGL)",
+                "recommendedEngagementType": "Consulting Project", "estimatedProjectSize": "Medium",
+                "projectSizeBasis": "heuristic-estimate", "secondaryServices": [], "crossSellOpportunities": [],
+                "recommendedProposalTemplate": "dora-proposal-template.md",
+            }
+        }})
+        self._write_opportunities([DIRECT_OPPORTUNITY])
+        prepare.main()
+
+        feed = prepare.load_json(self.tmp_path / "ceo-advisor-feed.json")
+        entry = feed["feed"][0]
+        proposal = (prepare.REPO_ROOT / entry["proposalPath"]).read_text(encoding="utf-8")
+        self.assertIn("DORA readiness gap assessment", proposal)
+        self.assertIn("Evidence Register for ongoing monitoring and incident reporting", proposal)
+        self.assertNotIn("A findings report scoped to the governance challenges above", proposal)
+
+    def test_falls_back_to_generic_deliverables_when_no_service_recommendation(self):
+        prepare.save_json(self.tmp_path / "account-intelligence-feed.json", {"briefs": [AI_ENTRY]})
+        self._write_opportunities([DIRECT_OPPORTUNITY])
+        prepare.main()
+
+        feed = prepare.load_json(self.tmp_path / "ceo-advisor-feed.json")
+        entry = feed["feed"][0]
+        proposal = (prepare.REPO_ROOT / entry["proposalPath"]).read_text(encoding="utf-8")
+        self.assertIn("A findings report scoped to the governance challenges above", proposal)
+
+
+class RegulatoryDeliverablesTests(unittest.TestCase):
+    """AOS Sprint 23 — Engagement Templates. regulatory_deliverables()
+    reuses service-mapping's own already-computed recommendedProposalTemplate
+    — never a second, independent template selection."""
+
+    LIBRARY = {"dora-proposal-template.md": {"keyDeliverables": ["Risk Register: DORA readiness gap assessment"]}}
+
+    def test_returns_real_deliverables_for_a_matched_template(self):
+        rec = {"notApplicable": False, "recommendedProposalTemplate": "dora-proposal-template.md"}
+        self.assertEqual(prepare.regulatory_deliverables(rec, self.LIBRARY),
+                          ["Risk Register: DORA readiness gap assessment"])
+
+    def test_honest_none_when_no_service_recommendation(self):
+        self.assertIsNone(prepare.regulatory_deliverables(None, self.LIBRARY))
+
+    def test_honest_none_when_not_applicable(self):
+        rec = {"notApplicable": True, "recommendedProposalTemplate": "dora-proposal-template.md"}
+        self.assertIsNone(prepare.regulatory_deliverables(rec, self.LIBRARY))
+
+    def test_honest_none_when_template_not_in_library(self):
+        rec = {"notApplicable": False, "recommendedProposalTemplate": "nonexistent-template.md"}
+        self.assertIsNone(prepare.regulatory_deliverables(rec, self.LIBRARY))
+
+    def test_honest_none_when_no_template_field(self):
+        rec = {"notApplicable": False}
+        self.assertIsNone(prepare.regulatory_deliverables(rec, self.LIBRARY))
+
 
 QUALIFICATION_OPPORTUNITY = dict(
     DIRECT_OPPORTUNITY,
