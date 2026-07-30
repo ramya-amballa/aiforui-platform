@@ -1,0 +1,24 @@
+{
+  "schema": {
+    "capacityStatus": "string — Available Capacity | Near Capacity | Over Capacity | Not enough signal yet",
+    "weeksOfCommittedWorkMin": "number or null",
+    "weeksOfCommittedWorkMax": "number or null",
+    "foundersAvailableDaysPerWeek": "number — from capacity-config.json, founder-tunable",
+    "activeEngagements": "array — pipeline stage=='won' entries not yet Closed in delivery-log.json",
+    "activeEstimatedDaysMin": "number",
+    "activeEstimatedDaysMax": "number",
+    "pendingProposals": "array — sales-director feed entries at Ready To Send/Proposal Ready",
+    "pendingEstimatedDaysMin": "number",
+    "pendingEstimatedDaysMax": "number"
+  },
+  "capacityStatus": "Available Capacity",
+  "weeksOfCommittedWorkMin": 0.0,
+  "weeksOfCommittedWorkMax": 0.0,
+  "foundersAvailableDaysPerWeek": 4,
+  "activeEngagements": [],
+  "activeEstimatedDaysMin": 0,
+  "activeEstimatedDaysMax": 0,
+  "pendingProposals": [],
+  "pendingEstimatedDaysMin": 0,
+  "pendingEstimatedDaysMax": 0
+}

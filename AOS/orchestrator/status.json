@@ -9,16 +9,16 @@
     "reportPath": "string — this run's Daily Execution Report, relative to the repo root",
     "logPath": "string — this run's full log, relative to the repo root"
   },
-  "startedAt": "2026-07-29T03:47:50.110528+00:00",
-  "finishedAt": "2026-07-29T03:47:52.744546+00:00",
-  "durationSeconds": 2.63,
+  "startedAt": "2026-07-30T03:39:33.655587+00:00",
+  "finishedAt": "2026-07-30T03:39:36.504950+00:00",
+  "durationSeconds": 2.85,
   "employees": [
     {
       "key": "market-intelligence",
       "name": "Market Intelligence",
       "status": "SUCCESS",
       "attempts": 1,
-      "durationSeconds": 0.93,
+      "durationSeconds": 0.42,
       "error": null,
       "outputs": []
     },
@@ -36,11 +36,11 @@
       "name": "Demand Intelligence",
       "status": "SUCCESS",
       "attempts": 1,
-      "durationSeconds": 1.12,
+      "durationSeconds": 1.46,
       "error": null,
       "outputs": [
-        "demand-intelligence/runtime/rejected/2026-07-29-rejected-report.md",
-        "demand-intelligence/runtime/snapshots/2026-07-29-collection-snapshot.json"
+        "demand-intelligence/runtime/rejected/2026-07-30-rejected-report.md",
+        "demand-intelligence/runtime/snapshots/2026-07-30-collection-snapshot.json"
       ]
     },
     {
@@ -51,8 +51,8 @@
       "durationSeconds": 0.04,
       "error": null,
       "outputs": [
-        "revenue-hunter/runtime/output/2026-07-29-revenue-dashboard.md",
-        "revenue-hunter/runtime/output/2026-07-29-revenue-forecast.md"
+        "revenue-hunter/runtime/output/2026-07-30-revenue-dashboard.md",
+        "revenue-hunter/runtime/output/2026-07-30-revenue-forecast.md"
       ]
     },
     {
@@ -135,7 +135,7 @@
       "durationSeconds": 0.07,
       "error": null,
       "outputs": [
-        "tender-intelligence/runtime/output/2026-07-29-tender-intelligence-report.md",
+        "tender-intelligence/runtime/output/2026-07-30-tender-intelligence-report.md",
         "tender-intelligence/runtime/output/tender-intelligence-feed.json"
       ]
     },
@@ -147,6 +147,60 @@
       "durationSeconds": 0.04,
       "error": null,
       "outputs": []
+    },
+    {
+      "key": "delivery-intelligence",
+      "name": "Delivery Intelligence",
+      "status": "SUCCESS",
+      "attempts": 1,
+      "durationSeconds": 0.04,
+      "error": null,
+      "outputs": []
+    },
+    {
+      "key": "company-360",
+      "name": "Company 360",
+      "status": "SKIPPED_DEPENDENCY_FAILED",
+      "attempts": 0,
+      "durationSeconds": 0,
+      "error": "upstream failure: Reverse Job Hunt",
+      "outputs": []
+    },
+    {
+      "key": "executive-memory",
+      "name": "Executive Memory",
+      "status": "SUCCESS",
+      "attempts": 1,
+      "durationSeconds": 0.04,
+      "error": null,
+      "outputs": [
+        "executive-memory/runtime/output/2026-07-30-executive-memory-report.md",
+        "executive-memory/runtime/output/executive-memory-feed.json"
+      ]
+    },
+    {
+      "key": "market-positioning-intelligence",
+      "name": "Market Positioning Intelligence",
+      "status": "SUCCESS",
+      "attempts": 1,
+      "durationSeconds": 0.03,
+      "error": null,
+      "outputs": [
+        "market-positioning-intelligence/runtime/output/2026-07-30-market-positioning-report.md",
+        "market-positioning-intelligence/runtime/output/market-positioning-feed.json"
+      ]
+    },
+    {
+      "key": "capacity-management",
+      "name": "Capacity Management",
+      "status": "SUCCESS",
+      "attempts": 1,
+      "durationSeconds": 0.04,
+      "error": null,
+      "outputs": [
+        "capacity-management/runtime/output/2026-07-30-capacity-report.md",
+        "capacity-management/runtime/output/capacity-feed.json"
+      ]
     },
     {
       "key": "product-manager",
@@ -171,15 +225,15 @@
       "name": "Daily Brief",
       "status": "SUCCESS",
       "attempts": 1,
-      "durationSeconds": 0.06,
+      "durationSeconds": 0.31,
       "error": null,
       "outputs": [
         "executive-dashboard/executive-dashboard.md",
         "executive-dashboard/executive-dashboard.html",
-        "executive-dashboard/runtime/output/2026-07-29-executive-dashboard.md",
-        "executive-dashboard/runtime/output/2026-07-29-executive-dashboard.html",
-        "daily-briefs/2026/07/29/executive-dashboard.md",
-        "daily-briefs/2026/07/29/executive-dashboard.html"
+        "executive-dashboard/runtime/output/2026-07-30-executive-dashboard.md",
+        "executive-dashboard/runtime/output/2026-07-30-executive-dashboard.html",
+        "daily-briefs/2026/07/30/executive-dashboard.md",
+        "daily-briefs/2026/07/30/executive-dashboard.html"
       ]
     },
     {
@@ -188,12 +242,12 @@
       "status": "SKIPPED_DEPENDENCY_FAILED",
       "attempts": 0,
       "durationSeconds": 0,
-      "error": "upstream failure: Reverse Job Hunt",
+      "error": "upstream failure: Reverse Job Hunt, Company 360",
       "outputs": []
     }
   ],
   "overallStatus": "SUCCESS",
   "failures": [],
-  "reportPath": "AOS/orchestrator/runtime/reports/2026-07-29-daily-execution-report.md",
-  "logPath": "AOS/orchestrator/logs/2026-07-29-034750-orchestrator.log"
+  "reportPath": "AOS/orchestrator/runtime/reports/2026-07-30-daily-execution-report.md",
+  "logPath": "AOS/orchestrator/logs/2026-07-30-033933-orchestrator.log"
 }

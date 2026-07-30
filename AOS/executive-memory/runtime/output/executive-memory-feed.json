@@ -1,0 +1,16 @@
+{
+  "schema": {
+    "recurringPriorities": "array of {organisation, daysInTop3}",
+    "recurringAlerts": "array of {alertType, daysFired}",
+    "daysTracked": "number — total days in ceo-advisor's daily-priorities-log.json",
+    "lessonsLearnedLibrary": "array of {organisation, lessons, closureReportPath}",
+    "recurringGovernanceRisks": "array of {risk, organisations, occurrenceCount}",
+    "founderDecisions": "array — decision-log.json's own decisions, read-only"
+  },
+  "recurringPriorities": [],
+  "recurringAlerts": [],
+  "daysTracked": 0,
+  "lessonsLearnedLibrary": [],
+  "recurringGovernanceRisks": [],
+  "founderDecisions": []
+}

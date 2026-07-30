@@ -1,0 +1,55 @@
+{
+  "schema": {
+    "serviceDemandCoverage": "array of {service, recommendationCount} — every one of the 10 catalogue services, sorted by count",
+    "regulatoryTailwinds": "array of {source, developmentCount} — substantive developments only",
+    "substantiveRegulatoryDevelopmentCount": "number",
+    "competitiveSignal": "string — always honest; AOS has no competitor/market-share data source",
+    "lostOpportunities": "array of {organisation, title} — real pipeline.json stage=='lost' entries only"
+  },
+  "serviceDemandCoverage": [
+    {
+      "service": "AI Deployment Governance (ADGL)",
+      "recommendationCount": 0
+    },
+    {
+      "service": "AI Governance Advisory",
+      "recommendationCount": 0
+    },
+    {
+      "service": "AI Risk Assessment",
+      "recommendationCount": 0
+    },
+    {
+      "service": "AI Governance Operating Model",
+      "recommendationCount": 0
+    },
+    {
+      "service": "Responsible AI Implementation",
+      "recommendationCount": 0
+    },
+    {
+      "service": "AI Third-Party Risk Review",
+      "recommendationCount": 0
+    },
+    {
+      "service": "AI Readiness Assessment",
+      "recommendationCount": 0
+    },
+    {
+      "service": "AI Policy & Control Framework",
+      "recommendationCount": 0
+    },
+    {
+      "service": "Fractional AI Governance Lead",
+      "recommendationCount": 0
+    },
+    {
+      "service": "Executive Workshop",
+      "recommendationCount": 0
+    }
+  ],
+  "regulatoryTailwinds": [],
+  "substantiveRegulatoryDevelopmentCount": 0,
+  "competitiveSignal": "Not tracked — AOS has no data source for competitor activity, market share or competitive pricing.",
+  "lostOpportunities": []
+}

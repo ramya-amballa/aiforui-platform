@@ -349,6 +349,106 @@
       "relevanceScore": 0,
       "categoriesMatched": [],
       "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0027",
+      "dateRejected": "2026-07-30",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Hospice",
+      "organisation": "Hometown Deli &amp; Grocery",
+      "url": "https://remoteOK.com/remote-jobs/remote-hospice-hometown-deli-amp-grocery-1135592",
+      "relevanceScore": 0,
+      "categoriesMatched": [
+        "companyIndustry"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: companyIndustry; Healthcare role penalty (-40))."
+    },
+    {
+      "id": "rej-0028",
+      "dateRejected": "2026-07-30",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Acoustical Management",
+      "organisation": "Hometown Deli &amp; Grocery",
+      "url": "https://remoteOK.com/remote-jobs/remote-acoustical-management-hometown-deli-amp-grocery-1135593",
+      "relevanceScore": 0,
+      "categoriesMatched": [
+        "companyIndustry"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: companyIndustry; Healthcare role penalty (-40))."
+    },
+    {
+      "id": "rej-0029",
+      "dateRejected": "2026-07-30",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Video Editor Reacts",
+      "organisation": "MrBeast",
+      "url": "https://remoteOK.com/remote-jobs/remote-video-editor-reacts-mrbeast-1135607",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0030",
+      "dateRejected": "2026-07-30",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Area Sales Manager",
+      "organisation": "ROAR Organic",
+      "url": "https://remoteOK.com/remote-jobs/remote-area-sales-manager-roar-organic-1135611",
+      "relevanceScore": 10,
+      "categoriesMatched": [
+        "governanceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: governanceContext; no penalties)."
+    },
+    {
+      "id": "rej-0031",
+      "dateRejected": "2026-07-30",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Sales &amp; Marketing Director",
+      "organisation": "Hustler Marketing",
+      "url": "https://remoteOK.com/remote-jobs/remote-sales-amp-marketing-director-hustler-marketing-1135575",
+      "relevanceScore": 20,
+      "categoriesMatched": [
+        "complianceContext",
+        "governanceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: complianceContext, governanceContext; no penalties)."
+    },
+    {
+      "id": "rej-0032",
+      "dateRejected": "2026-07-30",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "LLM Engineer Freelancer",
+      "organisation": "Monterail",
+      "url": "https://remoteOK.com/remote-jobs/remote-llm-engineer-freelancer-monterail-1135638",
+      "relevanceScore": 12,
+      "categoriesMatched": [
+        "llm",
+        "rag"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: llm, rag; no penalties)."
+    },
+    {
+      "id": "rej-0033",
+      "dateRejected": "2026-07-30",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "AI Intern",
+      "organisation": "CertifyOS",
+      "url": "https://remoteOK.com/remote-jobs/remote-ai-intern-certifyos-1135555",
+      "relevanceScore": 26,
+      "categoriesMatched": [
+        "aiContext",
+        "complianceContext",
+        "governanceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: aiContext, complianceContext, governanceContext; no penalties)."
     }
   ]
 }
