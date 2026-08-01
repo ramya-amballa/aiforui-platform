@@ -1,6 +1,6 @@
 # AOS Executive Dashboard
 
-**Generated:** 2026-08-01
+**Generated:** 2026-07-31
 
 *Read-only view over `demand-intelligence/opportunity-schema.json`, `08-Revenue-Hunter/pipeline.json` and `06-CRM/company-intelligence.json`. Regenerate with `python3 runtime/generate.py`; do not hand-edit.*
 

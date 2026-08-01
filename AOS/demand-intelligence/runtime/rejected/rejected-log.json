@@ -349,6 +349,398 @@
       "relevanceScore": 0,
       "categoriesMatched": [],
       "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0027",
+      "dateRejected": "2026-07-30",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Hospice",
+      "organisation": "Hometown Deli &amp; Grocery",
+      "url": "https://remoteOK.com/remote-jobs/remote-hospice-hometown-deli-amp-grocery-1135592",
+      "relevanceScore": 0,
+      "categoriesMatched": [
+        "companyIndustry"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: companyIndustry; Healthcare role penalty (-40))."
+    },
+    {
+      "id": "rej-0028",
+      "dateRejected": "2026-07-30",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Acoustical Management",
+      "organisation": "Hometown Deli &amp; Grocery",
+      "url": "https://remoteOK.com/remote-jobs/remote-acoustical-management-hometown-deli-amp-grocery-1135593",
+      "relevanceScore": 0,
+      "categoriesMatched": [
+        "companyIndustry"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: companyIndustry; Healthcare role penalty (-40))."
+    },
+    {
+      "id": "rej-0029",
+      "dateRejected": "2026-07-30",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Video Editor Reacts",
+      "organisation": "MrBeast",
+      "url": "https://remoteOK.com/remote-jobs/remote-video-editor-reacts-mrbeast-1135607",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0030",
+      "dateRejected": "2026-07-30",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Area Sales Manager",
+      "organisation": "ROAR Organic",
+      "url": "https://remoteOK.com/remote-jobs/remote-area-sales-manager-roar-organic-1135611",
+      "relevanceScore": 10,
+      "categoriesMatched": [
+        "governanceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: governanceContext; no penalties)."
+    },
+    {
+      "id": "rej-0031",
+      "dateRejected": "2026-07-30",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Sales &amp; Marketing Director",
+      "organisation": "Hustler Marketing",
+      "url": "https://remoteOK.com/remote-jobs/remote-sales-amp-marketing-director-hustler-marketing-1135575",
+      "relevanceScore": 20,
+      "categoriesMatched": [
+        "complianceContext",
+        "governanceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: complianceContext, governanceContext; no penalties)."
+    },
+    {
+      "id": "rej-0032",
+      "dateRejected": "2026-07-30",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "LLM Engineer Freelancer",
+      "organisation": "Monterail",
+      "url": "https://remoteOK.com/remote-jobs/remote-llm-engineer-freelancer-monterail-1135638",
+      "relevanceScore": 12,
+      "categoriesMatched": [
+        "llm",
+        "rag"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: llm, rag; no penalties)."
+    },
+    {
+      "id": "rej-0033",
+      "dateRejected": "2026-07-30",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "AI Intern",
+      "organisation": "CertifyOS",
+      "url": "https://remoteOK.com/remote-jobs/remote-ai-intern-certifyos-1135555",
+      "relevanceScore": 26,
+      "categoriesMatched": [
+        "aiContext",
+        "complianceContext",
+        "governanceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: aiContext, complianceContext, governanceContext; no penalties)."
+    },
+    {
+      "id": "rej-0034",
+      "dateRejected": "2026-07-31",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Traveler Care Specialist Luxury Travel",
+      "organisation": "Zicasso",
+      "url": "https://remoteOK.com/remote-jobs/remote-traveler-care-specialist-luxury-travel-zicasso-1135640",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0035",
+      "dateRejected": "2026-07-31",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Copy Editor",
+      "organisation": "MissionStaff",
+      "url": "https://remoteOK.com/remote-jobs/remote-copy-editor-missionstaff-1135668",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0036",
+      "dateRejected": "2026-07-31",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "HR Generalist 1",
+      "organisation": "TALENT Software Services",
+      "url": "https://remoteOK.com/remote-jobs/remote-hr-generalist-1-talent-software-services-1135696",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0037",
+      "dateRejected": "2026-07-31",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Customer Account Associate Albertsons",
+      "organisation": "NestlÃ©",
+      "url": "https://remoteOK.com/remote-jobs/remote-customer-account-associate-albertsons-nestle-1135671",
+      "relevanceScore": 10,
+      "categoriesMatched": [
+        "complianceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: complianceContext; no penalties)."
+    },
+    {
+      "id": "rej-0038",
+      "dateRejected": "2026-07-31",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Ship to Shore Technician",
+      "organisation": "Carnival Corporation",
+      "url": "https://remoteOK.com/remote-jobs/remote-ship-to-shore-technician-carnival-corporation-1135651",
+      "relevanceScore": 10,
+      "categoriesMatched": [
+        "complianceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: complianceContext; no penalties)."
+    },
+    {
+      "id": "rej-0039",
+      "dateRejected": "2026-07-31",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Program &amp; Events Coordinator",
+      "organisation": "LSP Association",
+      "url": "https://remoteOK.com/remote-jobs/remote-program-amp-events-coordinator-lsp-association-1135669",
+      "relevanceScore": 0,
+      "categoriesMatched": [
+        "complianceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: complianceContext; Healthcare role penalty (-20))."
+    },
+    {
+      "id": "rej-0040",
+      "dateRejected": "2026-07-31",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Lion King",
+      "organisation": "BiFlorica",
+      "url": "https://remoteOK.com/remote-jobs/remote-lion-king-biflorica-1135623",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0041",
+      "dateRejected": "2026-07-31",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Patient Access and Intake Coordinator",
+      "organisation": "Kindred",
+      "url": "https://remoteOK.com/remote-jobs/remote-patient-access-and-intake-coordinator-kindred-1135670",
+      "relevanceScore": 20,
+      "categoriesMatched": [
+        "complianceContext",
+        "governanceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: complianceContext, governanceContext; no penalties)."
+    },
+    {
+      "id": "rej-0042",
+      "dateRejected": "2026-07-31",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Senior Demand Generation Manager",
+      "organisation": "TestGorilla",
+      "url": "https://remoteOK.com/remote-jobs/remote-senior-demand-generation-manager-testgorilla-1135606",
+      "relevanceScore": 0,
+      "categoriesMatched": [
+        "llm"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: llm; Healthcare role penalty (-20); Isolated weak-keyword penalty (-15))."
+    },
+    {
+      "id": "rej-0043",
+      "dateRejected": "2026-07-31",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Healthcare Virtual Assistant Athena EMR Experience",
+      "organisation": "Snapscale Philippines",
+      "url": "https://remoteOK.com/remote-jobs/remote-healthcare-virtual-assistant-athena-emr-experience-snapscale-philippines-1135688",
+      "relevanceScore": 0,
+      "categoriesMatched": [
+        "complianceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: complianceContext; Healthcare role penalty (-20))."
+    },
+    {
+      "id": "rej-0044",
+      "dateRejected": "2026-07-31",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Chief of Staff the CEO",
+      "organisation": "Everyday Dose",
+      "url": "https://remoteOK.com/remote-jobs/remote-chief-of-staff-the-ceo-everyday-dose-1135608",
+      "relevanceScore": 8,
+      "categoriesMatched": [
+        "consultingContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: consultingContext; no penalties)."
+    },
+    {
+      "id": "rej-0045",
+      "dateRejected": "2026-07-31",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Product Manager Â· New York Chicago Charlotte",
+      "organisation": "Oula",
+      "url": "https://remoteOK.com/remote-jobs/remote-product-manager-new-york-chicago-charlotte-oula-1135672",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0046",
+      "dateRejected": "2026-07-31",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Spontaneous application",
+      "organisation": "Seguin Morris",
+      "url": "https://remoteOK.com/remote-jobs/remote-spontaneous-application-seguin-morris-1135662",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0047",
+      "dateRejected": "2026-08-01",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "AIå¹è®­è®²å¸ ç¡åé¡¹ç®ï¼çº¿ä¸ï¼",
+      "organisation": "è½¯è£è®¾è®¡å¬å¸",
+      "url": "https://remoteOK.com/remote-jobs/",
+      "relevanceScore": 12,
+      "categoriesMatched": [
+        "llm",
+        "rag"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: llm, rag; no penalties)."
+    },
+    {
+      "id": "rej-0048",
+      "dateRejected": "2026-08-01",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Regional General Manager Airports",
+      "organisation": "WestJet",
+      "url": "https://remoteOK.com/remote-jobs/remote-regional-general-manager-airports-westjet-1135745",
+      "relevanceScore": 25,
+      "categoriesMatched": [
+        "companyIndustry",
+        "complianceContext",
+        "governanceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: companyIndustry, complianceContext, governanceContext; no penalties)."
+    },
+    {
+      "id": "rej-0049",
+      "dateRejected": "2026-08-01",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Sales Development Representative Outbound",
+      "organisation": "Tremendous",
+      "url": "https://remoteOK.com/remote-jobs/remote-sales-development-representative-outbound-tremendous-1135741",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0050",
+      "dateRejected": "2026-08-01",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Admissions Advisor MasterClass Executive",
+      "organisation": "MasterClass",
+      "url": "https://remoteOK.com/remote-jobs/remote-admissions-advisor-masterclass-executive-masterclass-1135740",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0051",
+      "dateRejected": "2026-08-01",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Associate Events Social &amp; Influencer Marketing",
+      "organisation": "Society 18",
+      "url": "https://remoteOK.com/remote-jobs/remote-associate-events-social-amp-influencer-marketing-society-18-1135695",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0052",
+      "dateRejected": "2026-08-01",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Data Analyst",
+      "organisation": "Sparksoft Corporation",
+      "url": "https://remoteOK.com/remote-jobs/remote-data-analyst-sparksoft-corporation-1135698",
+      "relevanceScore": 21,
+      "categoriesMatched": [
+        "aiContext",
+        "companyIndustry",
+        "roleResponsibilities"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: aiContext, companyIndustry, roleResponsibilities; no penalties)."
+    },
+    {
+      "id": "rej-0053",
+      "dateRejected": "2026-08-01",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Growth Strategist",
+      "organisation": "Lyric",
+      "url": "https://remoteOK.com/remote-jobs/remote-growth-strategist-lyric-1135681",
+      "relevanceScore": 8,
+      "categoriesMatched": [
+        "consultingContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: consultingContext; no penalties)."
+    },
+    {
+      "id": "rej-0054",
+      "dateRejected": "2026-08-01",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "This IS Your Dream Job",
+      "organisation": "TechWhirl",
+      "url": "https://remoteOK.com/remote-jobs/remote-this-is-your-dream-job-techwhirl-1135682",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0055",
+      "dateRejected": "2026-08-01",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Growth Marketer",
+      "organisation": "CLANX",
+      "url": "https://remoteOK.com/remote-jobs/remote-growth-marketer-clanx-1135656",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG, AI Agents) — likely a substring false positive upstream, not a real opportunity."
     }
   ]
 }

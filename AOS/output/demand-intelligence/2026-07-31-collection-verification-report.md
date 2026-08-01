@@ -1,8 +1,8 @@
 # Daily Collection Verification Report
 
-**Date:** 2026-08-01
+**Date:** 2026-07-31
 
-**Total postings discovered today (before dedup):** 27
+**Total postings discovered today (before dedup):** 22
 
 | Source | Ran | Postings Found | Error |
 |---|---|---|---|
@@ -10,7 +10,7 @@
 | Upwork | Yes | 0 | - |
 | LinkedIn Jobs | Yes | 0 | - |
 | Wellfound | Yes | 0 | - |
-| RemoteOK | Yes | 27 | - |
+| RemoteOK | Yes | 22 | - |
 | Greenhouse | Yes | 0 | - |
 | Lever | Yes | 0 | - |
 | Ashby | Yes | 0 | - |
