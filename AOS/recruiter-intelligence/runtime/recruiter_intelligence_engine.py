@@ -41,7 +41,7 @@ OPPORTUNITY_SCHEMA_PATH = AOS_DIR / "demand-intelligence" / "opportunity-schema.
 CRM_PATH = AOS_DIR / "06-CRM" / "company-intelligence.json"
 PIPELINE_PATH = AOS_DIR / "08-Revenue-Hunter" / "pipeline.json"
 
-FEED_PATH = RUNTIME_DIR / "output" / "recruiter-intelligence-feed.json"
+FEED_PATH = AOS_DIR / "output" / "recruiter-intelligence" / "recruiter-intelligence-feed.json"
 
 TODAY = date.today().isoformat()
 

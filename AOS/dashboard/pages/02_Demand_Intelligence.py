@@ -151,7 +151,7 @@ with tab_engine:
 
 st.divider()
 st.subheader("Today's Collection Report")
-report_text, exists = load_text_safe(resolve_dated("demand-intelligence/runtime/output/{date}-daily-report.md"))
+report_text, exists = load_text_safe(resolve_dated("output/demand-intelligence/{date}-daily-report.md"))
 if exists:
     st.markdown(report_text)
 else:

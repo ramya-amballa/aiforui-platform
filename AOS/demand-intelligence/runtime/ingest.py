@@ -74,7 +74,7 @@ AOS_DIR = DEMAND_INTELLIGENCE_DIR.parent
 
 INBOX_DIR = RUNTIME_DIR / "inbox"
 PROCESSED_DIR = RUNTIME_DIR / "processed"
-OUTPUT_DIR = RUNTIME_DIR / "output"
+OUTPUT_DIR = AOS_DIR / "output" / "demand-intelligence"
 REJECTED_DIR = RUNTIME_DIR / "rejected"
 
 OPPORTUNITY_SCHEMA_PATH = DEMAND_INTELLIGENCE_DIR / "opportunity-schema.json"
@@ -625,7 +625,7 @@ def main():
         save_json(PIPELINE_PATH, pipeline_data)
         save_json(CRM_PATH, crm_data)
 
-        OUTPUT_DIR.mkdir(exist_ok=True)
+        OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
         report_path = OUTPUT_DIR / f"{TODAY}-daily-report.md"
         report_path.write_text(generate_report(processed), encoding="utf-8")
 

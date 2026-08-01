@@ -60,7 +60,7 @@ show_table(
 
 st.divider()
 st.subheader("Latest Intake Report")
-report_text, exists = load_text_safe("website-intake/runtime/output/website-intake-report.md")
+report_text, exists = load_text_safe("output/website-intake/website-intake-report.md")
 if exists:
     st.markdown(report_text)
 else:

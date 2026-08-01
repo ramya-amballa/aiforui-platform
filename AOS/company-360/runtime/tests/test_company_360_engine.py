@@ -39,7 +39,7 @@ AI_ENTRY = {
     "overallPriority": 62, "decisionMakerTitles": ["Chief Risk Officer"],
     "governanceRisks": [{"risk": "Human oversight", "why": "Live systems need a human-in-the-loop point."}],
     "serviceFit": [{"service": "AI Deployment Governance (ADGL)", "confidence": "High"}],
-    "briefPath": "AOS/account-intelligence/runtime/output/account-briefs/bbva.md",
+    "briefPath": "AOS/output/account-intelligence/account-briefs/bbva.md",
 }
 
 
@@ -126,11 +126,11 @@ class FinderTests(unittest.TestCase):
 
     def test_find_delivery_engagement_reflects_real_log_and_feed(self):
         delivery_log = {"engagements": {"BBVA": {"phase": "Discovery", "notes": [{"date": "2026-07-01", "note": "Kickoff held."}]}}}
-        delivery_feed = {"engagements": [{"organisation": "BBVA", "kitPath": "AOS/delivery-intelligence/runtime/output/delivery-kits/bbva"}]}
+        delivery_feed = {"engagements": [{"organisation": "BBVA", "kitPath": "AOS/output/delivery-intelligence/delivery-kits/bbva"}]}
         result = engine.find_delivery_engagement("BBVA", delivery_log, delivery_feed)
         self.assertEqual(result["phase"], "Discovery")
         self.assertEqual(result["noteCount"], 1)
-        self.assertEqual(result["kitPath"], "AOS/delivery-intelligence/runtime/output/delivery-kits/bbva")
+        self.assertEqual(result["kitPath"], "AOS/output/delivery-intelligence/delivery-kits/bbva")
 
 
 class BuildCompany360Tests(unittest.TestCase):

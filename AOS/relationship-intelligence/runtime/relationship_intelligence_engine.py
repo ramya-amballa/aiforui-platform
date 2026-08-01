@@ -29,7 +29,7 @@ PROFILES_PATH = RELATIONSHIP_INTELLIGENCE_DIR / "relationship-profiles.json"
 CRM_PATH = AOS_DIR / "06-CRM" / "company-intelligence.json"
 ORGANISATION_PROFILES_PATH = AOS_DIR / "demand-intelligence" / "organisation-profiles.json"
 
-FEED_PATH = RUNTIME_DIR / "output" / "relationship-intelligence-feed.json"
+FEED_PATH = AOS_DIR / "output" / "relationship-intelligence" / "relationship-intelligence-feed.json"
 
 TODAY = date.today()
 

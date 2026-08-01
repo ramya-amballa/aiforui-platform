@@ -15,10 +15,10 @@ apply_page_config("Logs", "▤")
 st.title("Logs")
 st.caption("Today's Orchestrator execution log, plus every employee's own runtime log directory.")
 
-status, status_exists = load_json_safe("orchestrator/status.json")
+status, status_exists = load_json_safe("output/orchestrator/status.json")
 
 st.subheader("Today's Execution Log")
-logs_dir = aos_path("orchestrator", "logs")
+logs_dir = aos_path("output", "orchestrator", "logs")
 today_logs = sorted(logs_dir.glob(f"{today_str()}-*-orchestrator.log")) if logs_dir.is_dir() else []
 
 if today_logs:
@@ -76,7 +76,7 @@ employee_log_dirs = {
     "Sales Director": "sales-director/runtime",
     "Product Manager": "product-manager/runtime/logs",
     "Content Director": "content-director/runtime/logs",
-    "Orchestrator": "orchestrator/logs",
+    "Orchestrator": "output/orchestrator/logs",
 }
 choice = st.selectbox("View a log directory", options=list(employee_log_dirs.keys()))
 log_dir = aos_path(employee_log_dirs[choice])

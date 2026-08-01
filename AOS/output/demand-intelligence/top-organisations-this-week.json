@@ -1,0 +1,16 @@
+{
+  "schema": {
+    "organisation": "string",
+    "demandSignal": "string — matched category label(s), comma-separated",
+    "buyingReadinessScore": "number 0-100",
+    "buyingReadinessBand": "string",
+    "opportunityNarrative": "string",
+    "recommendedServices": "array of strings, ranked",
+    "recommendedAction": "string",
+    "recommendedActionReason": "string",
+    "overallDemandScore": "number 0-100 — used by CEO Advisor as this candidate's strategic-value input",
+    "lastSeen": "string ISO date"
+  },
+  "organisations": [],
+  "_note": "Raw, unranked candidates only — CEO Advisor's own rank_candidates()/top_priorities_with_reasons() (ceo-advisor/runtime/generate.py) does the actual ranking and 'why this outranks the next' reasoning, the same urgency-weighted, tie-break logic every other candidate source already goes through. This file does not duplicate that ranking."
+}

@@ -47,11 +47,11 @@ REPO_ROOT = AOS_DIR.parent
 
 CONFIG_PATH = RUNTIME_DIR / "config" / "executive-brand-intelligence-config.json"
 HISTORY_PATH = RUNTIME_DIR / "brand-plan-history.json"
-FEED_PATH = RUNTIME_DIR / "output" / "executive-brand-intelligence-feed.json"
+FEED_PATH = AOS_DIR / "output" / "executive-brand-intelligence" / "executive-brand-intelligence-feed.json"
 
 DEMAND_CATEGORIES_PATH = AOS_DIR / "demand-intelligence" / "runtime" / "config" / "demand-signal-categories.json"
 ORGANISATION_PROFILES_PATH = AOS_DIR / "demand-intelligence" / "organisation-profiles.json"
-ACCOUNT_INTELLIGENCE_FEED_PATH = AOS_DIR / "account-intelligence" / "runtime" / "output" / "account-intelligence-feed.json"
+ACCOUNT_INTELLIGENCE_FEED_PATH = AOS_DIR / "output" / "account-intelligence" / "account-intelligence-feed.json"
 RELATIONSHIP_PROFILES_PATH = AOS_DIR / "relationship-intelligence" / "relationship-profiles.json"
 SUPPORTING_ASSETS_PATH = AOS_DIR / "account-intelligence" / "runtime" / "config" / "supporting-assets.json"
 ACCOUNT_INTELLIGENCE_CONFIG_PATH = AOS_DIR / "account-intelligence" / "runtime" / "config" / "account-intelligence-config.json"

@@ -13,7 +13,7 @@
       "script": "05-Market-Intelligence/runtime/monitor.py",
       "dependsOn": [],
       "outputPaths": [
-        "05-Market-Intelligence/runtime/output/{date}-market-intelligence-report.md"
+        "output/05-Market-Intelligence/{date}-market-intelligence-report.md"
       ]
     },
     {
@@ -24,8 +24,8 @@
       "dependsOn": [],
       "note": "New in Sprint 4 — turns a website enquiry into a Lead ID, an opportunity record, a CRM record, a Revenue Hunter pipeline entry and a Service Mapping recommendation, invoking ingest.py/revenue-hunter's/service-mapping's own generate.py as subprocesses within its own run (all three are idempotent, so this is safe alongside their own separately scheduled steps below). Runs early and has no dependsOn because it is self-contained — every downstream employee below sees website-sourced opportunities as just another opportunity, with no special-casing. See website-intake/website-intake-model.md.",
       "outputPaths": [
-        "website-intake/runtime/output/{date}-website-intake-report.md",
-        "website-intake/runtime/output/website-intake-report.md"
+        "output/website-intake/{date}-website-intake-report.md",
+        "output/website-intake/website-intake-report.md"
       ]
     },
     {
@@ -35,11 +35,11 @@
       "script": "demand-intelligence/runtime/collect.py",
       "dependsOn": [],
       "outputPaths": [
-        "demand-intelligence/runtime/output/{date}-daily-report.md",
+        "output/demand-intelligence/{date}-daily-report.md",
         "demand-intelligence/runtime/rejected/{date}-rejected-report.md",
         "demand-intelligence/runtime/snapshots/{date}-collection-snapshot.json",
         "demand-intelligence/organisation-profiles.json",
-        "demand-intelligence/runtime/output/top-organisations-this-week.json"
+        "output/demand-intelligence/top-organisations-this-week.json"
       ]
     },
     {
@@ -50,8 +50,8 @@
       "dependsOn": ["demand-intelligence"],
       "note": "Implemented in revenue-hunter/, not 08-Revenue-Hunter/ — see dependency-map.md.",
       "outputPaths": [
-        "revenue-hunter/runtime/output/{date}-revenue-dashboard.md",
-        "revenue-hunter/runtime/output/{date}-revenue-forecast.md"
+        "output/revenue-hunter/{date}-revenue-dashboard.md",
+        "output/revenue-hunter/{date}-revenue-forecast.md"
       ]
     },
     {
@@ -62,9 +62,9 @@
       "dependsOn": ["demand-intelligence", "revenue-hunter"],
       "note": "Implemented in crm/, not 06-CRM/ — see dependency-map.md. Read-only report generator over company-intelligence.json; never writes relationshipTemperature/nextFollowUpDue/outreachHistory, which remain Sales Director's exclusively. Also reads sales-director/runtime/processed-index.json for proposal history, but CRM runs before Sales Director in the fixed order, so that read reflects the previous run's state, not this run's — a one-cycle-behind limitation, not a dependsOn edge (see crm-runtime-notes.md and revenue-hunter-runtime-notes.md for the same pattern).",
       "outputPaths": [
-        "crm/runtime/output/{date}-daily-follow-up-queue.md",
-        "crm/runtime/output/{date}-relationship-health-report.md",
-        "crm/runtime/output/{date}-stale-relationship-alerts.md"
+        "output/crm/{date}-daily-follow-up-queue.md",
+        "output/crm/{date}-relationship-health-report.md",
+        "output/crm/{date}-stale-relationship-alerts.md"
       ]
     },
     {
@@ -75,8 +75,8 @@
       "dependsOn": ["demand-intelligence"],
       "note": "New in Sprint 3 — deterministically maps every opportunity to a Primary Service, Secondary Services, Recommended Engagement Type, Estimated Project Size, Recommended Proposal Template and Cross-Sell Opportunities. Reads opportunity-schema.json (required) plus pipeline.json/company-intelligence.json (optional enrichment only), all read-only; runs after CRM and before Sales Director so Sales Director can read its output the same day. See service-mapping/service-mapping-model.md.",
       "outputPaths": [
-        "service-mapping/runtime/output/{date}-service-recommendation-report.md",
-        "service-mapping/runtime/output/service-recommendation-report.md"
+        "output/service-mapping/{date}-service-recommendation-report.md",
+        "output/service-mapping/service-recommendation-report.md"
       ]
     },
     {
@@ -85,10 +85,10 @@
       "folder": "sales-director",
       "script": "sales-director/runtime/prepare.py",
       "dependsOn": ["demand-intelligence", "revenue-hunter", "crm", "service-mapping"],
-      "note": "AOS Sprint 12 — also reads account-intelligence/runtime/output/account-intelligence-feed.json (read-only, optional) to upgrade a prepared package's proposal document into an Executive Proposal traced back to that organisation's Account Intelligence brief. Sales Director runs before Account Intelligence in this fixed order, so that read is one cycle behind (today's brief, if any, is yesterday's) — the same accepted-limitation pattern as CRM's read of Sales Director's own processed-index.json (see crm-runtime-notes.md). Not added as a dependsOn edge because Account Intelligence itself optionally reads Sales Director's own feed (see account-intelligence's dependsOn below) — making it a hard dependency either way would create a circular ordering requirement. When no brief exists yet for an organisation, the original generic proposal is used, never a blank.",
+      "note": "AOS Sprint 12 — also reads output/account-intelligence/account-intelligence-feed.json (read-only, optional) to upgrade a prepared package's proposal document into an Executive Proposal traced back to that organisation's Account Intelligence brief. Sales Director runs before Account Intelligence in this fixed order, so that read is one cycle behind (today's brief, if any, is yesterday's) — the same accepted-limitation pattern as CRM's read of Sales Director's own processed-index.json (see crm-runtime-notes.md). Not added as a dependsOn edge because Account Intelligence itself optionally reads Sales Director's own feed (see account-intelligence's dependsOn below) — making it a hard dependency either way would create a circular ordering requirement. When no brief exists yet for an organisation, the original generic proposal is used, never a blank.",
       "outputPaths": [
-        "sales-director/runtime/output/{date}-sales-director-report.md",
-        "sales-director/runtime/output/ceo-advisor-feed.json"
+        "output/sales-director/{date}-sales-director-report.md",
+        "output/sales-director/ceo-advisor-feed.json"
       ]
     },
     {
@@ -99,8 +99,8 @@
       "dependsOn": ["demand-intelligence", "crm", "sales-director"],
       "note": "New in Sprint 8 — additive, downstream of Demand Intelligence only; never modifies demand-intelligence/organisation-profiles.json or any other employee's output. For every organisation already qualified there (every key in organisation-profiles.json), (re)generates a ten-section Executive Account Intelligence Brief to output/account-briefs/ plus a searchable account-intelligence-feed.json the dashboard reads. crm and sales-director are depended on for optional read-only cross-references (existing relationship/proposal status), not required inputs — a run with neither yet still produces honest briefs. See account-intelligence/account-intelligence-engine.md.",
       "outputPaths": [
-        "account-intelligence/runtime/output/{date}-account-intelligence-report.md",
-        "account-intelligence/runtime/output/account-intelligence-feed.json"
+        "output/account-intelligence/{date}-account-intelligence-report.md",
+        "output/account-intelligence/account-intelligence-feed.json"
       ]
     },
     {
@@ -111,8 +111,8 @@
       "dependsOn": ["demand-intelligence", "crm", "sales-director", "account-intelligence", "relationship-intelligence"],
       "note": "New in Sprint 9 — additive, downstream of Demand Intelligence only; never modifies demand-intelligence/organisation-profiles.json, opportunity-schema.json, company-intelligence.json, account-intelligence-feed.json, pipeline.json, relationship-profiles.json, touchpoint-log.json, or any other employee's output, and does not touch any existing scoring formula. For every organisation already qualified by Demand Intelligence, generates a Reverse Job Hunt Strategy (why pursue, consulting potential, relevance, AI/governance maturity, entry point, probability of engagement, timeline, first touch, 90-day sequence, and — Sprint 16's Client Acquisition Engine, consolidated into this employee per explicit instruction — a draft LinkedIn connection request, a follow-up message, the recommended asset to share first, and campaign status/touchpoints from its own founder-maintained touchpoint-log.json) to output/strategies/ plus a reverse-job-hunt-feed.json sortable by Expected Consulting ROI, a new heuristic this employee introduces. crm, sales-director, account-intelligence and relationship-intelligence are depended on for optional read-only cross-references (the last two read their own persistent data files directly, e.g. relationship-profiles.json, not a generated report — so there's no staleness concern regardless of run order), not required inputs. See reverse-job-hunt/reverse-job-hunt-engine.md.",
       "outputPaths": [
-        "reverse-job-hunt/runtime/output/{date}-reverse-job-hunt-report.md",
-        "reverse-job-hunt/runtime/output/reverse-job-hunt-feed.json"
+        "output/reverse-job-hunt/{date}-reverse-job-hunt-report.md",
+        "output/reverse-job-hunt/reverse-job-hunt-feed.json"
       ]
     },
     {
@@ -123,8 +123,8 @@
       "dependsOn": ["demand-intelligence", "revenue-hunter", "crm"],
       "note": "New in Sprint 10. generate.py scans demand-intelligence/opportunity-schema.json's Recruiter/Consulting Channel entries and crm/company-intelligence.json's recruiter-attributed companies (both read-only) to build/refresh recruiter-profiles.json and the four requested views (Weekly Follow-up List, Dormant Relationships, Priority Recruiters, Recruiters hiring AI Governance/GRC/Fractional Consultants). Unlike Sprint 8/9, CEO Advisor genuinely reads this step's output (recruiter-intelligence-feed.json) to recommend recruiter follow-ups, per explicit instruction — see ceo-advisor/generate.py's recruiter_followups_this_week().",
       "outputPaths": [
-        "recruiter-intelligence/runtime/output/{date}-recruiter-intelligence-report.md",
-        "recruiter-intelligence/runtime/output/recruiter-intelligence-feed.json"
+        "output/recruiter-intelligence/{date}-recruiter-intelligence-report.md",
+        "output/recruiter-intelligence/recruiter-intelligence-feed.json"
       ]
     },
     {
@@ -135,8 +135,8 @@
       "dependsOn": ["demand-intelligence", "revenue-hunter"],
       "note": "New in Sprint 11 — reuses Demand Intelligence's own five signal categories (organisation-profiles.json) rather than re-scanning the same public signals with a second taxonomy. Classifies every qualified organisation into a stage (Emerging/Growing/Enterprise/Urgent), estimates Fractional Advisory Potential, recommends an engagement model, and estimates expected consulting revenue (preferring a real pipeline.json/opportunity-schema.json figure over a heuristic). Purely additive/read-only. See fractional-advisory-radar/fractional-advisory-radar-engine.md.",
       "outputPaths": [
-        "fractional-advisory-radar/runtime/output/{date}-fractional-advisory-radar-report.md",
-        "fractional-advisory-radar/runtime/output/fractional-advisory-radar-feed.json"
+        "output/fractional-advisory-radar/{date}-fractional-advisory-radar-report.md",
+        "output/fractional-advisory-radar/fractional-advisory-radar-feed.json"
       ]
     },
     {
@@ -147,8 +147,8 @@
       "dependsOn": ["demand-intelligence", "crm"],
       "note": "New in Sprint 13 — reads a founder-maintained, persistent, person-level record (relationship-profiles.json, exactly like 06-CRM/company-intelligence.json is for companies; nothing here is auto-collected, there is no LinkedIn/email/calendar integration in AOS) and turns it into daily intelligence: reconnect recommendations, birthday/work anniversary/conference reminders, and a relationship health score/risk/opportunity per person. crm and demand-intelligence are read-only, optional cross-references for the Relationship Opportunity section only. CEO Advisor genuinely reads this step's output to recommend one relationship action per day, same pattern as Sprint 10's Recruiter Follow-ups. See relationship-intelligence/relationship-intelligence-engine.md.",
       "outputPaths": [
-        "relationship-intelligence/runtime/output/{date}-relationship-intelligence-report.md",
-        "relationship-intelligence/runtime/output/relationship-intelligence-feed.json"
+        "output/relationship-intelligence/{date}-relationship-intelligence-report.md",
+        "output/relationship-intelligence/relationship-intelligence-feed.json"
       ]
     },
     {
@@ -159,8 +159,8 @@
       "dependsOn": [],
       "note": "New in Sprint 14 — self-contained, no dependency on any other employee's data. Monitors real, founder-configured procurement RSS/Atom feeds (config/tender-intelligence-config.json's feedUrls — empty by default, does nothing until configured, same pattern as Demand Intelligence's Demand Signals connector) for tenders matching one of seven deterministic domain keywords (AI Governance, Responsible AI, Technology Risk, GRC, Cyber Risk, Vendor Risk, Compliance). Estimated value, deadline and required-partner flags are parsed from each tender's own text or honestly reported 'Not specified' — never invented. Fit Score is an explicit relevance heuristic, not a claim of true win probability. See tender-intelligence/tender-intelligence-engine.md.",
       "outputPaths": [
-        "tender-intelligence/runtime/output/{date}-tender-intelligence-report.md",
-        "tender-intelligence/runtime/output/tender-intelligence-feed.json"
+        "output/tender-intelligence/{date}-tender-intelligence-report.md",
+        "output/tender-intelligence/tender-intelligence-feed.json"
       ]
     },
     {
@@ -171,8 +171,8 @@
       "dependsOn": ["demand-intelligence", "account-intelligence", "relationship-intelligence"],
       "note": "New in Sprint 15 — additive, read-only across all three dependencies (organisation-profiles.json, account-intelligence-feed.json, relationship-profiles.json) plus the shared supporting-assets.json catalogue. Builds a Weekly Brand Plan (Companies to Engage, Executives to Follow, Topics to Write, Products to Update, Whitepapers to Publish, Conferences to Monitor, Newsletter Themes, GitHub Improvements, LinkedIn Strategy) entirely from real data those employees already computed — never a fabricated name, figure or event — plus a Monthly Authority Report rolled up from a persistent brand-plan-history.json. CEO Advisor genuinely reads this step's output to recommend one branding action per day. See executive-brand-intelligence/executive-brand-intelligence-engine.md.",
       "outputPaths": [
-        "executive-brand-intelligence/runtime/output/{date}-executive-brand-intelligence-report.md",
-        "executive-brand-intelligence/runtime/output/executive-brand-intelligence-feed.json"
+        "output/executive-brand-intelligence/{date}-executive-brand-intelligence-report.md",
+        "output/executive-brand-intelligence/executive-brand-intelligence-feed.json"
       ]
     },
     {
@@ -183,8 +183,8 @@
       "dependsOn": ["demand-intelligence", "revenue-hunter", "account-intelligence", "service-mapping"],
       "note": "New in Sprint 17 — the Consulting Delivery Engine. Triggers on Revenue Hunter's own pipeline.json stage == 'won' (never a second, independently-invented 'signed' flag) and generates a ten-artifact delivery kit per engagement (kickoff agenda, discovery questionnaire, readiness workbook, roadmap, RACI, risk register, workshop materials, status report, steering committee pack, closure report), rendered from templates/delivery/'s own reusable, ADGL/OPERA-aligned templates. Account Intelligence and Service Mapping are read-only, optional cross-references (governance risks, decision-maker titles, recommended service) — a kit still generates honestly with 'Not specified'/'Not enough signal yet' placeholders if neither has run yet for that organisation. Kits are generated exactly once and never overwritten on a re-run — they are living documents the founder edits by hand during real delivery; a re-run only backfills a missing artifact file. See delivery-intelligence/delivery-intelligence-engine.md.",
       "outputPaths": [
-        "delivery-intelligence/runtime/output/{date}-delivery-intelligence-report.md",
-        "delivery-intelligence/runtime/output/delivery-intelligence-feed.json"
+        "output/delivery-intelligence/{date}-delivery-intelligence-report.md",
+        "output/delivery-intelligence/delivery-intelligence-feed.json"
       ]
     },
     {
@@ -196,8 +196,8 @@
                     "reverse-job-hunt", "revenue-hunter", "service-mapping", "delivery-intelligence"],
       "note": "New in Sprint 19 — a pure read-only rollup, computing nothing new. For every organisation demand-intelligence/organisation-profiles.json already knows about, joins in whatever already exists across Account Intelligence, CRM, Relationship Intelligence, Reverse Job Hunt, Revenue Hunter's pipeline, Service Mapping and Delivery Intelligence into one 360 view. Where two employees independently estimate the same kind of thing (e.g. Account Intelligence's overallPriority vs Reverse Job Hunt's consultingPotentialEstimate, both 'deal size' before a real pipeline record exists), both are shown labelled by source, never averaged or merged into a third number. Regenerated in full every run — nothing here is founder-edited, unlike Sales Director's proposals or Delivery Intelligence's kits, so there is nothing to protect from being overwritten. See company-360/company-360-engine.md.",
       "outputPaths": [
-        "company-360/runtime/output/{date}-company-360-report.md",
-        "company-360/runtime/output/company-360-feed.json"
+        "output/company-360/{date}-company-360-report.md",
+        "output/company-360/company-360-feed.json"
       ]
     },
     {
@@ -206,10 +206,10 @@
       "folder": "executive-memory",
       "script": "executive-memory/runtime/generate.py",
       "dependsOn": ["delivery-intelligence", "account-intelligence"],
-      "note": "New in Sprint 20 — a pure read-only aggregator, computing nothing new. Reads ceo-advisor/runtime/output/daily-priorities-log.json (added this sprint — CEO Advisor's own self-log of its daily Top 3/alerts, via update_priorities_log()) to count recurring priorities/alerts across real history; reads Delivery Intelligence's completed project-closure-report.md files for a real Lessons Learned Library (never fabricated — a closure report still showing the raw {{LESSONS_LEARNED}} placeholder contributes nothing); reads Account Intelligence's already-fixed governance risk vocabulary to surface risks recurring across two or more organisations. Also reads a new founder-maintained executive-memory/decision-log.json, the same read-only pattern as relationship-profiles.json/touchpoint-log.json/delivery-log.json. Not a dependsOn edge on ceo-advisor itself — ceo-advisor's own dependsOn lists every other employee to guarantee it stays genuinely last, so nothing can depend on it in the same pass without breaking that. Executive Memory reads daily-priorities-log.json one cycle behind instead, the same accepted-lag pattern Delivery Intelligence already uses for Account Intelligence's own feed. See executive-memory/executive-memory-engine.md.",
+      "note": "New in Sprint 20 — a pure read-only aggregator, computing nothing new. Reads output/ceo-advisor/daily-priorities-log.json (added this sprint — CEO Advisor's own self-log of its daily Top 3/alerts, via update_priorities_log()) to count recurring priorities/alerts across real history; reads Delivery Intelligence's completed project-closure-report.md files for a real Lessons Learned Library (never fabricated — a closure report still showing the raw {{LESSONS_LEARNED}} placeholder contributes nothing); reads Account Intelligence's already-fixed governance risk vocabulary to surface risks recurring across two or more organisations. Also reads a new founder-maintained executive-memory/decision-log.json, the same read-only pattern as relationship-profiles.json/touchpoint-log.json/delivery-log.json. Not a dependsOn edge on ceo-advisor itself — ceo-advisor's own dependsOn lists every other employee to guarantee it stays genuinely last, so nothing can depend on it in the same pass without breaking that. Executive Memory reads daily-priorities-log.json one cycle behind instead, the same accepted-lag pattern Delivery Intelligence already uses for Account Intelligence's own feed. See executive-memory/executive-memory-engine.md.",
       "outputPaths": [
-        "executive-memory/runtime/output/{date}-executive-memory-report.md",
-        "executive-memory/runtime/output/executive-memory-feed.json"
+        "output/executive-memory/{date}-executive-memory-report.md",
+        "output/executive-memory/executive-memory-feed.json"
       ]
     },
     {
@@ -220,8 +220,8 @@
       "dependsOn": ["service-mapping", "market-intelligence", "revenue-hunter"],
       "note": "New in Sprint 21 — a pure read-only aggregator. A full-codebase search before this employee was designed confirmed there is no real competitor, market-share, win/loss, or competitive-pricing data anywhere in AOS, so this does not invent any. Instead: counts service-mapping's own already-computed primaryService recommendations per catalogue service (a service with 0 recommendations is flagged honestly as unvalidated by real demand, not omitted); counts market-intelligence's own regulatory-log.json substantive developments per source; and states the same honest 'Not tracked' competitive-signal Sales Director's competition_level() already uses, plus the one real data point AOS has — a count of Revenue Hunter's pipeline.json stage=='lost' entries (organisation and title only, never a fabricated reason or competitor name). See market-positioning-intelligence/market-positioning-intelligence-engine.md.",
       "outputPaths": [
-        "market-positioning-intelligence/runtime/output/{date}-market-positioning-report.md",
-        "market-positioning-intelligence/runtime/output/market-positioning-feed.json"
+        "output/market-positioning-intelligence/{date}-market-positioning-report.md",
+        "output/market-positioning-intelligence/market-positioning-feed.json"
       ]
     },
     {
@@ -232,8 +232,8 @@
       "dependsOn": ["revenue-hunter", "delivery-intelligence", "sales-director", "service-mapping"],
       "note": "New in Sprint 22 — the sixth and final founder-ordered capability, a pure read-only aggregator. AI for U&I is one person; before this employee was designed, a full-codebase search confirmed CEO Advisor ranks priorities with zero regard for how much delivery work is already committed, and no config anywhere records the founder's own available days per week. Active Engagement Load: pipeline.json stage=='won' entries not yet Closed in delivery-log.json, mapped through Sales Director's own rate-card.json typicalDays for that entry's real type. Incoming Pipeline Load: sales-director's own feed at Ready To Send/Proposal Ready, mapped through Service Mapping's recommendedEngagementType to the same rate-card lookup. Capacity Status: total committed days over a new founder-tunable capacity-config.json's foundersAvailableDaysPerWeek, banded into Available/Near/Over Capacity. Advisory only — never blocks a proposal or changes a ranking. One additive change outside its own folder: ceo-advisor/runtime/generate.py gained render_capacity_status_section(), reading this employee's own feed read-only, one cycle behind (same accepted-lag pattern as Executive Memory/Company 360). See capacity-management/capacity-management-engine.md.",
       "outputPaths": [
-        "capacity-management/runtime/output/{date}-capacity-report.md",
-        "capacity-management/runtime/output/capacity-feed.json"
+        "output/capacity-management/{date}-capacity-report.md",
+        "output/capacity-management/capacity-feed.json"
       ]
     },
     {
@@ -244,7 +244,7 @@
       "dependsOn": ["market-intelligence"],
       "note": "Implemented in product-manager/, not 03-Product-Manager/ — see dependency-map.md.",
       "outputPaths": [
-        "product-manager/runtime/output/{date}-product-manager-report.md"
+        "output/product-manager/{date}-product-manager-report.md"
       ]
     },
     {
@@ -255,7 +255,7 @@
       "dependsOn": ["market-intelligence"],
       "note": "Implemented in content-director/, not 02-Content-Director/ — see dependency-map.md.",
       "outputPaths": [
-        "content-director/runtime/output/{date}-content-director-report.md"
+        "output/content-director/{date}-content-director-report.md"
       ]
     },
     {
@@ -266,14 +266,14 @@
       "dependsOn": ["demand-intelligence", "revenue-hunter", "crm", "sales-director"],
       "note": "Implemented in executive-dashboard/, not 07-Daily-Brief/ — see dependency-map.md. Sprint 5 moved CEO Advisor to run after Daily Brief (see below), so Daily Brief's dependsOn no longer includes ceo-advisor — a step cannot depend on one that has not run yet. Daily Brief's own embedded 'Today's Priorities' section (unchanged since its original build) still runs here, independent of and unaffected by CEO Advisor's own, separate, later analysis.",
       "outputPaths": [
-        "executive-dashboard/executive-dashboard.md",
-        "executive-dashboard/executive-dashboard.html",
-        "executive-dashboard/runtime/output/{date}-executive-dashboard.md",
-        "executive-dashboard/runtime/output/{date}-executive-dashboard.html",
-        "daily-briefs/{date_path}/executive-dashboard.md",
-        "daily-briefs/{date_path}/executive-dashboard.html"
+        "output/executive-dashboard/executive-dashboard.md",
+        "output/executive-dashboard/executive-dashboard.html",
+        "output/executive-dashboard/{date}-executive-dashboard.md",
+        "output/executive-dashboard/{date}-executive-dashboard.html",
+        "output/daily-briefs/{date_path}/executive-dashboard.md",
+        "output/daily-briefs/{date_path}/executive-dashboard.html"
       ],
-      "businessImpactSource": "executive-dashboard/executive-dashboard.md"
+      "businessImpactSource": "output/executive-dashboard/executive-dashboard.md"
     },
     {
       "key": "ceo-advisor",
@@ -288,10 +288,10 @@
                     "product-manager", "content-director", "daily-brief"],
       "note": "Implemented in ceo-advisor/, not 09-CEO-Advisor/ — see dependency-map.md. New in Sprint 5, and now genuinely the final step of every Orchestrator run, per explicit instruction — dependsOn lists every other employee to guarantee that. Its own reads (see ceo-advisor/ceo-advisor-runtime-notes.md) are scoped to Sprint 5's eight named sources plus Sprint 10's Recruiter Intelligence, Sprint 13's Relationship Intelligence, Sprint 15's Executive Brand Intelligence and Sprint 22's Capacity Management (all genuinely read) — Product Manager, Content Director, Sprint 8's Account Intelligence, Sprint 9's Reverse Job Hunt, Sprint 14's Tender Intelligence, Sprint 17's Delivery Intelligence, Sprint 19's Company 360, Sprint 20's Executive Memory and Sprint 21's Market Positioning Intelligence remain dependency-only, for ordering, not read (no explicit instruction yet to wire those into a CEO Advisor section). Note the inverse relationship with Sprint 20 and Sprint 22: CEO Advisor writes daily-priorities-log.json every run and Executive Memory reads it, while Capacity Management writes capacity-feed.json and CEO Advisor reads it — both one cycle behind in whichever direction, since CEO Advisor must stay genuinely last in this fixed order.",
       "outputPaths": [
-        "ceo-advisor/runtime/output/{date}-ceo-daily-report.md",
-        "ceo-advisor/runtime/output/ceo-daily-report.md",
-        "ceo-advisor/runtime/output/ceo-weekly-report.md",
-        "ceo-advisor/runtime/output/ceo-monthly-business-review.md"
+        "output/ceo-advisor/{date}-ceo-daily-report.md",
+        "output/ceo-advisor/ceo-daily-report.md",
+        "output/ceo-advisor/ceo-weekly-report.md",
+        "output/ceo-advisor/ceo-monthly-business-review.md"
       ]
     }
   ]

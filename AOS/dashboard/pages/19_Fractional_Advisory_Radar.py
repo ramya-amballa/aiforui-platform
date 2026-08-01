@@ -34,7 +34,7 @@ if st.button("Refresh Radar", type="primary"):
 
 st.divider()
 
-feed, feed_exists = load_json_safe("fractional-advisory-radar/runtime/output/fractional-advisory-radar-feed.json")
+feed, feed_exists = load_json_safe("output/fractional-advisory-radar/fractional-advisory-radar-feed.json")
 orgs = feed.get("organisations", []) if feed_exists and isinstance(feed, dict) else []
 
 st.subheader(f"Organisations, Ranked by Expected Consulting Revenue ({len(orgs)})")
@@ -67,7 +67,7 @@ else:
 
 st.divider()
 st.subheader("Fractional Advisory Radar Report")
-text, exists = load_text_safe(resolve_dated("fractional-advisory-radar/runtime/output/{date}-fractional-advisory-radar-report.md"))
+text, exists = load_text_safe(resolve_dated("output/fractional-advisory-radar/{date}-fractional-advisory-radar-report.md"))
 if exists:
     st.markdown(text)
 else:

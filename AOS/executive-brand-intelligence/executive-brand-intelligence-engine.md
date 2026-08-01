@@ -14,7 +14,7 @@ event.
 - `demand-intelligence/organisation-profiles.json` — this week's
   qualified organisations (windowed by `lastSeen`, same pattern
   Demand Intelligence's own top-organisations-this-week.json uses).
-- `account-intelligence/runtime/output/account-intelligence-feed.json` —
+- `output/account-intelligence/account-intelligence-feed.json` —
   this week's Account Intelligence briefs (governance risks, service
   fit, outreach strategy).
 - `relationship-intelligence/relationship-profiles.json` — real,

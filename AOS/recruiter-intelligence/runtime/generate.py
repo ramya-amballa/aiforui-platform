@@ -48,7 +48,7 @@ def main():
     feed = engine.build_feed(profiles, config)
     engine.save_json(engine.FEED_PATH, feed)
 
-    report_path = RUNTIME_DIR / "output" / f"{TODAY}-recruiter-intelligence-report.md"
+    report_path = engine.FEED_PATH.parent / f"{TODAY}-recruiter-intelligence-report.md"
     lines = [
         "# Recruiter Intelligence — Daily Report", "", f"**Date:** {TODAY}",
         f"**Contacts tracked:** {len(feed['contacts'])}", "",

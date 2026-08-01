@@ -47,7 +47,7 @@ with tab_shipped:
 
 st.divider()
 st.subheader("Product Manager Report")
-text, exists = load_text_safe(resolve_dated("product-manager/runtime/output/{date}-product-manager-report.md"))
+text, exists = load_text_safe(resolve_dated("output/product-manager/{date}-product-manager-report.md"))
 if exists:
     st.markdown(text)
 else:

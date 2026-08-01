@@ -32,21 +32,21 @@ st.divider()
 tab1, tab2, tab3 = st.tabs(["Daily Report", "Weekly Report", "Monthly Business Review"])
 
 with tab1:
-    text, exists = load_text_safe("ceo-advisor/runtime/output/ceo-daily-report.md")
+    text, exists = load_text_safe("output/ceo-advisor/ceo-daily-report.md")
     if exists:
         st.markdown(text)
     else:
         st.info("No CEO Daily Report yet. Click **Run CEO Advisor** above.")
 
 with tab2:
-    text, exists = load_text_safe("ceo-advisor/runtime/output/ceo-weekly-report.md")
+    text, exists = load_text_safe("output/ceo-advisor/ceo-weekly-report.md")
     if exists:
         st.markdown(text)
     else:
         st.info("No CEO Weekly Report yet.")
 
 with tab3:
-    text, exists = load_text_safe("ceo-advisor/runtime/output/ceo-monthly-business-review.md")
+    text, exists = load_text_safe("output/ceo-advisor/ceo-monthly-business-review.md")
     if exists:
         st.markdown(text)
     else:

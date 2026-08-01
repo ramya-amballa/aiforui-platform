@@ -34,7 +34,7 @@ extended with the three founder-maintained stores it was missing
 1. **CEO Advisor's own history.** `ceo-advisor/runtime/generate.py`
    gained `update_priorities_log()`, appending one compact entry per
    day (`{date, top3: [{label, organisation, source}], alertTypes}`)
-   to `ceo-advisor/runtime/output/daily-priorities-log.json` —
+   to `output/ceo-advisor/daily-priorities-log.json` —
    append-only, never deletes a past day, idempotent on a same-day
    re-run. Executive Memory counts, across that real history, which
    organisations recurred in Top 3 and which alert types fired more

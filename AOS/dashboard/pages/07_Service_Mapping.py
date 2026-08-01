@@ -59,7 +59,7 @@ show_table(
 
 st.divider()
 st.subheader("Service Recommendation Report")
-text, text_exists = load_text_safe("service-mapping/runtime/output/service-recommendation-report.md")
+text, text_exists = load_text_safe("output/service-mapping/service-recommendation-report.md")
 if text_exists:
     st.markdown(text)
 else:

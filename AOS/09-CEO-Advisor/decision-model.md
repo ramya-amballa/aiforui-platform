@@ -25,11 +25,11 @@ Convert each candidate's native score to a 0-10 value score:
 | `demand-intelligence/opportunity-schema.json` (`priorityScore`) | 0-100 | divide by 10 |
 | `03-Product-Manager/product-backlog.json` | 0-40 | divide by 4 |
 | `04-Sales-Director` follow-up queue | Hot/Warm/Cooling + overdue | Hot+overdue = 9, Hot = 7, Warm+overdue = 6, Warm = 4 |
-| `sales-director/runtime/output/ceo-advisor-feed.json` (prepared-proposal status) | Ready To Send / Proposal Ready / Needs Review | Ready To Send = 9, Proposal Ready = 6, Needs Review = 3 |
+| `output/sales-director/ceo-advisor-feed.json` (prepared-proposal status) | Ready To Send / Proposal Ready / Needs Review | Ready To Send = 9, Proposal Ready = 6, Needs Review = 3 |
 | `orchestrator/status.json` (`failures`) | present / absent | any entry present = 9, regardless of which employee failed |
-| `05-Market-Intelligence/runtime/output/ceo-advisor-feed.json` (six checks) | boolean combination | `consultingOpportunity` true = 7, else `newProduct` true = 5, else `linkedinContent`/`websiteUpdate` only = 3 |
-| `content-director/runtime/output/ceo-advisor-feed.json` (draft status) | Ready to Publish / Needs Review / Low Value | Ready to Publish = 6, Needs Review = 3, Low Value = 1 |
-| `website-intake/runtime/output/ceo-advisor-feed.json` (lead urgency) | High / Medium / Low | High = 8, Medium = 6, Low = 4 |
+| `output/05-Market-Intelligence/ceo-advisor-feed.json` (six checks) | boolean combination | `consultingOpportunity` true = 7, else `newProduct` true = 5, else `linkedinContent`/`websiteUpdate` only = 3 |
+| `output/content-director/ceo-advisor-feed.json` (draft status) | Ready to Publish / Needs Review / Low Value | Ready to Publish = 6, Needs Review = 3, Low Value = 1 |
+| `output/website-intake/ceo-advisor-feed.json` (lead urgency) | High / Medium / Low | High = 8, Medium = 6, Low = 4 |
 
 CEO Advisor reads only the `status` field from the prepared-proposal
 feed — never the drafts themselves. A `Needs Review` item still

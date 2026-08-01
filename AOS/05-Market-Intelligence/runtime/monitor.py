@@ -55,7 +55,7 @@ REPO_ROOT = AOS_DIR.parent
 REGULATORY_LOG_PATH = MARKET_INTEL_DIR / "regulatory-log.json"
 SOURCES_CONFIG_PATH = RUNTIME_DIR / "config" / "sources.json"
 SEEN_INDEX_PATH = RUNTIME_DIR / "seen-index.json"
-OUTPUT_DIR = RUNTIME_DIR / "output"
+OUTPUT_DIR = AOS_DIR / "output" / "05-Market-Intelligence"
 CEO_FEED_PATH = OUTPUT_DIR / "ceo-advisor-feed.json"
 
 CONTENT_QUEUE_PATH = AOS_DIR / "02-Content-Director" / "content-brief-queue.json"
@@ -352,7 +352,7 @@ def main():
         existing = load_json(inbox_path, []) if inbox_path.exists() else []
         save_json(inbox_path, existing + inbox_batch)
 
-    OUTPUT_DIR.mkdir(exist_ok=True)
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     report_lines = [
         "# Market Intelligence — Daily Report", "", f"**Date:** {TODAY}",
         f"**New developments:** {len(run_summary)}", "",

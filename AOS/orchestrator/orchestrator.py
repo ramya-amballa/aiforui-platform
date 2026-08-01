@@ -13,12 +13,14 @@ in-process — so this file contains no employee business logic and
 cannot duplicate any. An employee with no runtime yet is recorded
 NOT_EXECUTABLE, not simulated.
 
-Writes, every run:
+Writes, every run, all under AOS/output/orchestrator/ (every AI
+employee's own generated output is consolidated the same way, under
+AOS/output/<employee>/ — see ../output/README.md):
   - logs/{date}-{time}-orchestrator.log   — full run log
   - status.json                           — latest completion status
-  - runtime/reports/{date}-daily-execution-report.md — the Daily
-    Execution Report (employees executed, duration, failures, retries,
-    outputs generated, business impact)
+  - reports/{date}-daily-execution-report.md — the Daily Execution
+    Report (employees executed, duration, failures, retries, outputs
+    generated, business impact)
 
 This script is the only thing GitHub Actions (or a human) should ever
 invoke to run AOS's daily operations — see
@@ -40,9 +42,10 @@ AOS_DIR = ORCHESTRATOR_DIR.parent
 REPO_ROOT = AOS_DIR.parent
 
 CONFIG_PATH = ORCHESTRATOR_DIR / "runtime" / "config" / "orchestrator-config.json"
-LOGS_DIR = ORCHESTRATOR_DIR / "logs"
-REPORTS_DIR = ORCHESTRATOR_DIR / "runtime" / "reports"
-STATUS_PATH = ORCHESTRATOR_DIR / "status.json"
+ORCHESTRATOR_OUTPUT_DIR = AOS_DIR / "output" / "orchestrator"
+LOGS_DIR = ORCHESTRATOR_OUTPUT_DIR / "logs"
+REPORTS_DIR = ORCHESTRATOR_OUTPUT_DIR / "reports"
+STATUS_PATH = ORCHESTRATOR_OUTPUT_DIR / "status.json"
 
 TODAY = date.today().isoformat()
 RUN_STARTED = datetime.now(timezone.utc)
@@ -63,7 +66,7 @@ def load_config():
 
 
 def open_log():
-    LOGS_DIR.mkdir(exist_ok=True)
+    LOGS_DIR.mkdir(parents=True, exist_ok=True)
     log_path = LOGS_DIR / f"{TODAY}-{RUN_STARTED.strftime('%H%M%S')}-orchestrator.log"
     return log_path, open(log_path, "w", encoding="utf-8")
 

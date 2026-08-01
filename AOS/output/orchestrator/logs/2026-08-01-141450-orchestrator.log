@@ -1,0 +1,123 @@
+[2026-08-01T14:14:50.409369+00:00] AOS Orchestrator v1.0 — run started 2026-08-01T14:14:50.408890+00:00
+[2026-08-01T14:14:50.409434+00:00] Market Intelligence: attempt 1/3 -> 05-Market-Intelligence/runtime/monitor.py
+  EU AI Act: no feed URLs configured, skipping
+  ISO 42001: no feed URLs configured, skipping
+  NIST AI RMF: no feed URLs configured, skipping
+  DORA: no feed URLs configured, skipping
+  GDPR: no feed URLs configured, skipping
+  CBUAE: no feed URLs configured, skipping
+  RBI: no feed URLs configured, skipping
+  Microsoft AI: no feed URLs configured, skipping
+  OpenAI Enterprise: no feed URLs configured, skipping
+  Anthropic: no feed URLs configured, skipping
+  AI Security: no feed URLs configured, skipping
+  AI Governance: no feed URLs configured, skipping
+  Responsible AI: no feed URLs configured, skipping
+No new developments across any configured source. Nothing to do.
+[2026-08-01T14:14:50.462435+00:00] Market Intelligence: SUCCESS after 1 attempt(s), 0.05s
+[2026-08-01T14:14:50.462595+00:00] Website Intake Runtime: attempt 1/3 -> website-intake/runtime/generate.py
+No new website submissions in runtime/inbox/. Nothing to do.
+[2026-08-01T14:14:50.497604+00:00] Website Intake Runtime: SUCCESS after 1 attempt(s), 0.04s
+[2026-08-01T14:14:50.497764+00:00] Demand Intelligence: attempt 1/3 -> demand-intelligence/runtime/collect.py
+Collecting: demandSignals
+    fetch failed (https://openai.com/news/rss.xml): <urlopen error Tunnel connection failed: 403 Forbidden>
+    fetch failed (https://venturebeat.com/category/ai/feed/): <urlopen error Tunnel connection failed: 403 Forbidden>
+    fetch failed (https://techcrunch.com/category/artificial-intelligence/feed/): <urlopen error Tunnel connection failed: 403 Forbidden>
+Collecting: greenhouse
+  Greenhouse: no boardTokens configured, skipping (add company tokens to sources.json)
+Collecting: lever
+  Lever: no companies configured, skipping (add company slugs to sources.json)
+Collecting: ashby
+  Ashby: no jobBoardNames configured, skipping (add org names to sources.json)
+Collecting: remoteok
+    fetch failed (https://remoteok.com/api): <urlopen error Tunnel connection failed: 403 Forbidden>
+Collecting: upwork
+  Upwork: connector-ready, no credentials configured — skipping
+Collecting: linkedinJobs
+  LinkedIn Jobs: connector-ready, awaiting Talent Solutions/Jobs API partner access — skipping
+Collecting: googleJobs
+  Google Jobs: connector-ready, no API credentials configured — skipping
+Collecting: wellfound
+  Wellfound: connector-ready, no known public/partner API to authenticate against yet — skipping
+Collecting: flexjobs
+  FlexJobs: connector-ready, no API credentials configured — skipping
+Collecting: uaeRecruiters
+  UAE Recruiters: no career page URLs configured, skipping
+Collecting: consultingFirms
+  Consulting Firms: no career page URLs configured, skipping
+Integration Status Dashboard written to AOS/output/demand-intelligence/integration-status-dashboard.md
+Collection Verification Report written to AOS/output/demand-intelligence/2026-08-01-collection-verification-report.md
+
+Discovered 0 postings across 12 sources; 0 are new after dedup.
+No new opportunities. Nothing sent to ingest.
+[2026-08-01T14:14:54.012284+00:00] Demand Intelligence: SUCCESS after 1 attempt(s), 3.51s
+[2026-08-01T14:14:54.012538+00:00] Revenue Hunter: attempt 1/3 -> revenue-hunter/runtime/generate.py
+No new pipeline entries or stage changes this run.
+
+0 opportunity-sourced entries added, 0 CRM-sourced entries added, 0 stage(s) advanced. Dashboard and forecast written to AOS/output/revenue-hunter
+[2026-08-01T14:14:54.041584+00:00] Revenue Hunter: SUCCESS after 1 attempt(s), 0.03s
+[2026-08-01T14:14:54.041706+00:00] CRM: attempt 1/3 -> crm/runtime/generate.py
+No companies on record in company-intelligence.json yet. Nothing to report.
+[2026-08-01T14:14:54.067277+00:00] CRM: SUCCESS after 1 attempt(s), 0.03s
+[2026-08-01T14:14:54.067489+00:00] Service Mapping Engine: attempt 1/3 -> service-mapping/runtime/generate.py
+No new opportunities to map. Nothing to do.
+[2026-08-01T14:14:54.093630+00:00] Service Mapping Engine: SUCCESS after 1 attempt(s), 0.03s
+[2026-08-01T14:14:54.093776+00:00] Sales Director: attempt 1/3 -> sales-director/runtime/prepare.py
+No new classified opportunities to prepare, and no existing packages missing their proposal files. Nothing to do.
+[2026-08-01T14:14:54.121019+00:00] Sales Director: SUCCESS after 1 attempt(s), 0.03s
+[2026-08-01T14:14:54.121147+00:00] Account Intelligence: attempt 1/3 -> account-intelligence/runtime/generate.py
+No organisations qualified by Demand Intelligence yet. Nothing to do.
+[2026-08-01T14:14:54.143416+00:00] Account Intelligence: SUCCESS after 1 attempt(s), 0.02s
+[2026-08-01T14:14:54.143542+00:00] Reverse Job Hunt: SKIPPED_DEPENDENCY_FAILED — waiting on Relationship Intelligence
+[2026-08-01T14:14:54.143618+00:00] Recruiter Intelligence: attempt 1/3 -> recruiter-intelligence/runtime/generate.py
+No recruiter or consulting-channel contacts on record yet. Nothing to do.
+[2026-08-01T14:14:54.171333+00:00] Recruiter Intelligence: SUCCESS after 1 attempt(s), 0.03s
+[2026-08-01T14:14:54.171471+00:00] Fractional Advisory Radar: attempt 1/3 -> fractional-advisory-radar/runtime/generate.py
+No organisations qualified by Demand Intelligence yet. Nothing to do.
+[2026-08-01T14:14:54.197375+00:00] Fractional Advisory Radar: SUCCESS after 1 attempt(s), 0.03s
+[2026-08-01T14:14:54.197503+00:00] Relationship Intelligence: attempt 1/3 -> relationship-intelligence/runtime/generate.py
+No relationships tracked yet in relationship-profiles.json. Nothing to do.
+[2026-08-01T14:14:54.223787+00:00] Relationship Intelligence: SUCCESS after 1 attempt(s), 0.03s
+[2026-08-01T14:14:54.223923+00:00] Tender & RFP Intelligence: attempt 1/3 -> tender-intelligence/runtime/generate.py
+    Tender Intelligence: no feed URLs configured, skipping
+No tenders tracked yet. Nothing more to do.
+0 new tender(s) this run, 0 tracked overall. Report: AOS/output/tender-intelligence/2026-08-01-tender-intelligence-report.md
+[2026-08-01T14:14:54.279801+00:00] Tender & RFP Intelligence: SUCCESS after 1 attempt(s), 0.06s
+[2026-08-01T14:14:54.279936+00:00] Executive Brand Intelligence: attempt 1/3 -> executive-brand-intelligence/runtime/generate.py
+No organisations qualified by Demand Intelligence yet. Nothing to do.
+[2026-08-01T14:14:54.306767+00:00] Executive Brand Intelligence: SUCCESS after 1 attempt(s), 0.03s
+[2026-08-01T14:14:54.306922+00:00] Delivery Intelligence: attempt 1/3 -> delivery-intelligence/runtime/generate.py
+No engagements at stage 'won' yet in pipeline.json. Nothing to do.
+[2026-08-01T14:14:54.333802+00:00] Delivery Intelligence: SUCCESS after 1 attempt(s), 0.03s
+[2026-08-01T14:14:54.333956+00:00] Company 360: SKIPPED_DEPENDENCY_FAILED — waiting on Reverse Job Hunt
+[2026-08-01T14:14:54.333993+00:00] Executive Memory: attempt 1/3 -> executive-memory/runtime/generate.py
+Days of CEO Advisor priority history: 0
+Recurring priorities: 0 | Recurring alerts: 0
+Lessons Learned entries: 0 | Recurring governance risks: 0
+Founder-recorded decisions: 0
+Report: AOS/output/executive-memory/2026-08-01-executive-memory-report.md
+[2026-08-01T14:14:54.361198+00:00] Executive Memory: SUCCESS after 1 attempt(s), 0.03s
+[2026-08-01T14:14:54.361326+00:00] Market Positioning Intelligence: attempt 1/3 -> market-positioning-intelligence/runtime/generate.py
+Service demand coverage: 0/10 services validated by real demand
+Regulatory tailwinds: 0 source(s), 0 substantive development(s)
+Lost opportunities on record: 0
+Report: AOS/output/market-positioning-intelligence/2026-08-01-market-positioning-report.md
+[2026-08-01T14:14:54.388575+00:00] Market Positioning Intelligence: SUCCESS after 1 attempt(s), 0.03s
+[2026-08-01T14:14:54.388696+00:00] Capacity Management: attempt 1/3 -> capacity-management/runtime/generate.py
+Capacity status: Available Capacity
+Active engagements: 0 (0-0 days) | Pending proposals: 0 (0-0 days)
+Weeks of committed work at 4 days/week: 0.0-0.0
+Report: AOS/output/capacity-management/2026-08-01-capacity-report.md
+[2026-08-01T14:14:54.415918+00:00] Capacity Management: SUCCESS after 1 attempt(s), 0.03s
+[2026-08-01T14:14:54.416038+00:00] Product Manager: attempt 1/3 -> product-manager/runtime/generate.py
+No new or unscored signals from any source. Nothing to do.
+[2026-08-01T14:14:54.444872+00:00] Product Manager: SUCCESS after 1 attempt(s), 0.03s
+[2026-08-01T14:14:54.445024+00:00] Content Director: attempt 1/3 -> content-director/runtime/generate.py
+No new signals from any source. Nothing to do.
+[2026-08-01T14:14:54.473480+00:00] Content Director: SUCCESS after 1 attempt(s), 0.03s
+[2026-08-01T14:14:54.473617+00:00] Daily Brief: attempt 1/3 -> executive-dashboard/runtime/generate.py
+Executive Dashboard written to /home/user/aiforui-platform/AOS/output/executive-dashboard/executive-dashboard.md and /home/user/aiforui-platform/AOS/output/executive-dashboard/executive-dashboard.html
+Daily Executive Brief archived to AOS/output/daily-briefs/2026/08/01
+[2026-08-01T14:14:54.506904+00:00] Daily Brief: SUCCESS after 1 attempt(s), 0.03s
+[2026-08-01T14:14:54.507081+00:00] CEO Advisor: SKIPPED_DEPENDENCY_FAILED — waiting on Reverse Job Hunt, Company 360
+[2026-08-01T14:14:54.507954+00:00] Run finished: SUCCESS. Report: AOS/output/orchestrator/reports/2026-08-01-daily-execution-report.md

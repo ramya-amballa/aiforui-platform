@@ -61,7 +61,7 @@ st.divider()
 # ---------------------------------------------------------------------------
 
 st.subheader("Connector Status")
-connector_text, connector_exists = load_text_safe("demand-intelligence/runtime/integration-status-dashboard.md")
+connector_text, connector_exists = load_text_safe("output/demand-intelligence/integration-status-dashboard.md")
 if connector_exists:
     st.markdown(connector_text)
 else:
@@ -75,7 +75,7 @@ st.divider()
 
 st.subheader("Runtime Status")
 manifest = json.loads(dashboard_path("config", "runtimes.json").read_text(encoding="utf-8"))
-status, status_exists = load_json_safe("orchestrator/status.json")
+status, status_exists = load_json_safe("output/orchestrator/status.json")
 status_by_key = {e["key"]: e for e in status.get("employees", [])} if status_exists else {}
 
 rows = []

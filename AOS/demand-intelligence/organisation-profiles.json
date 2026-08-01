@@ -1,0 +1,24 @@
+{
+  "schema": {
+    "organisation": "string — key",
+    "signals": "array — every demand signal ever observed for this organisation: {date, category, categoryLabel, baseScore, confidence, eventSummary, sourceUrl}",
+    "overallDemandScore": "number 0-100, most recent computation",
+    "matchedCategories": "array of category keys matched across all signals on record",
+    "buyingReadinessScore": "number 0-100",
+    "buyingReadinessBand": "Low|Medium|High|Very High",
+    "recommendedServices": "array of strings, ranked",
+    "recommendedAction": "string",
+    "recommendedActionReason": "string",
+    "opportunityNarrative": "string",
+    "industry": "string or null",
+    "scale": "string or null",
+    "region": "string — UAE/US/UK/India/Europe or 'Not specified', best-effort inferred, never guessed",
+    "firstSeen": "string ISO date",
+    "lastSeen": "string ISO date",
+    "outreachHappened": "boolean — Part 8, read from CRM outreachHistory",
+    "proposalCreated": "boolean — Part 8, read from Sales Director's feed",
+    "converted": "boolean — Part 8, read from Revenue Hunter's pipeline stage",
+    "revenueGenerated": "number or null — Part 8, from the same pipeline entry, only once won"
+  },
+  "organisations": {}
+}

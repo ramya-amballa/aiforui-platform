@@ -1,0 +1,20 @@
+{
+  "date": "2026-08-01",
+  "totalDiscovered": 0,
+  "perSource": {
+    "demandSignals": 0,
+    "greenhouse": 0,
+    "lever": 0,
+    "ashby": 0,
+    "remoteok": 0,
+    "upwork": 0,
+    "linkedinJobs": 0,
+    "googleJobs": 0,
+    "wellfound": 0,
+    "flexjobs": 0,
+    "uaeRecruiters": 0,
+    "consultingFirms": 0
+  },
+  "perSourceErrors": {},
+  "opportunities": []
+}

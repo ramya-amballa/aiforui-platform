@@ -33,7 +33,7 @@ Licensing) is reported as honestly unestimated, never guessed.
 ### Incoming Pipeline Load
 
 Every Sales Director package at status `"Ready To Send"` or
-`"Proposal Ready"` (from `sales-director/runtime/output/ceo-advisor-feed.json`)
+`"Proposal Ready"` (from `output/sales-director/ceo-advisor-feed.json`)
 represents potential incoming work. Each opportunity's real
 `recommendedEngagementType` from Service Mapping's own
 `service-recommendations.json` maps to the same rate-card lookup. An
@@ -78,7 +78,7 @@ deciding whether to pursue more work right now.
 
 `ceo-advisor/runtime/generate.py` gained
 `render_capacity_status_section()`, reading
-`capacity-management/runtime/output/capacity-feed.json` read-only and
+`output/capacity-management/capacity-feed.json` read-only and
 surfacing it as its own section in the daily report — one cycle
 behind, the same accepted-lag pattern Executive Memory already uses
 for CEO Advisor's own `daily-priorities-log.json` (Capacity Management

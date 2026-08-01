@@ -99,7 +99,7 @@ def main():
     feed["strategies"].sort(key=lambda e: e["expectedConsultingRoi"] if e["expectedConsultingRoi"] is not None else -1, reverse=True)
     engine.save_json(engine.FEED_PATH, feed)
 
-    report_path = RUNTIME_DIR / "output" / f"{TODAY}-reverse-job-hunt-report.md"
+    report_path = engine.FEED_PATH.parent / f"{TODAY}-reverse-job-hunt-report.md"
     report_lines = [
         "# Reverse Job Hunt — Daily Report",
         "",

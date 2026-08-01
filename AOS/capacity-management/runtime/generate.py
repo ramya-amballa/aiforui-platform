@@ -63,9 +63,9 @@ def main():
 
     report = engine.render_capacity_markdown(active, active_min, active_max, pending, pending_min, pending_max,
                                               min_weeks, max_weeks, status, available_days_per_week)
-    report_path = RUNTIME_DIR / "output" / f"{engine.TODAY}-capacity-report.md"
+    report_path = engine.FEED_PATH.parent / f"{engine.TODAY}-capacity-report.md"
     report_path.write_text(report, encoding="utf-8")
-    (RUNTIME_DIR / "output" / "capacity-report.md").write_text(report, encoding="utf-8")
+    (engine.FEED_PATH.parent / "capacity-report.md").write_text(report, encoding="utf-8")
 
     print(f"Capacity status: {status}")
     print(f"Active engagements: {len(active)} ({active_min}-{active_max} days) | "

@@ -46,8 +46,8 @@ REPO_ROOT = AOS_DIR.parent
 
 CONFIG_DIR = RUNTIME_DIR / "config"
 SNAPSHOTS_DIR = RUNTIME_DIR / "snapshots"
-OUTPUT_DIR = RUNTIME_DIR / "output"
-STABLE_DASHBOARD_PATH = RUNTIME_DIR / "integration-status-dashboard.md"
+OUTPUT_DIR = AOS_DIR / "output" / "demand-intelligence"
+STABLE_DASHBOARD_PATH = OUTPUT_DIR / "integration-status-dashboard.md"
 
 TODAY = date.today().isoformat()
 
@@ -308,9 +308,9 @@ def main():
     sources_config = load_json(CONFIG_DIR / "sources.json", {})
     snapshot = load_json(SNAPSHOTS_DIR / f"{TODAY}-collection-snapshot.json", None)
 
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     STABLE_DASHBOARD_PATH.write_text(render_dashboard(sources_config, snapshot), encoding="utf-8")
 
-    OUTPUT_DIR.mkdir(exist_ok=True)
     verification_report = render_verification_report(sources_config, snapshot)
     (OUTPUT_DIR / f"{TODAY}-collection-verification-report.md").write_text(
         verification_report, encoding="utf-8"

@@ -157,7 +157,7 @@ def main():
     }
     engine.save_json(engine.FEED_PATH, feed)
 
-    report_path = RUNTIME_DIR / "output" / f"{TODAY}-delivery-intelligence-report.md"
+    report_path = engine.FEED_PATH.parent / f"{TODAY}-delivery-intelligence-report.md"
     report_lines = [
         "# Delivery Intelligence — Daily Report",
         "",

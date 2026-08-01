@@ -118,15 +118,15 @@ to running it by hand from the terminal.
 
 | Page | Button | Script (via `runtime_runner`) | Primary output read |
 |---|---|---|---|
-| CEO Advisor | Run CEO Advisor | `ceo-advisor/runtime/generate.py` | `ceo-advisor/runtime/output/ceo-daily-report.md` (+ weekly/monthly) |
+| CEO Advisor | Run CEO Advisor | `ceo-advisor/runtime/generate.py` | `output/ceo-advisor/ceo-daily-report.md` (+ weekly/monthly) |
 | Demand Intelligence | Scan Opportunities | `demand-intelligence/runtime/collect.py` | `demand-intelligence/opportunity-schema.json`, today's daily report |
 | Market Intelligence | Check Market | `05-Market-Intelligence/runtime/monitor.py` | today's market intelligence report |
 | Website Leads | Refresh Website Leads | `website-intake/runtime/generate.py` | `website-intake/leads.json` |
 | CRM | Open CRM | `crm/runtime/generate.py` | `06-CRM/company-intelligence.json`, today's CRM reports |
 | Revenue Hunter | Update Forecast | `revenue-hunter/runtime/generate.py` | `08-Revenue-Hunter/pipeline.json`, revenue dashboard/forecast |
 | Service Mapping | Run Service Mapping | `service-mapping/runtime/generate.py` | `service-mapping/service-recommendations.json` |
-| Sales Director | Generate Proposal | `sales-director/runtime/prepare.py` | `sales-director/runtime/output/ceo-advisor-feed.json` + per-opportunity packages in `output/packages/` |
-| Content Director | Generate Content | `content-director/runtime/generate.py` | drafts in `content-director/runtime/output/drafts/` |
+| Sales Director | Generate Proposal | `sales-director/runtime/prepare.py` | `output/sales-director/ceo-advisor-feed.json` + per-opportunity packages in `output/packages/` |
+| Content Director | Generate Content | `content-director/runtime/generate.py` | drafts in `output/content-director/drafts/` |
 | Product Manager | Review Product Ideas | `product-manager/runtime/generate.py` | `03-Product-Manager/product-backlog.json` |
 | Execution | Run Full AOS | `orchestrator/orchestrator.py` | `orchestrator/status.json`, the day's Daily Execution Report |
 

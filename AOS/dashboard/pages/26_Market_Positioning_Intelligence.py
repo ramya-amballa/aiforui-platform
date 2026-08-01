@@ -36,7 +36,7 @@ if st.button("Refresh Market Positioning Intelligence", type="primary"):
 
 st.divider()
 
-feed, feed_exists = load_json_safe("market-positioning-intelligence/runtime/output/market-positioning-feed.json")
+feed, feed_exists = load_json_safe("output/market-positioning-intelligence/market-positioning-feed.json")
 feed = feed if feed_exists and isinstance(feed, dict) else {}
 
 st.subheader("Service Demand Coverage")
@@ -59,7 +59,7 @@ if lost:
 
 st.divider()
 st.subheader("Market Positioning Report")
-text, exists = load_text_safe(resolve_dated("market-positioning-intelligence/runtime/output/{date}-market-positioning-report.md"))
+text, exists = load_text_safe(resolve_dated("output/market-positioning-intelligence/{date}-market-positioning-report.md"))
 if exists:
     st.markdown(text)
 else:

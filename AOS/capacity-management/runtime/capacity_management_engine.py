@@ -17,7 +17,7 @@ engagement actually consumes. This closes both gaps, honestly:
   second, independently-invented effort estimate.
 - **Incoming Pipeline Load** — every Sales Director package at status
   `"Ready To Send"` or `"Proposal Ready"` (from
-  `sales-director/runtime/output/ceo-advisor-feed.json`), mapped
+  `output/sales-director/ceo-advisor-feed.json`), mapped
   through Service Mapping's own `recommendedEngagementType` for that
   opportunity, then the same rate-card lookup. An opportunity with no
   service-mapping recommendation yet is reported as honestly
@@ -49,12 +49,12 @@ REPO_ROOT = AOS_DIR.parent
 
 PIPELINE_PATH = AOS_DIR / "08-Revenue-Hunter" / "pipeline.json"
 DELIVERY_LOG_PATH = AOS_DIR / "delivery-intelligence" / "delivery-log.json"
-CEO_ADVISOR_FEED_PATH = AOS_DIR / "sales-director" / "runtime" / "output" / "ceo-advisor-feed.json"
+CEO_ADVISOR_FEED_PATH = AOS_DIR / "output" / "sales-director" / "ceo-advisor-feed.json"
 SERVICE_RECOMMENDATIONS_PATH = AOS_DIR / "service-mapping" / "service-recommendations.json"
 RATE_CARD_PATH = AOS_DIR / "sales-director" / "runtime" / "config" / "rate-card.json"
 CONFIG_PATH = RUNTIME_DIR / "config" / "capacity-config.json"
 
-FEED_PATH = RUNTIME_DIR / "output" / "capacity-feed.json"
+FEED_PATH = AOS_DIR / "output" / "capacity-management" / "capacity-feed.json"
 
 TODAY = date.today().isoformat()
 

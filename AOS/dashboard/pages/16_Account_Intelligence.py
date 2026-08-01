@@ -36,7 +36,7 @@ if st.button("Generate Briefs", type="primary"):
 
 st.divider()
 
-feed, feed_exists = load_json_safe("account-intelligence/runtime/output/account-intelligence-feed.json")
+feed, feed_exists = load_json_safe("output/account-intelligence/account-intelligence-feed.json")
 briefs = feed.get("briefs", []) if feed_exists and isinstance(feed, dict) else []
 
 st.subheader(f"Qualified Organisations ({len(briefs)})")
@@ -81,7 +81,7 @@ else:
 
 st.divider()
 st.subheader("Account Intelligence Report")
-text, exists = load_text_safe(resolve_dated("account-intelligence/runtime/output/{date}-account-intelligence-report.md"))
+text, exists = load_text_safe(resolve_dated("output/account-intelligence/{date}-account-intelligence-report.md"))
 if exists:
     st.markdown(text)
 else:

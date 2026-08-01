@@ -37,7 +37,7 @@ if st.button("Refresh Relationship Intelligence", type="primary"):
 
 st.divider()
 
-feed, feed_exists = load_json_safe("relationship-intelligence/runtime/output/relationship-intelligence-feed.json")
+feed, feed_exists = load_json_safe("output/relationship-intelligence/relationship-intelligence-feed.json")
 people = feed.get("people", []) if feed_exists and isinstance(feed, dict) else []
 
 if not people:
@@ -130,7 +130,7 @@ else:
 
 st.divider()
 st.subheader("Relationship Intelligence Report")
-text, exists = load_text_safe(resolve_dated("relationship-intelligence/runtime/output/{date}-relationship-intelligence-report.md"))
+text, exists = load_text_safe(resolve_dated("output/relationship-intelligence/{date}-relationship-intelligence-report.md"))
 if exists:
     st.markdown(text)
 else:

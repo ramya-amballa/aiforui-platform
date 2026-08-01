@@ -42,8 +42,8 @@ show_table(
 st.divider()
 tab1, tab2 = st.tabs(["Revenue Dashboard", "Revenue Forecast"])
 with tab1:
-    text, exists = load_text_safe("revenue-hunter/runtime/output/revenue-dashboard.md")
+    text, exists = load_text_safe("output/revenue-hunter/revenue-dashboard.md")
     st.markdown(text) if exists else st.info("No revenue dashboard yet.")
 with tab2:
-    text, exists = load_text_safe("revenue-hunter/runtime/output/revenue-forecast.md")
+    text, exists = load_text_safe("output/revenue-hunter/revenue-forecast.md")
     st.markdown(text) if exists else st.info("No revenue forecast yet.")

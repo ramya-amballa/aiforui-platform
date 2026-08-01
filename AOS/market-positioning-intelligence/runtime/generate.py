@@ -54,9 +54,9 @@ def main():
     engine.save_json(engine.FEED_PATH, feed)
 
     report = engine.render_market_positioning_markdown(coverage, tailwinds, substantive_count, lost)
-    report_path = RUNTIME_DIR / "output" / f"{engine.TODAY}-market-positioning-report.md"
+    report_path = engine.FEED_PATH.parent / f"{engine.TODAY}-market-positioning-report.md"
     report_path.write_text(report, encoding="utf-8")
-    (RUNTIME_DIR / "output" / "market-positioning-report.md").write_text(report, encoding="utf-8")
+    (engine.FEED_PATH.parent / "market-positioning-report.md").write_text(report, encoding="utf-8")
 
     unvalidated = [c["service"] for c in coverage if c["recommendationCount"] == 0]
     print(f"Service demand coverage: {len(coverage) - len(unvalidated)}/{len(coverage)} services validated by real demand")

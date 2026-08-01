@@ -85,14 +85,14 @@ For each employee, in order:
 
 - **Retry**: configurable count and backoff, per employee, above.
 - **Log**: every attempt, every exit code, every stdout/stderr capture,
-  and every skip decision goes to `logs/{date}-{time}-orchestrator.log`.
+  and every skip decision goes to `../output/orchestrator/logs/{date}-{time}-orchestrator.log`.
 - **Continue where possible**: a failed employee does not stop the
   run. Only employees that actually depend on the failed one are
   skipped (`SKIPPED_DEPENDENCY_FAILED`); everything else still runs.
   For example, if Demand Intelligence fails, Market Intelligence,
   Product Manager and Content Director are unaffected and still run.
 - **Notify CEO Advisor**: any `FAILED` employee is written into
-  `status.json`'s `failures` list. `09-CEO-Advisor/decision-model.md`
+  `../output/orchestrator/status.json`'s `failures` list. `09-CEO-Advisor/decision-model.md`
   and `operating-manual.md` were given one additive line each pointing
   at this file, so a pipeline failure surfaces as a candidate action
   the same way an at-risk relationship or a stalled deal does — see
@@ -106,7 +106,7 @@ For each employee, in order:
 
 ## Completion Status
 
-`status.json` (at the top of `AOS/orchestrator/`, not nested) is
+`AOS/output/orchestrator/status.json` is
 overwritten at the end of every run with: start/finish timestamps,
 total duration, one entry per employee (status, attempts, duration,
 error if any, detected outputs), the overall run status
@@ -117,7 +117,7 @@ failed), and a pointer to that run's Daily Execution Report.
 
 ## Daily Execution Report
 
-Written to `runtime/reports/{date}-daily-execution-report.md` on every
+Written to `AOS/output/orchestrator/reports/{date}-daily-execution-report.md` on every
 run, and includes exactly what was asked for:
 
 - **Employees executed** — all nine, with status
@@ -127,7 +127,7 @@ run, and includes exactly what was asked for:
 - **Outputs generated** — the detected files from step 5 above,
   including Daily Brief's Markdown and HTML dashboard in both their
   stable location and their immutable dated archive copy under
-  `AOS/daily-briefs/YYYY/MM/DD/`
+  `AOS/output/daily-briefs/YYYY/MM/DD/`
 - **Business impact** — Daily Brief's own "## Daily Summary" paragraph,
   quoted verbatim (see step 5) — the Orchestrator does not have its own
   business-impact model and does not build one; that would duplicate
@@ -142,5 +142,5 @@ run, and includes exactly what was asked for:
 - Does not write to any employee's data files
   (`opportunity-schema.json`, `pipeline.json`, `company-intelligence.json`,
   etc.) — only the employees themselves do that, exactly as before.
-  The Orchestrator's own writes are limited to `logs/`, `status.json`,
-  and `runtime/reports/`.
+  The Orchestrator's own writes are limited to `output/orchestrator/logs/`,
+  `output/orchestrator/status.json`, and `output/orchestrator/reports/`.

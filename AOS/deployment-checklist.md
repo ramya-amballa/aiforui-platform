@@ -53,7 +53,7 @@ listed with what changed.
 
 - [x] **Added this pass.** Every run, after writing its existing
   stable (`executive-dashboard/executive-dashboard.md`) and dated
-  (`executive-dashboard/runtime/output/{date}-executive-dashboard.md`)
+  (`output/executive-dashboard/{date}-executive-dashboard.md`)
   copies exactly as before, the generator now additionally writes an
   immutable dated copy to `AOS/daily-briefs/{YYYY}/{MM}/{DD}/`. Nothing
   existing was removed or restructured — this is additive.

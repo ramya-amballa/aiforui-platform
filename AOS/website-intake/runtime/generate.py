@@ -71,7 +71,7 @@ REPO_ROOT = AOS_DIR.parent
 CONFIG_DIR = RUNTIME_DIR / "config"
 INBOX_DIR = RUNTIME_DIR / "inbox"
 PROCESSED_DIR = RUNTIME_DIR / "processed"
-OUTPUT_DIR = RUNTIME_DIR / "output"
+OUTPUT_DIR = AOS_DIR / "output" / "website-intake"
 LOGS_DIR = RUNTIME_DIR / "logs"
 LEADS_PATH = WEBSITE_INTAKE_DIR / "leads.json"
 
@@ -423,7 +423,7 @@ def write_ceo_advisor_feed(new_leads):
             for lead in new_leads
         ],
     }
-    OUTPUT_DIR.mkdir(exist_ok=True)
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     save_json(feed_path, feed)
 
 
@@ -545,7 +545,7 @@ def main():
     save_json(LEADS_PATH, leads_store)
     write_ceo_advisor_feed(new_leads)
 
-    OUTPUT_DIR.mkdir(exist_ok=True)
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     report = render_report(new_leads)
     (OUTPUT_DIR / f"{TODAY.isoformat()}-website-intake-report.md").write_text(report, encoding="utf-8")
     (OUTPUT_DIR / "website-intake-report.md").write_text(report, encoding="utf-8")

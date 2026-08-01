@@ -36,7 +36,7 @@ if run_clicked:
 st.divider()
 
 st.subheader("Last Run Summary")
-status, exists = load_json_safe("orchestrator/status.json")
+status, exists = load_json_safe("output/orchestrator/status.json")
 if not exists:
     st.info("AOS has not been run yet. Click **Run Full AOS** above.")
 else:

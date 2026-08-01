@@ -30,7 +30,7 @@ if st.button("Check Market", type="primary"):
 st.divider()
 
 st.subheader("New Developments")
-report_text, exists = load_text_safe(resolve_dated("05-Market-Intelligence/runtime/output/{date}-market-intelligence-report.md"))
+report_text, exists = load_text_safe(resolve_dated("output/05-Market-Intelligence/{date}-market-intelligence-report.md"))
 if exists:
     st.markdown(report_text)
 else:

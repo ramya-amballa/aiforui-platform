@@ -33,7 +33,7 @@ if st.button("Refresh Recruiter Intelligence", type="primary"):
 
 st.divider()
 
-feed, feed_exists = load_json_safe("recruiter-intelligence/runtime/output/recruiter-intelligence-feed.json")
+feed, feed_exists = load_json_safe("output/recruiter-intelligence/recruiter-intelligence-feed.json")
 contacts = feed.get("contacts", []) if feed_exists and isinstance(feed, dict) else []
 
 st.subheader(f"Contacts ({len(contacts)})")
@@ -107,7 +107,7 @@ else:
 
 st.divider()
 st.subheader("Recruiter Intelligence Report")
-text, exists = load_text_safe(resolve_dated("recruiter-intelligence/runtime/output/{date}-recruiter-intelligence-report.md"))
+text, exists = load_text_safe(resolve_dated("output/recruiter-intelligence/{date}-recruiter-intelligence-report.md"))
 if exists:
     st.markdown(text)
 else:

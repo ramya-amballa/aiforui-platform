@@ -5,9 +5,9 @@
     "script": "orchestrator/orchestrator.py",
     "cwd": "orchestrator",
     "timeoutSeconds": 900,
-    "statusFile": "orchestrator/status.json",
-    "logsDir": "orchestrator/logs",
-    "reportsDir": "orchestrator/reports"
+    "statusFile": "output/orchestrator/status.json",
+    "logsDir": "output/orchestrator/logs",
+    "reportsDir": "output/orchestrator/reports"
   },
   "employees": {
     "market-intelligence": {
@@ -17,9 +17,9 @@
       "cwd": "05-Market-Intelligence/runtime",
       "timeoutSeconds": 300,
       "outputs": [
-        "05-Market-Intelligence/runtime/output/{date}-market-intelligence-report.md"
+        "output/05-Market-Intelligence/{date}-market-intelligence-report.md"
       ],
-      "outputDir": "05-Market-Intelligence/runtime/output"
+      "outputDir": "output/05-Market-Intelligence"
     },
     "website-intake": {
       "name": "Website Intake Runtime",
@@ -28,10 +28,10 @@
       "cwd": "website-intake/runtime",
       "timeoutSeconds": 300,
       "outputs": [
-        "website-intake/runtime/output/{date}-website-intake-report.md",
-        "website-intake/runtime/output/website-intake-report.md"
+        "output/website-intake/{date}-website-intake-report.md",
+        "output/website-intake/website-intake-report.md"
       ],
-      "outputDir": "website-intake/runtime/output",
+      "outputDir": "output/website-intake",
       "dataFile": "website-intake/leads.json"
     },
     "demand-intelligence": {
@@ -41,13 +41,13 @@
       "cwd": "demand-intelligence/runtime",
       "timeoutSeconds": 600,
       "outputs": [
-        "demand-intelligence/runtime/output/{date}-daily-report.md",
+        "output/demand-intelligence/{date}-daily-report.md",
         "demand-intelligence/runtime/rejected/{date}-rejected-report.md",
         "demand-intelligence/runtime/snapshots/{date}-collection-snapshot.json",
         "demand-intelligence/organisation-profiles.json",
-        "demand-intelligence/runtime/output/top-organisations-this-week.json"
+        "output/demand-intelligence/top-organisations-this-week.json"
       ],
-      "outputDir": "demand-intelligence/runtime/output",
+      "outputDir": "output/demand-intelligence",
       "dataFile": "demand-intelligence/opportunity-schema.json",
       "organisationProfilesFile": "demand-intelligence/organisation-profiles.json"
     },
@@ -58,12 +58,12 @@
       "cwd": "revenue-hunter/runtime",
       "timeoutSeconds": 300,
       "outputs": [
-        "revenue-hunter/runtime/output/{date}-revenue-dashboard.md",
-        "revenue-hunter/runtime/output/{date}-revenue-forecast.md",
-        "revenue-hunter/runtime/output/revenue-dashboard.md",
-        "revenue-hunter/runtime/output/revenue-forecast.md"
+        "output/revenue-hunter/{date}-revenue-dashboard.md",
+        "output/revenue-hunter/{date}-revenue-forecast.md",
+        "output/revenue-hunter/revenue-dashboard.md",
+        "output/revenue-hunter/revenue-forecast.md"
       ],
-      "outputDir": "revenue-hunter/runtime/output",
+      "outputDir": "output/revenue-hunter",
       "dataFile": "08-Revenue-Hunter/pipeline.json"
     },
     "crm": {
@@ -73,11 +73,11 @@
       "cwd": "crm/runtime",
       "timeoutSeconds": 300,
       "outputs": [
-        "crm/runtime/output/{date}-daily-follow-up-queue.md",
-        "crm/runtime/output/{date}-relationship-health-report.md",
-        "crm/runtime/output/{date}-stale-relationship-alerts.md"
+        "output/crm/{date}-daily-follow-up-queue.md",
+        "output/crm/{date}-relationship-health-report.md",
+        "output/crm/{date}-stale-relationship-alerts.md"
       ],
-      "outputDir": "crm/runtime/output",
+      "outputDir": "output/crm",
       "dataFile": "06-CRM/company-intelligence.json"
     },
     "service-mapping": {
@@ -87,10 +87,10 @@
       "cwd": "service-mapping/runtime",
       "timeoutSeconds": 300,
       "outputs": [
-        "service-mapping/runtime/output/{date}-service-recommendation-report.md",
-        "service-mapping/runtime/output/service-recommendation-report.md"
+        "output/service-mapping/{date}-service-recommendation-report.md",
+        "output/service-mapping/service-recommendation-report.md"
       ],
-      "outputDir": "service-mapping/runtime/output",
+      "outputDir": "output/service-mapping",
       "dataFile": "service-mapping/service-recommendations.json"
     },
     "sales-director": {
@@ -100,10 +100,10 @@
       "cwd": "sales-director/runtime",
       "timeoutSeconds": 300,
       "outputs": [
-        "sales-director/runtime/output/{date}-sales-director-report.md",
-        "sales-director/runtime/output/ceo-advisor-feed.json"
+        "output/sales-director/{date}-sales-director-report.md",
+        "output/sales-director/ceo-advisor-feed.json"
       ],
-      "outputDir": "sales-director/runtime/output"
+      "outputDir": "output/sales-director"
     },
     "account-intelligence": {
       "name": "Account Intelligence",
@@ -112,10 +112,10 @@
       "cwd": "account-intelligence/runtime",
       "timeoutSeconds": 300,
       "outputs": [
-        "account-intelligence/runtime/output/{date}-account-intelligence-report.md",
-        "account-intelligence/runtime/output/account-intelligence-feed.json"
+        "output/account-intelligence/{date}-account-intelligence-report.md",
+        "output/account-intelligence/account-intelligence-feed.json"
       ],
-      "outputDir": "account-intelligence/runtime/output"
+      "outputDir": "output/account-intelligence"
     },
     "reverse-job-hunt": {
       "name": "Reverse Job Hunt",
@@ -124,10 +124,10 @@
       "cwd": "reverse-job-hunt/runtime",
       "timeoutSeconds": 300,
       "outputs": [
-        "reverse-job-hunt/runtime/output/{date}-reverse-job-hunt-report.md",
-        "reverse-job-hunt/runtime/output/reverse-job-hunt-feed.json"
+        "output/reverse-job-hunt/{date}-reverse-job-hunt-report.md",
+        "output/reverse-job-hunt/reverse-job-hunt-feed.json"
       ],
-      "outputDir": "reverse-job-hunt/runtime/output"
+      "outputDir": "output/reverse-job-hunt"
     },
     "recruiter-intelligence": {
       "name": "Recruiter Intelligence",
@@ -136,10 +136,10 @@
       "cwd": "recruiter-intelligence/runtime",
       "timeoutSeconds": 300,
       "outputs": [
-        "recruiter-intelligence/runtime/output/{date}-recruiter-intelligence-report.md",
-        "recruiter-intelligence/runtime/output/recruiter-intelligence-feed.json"
+        "output/recruiter-intelligence/{date}-recruiter-intelligence-report.md",
+        "output/recruiter-intelligence/recruiter-intelligence-feed.json"
       ],
-      "outputDir": "recruiter-intelligence/runtime/output"
+      "outputDir": "output/recruiter-intelligence"
     },
     "fractional-advisory-radar": {
       "name": "Fractional Advisory Radar",
@@ -148,10 +148,10 @@
       "cwd": "fractional-advisory-radar/runtime",
       "timeoutSeconds": 300,
       "outputs": [
-        "fractional-advisory-radar/runtime/output/{date}-fractional-advisory-radar-report.md",
-        "fractional-advisory-radar/runtime/output/fractional-advisory-radar-feed.json"
+        "output/fractional-advisory-radar/{date}-fractional-advisory-radar-report.md",
+        "output/fractional-advisory-radar/fractional-advisory-radar-feed.json"
       ],
-      "outputDir": "fractional-advisory-radar/runtime/output"
+      "outputDir": "output/fractional-advisory-radar"
     },
     "relationship-intelligence": {
       "name": "Relationship Intelligence",
@@ -160,10 +160,10 @@
       "cwd": "relationship-intelligence/runtime",
       "timeoutSeconds": 300,
       "outputs": [
-        "relationship-intelligence/runtime/output/{date}-relationship-intelligence-report.md",
-        "relationship-intelligence/runtime/output/relationship-intelligence-feed.json"
+        "output/relationship-intelligence/{date}-relationship-intelligence-report.md",
+        "output/relationship-intelligence/relationship-intelligence-feed.json"
       ],
-      "outputDir": "relationship-intelligence/runtime/output"
+      "outputDir": "output/relationship-intelligence"
     },
     "tender-intelligence": {
       "name": "Tender & RFP Intelligence",
@@ -172,10 +172,10 @@
       "cwd": "tender-intelligence/runtime",
       "timeoutSeconds": 300,
       "outputs": [
-        "tender-intelligence/runtime/output/{date}-tender-intelligence-report.md",
-        "tender-intelligence/runtime/output/tender-intelligence-feed.json"
+        "output/tender-intelligence/{date}-tender-intelligence-report.md",
+        "output/tender-intelligence/tender-intelligence-feed.json"
       ],
-      "outputDir": "tender-intelligence/runtime/output"
+      "outputDir": "output/tender-intelligence"
     },
     "executive-brand-intelligence": {
       "name": "Executive Brand Intelligence",
@@ -184,10 +184,10 @@
       "cwd": "executive-brand-intelligence/runtime",
       "timeoutSeconds": 300,
       "outputs": [
-        "executive-brand-intelligence/runtime/output/{date}-executive-brand-intelligence-report.md",
-        "executive-brand-intelligence/runtime/output/executive-brand-intelligence-feed.json"
+        "output/executive-brand-intelligence/{date}-executive-brand-intelligence-report.md",
+        "output/executive-brand-intelligence/executive-brand-intelligence-feed.json"
       ],
-      "outputDir": "executive-brand-intelligence/runtime/output"
+      "outputDir": "output/executive-brand-intelligence"
     },
     "delivery-intelligence": {
       "name": "Delivery Intelligence",
@@ -196,10 +196,10 @@
       "cwd": "delivery-intelligence/runtime",
       "timeoutSeconds": 300,
       "outputs": [
-        "delivery-intelligence/runtime/output/{date}-delivery-intelligence-report.md",
-        "delivery-intelligence/runtime/output/delivery-intelligence-feed.json"
+        "output/delivery-intelligence/{date}-delivery-intelligence-report.md",
+        "output/delivery-intelligence/delivery-intelligence-feed.json"
       ],
-      "outputDir": "delivery-intelligence/runtime/output"
+      "outputDir": "output/delivery-intelligence"
     },
     "company-360": {
       "name": "Company 360",
@@ -208,10 +208,10 @@
       "cwd": "company-360/runtime",
       "timeoutSeconds": 300,
       "outputs": [
-        "company-360/runtime/output/{date}-company-360-report.md",
-        "company-360/runtime/output/company-360-feed.json"
+        "output/company-360/{date}-company-360-report.md",
+        "output/company-360/company-360-feed.json"
       ],
-      "outputDir": "company-360/runtime/output"
+      "outputDir": "output/company-360"
     },
     "executive-memory": {
       "name": "Executive Memory",
@@ -220,10 +220,10 @@
       "cwd": "executive-memory/runtime",
       "timeoutSeconds": 300,
       "outputs": [
-        "executive-memory/runtime/output/{date}-executive-memory-report.md",
-        "executive-memory/runtime/output/executive-memory-feed.json"
+        "output/executive-memory/{date}-executive-memory-report.md",
+        "output/executive-memory/executive-memory-feed.json"
       ],
-      "outputDir": "executive-memory/runtime/output"
+      "outputDir": "output/executive-memory"
     },
     "market-positioning-intelligence": {
       "name": "Market Positioning Intelligence",
@@ -232,10 +232,10 @@
       "cwd": "market-positioning-intelligence/runtime",
       "timeoutSeconds": 300,
       "outputs": [
-        "market-positioning-intelligence/runtime/output/{date}-market-positioning-report.md",
-        "market-positioning-intelligence/runtime/output/market-positioning-feed.json"
+        "output/market-positioning-intelligence/{date}-market-positioning-report.md",
+        "output/market-positioning-intelligence/market-positioning-feed.json"
       ],
-      "outputDir": "market-positioning-intelligence/runtime/output"
+      "outputDir": "output/market-positioning-intelligence"
     },
     "capacity-management": {
       "name": "Capacity Management",
@@ -244,10 +244,10 @@
       "cwd": "capacity-management/runtime",
       "timeoutSeconds": 300,
       "outputs": [
-        "capacity-management/runtime/output/{date}-capacity-report.md",
-        "capacity-management/runtime/output/capacity-feed.json"
+        "output/capacity-management/{date}-capacity-report.md",
+        "output/capacity-management/capacity-feed.json"
       ],
-      "outputDir": "capacity-management/runtime/output"
+      "outputDir": "output/capacity-management"
     },
     "product-manager": {
       "name": "Product Manager",
@@ -256,9 +256,9 @@
       "cwd": "product-manager/runtime",
       "timeoutSeconds": 300,
       "outputs": [
-        "product-manager/runtime/output/{date}-product-manager-report.md"
+        "output/product-manager/{date}-product-manager-report.md"
       ],
-      "outputDir": "product-manager/runtime/output",
+      "outputDir": "output/product-manager",
       "dataFile": "03-Product-Manager/product-backlog.json"
     },
     "content-director": {
@@ -268,9 +268,9 @@
       "cwd": "content-director/runtime",
       "timeoutSeconds": 300,
       "outputs": [
-        "content-director/runtime/output/{date}-content-director-report.md"
+        "output/content-director/{date}-content-director-report.md"
       ],
-      "outputDir": "content-director/runtime/output"
+      "outputDir": "output/content-director"
     },
     "daily-brief": {
       "name": "Daily Brief",
@@ -279,12 +279,12 @@
       "cwd": "executive-dashboard/runtime",
       "timeoutSeconds": 300,
       "outputs": [
-        "executive-dashboard/executive-dashboard.md",
-        "executive-dashboard/executive-dashboard.html",
-        "executive-dashboard/runtime/output/{date}-executive-dashboard.md",
-        "executive-dashboard/runtime/output/{date}-executive-dashboard.html"
+        "output/executive-dashboard/executive-dashboard.md",
+        "output/executive-dashboard/executive-dashboard.html",
+        "output/executive-dashboard/{date}-executive-dashboard.md",
+        "output/executive-dashboard/{date}-executive-dashboard.html"
       ],
-      "outputDir": "executive-dashboard/runtime/output"
+      "outputDir": "output/executive-dashboard"
     },
     "ceo-advisor": {
       "name": "CEO Advisor",
@@ -293,21 +293,21 @@
       "cwd": "ceo-advisor/runtime",
       "timeoutSeconds": 300,
       "outputs": [
-        "ceo-advisor/runtime/output/{date}-ceo-daily-report.md",
-        "ceo-advisor/runtime/output/ceo-daily-report.md",
-        "ceo-advisor/runtime/output/ceo-weekly-report.md",
-        "ceo-advisor/runtime/output/ceo-monthly-business-review.md"
+        "output/ceo-advisor/{date}-ceo-daily-report.md",
+        "output/ceo-advisor/ceo-daily-report.md",
+        "output/ceo-advisor/ceo-weekly-report.md",
+        "output/ceo-advisor/ceo-monthly-business-review.md"
       ],
-      "outputDir": "ceo-advisor/runtime/output"
+      "outputDir": "output/ceo-advisor"
     }
   },
   "reports": {
     "_comment": "Files the Reports page offers for download, in the order requested.",
-    "CEO Daily Report": "ceo-advisor/runtime/output/ceo-daily-report.md",
-    "CEO Weekly Report": "ceo-advisor/runtime/output/ceo-weekly-report.md",
-    "CEO Monthly Report": "ceo-advisor/runtime/output/ceo-monthly-business-review.md",
-    "Revenue Report": "revenue-hunter/runtime/output/revenue-dashboard.md",
-    "Opportunity Report": "demand-intelligence/runtime/output/{date}-daily-report.md",
-    "Pipeline Report": "revenue-hunter/runtime/output/revenue-forecast.md"
+    "CEO Daily Report": "output/ceo-advisor/ceo-daily-report.md",
+    "CEO Weekly Report": "output/ceo-advisor/ceo-weekly-report.md",
+    "CEO Monthly Report": "output/ceo-advisor/ceo-monthly-business-review.md",
+    "Revenue Report": "output/revenue-hunter/revenue-dashboard.md",
+    "Opportunity Report": "output/demand-intelligence/{date}-daily-report.md",
+    "Pipeline Report": "output/revenue-hunter/revenue-forecast.md"
   }
 }

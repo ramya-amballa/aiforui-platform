@@ -128,7 +128,7 @@ def main():
     if not feed["tenders"]:
         print("No tenders tracked yet. Nothing more to do.")
 
-    report_path = RUNTIME_DIR / "output" / f"{TODAY}-tender-intelligence-report.md"
+    report_path = engine.FEED_PATH.parent / f"{TODAY}-tender-intelligence-report.md"
     report_path.write_text(render_report(feed), encoding="utf-8")
 
     print(f"{len(tenders)} new tender(s) this run, {len(feed['tenders'])} tracked overall. "

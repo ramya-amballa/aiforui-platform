@@ -63,11 +63,11 @@ st.divider()
 st.subheader("Latest Reports")
 r1, r2, r3 = st.tabs(["Daily Follow-Up Queue", "Relationship Health", "Stale Relationship Alerts"])
 with r1:
-    text, exists = load_text_safe(resolve_dated("crm/runtime/output/{date}-daily-follow-up-queue.md"))
+    text, exists = load_text_safe(resolve_dated("output/crm/{date}-daily-follow-up-queue.md"))
     st.markdown(text) if exists else st.info("No follow-up queue for today yet.")
 with r2:
-    text, exists = load_text_safe(resolve_dated("crm/runtime/output/{date}-relationship-health-report.md"))
+    text, exists = load_text_safe(resolve_dated("output/crm/{date}-relationship-health-report.md"))
     st.markdown(text) if exists else st.info("No relationship health report for today yet.")
 with r3:
-    text, exists = load_text_safe(resolve_dated("crm/runtime/output/{date}-stale-relationship-alerts.md"))
+    text, exists = load_text_safe(resolve_dated("output/crm/{date}-stale-relationship-alerts.md"))
     st.markdown(text) if exists else st.info("No stale relationship alerts for today yet.")

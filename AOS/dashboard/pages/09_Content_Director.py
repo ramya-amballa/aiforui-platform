@@ -30,7 +30,7 @@ if st.button("Generate Content", type="primary"):
 
 st.divider()
 
-drafts_dir = aos_path("content-director", "runtime", "output", "drafts")
+drafts_dir = aos_path("output", "content-director", "drafts")
 drafts = sorted(drafts_dir.glob("*.md")) if drafts_dir.is_dir() else []
 
 by_format = {"linkedin": [], "newsletter": [], "website": [], "product": []}
@@ -64,7 +64,7 @@ with tab_product:
 
 st.divider()
 st.subheader("Content Director Report")
-text, exists = load_text_safe(resolve_dated("content-director/runtime/output/{date}-content-director-report.md"))
+text, exists = load_text_safe(resolve_dated("output/content-director/{date}-content-director-report.md"))
 if exists:
     st.markdown(text)
 else:

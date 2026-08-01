@@ -55,7 +55,7 @@ PRACTITIONER_BANK_PATH = AOS_DIR / "sales-director" / "runtime" / "config" / "pr
 
 QUEUE_DIR = RUNTIME_DIR / "queue"
 PROCESSED_INDEX_PATH = QUEUE_DIR / "processed-index.json"
-OUTPUT_DIR = RUNTIME_DIR / "output"
+OUTPUT_DIR = AOS_DIR / "output" / "product-manager"
 LOGS_DIR = RUNTIME_DIR / "logs"
 
 TODAY = date.today().isoformat()
@@ -334,7 +334,7 @@ def main():
     save_json(PRODUCT_BACKLOG_PATH, product_backlog)
     save_json(PROCESSED_INDEX_PATH, processed_index)
 
-    OUTPUT_DIR.mkdir(exist_ok=True)
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     report_lines = [
         "# Product Manager — Daily Report", "", f"**Date:** {TODAY}",
         f"**Signals evaluated:** {len(evaluated)}", "",

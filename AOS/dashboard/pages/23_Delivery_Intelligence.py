@@ -38,7 +38,7 @@ if st.button("Refresh Delivery Intelligence", type="primary"):
 
 st.divider()
 
-feed, feed_exists = load_json_safe("delivery-intelligence/runtime/output/delivery-intelligence-feed.json")
+feed, feed_exists = load_json_safe("output/delivery-intelligence/delivery-intelligence-feed.json")
 engagements = feed.get("engagements", []) if feed_exists and isinstance(feed, dict) else []
 
 st.subheader(f"Won Engagements ({len(engagements)})")
@@ -91,7 +91,7 @@ else:
 
 st.divider()
 st.subheader("Delivery Intelligence Report")
-text, exists = load_text_safe(resolve_dated("delivery-intelligence/runtime/output/{date}-delivery-intelligence-report.md"))
+text, exists = load_text_safe(resolve_dated("output/delivery-intelligence/{date}-delivery-intelligence-report.md"))
 if exists:
     st.markdown(text)
 else:

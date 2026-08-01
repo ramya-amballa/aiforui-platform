@@ -402,7 +402,7 @@ class GenerateMainTests(unittest.TestCase):
         engine.save_json(self.tmp_path / "ai_feed.json", {"briefs": []})
 
         generate.main()
-        report_files = list((self.tmp_path / "output").glob("*-reverse-job-hunt-report.md"))
+        report_files = list(self.tmp_path.glob("*-reverse-job-hunt-report.md"))
         self.assertEqual(len(report_files), 1)
         content = report_files[0].read_text(encoding="utf-8")
         self.assertLess(content.index("HighROI"), content.index("LowROI"))

@@ -22,7 +22,7 @@ service_recs_data, service_recs_exist = load_json_safe("service-mapping/service-
 service_recs = service_recs_data.get("recommendations", {}) if service_recs_exist and isinstance(service_recs_data, dict) else {}
 leads_data, leads_exist = load_json_safe("website-intake/leads.json")
 leads = list(leads_data.get("leads", {}).values()) if leads_exist and isinstance(leads_data, dict) else []
-sales_feed, sales_feed_exists = load_json_safe("sales-director/runtime/output/ceo-advisor-feed.json")
+sales_feed, sales_feed_exists = load_json_safe("output/sales-director/ceo-advisor-feed.json")
 sales_items = sales_feed.get("feed", []) if sales_feed_exists and isinstance(sales_feed, dict) else []
 
 row1_col1, row1_col2 = st.columns(2)

@@ -23,10 +23,14 @@ employee's own logic.
   script path (or `null`), dependencies, retry/timeout settings, output
   paths — the only file that needs editing to add a new employee's
   runtime later
-- `runtime/reports/` — one Daily Execution Report per run
-- `logs/` — one full run log per run
-- `status.json` — the latest run's completion status, overwritten each
-  run
+- `../output/orchestrator/reports/` — one Daily Execution Report per run
+- `../output/orchestrator/logs/` — one full run log per run
+- `../output/orchestrator/status.json` — the latest run's completion
+  status, overwritten each run
+
+As of AOS Sprint 24, every AI employee's own generated output (not
+just the Orchestrator's) is consolidated the same way, under
+`AOS/output/<employee>/` — see `../output/README.md`.
 
 ## Production Hardening (v1.0.1)
 

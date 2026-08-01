@@ -47,7 +47,7 @@ SERVICE_RECOMMENDATIONS_PATH = AOS_DIR / "service-mapping" / "service-recommenda
 REGULATORY_LOG_PATH = AOS_DIR / "05-Market-Intelligence" / "regulatory-log.json"
 PIPELINE_PATH = AOS_DIR / "08-Revenue-Hunter" / "pipeline.json"
 
-FEED_PATH = RUNTIME_DIR / "output" / "market-positioning-feed.json"
+FEED_PATH = AOS_DIR / "output" / "market-positioning-intelligence" / "market-positioning-feed.json"
 
 TODAY = date.today().isoformat()
 

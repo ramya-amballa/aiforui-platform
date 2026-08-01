@@ -66,10 +66,10 @@ OPPORTUNITY_SCHEMA_PATH = DEMAND_INTELLIGENCE_DIR / "opportunity-schema.json"
 DEMAND_CATEGORIES_CONFIG_PATH = DEMAND_INTELLIGENCE_DIR / "runtime" / "config" / "demand-signal-categories.json"
 
 CRM_PATH = AOS_DIR / "crm" / "company-intelligence.json"
-SALES_FEED_PATH = AOS_DIR / "sales-director" / "runtime" / "output" / "ceo-advisor-feed.json"
+SALES_FEED_PATH = AOS_DIR / "output" / "sales-director" / "ceo-advisor-feed.json"
 
-BRIEFS_DIR = RUNTIME_DIR / "output" / "account-briefs"
-FEED_PATH = RUNTIME_DIR / "output" / "account-intelligence-feed.json"
+BRIEFS_DIR = AOS_DIR / "output" / "account-intelligence" / "account-briefs"
+FEED_PATH = AOS_DIR / "output" / "account-intelligence" / "account-intelligence-feed.json"
 
 # Credited, verbatim copy of demand-intelligence's own extractors/base.py
 # VENDOR_BLOCKLIST — reused here for the opposite purpose (detecting a

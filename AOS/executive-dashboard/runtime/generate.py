@@ -45,10 +45,10 @@ OPPORTUNITY_SCHEMA_PATH = AOS_DIR / "demand-intelligence" / "opportunity-schema.
 PIPELINE_PATH = AOS_DIR / "08-Revenue-Hunter" / "pipeline.json"
 CRM_PATH = AOS_DIR / "06-CRM" / "company-intelligence.json"
 
-STABLE_OUTPUT_PATH = DASHBOARD_DIR / "executive-dashboard.md"
-STABLE_HTML_PATH = DASHBOARD_DIR / "executive-dashboard.html"
-OUTPUT_DIR = RUNTIME_DIR / "output"
-DAILY_BRIEFS_DIR = AOS_DIR / "daily-briefs"
+OUTPUT_DIR = AOS_DIR / "output" / "executive-dashboard"
+STABLE_OUTPUT_PATH = OUTPUT_DIR / "executive-dashboard.md"
+STABLE_HTML_PATH = OUTPUT_DIR / "executive-dashboard.html"
+DAILY_BRIEFS_DIR = AOS_DIR / "output" / "daily-briefs"
 
 TODAY = date.today()
 
@@ -598,9 +598,9 @@ def main():
     report = generate(opportunities, pipeline, crm)
     report_html = markdown_to_html(report, "AOS Executive Dashboard")
 
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     STABLE_OUTPUT_PATH.write_text(report, encoding="utf-8")
     STABLE_HTML_PATH.write_text(report_html, encoding="utf-8")
-    OUTPUT_DIR.mkdir(exist_ok=True)
     (OUTPUT_DIR / f"{TODAY.isoformat()}-executive-dashboard.md").write_text(report, encoding="utf-8")
     (OUTPUT_DIR / f"{TODAY.isoformat()}-executive-dashboard.html").write_text(report_html, encoding="utf-8")
 

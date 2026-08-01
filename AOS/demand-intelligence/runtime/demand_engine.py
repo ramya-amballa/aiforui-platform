@@ -86,11 +86,11 @@ AOS_DIR = DEMAND_INTELLIGENCE_DIR.parent
 
 CONFIG_PATH = RUNTIME_DIR / "config" / "demand-signal-categories.json"
 PROFILES_PATH = DEMAND_INTELLIGENCE_DIR / "organisation-profiles.json"
-TOP_ORGANISATIONS_PATH = RUNTIME_DIR / "output" / "top-organisations-this-week.json"
+TOP_ORGANISATIONS_PATH = AOS_DIR / "output" / "demand-intelligence" / "top-organisations-this-week.json"
 
 CRM_PATH = AOS_DIR / "06-CRM" / "company-intelligence.json"
 PIPELINE_PATH = AOS_DIR / "08-Revenue-Hunter" / "pipeline.json"
-SALES_FEED_PATH = AOS_DIR / "sales-director" / "runtime" / "output" / "ceo-advisor-feed.json"
+SALES_FEED_PATH = AOS_DIR / "output" / "sales-director" / "ceo-advisor-feed.json"
 
 TODAY = date.today().isoformat()
 

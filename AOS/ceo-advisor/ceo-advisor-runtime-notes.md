@@ -48,12 +48,12 @@ runtime's read scope, since Sprint 5 didn't name them):
 | Source | File(s) | What's read |
 |---|---|---|
 | Demand Intelligence | `demand-intelligence/opportunity-schema.json` | Priority-band opportunities as candidates; every opportunity's `domainTags`/`dateFound`/`classification`/`sourceCategory` for Strategic Alerts; Archived-band opportunities for the Ignore List |
-| Market Intelligence | `05-Market-Intelligence/runtime/output/ceo-advisor-feed.json` | The six booleans only, per `decision-model.md` — the underlying `regulatory-log.json` entry is never opened |
+| Market Intelligence | `output/05-Market-Intelligence/ceo-advisor-feed.json` | The six booleans only, per `decision-model.md` — the underlying `regulatory-log.json` entry is never opened |
 | CRM | `06-CRM/company-intelligence.json` | Every company record, via `crm_follow_up_status()` (reused verbatim, see below) for candidates and the Ignore List's stale-cold check |
 | Revenue Hunter | `08-Revenue-Hunter/pipeline.json` | Priority-band pipeline items as candidates; every open item for Revenue Impact |
 | Service Mapping Engine | `service-mapping/service-recommendations.json` | Enrichment only — attaches a recommended service/template to a candidate that already has an `opportunityId`, never an independent candidate source of its own |
-| Sales Director | `sales-director/runtime/output/ceo-advisor-feed.json` | `status` only, per `decision-model.md` — the underlying package is never opened |
-| Website Intake | `website-intake/runtime/output/ceo-advisor-feed.json`, `website-intake/leads.json` | The feed's `urgency` only for candidates (per `decision-model.md`); `leads.json`'s `dateReceived` for the website-silence Strategic Alert only — no other lead field is read |
+| Sales Director | `output/sales-director/ceo-advisor-feed.json` | `status` only, per `decision-model.md` — the underlying package is never opened |
+| Website Intake | `output/website-intake/ceo-advisor-feed.json`, `website-intake/leads.json` | The feed's `urgency` only for candidates (per `decision-model.md`); `leads.json`'s `dateReceived` for the website-silence Strategic Alert only — no other lead field is read |
 | Daily Brief | `executive-dashboard/executive-dashboard.md` | Its own `## Daily Summary` paragraph, quoted verbatim into the Executive Summary — the same "quote, never recompute" convention `orchestrator.py` itself already uses for the Daily Execution Report's Business Impact section |
 
 `orchestrator/status.json`'s `failures` list is also read (not one of

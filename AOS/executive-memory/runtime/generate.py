@@ -65,9 +65,9 @@ def main():
     report = engine.render_executive_memory_markdown(
         recurring_orgs, recurring_alerts, days_tracked, lessons_library, recurring_risks, decisions,
     )
-    report_path = RUNTIME_DIR / "output" / f"{engine.TODAY}-executive-memory-report.md"
+    report_path = engine.FEED_PATH.parent / f"{engine.TODAY}-executive-memory-report.md"
     report_path.write_text(report, encoding="utf-8")
-    (RUNTIME_DIR / "output" / "executive-memory-report.md").write_text(report, encoding="utf-8")
+    (engine.FEED_PATH.parent / "executive-memory-report.md").write_text(report, encoding="utf-8")
 
     print(f"Days of CEO Advisor priority history: {days_tracked}")
     print(f"Recurring priorities: {len(recurring_orgs)} | Recurring alerts: {len(recurring_alerts)}")

@@ -42,15 +42,15 @@ REPO_ROOT = AOS_DIR.parent
 
 PIPELINE_PATH = AOS_DIR / "08-Revenue-Hunter" / "pipeline.json"
 OPPORTUNITY_SCHEMA_PATH = AOS_DIR / "demand-intelligence" / "opportunity-schema.json"
-ACCOUNT_INTELLIGENCE_FEED_PATH = AOS_DIR / "account-intelligence" / "runtime" / "output" / "account-intelligence-feed.json"
+ACCOUNT_INTELLIGENCE_FEED_PATH = AOS_DIR / "output" / "account-intelligence" / "account-intelligence-feed.json"
 SERVICE_RECOMMENDATIONS_PATH = AOS_DIR / "service-mapping" / "service-recommendations.json"
 PRACTITIONER_BANK_PATH = AOS_DIR / "sales-director" / "runtime" / "config" / "practitioner-bank.json"
 
 TEMPLATES_DIR = REPO_ROOT / "AOS" / "templates" / "delivery"
 REGULATORY_FRAMEWORK_ANNEXES_PATH = TEMPLATES_DIR / "regulatory-framework-annexes.json"
 DELIVERY_LOG_PATH = DELIVERY_INTELLIGENCE_DIR / "delivery-log.json"
-KITS_DIR = RUNTIME_DIR / "output" / "delivery-kits"
-FEED_PATH = RUNTIME_DIR / "output" / "delivery-intelligence-feed.json"
+KITS_DIR = AOS_DIR / "output" / "delivery-intelligence" / "delivery-kits"
+FEED_PATH = AOS_DIR / "output" / "delivery-intelligence" / "delivery-intelligence-feed.json"
 
 TODAY = date.today().isoformat()
 PREPARED_BY = "Ramya Amballa, Founder, AI for U&I"

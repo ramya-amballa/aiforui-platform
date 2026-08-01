@@ -39,7 +39,7 @@ OPPORTUNITY_SCHEMA_PATH = DEMAND_INTELLIGENCE_DIR / "opportunity-schema.json"
 PIPELINE_PATH = AOS_DIR / "08-Revenue-Hunter" / "pipeline.json"
 DEMAND_CATEGORIES_CONFIG_PATH = DEMAND_INTELLIGENCE_DIR / "runtime" / "config" / "demand-signal-categories.json"
 
-FEED_PATH = RUNTIME_DIR / "output" / "fractional-advisory-radar-feed.json"
+FEED_PATH = AOS_DIR / "output" / "fractional-advisory-radar" / "fractional-advisory-radar-feed.json"
 
 STAGE_ORDER = ["Urgent", "Enterprise", "Growing", "Emerging"]
 

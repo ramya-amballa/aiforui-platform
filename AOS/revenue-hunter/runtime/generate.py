@@ -52,7 +52,7 @@ SHIPPED_PRODUCTS_PATH = AOS_DIR / "03-Product-Manager" / "shipped-products-log.j
 
 QUEUE_DIR = RUNTIME_DIR / "queue"
 PROCESSED_INDEX_PATH = QUEUE_DIR / "processed-index.json"
-OUTPUT_DIR = RUNTIME_DIR / "output"
+OUTPUT_DIR = AOS_DIR / "output" / "revenue-hunter"
 LOGS_DIR = RUNTIME_DIR / "logs"
 
 TODAY = date.today()
@@ -527,9 +527,9 @@ def main():
     else:
         log("No new pipeline entries or stage changes this run.")
 
-    OUTPUT_DIR.mkdir(exist_ok=True)
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     dashboard = generate_dashboard(pipeline, product_backlog, shipped_products)
-    (REVENUE_HUNTER_DIR / "runtime" / "output" / "revenue-dashboard.md").write_text(dashboard, encoding="utf-8")
+    (AOS_DIR / "output" / "revenue-hunter" / "revenue-dashboard.md").write_text(dashboard, encoding="utf-8")
     (OUTPUT_DIR / f"{TODAY.isoformat()}-revenue-dashboard.md").write_text(dashboard, encoding="utf-8")
 
     forecast = generate_forecast(pipeline)

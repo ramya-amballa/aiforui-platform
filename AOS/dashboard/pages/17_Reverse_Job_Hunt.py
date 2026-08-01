@@ -38,7 +38,7 @@ if st.button("Generate Strategies", type="primary"):
 
 st.divider()
 
-feed, feed_exists = load_json_safe("reverse-job-hunt/runtime/output/reverse-job-hunt-feed.json")
+feed, feed_exists = load_json_safe("output/reverse-job-hunt/reverse-job-hunt-feed.json")
 strategies = feed.get("strategies", []) if feed_exists and isinstance(feed, dict) else []
 
 st.subheader(f"Companies, Sorted by Expected Consulting ROI ({len(strategies)})")
@@ -88,7 +88,7 @@ else:
 
 st.divider()
 st.subheader("Reverse Job Hunt Report")
-text, exists = load_text_safe(resolve_dated("reverse-job-hunt/runtime/output/{date}-reverse-job-hunt-report.md"))
+text, exists = load_text_safe(resolve_dated("output/reverse-job-hunt/{date}-reverse-job-hunt-report.md"))
 if exists:
     st.markdown(text)
 else:

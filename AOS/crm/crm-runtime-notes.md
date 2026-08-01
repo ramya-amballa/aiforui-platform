@@ -84,7 +84,7 @@ extended to an actual re-engagement trigger), not a discovered fact.
 ## What This Runtime Does Not Do
 
 - Does not write to `company-intelligence.json`. Every output is a
-  file in `crm/runtime/output/`.
+  file in `output/crm/`.
 - Does not draft or send an email, LinkedIn message, or any outreach —
   that remains `04-Sales-Director/outreach-draft-template.md`'s job,
   drafted by a human or by Sales Director's own runtime, never here.

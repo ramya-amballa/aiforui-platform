@@ -6,7 +6,7 @@ Usage:
     python3 generate.py
 
 Reads, read-only: demand-intelligence/organisation-profiles.json,
-account-intelligence/runtime/output/account-intelligence-feed.json,
+output/account-intelligence/account-intelligence-feed.json,
 relationship-intelligence/relationship-profiles.json, and the shared
 supporting-assets.json/account-intelligence-config.json. Never writes
 to any of them.
@@ -118,7 +118,7 @@ def main():
     engine.FEED_PATH.parent.mkdir(parents=True, exist_ok=True)
     engine.save_json(engine.FEED_PATH, feed)
 
-    report_path = RUNTIME_DIR / "output" / f"{TODAY}-executive-brand-intelligence-report.md"
+    report_path = engine.FEED_PATH.parent / f"{TODAY}-executive-brand-intelligence-report.md"
     report_path.write_text(render_report(plan, monthly), encoding="utf-8")
 
     print(f"Weekly Brand Plan built for {plan['companiesThisWeek']} companies this week. "

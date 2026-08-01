@@ -57,7 +57,7 @@ PIPELINE_PATH = AOS_DIR / "08-Revenue-Hunter" / "pipeline.json"
 CRM_PATH = AOS_DIR / "06-CRM" / "company-intelligence.json"
 
 CONFIG_DIR = RUNTIME_DIR / "config"
-OUTPUT_DIR = RUNTIME_DIR / "output"
+OUTPUT_DIR = AOS_DIR / "output" / "service-mapping"
 LOGS_DIR = RUNTIME_DIR / "logs"
 PROCESSED_INDEX_PATH = RUNTIME_DIR / "processed-index.json"
 RECOMMENDATIONS_PATH = SERVICE_MAPPING_DIR / "service-recommendations.json"
@@ -469,7 +469,7 @@ def main():
     save_json(RECOMMENDATIONS_PATH, recommendations)
     save_json(PROCESSED_INDEX_PATH, processed_index)
 
-    OUTPUT_DIR.mkdir(exist_ok=True)
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     report = render_report(new_entries)
     (OUTPUT_DIR / f"{TODAY.isoformat()}-service-recommendation-report.md").write_text(report, encoding="utf-8")
     (OUTPUT_DIR / "service-recommendation-report.md").write_text(report, encoding="utf-8")

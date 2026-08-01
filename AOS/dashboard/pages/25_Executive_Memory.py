@@ -36,7 +36,7 @@ if st.button("Refresh Executive Memory", type="primary"):
 
 st.divider()
 
-feed, feed_exists = load_json_safe("executive-memory/runtime/output/executive-memory-feed.json")
+feed, feed_exists = load_json_safe("output/executive-memory/executive-memory-feed.json")
 feed = feed if feed_exists and isinstance(feed, dict) else {}
 
 st.metric("Days of CEO Advisor priority history tracked", feed.get("daysTracked", 0))
@@ -79,7 +79,7 @@ else:
 
 st.divider()
 st.subheader("Executive Memory Report")
-text, exists = load_text_safe(resolve_dated("executive-memory/runtime/output/{date}-executive-memory-report.md"))
+text, exists = load_text_safe(resolve_dated("output/executive-memory/{date}-executive-memory-report.md"))
 if exists:
     st.markdown(text)
 else:

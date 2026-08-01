@@ -34,7 +34,7 @@ if st.button("Refresh Capacity Management", type="primary"):
 
 st.divider()
 
-feed, feed_exists = load_json_safe("capacity-management/runtime/output/capacity-feed.json")
+feed, feed_exists = load_json_safe("output/capacity-management/capacity-feed.json")
 feed = feed if feed_exists and isinstance(feed, dict) else {}
 
 status = feed.get("capacityStatus", "Not enough signal yet")
@@ -68,7 +68,7 @@ with col2:
 
 st.divider()
 st.subheader("Capacity Report")
-text, exists = load_text_safe(resolve_dated("capacity-management/runtime/output/{date}-capacity-report.md"))
+text, exists = load_text_safe(resolve_dated("output/capacity-management/{date}-capacity-report.md"))
 if exists:
     st.markdown(text)
 else:

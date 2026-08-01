@@ -52,18 +52,18 @@ daily recommendation.
      Hunter, Service Mapping Engine, Sales Director, Website Intake,
      Daily Brief); adding Product Manager and Content Director to the
      runtime is a future extension, not a redesign
-   - Every entry in `05-Market-Intelligence/runtime/output/ceo-advisor-feed.json`
+   - Every entry in `output/05-Market-Intelligence/ceo-advisor-feed.json`
      — the six checks only (see `decision-model.md`); the underlying
      `regulatory-log.json` entry is never opened here
-   - Every entry in `sales-director/runtime/output/ceo-advisor-feed.json`
+   - Every entry in `output/sales-director/ceo-advisor-feed.json`
      — its `status` only (`Ready To Send`, `Proposal Ready`, or
      `Needs Review`); the underlying package is never opened here
-   - Every entry in `content-director/runtime/output/ceo-advisor-feed.json`
+   - Every entry in `output/content-director/ceo-advisor-feed.json`
      — its `status` only (`Ready to Publish`, `Needs Review`, or
      `Low Value`); the drafts themselves are never opened here.
      Documented here for the same reason as Product Manager above —
      not yet read by the v1 runtime.
-   - Every entry in `website-intake/runtime/output/ceo-advisor-feed.json`
+   - Every entry in `output/website-intake/ceo-advisor-feed.json`
      — its `urgency` only (`High`, `Medium`, or `Low`); the full lead
      record in `website-intake/leads.json` is never opened here
    - Any employee listed in `orchestrator/status.json`'s `failures` for
@@ -77,7 +77,7 @@ daily recommendation.
    ranked rather than a single pick plus unranked runners-up.
 5. Write the CEO Daily Report (and refresh the rolling CEO Weekly
    Report and CEO Monthly Business Review) to
-   `ceo-advisor/runtime/output/`. Daily Brief has already run and
+   `output/ceo-advisor/`. Daily Brief has already run and
    produced its own dashboard for the day by this point — CEO Advisor
    reads it (its "## Daily Summary" section, quoted, never recomputed)
    rather than feeding it.

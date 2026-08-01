@@ -15,16 +15,16 @@ real, already-computed data, it invents no new pattern and scores
 nothing.
 
 Sources, all read-only:
-- ceo-advisor/runtime/output/daily-priorities-log.json — CEO Advisor's
+- output/ceo-advisor/daily-priorities-log.json — CEO Advisor's
   own self-log of its daily Top 3/alerts (added this sprint,
   generate.py's own update_priorities_log()). Executive Memory counts
   recurrences across it; it never re-derives a priority or a score.
-- delivery-intelligence/runtime/output/delivery-intelligence-feed.json
+- output/delivery-intelligence/delivery-intelligence-feed.json
   (for kitPath) + the real project-closure-report.md file at that
   path, if one exists and its {{LESSONS_LEARNED}} placeholder has
   actually been replaced by the founder. A closure report still
   showing the raw placeholder contributes nothing — never fabricated.
-- account-intelligence/runtime/output/account-intelligence-feed.json —
+- output/account-intelligence/account-intelligence-feed.json —
   governanceRisks per brief, grouped by their own already-fixed `risk`
   label (exact match — these come from a small shared vocabulary, not
   free text, so grouping is real, not approximate).
@@ -47,12 +47,12 @@ EXECUTIVE_MEMORY_DIR = RUNTIME_DIR.parent
 AOS_DIR = EXECUTIVE_MEMORY_DIR.parent
 REPO_ROOT = AOS_DIR.parent
 
-CEO_ADVISOR_PRIORITIES_LOG_PATH = AOS_DIR / "ceo-advisor" / "runtime" / "output" / "daily-priorities-log.json"
-DELIVERY_INTELLIGENCE_FEED_PATH = AOS_DIR / "delivery-intelligence" / "runtime" / "output" / "delivery-intelligence-feed.json"
-ACCOUNT_INTELLIGENCE_FEED_PATH = AOS_DIR / "account-intelligence" / "runtime" / "output" / "account-intelligence-feed.json"
+CEO_ADVISOR_PRIORITIES_LOG_PATH = AOS_DIR / "output" / "ceo-advisor" / "daily-priorities-log.json"
+DELIVERY_INTELLIGENCE_FEED_PATH = AOS_DIR / "output" / "delivery-intelligence" / "delivery-intelligence-feed.json"
+ACCOUNT_INTELLIGENCE_FEED_PATH = AOS_DIR / "output" / "account-intelligence" / "account-intelligence-feed.json"
 DECISION_LOG_PATH = EXECUTIVE_MEMORY_DIR / "decision-log.json"
 
-FEED_PATH = RUNTIME_DIR / "output" / "executive-memory-feed.json"
+FEED_PATH = AOS_DIR / "output" / "executive-memory" / "executive-memory-feed.json"
 
 TODAY = date.today().isoformat()
 

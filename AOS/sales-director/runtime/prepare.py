@@ -61,11 +61,11 @@ OPPORTUNITY_SCHEMA_PATH = AOS_DIR / "demand-intelligence" / "opportunity-schema.
 PIPELINE_PATH = AOS_DIR / "08-Revenue-Hunter" / "pipeline.json"
 CRM_PATH = AOS_DIR / "06-CRM" / "company-intelligence.json"
 SERVICE_RECOMMENDATIONS_PATH = AOS_DIR / "service-mapping" / "service-recommendations.json"
-ACCOUNT_INTELLIGENCE_FEED_PATH = AOS_DIR / "account-intelligence" / "runtime" / "output" / "account-intelligence-feed.json"
+ACCOUNT_INTELLIGENCE_FEED_PATH = AOS_DIR / "output" / "account-intelligence" / "account-intelligence-feed.json"
 PROPOSAL_CONTENT_LIBRARY_PATH = AOS_DIR / "templates" / "proposals" / "proposal-content-library.json"
 
 CONFIG_DIR = RUNTIME_DIR / "config"
-OUTPUT_DIR = RUNTIME_DIR / "output"
+OUTPUT_DIR = AOS_DIR / "output" / "sales-director"
 PACKAGES_DIR = OUTPUT_DIR / "packages"
 PROCESSED_INDEX_PATH = RUNTIME_DIR / "processed-index.json"
 CEO_FEED_PATH = OUTPUT_DIR / "ceo-advisor-feed.json"

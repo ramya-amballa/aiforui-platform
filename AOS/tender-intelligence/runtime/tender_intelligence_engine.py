@@ -36,7 +36,7 @@ REPO_ROOT = AOS_DIR.parent
 
 CONFIG_PATH = RUNTIME_DIR / "config" / "tender-intelligence-config.json"
 SEEN_TENDERS_PATH = RUNTIME_DIR / "config" / "tender-seen.json"
-FEED_PATH = RUNTIME_DIR / "output" / "tender-intelligence-feed.json"
+FEED_PATH = AOS_DIR / "output" / "tender-intelligence" / "tender-intelligence-feed.json"
 
 TODAY = date.today().isoformat()
 

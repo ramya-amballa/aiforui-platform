@@ -43,21 +43,21 @@ AOS_DIR = CEO_ADVISOR_DIR.parent
 REPO_ROOT = AOS_DIR.parent
 
 CONFIG_DIR = RUNTIME_DIR / "config"
-OUTPUT_DIR = RUNTIME_DIR / "output"
+OUTPUT_DIR = AOS_DIR / "output" / "ceo-advisor"
 LOGS_DIR = RUNTIME_DIR / "logs"
 
 OPPORTUNITY_SCHEMA_PATH = AOS_DIR / "demand-intelligence" / "opportunity-schema.json"
 PIPELINE_PATH = AOS_DIR / "08-Revenue-Hunter" / "pipeline.json"
 CRM_PATH = AOS_DIR / "06-CRM" / "company-intelligence.json"
-MARKET_INTELLIGENCE_FEED_PATH = AOS_DIR / "05-Market-Intelligence" / "runtime" / "output" / "ceo-advisor-feed.json"
-SALES_DIRECTOR_FEED_PATH = AOS_DIR / "sales-director" / "runtime" / "output" / "ceo-advisor-feed.json"
-WEBSITE_INTAKE_FEED_PATH = AOS_DIR / "website-intake" / "runtime" / "output" / "ceo-advisor-feed.json"
+MARKET_INTELLIGENCE_FEED_PATH = AOS_DIR / "output" / "05-Market-Intelligence" / "ceo-advisor-feed.json"
+SALES_DIRECTOR_FEED_PATH = AOS_DIR / "output" / "sales-director" / "ceo-advisor-feed.json"
+WEBSITE_INTAKE_FEED_PATH = AOS_DIR / "output" / "website-intake" / "ceo-advisor-feed.json"
 SERVICE_RECOMMENDATIONS_PATH = AOS_DIR / "service-mapping" / "service-recommendations.json"
-TOP_ORGANISATIONS_PATH = AOS_DIR / "demand-intelligence" / "runtime" / "output" / "top-organisations-this-week.json"
-RECRUITER_INTELLIGENCE_FEED_PATH = AOS_DIR / "recruiter-intelligence" / "runtime" / "output" / "recruiter-intelligence-feed.json"
-RELATIONSHIP_INTELLIGENCE_FEED_PATH = AOS_DIR / "relationship-intelligence" / "runtime" / "output" / "relationship-intelligence-feed.json"
-EXECUTIVE_BRAND_INTELLIGENCE_FEED_PATH = AOS_DIR / "executive-brand-intelligence" / "runtime" / "output" / "executive-brand-intelligence-feed.json"
-CAPACITY_FEED_PATH = AOS_DIR / "capacity-management" / "runtime" / "output" / "capacity-feed.json"
+TOP_ORGANISATIONS_PATH = AOS_DIR / "output" / "demand-intelligence" / "top-organisations-this-week.json"
+RECRUITER_INTELLIGENCE_FEED_PATH = AOS_DIR / "output" / "recruiter-intelligence" / "recruiter-intelligence-feed.json"
+RELATIONSHIP_INTELLIGENCE_FEED_PATH = AOS_DIR / "output" / "relationship-intelligence" / "relationship-intelligence-feed.json"
+EXECUTIVE_BRAND_INTELLIGENCE_FEED_PATH = AOS_DIR / "output" / "executive-brand-intelligence" / "executive-brand-intelligence-feed.json"
+CAPACITY_FEED_PATH = AOS_DIR / "output" / "capacity-management" / "capacity-feed.json"
 DAILY_BRIEF_PATH = AOS_DIR / "executive-dashboard" / "executive-dashboard.md"
 ORCHESTRATOR_STATUS_PATH = AOS_DIR / "orchestrator" / "status.json"
 
@@ -262,7 +262,7 @@ def candidates_from_demand_intelligence_organisations(top_organisations_feed, co
     candidates = []
     for org in top_organisations_feed.get("organisations", []):
         candidates.append({
-            "source": "Demand Intelligence", "sourceFile": "demand-intelligence/runtime/output/top-organisations-this-week.json",
+            "source": "Demand Intelligence", "sourceFile": "output/demand-intelligence/top-organisations-this-week.json",
             "label": org["organisation"],
             "organisation": org.get("organisation"),
             "demandSignal": org.get("demandSignal", ""),
@@ -297,7 +297,7 @@ def candidates_from_sales_director(feed, schema_by_id, config):
         effort = opp.get("scores", {}).get("timeRequired", config["salesDirectorDefaultEffort"]) if opp else config["salesDirectorDefaultEffort"]
         days_left = days_until(opp.get("nextActionDue")) if opp else None
         candidates.append({
-            "source": "Sales Director", "sourceFile": "sales-director/runtime/output/ceo-advisor-feed.json",
+            "source": "Sales Director", "sourceFile": "output/sales-director/ceo-advisor-feed.json",
             "label": f"{entry['title']} ({entry['organisation']})",
             "organisation": entry.get("organisation"),
             "opportunityId": entry.get("opportunityId"),
@@ -348,7 +348,7 @@ def candidates_from_website_intake(feed, schema_by_id, config):
         effort = opp.get("scores", {}).get("timeRequired", 5) if opp else 5
         days_left = {"High": 1, "Medium": 5, "Low": 20}.get(urgency)
         candidates.append({
-            "source": "Website Intake", "sourceFile": "website-intake/runtime/output/ceo-advisor-feed.json",
+            "source": "Website Intake", "sourceFile": "output/website-intake/ceo-advisor-feed.json",
             "label": f"Respond to website enquiry — {entry['leadClassification']} ({entry['organisation']})",
             "organisation": entry.get("organisation"),
             "opportunityId": entry.get("opportunityId"),
@@ -373,7 +373,7 @@ def candidates_from_market_intelligence(feed, config):
         else:
             continue
         candidates.append({
-            "source": "Market Intelligence", "sourceFile": "05-Market-Intelligence/runtime/output/ceo-advisor-feed.json",
+            "source": "Market Intelligence", "sourceFile": "output/05-Market-Intelligence/ceo-advisor-feed.json",
             "label": f"Review market signal: {entry.get('title', entry.get('id', 'untitled'))}",
             "organisation": None,
             "opportunityId": None,
@@ -639,7 +639,7 @@ def build_ignore_list(schema_data, companies, sales_director_feed, config):
             ignore.append({
                 "item": f"{entry['title']} ({entry['organisation']})",
                 "reason": "Needs Review status — confirm scope before investing further preparation time",
-                "source": "Sales Director (sales-director/runtime/output/ceo-advisor-feed.json)",
+                "source": "Sales Director (output/sales-director/ceo-advisor-feed.json)",
             })
 
     return ignore
@@ -1063,7 +1063,7 @@ def main():
     daily_brief_summary = extract_daily_brief_summary()
     exec_summary = build_executive_summary(top3, revenue_impact, alerts, daily_brief_summary, config)
 
-    OUTPUT_DIR.mkdir(exist_ok=True)
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
     # AOS Sprint 20 — Executive Memory reads this read-only to answer
     # "has this been recommended before, and how often" — CEO Advisor's

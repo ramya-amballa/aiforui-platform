@@ -35,7 +35,7 @@ if st.button("Refresh Tender Intelligence", type="primary"):
 
 st.divider()
 
-feed, feed_exists = load_json_safe("tender-intelligence/runtime/output/tender-intelligence-feed.json")
+feed, feed_exists = load_json_safe("output/tender-intelligence/tender-intelligence-feed.json")
 tenders = feed.get("tenders", []) if feed_exists and isinstance(feed, dict) else []
 
 st.subheader(f"Tenders, Sorted by Estimated Value ({len(tenders)})")
@@ -92,7 +92,7 @@ else:
 
 st.divider()
 st.subheader("Tender Intelligence Report")
-text, exists = load_text_safe(resolve_dated("tender-intelligence/runtime/output/{date}-tender-intelligence-report.md"))
+text, exists = load_text_safe(resolve_dated("output/tender-intelligence/{date}-tender-intelligence-report.md"))
 if exists:
     st.markdown(text)
 else:

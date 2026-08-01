@@ -31,7 +31,7 @@ if st.button("Generate Proposal", type="primary"):
 
 st.divider()
 
-feed, feed_exists = load_json_safe("sales-director/runtime/output/ceo-advisor-feed.json")
+feed, feed_exists = load_json_safe("output/sales-director/ceo-advisor-feed.json")
 items = feed.get("feed", []) if feed_exists and isinstance(feed, dict) else []
 
 st.subheader(f"Proposal Packages ({len(items)})")
@@ -115,7 +115,7 @@ if items:
 
 st.divider()
 st.subheader("Sales Director Report")
-text, exists = load_text_safe(resolve_dated("sales-director/runtime/output/{date}-sales-director-report.md"))
+text, exists = load_text_safe(resolve_dated("output/sales-director/{date}-sales-director-report.md"))
 if exists:
     st.markdown(text)
 else:

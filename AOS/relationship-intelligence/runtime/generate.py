@@ -85,7 +85,7 @@ def main():
     engine.FEED_PATH.parent.mkdir(parents=True, exist_ok=True)
     engine.save_json(engine.FEED_PATH, feed)
 
-    report_path = engine.RUNTIME_DIR / "output" / f"{TODAY}-relationship-intelligence-report.md"
+    report_path = engine.FEED_PATH.parent / f"{TODAY}-relationship-intelligence-report.md"
     report_path.write_text(render_report(feed), encoding="utf-8")
 
     print(f"{len(people)} relationship(s) processed. Report: {report_path.relative_to(engine.REPO_ROOT)}")

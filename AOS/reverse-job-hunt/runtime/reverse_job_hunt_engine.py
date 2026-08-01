@@ -47,13 +47,13 @@ PROFILES_PATH = DEMAND_INTELLIGENCE_DIR / "organisation-profiles.json"
 OPPORTUNITY_SCHEMA_PATH = DEMAND_INTELLIGENCE_DIR / "opportunity-schema.json"
 DEMAND_CATEGORIES_CONFIG_PATH = DEMAND_INTELLIGENCE_DIR / "runtime" / "config" / "demand-signal-categories.json"
 
-ACCOUNT_INTELLIGENCE_FEED_PATH = AOS_DIR / "account-intelligence" / "runtime" / "output" / "account-intelligence-feed.json"
+ACCOUNT_INTELLIGENCE_FEED_PATH = AOS_DIR / "output" / "account-intelligence" / "account-intelligence-feed.json"
 CRM_PATH = AOS_DIR / "06-CRM" / "company-intelligence.json"
 PIPELINE_PATH = AOS_DIR / "08-Revenue-Hunter" / "pipeline.json"
 RELATIONSHIP_PROFILES_PATH = AOS_DIR / "relationship-intelligence" / "relationship-profiles.json"
 
-STRATEGIES_DIR = RUNTIME_DIR / "output" / "strategies"
-FEED_PATH = RUNTIME_DIR / "output" / "reverse-job-hunt-feed.json"
+STRATEGIES_DIR = AOS_DIR / "output" / "reverse-job-hunt" / "strategies"
+FEED_PATH = AOS_DIR / "output" / "reverse-job-hunt" / "reverse-job-hunt-feed.json"
 # AOS Sprint 16 — Client Acquisition Engine, consolidated into Reverse
 # Job Hunt per explicit instruction ("consolidate into existing")
 # rather than a new standalone employee. Founder-maintained, persistent

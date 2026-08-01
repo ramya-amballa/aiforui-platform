@@ -37,7 +37,7 @@ if st.button("Refresh Company 360", type="primary"):
 
 st.divider()
 
-feed, feed_exists = load_json_safe("company-360/runtime/output/company-360-feed.json")
+feed, feed_exists = load_json_safe("output/company-360/company-360-feed.json")
 companies = feed.get("companies", []) if feed_exists and isinstance(feed, dict) else []
 
 st.subheader(f"Organisations ({len(companies)})")
@@ -72,7 +72,7 @@ else:
 
 st.divider()
 st.subheader("Company 360 Report")
-text, exists = load_text_safe(resolve_dated("company-360/runtime/output/{date}-company-360-report.md"))
+text, exists = load_text_safe(resolve_dated("output/company-360/{date}-company-360-report.md"))
 if exists:
     st.markdown(text)
 else:

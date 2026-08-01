@@ -51,18 +51,18 @@ REPO_ROOT = AOS_DIR.parent
 
 ORGANISATION_PROFILES_PATH = AOS_DIR / "demand-intelligence" / "organisation-profiles.json"
 OPPORTUNITY_SCHEMA_PATH = AOS_DIR / "demand-intelligence" / "opportunity-schema.json"
-ACCOUNT_INTELLIGENCE_FEED_PATH = AOS_DIR / "account-intelligence" / "runtime" / "output" / "account-intelligence-feed.json"
+ACCOUNT_INTELLIGENCE_FEED_PATH = AOS_DIR / "output" / "account-intelligence" / "account-intelligence-feed.json"
 CRM_PATH = AOS_DIR / "06-CRM" / "company-intelligence.json"
 RELATIONSHIP_PROFILES_PATH = AOS_DIR / "relationship-intelligence" / "relationship-profiles.json"
-RELATIONSHIP_FEED_PATH = AOS_DIR / "relationship-intelligence" / "runtime" / "output" / "relationship-intelligence-feed.json"
-REVERSE_JOB_HUNT_FEED_PATH = AOS_DIR / "reverse-job-hunt" / "runtime" / "output" / "reverse-job-hunt-feed.json"
+RELATIONSHIP_FEED_PATH = AOS_DIR / "output" / "relationship-intelligence" / "relationship-intelligence-feed.json"
+REVERSE_JOB_HUNT_FEED_PATH = AOS_DIR / "output" / "reverse-job-hunt" / "reverse-job-hunt-feed.json"
 PIPELINE_PATH = AOS_DIR / "08-Revenue-Hunter" / "pipeline.json"
 SERVICE_RECOMMENDATIONS_PATH = AOS_DIR / "service-mapping" / "service-recommendations.json"
 DELIVERY_LOG_PATH = AOS_DIR / "delivery-intelligence" / "delivery-log.json"
-DELIVERY_INTELLIGENCE_FEED_PATH = AOS_DIR / "delivery-intelligence" / "runtime" / "output" / "delivery-intelligence-feed.json"
+DELIVERY_INTELLIGENCE_FEED_PATH = AOS_DIR / "output" / "delivery-intelligence" / "delivery-intelligence-feed.json"
 
-PROFILES_DIR = RUNTIME_DIR / "output" / "company-profiles"
-FEED_PATH = RUNTIME_DIR / "output" / "company-360-feed.json"
+PROFILES_DIR = AOS_DIR / "output" / "company-360" / "company-profiles"
+FEED_PATH = AOS_DIR / "output" / "company-360" / "company-360-feed.json"
 
 TODAY = date.today().isoformat()
 

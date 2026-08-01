@@ -45,7 +45,7 @@ def main():
     feed = engine.build_feed(profiles, demand_categories_config, config, opportunity_schema, pipeline_data)
     engine.save_json(engine.FEED_PATH, feed)
 
-    report_path = RUNTIME_DIR / "output" / f"{TODAY}-fractional-advisory-radar-report.md"
+    report_path = engine.FEED_PATH.parent / f"{TODAY}-fractional-advisory-radar-report.md"
     lines = [
         "# Fractional Advisory Radar — Daily Report", "", f"**Date:** {TODAY}",
         f"**Organisations tracked:** {len(feed['organisations'])}", "",

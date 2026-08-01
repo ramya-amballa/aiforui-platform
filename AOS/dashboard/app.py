@@ -24,7 +24,7 @@ apply_page_config("Home", "■")
 st.title("AOS Command Center")
 st.caption("The internal operating system of AI for U&I")
 
-status, status_exists = load_json_safe("orchestrator/status.json")
+status, status_exists = load_json_safe("output/orchestrator/status.json")
 
 # ---------------------------------------------------------------------------
 # Top row: date, last execution, system status, employees running
@@ -66,7 +66,7 @@ st.divider()
 
 left, right = st.columns([3, 2])
 
-ceo_report_text, ceo_report_exists = load_text_safe("ceo-advisor/runtime/output/ceo-daily-report.md")
+ceo_report_text, ceo_report_exists = load_text_safe("output/ceo-advisor/ceo-daily-report.md")
 
 with left:
     st.subheader("Today's Executive Summary")
@@ -100,7 +100,7 @@ website_leads_data, website_leads_exists = load_json_safe("website-intake/leads.
 website_leads_dict = website_leads_data.get("leads", {}) if website_leads_exists and isinstance(website_leads_data, dict) else {}
 website_leads = list(website_leads_dict.values())
 
-sales_feed, sales_feed_exists = load_json_safe("sales-director/runtime/output/ceo-advisor-feed.json")
+sales_feed, sales_feed_exists = load_json_safe("output/sales-director/ceo-advisor-feed.json")
 sales_items = sales_feed.get("feed", []) if sales_feed_exists and isinstance(sales_feed, dict) else []
 open_proposals = [i for i in sales_items if i.get("status") in ("Ready To Send", "Proposal Ready", "Needs Review")]
 
@@ -112,7 +112,7 @@ for item in pipeline:
         pipeline_value_amounts.append(amount)
 pipeline_value_total = sum(pipeline_value_amounts) if pipeline_value_amounts else 0
 
-forecast_text, forecast_exists = load_text_safe("revenue-hunter/runtime/output/revenue-forecast.md")
+forecast_text, forecast_exists = load_text_safe("output/revenue-hunter/revenue-forecast.md")
 
 recruiters_awaiting = [c for c in companies if c.get("recruiter") and c.get("nextFollowUpDue")]
 

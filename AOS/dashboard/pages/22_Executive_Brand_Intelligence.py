@@ -35,7 +35,7 @@ if st.button("Refresh Executive Brand Intelligence", type="primary"):
 
 st.divider()
 
-feed, feed_exists = load_json_safe("executive-brand-intelligence/runtime/output/executive-brand-intelligence-feed.json")
+feed, feed_exists = load_json_safe("output/executive-brand-intelligence/executive-brand-intelligence-feed.json")
 plan = feed.get("weeklyPlan") if feed_exists and isinstance(feed, dict) else None
 monthly = feed.get("monthlyAuthorityReport") if feed_exists and isinstance(feed, dict) else None
 
@@ -105,7 +105,7 @@ else:
 
 st.divider()
 st.subheader("Executive Brand Intelligence Report")
-text, exists = load_text_safe(resolve_dated("executive-brand-intelligence/runtime/output/{date}-executive-brand-intelligence-report.md"))
+text, exists = load_text_safe(resolve_dated("output/executive-brand-intelligence/{date}-executive-brand-intelligence-report.md"))
 if exists:
     st.markdown(text)
 else:

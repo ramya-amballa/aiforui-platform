@@ -28,7 +28,7 @@ employee's own file.
 | Relationship Profiles | `relationship-intelligence/relationship-profiles.json` | Founder-maintained, per-person: meetings, calls, messages, shared interests, birthdays/work anniversaries | Founder only (Relationship Intelligence reads it read-only) |
 | Touchpoint Log | `reverse-job-hunt/touchpoint-log.json` | Founder-maintained, per-organisation BD campaign status and every logged touchpoint | Founder only (Reverse Job Hunt reads it read-only) |
 | Delivery Log | `delivery-intelligence/delivery-log.json` | Founder-maintained, per-organisation delivery phase (Kickoff through Closed) and free-text progress notes | Founder only (Delivery Intelligence and Company 360 read it read-only) |
-| Daily Priorities Log | `ceo-advisor/runtime/output/daily-priorities-log.json` | One entry per day: CEO Advisor's own Top 3 and fired alert types — the one place its daily advice survives past tomorrow's overwrite | CEO Advisor (Executive Memory reads it read-only, one cycle behind) |
+| Daily Priorities Log | `output/ceo-advisor/daily-priorities-log.json` | One entry per day: CEO Advisor's own Top 3 and fired alert types — the one place its daily advice survives past tomorrow's overwrite | CEO Advisor (Executive Memory reads it read-only, one cycle behind) |
 | Decision Log | `executive-memory/decision-log.json` | Founder-maintained, standalone institutional decisions/rules not tied to one engagement | Founder only (Executive Memory reads it read-only) |
 
 Note: the five stores above are institutional/relationship memory — who

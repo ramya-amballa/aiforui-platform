@@ -58,7 +58,7 @@ TEMPLATES_DIR = RUNTIME_DIR / "templates"
 QUEUE_DIR = RUNTIME_DIR / "queue"
 CONTENT_QUEUE_LOG_PATH = QUEUE_DIR / "content-queue.json"
 PROCESSED_INDEX_PATH = QUEUE_DIR / "processed-index.json"
-OUTPUT_DIR = RUNTIME_DIR / "output"
+OUTPUT_DIR = AOS_DIR / "output" / "content-director"
 DRAFTS_DIR = OUTPUT_DIR / "drafts"
 CEO_FEED_PATH = OUTPUT_DIR / "ceo-advisor-feed.json"
 LOGS_DIR = RUNTIME_DIR / "logs"
@@ -487,7 +487,7 @@ def main():
     save_json(CEO_FEED_PATH, ceo_feed)
     save_json(CONTENT_QUEUE_LOG_PATH, content_queue_log)
 
-    OUTPUT_DIR.mkdir(exist_ok=True)
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     report_lines = [
         "# Content Director — Daily Report", "", f"**Date:** {TODAY}",
         f"**Signals processed:** {processed_count}", "",

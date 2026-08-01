@@ -52,7 +52,7 @@ OPPORTUNITY_SCHEMA_PATH = AOS_DIR / "demand-intelligence" / "opportunity-schema.
 SALES_DIRECTOR_PROCESSED_PATH = AOS_DIR / "sales-director" / "runtime" / "processed-index.json"
 PIPELINE_PATH = AOS_DIR / "08-Revenue-Hunter" / "pipeline.json"
 
-OUTPUT_DIR = RUNTIME_DIR / "output"
+OUTPUT_DIR = AOS_DIR / "output" / "crm"
 LOGS_DIR = RUNTIME_DIR / "logs"
 
 TODAY = date.today()
@@ -355,7 +355,7 @@ def main():
     pipe_history = pipeline_history(pipeline)
     crm_status = crm_follow_up_status(companies)
 
-    OUTPUT_DIR.mkdir(exist_ok=True)
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     (OUTPUT_DIR / "daily-follow-up-queue.md").write_text(generate_follow_up_queue(crm_status), encoding="utf-8")
     (OUTPUT_DIR / "relationship-health-report.md").write_text(
         generate_health_report(companies, opp_history, prop_history, pipe_history), encoding="utf-8")
