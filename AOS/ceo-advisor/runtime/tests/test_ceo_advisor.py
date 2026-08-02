@@ -337,6 +337,30 @@ class CapacityStatusSectionTests(unittest.TestCase):
         self.assertIn("may not have run yet", section)
 
 
+class ArtifactRegistrySectionTests(unittest.TestCase):
+    """Artifact Registry Phase 2 (AOS Architecture Constitution) —
+    read-only, purely informational; never changes ranking or Top 3
+    selection."""
+
+    def test_renders_real_counts_when_the_registry_has_been_built(self):
+        registry_index = {
+            "artifactCount": 137, "generatedAt": "2026-08-02T04:00:00+00:00",
+            "employeeCounts": {"sales-director": 3, "revenue-hunter": 21},
+        }
+        section = "\n".join(generate.render_artifact_registry_section(registry_index))
+        self.assertIn("137 artifact(s)", section)
+        self.assertIn("2 employee(s)", section)
+        self.assertIn("2026-08-02T04:00:00+00:00", section)
+
+    def test_honest_message_when_registry_has_never_been_built(self):
+        section = "\n".join(generate.render_artifact_registry_section({"artifactCount": 0, "generatedAt": None}))
+        self.assertIn("has not been built", section)
+
+    def test_none_is_treated_the_same_as_an_empty_index(self):
+        section = "\n".join(generate.render_artifact_registry_section(None))
+        self.assertIn("has not been built", section)
+
+
 class ExecutiveSummaryTests(unittest.TestCase):
     def test_capped_at_max_words(self):
         top3 = [{"label": "A" * 5, "source": "Revenue Hunter"}]

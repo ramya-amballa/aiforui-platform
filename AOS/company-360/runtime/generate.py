@@ -55,6 +55,9 @@ def main():
     # module docstring and delivery_intelligence_engine.py's precedent.
     delivery_log = engine.load_json(engine.DELIVERY_LOG_PATH, {"engagements": {}})
     delivery_feed = engine.load_json(engine.DELIVERY_INTELLIGENCE_FEED_PATH, {"engagements": []})
+    # Artifact Registry (Phase 2) — optional, read-only, degrades to an
+    # empty index (never an error) if it hasn't been built yet.
+    registry_index = engine.load_json(engine.ARTIFACT_REGISTRY_INDEX_PATH, {"artifacts": []})
 
     engine.PROFILES_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -63,6 +66,7 @@ def main():
         company_360 = engine.build_company_360(
             organisation, profile, ai_feed, crm_data, relationship_feed, rjh_feed,
             pipeline_data, opportunity_schema, service_recommendations, delivery_log, delivery_feed,
+            registry_index=registry_index,
         )
         slug = engine.slugify(organisation)
         profile_path = engine.PROFILES_DIR / f"{slug}.md"

@@ -70,6 +70,31 @@ class FinderTests(unittest.TestCase):
     def test_find_regulatory_domain_tags_honest_empty_when_none(self):
         self.assertEqual(engine.find_regulatory_domain_tags("BBVA", {"opportunities": []}), [])
 
+    def test_find_registry_artifacts_matches_by_slug_in_account_brief_path(self):
+        registry_index = {"artifacts": [
+            {"path": "output/account-intelligence/account-briefs/bbva.md", "artifactType": "account-brief",
+             "employee": "account-intelligence", "contentHash": "sha256:x", "fileModifiedAt": "2026-08-02T00:00:00+00:00"},
+            {"path": "output/sales-director/2026-08-02-sales-director-report.md", "artifactType": "daily-report",
+             "employee": "sales-director", "contentHash": "sha256:y", "fileModifiedAt": "2026-08-02T00:00:00+00:00"},
+        ]}
+        matches = engine.find_registry_artifacts("BBVA", registry_index)
+        self.assertEqual(len(matches), 1)
+        self.assertEqual(matches[0]["path"], "output/account-intelligence/account-briefs/bbva.md")
+
+    def test_find_registry_artifacts_matches_delivery_kit_directory_segment(self):
+        registry_index = {"artifacts": [
+            {"path": "output/delivery-intelligence/delivery-kits/bbva/kickoff-agenda.md",
+             "artifactType": "delivery-kit-component", "employee": "delivery-intelligence",
+             "contentHash": "sha256:z", "fileModifiedAt": "2026-08-02T00:00:00+00:00"},
+        ]}
+        matches = engine.find_registry_artifacts("BBVA", registry_index)
+        self.assertEqual(len(matches), 1)
+
+    def test_find_registry_artifacts_honest_empty_when_nothing_indexed_or_registry_absent(self):
+        self.assertEqual(engine.find_registry_artifacts("BBVA", {"artifacts": []}), [])
+        self.assertEqual(engine.find_registry_artifacts("BBVA", None), [])
+        self.assertEqual(engine.find_registry_artifacts("BBVA", {}), [])
+
     def test_find_crm_entry_matches_despite_casing_and_whitespace(self):
         crm_data = {"companies": [{"companyName": "  BBVA  ", "existingRelationship": "prior client"}]}
         found = engine.find_crm_entry("BBVA", crm_data)
@@ -169,6 +194,29 @@ class BuildCompany360Tests(unittest.TestCase):
         self.assertEqual(entry["serviceMapping"], [])
         self.assertEqual(entry["deliveryIntelligence"]["phase"], "Not started")
 
+    def test_registry_index_defaults_to_none_existing_callers_are_unaffected(self):
+        """Every existing call site in this file omits registry_index —
+        this must keep working exactly as before (AOS Architecture
+        Constitution: existing employees continue to function unchanged)."""
+        entry = engine.build_company_360(
+            "New Co", dict(PROFILE, organisation="New Co"), {"briefs": []}, {"companies": []},
+            {"people": []}, {"strategies": []}, {"pipeline": []}, {"opportunities": []}, {},
+            {"engagements": {}}, {"engagements": []},
+        )
+        self.assertEqual(entry["artifactRegistry"], [])
+
+    def test_registry_index_populates_artifact_registry_when_provided(self):
+        registry_index = {"artifacts": [
+            {"path": "output/account-intelligence/account-briefs/bbva.md", "artifactType": "account-brief",
+             "employee": "account-intelligence", "contentHash": "sha256:x", "fileModifiedAt": "2026-08-02T00:00:00+00:00"},
+        ]}
+        entry = engine.build_company_360(
+            "BBVA", PROFILE, {"briefs": []}, {"companies": []}, {"people": []}, {"strategies": []},
+            {"pipeline": []}, {"opportunities": []}, {}, {"engagements": {}}, {"engagements": []},
+            registry_index=registry_index,
+        )
+        self.assertEqual(len(entry["artifactRegistry"]), 1)
+
 
 class RenderMarkdownTests(unittest.TestCase):
     def test_never_averages_the_two_deal_size_estimates(self):
@@ -195,6 +243,21 @@ class RenderMarkdownTests(unittest.TestCase):
         self.assertIn("No BD campaign strategy on record yet", markdown)
         self.assertIn("No pipeline entries yet", markdown)
         self.assertIn("No mapped opportunities yet", markdown)
+        self.assertIn("No indexed artifacts on record", markdown)
+
+    def test_renders_indexed_artifacts_when_present(self):
+        entry = engine.build_company_360(
+            "BBVA", PROFILE, {"briefs": []}, {"companies": []}, {"people": []}, {"strategies": []},
+            {"pipeline": []}, {"opportunities": []}, {}, {"engagements": {}}, {"engagements": []},
+            registry_index={"artifacts": [
+                {"path": "output/account-intelligence/account-briefs/bbva.md", "artifactType": "account-brief",
+                 "employee": "account-intelligence", "contentHash": "sha256:x", "fileModifiedAt": "2026-08-02T00:00:00+00:00"},
+            ]},
+        )
+        markdown = engine.render_company_360_markdown(entry)
+        self.assertIn("## Artifact Registry", markdown)
+        self.assertIn("output/account-intelligence/account-briefs/bbva.md", markdown)
+        self.assertIn("account-brief", markdown)
 
 
 class LoadJsonMutableDefaultTests(unittest.TestCase):
@@ -223,6 +286,7 @@ class GenerateEndToEndTests(unittest.TestCase):
             patch("company_360_engine.SERVICE_RECOMMENDATIONS_PATH", self.tmp_path / "service_recs.json"),
             patch("company_360_engine.DELIVERY_LOG_PATH", self.tmp_path / "delivery-log.json"),
             patch("company_360_engine.DELIVERY_INTELLIGENCE_FEED_PATH", self.tmp_path / "delivery_feed.json"),
+            patch("company_360_engine.ARTIFACT_REGISTRY_INDEX_PATH", self.tmp_path / "artifact-index.json"),
             patch("company_360_engine.PROFILES_DIR", self.tmp_path / "output" / "company-profiles"),
             patch("company_360_engine.FEED_PATH", self.tmp_path / "output" / "company-360-feed.json"),
             patch("company_360_engine.REPO_ROOT", self.tmp_path),

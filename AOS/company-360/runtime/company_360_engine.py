@@ -60,6 +60,12 @@ PIPELINE_PATH = AOS_DIR / "08-Revenue-Hunter" / "pipeline.json"
 SERVICE_RECOMMENDATIONS_PATH = AOS_DIR / "service-mapping" / "service-recommendations.json"
 DELIVERY_LOG_PATH = AOS_DIR / "delivery-intelligence" / "delivery-log.json"
 DELIVERY_INTELLIGENCE_FEED_PATH = AOS_DIR / "output" / "delivery-intelligence" / "delivery-intelligence-feed.json"
+# Artifact Registry (Phase 2, AOS Architecture Constitution) — a
+# read-only index over output/, read exactly like any other employee's
+# feed.json, never imported as a Python module. If it hasn't been
+# built yet, this is simply absent, same as every other optional feed
+# here.
+ARTIFACT_REGISTRY_INDEX_PATH = AOS_DIR / "artifact-registry" / "runtime" / "index" / "artifact-index.json"
 
 PROFILES_DIR = AOS_DIR / "output" / "company-360" / "company-profiles"
 FEED_PATH = AOS_DIR / "output" / "company-360" / "company-360-feed.json"
@@ -157,6 +163,34 @@ def find_regulatory_domain_tags(organisation, opportunity_schema):
     return tags
 
 
+def find_registry_artifacts(organisation, registry_index):
+    """AOS Architecture Constitution, Artifact Registry Phase 2 —
+    every indexed artifact whose path already names this organisation
+    as a path segment (account-briefs/<slug>.md, delivery-kits/<slug>/,
+    strategies/<slug>.md, company-profiles/<slug>.md). Deliberately
+    re-implemented here rather than importing registry_query.py's own
+    version of this lookup — employees never import another
+    component's Python module in-process; they read its output file,
+    exactly as every other cross-employee reference in this file
+    already does. registry_index defaults to an empty, not-yet-built
+    shape if the registry hasn't run yet — this never blocks or
+    changes Company 360's own output either way."""
+    slug = slugify(organisation)
+    matches = []
+    for artifact in (registry_index or {}).get("artifacts", []):
+        path = artifact.get("path", "")
+        parts = Path(path).parts
+        if Path(path).stem == slug or slug in parts:
+            matches.append({
+                "path": artifact.get("path"),
+                "artifactType": artifact.get("artifactType"),
+                "employee": artifact.get("employee"),
+                "contentHash": artifact.get("contentHash"),
+                "fileModifiedAt": artifact.get("fileModifiedAt"),
+            })
+    return matches
+
+
 def find_delivery_engagement(organisation, delivery_log, delivery_feed):
     log_entry = delivery_log.get("engagements", {}).get(organisation)
     phase = log_entry.get("phase", "Not started") if log_entry else "Not started"
@@ -175,7 +209,8 @@ def find_delivery_engagement(organisation, delivery_log, delivery_feed):
 # --------------------------------------------------------------------------
 
 def build_company_360(organisation, profile, ai_feed, crm_data, relationship_feed, rjh_feed,
-                       pipeline_data, opportunity_schema, service_recommendations, delivery_log, delivery_feed):
+                       pipeline_data, opportunity_schema, service_recommendations, delivery_log, delivery_feed,
+                       registry_index=None):
     ai_entry = find_account_intelligence_entry(organisation, ai_feed)
     crm_entry = find_crm_entry(organisation, crm_data)
     people = find_relationship_people(organisation, relationship_feed)
@@ -184,6 +219,7 @@ def build_company_360(organisation, profile, ai_feed, crm_data, relationship_fee
     service_recs = find_service_recommendations(organisation, opportunity_schema, service_recommendations)
     delivery = find_delivery_engagement(organisation, delivery_log, delivery_feed)
     regulatory_domain_tags = find_regulatory_domain_tags(organisation, opportunity_schema)
+    registry_artifacts = find_registry_artifacts(organisation, registry_index)
 
     return {
         "organisation": organisation,
@@ -254,6 +290,8 @@ def build_company_360(organisation, profile, ai_feed, crm_data, relationship_fee
         ],
 
         "deliveryIntelligence": delivery,
+
+        "artifactRegistry": registry_artifacts,
     }
 
 
@@ -371,6 +409,17 @@ def render_company_360_markdown(entry):
     ]
     if delivery["kitPath"]:
         lines.append(f"- **Delivery kit:** {delivery['kitPath']}")
+    lines.append("")
+
+    registry_artifacts = entry.get("artifactRegistry") or []
+    lines += ["## Artifact Registry", ""]
+    if registry_artifacts:
+        for a in registry_artifacts:
+            lines.append(f"- `{a['path']}` ({a['artifactType']}, {a['employee']})")
+    else:
+        lines += ["_No indexed artifacts on record for this organisation yet — "
+                   "the Artifact Registry may not have been built, or none of this "
+                   "organisation's artifacts have a path-encoded name yet._"]
     lines += [
         "",
         "---",

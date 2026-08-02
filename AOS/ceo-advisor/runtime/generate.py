@@ -58,6 +58,12 @@ RECRUITER_INTELLIGENCE_FEED_PATH = AOS_DIR / "output" / "recruiter-intelligence"
 RELATIONSHIP_INTELLIGENCE_FEED_PATH = AOS_DIR / "output" / "relationship-intelligence" / "relationship-intelligence-feed.json"
 EXECUTIVE_BRAND_INTELLIGENCE_FEED_PATH = AOS_DIR / "output" / "executive-brand-intelligence" / "executive-brand-intelligence-feed.json"
 CAPACITY_FEED_PATH = AOS_DIR / "output" / "capacity-management" / "capacity-feed.json"
+# Artifact Registry (Phase 2, AOS Architecture Constitution) — a
+# read-only index over output/, read exactly like any other feed above,
+# never imported as a Python module. Purely informational: never
+# changes candidate ranking, Top 3 selection, or any other employee's
+# behavior.
+ARTIFACT_REGISTRY_INDEX_PATH = AOS_DIR / "artifact-registry" / "runtime" / "index" / "artifact-index.json"
 DAILY_BRIEF_PATH = AOS_DIR / "executive-dashboard" / "executive-dashboard.md"
 ORCHESTRATOR_STATUS_PATH = AOS_DIR / "orchestrator" / "status.json"
 
@@ -900,8 +906,29 @@ def render_capacity_status_section(capacity_feed):
     return lines
 
 
+def render_artifact_registry_section(registry_index):
+    """Artifact Registry Phase 2 — the registry's own already-computed
+    status, read-only. Never re-derives anything or changes how Top 3
+    is ranked; purely informational, so the founder can see at a
+    glance whether the registry is up to date before deciding whether
+    to trust its lineage/confidence metadata for anything else."""
+    lines = ["## Artifact Registry", ""]
+    artifact_count = (registry_index or {}).get("artifactCount", 0)
+    generated_at = (registry_index or {}).get("generatedAt")
+    if not generated_at:
+        lines.append("_Not available yet — the Artifact Registry has not been built._")
+        lines.append("")
+        return lines
+    employee_count = len((registry_index or {}).get("employeeCounts", {}))
+    lines.append(f"**{artifact_count} artifact(s)** indexed across {employee_count} employee(s) "
+                 f"— last built {generated_at}.")
+    lines.append("")
+    return lines
+
+
 def render_daily_report(exec_summary, top3, revenue_impact, alerts, ignore_list, weekly_recommendation, top_orgs,
-                         recruiter_due, recruiter_dormant, relationship_action, branding_action, capacity_feed):
+                         recruiter_due, recruiter_dormant, relationship_action, branding_action, capacity_feed,
+                         registry_index=None):
     lines = [
         "# CEO Daily Report",
         "",
@@ -936,6 +963,7 @@ def render_daily_report(exec_summary, top3, revenue_impact, alerts, ignore_list,
     lines += render_relationship_action_section(relationship_action)
     lines += render_branding_action_section(branding_action)
     lines += render_capacity_status_section(capacity_feed)
+    lines += render_artifact_registry_section(registry_index)
 
     lines += ["## Revenue Impact", ""]
     lines.append(f"- **Revenue at risk:** {revenue_impact['revenueAtRisk']}")
@@ -1032,6 +1060,7 @@ def main():
     # runs before CEO Advisor in the fixed orchestrator order). Purely
     # informational: never changes candidate ranking or Top 3 selection.
     capacity_feed = load_json(CAPACITY_FEED_PATH, {"capacityStatus": None})
+    registry_index = load_json(ARTIFACT_REGISTRY_INDEX_PATH, {"artifactCount": 0, "generatedAt": None, "employeeCounts": {}})
     status_data = load_json(ORCHESTRATOR_STATUS_PATH, {"failures": []})
 
     schema_by_id = {o["id"]: o for o in schema_data.get("opportunities", [])}
@@ -1075,7 +1104,7 @@ def main():
 
     daily_report = render_daily_report(exec_summary, top3, revenue_impact, alerts, ignore_list, weekly_recommendation,
                                         top_orgs, recruiter_due, recruiter_dormant, relationship_action, branding_action,
-                                        capacity_feed)
+                                        capacity_feed, registry_index=registry_index)
     (OUTPUT_DIR / f"{TODAY.isoformat()}-ceo-daily-report.md").write_text(daily_report, encoding="utf-8")
     (OUTPUT_DIR / "ceo-daily-report.md").write_text(daily_report, encoding="utf-8")
 
