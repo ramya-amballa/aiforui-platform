@@ -81,6 +81,25 @@ Closed) and free-text progress notes. This engine reads it read-only
 every run to refresh the feed's phase field — it never writes to it,
 since only the founder knows the engagement's actual real-world state.
 
+Nothing has created this file yet — no engagement has reached Closed —
+so its exact shape, when the founder first creates it, should be:
+
+```json
+{
+  "engagements": {
+    "<pipeline entry ID>": {
+      "phase": "string — Not started, Kickoff, Discovery, Assessment, Roadmap Delivered, In Delivery, Steering Committee, Closed",
+      "notes": "string — free-text progress notes",
+      "clientSatisfactionNote": "string or null — the founder's own one-line note, written at Closed phase. Per AOS-PRACTICE-VALIDATION-ROADMAP.md's Client Satisfaction KPI — there is no automated way to know this, and none should be built; null until the founder writes it"
+    }
+  }
+}
+```
+
+`clientSatisfactionNote` is read-only for this engine, exactly like
+`phase` and `notes` — never computed, never inferred, never populated
+by anything but the founder.
+
 ## Regulatory Framework Annexes (AOS Sprint 23 — Engagement Templates)
 
 Three of the ten artifacts — Discovery Questionnaire, Risk Register,

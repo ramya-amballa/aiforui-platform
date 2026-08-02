@@ -88,8 +88,8 @@ the honest gap if no source exists yet.
 
 | KPI | Definition | Source |
 |---|---|---|
-| Direct satisfaction score | Post-engagement client feedback | **Not tracked today.** No employee collects this. Starting with Engagement 1, the founder records one line per closed engagement (see Technical Debt Register, Immediate) |
-| Referral rate | % of new engagements originating from a prior client | **Not tracked today** — `company-intelligence.json` has no source-attribution field; same fix as above |
+| Direct satisfaction score | Post-engagement client feedback | `delivery-log.json`'s `clientSatisfactionNote` (no employee computes this — it's a founder-written field, populated starting with Engagement 1, see Technical Debt Register) |
+| Referral rate | % of new engagements originating from a prior client | `06-CRM/company-intelligence.json`'s `referredBy` field, cross-referenced against `existingRelationship == "warm referral"` |
 | Scope stability | Change requests / scope creep per engagement | `delivery-intelligence` Project Closure Report, once real closures exist |
 | Renewal / extension rate | % of closed engagements leading to a second SOW | `delivery-log.json` completion status, cross-referenced against `crm` |
 
@@ -361,12 +361,20 @@ is actually broken, which is very little.
 
 ### Immediate
 
-- **Client satisfaction has no data source.** Starts as a one-line
-  founder note per closed engagement (§5), not a build — but must
-  start with Engagement 1, or Cohort D's KPI baseline (§2) will be
-  built on retrofitted memory instead of real data.
-- **Referral source isn't captured anywhere.** Same fix, same urgency,
-  same reason: it's cheap now and expensive to reconstruct later.
+- ~~Client satisfaction has no data source.~~ **Addressed:**
+  `delivery-log.json`'s documented shape now includes
+  `clientSatisfactionNote` (`delivery-intelligence/
+  delivery-intelligence-engine.md`) — a place for the founder's own
+  one-line note at Closed phase, read-only to every employee, never
+  computed. The founder habit itself — actually writing it every time
+  — still has to start with Engagement 1, or Cohort D's KPI baseline
+  (§2) is built on retrofitted memory instead of real data.
+- ~~Referral source isn't captured anywhere.~~ **Addressed:**
+  `06-CRM/company-intelligence.json`'s schema now includes
+  `referredBy` alongside the existing `existingRelationship` field —
+  `existingRelationship` could already say a company arrived via
+  referral, not who sent them. Same caveat as above: the field exists,
+  the founder still has to fill it in.
 - **Regulatory annex verification is not yet a habit.** Before the
   first real annex ships in a client deliverable, confirm the founder
   has personally checked it against source text at least once. This

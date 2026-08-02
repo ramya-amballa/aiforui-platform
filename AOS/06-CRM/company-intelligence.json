@@ -5,6 +5,7 @@
     "aiMaturity": "string — one of: Exploring, Piloting, Scaling, Mature, Unknown",
     "regulations": "array of strings — regulatory regimes that apply to this company, e.g. ['EU AI Act', 'DORA', 'GDPR']",
     "existingRelationship": "string — none, warm referral, prior conversation, prior client, active client",
+    "referredBy": "string or null — name of the person or prior client who referred this company, if existingRelationship is 'warm referral' and it's known; null if not a referral or the referrer isn't known. Added per AOS-PRACTICE-VALIDATION-ROADMAP.md's Client Satisfaction KPI (referral rate) — existingRelationship alone can say a company arrived via referral, not who sent them, so 'which past client generates referrals' couldn't be answered without this",
     "recruiter": "string or null — recruiter/agency name if this company was reached via one",
     "previousApplications": [
       {
