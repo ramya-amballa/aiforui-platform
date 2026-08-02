@@ -6,6 +6,12 @@
 > allowed to evolve. Everything else in this repository — every
 > employee, every sprint, every design document below — operates
 > inside what that document permits.
+>
+> As of this writing the architecture is considered frozen —
+> **[`AOS-PRACTICE-VALIDATION-ROADMAP.md`](AOS-PRACTICE-VALIDATION-ROADMAP.md)**
+> is the operating document that governs everything from here forward:
+> how the practice runs on AOS day to day, and the evidence bar that
+> would ever justify touching the architecture again.
 
 AOS (formerly "AI-COO") is the operating system behind AI for U&I. The
 earlier name implied a single executive function; what's actually here
