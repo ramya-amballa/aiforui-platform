@@ -741,6 +741,148 @@
       "relevanceScore": 0,
       "categoriesMatched": [],
       "reason": "No relevance signals matched in posting text (upstream keyword match: RAG, AI Agents) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0056",
+      "dateRejected": "2026-08-02",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Chief Operating Officer",
+      "organisation": "U.S. Hunger",
+      "url": "https://remoteOK.com/remote-jobs/remote-chief-operating-officer-u-s-hunger-1135756",
+      "relevanceScore": 10,
+      "categoriesMatched": [
+        "governanceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: governanceContext; no penalties)."
+    },
+    {
+      "id": "rej-0057",
+      "dateRejected": "2026-08-02",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Tequila Market Manager New Jersey",
+      "organisation": "Bandero Tequila",
+      "url": "https://remoteOK.com/remote-jobs/remote-tequila-market-manager-new-jersey-bandero-tequila-1135754",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0058",
+      "dateRejected": "2026-08-02",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Human Resources Coordinator",
+      "organisation": "Pacific Health Group",
+      "url": "https://remoteOK.com/remote-jobs/remote-human-resources-coordinator-pacific-health-group-1135783",
+      "relevanceScore": 0,
+      "categoriesMatched": [
+        "complianceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: complianceContext; HR role penalty (-20))."
+    },
+    {
+      "id": "rej-0059",
+      "dateRejected": "2026-08-02",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Tequila Market Manager New York",
+      "organisation": "Bandero Tequila",
+      "url": "https://remoteOK.com/remote-jobs/remote-tequila-market-manager-new-york-bandero-tequila-1135753",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0060",
+      "dateRejected": "2026-08-02",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Range Keeper",
+      "organisation": "Black &amp; McDonald Limited",
+      "url": "https://remoteOK.com/remote-jobs/remote-range-keeper-black-amp-mcdonald-limited-1135751",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0061",
+      "dateRejected": "2026-08-02",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Other areas",
+      "organisation": "Zegogo Corporation",
+      "url": "https://remoteOK.com/remote-jobs/remote-other-areas-zegogo-corporation-1135758",
+      "relevanceScore": 0,
+      "categoriesMatched": [
+        "companyIndustry"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: companyIndustry; Healthcare role penalty (-40))."
+    },
+    {
+      "id": "rej-0062",
+      "dateRejected": "2026-08-02",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Product Engineer",
+      "organisation": "SuperPlane",
+      "url": "https://remoteOK.com/remote-jobs/remote-product-engineer-superplane-1135739",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: AI Agents) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0063",
+      "dateRejected": "2026-08-02",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Client Onboarding Manager",
+      "organisation": "Connecteam",
+      "url": "https://remoteOK.com/remote-jobs/remote-client-onboarding-manager-connecteam-1135743",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0064",
+      "dateRejected": "2026-08-02",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "GenAI Engineer AI Builder AI Agent Associate Specialist",
+      "organisation": "Magic Compass Limited",
+      "url": "https://remoteOK.com/remote-jobs/remote-genai-engineer-ai-builder-ai-agent-associate-specialist-magic-compass-limited-1135735",
+      "relevanceScore": 22,
+      "categoriesMatched": [
+        "complianceContext",
+        "llm",
+        "rag"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: complianceContext, llm, rag; no penalties)."
+    },
+    {
+      "id": "rej-0065",
+      "dateRejected": "2026-08-02",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Lot Attendant",
+      "organisation": "Clutch",
+      "url": "https://remoteOK.com/remote-jobs/remote-lot-attendant-clutch-1135842",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0066",
+      "dateRejected": "2026-08-02",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Restoration Technician",
+      "organisation": "First Onsite Property Restoration",
+      "url": "https://remoteOK.com/remote-jobs/remote-restoration-technician-first-onsite-property-restoration-1135861",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
     }
   ]
 }
