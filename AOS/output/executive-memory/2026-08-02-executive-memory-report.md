@@ -1,7 +1,7 @@
 # Executive Memory
 
 **Generated:** 2026-08-02
-**Days of CEO Advisor priority history tracked:** 0
+**Days of CEO Advisor priority history tracked:** 1
 
 *A read-only aggregator — every pattern below is counted from real, already-computed data. Nothing here is a new score or a fabricated pattern.*
 

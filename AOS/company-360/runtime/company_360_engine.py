@@ -65,7 +65,7 @@ DELIVERY_INTELLIGENCE_FEED_PATH = AOS_DIR / "output" / "delivery-intelligence" /
 # feed.json, never imported as a Python module. If it hasn't been
 # built yet, this is simply absent, same as every other optional feed
 # here.
-ARTIFACT_REGISTRY_INDEX_PATH = AOS_DIR / "artifact-registry" / "runtime" / "index" / "artifact-index.json"
+ARTIFACT_REGISTRY_INDEX_PATH = AOS_DIR / "output" / "artifact-registry" / "artifact-index.json"
 
 PROFILES_DIR = AOS_DIR / "output" / "company-360" / "company-profiles"
 FEED_PATH = AOS_DIR / "output" / "company-360" / "company-360-feed.json"

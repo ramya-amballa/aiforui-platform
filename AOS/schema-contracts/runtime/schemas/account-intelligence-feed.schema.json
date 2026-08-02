@@ -1,0 +1,22 @@
+{
+  "_comment": "Pilot Schema Contract, formalizing the comment-block already documented inline in account-intelligence/runtime/generate.py's own feed-building code. Checked by schema_validator.py's minimal structural validator only — required keys and top-level type, not a full JSON Schema implementation.",
+  "type": "object",
+  "required": ["schema", "briefs"],
+  "properties": {
+    "briefs": {"type": "array"}
+  },
+  "items": {
+    "type": "object",
+    "required": ["organisation", "industry", "region", "buyingReadinessBand", "outreachStrategy", "overallPriority", "briefPath"],
+    "properties": {
+      "organisation": {"type": "string"},
+      "industry": {"type": "string"},
+      "region": {"type": "string"},
+      "buyingReadinessBand": {"type": "string"},
+      "outreachStrategy": {"type": "string"},
+      "overallPriority": {"type": "number"},
+      "briefPath": {"type": "string"},
+      "executiveSummary": {"type": "string"}
+    }
+  }
+}

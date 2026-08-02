@@ -1,13 +1,6 @@
 __pycache__/
 *.pyc
 
-# The Artifact Registry's built index is a derived, disposable view
-# over AOS/output/ (see AOS/artifact-registry/artifact-registry-model.md)
-# — rebuild with `python3 AOS/artifact-registry/runtime/registry_builder.py`.
-# Not yet wired into the daily orchestrator run, so committing today's
-# manually-built copy would misrepresent it as real scheduled output.
-AOS/artifact-registry/runtime/index/*.json
-
 # Real connector credentials — copy AOS/opportunity-hunter/runtime/config/
 # credentials.template.env to .env locally and fill in real values there;
 # never commit the filled-in file. Production uses GitHub Actions secrets.

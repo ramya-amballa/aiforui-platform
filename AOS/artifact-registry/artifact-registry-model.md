@@ -68,10 +68,11 @@ unchanged." This is the honest boundary of what a read-only shadow
 index can know without employee cooperation.
 
 `registry_builder.py` scans `output/` and writes one full index,
-rebuilt from scratch, every time it runs. It is not yet wired into the
-daily Orchestrator run — that would be changing orchestration, out of
-scope for this phase — so it is invoked by hand or by a future,
-separately-decided step.
+rebuilt from scratch, every time it runs. As of ADR 0003, it runs as
+part of the daily Orchestrator cycle — the last step before CEO
+Advisor — and its index lives at `output/artifact-registry/artifact-
+index.json`, committed the same way every other employee's daily
+output already is.
 
 ## Phase 2 — Query API, employee lookup helpers, read-only integration
 
@@ -84,9 +85,14 @@ one-line human-readable summary.
 Company 360 gained one new field, `artifactRegistry`, populated only
 when a registry index is passed in (default `None`) — every existing
 call site is unaffected. CEO Advisor gained one new report section,
-`## Artifact Registry`, following the exact pattern Capacity
-Management's own section already established: read-only, one cycle
-behind, purely informational, never changing ranking or Top 3.
+`## Artifact Registry`, following the exact structural pattern
+Capacity Management's own section established — read-only, purely
+informational, never changing ranking or Top 3 — but with a real
+improvement Capacity Management's own feed can't have: since the
+registry depends on nothing CEO Advisor itself produces, ADR 0003
+positions it to run immediately before CEO Advisor in the same daily
+cycle, so CEO Advisor's read is genuinely same-run-fresh, not one
+cycle behind.
 
 ## Phase 3 — Registry validation, confidence metadata, structural verification hooks
 
@@ -106,10 +112,24 @@ advisory only:
   (or a future enforcing verification layer, per the Constitution's
   own evolution path), never a filter that excludes anything.
 
+## Phase 4 — Schema Contracts (schema-contracts/, a sibling component)
+
+A separate, sibling infrastructure component — not part of
+`artifact-registry/` itself, but wired into its Phase 3 validation.
+`status_vocabulary.py` formalizes seven honest-gap phrases already in
+real use 131 times across this codebase (`"Not specified"`, `"Not
+tracked"`, `"Not enough signal yet"`, and four others) into one
+`GapMarker(str, Enum)`, interchangeable with the plain strings already
+on disk. `schema_validator.py` is a minimal, hand-written structural
+checker — required keys present, declared types match — against real
+`.schema.json` files, starting with two pilots:
+`account-intelligence-feed.schema.json` and the registry's own
+`artifact-index.schema.json` (the registry validates its own output
+against the same discipline it applies to everyone else). Deliberately
+stdlib only, not Pydantic — see ADR 0002 for the full reasoning.
+
 ## What is deliberately still missing
 
-- **Not wired into the daily Orchestrator run.** Adding it there is an
-  orchestration change, explicitly out of scope for this phase.
 - **No enforcing verification.** Everything here is advisory; nothing
   blocks an artifact from being indexed or an employee from running.
 - **No Candidate Artifact lifecycle.** Every record's `lifecycle`

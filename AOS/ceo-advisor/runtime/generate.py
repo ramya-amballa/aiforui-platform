@@ -63,7 +63,7 @@ CAPACITY_FEED_PATH = AOS_DIR / "output" / "capacity-management" / "capacity-feed
 # never imported as a Python module. Purely informational: never
 # changes candidate ranking, Top 3 selection, or any other employee's
 # behavior.
-ARTIFACT_REGISTRY_INDEX_PATH = AOS_DIR / "artifact-registry" / "runtime" / "index" / "artifact-index.json"
+ARTIFACT_REGISTRY_INDEX_PATH = AOS_DIR / "output" / "artifact-registry" / "artifact-index.json"
 DAILY_BRIEF_PATH = AOS_DIR / "executive-dashboard" / "executive-dashboard.md"
 ORCHESTRATOR_STATUS_PATH = AOS_DIR / "orchestrator" / "status.json"
 

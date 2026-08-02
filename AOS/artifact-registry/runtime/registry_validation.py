@@ -17,10 +17,41 @@ entries already named confidenceScore/qualificationScore). It never
 computes, estimates, or guesses a confidence value for an artifact
 that doesn't already carry one — that would be exactly the kind of
 fabrication the Constitution forbids.
+
+Also wires in schema-contracts/runtime/'s schema_validator.py where a
+real pilot Schema Contract exists for an artifact's exact path — a
+deliberate, considered exception to "no cross-employee Python
+imports": schema-contracts and artifact-registry are both shared
+platform infrastructure, not employees with business logic, so there
+is no isolation invariant being broken here, only the ordinary
+software-engineering case of one shared library using another. See
+schema-contracts/schema-contracts-model.md.
 """
 
 import json
 import re
+import sys
+from pathlib import Path
+
+_SCHEMA_CONTRACTS_RUNTIME = Path(__file__).resolve().parent.parent.parent / "schema-contracts" / "runtime"
+if str(_SCHEMA_CONTRACTS_RUNTIME) not in sys.path:
+    sys.path.insert(0, str(_SCHEMA_CONTRACTS_RUNTIME))
+
+try:
+    import schema_validator  # noqa: E402
+except ImportError:
+    schema_validator = None
+
+_SCHEMAS_DIR = _SCHEMA_CONTRACTS_RUNTIME / "schemas"
+
+# Path suffix -> schema filename. Deliberately a short, explicit,
+# hand-maintained list of the real pilot Schema Contracts that exist
+# today — extend only as new schemas are actually authored, never
+# guess a mapping for a schema that doesn't exist yet.
+_SCHEMA_CONTRACTS_BY_PATH_SUFFIX = {
+    "output/account-intelligence/account-intelligence-feed.json": "account-intelligence-feed.schema.json",
+    "output/artifact-registry/artifact-index.json": "artifact-index.schema.json",
+}
 
 _MARKDOWN_CONFIDENCE_PATTERN = re.compile(r"\*\*Confidence score:\*\*\s*(\d+(?:\.\d+)?)\s*/\s*100")
 
@@ -64,7 +95,7 @@ def extract_confidence(absolute_path, artifact_type):
     return None
 
 
-def validate_artifact(absolute_path, artifact_type):
+def validate_artifact(absolute_path, relative_path, artifact_type):
     """A short list of structural flags, empty when nothing looks
     wrong. Every check here is cheap, deterministic, and explainable —
     no semantic judgement about whether content is *true*, only
@@ -84,6 +115,7 @@ def validate_artifact(absolute_path, artifact_type):
         flags.append("empty-file")
         return flags  # nothing further to check meaningfully
 
+    data = None
     if str(absolute_path).endswith(".json"):
         text = _read_text_safely(absolute_path)
         if text is None:
@@ -96,5 +128,11 @@ def validate_artifact(absolute_path, artifact_type):
             return flags
         if artifact_type == "feed" and isinstance(data, dict) and "schema" not in data:
             flags.append("feed-missing-schema-key")
+
+    schema_filename = _SCHEMA_CONTRACTS_BY_PATH_SUFFIX.get(relative_path)
+    if schema_filename and schema_validator is not None and data is not None:
+        schema = schema_validator.load_schema(_SCHEMAS_DIR / schema_filename)
+        for violation in schema_validator.validate_against_schema(data, schema):
+            flags.append(f"schema-contract:{violation}")
 
     return flags

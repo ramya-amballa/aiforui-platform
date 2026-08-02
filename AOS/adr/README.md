@@ -18,3 +18,5 @@ quietly built up across several ADRs.
 | # | Title | Status |
 |---|---|---|
 | [0001](0001-artifact-registry-additive-shadow-index.md) | Artifact Registry as an additive shadow index, not a system of record | Accepted |
+| [0002](0002-schema-contracts-stdlib-not-pydantic.md) | Schema Contracts as stdlib enum + hand-written validation, not Pydantic | Accepted |
+| [0003](0003-wire-artifact-registry-into-daily-orchestrator-run.md) | Wire the Artifact Registry into the daily Orchestrator run | Accepted |

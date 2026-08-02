@@ -27,7 +27,11 @@ if str(RUNTIME_DIR) not in sys.path:
 
 import registry_model as model  # noqa: E402
 
-INDEX_PATH = RUNTIME_DIR / "index" / "artifact-index.json"
+# Lives under output/, alongside every other employee's generated
+# artifacts, now that this runs as part of the daily Orchestrator
+# cycle — it is real daily production data, committed the same way,
+# not a disposable local-only test artifact anymore.
+INDEX_PATH = model.AOS_DIR / "output" / "artifact-registry" / "artifact-index.json"
 
 INDEX_SCHEMA = {
     "schemaVersion": "string — this index format's own version, bumped only if the top-level shape changes",

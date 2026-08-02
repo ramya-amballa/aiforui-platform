@@ -1,0 +1,3044 @@
+{
+  "schema": {
+    "schemaVersion": "string — this index format's own version, bumped only if the top-level shape changes",
+    "generatedAt": "string — ISO 8601 UTC timestamp of this build",
+    "sourceRoot": "string — relative to AOS/, the directory tree this index was built from",
+    "orchestratorConfigPath": "string — relative to AOS/, where the employee-level dependency graph used for lineage was read from",
+    "artifactCount": "number — total artifacts indexed",
+    "employeeCounts": "object — employee key -> number of artifacts indexed for that employee (platform artifacts under 'orchestrator'/'daily-briefs' excluded)",
+    "validationSummary": "object — flaggedCount (artifacts with at least one Phase 3 structural flag, advisory only, never blocking) and flagCounts (flag name -> occurrence count)",
+    "artifacts": "array of artifact records — see registry_model.py's build_artifact_record() for the exact per-record shape"
+  },
+  "schemaVersion": "1",
+  "generatedAt": "2026-08-02T06:32:13.221181+00:00",
+  "sourceRoot": "output",
+  "orchestratorConfigPath": "orchestrator/runtime/config/orchestrator-config.json",
+  "artifactCount": 140,
+  "employeeCounts": {
+    "05-Market-Intelligence": 1,
+    "capacity-management": 6,
+    "ceo-advisor": 9,
+    "content-director": 1,
+    "crm": 1,
+    "demand-intelligence": 12,
+    "executive-dashboard": 22,
+    "executive-memory": 6,
+    "market-positioning-intelligence": 6,
+    "product-manager": 1,
+    "revenue-hunter": 21,
+    "sales-director": 1,
+    "service-mapping": 1,
+    "tender-intelligence": 7,
+    "website-intake": 1
+  },
+  "validationSummary": {
+    "flaggedCount": 0,
+    "flagCounts": {}
+  },
+  "artifacts": [
+    {
+      "id": "art_6007a8d7da7fd62a",
+      "employee": "05-Market-Intelligence",
+      "path": "output/05-Market-Intelligence/.gitkeep",
+      "artifactType": "other",
+      "producedDate": null,
+      "contentHash": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sizeBytes": 0,
+      "fileModifiedAt": "2026-08-01T14:22:40.318345+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "05-Market-Intelligence",
+        "dependsOnEmployees": [],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_392a410598e11f85",
+      "employee": null,
+      "path": "output/README.md",
+      "artifactType": "other",
+      "producedDate": null,
+      "contentHash": "sha256:f765a7c6a96268d268d037cc4696a9863ce13984271ffc73c95ec2d0f8765953",
+      "sizeBytes": 1772,
+      "fileModifiedAt": "2026-08-01T14:22:40.318345+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": null,
+        "dependsOnEmployees": [],
+        "note": "Platform artifact (orchestrator or daily-briefs archive) — not owned by a single employee."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_b6c2aa037cbed8b2",
+      "employee": "capacity-management",
+      "path": "output/capacity-management/2026-07-30-capacity-report.md",
+      "artifactType": "daily-report",
+      "producedDate": "2026-07-30",
+      "contentHash": "sha256:4bdd5636ef2a23b9dcb00e3d6537c95b62df4ed57ced6d24ab1841135060dd2e",
+      "sizeBytes": 621,
+      "fileModifiedAt": "2026-08-01T14:22:40.318345+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "capacity-management",
+        "dependsOnEmployees": [
+          "revenue-hunter",
+          "delivery-intelligence",
+          "sales-director",
+          "service-mapping"
+        ],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_094e4570b38b13c1",
+      "employee": "capacity-management",
+      "path": "output/capacity-management/2026-07-31-capacity-report.md",
+      "artifactType": "daily-report",
+      "producedDate": "2026-07-31",
+      "contentHash": "sha256:e4aae2e041f266d0174448fde4f117b461f3b2a4b49a52eda41e920e7353a969",
+      "sizeBytes": 621,
+      "fileModifiedAt": "2026-08-01T14:22:40.318514+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "capacity-management",
+        "dependsOnEmployees": [
+          "revenue-hunter",
+          "delivery-intelligence",
+          "sales-director",
+          "service-mapping"
+        ],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_81721962f2cda4d5",
+      "employee": "capacity-management",
+      "path": "output/capacity-management/2026-08-01-capacity-report.md",
+      "artifactType": "daily-report",
+      "producedDate": "2026-08-01",
+      "contentHash": "sha256:e06e37d0b0d3096620bf50451f4317a49dfca8d6e781ea4e5e242e66e010ea3e",
+      "sizeBytes": 621,
+      "fileModifiedAt": "2026-08-01T14:22:40.318514+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "capacity-management",
+        "dependsOnEmployees": [
+          "revenue-hunter",
+          "delivery-intelligence",
+          "sales-director",
+          "service-mapping"
+        ],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_31c26bb522b1b278",
+      "employee": "capacity-management",
+      "path": "output/capacity-management/2026-08-02-capacity-report.md",
+      "artifactType": "daily-report",
+      "producedDate": "2026-08-02",
+      "contentHash": "sha256:11d1337dd7c986fd041582dd5ae32cc76e27afc8d6de8cbc172e0de4bf795644",
+      "sizeBytes": 621,
+      "fileModifiedAt": "2026-08-02T06:32:13.065362+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "capacity-management",
+        "dependsOnEmployees": [
+          "revenue-hunter",
+          "delivery-intelligence",
+          "sales-director",
+          "service-mapping"
+        ],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_82a9a6637355fe98",
+      "employee": "capacity-management",
+      "path": "output/capacity-management/capacity-feed.json",
+      "artifactType": "feed",
+      "producedDate": null,
+      "contentHash": "sha256:ea923d25364e30e204c36c16545d3d4ec4446c625af1c2c967e340dbc08ef564",
+      "sizeBytes": 1012,
+      "fileModifiedAt": "2026-08-02T06:32:13.065206+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "capacity-management",
+        "dependsOnEmployees": [
+          "revenue-hunter",
+          "delivery-intelligence",
+          "sales-director",
+          "service-mapping"
+        ],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_5df190fa5b7826d4",
+      "employee": "capacity-management",
+      "path": "output/capacity-management/capacity-report.md",
+      "artifactType": "stable-snapshot",
+      "producedDate": null,
+      "contentHash": "sha256:11d1337dd7c986fd041582dd5ae32cc76e27afc8d6de8cbc172e0de4bf795644",
+      "sizeBytes": 621,
+      "fileModifiedAt": "2026-08-02T06:32:13.065478+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "capacity-management",
+        "dependsOnEmployees": [
+          "revenue-hunter",
+          "delivery-intelligence",
+          "sales-director",
+          "service-mapping"
+        ],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_9ab87ab9d4662bdd",
+      "employee": "ceo-advisor",
+      "path": "output/ceo-advisor/.gitkeep",
+      "artifactType": "other",
+      "producedDate": null,
+      "contentHash": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sizeBytes": 0,
+      "fileModifiedAt": "2026-08-01T14:22:40.318514+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "ceo-advisor",
+        "dependsOnEmployees": [
+          "market-intelligence",
+          "website-intake",
+          "demand-intelligence",
+          "revenue-hunter",
+          "crm",
+          "service-mapping",
+          "sales-director",
+          "account-intelligence",
+          "reverse-job-hunt",
+          "recruiter-intelligence",
+          "fractional-advisory-radar",
+          "relationship-intelligence",
+          "tender-intelligence",
+          "executive-brand-intelligence",
+          "delivery-intelligence",
+          "company-360",
+          "executive-memory",
+          "market-positioning-intelligence",
+          "capacity-management",
+          "product-manager",
+          "content-director",
+          "daily-brief",
+          "artifact-registry"
+        ],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_8025505023990c9d",
+      "employee": "ceo-advisor",
+      "path": "output/ceo-advisor/2026-07-25-ceo-daily-report.md",
+      "artifactType": "daily-report",
+      "producedDate": "2026-07-25",
+      "contentHash": "sha256:1a50ac076f9b43b20a429906117fc945f11b531688cc39954508965d1ef78252",
+      "sizeBytes": 1538,
+      "fileModifiedAt": "2026-08-01T14:22:40.318630+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "ceo-advisor",
+        "dependsOnEmployees": [
+          "market-intelligence",
+          "website-intake",
+          "demand-intelligence",
+          "revenue-hunter",
+          "crm",
+          "service-mapping",
+          "sales-director",
+          "account-intelligence",
+          "reverse-job-hunt",
+          "recruiter-intelligence",
+          "fractional-advisory-radar",
+          "relationship-intelligence",
+          "tender-intelligence",
+          "executive-brand-intelligence",
+          "delivery-intelligence",
+          "company-360",
+          "executive-memory",
+          "market-positioning-intelligence",
+          "capacity-management",
+          "product-manager",
+          "content-director",
+          "daily-brief",
+          "artifact-registry"
+        ],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_9e5c2919c2d8d85f",
+      "employee": "ceo-advisor",
+      "path": "output/ceo-advisor/2026-07-26-ceo-daily-report.md",
+      "artifactType": "daily-report",
+      "producedDate": "2026-07-26",
+      "contentHash": "sha256:5a085d0eb200dda3d48ecffe1bf55402524eaaf2522f12c64e6312e2a33ddf56",
+      "sizeBytes": 1538,
+      "fileModifiedAt": "2026-08-01T14:22:40.318630+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "ceo-advisor",
+        "dependsOnEmployees": [
+          "market-intelligence",
+          "website-intake",
+          "demand-intelligence",
+          "revenue-hunter",
+          "crm",
+          "service-mapping",
+          "sales-director",
+          "account-intelligence",
+          "reverse-job-hunt",
+          "recruiter-intelligence",
+          "fractional-advisory-radar",
+          "relationship-intelligence",
+          "tender-intelligence",
+          "executive-brand-intelligence",
+          "delivery-intelligence",
+          "company-360",
+          "executive-memory",
+          "market-positioning-intelligence",
+          "capacity-management",
+          "product-manager",
+          "content-director",
+          "daily-brief",
+          "artifact-registry"
+        ],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_a07d9249fd36214b",
+      "employee": "ceo-advisor",
+      "path": "output/ceo-advisor/2026-07-27-ceo-daily-report.md",
+      "artifactType": "daily-report",
+      "producedDate": "2026-07-27",
+      "contentHash": "sha256:56a18599acae2c7e4ff318fc164d07ba08613b122380265b28f8c49697e7056f",
+      "sizeBytes": 1538,
+      "fileModifiedAt": "2026-08-01T14:22:40.318630+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "ceo-advisor",
+        "dependsOnEmployees": [
+          "market-intelligence",
+          "website-intake",
+          "demand-intelligence",
+          "revenue-hunter",
+          "crm",
+          "service-mapping",
+          "sales-director",
+          "account-intelligence",
+          "reverse-job-hunt",
+          "recruiter-intelligence",
+          "fractional-advisory-radar",
+          "relationship-intelligence",
+          "tender-intelligence",
+          "executive-brand-intelligence",
+          "delivery-intelligence",
+          "company-360",
+          "executive-memory",
+          "market-positioning-intelligence",
+          "capacity-management",
+          "product-manager",
+          "content-director",
+          "daily-brief",
+          "artifact-registry"
+        ],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_a6183bbdf1f2b094",
+      "employee": "ceo-advisor",
+      "path": "output/ceo-advisor/2026-08-02-ceo-daily-report.md",
+      "artifactType": "daily-report",
+      "producedDate": "2026-08-02",
+      "contentHash": "sha256:2c3a67a407d48f962efa2204b73564687aa6f9e3e904c1b410e949d8af8a488d",
+      "sizeBytes": 1932,
+      "fileModifiedAt": "2026-08-02T05:21:06.090322+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "ceo-advisor",
+        "dependsOnEmployees": [
+          "market-intelligence",
+          "website-intake",
+          "demand-intelligence",
+          "revenue-hunter",
+          "crm",
+          "service-mapping",
+          "sales-director",
+          "account-intelligence",
+          "reverse-job-hunt",
+          "recruiter-intelligence",
+          "fractional-advisory-radar",
+          "relationship-intelligence",
+          "tender-intelligence",
+          "executive-brand-intelligence",
+          "delivery-intelligence",
+          "company-360",
+          "executive-memory",
+          "market-positioning-intelligence",
+          "capacity-management",
+          "product-manager",
+          "content-director",
+          "daily-brief",
+          "artifact-registry"
+        ],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_8842ea0923ca4891",
+      "employee": "ceo-advisor",
+      "path": "output/ceo-advisor/ceo-daily-report.md",
+      "artifactType": "stable-snapshot",
+      "producedDate": null,
+      "contentHash": "sha256:2c3a67a407d48f962efa2204b73564687aa6f9e3e904c1b410e949d8af8a488d",
+      "sizeBytes": 1932,
+      "fileModifiedAt": "2026-08-02T05:21:06.090322+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "ceo-advisor",
+        "dependsOnEmployees": [
+          "market-intelligence",
+          "website-intake",
+          "demand-intelligence",
+          "revenue-hunter",
+          "crm",
+          "service-mapping",
+          "sales-director",
+          "account-intelligence",
+          "reverse-job-hunt",
+          "recruiter-intelligence",
+          "fractional-advisory-radar",
+          "relationship-intelligence",
+          "tender-intelligence",
+          "executive-brand-intelligence",
+          "delivery-intelligence",
+          "company-360",
+          "executive-memory",
+          "market-positioning-intelligence",
+          "capacity-management",
+          "product-manager",
+          "content-director",
+          "daily-brief",
+          "artifact-registry"
+        ],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_bdabc05906d4d6de",
+      "employee": "ceo-advisor",
+      "path": "output/ceo-advisor/ceo-monthly-business-review.md",
+      "artifactType": "stable-snapshot",
+      "producedDate": null,
+      "contentHash": "sha256:3f05b71df1998a198d93e9c288cbc1eaa4954f23570f99f80e1fddb6246ce5b9",
+      "sizeBytes": 584,
+      "fileModifiedAt": "2026-08-02T05:21:06.090322+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "ceo-advisor",
+        "dependsOnEmployees": [
+          "market-intelligence",
+          "website-intake",
+          "demand-intelligence",
+          "revenue-hunter",
+          "crm",
+          "service-mapping",
+          "sales-director",
+          "account-intelligence",
+          "reverse-job-hunt",
+          "recruiter-intelligence",
+          "fractional-advisory-radar",
+          "relationship-intelligence",
+          "tender-intelligence",
+          "executive-brand-intelligence",
+          "delivery-intelligence",
+          "company-360",
+          "executive-memory",
+          "market-positioning-intelligence",
+          "capacity-management",
+          "product-manager",
+          "content-director",
+          "daily-brief",
+          "artifact-registry"
+        ],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_84c500cb791a56c9",
+      "employee": "ceo-advisor",
+      "path": "output/ceo-advisor/ceo-weekly-report.md",
+      "artifactType": "stable-snapshot",
+      "producedDate": null,
+      "contentHash": "sha256:b9113928667db3eeb9f830f18e2041863e5593144983ae00924617b32b89e532",
+      "sizeBytes": 573,
+      "fileModifiedAt": "2026-08-02T05:21:06.090322+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "ceo-advisor",
+        "dependsOnEmployees": [
+          "market-intelligence",
+          "website-intake",
+          "demand-intelligence",
+          "revenue-hunter",
+          "crm",
+          "service-mapping",
+          "sales-director",
+          "account-intelligence",
+          "reverse-job-hunt",
+          "recruiter-intelligence",
+          "fractional-advisory-radar",
+          "relationship-intelligence",
+          "tender-intelligence",
+          "executive-brand-intelligence",
+          "delivery-intelligence",
+          "company-360",
+          "executive-memory",
+          "market-positioning-intelligence",
+          "capacity-management",
+          "product-manager",
+          "content-director",
+          "daily-brief",
+          "artifact-registry"
+        ],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_62908bea2858c05b",
+      "employee": "ceo-advisor",
+      "path": "output/ceo-advisor/daily-priorities-log.json",
+      "artifactType": "stable-snapshot",
+      "producedDate": null,
+      "contentHash": "sha256:d059969668db0c8bb1c79c857ff00f1bb2b8d37e6f73abf45c0fbf4e58246636",
+      "sizeBytes": 147,
+      "fileModifiedAt": "2026-08-02T05:21:06.090322+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "ceo-advisor",
+        "dependsOnEmployees": [
+          "market-intelligence",
+          "website-intake",
+          "demand-intelligence",
+          "revenue-hunter",
+          "crm",
+          "service-mapping",
+          "sales-director",
+          "account-intelligence",
+          "reverse-job-hunt",
+          "recruiter-intelligence",
+          "fractional-advisory-radar",
+          "relationship-intelligence",
+          "tender-intelligence",
+          "executive-brand-intelligence",
+          "delivery-intelligence",
+          "company-360",
+          "executive-memory",
+          "market-positioning-intelligence",
+          "capacity-management",
+          "product-manager",
+          "content-director",
+          "daily-brief",
+          "artifact-registry"
+        ],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_95a8a9ce442a4684",
+      "employee": "content-director",
+      "path": "output/content-director/.gitkeep",
+      "artifactType": "other",
+      "producedDate": null,
+      "contentHash": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sizeBytes": 0,
+      "fileModifiedAt": "2026-08-01T14:22:40.318630+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "content-director",
+        "dependsOnEmployees": [
+          "market-intelligence"
+        ],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_aaef85ff7a17b370",
+      "employee": "crm",
+      "path": "output/crm/.gitkeep",
+      "artifactType": "other",
+      "producedDate": null,
+      "contentHash": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sizeBytes": 0,
+      "fileModifiedAt": "2026-08-01T14:22:40.318630+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "crm",
+        "dependsOnEmployees": [
+          "demand-intelligence",
+          "revenue-hunter"
+        ],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_bedab98abbf1177a",
+      "employee": null,
+      "path": "output/daily-briefs/2026/07/25/executive-dashboard.html",
+      "artifactType": "daily-brief-archive",
+      "producedDate": null,
+      "contentHash": "sha256:63dbdca36ec184e60510a598571720217050c7016831c136bc6bfc6d8c379063",
+      "sizeBytes": 3105,
+      "fileModifiedAt": "2026-08-01T14:22:40.318956+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": null,
+        "dependsOnEmployees": [],
+        "note": "Platform artifact (orchestrator or daily-briefs archive) — not owned by a single employee."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_86ab760866bca605",
+      "employee": null,
+      "path": "output/daily-briefs/2026/07/25/executive-dashboard.md",
+      "artifactType": "daily-brief-archive",
+      "producedDate": null,
+      "contentHash": "sha256:8ee53d34116895c55680834a4507efd0134ed072bafa325321d1ad410356cf82",
+      "sizeBytes": 1453,
+      "fileModifiedAt": "2026-08-01T14:22:40.319025+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": null,
+        "dependsOnEmployees": [],
+        "note": "Platform artifact (orchestrator or daily-briefs archive) — not owned by a single employee."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_7c4708e91bf21d87",
+      "employee": null,
+      "path": "output/daily-briefs/2026/07/26/executive-dashboard.html",
+      "artifactType": "daily-brief-archive",
+      "producedDate": null,
+      "contentHash": "sha256:c897159db125cd45ce7f761c1df0a85b5e34f0ba1a5b11efeac23500340c733f",
+      "sizeBytes": 3105,
+      "fileModifiedAt": "2026-08-01T14:22:40.319025+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": null,
+        "dependsOnEmployees": [],
+        "note": "Platform artifact (orchestrator or daily-briefs archive) — not owned by a single employee."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_16bf8228daef7bf4",
+      "employee": null,
+      "path": "output/daily-briefs/2026/07/26/executive-dashboard.md",
+      "artifactType": "daily-brief-archive",
+      "producedDate": null,
+      "contentHash": "sha256:ed4fc7e8f2105b4f403261a1f2dcf94324f70592eef84a55afc79bf31857f504",
+      "sizeBytes": 1453,
+      "fileModifiedAt": "2026-08-01T14:22:40.319127+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": null,
+        "dependsOnEmployees": [],
+        "note": "Platform artifact (orchestrator or daily-briefs archive) — not owned by a single employee."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_612300ad7fe250ad",
+      "employee": null,
+      "path": "output/daily-briefs/2026/07/27/executive-dashboard.html",
+      "artifactType": "daily-brief-archive",
+      "producedDate": null,
+      "contentHash": "sha256:3f9b95b1f1563a6bd1fd520446da88f66f2e31927264f11ccda9a2a8c7207481",
+      "sizeBytes": 3105,
+      "fileModifiedAt": "2026-08-01T14:22:40.319127+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": null,
+        "dependsOnEmployees": [],
+        "note": "Platform artifact (orchestrator or daily-briefs archive) — not owned by a single employee."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_fc04d495f3e7022f",
+      "employee": null,
+      "path": "output/daily-briefs/2026/07/27/executive-dashboard.md",
+      "artifactType": "daily-brief-archive",
+      "producedDate": null,
+      "contentHash": "sha256:016cafa9fd3a572b11d14d50e670da39d815206f90b737137b0d42fa56d961c8",
+      "sizeBytes": 1453,
+      "fileModifiedAt": "2026-08-01T14:22:40.319233+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": null,
+        "dependsOnEmployees": [],
+        "note": "Platform artifact (orchestrator or daily-briefs archive) — not owned by a single employee."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_fea9625fb273fcc4",
+      "employee": null,
+      "path": "output/daily-briefs/2026/07/28/executive-dashboard.html",
+      "artifactType": "daily-brief-archive",
+      "producedDate": null,
+      "contentHash": "sha256:2282a2e03d7cd75333a745009117492a155b682abbff872b11fc780b9b16a371",
+      "sizeBytes": 3105,
+      "fileModifiedAt": "2026-08-01T14:22:40.319233+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": null,
+        "dependsOnEmployees": [],
+        "note": "Platform artifact (orchestrator or daily-briefs archive) — not owned by a single employee."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_95753d5a92de9d1a",
+      "employee": null,
+      "path": "output/daily-briefs/2026/07/28/executive-dashboard.md",
+      "artifactType": "daily-brief-archive",
+      "producedDate": null,
+      "contentHash": "sha256:9cc6f1e46b87d929c45f86654412115c4b3ed6ad1fe0f4f992c28b150a9cdbe9",
+      "sizeBytes": 1453,
+      "fileModifiedAt": "2026-08-01T14:22:40.319336+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": null,
+        "dependsOnEmployees": [],
+        "note": "Platform artifact (orchestrator or daily-briefs archive) — not owned by a single employee."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_8e157a8db1ccdd3c",
+      "employee": null,
+      "path": "output/daily-briefs/2026/07/29/executive-dashboard.html",
+      "artifactType": "daily-brief-archive",
+      "producedDate": null,
+      "contentHash": "sha256:73eae1b1a84735c328427b660434896292bc8637848668f6225d12160623ce5d",
+      "sizeBytes": 3105,
+      "fileModifiedAt": "2026-08-01T14:22:40.319336+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": null,
+        "dependsOnEmployees": [],
+        "note": "Platform artifact (orchestrator or daily-briefs archive) — not owned by a single employee."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_7a90431fecec7847",
+      "employee": null,
+      "path": "output/daily-briefs/2026/07/29/executive-dashboard.md",
+      "artifactType": "daily-brief-archive",
+      "producedDate": null,
+      "contentHash": "sha256:79c143ce60dcf1e5a25693dd8396d40e4b2e8fac2e7c482a7890ca40b74c0989",
+      "sizeBytes": 1453,
+      "fileModifiedAt": "2026-08-01T14:22:40.319396+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": null,
+        "dependsOnEmployees": [],
+        "note": "Platform artifact (orchestrator or daily-briefs archive) — not owned by a single employee."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_c6ef1f9f167732a8",
+      "employee": null,
+      "path": "output/daily-briefs/2026/07/30/executive-dashboard.html",
+      "artifactType": "daily-brief-archive",
+      "producedDate": null,
+      "contentHash": "sha256:ac9c4e31c79a4667116179fc754cfbdd95db53ffd34e045f0ef4ab3e69515249",
+      "sizeBytes": 3105,
+      "fileModifiedAt": "2026-08-01T14:22:40.319396+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": null,
+        "dependsOnEmployees": [],
+        "note": "Platform artifact (orchestrator or daily-briefs archive) — not owned by a single employee."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_3b38732ccf6b2dec",
+      "employee": null,
+      "path": "output/daily-briefs/2026/07/30/executive-dashboard.md",
+      "artifactType": "daily-brief-archive",
+      "producedDate": null,
+      "contentHash": "sha256:421f3bed8ed56bf736792116da43a4b0fec71ba5532aaa5a32f8672c2dc1771b",
+      "sizeBytes": 1453,
+      "fileModifiedAt": "2026-08-01T14:22:40.319476+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": null,
+        "dependsOnEmployees": [],
+        "note": "Platform artifact (orchestrator or daily-briefs archive) — not owned by a single employee."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_3c9baab67e080233",
+      "employee": null,
+      "path": "output/daily-briefs/2026/07/31/executive-dashboard.html",
+      "artifactType": "daily-brief-archive",
+      "producedDate": null,
+      "contentHash": "sha256:b8d024dad234d13d99aaa94a861096ee3bab8a49bff2154155383b4996999ca7",
+      "sizeBytes": 3105,
+      "fileModifiedAt": "2026-08-01T14:22:40.319476+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": null,
+        "dependsOnEmployees": [],
+        "note": "Platform artifact (orchestrator or daily-briefs archive) — not owned by a single employee."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_cd564aa4ae3019cf",
+      "employee": null,
+      "path": "output/daily-briefs/2026/07/31/executive-dashboard.md",
+      "artifactType": "daily-brief-archive",
+      "producedDate": null,
+      "contentHash": "sha256:d064320fe95308a5b0385247c04b4caa4486110e1ac69a6f69a89037de89f5a1",
+      "sizeBytes": 1453,
+      "fileModifiedAt": "2026-08-01T14:22:40.319543+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": null,
+        "dependsOnEmployees": [],
+        "note": "Platform artifact (orchestrator or daily-briefs archive) — not owned by a single employee."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_aa9a22018366d04b",
+      "employee": null,
+      "path": "output/daily-briefs/2026/08/01/executive-dashboard.html",
+      "artifactType": "daily-brief-archive",
+      "producedDate": null,
+      "contentHash": "sha256:73eae1b1a84735c328427b660434896292bc8637848668f6225d12160623ce5d",
+      "sizeBytes": 3105,
+      "fileModifiedAt": "2026-08-01T14:22:40.319620+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": null,
+        "dependsOnEmployees": [],
+        "note": "Platform artifact (orchestrator or daily-briefs archive) — not owned by a single employee."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_dd569499c5ab7411",
+      "employee": null,
+      "path": "output/daily-briefs/2026/08/01/executive-dashboard.md",
+      "artifactType": "daily-brief-archive",
+      "producedDate": null,
+      "contentHash": "sha256:79c143ce60dcf1e5a25693dd8396d40e4b2e8fac2e7c482a7890ca40b74c0989",
+      "sizeBytes": 1453,
+      "fileModifiedAt": "2026-08-01T14:22:40.319664+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": null,
+        "dependsOnEmployees": [],
+        "note": "Platform artifact (orchestrator or daily-briefs archive) — not owned by a single employee."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_9dfa106b703e9448",
+      "employee": null,
+      "path": "output/daily-briefs/2026/08/02/executive-dashboard.html",
+      "artifactType": "daily-brief-archive",
+      "producedDate": null,
+      "contentHash": "sha256:91dac3a5f1e388ba7a8c55c132c8b21d5e55c6385a9eab65d9abe4f49d858af8",
+      "sizeBytes": 3105,
+      "fileModifiedAt": "2026-08-02T06:32:13.161990+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": null,
+        "dependsOnEmployees": [],
+        "note": "Platform artifact (orchestrator or daily-briefs archive) — not owned by a single employee."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_008e87fdc8f389d8",
+      "employee": null,
+      "path": "output/daily-briefs/2026/08/02/executive-dashboard.md",
+      "artifactType": "daily-brief-archive",
+      "producedDate": null,
+      "contentHash": "sha256:5aec2d5e2db8765da012d6c6c58149625332f57b139c7d8c0baebfce2b70d6a2",
+      "sizeBytes": 1453,
+      "fileModifiedAt": "2026-08-02T06:32:13.161878+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": null,
+        "dependsOnEmployees": [],
+        "note": "Platform artifact (orchestrator or daily-briefs archive) — not owned by a single employee."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_c6f7718c9d7a7de7",
+      "employee": "demand-intelligence",
+      "path": "output/demand-intelligence/.gitkeep",
+      "artifactType": "other",
+      "producedDate": null,
+      "contentHash": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sizeBytes": 0,
+      "fileModifiedAt": "2026-08-01T14:22:40.319664+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "demand-intelligence",
+        "dependsOnEmployees": [],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_5b6f950b0835b2f3",
+      "employee": "demand-intelligence",
+      "path": "output/demand-intelligence/2026-07-25-collection-verification-report.md",
+      "artifactType": "daily-report",
+      "producedDate": "2026-07-25",
+      "contentHash": "sha256:c70857a3f8b90017b50343af433cc35518e2bcda3a253797b0559a681e07b5b6",
+      "sizeBytes": 1222,
+      "fileModifiedAt": "2026-08-01T14:22:40.319714+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "demand-intelligence",
+        "dependsOnEmployees": [],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_d1bacb8a215ad6e9",
+      "employee": "demand-intelligence",
+      "path": "output/demand-intelligence/2026-07-26-collection-verification-report.md",
+      "artifactType": "daily-report",
+      "producedDate": "2026-07-26",
+      "contentHash": "sha256:0b7e2167989cd5f467df7b6fc4d429a550ede48f5ba463fddd61618d8d0bda6a",
+      "sizeBytes": 1224,
+      "fileModifiedAt": "2026-08-01T14:22:40.319714+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "demand-intelligence",
+        "dependsOnEmployees": [],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_d67d94ed8ddf2d34",
+      "employee": "demand-intelligence",
+      "path": "output/demand-intelligence/2026-07-27-collection-verification-report.md",
+      "artifactType": "daily-report",
+      "producedDate": "2026-07-27",
+      "contentHash": "sha256:539599bcbe7f70435f3acc476a6cfa324fabbbb4e9920dab642e5b4cae6fad15",
+      "sizeBytes": 1224,
+      "fileModifiedAt": "2026-08-01T14:22:40.319714+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "demand-intelligence",
+        "dependsOnEmployees": [],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_72c6eb7720abc3a1",
+      "employee": "demand-intelligence",
+      "path": "output/demand-intelligence/2026-07-28-collection-verification-report.md",
+      "artifactType": "daily-report",
+      "producedDate": "2026-07-28",
+      "contentHash": "sha256:5879cb098cf1a80e40e478355549e7485e96204b6624cfb758e790f6f59ebffb",
+      "sizeBytes": 1224,
+      "fileModifiedAt": "2026-08-01T14:22:40.319714+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "demand-intelligence",
+        "dependsOnEmployees": [],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_df22c37a7801a00a",
+      "employee": "demand-intelligence",
+      "path": "output/demand-intelligence/2026-07-29-collection-verification-report.md",
+      "artifactType": "daily-report",
+      "producedDate": "2026-07-29",
+      "contentHash": "sha256:87eda70858286f32fc19aa13eefe7897fa0b1f505a396a805b5a5b15dbab519f",
+      "sizeBytes": 1222,
+      "fileModifiedAt": "2026-08-01T14:22:40.319714+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "demand-intelligence",
+        "dependsOnEmployees": [],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_9ae76eed1a86413c",
+      "employee": "demand-intelligence",
+      "path": "output/demand-intelligence/2026-07-30-collection-verification-report.md",
+      "artifactType": "daily-report",
+      "producedDate": "2026-07-30",
+      "contentHash": "sha256:8422097726fedeb392614001ead415758e4ddcd2be4e73837f0a9d4690af5e85",
+      "sizeBytes": 1224,
+      "fileModifiedAt": "2026-08-01T14:22:40.319714+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "demand-intelligence",
+        "dependsOnEmployees": [],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_646147aedfdca7f9",
+      "employee": "demand-intelligence",
+      "path": "output/demand-intelligence/2026-07-31-collection-verification-report.md",
+      "artifactType": "daily-report",
+      "producedDate": "2026-07-31",
+      "contentHash": "sha256:9054ca1f3e7f900ada84518986bcad39dae17c8c1d4bd7273b4b8ea586e4c68e",
+      "sizeBytes": 1224,
+      "fileModifiedAt": "2026-08-01T14:22:40.319714+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "demand-intelligence",
+        "dependsOnEmployees": [],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_26c0eafc1e8a511f",
+      "employee": "demand-intelligence",
+      "path": "output/demand-intelligence/2026-08-01-collection-verification-report.md",
+      "artifactType": "daily-report",
+      "producedDate": "2026-08-01",
+      "contentHash": "sha256:d950e0f02b78e2c0669a5d4944a2b18758ef0ad37d99749de0d45c41ee1d987c",
+      "sizeBytes": 1224,
+      "fileModifiedAt": "2026-08-01T14:22:40.319714+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "demand-intelligence",
+        "dependsOnEmployees": [],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_bd32623d8fccba40",
+      "employee": "demand-intelligence",
+      "path": "output/demand-intelligence/2026-08-02-collection-verification-report.md",
+      "artifactType": "daily-report",
+      "producedDate": "2026-08-02",
+      "contentHash": "sha256:dc47ec33ba2f215a212a3850462f0879b096f1d3d03ef63447e09ba5214d1a57",
+      "sizeBytes": 1222,
+      "fileModifiedAt": "2026-08-02T06:32:12.323106+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "demand-intelligence",
+        "dependsOnEmployees": [],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_a4ec7515161c9647",
+      "employee": "demand-intelligence",
+      "path": "output/demand-intelligence/integration-status-dashboard.md",
+      "artifactType": "stable-snapshot",
+      "producedDate": null,
+      "contentHash": "sha256:d5fdc8376561df5c17d832e207071e8266158530bb0a7171614c52b6b99efa37",
+      "sizeBytes": 2907,
+      "fileModifiedAt": "2026-08-02T06:32:12.322987+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "demand-intelligence",
+        "dependsOnEmployees": [],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_7e2fd0706c81cd8c",
+      "employee": "demand-intelligence",
+      "path": "output/demand-intelligence/top-organisations-this-week.json",
+      "artifactType": "stable-snapshot",
+      "producedDate": null,
+      "contentHash": "sha256:2e2dfe40a9a636ca487a89a6b1999c316f16b2d160baa447c28134c34d86717a",
+      "sizeBytes": 897,
+      "fileModifiedAt": "2026-08-02T06:32:11.994372+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "demand-intelligence",
+        "dependsOnEmployees": [],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_f7ffc495ce9c52ce",
+      "employee": "executive-dashboard",
+      "path": "output/executive-dashboard/.gitkeep",
+      "artifactType": "other",
+      "producedDate": null,
+      "contentHash": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sizeBytes": 0,
+      "fileModifiedAt": "2026-08-01T14:22:40.319714+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "executive-dashboard",
+        "dependsOnEmployees": [],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_24696d9b277615a3",
+      "employee": "executive-dashboard",
+      "path": "output/executive-dashboard/2026-07-24-executive-dashboard.md",
+      "artifactType": "daily-report",
+      "producedDate": "2026-07-24",
+      "contentHash": "sha256:a3a828cb3c02de0424e50afd59018fe66f42b5d165ca41cc558a5f11c80fef80",
+      "sizeBytes": 1448,
+      "fileModifiedAt": "2026-08-01T14:22:40.320122+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "executive-dashboard",
+        "dependsOnEmployees": [],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_ca464be1fc1765a1",
+      "employee": "executive-dashboard",
+      "path": "output/executive-dashboard/2026-07-25-executive-dashboard.html",
+      "artifactType": "daily-report",
+      "producedDate": "2026-07-25",
+      "contentHash": "sha256:63dbdca36ec184e60510a598571720217050c7016831c136bc6bfc6d8c379063",
+      "sizeBytes": 3105,
+      "fileModifiedAt": "2026-08-01T14:22:40.320122+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "executive-dashboard",
+        "dependsOnEmployees": [],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_476adc85c97a3d29",
+      "employee": "executive-dashboard",
+      "path": "output/executive-dashboard/2026-07-25-executive-dashboard.md",
+      "artifactType": "daily-report",
+      "producedDate": "2026-07-25",
+      "contentHash": "sha256:8ee53d34116895c55680834a4507efd0134ed072bafa325321d1ad410356cf82",
+      "sizeBytes": 1453,
+      "fileModifiedAt": "2026-08-01T14:22:40.320122+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "executive-dashboard",
+        "dependsOnEmployees": [],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_cdd3ebc8bc9f6ec1",
+      "employee": "executive-dashboard",
+      "path": "output/executive-dashboard/2026-07-26-executive-dashboard.html",
+      "artifactType": "daily-report",
+      "producedDate": "2026-07-26",
+      "contentHash": "sha256:c897159db125cd45ce7f761c1df0a85b5e34f0ba1a5b11efeac23500340c733f",
+      "sizeBytes": 3105,
+      "fileModifiedAt": "2026-08-01T14:22:40.320122+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "executive-dashboard",
+        "dependsOnEmployees": [],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_3863850e3b324a0c",
+      "employee": "executive-dashboard",
+      "path": "output/executive-dashboard/2026-07-26-executive-dashboard.md",
+      "artifactType": "daily-report",
+      "producedDate": "2026-07-26",
+      "contentHash": "sha256:ed4fc7e8f2105b4f403261a1f2dcf94324f70592eef84a55afc79bf31857f504",
+      "sizeBytes": 1453,
+      "fileModifiedAt": "2026-08-01T14:22:40.320122+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "executive-dashboard",
+        "dependsOnEmployees": [],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_9c6f8df67e921296",
+      "employee": "executive-dashboard",
+      "path": "output/executive-dashboard/2026-07-27-executive-dashboard.html",
+      "artifactType": "daily-report",
+      "producedDate": "2026-07-27",
+      "contentHash": "sha256:3f9b95b1f1563a6bd1fd520446da88f66f2e31927264f11ccda9a2a8c7207481",
+      "sizeBytes": 3105,
+      "fileModifiedAt": "2026-08-01T14:22:40.320122+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "executive-dashboard",
+        "dependsOnEmployees": [],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_c8e74b24b6ccaefe",
+      "employee": "executive-dashboard",
+      "path": "output/executive-dashboard/2026-07-27-executive-dashboard.md",
+      "artifactType": "daily-report",
+      "producedDate": "2026-07-27",
+      "contentHash": "sha256:016cafa9fd3a572b11d14d50e670da39d815206f90b737137b0d42fa56d961c8",
+      "sizeBytes": 1453,
+      "fileModifiedAt": "2026-08-01T14:22:40.320122+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "executive-dashboard",
+        "dependsOnEmployees": [],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_a5553b3bdf64ae43",
+      "employee": "executive-dashboard",
+      "path": "output/executive-dashboard/2026-07-28-executive-dashboard.html",
+      "artifactType": "daily-report",
+      "producedDate": "2026-07-28",
+      "contentHash": "sha256:2282a2e03d7cd75333a745009117492a155b682abbff872b11fc780b9b16a371",
+      "sizeBytes": 3105,
+      "fileModifiedAt": "2026-08-01T14:22:40.320122+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "executive-dashboard",
+        "dependsOnEmployees": [],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_b79e96dbda791889",
+      "employee": "executive-dashboard",
+      "path": "output/executive-dashboard/2026-07-28-executive-dashboard.md",
+      "artifactType": "daily-report",
+      "producedDate": "2026-07-28",
+      "contentHash": "sha256:9cc6f1e46b87d929c45f86654412115c4b3ed6ad1fe0f4f992c28b150a9cdbe9",
+      "sizeBytes": 1453,
+      "fileModifiedAt": "2026-08-01T14:22:40.320122+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "executive-dashboard",
+        "dependsOnEmployees": [],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_c4cfecc00fc5e743",
+      "employee": "executive-dashboard",
+      "path": "output/executive-dashboard/2026-07-29-executive-dashboard.html",
+      "artifactType": "daily-report",
+      "producedDate": "2026-07-29",
+      "contentHash": "sha256:5cdb6b58523f71d0026837386d339f92c94fea85a0dde3272ed011e916c264a2",
+      "sizeBytes": 3105,
+      "fileModifiedAt": "2026-08-01T14:22:40.320122+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "executive-dashboard",
+        "dependsOnEmployees": [],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_f644360d2bea8510",
+      "employee": "executive-dashboard",
+      "path": "output/executive-dashboard/2026-07-29-executive-dashboard.md",
+      "artifactType": "daily-report",
+      "producedDate": "2026-07-29",
+      "contentHash": "sha256:ce26389d98cb1be52cbcc29f47abc37df1f85b66846ca9e8bc1cb9b89c106f90",
+      "sizeBytes": 1453,
+      "fileModifiedAt": "2026-08-01T14:22:40.320122+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "executive-dashboard",
+        "dependsOnEmployees": [],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_f6d8bf878b9bbfcc",
+      "employee": "executive-dashboard",
+      "path": "output/executive-dashboard/2026-07-30-executive-dashboard.html",
+      "artifactType": "daily-report",
+      "producedDate": "2026-07-30",
+      "contentHash": "sha256:ac9c4e31c79a4667116179fc754cfbdd95db53ffd34e045f0ef4ab3e69515249",
+      "sizeBytes": 3105,
+      "fileModifiedAt": "2026-08-01T14:22:40.320122+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "executive-dashboard",
+        "dependsOnEmployees": [],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_eb62459a525e4414",
+      "employee": "executive-dashboard",
+      "path": "output/executive-dashboard/2026-07-30-executive-dashboard.md",
+      "artifactType": "daily-report",
+      "producedDate": "2026-07-30",
+      "contentHash": "sha256:421f3bed8ed56bf736792116da43a4b0fec71ba5532aaa5a32f8672c2dc1771b",
+      "sizeBytes": 1453,
+      "fileModifiedAt": "2026-08-01T14:22:40.320122+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "executive-dashboard",
+        "dependsOnEmployees": [],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_ca8379d22780e16b",
+      "employee": "executive-dashboard",
+      "path": "output/executive-dashboard/2026-07-31-executive-dashboard.html",
+      "artifactType": "daily-report",
+      "producedDate": "2026-07-31",
+      "contentHash": "sha256:b8d024dad234d13d99aaa94a861096ee3bab8a49bff2154155383b4996999ca7",
+      "sizeBytes": 3105,
+      "fileModifiedAt": "2026-08-01T14:22:40.320122+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "executive-dashboard",
+        "dependsOnEmployees": [],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_5f13ca9b7430a939",
+      "employee": "executive-dashboard",
+      "path": "output/executive-dashboard/2026-07-31-executive-dashboard.md",
+      "artifactType": "daily-report",
+      "producedDate": "2026-07-31",
+      "contentHash": "sha256:d064320fe95308a5b0385247c04b4caa4486110e1ac69a6f69a89037de89f5a1",
+      "sizeBytes": 1453,
+      "fileModifiedAt": "2026-08-01T14:22:40.320122+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "executive-dashboard",
+        "dependsOnEmployees": [],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_43ed850e3366a287",
+      "employee": "executive-dashboard",
+      "path": "output/executive-dashboard/2026-08-01-executive-dashboard.html",
+      "artifactType": "daily-report",
+      "producedDate": "2026-08-01",
+      "contentHash": "sha256:73eae1b1a84735c328427b660434896292bc8637848668f6225d12160623ce5d",
+      "sizeBytes": 3105,
+      "fileModifiedAt": "2026-08-01T14:22:40.320122+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "executive-dashboard",
+        "dependsOnEmployees": [],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_552ddec8617e8305",
+      "employee": "executive-dashboard",
+      "path": "output/executive-dashboard/2026-08-01-executive-dashboard.md",
+      "artifactType": "daily-report",
+      "producedDate": "2026-08-01",
+      "contentHash": "sha256:79c143ce60dcf1e5a25693dd8396d40e4b2e8fac2e7c482a7890ca40b74c0989",
+      "sizeBytes": 1453,
+      "fileModifiedAt": "2026-08-01T14:22:40.320122+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "executive-dashboard",
+        "dependsOnEmployees": [],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_17c9718b1fefa4fa",
+      "employee": "executive-dashboard",
+      "path": "output/executive-dashboard/2026-08-02-executive-dashboard.html",
+      "artifactType": "daily-report",
+      "producedDate": "2026-08-02",
+      "contentHash": "sha256:91dac3a5f1e388ba7a8c55c132c8b21d5e55c6385a9eab65d9abe4f49d858af8",
+      "sizeBytes": 3105,
+      "fileModifiedAt": "2026-08-02T06:32:13.161734+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "executive-dashboard",
+        "dependsOnEmployees": [],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_b3ed02717810caad",
+      "employee": "executive-dashboard",
+      "path": "output/executive-dashboard/2026-08-02-executive-dashboard.md",
+      "artifactType": "daily-report",
+      "producedDate": "2026-08-02",
+      "contentHash": "sha256:5aec2d5e2db8765da012d6c6c58149625332f57b139c7d8c0baebfce2b70d6a2",
+      "sizeBytes": 1453,
+      "fileModifiedAt": "2026-08-02T06:32:13.161616+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "executive-dashboard",
+        "dependsOnEmployees": [],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_39be297780350b78",
+      "employee": "executive-dashboard",
+      "path": "output/executive-dashboard/executive-dashboard.html",
+      "artifactType": "stable-snapshot",
+      "producedDate": null,
+      "contentHash": "sha256:91dac3a5f1e388ba7a8c55c132c8b21d5e55c6385a9eab65d9abe4f49d858af8",
+      "sizeBytes": 3105,
+      "fileModifiedAt": "2026-08-02T06:32:13.161470+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "executive-dashboard",
+        "dependsOnEmployees": [],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_1db7db6001e48462",
+      "employee": "executive-dashboard",
+      "path": "output/executive-dashboard/executive-dashboard.md",
+      "artifactType": "stable-snapshot",
+      "producedDate": null,
+      "contentHash": "sha256:5aec2d5e2db8765da012d6c6c58149625332f57b139c7d8c0baebfce2b70d6a2",
+      "sizeBytes": 1453,
+      "fileModifiedAt": "2026-08-02T06:32:13.161324+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "executive-dashboard",
+        "dependsOnEmployees": [],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_8b6c16f56e825540",
+      "employee": "executive-memory",
+      "path": "output/executive-memory/2026-07-30-executive-memory-report.md",
+      "artifactType": "daily-report",
+      "producedDate": "2026-07-30",
+      "contentHash": "sha256:dbfea623bcd9e5d3fa24ac73499eaebf823ec0fba19f5756ff0645697217f999",
+      "sizeBytes": 762,
+      "fileModifiedAt": "2026-08-01T14:22:40.320122+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "executive-memory",
+        "dependsOnEmployees": [
+          "delivery-intelligence",
+          "account-intelligence"
+        ],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_46ffbe716876cdf2",
+      "employee": "executive-memory",
+      "path": "output/executive-memory/2026-07-31-executive-memory-report.md",
+      "artifactType": "daily-report",
+      "producedDate": "2026-07-31",
+      "contentHash": "sha256:59427898251080d36985f219a2f5101c9295397db91d4ff8ee316d02f26727ee",
+      "sizeBytes": 762,
+      "fileModifiedAt": "2026-08-01T14:22:40.320728+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "executive-memory",
+        "dependsOnEmployees": [
+          "delivery-intelligence",
+          "account-intelligence"
+        ],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_a13ffd8f85647388",
+      "employee": "executive-memory",
+      "path": "output/executive-memory/2026-08-01-executive-memory-report.md",
+      "artifactType": "daily-report",
+      "producedDate": "2026-08-01",
+      "contentHash": "sha256:ca35dfa5b129c60f9eaeab58bcf7e1056ebd179b9a561c2308ba120aed6d3d4e",
+      "sizeBytes": 762,
+      "fileModifiedAt": "2026-08-01T14:22:40.320728+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "executive-memory",
+        "dependsOnEmployees": [
+          "delivery-intelligence",
+          "account-intelligence"
+        ],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_306a084a478a9f4f",
+      "employee": "executive-memory",
+      "path": "output/executive-memory/2026-08-02-executive-memory-report.md",
+      "artifactType": "daily-report",
+      "producedDate": "2026-08-02",
+      "contentHash": "sha256:4d9e7fc14d4ac4a6de477dcd773b48d547606485c097bbae87098692d0227a7e",
+      "sizeBytes": 762,
+      "fileModifiedAt": "2026-08-02T06:32:13.009136+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "executive-memory",
+        "dependsOnEmployees": [
+          "delivery-intelligence",
+          "account-intelligence"
+        ],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_e1e7de03b67fde28",
+      "employee": "executive-memory",
+      "path": "output/executive-memory/executive-memory-feed.json",
+      "artifactType": "feed",
+      "producedDate": null,
+      "contentHash": "sha256:4a37f36731362fe00a2b767ffa6d6b76e3e4e45726d7fe556467f82d9d3ad906",
+      "sizeBytes": 646,
+      "fileModifiedAt": "2026-08-02T06:32:13.008960+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "executive-memory",
+        "dependsOnEmployees": [
+          "delivery-intelligence",
+          "account-intelligence"
+        ],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_80fed70286d82306",
+      "employee": "executive-memory",
+      "path": "output/executive-memory/executive-memory-report.md",
+      "artifactType": "stable-snapshot",
+      "producedDate": null,
+      "contentHash": "sha256:4d9e7fc14d4ac4a6de477dcd773b48d547606485c097bbae87098692d0227a7e",
+      "sizeBytes": 762,
+      "fileModifiedAt": "2026-08-02T06:32:13.009263+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "executive-memory",
+        "dependsOnEmployees": [
+          "delivery-intelligence",
+          "account-intelligence"
+        ],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_3448e54560ec582c",
+      "employee": "market-positioning-intelligence",
+      "path": "output/market-positioning-intelligence/2026-07-30-market-positioning-report.md",
+      "artifactType": "daily-report",
+      "producedDate": "2026-07-30",
+      "contentHash": "sha256:3816a04851635471450ab01810a55f862d1648b6850d796337dd5df240101276",
+      "sizeBytes": 1898,
+      "fileModifiedAt": "2026-08-01T14:22:40.320728+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "market-positioning-intelligence",
+        "dependsOnEmployees": [
+          "service-mapping",
+          "market-intelligence",
+          "revenue-hunter"
+        ],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_5d1da4afdffdca0e",
+      "employee": "market-positioning-intelligence",
+      "path": "output/market-positioning-intelligence/2026-07-31-market-positioning-report.md",
+      "artifactType": "daily-report",
+      "producedDate": "2026-07-31",
+      "contentHash": "sha256:f4481ac163f6eaaa2744f44be4bf86ae520661415b6b3cf0edfe87041700ce71",
+      "sizeBytes": 1898,
+      "fileModifiedAt": "2026-08-01T14:22:40.320844+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "market-positioning-intelligence",
+        "dependsOnEmployees": [
+          "service-mapping",
+          "market-intelligence",
+          "revenue-hunter"
+        ],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_112989979caa5e87",
+      "employee": "market-positioning-intelligence",
+      "path": "output/market-positioning-intelligence/2026-08-01-market-positioning-report.md",
+      "artifactType": "daily-report",
+      "producedDate": "2026-08-01",
+      "contentHash": "sha256:f68430e26b68061406c457e0490dc7cc20a4d9948626ab7da2a5943bc9eb43e9",
+      "sizeBytes": 1898,
+      "fileModifiedAt": "2026-08-01T14:22:40.320844+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "market-positioning-intelligence",
+        "dependsOnEmployees": [
+          "service-mapping",
+          "market-intelligence",
+          "revenue-hunter"
+        ],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_bf7a853b0fbd0af5",
+      "employee": "market-positioning-intelligence",
+      "path": "output/market-positioning-intelligence/2026-08-02-market-positioning-report.md",
+      "artifactType": "daily-report",
+      "producedDate": "2026-08-02",
+      "contentHash": "sha256:53908506f26921fd12c00fabe3f0bb816a16d52611451035aada960c928aef62",
+      "sizeBytes": 1898,
+      "fileModifiedAt": "2026-08-02T06:32:13.037208+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "market-positioning-intelligence",
+        "dependsOnEmployees": [
+          "service-mapping",
+          "market-intelligence",
+          "revenue-hunter"
+        ],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_0e397438035292a3",
+      "employee": "market-positioning-intelligence",
+      "path": "output/market-positioning-intelligence/market-positioning-feed.json",
+      "artifactType": "feed",
+      "producedDate": null,
+      "contentHash": "sha256:a90a490d43568dc33dbd783a4a40e93c25ea699e375d0309e71238497610d441",
+      "sizeBytes": 1684,
+      "fileModifiedAt": "2026-08-02T06:32:13.036994+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "market-positioning-intelligence",
+        "dependsOnEmployees": [
+          "service-mapping",
+          "market-intelligence",
+          "revenue-hunter"
+        ],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_f4880daa2c4be462",
+      "employee": "market-positioning-intelligence",
+      "path": "output/market-positioning-intelligence/market-positioning-report.md",
+      "artifactType": "stable-snapshot",
+      "producedDate": null,
+      "contentHash": "sha256:53908506f26921fd12c00fabe3f0bb816a16d52611451035aada960c928aef62",
+      "sizeBytes": 1898,
+      "fileModifiedAt": "2026-08-02T06:32:13.037368+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "market-positioning-intelligence",
+        "dependsOnEmployees": [
+          "service-mapping",
+          "market-intelligence",
+          "revenue-hunter"
+        ],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_5722cf752ab66b8c",
+      "employee": null,
+      "path": "output/orchestrator/logs/.gitkeep",
+      "artifactType": "orchestrator-log",
+      "producedDate": null,
+      "contentHash": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sizeBytes": 0,
+      "fileModifiedAt": "2026-08-01T14:22:40.320972+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": null,
+        "dependsOnEmployees": [],
+        "note": "Platform artifact (orchestrator or daily-briefs archive) — not owned by a single employee."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_30e313ae9568a524",
+      "employee": null,
+      "path": "output/orchestrator/logs/2026-07-25-121113-orchestrator.log",
+      "artifactType": "orchestrator-log",
+      "producedDate": "2026-07-25",
+      "contentHash": "sha256:5e445299a0547ffe534db6a302e3367b521a2651b81f4dbea151ec4c285717a7",
+      "sizeBytes": 4503,
+      "fileModifiedAt": "2026-08-01T14:22:40.320993+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": null,
+        "dependsOnEmployees": [],
+        "note": "Platform artifact (orchestrator or daily-briefs archive) — not owned by a single employee."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_0c1f4b69da965712",
+      "employee": null,
+      "path": "output/orchestrator/logs/2026-07-25-181902-orchestrator.log",
+      "artifactType": "orchestrator-log",
+      "producedDate": "2026-07-25",
+      "contentHash": "sha256:9bd38acf42485f76daf2c308a58654b6968b08911d1faa54e04b969bc2aa1ff0",
+      "sizeBytes": 5507,
+      "fileModifiedAt": "2026-08-01T14:22:40.320993+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": null,
+        "dependsOnEmployees": [],
+        "note": "Platform artifact (orchestrator or daily-briefs archive) — not owned by a single employee."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_84eab455b20a7d1c",
+      "employee": null,
+      "path": "output/orchestrator/logs/2026-07-25-184519-orchestrator.log",
+      "artifactType": "orchestrator-log",
+      "producedDate": "2026-07-25",
+      "contentHash": "sha256:31e98a82b9d79071e95f99ec539025dba1e3a77a81844653199c661f1d87385f",
+      "sizeBytes": 5507,
+      "fileModifiedAt": "2026-08-01T14:22:40.320993+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": null,
+        "dependsOnEmployees": [],
+        "note": "Platform artifact (orchestrator or daily-briefs archive) — not owned by a single employee."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_5b833941226b0012",
+      "employee": null,
+      "path": "output/orchestrator/logs/2026-07-26-040428-orchestrator.log",
+      "artifactType": "orchestrator-log",
+      "producedDate": "2026-07-26",
+      "contentHash": "sha256:c089742c8845c5f8789da03a912063b13a3108e7b057f55ea782c38d5c9f04e3",
+      "sizeBytes": 8142,
+      "fileModifiedAt": "2026-08-01T14:22:40.320993+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": null,
+        "dependsOnEmployees": [],
+        "note": "Platform artifact (orchestrator or daily-briefs archive) — not owned by a single employee."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_c7d482a0b21522bf",
+      "employee": null,
+      "path": "output/orchestrator/logs/2026-07-27-041134-orchestrator.log",
+      "artifactType": "orchestrator-log",
+      "producedDate": "2026-07-27",
+      "contentHash": "sha256:501ddf4b9972843843d9f44fcd1f300369543901fb86e65f5c6713e67e7705e8",
+      "sizeBytes": 6331,
+      "fileModifiedAt": "2026-08-01T14:22:40.320993+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": null,
+        "dependsOnEmployees": [],
+        "note": "Platform artifact (orchestrator or daily-briefs archive) — not owned by a single employee."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_226cbbfa67f0cb6c",
+      "employee": null,
+      "path": "output/orchestrator/logs/2026-07-28-034500-orchestrator.log",
+      "artifactType": "orchestrator-log",
+      "producedDate": "2026-07-28",
+      "contentHash": "sha256:b6e1d27483ee16d95a4bf55ae9dbcde42718a8e118572fa9bab8a7e13b779e05",
+      "sizeBytes": 7951,
+      "fileModifiedAt": "2026-08-01T14:22:40.320993+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": null,
+        "dependsOnEmployees": [],
+        "note": "Platform artifact (orchestrator or daily-briefs archive) — not owned by a single employee."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_d7f02e69830183b5",
+      "employee": null,
+      "path": "output/orchestrator/logs/2026-07-29-034750-orchestrator.log",
+      "artifactType": "orchestrator-log",
+      "producedDate": "2026-07-29",
+      "contentHash": "sha256:62b82d9313bd8fad01459005ce66f1c3aa2056dff55201c330ab12af9a53e225",
+      "sizeBytes": 9225,
+      "fileModifiedAt": "2026-08-01T14:22:40.320993+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": null,
+        "dependsOnEmployees": [],
+        "note": "Platform artifact (orchestrator or daily-briefs archive) — not owned by a single employee."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_1b4a0dce63a160a8",
+      "employee": null,
+      "path": "output/orchestrator/logs/2026-07-30-033933-orchestrator.log",
+      "artifactType": "orchestrator-log",
+      "producedDate": "2026-07-30",
+      "contentHash": "sha256:8b9b630cccfc951ac4be4d9a6c7282fe2732388c73b3c3bb22ce2b4f6b2ab515",
+      "sizeBytes": 10403,
+      "fileModifiedAt": "2026-08-01T14:22:40.320993+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": null,
+        "dependsOnEmployees": [],
+        "note": "Platform artifact (orchestrator or daily-briefs archive) — not owned by a single employee."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_d6b853a1e76365b0",
+      "employee": null,
+      "path": "output/orchestrator/logs/2026-07-31-035834-orchestrator.log",
+      "artifactType": "orchestrator-log",
+      "producedDate": "2026-07-31",
+      "contentHash": "sha256:58c5e16dd71ec41e6e911fd63ab96e139d03d9d73f0587573504f131b13e7cbd",
+      "sizeBytes": 11714,
+      "fileModifiedAt": "2026-08-01T14:22:40.320993+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": null,
+        "dependsOnEmployees": [],
+        "note": "Platform artifact (orchestrator or daily-briefs archive) — not owned by a single employee."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_2ca29cc99eb44a8f",
+      "employee": null,
+      "path": "output/orchestrator/logs/2026-08-01-035833-orchestrator.log",
+      "artifactType": "orchestrator-log",
+      "producedDate": "2026-08-01",
+      "contentHash": "sha256:aecf42d26a4b379d33b7e93bc339a3716fc6f17391f4b36f3bf8c523f9508a2c",
+      "sizeBytes": 11081,
+      "fileModifiedAt": "2026-08-01T14:22:40.320993+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": null,
+        "dependsOnEmployees": [],
+        "note": "Platform artifact (orchestrator or daily-briefs archive) — not owned by a single employee."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_49f066a58b9647b0",
+      "employee": null,
+      "path": "output/orchestrator/logs/2026-08-01-141450-orchestrator.log",
+      "artifactType": "orchestrator-log",
+      "producedDate": "2026-08-01",
+      "contentHash": "sha256:e1131088f3ea94223ca500eab74d8232d1936dd7de757faf7eee5881c6259803",
+      "sizeBytes": 9379,
+      "fileModifiedAt": "2026-08-01T14:22:40.320993+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": null,
+        "dependsOnEmployees": [],
+        "note": "Platform artifact (orchestrator or daily-briefs archive) — not owned by a single employee."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_b6a55e14be7f4208",
+      "employee": null,
+      "path": "output/orchestrator/logs/2026-08-02-040232-orchestrator.log",
+      "artifactType": "orchestrator-log",
+      "producedDate": "2026-08-02",
+      "contentHash": "sha256:cfa7cdd4f516cb12f4634408a7f29d7616fa8dee9ba89336fefeb8c06b0a608e",
+      "sizeBytes": 11358,
+      "fileModifiedAt": "2026-08-02T04:49:25.387656+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": null,
+        "dependsOnEmployees": [],
+        "note": "Platform artifact (orchestrator or daily-briefs archive) — not owned by a single employee."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_ecf723fb9be96113",
+      "employee": null,
+      "path": "output/orchestrator/logs/2026-08-02-063208-orchestrator.log",
+      "artifactType": "orchestrator-log",
+      "producedDate": "2026-08-02",
+      "contentHash": "sha256:0834fd5bf6597bc2995659a7bf4231d589f39041dd453d3ef5eafc3e4731e55d",
+      "sizeBytes": 9521,
+      "fileModifiedAt": "2026-08-02T06:32:13.163003+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": null,
+        "dependsOnEmployees": [],
+        "note": "Platform artifact (orchestrator or daily-briefs archive) — not owned by a single employee."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_1e47d1e5c09998d1",
+      "employee": null,
+      "path": "output/orchestrator/reports/.gitkeep",
+      "artifactType": "orchestrator-report",
+      "producedDate": null,
+      "contentHash": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sizeBytes": 0,
+      "fileModifiedAt": "2026-08-01T14:22:40.320993+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": null,
+        "dependsOnEmployees": [],
+        "note": "Platform artifact (orchestrator or daily-briefs archive) — not owned by a single employee."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_a5e2ee8da225ee27",
+      "employee": null,
+      "path": "output/orchestrator/reports/2026-07-25-daily-execution-report.md",
+      "artifactType": "orchestrator-report",
+      "producedDate": "2026-07-25",
+      "contentHash": "sha256:3e6c3fe0ae69298b471d19a37b1b0900918f3dfd4d26ce3b893951783eaf67db",
+      "sizeBytes": 2380,
+      "fileModifiedAt": "2026-08-01T14:22:40.321767+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": null,
+        "dependsOnEmployees": [],
+        "note": "Platform artifact (orchestrator or daily-briefs archive) — not owned by a single employee."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_a47e04d3978ac0eb",
+      "employee": null,
+      "path": "output/orchestrator/reports/2026-07-26-daily-execution-report.md",
+      "artifactType": "orchestrator-report",
+      "producedDate": "2026-07-26",
+      "contentHash": "sha256:e7998d938e28951fec94e01ff08cdb54e478865f8b40b42ef55ed22131fc1574",
+      "sizeBytes": 2303,
+      "fileModifiedAt": "2026-08-01T14:22:40.321767+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": null,
+        "dependsOnEmployees": [],
+        "note": "Platform artifact (orchestrator or daily-briefs archive) — not owned by a single employee."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_a4d847087a1f45e4",
+      "employee": null,
+      "path": "output/orchestrator/reports/2026-07-27-daily-execution-report.md",
+      "artifactType": "orchestrator-report",
+      "producedDate": "2026-07-27",
+      "contentHash": "sha256:417c9f595251462a2ff9c9c3a55f1c7a209f22fe2c229b959dc8694bf0f4edde",
+      "sizeBytes": 2303,
+      "fileModifiedAt": "2026-08-01T14:22:40.321767+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": null,
+        "dependsOnEmployees": [],
+        "note": "Platform artifact (orchestrator or daily-briefs archive) — not owned by a single employee."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_39dd2c58987752ea",
+      "employee": null,
+      "path": "output/orchestrator/reports/2026-07-28-daily-execution-report.md",
+      "artifactType": "orchestrator-report",
+      "producedDate": "2026-07-28",
+      "contentHash": "sha256:3d64b6f58a6e3651ad1fd3da6378e4c7b73fc26f9619951c77d489f787a3128b",
+      "sizeBytes": 2634,
+      "fileModifiedAt": "2026-08-01T14:22:40.321767+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": null,
+        "dependsOnEmployees": [],
+        "note": "Platform artifact (orchestrator or daily-briefs archive) — not owned by a single employee."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_6f8076e7f0f363a4",
+      "employee": null,
+      "path": "output/orchestrator/reports/2026-07-29-daily-execution-report.md",
+      "artifactType": "orchestrator-report",
+      "producedDate": "2026-07-29",
+      "contentHash": "sha256:60b2e8500ead07aca90aa01222d0c94290b8b38d09fbad6eecc8768e7631c1f7",
+      "sizeBytes": 2634,
+      "fileModifiedAt": "2026-08-01T14:22:40.321767+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": null,
+        "dependsOnEmployees": [],
+        "note": "Platform artifact (orchestrator or daily-briefs archive) — not owned by a single employee."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_6fd2dd2887eacee0",
+      "employee": null,
+      "path": "output/orchestrator/reports/2026-07-30-daily-execution-report.md",
+      "artifactType": "orchestrator-report",
+      "producedDate": "2026-07-30",
+      "contentHash": "sha256:2e669519265c0723ee24cdb7e1f7be2bdf378705a67669d5214b03565248baad",
+      "sizeBytes": 3510,
+      "fileModifiedAt": "2026-08-01T14:22:40.321767+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": null,
+        "dependsOnEmployees": [],
+        "note": "Platform artifact (orchestrator or daily-briefs archive) — not owned by a single employee."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_6470cac7093e9baf",
+      "employee": null,
+      "path": "output/orchestrator/reports/2026-07-31-daily-execution-report.md",
+      "artifactType": "orchestrator-report",
+      "producedDate": "2026-07-31",
+      "contentHash": "sha256:20e1097e94420a019a94554987d4f52ef3b97d34d9c1fd905299b8dbeafb584d",
+      "sizeBytes": 3509,
+      "fileModifiedAt": "2026-08-01T14:22:40.321767+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": null,
+        "dependsOnEmployees": [],
+        "note": "Platform artifact (orchestrator or daily-briefs archive) — not owned by a single employee."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_25822ab4da6ea6c5",
+      "employee": null,
+      "path": "output/orchestrator/reports/2026-08-01-daily-execution-report.md",
+      "artifactType": "orchestrator-report",
+      "producedDate": "2026-08-01",
+      "contentHash": "sha256:3fb72c90471495795ebd4ce7c8e7faa6150877c7241f69bffeeb11061262cab7",
+      "sizeBytes": 3510,
+      "fileModifiedAt": "2026-08-01T14:22:40.321767+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": null,
+        "dependsOnEmployees": [],
+        "note": "Platform artifact (orchestrator or daily-briefs archive) — not owned by a single employee."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_c69fe7f503c01181",
+      "employee": null,
+      "path": "output/orchestrator/reports/2026-08-02-daily-execution-report.md",
+      "artifactType": "orchestrator-report",
+      "producedDate": "2026-08-02",
+      "contentHash": "sha256:c17289a9c58e31b0d98718ad65c4fade84978745cf56cec62e566ff527822300",
+      "sizeBytes": 3607,
+      "fileModifiedAt": "2026-08-02T04:49:25.387656+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": null,
+        "dependsOnEmployees": [],
+        "note": "Platform artifact (orchestrator or daily-briefs archive) — not owned by a single employee."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_cf72e9b43f05a86d",
+      "employee": null,
+      "path": "output/orchestrator/status.json",
+      "artifactType": "orchestrator-status",
+      "producedDate": null,
+      "contentHash": "sha256:99c3030fcfe2d31dd4c2a0b2ed5615591a4e4fdb1d4162da7e9381f66d73cb07",
+      "sizeBytes": 7405,
+      "fileModifiedAt": "2026-08-02T04:49:25.387656+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": null,
+        "dependsOnEmployees": [],
+        "note": "Platform artifact (orchestrator or daily-briefs archive) — not owned by a single employee."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_6e09a8d4d420a276",
+      "employee": "product-manager",
+      "path": "output/product-manager/.gitkeep",
+      "artifactType": "other",
+      "producedDate": null,
+      "contentHash": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sizeBytes": 0,
+      "fileModifiedAt": "2026-08-01T14:22:40.321767+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "product-manager",
+        "dependsOnEmployees": [
+          "market-intelligence"
+        ],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_b32b6bafbef9e7cf",
+      "employee": "revenue-hunter",
+      "path": "output/revenue-hunter/.gitkeep",
+      "artifactType": "other",
+      "producedDate": null,
+      "contentHash": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sizeBytes": 0,
+      "fileModifiedAt": "2026-08-01T14:22:40.321767+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "revenue-hunter",
+        "dependsOnEmployees": [
+          "demand-intelligence"
+        ],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_745008d2f14af95e",
+      "employee": "revenue-hunter",
+      "path": "output/revenue-hunter/2026-07-25-revenue-dashboard.md",
+      "artifactType": "daily-report",
+      "producedDate": "2026-07-25",
+      "contentHash": "sha256:9e5c4b9e07da741c38012c551c1edabfcf00f6a98b4f3fd4d163086a90b04403",
+      "sizeBytes": 1245,
+      "fileModifiedAt": "2026-08-01T14:22:40.322158+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "revenue-hunter",
+        "dependsOnEmployees": [
+          "demand-intelligence"
+        ],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_e26ed8f022f7dba9",
+      "employee": "revenue-hunter",
+      "path": "output/revenue-hunter/2026-07-25-revenue-forecast.md",
+      "artifactType": "daily-report",
+      "producedDate": "2026-07-25",
+      "contentHash": "sha256:7becb19b8dcefbc7b9f77272799865dcb30b165aac39fdb052cddb6ce40ae2f6",
+      "sizeBytes": 727,
+      "fileModifiedAt": "2026-08-01T14:22:40.322158+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "revenue-hunter",
+        "dependsOnEmployees": [
+          "demand-intelligence"
+        ],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_08f8e52f7e740b20",
+      "employee": "revenue-hunter",
+      "path": "output/revenue-hunter/2026-07-26-revenue-dashboard.md",
+      "artifactType": "daily-report",
+      "producedDate": "2026-07-26",
+      "contentHash": "sha256:7d33f932371caf41ae598d0734c1b6e00bd639a1335acb7e05302bdb801f9a33",
+      "sizeBytes": 1245,
+      "fileModifiedAt": "2026-08-01T14:22:40.322158+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "revenue-hunter",
+        "dependsOnEmployees": [
+          "demand-intelligence"
+        ],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_7ad4522b1e9c4ba1",
+      "employee": "revenue-hunter",
+      "path": "output/revenue-hunter/2026-07-26-revenue-forecast.md",
+      "artifactType": "daily-report",
+      "producedDate": "2026-07-26",
+      "contentHash": "sha256:35aa25a941338ae79f09330ef5cf79de5ecf86c215fc771e3457a6db49c9fe99",
+      "sizeBytes": 727,
+      "fileModifiedAt": "2026-08-01T14:22:40.322158+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "revenue-hunter",
+        "dependsOnEmployees": [
+          "demand-intelligence"
+        ],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_9040c59ee7a362b1",
+      "employee": "revenue-hunter",
+      "path": "output/revenue-hunter/2026-07-27-revenue-dashboard.md",
+      "artifactType": "daily-report",
+      "producedDate": "2026-07-27",
+      "contentHash": "sha256:92a7a29bc4cc1c8d1545bc90d125f90273d44265301fa49d5d8293d4aa72b864",
+      "sizeBytes": 1245,
+      "fileModifiedAt": "2026-08-01T14:22:40.322158+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "revenue-hunter",
+        "dependsOnEmployees": [
+          "demand-intelligence"
+        ],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_2a24846868af6835",
+      "employee": "revenue-hunter",
+      "path": "output/revenue-hunter/2026-07-27-revenue-forecast.md",
+      "artifactType": "daily-report",
+      "producedDate": "2026-07-27",
+      "contentHash": "sha256:8be6de8570c9c1c1c309a1a7f6f87296be80b67c95692f2487ba5b3c2826fbce",
+      "sizeBytes": 727,
+      "fileModifiedAt": "2026-08-01T14:22:40.322158+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "revenue-hunter",
+        "dependsOnEmployees": [
+          "demand-intelligence"
+        ],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_f75513e8620b7394",
+      "employee": "revenue-hunter",
+      "path": "output/revenue-hunter/2026-07-28-revenue-dashboard.md",
+      "artifactType": "daily-report",
+      "producedDate": "2026-07-28",
+      "contentHash": "sha256:8022e3daa9dd1eb53ffb8ed00c7d3d65a8de2659ca5630fc831682ae92637292",
+      "sizeBytes": 1245,
+      "fileModifiedAt": "2026-08-01T14:22:40.322158+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "revenue-hunter",
+        "dependsOnEmployees": [
+          "demand-intelligence"
+        ],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_7216f02673c178cd",
+      "employee": "revenue-hunter",
+      "path": "output/revenue-hunter/2026-07-28-revenue-forecast.md",
+      "artifactType": "daily-report",
+      "producedDate": "2026-07-28",
+      "contentHash": "sha256:1d2bc51a59ef3d417046ea638b16e0362a1b39028e16e4d8ce62fd4c93c6f2d5",
+      "sizeBytes": 727,
+      "fileModifiedAt": "2026-08-01T14:22:40.322158+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "revenue-hunter",
+        "dependsOnEmployees": [
+          "demand-intelligence"
+        ],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_d29a1c048fae817b",
+      "employee": "revenue-hunter",
+      "path": "output/revenue-hunter/2026-07-29-revenue-dashboard.md",
+      "artifactType": "daily-report",
+      "producedDate": "2026-07-29",
+      "contentHash": "sha256:a799f887cd96f00c82fd6514e2750860eea3c5dd0c5c90719dfd1b898c1f01ad",
+      "sizeBytes": 1245,
+      "fileModifiedAt": "2026-08-01T14:22:40.322158+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "revenue-hunter",
+        "dependsOnEmployees": [
+          "demand-intelligence"
+        ],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_612c8539825255f2",
+      "employee": "revenue-hunter",
+      "path": "output/revenue-hunter/2026-07-29-revenue-forecast.md",
+      "artifactType": "daily-report",
+      "producedDate": "2026-07-29",
+      "contentHash": "sha256:3a4ccd4d8add096440047169b0bc055995266685db2b981d53d4b6fa50301081",
+      "sizeBytes": 727,
+      "fileModifiedAt": "2026-08-01T14:22:40.322158+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "revenue-hunter",
+        "dependsOnEmployees": [
+          "demand-intelligence"
+        ],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_38a751feeb15c112",
+      "employee": "revenue-hunter",
+      "path": "output/revenue-hunter/2026-07-30-revenue-dashboard.md",
+      "artifactType": "daily-report",
+      "producedDate": "2026-07-30",
+      "contentHash": "sha256:bf541159f84fd08a102dfc9438309a57cb0eb8878a434c1f047fc1ab8ee3cdfc",
+      "sizeBytes": 1245,
+      "fileModifiedAt": "2026-08-01T14:22:40.322158+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "revenue-hunter",
+        "dependsOnEmployees": [
+          "demand-intelligence"
+        ],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_b4a237996685bbb6",
+      "employee": "revenue-hunter",
+      "path": "output/revenue-hunter/2026-07-30-revenue-forecast.md",
+      "artifactType": "daily-report",
+      "producedDate": "2026-07-30",
+      "contentHash": "sha256:7864237461aaccf072ca0a49feb1d78be30bbb661d7c5e85ada2b53fd8ea7f40",
+      "sizeBytes": 727,
+      "fileModifiedAt": "2026-08-01T14:22:40.322158+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "revenue-hunter",
+        "dependsOnEmployees": [
+          "demand-intelligence"
+        ],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_325884886cfd6bb7",
+      "employee": "revenue-hunter",
+      "path": "output/revenue-hunter/2026-07-31-revenue-dashboard.md",
+      "artifactType": "daily-report",
+      "producedDate": "2026-07-31",
+      "contentHash": "sha256:ba948a119e007402830e2c2a2c008d562f1d4e8cdf5e21ca066199726bb7e1f1",
+      "sizeBytes": 1245,
+      "fileModifiedAt": "2026-08-01T14:22:40.322158+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "revenue-hunter",
+        "dependsOnEmployees": [
+          "demand-intelligence"
+        ],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_9ec86b6010206ee6",
+      "employee": "revenue-hunter",
+      "path": "output/revenue-hunter/2026-07-31-revenue-forecast.md",
+      "artifactType": "daily-report",
+      "producedDate": "2026-07-31",
+      "contentHash": "sha256:efbb787c4023aa3ef4590ef443a609e9f4bab6ea29da79a05d5d5700763ba6e9",
+      "sizeBytes": 727,
+      "fileModifiedAt": "2026-08-01T14:22:40.322158+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "revenue-hunter",
+        "dependsOnEmployees": [
+          "demand-intelligence"
+        ],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_5fc8e6c1dd68a6c1",
+      "employee": "revenue-hunter",
+      "path": "output/revenue-hunter/2026-08-01-revenue-dashboard.md",
+      "artifactType": "daily-report",
+      "producedDate": "2026-08-01",
+      "contentHash": "sha256:0a0f3ed70f3b6bc0d1a627166bb0d2daef1d4e52a34aa0e2f342b0b20469217e",
+      "sizeBytes": 1245,
+      "fileModifiedAt": "2026-08-01T14:22:40.322158+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "revenue-hunter",
+        "dependsOnEmployees": [
+          "demand-intelligence"
+        ],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_24d3a01baebadeb3",
+      "employee": "revenue-hunter",
+      "path": "output/revenue-hunter/2026-08-01-revenue-forecast.md",
+      "artifactType": "daily-report",
+      "producedDate": "2026-08-01",
+      "contentHash": "sha256:3412857edbd6468daf7f58ffd2e88b537ef50c4a57205df9bf087c8d8668715c",
+      "sizeBytes": 727,
+      "fileModifiedAt": "2026-08-01T14:22:40.322158+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "revenue-hunter",
+        "dependsOnEmployees": [
+          "demand-intelligence"
+        ],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_b2857c5921a52117",
+      "employee": "revenue-hunter",
+      "path": "output/revenue-hunter/2026-08-02-revenue-dashboard.md",
+      "artifactType": "daily-report",
+      "producedDate": "2026-08-02",
+      "contentHash": "sha256:5effe6d7672b641f211d6dcb2ea5538cd13eeb0f30b9c70aa66de9da7e63aff7",
+      "sizeBytes": 1245,
+      "fileModifiedAt": "2026-08-02T06:32:12.581445+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "revenue-hunter",
+        "dependsOnEmployees": [
+          "demand-intelligence"
+        ],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_c55a175f40bb4cec",
+      "employee": "revenue-hunter",
+      "path": "output/revenue-hunter/2026-08-02-revenue-forecast.md",
+      "artifactType": "daily-report",
+      "producedDate": "2026-08-02",
+      "contentHash": "sha256:fef107b3e8e145b2ca658875d53ba24a49861d3d184d3fd4031d5d239da339e0",
+      "sizeBytes": 727,
+      "fileModifiedAt": "2026-08-02T06:32:12.581719+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "revenue-hunter",
+        "dependsOnEmployees": [
+          "demand-intelligence"
+        ],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_0bb08a5fcf40b272",
+      "employee": "revenue-hunter",
+      "path": "output/revenue-hunter/revenue-dashboard.md",
+      "artifactType": "stable-snapshot",
+      "producedDate": null,
+      "contentHash": "sha256:5effe6d7672b641f211d6dcb2ea5538cd13eeb0f30b9c70aa66de9da7e63aff7",
+      "sizeBytes": 1245,
+      "fileModifiedAt": "2026-08-02T06:32:12.581320+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "revenue-hunter",
+        "dependsOnEmployees": [
+          "demand-intelligence"
+        ],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_bea42ea03edcbc5d",
+      "employee": "revenue-hunter",
+      "path": "output/revenue-hunter/revenue-forecast.md",
+      "artifactType": "stable-snapshot",
+      "producedDate": null,
+      "contentHash": "sha256:fef107b3e8e145b2ca658875d53ba24a49861d3d184d3fd4031d5d239da339e0",
+      "sizeBytes": 727,
+      "fileModifiedAt": "2026-08-02T06:32:12.581631+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "revenue-hunter",
+        "dependsOnEmployees": [
+          "demand-intelligence"
+        ],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_5af755b7892ffc1d",
+      "employee": "sales-director",
+      "path": "output/sales-director/.gitkeep",
+      "artifactType": "other",
+      "producedDate": null,
+      "contentHash": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sizeBytes": 0,
+      "fileModifiedAt": "2026-08-01T14:22:40.322158+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "sales-director",
+        "dependsOnEmployees": [
+          "demand-intelligence",
+          "revenue-hunter",
+          "crm",
+          "service-mapping"
+        ],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_0dd2ed5d8897dee5",
+      "employee": "service-mapping",
+      "path": "output/service-mapping/.gitkeep",
+      "artifactType": "other",
+      "producedDate": null,
+      "contentHash": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sizeBytes": 0,
+      "fileModifiedAt": "2026-08-01T14:22:40.322158+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "service-mapping",
+        "dependsOnEmployees": [
+          "demand-intelligence"
+        ],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_2f90e9b519e52607",
+      "employee": "tender-intelligence",
+      "path": "output/tender-intelligence/2026-07-28-tender-intelligence-report.md",
+      "artifactType": "daily-report",
+      "producedDate": "2026-07-28",
+      "contentHash": "sha256:bf8ed144f0ea863f442f604b8ad16c55b4ec8886a67d631c77efc54cb512e0b8",
+      "sizeBytes": 211,
+      "fileModifiedAt": "2026-08-01T14:22:40.322158+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "tender-intelligence",
+        "dependsOnEmployees": [],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_273323713478d38d",
+      "employee": "tender-intelligence",
+      "path": "output/tender-intelligence/2026-07-29-tender-intelligence-report.md",
+      "artifactType": "daily-report",
+      "producedDate": "2026-07-29",
+      "contentHash": "sha256:27f2fd7f2e6406c187d8d9c3fce76be3d567ec362e62db39843140f739306be3",
+      "sizeBytes": 211,
+      "fileModifiedAt": "2026-08-01T14:22:40.322781+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "tender-intelligence",
+        "dependsOnEmployees": [],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_d465b793ba1362b1",
+      "employee": "tender-intelligence",
+      "path": "output/tender-intelligence/2026-07-30-tender-intelligence-report.md",
+      "artifactType": "daily-report",
+      "producedDate": "2026-07-30",
+      "contentHash": "sha256:ef6b1af8f992c1b6de440b0e7f392b0687c27bed4899f22de110abc6bc0113cd",
+      "sizeBytes": 211,
+      "fileModifiedAt": "2026-08-01T14:22:40.322781+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "tender-intelligence",
+        "dependsOnEmployees": [],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_05569ed0afd73481",
+      "employee": "tender-intelligence",
+      "path": "output/tender-intelligence/2026-07-31-tender-intelligence-report.md",
+      "artifactType": "daily-report",
+      "producedDate": "2026-07-31",
+      "contentHash": "sha256:42765d0472f1f2b188a92adc79c2532f2543f082342def38746bf488b8c2ff3b",
+      "sizeBytes": 211,
+      "fileModifiedAt": "2026-08-01T14:22:40.322781+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "tender-intelligence",
+        "dependsOnEmployees": [],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_82e469e0bcfc1a1e",
+      "employee": "tender-intelligence",
+      "path": "output/tender-intelligence/2026-08-01-tender-intelligence-report.md",
+      "artifactType": "daily-report",
+      "producedDate": "2026-08-01",
+      "contentHash": "sha256:40430f9a96cd6089bf051c6c2eb0d6212f2cfb94f05c6788af471af44d81ec74",
+      "sizeBytes": 211,
+      "fileModifiedAt": "2026-08-01T14:22:40.322781+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "tender-intelligence",
+        "dependsOnEmployees": [],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_b6b0cf16ef3adb58",
+      "employee": "tender-intelligence",
+      "path": "output/tender-intelligence/2026-08-02-tender-intelligence-report.md",
+      "artifactType": "daily-report",
+      "producedDate": "2026-08-02",
+      "contentHash": "sha256:b3bdd1a1f6e1156d45d6368e0fa8634a77fac7772044913c1f3859949755bd43",
+      "sizeBytes": 211,
+      "fileModifiedAt": "2026-08-02T06:32:12.887645+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "tender-intelligence",
+        "dependsOnEmployees": [],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_9fc4fc82f6d02d28",
+      "employee": "tender-intelligence",
+      "path": "output/tender-intelligence/tender-intelligence-feed.json",
+      "artifactType": "feed",
+      "producedDate": null,
+      "contentHash": "sha256:b9ea6036a8b444047738c8e84db4e64f572805cf85dbb719b4f92d4449a0fa94",
+      "sizeBytes": 326,
+      "fileModifiedAt": "2026-08-02T06:32:12.887405+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "tender-intelligence",
+        "dependsOnEmployees": [],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    },
+    {
+      "id": "art_ab748b8fa6dbe0e8",
+      "employee": "website-intake",
+      "path": "output/website-intake/.gitkeep",
+      "artifactType": "other",
+      "producedDate": null,
+      "contentHash": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sizeBytes": 0,
+      "fileModifiedAt": "2026-08-01T14:22:40.322781+00:00",
+      "schemaVersion": "unversioned",
+      "confidence": null,
+      "lifecycle": "published",
+      "lineage": {
+        "employee": "website-intake",
+        "dependsOnEmployees": [],
+        "note": "Coarse-grained, derived from orchestrator-config.json's dependsOn graph at build time — names which employees this one is allowed to have read from, not which specific upstream artifact version it actually read for this exact file."
+      },
+      "validationFlags": []
+    }
+  ]
+}

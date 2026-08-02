@@ -222,5 +222,5 @@ def build_artifact_record(absolute_path, relative_path, dependency_graph):
         # artifact from being indexed; it only annotates a structural
         # anomaly for a human (or a future enforcing verification
         # layer, per ARCHITECTURE-CONSTITUTION.md) to look at.
-        "validationFlags": registry_validation.validate_artifact(absolute_path, artifact_type),
+        "validationFlags": registry_validation.validate_artifact(absolute_path, relative_path, artifact_type),
     }

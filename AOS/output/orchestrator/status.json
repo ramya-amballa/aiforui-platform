@@ -9,16 +9,16 @@
     "reportPath": "string — this run's Daily Execution Report, relative to the repo root",
     "logPath": "string — this run's full log, relative to the repo root"
   },
-  "startedAt": "2026-08-02T04:02:32.072345+00:00",
-  "finishedAt": "2026-08-02T04:02:34.056344+00:00",
-  "durationSeconds": 1.98,
+  "startedAt": "2026-08-02T06:32:08.425996+00:00",
+  "finishedAt": "2026-08-02T06:32:13.267086+00:00",
+  "durationSeconds": 4.84,
   "employees": [
     {
       "key": "market-intelligence",
       "name": "Market Intelligence",
       "status": "SUCCESS",
       "attempts": 1,
-      "durationSeconds": 0.59,
+      "durationSeconds": 0.09,
       "error": null,
       "outputs": []
     },
@@ -36,7 +36,7 @@
       "name": "Demand Intelligence",
       "status": "SUCCESS",
       "attempts": 1,
-      "durationSeconds": 0.72,
+      "durationSeconds": 3.93,
       "error": null,
       "outputs": [
         "demand-intelligence/runtime/rejected/2026-08-02-rejected-report.md",
@@ -50,7 +50,7 @@
       "name": "Revenue Hunter",
       "status": "SUCCESS",
       "attempts": 1,
-      "durationSeconds": 0.03,
+      "durationSeconds": 0.1,
       "error": null,
       "outputs": [
         "output/revenue-hunter/2026-08-02-revenue-dashboard.md",
@@ -89,17 +89,26 @@
       "name": "Account Intelligence",
       "status": "SUCCESS",
       "attempts": 1,
-      "durationSeconds": 0.04,
+      "durationSeconds": 0.03,
+      "error": null,
+      "outputs": []
+    },
+    {
+      "key": "relationship-intelligence",
+      "name": "Relationship Intelligence",
+      "status": "SUCCESS",
+      "attempts": 1,
+      "durationSeconds": 0.03,
       "error": null,
       "outputs": []
     },
     {
       "key": "reverse-job-hunt",
       "name": "Reverse Job Hunt",
-      "status": "SKIPPED_DEPENDENCY_FAILED",
-      "attempts": 0,
-      "durationSeconds": 0,
-      "error": "upstream failure: Relationship Intelligence",
+      "status": "SUCCESS",
+      "attempts": 1,
+      "durationSeconds": 0.03,
+      "error": null,
       "outputs": []
     },
     {
@@ -121,20 +130,11 @@
       "outputs": []
     },
     {
-      "key": "relationship-intelligence",
-      "name": "Relationship Intelligence",
-      "status": "SUCCESS",
-      "attempts": 1,
-      "durationSeconds": 0.03,
-      "error": null,
-      "outputs": []
-    },
-    {
       "key": "tender-intelligence",
       "name": "Tender & RFP Intelligence",
       "status": "SUCCESS",
       "attempts": 1,
-      "durationSeconds": 0.07,
+      "durationSeconds": 0.06,
       "error": null,
       "outputs": [
         "output/tender-intelligence/2026-08-02-tender-intelligence-report.md",
@@ -146,7 +146,7 @@
       "name": "Executive Brand Intelligence",
       "status": "SUCCESS",
       "attempts": 1,
-      "durationSeconds": 0.04,
+      "durationSeconds": 0.03,
       "error": null,
       "outputs": []
     },
@@ -162,10 +162,10 @@
     {
       "key": "company-360",
       "name": "Company 360",
-      "status": "SKIPPED_DEPENDENCY_FAILED",
-      "attempts": 0,
-      "durationSeconds": 0,
-      "error": "upstream failure: Reverse Job Hunt",
+      "status": "SUCCESS",
+      "attempts": 1,
+      "durationSeconds": 0.03,
+      "error": null,
       "outputs": []
     },
     {
@@ -227,7 +227,7 @@
       "name": "Daily Brief",
       "status": "SUCCESS",
       "attempts": 1,
-      "durationSeconds": 0.05,
+      "durationSeconds": 0.03,
       "error": null,
       "outputs": [
         "output/executive-dashboard/executive-dashboard.md",
@@ -239,17 +239,33 @@
       ]
     },
     {
+      "key": "artifact-registry",
+      "name": "Artifact Registry",
+      "status": "SUCCESS",
+      "attempts": 1,
+      "durationSeconds": 0.06,
+      "error": null,
+      "outputs": [
+        "output/artifact-registry/artifact-index.json"
+      ]
+    },
+    {
       "key": "ceo-advisor",
       "name": "CEO Advisor",
-      "status": "SKIPPED_DEPENDENCY_FAILED",
-      "attempts": 0,
-      "durationSeconds": 0,
-      "error": "upstream failure: Reverse Job Hunt, Company 360",
-      "outputs": []
+      "status": "SUCCESS",
+      "attempts": 1,
+      "durationSeconds": 0.04,
+      "error": null,
+      "outputs": [
+        "output/ceo-advisor/2026-08-02-ceo-daily-report.md",
+        "output/ceo-advisor/ceo-daily-report.md",
+        "output/ceo-advisor/ceo-weekly-report.md",
+        "output/ceo-advisor/ceo-monthly-business-review.md"
+      ]
     }
   ],
   "overallStatus": "SUCCESS",
   "failures": [],
   "reportPath": "AOS/output/orchestrator/reports/2026-08-02-daily-execution-report.md",
-  "logPath": "AOS/output/orchestrator/logs/2026-08-02-040232-orchestrator.log"
+  "logPath": "AOS/output/orchestrator/logs/2026-08-02-063208-orchestrator.log"
 }

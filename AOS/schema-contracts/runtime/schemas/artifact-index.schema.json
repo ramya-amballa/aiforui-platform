@@ -1,0 +1,15 @@
+{
+  "_comment": "The Artifact Registry's own index contract, formalizing registry_builder.py's INDEX_SCHEMA comment block. The registry validating its own output against a real Schema Contract is deliberate — it should hold itself to the same standard it applies to every other employee's artifacts.",
+  "type": "object",
+  "required": ["schemaVersion", "generatedAt", "artifactCount", "employeeCounts", "validationSummary", "artifacts"],
+  "properties": {
+    "schemaVersion": {"type": "string"},
+    "generatedAt": {"type": "string"},
+    "sourceRoot": {"type": "string"},
+    "orchestratorConfigPath": {"type": "string"},
+    "artifactCount": {"type": "number"},
+    "employeeCounts": {"type": "object"},
+    "validationSummary": {"type": "object"},
+    "artifacts": {"type": "array"}
+  }
+}

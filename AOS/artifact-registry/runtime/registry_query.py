@@ -24,7 +24,7 @@ if str(RUNTIME_DIR) not in sys.path:
 
 import registry_model as model  # noqa: E402
 
-DEFAULT_INDEX_PATH = RUNTIME_DIR / "index" / "artifact-index.json"
+DEFAULT_INDEX_PATH = model.AOS_DIR / "output" / "artifact-registry" / "artifact-index.json"
 
 EMPTY_INDEX = {
     "schemaVersion": model.INDEX_SCHEMA_VERSION,

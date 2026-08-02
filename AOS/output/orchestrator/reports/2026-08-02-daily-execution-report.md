@@ -1,36 +1,37 @@
 # Daily Execution Report
 
 **Date:** 2026-08-02
-**Run started:** 2026-08-02T04:02:32.072345+00:00
-**Total duration:** 1.98s
+**Run started:** 2026-08-02T06:32:08.425996+00:00
+**Total duration:** 4.84s
 
 ## Employees Executed
 
 | # | Employee | Status | Attempts | Duration |
 |---|---|---|---|---|
-| 1 | Market Intelligence | SUCCESS | 1 | 0.59s |
+| 1 | Market Intelligence | SUCCESS | 1 | 0.09s |
 | 2 | Website Intake Runtime | SUCCESS | 1 | 0.04s |
-| 3 | Demand Intelligence | SUCCESS | 1 | 0.72s |
-| 4 | Revenue Hunter | SUCCESS | 1 | 0.03s |
+| 3 | Demand Intelligence | SUCCESS | 1 | 3.93s |
+| 4 | Revenue Hunter | SUCCESS | 1 | 0.1s |
 | 5 | CRM | SUCCESS | 1 | 0.03s |
 | 6 | Service Mapping Engine | SUCCESS | 1 | 0.03s |
 | 7 | Sales Director | SUCCESS | 1 | 0.04s |
-| 8 | Account Intelligence | SUCCESS | 1 | 0.04s |
-| 9 | Reverse Job Hunt | SKIPPED_DEPENDENCY_FAILED | 0 | 0s |
-| 10 | Recruiter Intelligence | SUCCESS | 1 | 0.03s |
-| 11 | Fractional Advisory Radar | SUCCESS | 1 | 0.03s |
-| 12 | Relationship Intelligence | SUCCESS | 1 | 0.03s |
-| 13 | Tender & RFP Intelligence | SUCCESS | 1 | 0.07s |
-| 14 | Executive Brand Intelligence | SUCCESS | 1 | 0.04s |
+| 8 | Account Intelligence | SUCCESS | 1 | 0.03s |
+| 9 | Relationship Intelligence | SUCCESS | 1 | 0.03s |
+| 10 | Reverse Job Hunt | SUCCESS | 1 | 0.03s |
+| 11 | Recruiter Intelligence | SUCCESS | 1 | 0.03s |
+| 12 | Fractional Advisory Radar | SUCCESS | 1 | 0.03s |
+| 13 | Tender & RFP Intelligence | SUCCESS | 1 | 0.06s |
+| 14 | Executive Brand Intelligence | SUCCESS | 1 | 0.03s |
 | 15 | Delivery Intelligence | SUCCESS | 1 | 0.03s |
-| 16 | Company 360 | SKIPPED_DEPENDENCY_FAILED | 0 | 0s |
+| 16 | Company 360 | SUCCESS | 1 | 0.03s |
 | 17 | Executive Memory | SUCCESS | 1 | 0.03s |
 | 18 | Market Positioning Intelligence | SUCCESS | 1 | 0.03s |
 | 19 | Capacity Management | SUCCESS | 1 | 0.03s |
 | 20 | Product Manager | SUCCESS | 1 | 0.03s |
 | 21 | Content Director | SUCCESS | 1 | 0.03s |
-| 22 | Daily Brief | SUCCESS | 1 | 0.05s |
-| 23 | CEO Advisor | SKIPPED_DEPENDENCY_FAILED | 0 | 0s |
+| 22 | Daily Brief | SUCCESS | 1 | 0.03s |
+| 23 | Artifact Registry | SUCCESS | 1 | 0.06s |
+| 24 | CEO Advisor | SUCCESS | 1 | 0.04s |
 
 ## Failures
 
@@ -62,6 +63,11 @@ _None needed._
 - **Daily Brief**: `output/executive-dashboard/2026-08-02-executive-dashboard.html`
 - **Daily Brief**: `output/daily-briefs/2026/08/02/executive-dashboard.md`
 - **Daily Brief**: `output/daily-briefs/2026/08/02/executive-dashboard.html`
+- **Artifact Registry**: `output/artifact-registry/artifact-index.json`
+- **CEO Advisor**: `output/ceo-advisor/2026-08-02-ceo-daily-report.md`
+- **CEO Advisor**: `output/ceo-advisor/ceo-daily-report.md`
+- **CEO Advisor**: `output/ceo-advisor/ceo-weekly-report.md`
+- **CEO Advisor**: `output/ceo-advisor/ceo-monthly-business-review.md`
 
 ## Business Impact
 

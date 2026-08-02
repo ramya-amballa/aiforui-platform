@@ -104,6 +104,18 @@
       ]
     },
     {
+      "key": "relationship-intelligence",
+      "name": "Relationship Intelligence",
+      "folder": "relationship-intelligence",
+      "script": "relationship-intelligence/runtime/generate.py",
+      "dependsOn": ["demand-intelligence", "crm"],
+      "note": "New in Sprint 13 — reads a founder-maintained, persistent, person-level record (relationship-profiles.json, exactly like 06-CRM/company-intelligence.json is for companies; nothing here is auto-collected, there is no LinkedIn/email/calendar integration in AOS) and turns it into daily intelligence: reconnect recommendations, birthday/work anniversary/conference reminders, and a relationship health score/risk/opportunity per person. crm and demand-intelligence are read-only, optional cross-references for the Relationship Opportunity section only. CEO Advisor genuinely reads this step's output to recommend one relationship action per day, same pattern as Sprint 10's Recruiter Follow-ups. See relationship-intelligence/relationship-intelligence-engine.md. Moved ahead of Reverse Job Hunt in this array (was originally positioned after it, a real ordering bug: Reverse Job Hunt's own dependsOn names this employee, which cannot be satisfied by something scheduled later — found during the AOS v2 architecture review, fixed directly rather than left for the DAG Scheduler v2 proposal to eventually catch).",
+      "outputPaths": [
+        "output/relationship-intelligence/{date}-relationship-intelligence-report.md",
+        "output/relationship-intelligence/relationship-intelligence-feed.json"
+      ]
+    },
+    {
       "key": "reverse-job-hunt",
       "name": "Reverse Job Hunt",
       "folder": "reverse-job-hunt",
@@ -137,18 +149,6 @@
       "outputPaths": [
         "output/fractional-advisory-radar/{date}-fractional-advisory-radar-report.md",
         "output/fractional-advisory-radar/fractional-advisory-radar-feed.json"
-      ]
-    },
-    {
-      "key": "relationship-intelligence",
-      "name": "Relationship Intelligence",
-      "folder": "relationship-intelligence",
-      "script": "relationship-intelligence/runtime/generate.py",
-      "dependsOn": ["demand-intelligence", "crm"],
-      "note": "New in Sprint 13 — reads a founder-maintained, persistent, person-level record (relationship-profiles.json, exactly like 06-CRM/company-intelligence.json is for companies; nothing here is auto-collected, there is no LinkedIn/email/calendar integration in AOS) and turns it into daily intelligence: reconnect recommendations, birthday/work anniversary/conference reminders, and a relationship health score/risk/opportunity per person. crm and demand-intelligence are read-only, optional cross-references for the Relationship Opportunity section only. CEO Advisor genuinely reads this step's output to recommend one relationship action per day, same pattern as Sprint 10's Recruiter Follow-ups. See relationship-intelligence/relationship-intelligence-engine.md.",
-      "outputPaths": [
-        "output/relationship-intelligence/{date}-relationship-intelligence-report.md",
-        "output/relationship-intelligence/relationship-intelligence-feed.json"
       ]
     },
     {
@@ -276,6 +276,22 @@
       "businessImpactSource": "output/executive-dashboard/executive-dashboard.md"
     },
     {
+      "key": "artifact-registry",
+      "name": "Artifact Registry",
+      "folder": "artifact-registry",
+      "script": "artifact-registry/runtime/registry_builder.py",
+      "dependsOn": ["market-intelligence", "website-intake", "demand-intelligence", "revenue-hunter", "crm",
+                    "service-mapping", "sales-director", "account-intelligence", "reverse-job-hunt",
+                    "recruiter-intelligence", "fractional-advisory-radar", "relationship-intelligence",
+                    "tender-intelligence", "executive-brand-intelligence", "delivery-intelligence",
+                    "company-360", "executive-memory", "market-positioning-intelligence", "capacity-management",
+                    "product-manager", "content-director", "daily-brief"],
+      "note": "Infrastructure, not an employee — see ARCHITECTURE-CONSTITUTION.md and artifact-registry/artifact-registry-model.md. Runs after every real employee so its index reflects a complete day's output, and before CEO Advisor so CEO Advisor can read a genuinely same-day-fresh index rather than the one-cycle-behind pattern Capacity Management's own feed requires (a different case: Capacity Management's dependsOn is real business logic that could create a cycle back into CEO Advisor if it depended on it directly, whereas this step never needs anything CEO Advisor computes, only that everyone else has already run). Read-only over output/; writes nothing to any employee's own data.",
+      "outputPaths": [
+        "output/artifact-registry/artifact-index.json"
+      ]
+    },
+    {
       "key": "ceo-advisor",
       "name": "CEO Advisor",
       "folder": "09-CEO-Advisor",
@@ -285,8 +301,8 @@
                     "recruiter-intelligence", "fractional-advisory-radar", "relationship-intelligence",
                     "tender-intelligence", "executive-brand-intelligence", "delivery-intelligence",
                     "company-360", "executive-memory", "market-positioning-intelligence", "capacity-management",
-                    "product-manager", "content-director", "daily-brief"],
-      "note": "Implemented in ceo-advisor/, not 09-CEO-Advisor/ — see dependency-map.md. New in Sprint 5, and now genuinely the final step of every Orchestrator run, per explicit instruction — dependsOn lists every other employee to guarantee that. Its own reads (see ceo-advisor/ceo-advisor-runtime-notes.md) are scoped to Sprint 5's eight named sources plus Sprint 10's Recruiter Intelligence, Sprint 13's Relationship Intelligence, Sprint 15's Executive Brand Intelligence and Sprint 22's Capacity Management (all genuinely read) — Product Manager, Content Director, Sprint 8's Account Intelligence, Sprint 9's Reverse Job Hunt, Sprint 14's Tender Intelligence, Sprint 17's Delivery Intelligence, Sprint 19's Company 360, Sprint 20's Executive Memory and Sprint 21's Market Positioning Intelligence remain dependency-only, for ordering, not read (no explicit instruction yet to wire those into a CEO Advisor section). Note the inverse relationship with Sprint 20 and Sprint 22: CEO Advisor writes daily-priorities-log.json every run and Executive Memory reads it, while Capacity Management writes capacity-feed.json and CEO Advisor reads it — both one cycle behind in whichever direction, since CEO Advisor must stay genuinely last in this fixed order.",
+                    "product-manager", "content-director", "daily-brief", "artifact-registry"],
+      "note": "Implemented in ceo-advisor/, not 09-CEO-Advisor/ — see dependency-map.md. New in Sprint 5, and now genuinely the final step of every Orchestrator run, per explicit instruction — dependsOn lists every other employee to guarantee that. Its own reads (see ceo-advisor/ceo-advisor-runtime-notes.md) are scoped to Sprint 5's eight named sources plus Sprint 10's Recruiter Intelligence, Sprint 13's Relationship Intelligence, Sprint 15's Executive Brand Intelligence, Sprint 22's Capacity Management, and the Artifact Registry (all genuinely read) — Product Manager, Content Director, Sprint 8's Account Intelligence, Sprint 9's Reverse Job Hunt, Sprint 14's Tender Intelligence, Sprint 17's Delivery Intelligence, Sprint 19's Company 360, Sprint 20's Executive Memory and Sprint 21's Market Positioning Intelligence remain dependency-only, for ordering, not read (no explicit instruction yet to wire those into a CEO Advisor section). Note the inverse relationship with Sprint 20 and Sprint 22: CEO Advisor writes daily-priorities-log.json every run and Executive Memory reads it, while Capacity Management writes capacity-feed.json and CEO Advisor reads it — both one cycle behind in whichever direction, since CEO Advisor must stay genuinely last in this fixed order. The Artifact Registry is the one exception to that lag: it depends on nothing CEO Advisor itself produces, so CEO Advisor reads its actual same-run output, not yesterday's.",
       "outputPaths": [
         "output/ceo-advisor/{date}-ceo-daily-report.md",
         "output/ceo-advisor/ceo-daily-report.md",
