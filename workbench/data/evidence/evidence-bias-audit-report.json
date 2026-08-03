@@ -1,0 +1,28 @@
+{
+  "id": "evidence-bias-audit-report",
+  "title": "Bias Audit Report",
+  "description": "A written report documenting the results of an independent bias audit of an automated employment decision tool, modelled on the audit artifact required by NYC Local Law 144.",
+  "version": "1.0.0",
+  "status": "active",
+  "confidence": "Reviewed",
+  "created_date": "2026-08-03",
+  "updated_date": "2026-08-03",
+  "tags": ["hiring", "bias", "audit-report"],
+  "evidence_description": "A report documenting the methodology and results of a bias audit of an automated employment decision tool, including selection rates by demographic category (e.g. sex, race/ethnicity) and any resulting impact ratios, together with a description of the data used.",
+  "collection_method": "Independent third-party audit performed by an entity independent of the tool's developer, using historical or representative test candidate data.",
+  "retention_period": "Minimum 3 years from date of last use, aligned with typical employment record-keeping requirements.",
+  "artifact_format": "PDF report for public summary disclosure; underlying selection-rate data retained as a structured export (CSV/JSON) for reproducibility.",
+  "citations": [
+    {
+      "id": "cite-nyc-ll144-rules",
+      "source_type": "regulator",
+      "title": "Automated Employment Decision Tools (Local Law 144 rules)",
+      "publisher": "NYC Department of Consumer and Worker Protection (DCWP)",
+      "url": "https://rules.cityofnewyork.us/rule/automated-employment-decision-tools-2/",
+      "accessed_date": "2026-08-03",
+      "locator": "Rule implementing NYC Local Law 144-2021 (Bias Audit Law)",
+      "excerpt": "Employers must enlist an independent auditor to conduct an annual bias audit using historical or test data and publicly publish a report that includes adverse impact results and a description of the data and methodology used."
+    }
+  ],
+  "relationships": []
+}

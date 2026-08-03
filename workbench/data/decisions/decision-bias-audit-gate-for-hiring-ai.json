@@ -1,0 +1,76 @@
+{
+  "id": "decision-bias-audit-gate-for-hiring-ai",
+  "title": "Require an independent pre-deployment bias audit for any AI-based hiring or screening tool",
+  "description": "Illustrative reference decision, provided as seed content for the AI Governance Workbench schema and not a documented decision of any specific organisation. It models the kind of governance decision commonly recommended in response to incidents like the 2018 Amazon recruiting-tool case, and aligns with the approach mandated by NYC Local Law 144 for automated employment decision tools.",
+  "version": "1.0.0",
+  "status": "draft",
+  "confidence": "Community",
+  "created_date": "2026-08-03",
+  "updated_date": "2026-08-03",
+  "tags": ["hiring", "bias", "pre-deployment-review", "recruiting"],
+  "decision_statement": "No AI-based tool that screens, scores, or ranks candidates for hiring, promotion, or termination may be deployed against live candidates until it has passed a documented bias audit, conducted by a party independent of the tool's developers, measuring selection-rate disparities across protected characteristics. The audit must be repeated whenever the model, training data, or scoring logic materially changes.",
+  "decision_type": "policy",
+  "decision_context": "Motivated by publicly reported cases of AI hiring tools developing discriminatory patterns from historical training data, and by the emergence of legal requirements (e.g. NYC Local Law 144) mandating independent bias audits for automated employment decision tools.",
+  "governing_body": "Illustrative example — Talent Acquisition Technology Governance Board",
+  "jurisdiction": ["US-NY"],
+  "frameworks_referenced": ["NIST AI RMF", "NYC Local Law 144"],
+  "alternatives_considered": [
+    "Rely solely on post-deployment monitoring rather than a pre-deployment gate.",
+    "Permit internal (non-independent) audits to satisfy the requirement."
+  ],
+  "citations": [
+    {
+      "id": "cite-nist-ai-rmf-1-0",
+      "source_type": "standards_body",
+      "title": "Artificial Intelligence Risk Management Framework (AI RMF 1.0)",
+      "publisher": "National Institute of Standards and Technology (NIST)",
+      "url": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf",
+      "publication_date": "2023-01-26",
+      "accessed_date": "2026-08-03",
+      "locator": "MEASURE function, category 2.11"
+    },
+    {
+      "id": "cite-reuters-dastin-2018",
+      "source_type": "news_publication",
+      "title": "Amazon scraps secret AI recruiting tool that showed bias against women",
+      "publisher": "Reuters",
+      "url": "https://www.reuters.com/article/us-amazon-com-jobs-automation-insight/amazon-scraps-secret-ai-recruiting-tool-that-showed-bias-against-women-idUSKCN1MK08G",
+      "publication_date": "2018-10-10",
+      "accessed_date": "2026-08-03"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "RESULTED_FROM",
+      "target_id": "incident-amazon-recruiting-tool-bias-2018",
+      "target_type": "incident",
+      "description": "This decision is modelled as a governance response to the pattern of harm shown by this incident.",
+      "citation_ids": ["cite-reuters-dastin-2018"]
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "target_id": "pattern-pre-deployment-bias-audit-gate",
+      "target_type": "pattern",
+      "description": "The decision is put into practice via this design pattern."
+    },
+    {
+      "type": "SATISFIES_CONTROL",
+      "target_id": "control-nist-ai-rmf-measure-2-11",
+      "target_type": "control",
+      "description": "Implementing this decision satisfies the fairness/bias evaluation control.",
+      "citation_ids": ["cite-nist-ai-rmf-1-0"]
+    },
+    {
+      "type": "REQUIRES_EVIDENCE",
+      "target_id": "evidence-bias-audit-report",
+      "target_type": "evidence",
+      "description": "Compliance with this decision must be demonstrated by producing a bias audit report."
+    },
+    {
+      "type": "RAISES_BOARD_QUESTION",
+      "target_id": "board_question-independent-bias-audit-before-deployment",
+      "target_type": "board_question",
+      "description": "Boards adopting this decision should be asking whether the audit was genuinely independent."
+    }
+  ]
+}

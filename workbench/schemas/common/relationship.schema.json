@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://workbench.aiforui.dev/schemas/common/relationship.schema.json",
+  "title": "Relationship",
+  "description": "A single typed, directed edge from the owning object to another canonical object. The (verb, source_type, target_type) triple must be permitted by the ontology in /relationships/ontology.json — see /docs/relationship-model.md.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["type", "target_id", "target_type"],
+  "properties": {
+    "type": {
+      "type": "string",
+      "description": "The semantic verb describing this edge. Arbitrary/untyped links are not permitted.",
+      "enum": [
+        "RESULTED_FROM",
+        "MITIGATED_BY",
+        "IMPLEMENTED_BY",
+        "SATISFIES_CONTROL",
+        "REQUIRES_EVIDENCE",
+        "RAISES_BOARD_QUESTION",
+        "RELATED_TO"
+      ]
+    },
+    "target_id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "The globally unique id of the target object this edge points to. Must resolve to an object that exists in the dataset."
+    },
+    "target_type": {
+      "type": "string",
+      "description": "The declared entity type of the target, used to validate the edge against the ontology and to catch stale/incorrect references.",
+      "enum": ["decision", "incident", "pattern", "control", "evidence", "board_question"]
+    },
+    "description": {
+      "type": "string",
+      "description": "Short human-readable rationale for why this edge exists."
+    },
+    "citation_ids": {
+      "type": "array",
+      "description": "IDs of citations (declared in this object's own citations array) that specifically support this edge.",
+      "items": { "type": "string" },
+      "uniqueItems": true
+    }
+  }
+}

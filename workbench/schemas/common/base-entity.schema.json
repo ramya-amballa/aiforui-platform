@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://workbench.aiforui.dev/schemas/common/base-entity.schema.json",
+  "title": "Base Entity",
+  "description": "Fields shared by every canonical domain object (Governance Decision, Incident, Design Pattern, Framework Control, Evidence Type, Board Question). Entity schemas extend this via allOf and additionally constrain 'id' to their own type-prefixed pattern.",
+  "type": "object",
+  "required": [
+    "id",
+    "title",
+    "description",
+    "version",
+    "status",
+    "confidence",
+    "created_date",
+    "updated_date",
+    "tags",
+    "citations",
+    "relationships"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Globally unique identifier. Type-prefixed and kebab-case, e.g. 'decision-eu-ai-act-...' (the type prefix itself may contain underscores, e.g. 'board_question-...').",
+      "pattern": "^[a-z]+(_[a-z]+)*-[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1,
+      "description": "A self-contained summary of the object. Should make sense without reading any related object."
+    },
+    "version": {
+      "type": "string",
+      "description": "Semantic version of this record's content. Bump on any substantive edit so history stays traceable.",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "status": {
+      "type": "string",
+      "description": "Lifecycle state of this record within the dataset (distinct from 'confidence', which grades trust in the content).",
+      "enum": ["draft", "active", "deprecated", "superseded", "retracted"]
+    },
+    "confidence": {
+      "type": "string",
+      "description": "Canonical confidence state. See /docs/confidence-model.md.",
+      "enum": ["Verified", "Reviewed", "Draft", "Community", "Archived"]
+    },
+    "created_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date this record was first added to the dataset."
+    },
+    "updated_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date this record was last substantively edited."
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "uniqueItems": true,
+      "description": "Free-text topical tags used for cross-cutting discovery (e.g. 'bias', 'facial-recognition', 'eu-ai-act')."
+    },
+    "contributors": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "uniqueItems": true,
+      "description": "Optional names/handles of people who authored or reviewed this record, in support of community contribution."
+    },
+    "citations": {
+      "type": "array",
+      "items": { "$ref": "https://workbench.aiforui.dev/schemas/common/citation.schema.json" },
+      "description": "Sources backing this record's claims. See /docs/citation-model.md for when this must be non-empty."
+    },
+    "relationships": {
+      "type": "array",
+      "items": { "$ref": "https://workbench.aiforui.dev/schemas/common/relationship.schema.json" },
+      "description": "Typed, directed edges from this object to other canonical objects. See /docs/relationship-model.md."
+    }
+  }
+}

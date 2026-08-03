@@ -1,0 +1,50 @@
+{
+  "id": "incident-amazon-recruiting-tool-bias-2018",
+  "title": "Amazon scraps secret AI recruiting engine after it is found to penalise women's resumes",
+  "description": "Amazon built an experimental machine-learning recruiting tool, in development since 2014, that scored job candidates' resumes from one to five stars. Because the model was trained on ten years of resumes submitted to Amazon, which came predominantly from men, it taught itself to penalise resumes containing the word 'women's' (e.g. 'women's chess club captain') and downgraded graduates of two all-women's colleges. Amazon edited the tool to make specific terms neutral, but lost confidence it would not find other, subtler ways to discriminate, and the project was disbanded by 2017. It was never used as the sole basis for hiring decisions.",
+  "version": "1.0.0",
+  "status": "active",
+  "confidence": "Reviewed",
+  "created_date": "2026-08-03",
+  "updated_date": "2026-08-03",
+  "tags": ["hiring", "bias", "discrimination", "recruiting", "resume-screening"],
+  "occurred_date": "2018-10-10",
+  "organizations_involved": ["Amazon"],
+  "harm_types": ["discrimination"],
+  "ai_system_category": "hiring_screening",
+  "jurisdiction": ["US"],
+  "severity": "high",
+  "root_cause": "Training data reflected ten years of historical hiring patterns skewed toward male applicants in technical roles, which the model learned as a signal and generalised into penalising resumes associated with women.",
+  "citations": [
+    {
+      "id": "cite-reuters-dastin-2018",
+      "source_type": "news_publication",
+      "title": "Amazon scraps secret AI recruiting tool that showed bias against women",
+      "publisher": "Reuters",
+      "url": "https://www.reuters.com/article/us-amazon-com-jobs-automation-insight/amazon-scraps-secret-ai-recruiting-tool-that-showed-bias-against-women-idUSKCN1MK08G",
+      "publication_date": "2018-10-10",
+      "accessed_date": "2026-08-03",
+      "excerpt": "The team had been building computer programs since 2014 to review job applicants' resumes... amazon.com's machine-learning specialists uncovered a big problem: their new recruiting engine did not like women."
+    }
+  ],
+  "relationships": [
+    {
+      "type": "MITIGATED_BY",
+      "target_id": "decision-bias-audit-gate-for-hiring-ai",
+      "target_type": "decision",
+      "description": "This class of incident is the motivating case for requiring a pre-deployment bias audit gate on AI hiring tools."
+    },
+    {
+      "type": "MITIGATED_BY",
+      "target_id": "pattern-pre-deployment-bias-audit-gate",
+      "target_type": "pattern",
+      "description": "A pre-deployment bias audit would surface disparate impact of this kind before a tool reaches live candidates."
+    },
+    {
+      "type": "RAISES_BOARD_QUESTION",
+      "target_id": "board_question-independent-bias-audit-before-deployment",
+      "target_type": "board_question",
+      "description": "This incident is a canonical example of the harm this board question is designed to pre-empt."
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://workbench.aiforui.dev/schemas/common/citation.schema.json",
+  "title": "Citation",
+  "description": "A traceable reference to an external source backing a fact, mapping, or claim made by a canonical object. Every governance statement must be able to point to at least one of these.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "source_type", "title", "publisher", "accessed_date"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Identifier for this citation, unique within the owning object's citations array.",
+      "pattern": "^cite-[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "source_type": {
+      "type": "string",
+      "description": "The category of source this citation points to.",
+      "enum": [
+        "regulator",
+        "legislation",
+        "court_judgment",
+        "company_statement",
+        "academic_paper",
+        "standards_body",
+        "news_publication",
+        "other"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Title of the cited work (e.g. article headline, judgment name, standard title)."
+    },
+    "publisher": {
+      "type": "string",
+      "minLength": 1,
+      "description": "The organisation or body responsible for the source (e.g. 'Reuters', 'European Commission', 'NIST')."
+    },
+    "url": {
+      "type": "string",
+      "format": "uri",
+      "description": "Direct link to the source, when one exists online."
+    },
+    "publication_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date the source was originally published or issued, if known."
+    },
+    "accessed_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date the source was retrieved/verified by the contributor. Required so stale or link-rotted citations can be identified."
+    },
+    "locator": {
+      "type": "string",
+      "description": "A precise pointer within the source (e.g. 'Article 6(2)', 'p. 12', 'para 45') that anchors the specific claim being cited."
+    },
+    "excerpt": {
+      "type": "string",
+      "description": "A direct, short quotation from the source supporting the claim it is attached to."
+    }
+  }
+}

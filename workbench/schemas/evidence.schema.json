@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://workbench.aiforui.dev/schemas/evidence.schema.json",
+  "title": "Evidence Type",
+  "description": "A category of artifact that can be produced to demonstrate a control has been met or a decision has been implemented (e.g. a bias audit report, a model card, a signed attestation).",
+  "allOf": [
+    { "$ref": "https://workbench.aiforui.dev/schemas/common/base-entity.schema.json" },
+    {
+      "type": "object",
+      "required": ["id", "evidence_description"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^evidence-[a-z0-9]+(-[a-z0-9]+)*$"
+        },
+        "evidence_description": {
+          "type": "string",
+          "minLength": 1,
+          "description": "What artifact or record constitutes this evidence type."
+        },
+        "collection_method": {
+          "type": "string",
+          "description": "How this evidence is typically gathered (e.g. 'automated log export', 'manual attestation', 'independent third-party audit')."
+        },
+        "retention_period": {
+          "type": "string",
+          "description": "How long this evidence is expected to be retained (e.g. '7 years')."
+        },
+        "artifact_format": {
+          "type": "string",
+          "description": "The typical form this evidence takes (e.g. 'PDF report', 'system log', 'signed attestation')."
+        }
+      }
+    }
+  ]
+}

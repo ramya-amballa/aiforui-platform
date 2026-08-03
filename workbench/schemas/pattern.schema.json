@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://workbench.aiforui.dev/schemas/pattern.schema.json",
+  "title": "Design Pattern",
+  "description": "A reusable governance or engineering approach for implementing a decision — the 'how' that connects a governance decision to concrete practice, analogous to a pattern catalog entry.",
+  "allOf": [
+    { "$ref": "https://workbench.aiforui.dev/schemas/common/base-entity.schema.json" },
+    {
+      "type": "object",
+      "required": ["id", "problem", "solution"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^pattern-[a-z0-9]+(-[a-z0-9]+)*$"
+        },
+        "problem": {
+          "type": "string",
+          "minLength": 1,
+          "description": "The governance problem this pattern addresses."
+        },
+        "solution": {
+          "type": "string",
+          "minLength": 1,
+          "description": "The pattern's approach to solving the problem."
+        },
+        "applicability": {
+          "type": "string",
+          "description": "When and where this pattern should be applied."
+        },
+        "consequences": {
+          "type": "string",
+          "description": "Trade-offs, costs, or limitations of adopting this pattern."
+        },
+        "maturity": {
+          "type": "string",
+          "enum": ["experimental", "emerging", "established"],
+          "description": "How widely proven this pattern is in practice."
+        }
+      }
+    }
+  ]
+}

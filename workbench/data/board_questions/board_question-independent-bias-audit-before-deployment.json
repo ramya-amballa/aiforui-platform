@@ -1,0 +1,31 @@
+{
+  "id": "board_question-independent-bias-audit-before-deployment",
+  "title": "Has this AI hiring tool been independently bias-audited before deployment?",
+  "description": "A board-level oversight question prompting scrutiny of whether an AI system used in hiring, promotion, or termination decisions has been through an independent bias audit, and whether results are available for review.",
+  "version": "1.0.0",
+  "status": "active",
+  "confidence": "Reviewed",
+  "created_date": "2026-08-03",
+  "updated_date": "2026-08-03",
+  "tags": ["hiring", "bias", "board-oversight"],
+  "question_text": "Has every AI system we use to screen, rank, or score candidates or employees been independently bias-audited before deployment and after any material change, and can management produce the audit report and selection-rate data on request?",
+  "audience": ["board", "audit_committee", "risk_committee"],
+  "rationale": "Publicly reported cases (e.g. the 2018 Amazon recruiting-tool incident) and emerging legal mandates (e.g. NYC Local Law 144) show that undetected bias in AI hiring tools creates both discrimination and regulatory exposure. Asking this question directly tests whether the pre-deployment audit gate is actually operating, not merely documented as policy.",
+  "follow_up_actions": [
+    "Request the most recent bias audit report and confirm the auditor's independence from the tool's developer.",
+    "Confirm the audit was re-run after the last material model or scoring-logic change.",
+    "Escalate to legal/compliance if any in-scope tool lacks a current audit."
+  ],
+  "citations": [
+    {
+      "id": "cite-reuters-dastin-2018",
+      "source_type": "news_publication",
+      "title": "Amazon scraps secret AI recruiting tool that showed bias against women",
+      "publisher": "Reuters",
+      "url": "https://www.reuters.com/article/us-amazon-com-jobs-automation-insight/amazon-scraps-secret-ai-recruiting-tool-that-showed-bias-against-women-idUSKCN1MK08G",
+      "publication_date": "2018-10-10",
+      "accessed_date": "2026-08-03"
+    }
+  ],
+  "relationships": []
+}

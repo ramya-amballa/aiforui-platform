@@ -1,0 +1,76 @@
+{
+  "$schema_note": "Machine-readable ontology consumed by /validators. Narrative explanation lives in /docs/relationship-model.md.",
+  "version": "1.0.0",
+  "entity_types": ["decision", "incident", "pattern", "control", "evidence", "board_question"],
+  "relationship_types": [
+    {
+      "verb": "RESULTED_FROM",
+      "description": "The source object came into being as a direct consequence of the target object.",
+      "allowed": [
+        { "source_type": "decision", "target_type": "incident" },
+        { "source_type": "decision", "target_type": "decision" },
+        { "source_type": "board_question", "target_type": "incident" }
+      ]
+    },
+    {
+      "verb": "MITIGATED_BY",
+      "description": "The risk represented by the source object is reduced by the target object.",
+      "allowed": [
+        { "source_type": "incident", "target_type": "decision" },
+        { "source_type": "incident", "target_type": "pattern" },
+        { "source_type": "incident", "target_type": "control" }
+      ]
+    },
+    {
+      "verb": "IMPLEMENTED_BY",
+      "description": "The source object is put into practice through the target object.",
+      "allowed": [
+        { "source_type": "decision", "target_type": "pattern" },
+        { "source_type": "control", "target_type": "pattern" }
+      ]
+    },
+    {
+      "verb": "SATISFIES_CONTROL",
+      "description": "The source object fulfils the requirement described by the target control.",
+      "allowed": [
+        { "source_type": "decision", "target_type": "control" },
+        { "source_type": "pattern", "target_type": "control" }
+      ]
+    },
+    {
+      "verb": "REQUIRES_EVIDENCE",
+      "description": "The source object cannot be considered satisfied without producing the target evidence type.",
+      "allowed": [
+        { "source_type": "decision", "target_type": "evidence" },
+        { "source_type": "control", "target_type": "evidence" },
+        { "source_type": "pattern", "target_type": "evidence" }
+      ]
+    },
+    {
+      "verb": "RAISES_BOARD_QUESTION",
+      "description": "The source object implies a question that board-level oversight should ask.",
+      "allowed": [
+        { "source_type": "decision", "target_type": "board_question" },
+        { "source_type": "incident", "target_type": "board_question" },
+        { "source_type": "control", "target_type": "board_question" }
+      ]
+    },
+    {
+      "verb": "RELATED_TO",
+      "description": "A general, non-hierarchical association between two objects that doesn't fit a more specific verb. Symmetric in meaning, but must still be declared explicitly on at least one side.",
+      "allowed": [
+        { "source_type": "*", "target_type": "*" }
+      ]
+    }
+  ],
+  "acyclic_verbs": [
+    "RESULTED_FROM",
+    "MITIGATED_BY",
+    "IMPLEMENTED_BY",
+    "SATISFIES_CONTROL",
+    "REQUIRES_EVIDENCE",
+    "RAISES_BOARD_QUESTION"
+  ],
+  "cycle_detection_scope": "per_verb",
+  "cycle_detection_scope_note": "Cycle detection runs separately for each verb in acyclic_verbs, not across the union of them. Two different verbs pointing in opposite directions between the same pair of objects (e.g. 'decision RESULTED_FROM incident' and 'incident MITIGATED_BY decision') encode two distinct, simultaneously-true facts, not a logical loop. A genuine cycle is a chain of edges that all share one verb and loop back on themselves (e.g. decision-A RESULTED_FROM decision-B RESULTED_FROM decision-A)."
+}

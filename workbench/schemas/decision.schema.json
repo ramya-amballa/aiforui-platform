@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://workbench.aiforui.dev/schemas/decision.schema.json",
+  "title": "Governance Decision",
+  "description": "A concrete decision an organisation, regulator, or governance body made about how AI is governed. This is the hub entity of the workbench: incidents, patterns, controls, evidence and board questions are organised in relation to decisions like this one.",
+  "allOf": [
+    { "$ref": "https://workbench.aiforui.dev/schemas/common/base-entity.schema.json" },
+    {
+      "type": "object",
+      "required": ["id", "decision_statement", "decision_type"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^decision-[a-z0-9]+(-[a-z0-9]+)*$"
+        },
+        "decision_statement": {
+          "type": "string",
+          "minLength": 1,
+          "description": "The decision itself, stated as a concrete, testable commitment (e.g. 'No AI-based candidate screening tool may be deployed without a documented pre-deployment bias audit')."
+        },
+        "decision_type": {
+          "type": "string",
+          "enum": ["policy", "technical_control", "risk_acceptance", "process", "organizational"],
+          "description": "The general category of governance action this decision represents."
+        },
+        "decision_context": {
+          "type": "string",
+          "description": "What triggered or motivated this decision."
+        },
+        "governing_body": {
+          "type": "string",
+          "description": "Who made or owns this decision (e.g. 'Board Risk Committee', 'CISO', 'European Commission')."
+        },
+        "jurisdiction": {
+          "type": "array",
+          "items": { "type": "string" },
+          "uniqueItems": true,
+          "description": "Jurisdictions this decision applies in or was made under (e.g. 'EU', 'US-NY')."
+        },
+        "frameworks_referenced": {
+          "type": "array",
+          "items": { "type": "string" },
+          "uniqueItems": true,
+          "description": "Names of governance frameworks that informed this decision (e.g. 'NIST AI RMF', 'EU AI Act')."
+        },
+        "alternatives_considered": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Other options that were considered and not chosen, for traceability of the decision process."
+        }
+      }
+    }
+  ]
+}
