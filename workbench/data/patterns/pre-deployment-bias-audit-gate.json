@@ -1,5 +1,6 @@
 {
-  "id": "pattern-pre-deployment-bias-audit-gate",
+  "id": "PAT-001",
+  "slug": "pre-deployment-bias-audit-gate",
   "title": "Pre-Deployment Bias Audit Gate",
   "description": "A release-gating pattern that blocks an AI-based hiring or screening tool from reaching live candidates until an independent bias audit has been completed and its results documented.",
   "version": "1.0.0",
@@ -8,6 +9,16 @@
   "created_date": "2026-08-03",
   "updated_date": "2026-08-03",
   "tags": ["hiring", "bias", "release-gate", "audit"],
+  "created_by": "AI Governance Workbench (Phase 1 seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-03",
+      "by": "AI Governance Workbench (Phase 1 seed data)",
+      "version": "1.0.0",
+      "note": "Initial Phase 1 seed content. Awaiting first named-human review."
+    }
+  ],
   "problem": "Organisations deploy AI-based candidate screening or ranking tools without any structured check for disparate impact on protected groups, discovering bias only after harm has occurred, been reported publicly, or triggered regulatory scrutiny.",
   "solution": "Introduce a mandatory, independently-conducted bias audit as a release gate before an AI hiring tool is used on live candidates. The audit measures selection-rate disparities across protected characteristics using historical or representative test data, documents methodology and results, and must be re-run whenever the model, training data, or scoring logic materially changes.",
   "applicability": "Any AI system used to screen, rank, or score candidates or employees for hiring, promotion, or termination decisions, particularly where the tool operates in or affects candidates in a jurisdiction with a legal bias-audit mandate (e.g. New York City).",
@@ -28,15 +39,17 @@
   "relationships": [
     {
       "type": "SATISFIES_CONTROL",
-      "target_id": "control-nist-ai-rmf-measure-2-11",
+      "target_id": "CTR-001",
       "target_type": "control",
-      "description": "The audit performed by this pattern is the mechanism that satisfies the fairness/bias evaluation control."
+      "reason": "The audit performed by this pattern is the mechanism that satisfies the fairness/bias evaluation control.",
+      "confidence": "Community"
     },
     {
       "type": "REQUIRES_EVIDENCE",
-      "target_id": "evidence-bias-audit-report",
+      "target_id": "EVI-001",
       "target_type": "evidence",
-      "description": "The gate's output is a bias audit report."
+      "reason": "The gate's output is a bias audit report.",
+      "confidence": "Community"
     }
   ]
 }

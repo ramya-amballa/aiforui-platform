@@ -1,7 +1,27 @@
 {
   "$schema_note": "Machine-readable ontology consumed by /validators. Narrative explanation lives in /docs/relationship-model.md.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "entity_types": ["decision", "incident", "pattern", "control", "evidence", "board_question"],
+  "id_prefixes": {
+    "decision": "DEC",
+    "incident": "INC",
+    "pattern": "PAT",
+    "control": "CTR",
+    "evidence": "EVI",
+    "board_question": "BRD"
+  },
+  "reserved_prefixes": {
+    "LAW": "Legislation — reserved for a future entity type, not yet implemented.",
+    "STD": "Standard — reserved for a future entity type, not yet implemented.",
+    "ORG": "Organization — reserved for a future entity type, not yet implemented.",
+    "PER": "Person — reserved for a future entity type, not yet implemented.",
+    "TAG": "Tag/topic as a first-class node — reserved for a future entity type, not yet implemented."
+  },
+  "outbound_relationship_limits": {
+    "soft_limit": 5,
+    "hard_limit": 7,
+    "note": "Per object, counted on valid outbound relationships only. Exceeding soft_limit produces a non-fatal warning ('consider simplifying'); exceeding hard_limit is a validation error. See /validators/src/rules/relationships.ts."
+  },
   "relationship_types": [
     {
       "verb": "RESULTED_FROM",

@@ -11,7 +11,7 @@
       "properties": {
         "id": {
           "type": "string",
-          "pattern": "^incident-[a-z0-9]+(-[a-z0-9]+)*$"
+          "pattern": "^INC-\\d{3,}$"
         },
         "occurred_date": {
           "type": "string",

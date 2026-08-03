@@ -1,5 +1,6 @@
 {
-  "id": "incident-amazon-recruiting-tool-bias-2018",
+  "id": "INC-001",
+  "slug": "amazon-recruiting-tool-bias-2018",
   "title": "Amazon scraps secret AI recruiting engine after it is found to penalise women's resumes",
   "description": "Amazon built an experimental machine-learning recruiting tool, in development since 2014, that scored job candidates' resumes from one to five stars. Because the model was trained on ten years of resumes submitted to Amazon, which came predominantly from men, it taught itself to penalise resumes containing the word 'women's' (e.g. 'women's chess club captain') and downgraded graduates of two all-women's colleges. Amazon edited the tool to make specific terms neutral, but lost confidence it would not find other, subtler ways to discriminate, and the project was disbanded by 2017. It was never used as the sole basis for hiring decisions.",
   "version": "1.0.0",
@@ -8,6 +9,16 @@
   "created_date": "2026-08-03",
   "updated_date": "2026-08-03",
   "tags": ["hiring", "bias", "discrimination", "recruiting", "resume-screening"],
+  "created_by": "AI Governance Workbench (Phase 1 seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-03",
+      "by": "AI Governance Workbench (Phase 1 seed data)",
+      "version": "1.0.0",
+      "note": "Initial Phase 1 seed content, cross-checked against multiple independent public sources. Awaiting first named-human review."
+    }
+  ],
   "occurred_date": "2018-10-10",
   "organizations_involved": ["Amazon"],
   "harm_types": ["discrimination"],
@@ -30,21 +41,24 @@
   "relationships": [
     {
       "type": "MITIGATED_BY",
-      "target_id": "decision-bias-audit-gate-for-hiring-ai",
+      "target_id": "DEC-001",
       "target_type": "decision",
-      "description": "This class of incident is the motivating case for requiring a pre-deployment bias audit gate on AI hiring tools."
+      "reason": "This class of incident is the motivating case for requiring a pre-deployment bias audit gate on AI hiring tools.",
+      "confidence": "Community"
     },
     {
       "type": "MITIGATED_BY",
-      "target_id": "pattern-pre-deployment-bias-audit-gate",
+      "target_id": "PAT-001",
       "target_type": "pattern",
-      "description": "A pre-deployment bias audit would surface disparate impact of this kind before a tool reaches live candidates."
+      "reason": "A pre-deployment bias audit would surface disparate impact of this kind before a tool reaches live candidates.",
+      "confidence": "Community"
     },
     {
       "type": "RAISES_BOARD_QUESTION",
-      "target_id": "board_question-independent-bias-audit-before-deployment",
+      "target_id": "BRD-001",
       "target_type": "board_question",
-      "description": "This incident is a canonical example of the harm this board question is designed to pre-empt."
+      "reason": "This incident is a canonical example of the harm this board question is designed to pre-empt.",
+      "confidence": "Reviewed"
     }
   ]
 }

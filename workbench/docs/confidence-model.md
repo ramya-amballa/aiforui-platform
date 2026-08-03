@@ -31,3 +31,11 @@ This is a project-governance question, not something the schema or validator enf
 ## Interaction with the citation model
 
 The validator's `missing_citation` rule (see `/docs/citation-model.md`) requires at least one citation whenever `confidence` is `Verified` or `Reviewed` — the idea being that a record claiming that level of trust must be able to point to why. `Draft` and `Community` objects are allowed to have zero citations (someone is allowed to sketch an idea before sourcing it), except for `Incident` and `Decision` objects, which always require at least one citation regardless of confidence, because an uncited "this happened" or "this is the decision to make" is not a safe thing to publish even provisionally.
+
+## Confidence on relationships, not just nodes
+
+A `relationship` can optionally carry its own `confidence`, using this same five-state vocabulary (see `/docs/relationship-model.md`). This exists because two well-verified nodes being connected doesn't make the specific *claim that they're connected* equally well-verified — the node's confidence describes the node's own content, not every inference drawn between it and something else. If an edge omits `confidence`, it's read as inheriting its source object's confidence.
+
+## Who created, reviewed, and approved a record
+
+Alongside `confidence`, an object can carry `created_by`, `reviewed_by`, and `approved_by` (names/handles), plus an append-only `history` array logging every `created` / `updated` / `reviewed` / `approved` / `archived` / `retracted` event with its date, actor, and the `version` it applied to. This is what makes a confidence level auditable rather than asserted: given an object claiming `Reviewed`, a reader can check *who* reviewed it and *when* via `reviewed_by` and `history`, not just take the field's word for it. See `/schemas/common/history-entry.schema.json` and `/ONTOLOGY.md`.

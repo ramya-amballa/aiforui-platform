@@ -1,5 +1,6 @@
 {
-  "id": "evidence-bias-audit-report",
+  "id": "EVI-001",
+  "slug": "bias-audit-report",
   "title": "Bias Audit Report",
   "description": "A written report documenting the results of an independent bias audit of an automated employment decision tool, modelled on the audit artifact required by NYC Local Law 144.",
   "version": "1.0.0",
@@ -8,6 +9,16 @@
   "created_date": "2026-08-03",
   "updated_date": "2026-08-03",
   "tags": ["hiring", "bias", "audit-report"],
+  "created_by": "AI Governance Workbench (Phase 1 seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-03",
+      "by": "AI Governance Workbench (Phase 1 seed data)",
+      "version": "1.0.0",
+      "note": "Initial Phase 1 seed content, modelled directly on a real regulatory requirement (NYC LL144)."
+    }
+  ],
   "evidence_description": "A report documenting the methodology and results of a bias audit of an automated employment decision tool, including selection rates by demographic category (e.g. sex, race/ethnicity) and any resulting impact ratios, together with a description of the data used.",
   "collection_method": "Independent third-party audit performed by an entity independent of the tool's developer, using historical or representative test candidate data.",
   "retention_period": "Minimum 3 years from date of last use, aligned with typical employment record-keeping requirements.",

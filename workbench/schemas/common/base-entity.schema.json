@@ -6,6 +6,7 @@
   "type": "object",
   "required": [
     "id",
+    "slug",
     "title",
     "description",
     "version",
@@ -20,8 +21,14 @@
   "properties": {
     "id": {
       "type": "string",
-      "description": "Globally unique identifier. Type-prefixed and kebab-case, e.g. 'decision-eu-ai-act-...' (the type prefix itself may contain underscores, e.g. 'board_question-...').",
-      "pattern": "^[a-z]+(_[a-z]+)*-[a-z0-9]+(-[a-z0-9]+)*$"
+      "description": "Deterministic, human-readable, type-prefixed identifier, e.g. 'DEC-001'. Assigned sequentially per type — see /ONTOLOGY.md for the full prefix table and reserved future prefixes.",
+      "pattern": "^[A-Z]{3}-\\d{3,}$"
+    },
+    "slug": {
+      "type": "string",
+      "description": "Permanent, human-readable URL slug, unique within this object's entity type (e.g. 'decisions/<slug>'). Kebab-case. Once published, a slug should not be changed — it's the stable public address for this object, independent of the internal id.",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "minLength": 3
     },
     "title": {
       "type": "string",
@@ -35,7 +42,7 @@
     },
     "version": {
       "type": "string",
-      "description": "Semantic version of this record's content. Bump on any substantive edit so history stays traceable.",
+      "description": "Semantic version of this record's content. Bump on any substantive edit and add a matching entry to 'history'.",
       "pattern": "^\\d+\\.\\d+\\.\\d+$"
     },
     "status": {
@@ -68,7 +75,27 @@
       "type": "array",
       "items": { "type": "string", "minLength": 1 },
       "uniqueItems": true,
-      "description": "Optional names/handles of people who authored or reviewed this record, in support of community contribution."
+      "description": "Optional names/handles of everyone who touched this record in any capacity, in support of community contribution. See created_by/reviewed_by/approved_by for specific roles."
+    },
+    "created_by": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Who authored this record's first version."
+    },
+    "reviewed_by": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Who most recently reviewed this record's content against its citations."
+    },
+    "approved_by": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Who approved this record's current confidence/status. For records promoted via /ingestion, this is the human_review.reviewer."
+    },
+    "history": {
+      "type": "array",
+      "items": { "$ref": "https://workbench.aiforui.dev/schemas/common/history-entry.schema.json" },
+      "description": "Append-only lifecycle log. See /schemas/common/history-entry.schema.json."
     },
     "citations": {
       "type": "array",
@@ -78,7 +105,7 @@
     "relationships": {
       "type": "array",
       "items": { "$ref": "https://workbench.aiforui.dev/schemas/common/relationship.schema.json" },
-      "description": "Typed, directed edges from this object to other canonical objects. See /docs/relationship-model.md."
+      "description": "Typed, directed edges from this object to other canonical objects. See /docs/relationship-model.md. Soft limit 5, hard limit 7 outbound edges per object — see /validators."
     }
   }
 }

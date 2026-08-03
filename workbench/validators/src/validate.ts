@@ -1,7 +1,7 @@
 import { buildAjv, compileEntityValidators, loadOntology } from "./load-schemas.js";
 import { loadAllData } from "./load-data.js";
 import { checkSchema } from "./rules/schema.js";
-import { checkDuplicateIds } from "./rules/duplicate-ids.js";
+import { checkDuplicateIds, checkDuplicateSlugs } from "./rules/duplicate-ids.js";
 import { checkRelationships } from "./rules/relationships.js";
 import { checkCitations } from "./rules/citations.js";
 import { checkCircularRelationships } from "./rules/circular.js";
@@ -30,17 +30,19 @@ function main(): void {
   // and are shaped correctly.
   issues.push(...checkSchema(entities, validators));
 
-  if (issues.length === 0) {
+  if (issues.filter((i) => i.severity === "error").length === 0) {
     issues.push(...checkDuplicateIds(entities));
+    issues.push(...checkDuplicateSlugs(entities));
     issues.push(...checkRelationships(entities, ontology));
     issues.push(...checkCitations(entities));
     issues.push(...checkCircularRelationships(entities, ontology));
   } else {
-    console.error("Skipping graph-level checks (duplicate IDs, orphans, citations, cycles) until schema errors are fixed.\n");
+    console.error("Skipping graph-level checks (duplicate IDs/slugs, orphans, citations, cycles) until schema errors are fixed.\n");
   }
 
   printReport(issues, entities.length);
-  process.exit(issues.length === 0 ? 0 : 1);
+  const hasErrors = issues.some((i) => i.severity === "error");
+  process.exit(hasErrors ? 1 : 0);
 }
 
 main();

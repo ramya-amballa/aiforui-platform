@@ -8,6 +8,14 @@ The AI Governance Workbench is a public, open-source knowledge graph for AI gove
 
 It is **not** AOS. AOS is the flagship consulting operating system elsewhere in this repository, built for delivery engagements. The Workbench is independent of it: separate module (`/workbench`), separate audience (the public, not clients), separate goal (build industry authority through a durable reference asset, not run engagements). Nothing in `/workbench` depends on anything in `/AOS`, and nothing in `/AOS` should come to depend on `/workbench`'s data formats without a deliberate integration decision — they are allowed to evolve independently.
 
+## The Canonical Principle
+
+This is the single sentence every other decision in this document, and in `/ONTOLOGY.md`, exists to serve:
+
+> **The Knowledge Graph is the product. Everything else is a view.**
+
+A website, a PDF export, an API, a search index, a graph visualisation, an LLM-assisted authoring tool — every one of them is a *view*, generated or served from `/data`. None of them is a second place facts can originate or be edited. Nothing edits the data directly except the canonical repository (a PR against `/data`, passing `/validators`). This is the architectural guardrail against drift: as soon as a future team is tempted to let a dashboard "just quickly patch" a fact, or let an API accept writes that bypass schema/ontology validation, that's the Canonical Principle being violated, and the fix is to route the change back through the repository, not to special-case the view. See `/ONTOLOGY.md` for the full statement, including how this applies to AI-authored content.
+
 ## Why data-first
 
 The instruction that shaped every other decision in Phase 1: **the data is the long-term asset, not the UI.** A knowledge graph about AI governance is valuable for as long as the underlying facts, relationships, and citations are accurate and current — UI frameworks will be rewritten many times over that lifespan. So Phase 1 deliberately builds *only* the data layer: schemas, sample data, an ontology, a validator, and an ingestion path. No frontend, no search index, no API. Anything built later (a static site, a graph explorer, a REST/GraphQL API, an LLM-assisted authoring tool) should be able to treat `/workbench/data` and `/workbench/schemas` as its single source of truth and be rebuilt from scratch without touching either.
@@ -29,6 +37,7 @@ The brief for this project is explicit: "the primary organizing principle is Gov
 
 ```
 /workbench
+  ONTOLOGY.md     The constitution: every core term defined in one place, plus the Canonical Principle
   /schemas        JSON Schema definitions for the 6 canonical entity types + shared building blocks
   /data           The canonical dataset itself, one JSON file per object, one directory per entity type
   /relationships  The machine-readable relationship ontology (allowed verbs and triples)
@@ -50,7 +59,11 @@ The brief says "every governance statement, mapping, recommendation, and inciden
 
 ## Why AI-generated content cannot enter the canonical dataset directly
 
-This is enforced structurally, not just as a policy statement: the ingestion pipeline's `draft-incident.schema.json` is a *separate* schema from `incident.schema.json`, drafts live in `/ingestion/drafts` rather than `/data`, nothing in `/data` is ever read from `/ingestion/drafts`, and the only script capable of writing into `/data/incidents` (`promote.ts`) hard-refuses to run unless a human reviewer's name and an explicit confidence assignment are present with `human_review.status == "approved"`. An LLM can help *draft* a candidate incident (that's what `extraction_method: "ai_assisted"` records), but it cannot become canonical without a named human approving it. See `/docs/ingestion-pipeline.md`.
+This is enforced structurally, not just as a policy statement: the ingestion pipeline's `draft-incident.schema.json` is a *separate* schema from `incident.schema.json`, drafts live in `/ingestion/drafts` rather than `/data`, nothing in `/data` is ever read from `/ingestion/drafts`, and the only script capable of writing into `/data/incidents` (`promote.ts`) hard-refuses to run unless a human reviewer's name and an explicit confidence assignment are present with `human_review.status == "approved"`. An LLM can help *draft* a candidate incident (that's what `extraction_method: "ai_assisted"` records), but it cannot become canonical without a named human approving it. `/ONTOLOGY.md` states this as one of the project's two constitutional rules, alongside the Canonical Principle above. See `/docs/ingestion-pipeline.md`.
+
+## Designing for a future API without building one
+
+Nothing in Phase 1 is exposed over an API, but nothing about `/data`'s design should have to change when one is added — see "Designing for a future API" in `/ONTOLOGY.md`. In short: `/data` already *is* the contract (stable `id`s and `slug`s, one schema per type), and the validator's invariants (no dangling references, no orphans, no invalid relationship types) mean an API built on top of it never has to defend against a broken graph. Building the API itself remains out of scope for Phase 1.
 
 ## What Phase 1 deliberately does not build
 

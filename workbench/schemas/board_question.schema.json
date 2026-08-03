@@ -11,7 +11,7 @@
       "properties": {
         "id": {
           "type": "string",
-          "pattern": "^board_question-[a-z0-9]+(-[a-z0-9]+)*$"
+          "pattern": "^BRD-\\d{3,}$"
         },
         "question_text": {
           "type": "string",

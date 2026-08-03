@@ -11,7 +11,7 @@
       "properties": {
         "id": {
           "type": "string",
-          "pattern": "^decision-[a-z0-9]+(-[a-z0-9]+)*$"
+          "pattern": "^DEC-\\d{3,}$"
         },
         "decision_statement": {
           "type": "string",

@@ -23,7 +23,12 @@ export function buildAjv(): Ajv {
   addFormats(ajv);
 
   const commonDir = path.join(SCHEMAS_DIR, "common");
-  for (const file of ["citation.schema.json", "relationship.schema.json", "base-entity.schema.json"]) {
+  for (const file of [
+    "citation.schema.json",
+    "relationship.schema.json",
+    "history-entry.schema.json",
+    "base-entity.schema.json",
+  ]) {
     ajv.addSchema(readJson(path.join(commonDir, file)) as object);
   }
 

@@ -1,4 +1,4 @@
-import { existsSync, mkdirSync, renameSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, readdirSync, renameSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { buildIngestionAjv, readJsonFile, PROMOTED_DRAFTS_DIR, CANONICAL_INCIDENTS_DIR } from "./schema.js";
 import type { DraftIncident } from "./types.js";
@@ -7,6 +7,41 @@ import type { CanonicalEntity } from "../../validators/src/types.js";
 function fail(message: string): never {
   console.error(`✘ ${message}`);
   process.exit(1);
+}
+
+function slugify(title: string): string {
+  return title
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .replace(/-{2,}/g, "-");
+}
+
+function loadExistingIncidents(): CanonicalEntity[] {
+  let files: string[];
+  try {
+    files = readdirSync(CANONICAL_INCIDENTS_DIR).filter((f) => f.endsWith(".json"));
+  } catch {
+    return [];
+  }
+  return files.map((f) => JSON.parse(readFileSync(path.join(CANONICAL_INCIDENTS_DIR, f), "utf-8")) as CanonicalEntity);
+}
+
+function nextIncidentId(existing: CanonicalEntity[]): string {
+  let max = 0;
+  for (const entity of existing) {
+    const match = /^INC-(\d+)$/.exec(entity.id ?? "");
+    if (match) max = Math.max(max, Number(match[1]));
+  }
+  return `INC-${String(max + 1).padStart(3, "0")}`;
+}
+
+function uniqueSlug(baseSlug: string, existing: CanonicalEntity[]): string {
+  const taken = new Set(existing.map((e) => e.slug));
+  if (!taken.has(baseSlug)) return baseSlug;
+  let n = 2;
+  while (taken.has(`${baseSlug}-${n}`)) n += 1;
+  return `${baseSlug}-${n}`;
 }
 
 function main(): void {
@@ -27,7 +62,7 @@ function main(): void {
     process.exit(1);
   }
 
-  const { human_review, suggested_incident, source, raw_excerpt } = draft;
+  const { human_review, suggested_incident, source, raw_excerpt, captured_by } = draft;
 
   if (human_review.status !== "approved") {
     fail(
@@ -42,16 +77,20 @@ function main(): void {
     fail(`Draft '${draft.id}' is approved but has no human_review.confidence_assigned. Refusing to promote.`);
   }
 
-  const canonicalId = `incident-${draft.id.replace(/^draft-incident-/, "")}`;
-  const outPath = path.join(CANONICAL_INCIDENTS_DIR, `${canonicalId}.json`);
+  const existingIncidents = loadExistingIncidents();
+  const canonicalId = nextIncidentId(existingIncidents);
+  const slug = uniqueSlug(slugify(suggested_incident.title), existingIncidents);
+  const outPath = path.join(CANONICAL_INCIDENTS_DIR, `${slug}.json`);
   if (existsSync(outPath)) {
-    fail(`Canonical incident '${canonicalId}' already exists at ${outPath}. Refusing to overwrite.`);
+    fail(`'${outPath}' already exists. Refusing to overwrite.`);
   }
 
   const today = new Date().toISOString().slice(0, 10);
+  const createdBy = captured_by ?? human_review.reviewer;
 
   const canonical: CanonicalEntity = {
     id: canonicalId,
+    slug,
     title: suggested_incident.title,
     description: suggested_incident.description,
     version: "1.0.0",
@@ -60,6 +99,25 @@ function main(): void {
     created_date: today,
     updated_date: today,
     tags: suggested_incident.tags ?? [],
+    created_by: createdBy,
+    reviewed_by: human_review.reviewer,
+    approved_by: human_review.reviewer,
+    history: [
+      {
+        event: "created",
+        date: draft.created_date,
+        by: createdBy,
+        version: "1.0.0",
+        note: `Captured from source: ${source.title} (${source.publisher}).`,
+      },
+      {
+        event: "approved",
+        date: human_review.reviewed_date ?? today,
+        by: human_review.reviewer,
+        version: "1.0.0",
+        note: human_review.notes ?? "Promoted via ingestion pipeline.",
+      },
+    ],
     citations: [
       {
         id: "cite-source",
@@ -101,9 +159,9 @@ function main(): void {
   const promotedDraftPath = path.join(PROMOTED_DRAFTS_DIR, path.basename(filePath));
   renameSync(path.resolve(filePath), promotedDraftPath);
 
-  console.log(`✔ Promoted '${draft.id}' -> ${path.relative(process.cwd(), outPath)}`);
+  console.log(`✔ Promoted '${draft.id}' -> ${canonicalId} (${path.relative(process.cwd(), outPath)})`);
   console.log(`  Draft archived to ${path.relative(process.cwd(), promotedDraftPath)} for traceability.`);
-  console.log(`  Reminder: relationships were left empty. Add them by hand, then run 'npm run validate'.`);
+  console.log(`  Reminder: relationships were left empty. Add them by hand (each with a 'reason'), then run 'npm run validate'.`);
 }
 
 main();

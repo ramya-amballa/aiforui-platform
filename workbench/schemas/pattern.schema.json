@@ -11,7 +11,7 @@
       "properties": {
         "id": {
           "type": "string",
-          "pattern": "^pattern-[a-z0-9]+(-[a-z0-9]+)*$"
+          "pattern": "^PAT-\\d{3,}$"
         },
         "problem": {
           "type": "string",

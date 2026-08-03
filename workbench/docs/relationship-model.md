@@ -30,6 +30,18 @@ Per the product's core organising principle, most verbs above either originate a
 
 These are two distinct, simultaneously-true facts about the same pair of objects, not a contradiction: the decision was caused by the incident, *and* the decision (once implemented) reduces the risk of that class of incident recurring. See "Cycle detection is scoped per verb" below for why the validator does not treat this as a circular relationship.
 
+## Every edge needs a stated reason
+
+`relationship.schema.json` makes `reason` a required field, not an optional `description`. A bare `Incident -MITIGATED_BY-> Decision` edge tells you *that* two objects are connected but not *why this specific pairing* — six months later, a reader (human or the eventual API) has no way to tell a well-considered link from a placeholder one. `reason` is a short, plain-language sentence answering "why does this edge exist," written from the source object's point of view (see the seed dataset in `/data` for real examples). This is enforced at the schema level: an edge without a `reason` fails validation before any graph-level check even runs.
+
+## Relationship-level confidence
+
+Optionally, an edge can carry its own `confidence`, using the same five-state vocabulary as node-level confidence (`/docs/confidence-model.md`): `Verified`, `Reviewed`, `Draft`, `Community`, `Archived`. This matters because *the existence of two well-verified nodes doesn't mean the specific claim that they're connected is equally well-verified* — e.g. an `Incident` and a `Decision` can each independently be `Verified`, while the specific claim "this decision was a direct response to this incident" is still an inferential judgement call the contributor is less sure of. If `confidence` is omitted on an edge, it's read as inheriting the source object's own confidence. Reusing the node vocabulary (rather than inventing a parallel one, e.g. "Proposed") keeps confidence a single concept to reason about across the whole dataset — see `/ONTOLOGY.md`.
+
+## Outbound relationship limits
+
+Per `ontology.json`'s `outbound_relationship_limits`, an object may have at most **5 outbound relationships before the validator warns**, and at most **7 before it errors**. This is deliberately a soft/hard pair rather than a single hard cap: real governance mappings sometimes legitimately fan out (an incident reasonably mapping to two decisions, two patterns, and two controls is six edges, and that's fine), so the validator should nudge rather than block reasonable cases while still catching an object that has clearly become an unmaintainable everything-connects-to-everything hub. A warning never fails the build (`npm run validate` still exits 0); exceeding the hard limit does. See `/validators/src/rules/relationships.ts`.
+
 ## Validation the ontology enables
 
 Given `ontology.json`, the validator (`/validators`) can mechanically reject:
@@ -38,6 +50,7 @@ Given `ontology.json`, the validator (`/validators`) can mechanically reject:
 - **Dangling references** — a `target_id` that doesn't resolve to any object in the dataset.
 - **Target-type mismatches** — a `target_id` that exists, but whose actual entity type doesn't match the `target_type` declared on the edge (catches stale references after an object's type is corrected, or simple copy-paste errors).
 - **Orphan nodes** — any object with zero relationships pointing to it *and* zero relationships it points out to is disconnected from the graph and rejected. A well-formed dataset has no islands; if an object genuinely has nothing to connect to yet, it isn't ready to leave `draft` status.
+- **Excessive outbound relationships** — see "Outbound relationship limits" above.
 - **Circular relationships** — see below.
 
 ## Cycle detection is scoped per verb

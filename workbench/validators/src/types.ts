@@ -49,12 +49,22 @@ export interface Relationship {
   type: string;
   target_id: string;
   target_type: EntityType;
-  description?: string;
+  reason: string;
+  confidence?: "Verified" | "Reviewed" | "Draft" | "Community" | "Archived";
   citation_ids?: string[];
+}
+
+export interface HistoryEntry {
+  event: "created" | "updated" | "reviewed" | "approved" | "archived" | "retracted";
+  date: string;
+  by: string;
+  version: string;
+  note?: string;
 }
 
 export interface CanonicalEntity {
   id: string;
+  slug: string;
   title: string;
   description: string;
   version: string;
@@ -63,6 +73,10 @@ export interface CanonicalEntity {
   created_date: string;
   updated_date: string;
   tags: string[];
+  created_by?: string;
+  reviewed_by?: string;
+  approved_by?: string;
+  history?: HistoryEntry[];
   citations: Citation[];
   relationships: Relationship[];
   [key: string]: unknown;
@@ -85,15 +99,24 @@ export interface OntologyRelationshipType {
   allowed: OntologyTriple[];
 }
 
+export interface OutboundRelationshipLimits {
+  soft_limit: number;
+  hard_limit: number;
+  note?: string;
+}
+
 export interface Ontology {
   version: string;
   entity_types: EntityType[];
+  id_prefixes: Record<EntityType, string>;
+  reserved_prefixes: Record<string, string>;
+  outbound_relationship_limits: OutboundRelationshipLimits;
   relationship_types: OntologyRelationshipType[];
   acyclic_verbs: string[];
   cycle_detection_scope: string;
 }
 
-export type IssueSeverity = "error";
+export type IssueSeverity = "error" | "warning";
 
 export interface ValidationIssue {
   rule: string;

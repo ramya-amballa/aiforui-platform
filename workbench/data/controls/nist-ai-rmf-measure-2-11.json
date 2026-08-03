@@ -1,5 +1,6 @@
 {
-  "id": "control-nist-ai-rmf-measure-2-11",
+  "id": "CTR-001",
+  "slug": "nist-ai-rmf-measure-2-11",
   "title": "NIST AI RMF MEASURE 2.11 — Fairness and bias are evaluated and documented",
   "description": "The fairness-and-bias evaluation control within the MEASURE function of the NIST AI Risk Management Framework (AI RMF 1.0). The control_text below is a good-faith paraphrase pending verification against the primary NIST publication — hence its 'Community' confidence rather than 'Verified'.",
   "version": "1.0.0",
@@ -8,6 +9,16 @@
   "created_date": "2026-08-03",
   "updated_date": "2026-08-03",
   "tags": ["nist-ai-rmf", "fairness", "bias", "measure-function"],
+  "created_by": "AI Governance Workbench (Phase 1 seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-03",
+      "by": "AI Governance Workbench (Phase 1 seed data)",
+      "version": "1.0.0",
+      "note": "Initial Phase 1 seed content. control_text is a paraphrase pending verification against the primary NIST publication."
+    }
+  ],
   "framework_name": "NIST AI Risk Management Framework (AI RMF 1.0)",
   "control_reference": "MEASURE 2.11",
   "control_text": "Fairness and bias, as identified in the MAP function, are evaluated using disaggregated evaluation across relevant subpopulations, in collaboration with affected communities where practicable. The results of that evaluation — including identified disparities and the limitations of the methods used — are documented.",
@@ -27,15 +38,17 @@
   "relationships": [
     {
       "type": "REQUIRES_EVIDENCE",
-      "target_id": "evidence-bias-audit-report",
+      "target_id": "EVI-001",
       "target_type": "evidence",
-      "description": "Satisfying this control requires producing a bias audit report as documentary evidence."
+      "reason": "Satisfying this control requires producing a bias audit report as documentary evidence.",
+      "confidence": "Reviewed"
     },
     {
       "type": "RELATED_TO",
-      "target_id": "board_question-independent-bias-audit-before-deployment",
+      "target_id": "BRD-001",
       "target_type": "board_question",
-      "description": "This control and this board question address the same underlying fairness/bias risk from different angles (technical requirement vs. oversight question)."
+      "reason": "This control and this board question address the same underlying fairness/bias risk from different angles (technical requirement vs. oversight question).",
+      "confidence": "Community"
     }
   ]
 }

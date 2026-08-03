@@ -52,6 +52,11 @@
       "enum": ["human", "ai_assisted"],
       "description": "How the suggested_incident content below was drafted. AI-assisted drafts require human review before promotion exactly like human ones — this field is for transparency, not for skipping review."
     },
+    "captured_by": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Name/handle of the person who captured this draft (may differ from the reviewer who later approves it). Carried through to the promoted record's created_by."
+    },
     "suggested_incident": {
       "type": "object",
       "description": "The reviewer's/extractor's candidate content for the eventual canonical Incident record. Not schema-validated against incident.schema.json until promotion, since it is expected to be incomplete or provisional at this stage.",

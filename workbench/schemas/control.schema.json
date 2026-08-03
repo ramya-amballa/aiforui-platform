@@ -11,7 +11,7 @@
       "properties": {
         "id": {
           "type": "string",
-          "pattern": "^control-[a-z0-9]+(-[a-z0-9]+)*$"
+          "pattern": "^CTR-\\d{3,}$"
         },
         "framework_name": {
           "type": "string",

@@ -28,6 +28,7 @@ export function checkRelationships(
   const knownVerbs = new Set(ontology.relationship_types.map((r) => r.verb));
   const degree = new Map<string, number>();
   const bump = (id: string) => degree.set(id, (degree.get(id) ?? 0) + 1);
+  const outboundCount = new Map<string, number>();
 
   for (const entity of entities) {
     const sourceId = entity.data?.id;
@@ -95,6 +96,7 @@ export function checkRelationships(
 
       bump(sourceId);
       bump(rel.target_id);
+      outboundCount.set(sourceId, (outboundCount.get(sourceId) ?? 0) + 1);
     }
   }
 
@@ -108,6 +110,26 @@ export function checkRelationships(
         filePath: entity.filePath,
         entityId: id,
         message: `'${id}' has no valid incoming or outgoing relationships and is disconnected from the graph.`,
+      });
+    }
+
+    const count = outboundCount.get(id) ?? 0;
+    const { soft_limit: softLimit, hard_limit: hardLimit } = ontology.outbound_relationship_limits;
+    if (count > hardLimit) {
+      issues.push({
+        rule: "outbound_relationship_hard_limit",
+        severity: "error",
+        filePath: entity.filePath,
+        entityId: id,
+        message: `'${id}' has ${count} outbound relationships, exceeding the hard limit of ${hardLimit}. Split this object or reconsider the relationships.`,
+      });
+    } else if (count > softLimit) {
+      issues.push({
+        rule: "outbound_relationship_soft_limit",
+        severity: "warning",
+        filePath: entity.filePath,
+        entityId: id,
+        message: `'${id}' has ${count} outbound relationships, above the recommended soft limit of ${softLimit}. Consider simplifying relationships.`,
       });
     }
   }

@@ -5,7 +5,7 @@
   "description": "A single typed, directed edge from the owning object to another canonical object. The (verb, source_type, target_type) triple must be permitted by the ontology in /relationships/ontology.json — see /docs/relationship-model.md.",
   "type": "object",
   "additionalProperties": false,
-  "required": ["type", "target_id", "target_type"],
+  "required": ["type", "target_id", "target_type", "reason"],
   "properties": {
     "type": {
       "type": "string",
@@ -30,9 +30,15 @@
       "description": "The declared entity type of the target, used to validate the edge against the ontology and to catch stale/incorrect references.",
       "enum": ["decision", "incident", "pattern", "control", "evidence", "board_question"]
     },
-    "description": {
+    "reason": {
       "type": "string",
-      "description": "Short human-readable rationale for why this edge exists."
+      "minLength": 1,
+      "description": "Why this edge exists, in plain language. Mandatory: an edge without a stated reason is not permitted, since the verb+target alone rarely explains the judgement call behind it (e.g. why this control specifically, not another)."
+    },
+    "confidence": {
+      "type": "string",
+      "description": "How much this specific edge should be trusted, using the same vocabulary as node-level confidence (/docs/confidence-model.md). Optional: an edge with no stated confidence is read as inheriting the source object's own confidence.",
+      "enum": ["Verified", "Reviewed", "Draft", "Community", "Archived"]
     },
     "citation_ids": {
       "type": "array",

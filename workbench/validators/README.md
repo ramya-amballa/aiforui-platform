@@ -7,17 +7,17 @@ npm install
 npm run validate
 ```
 
-Exits non-zero and prints a per-file report if anything fails. This is wired into CI (`.github/workflows/workbench-validate.yml`) on every push/PR touching `/workbench/**`, so it doubles as the merge gate for changes to the dataset.
+Exits non-zero only if any **error**-severity issue is found; **warning**-severity issues (currently just the outbound-relationship soft limit) print but don't fail the build. This is wired into CI (`.github/workflows/workbench-validate.yml`) on every push/PR touching `/workbench/**`, so it doubles as the merge gate for changes to the dataset.
 
 ## What it checks
 
-1. **Schema validation** (`src/rules/schema.ts`) — every object in `/data` against its entity schema in `/schemas`, via `ajv`. This covers both "schema violations" generally and "missing mandatory fields" specifically (JSON Schema's `required` keyword).
-2. **Duplicate IDs** (`src/rules/duplicate-ids.ts`) — no two objects anywhere in `/data` may share an `id`.
-3. **Relationship integrity** (`src/rules/relationships.ts`) — every relationship's verb and `(source_type, target_type)` triple must be permitted by `/relationships/ontology.json`; every `target_id` must resolve to a real object; that object's actual type must match the declared `target_type`; and every object must have at least one valid relationship (incoming or outgoing) or it's rejected as an orphan node.
+1. **Schema validation** (`src/rules/schema.ts`) — every object in `/data` against its entity schema in `/schemas`, via `ajv`. This covers both "schema violations" generally and "missing mandatory fields" specifically (JSON Schema's `required` keyword) — including that every relationship has a `reason`.
+2. **Duplicate IDs and slugs** (`src/rules/duplicate-ids.ts`) — no two objects anywhere in `/data` may share an `id`; no two objects of the *same entity type* may share a `slug` (slugs are scoped per type, since the eventual URL is `/decisions/<slug>` etc.).
+3. **Relationship integrity** (`src/rules/relationships.ts`) — every relationship's verb and `(source_type, target_type)` triple must be permitted by `/relationships/ontology.json`; every `target_id` must resolve to a real object; that object's actual type must match the declared `target_type`; every object must have at least one valid relationship (incoming or outgoing) or it's rejected as an orphan node; and every object's outbound relationship count is checked against `ontology.json`'s soft/hard limits (warning above 5, error above 7).
 4. **Citations** (`src/rules/citations.ts`) — enforces the rule in `/docs/citation-model.md` (mandatory citations for `Incident`/`Decision` objects and for `Verified`/`Reviewed` confidence), plus duplicate citation IDs within an object and dangling `citation_ids` references from relationships.
 5. **Circular relationships** (`src/rules/circular.ts`) — per-verb cycle detection across the whole dataset for every verb in `ontology.json`'s `acyclic_verbs`. See `/docs/relationship-model.md` for why this is scoped per verb rather than across all directional verbs combined.
 
-Graph-level checks (2-5) only run once schema validation (1) is clean for every file, since they assume fields like `id`, `relationships`, and `citations` are already well-formed.
+Graph-level checks (2-5) only run once schema validation (1) has no errors for any file, since they assume fields like `id`, `slug`, `relationships`, and `citations` are already well-formed.
 
 ## Layout
 

@@ -34,6 +34,7 @@ export interface DraftIncident {
   source: DraftSource;
   raw_excerpt: string;
   extraction_method: "human" | "ai_assisted";
+  captured_by?: string;
   suggested_incident: SuggestedIncident;
   human_review: HumanReview;
 }

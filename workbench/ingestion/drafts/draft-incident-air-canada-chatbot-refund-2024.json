@@ -11,6 +11,7 @@
   },
   "raw_excerpt": "Air Canada argues it cannot be held liable for information provided by one of its agents, servants, or representatives — including a chatbot... this is a remarkable submission... Air Canada does not explain why it believes that is the case... the chatbot is still just a part of Air Canada's website. It should be obvious to Air Canada that it is responsible for all the information on its website.",
   "extraction_method": "human",
+  "captured_by": "AI Governance Workbench (Phase 1 seed data)",
   "suggested_incident": {
     "title": "Air Canada held liable for its chatbot giving incorrect bereavement-fare information",
     "description": "A customer relied on Air Canada's website chatbot for guidance on the airline's bereavement fare policy and was given inaccurate information about retroactive refund eligibility. Air Canada argued it should not be liable for its chatbot's statements, treating it as a separate legal entity. The Civil Resolution Tribunal of British Columbia rejected that argument and held Air Canada responsible for information provided by its own chatbot, awarding the customer damages.",
