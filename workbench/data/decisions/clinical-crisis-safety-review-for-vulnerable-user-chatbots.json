@@ -1,0 +1,91 @@
+{
+  "id": "DEC-019",
+  "slug": "clinical-crisis-safety-review-for-vulnerable-user-chatbots",
+  "title": "Require clinical safety review and crisis-escalation protocols before deploying a chatbot to an emotionally vulnerable user population",
+  "description": "Illustrative reference decision modelled on two chatbot failures affecting emotionally vulnerable users: NEDA's Tessa chatbot giving harmful advice to eating-disorder patients, and the Character.AI wrongful-death lawsuit alleging inadequate safeguards for a minor user. Not a documented decision of any specific organisation.",
+  "version": "1.0.0",
+  "status": "draft",
+  "confidence": "Community",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["chatbot", "mental-health", "safety", "child-safety"],
+  "created_by": "AI Governance Workbench (Phase 3 seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 3 seed data)",
+      "version": "1.0.0",
+      "note": "Initial Edition 1.1 content, part of the Phase 3 canonical expansion."
+    }
+  ],
+  "decision_statement": "Before deploying a chatbot in a mental-health-adjacent context, or to a user base known to include emotionally vulnerable individuals or minors, the organisation must complete a clinical safety review of the chatbot's responses to crisis-adjacent input, implement a crisis-escalation protocol that connects the user to a trained human, and never replace a trained human crisis responder with an unsupervised chatbot.",
+  "decision_type": "technical_control",
+  "decision_context": "Motivated by NEDA's Tessa chatbot giving calorie-restriction advice to users describing eating-disorder symptoms after replacing a human helpline, and the Character.AI wrongful-death lawsuit alleging a companion chatbot fostered unhealthy dependency in a minor without adequate crisis-intervention mechanisms.",
+  "governing_body": "Illustrative example — Vulnerable-User AI Safety Board",
+  "jurisdiction": ["US"],
+  "frameworks_referenced": ["FTC Act"],
+  "alternatives_considered": [
+    "Deploy a chatbot broadly and rely on user reports to surface harmful responses after the fact.",
+    "Treat a chatbot as a low-risk supplement to human support without requiring a dedicated clinical safety review."
+  ],
+  "citations": [
+    {
+      "id": "cite-npr-neda-tessa",
+      "source_type": "news_publication",
+      "title": "Chatbot that offered bad advice for eating disorders taken down",
+      "publisher": "NPR",
+      "url": "https://www.npr.org/sections/health-shots/2023/06/08/1180838096/an-eating-disorders-chatbot-offered-dieting-advice-raising-fears-about-ai-in-hea",
+      "publication_date": "2023-06-08",
+      "accessed_date": "2026-08-04"
+    },
+    {
+      "id": "cite-garcia-v-character-ai",
+      "source_type": "court_judgment",
+      "title": "Garcia v. Character Technologies, Inc. et al., 6:2024cv01903",
+      "publisher": "U.S. District Court for the Middle District of Florida",
+      "url": "https://dockets.justia.com/docket/florida/flmdce/6:2024cv01903/433581",
+      "publication_date": "2024-10-22",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "RESULTED_FROM",
+      "target_id": "INC-027",
+      "target_type": "incident",
+      "reason": "This decision is modelled as a direct governance response to this incident.",
+      "confidence": "Verified",
+      "citation_ids": ["cite-npr-neda-tessa"]
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "target_id": "PAT-018",
+      "target_type": "pattern",
+      "reason": "The decision is put into practice via this single, primary design pattern.",
+      "confidence": "Community"
+    },
+    {
+      "type": "SATISFIES_CONTROL",
+      "target_id": "CTR-011",
+      "target_type": "control",
+      "reason": "Failing to provide adequate safety safeguards for a product used by a known vulnerable population is squarely the kind of unfair practice this control's authority addresses — the FTC's own 6(b) inquiry into AI companion chatbots confirms this application, so a new control would inflate the mapping without adding meaning.",
+      "confidence": "Community",
+      "citation_ids": ["cite-garcia-v-character-ai"]
+    },
+    {
+      "type": "REQUIRES_EVIDENCE",
+      "target_id": "EVI-018",
+      "target_type": "evidence",
+      "reason": "Compliance must be demonstrated by a documented crisis-escalation protocol test.",
+      "confidence": "Community"
+    },
+    {
+      "type": "RAISES_BOARD_QUESTION",
+      "target_id": "BRD-018",
+      "target_type": "board_question",
+      "reason": "Boards adopting this decision should be asking whether a trained human is actually reachable in a crisis.",
+      "confidence": "Community"
+    }
+  ]
+}

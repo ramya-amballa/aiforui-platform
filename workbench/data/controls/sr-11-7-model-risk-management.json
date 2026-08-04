@@ -1,0 +1,46 @@
+{
+  "id": "CTR-021",
+  "slug": "sr-11-7-model-risk-management",
+  "title": "SR 11-7 — Guidance on Model Risk Management",
+  "description": "US Federal Reserve/OCC supervisory guidance on model risk management, widely cited outside banking as a general model-risk-management reference. Community confidence: this record relies on well-established background knowledge of SR 11-7 rather than a fresh, dedicated verification pass in this research round — a maintainer should confirm current text and applicability before treating this as Verified.",
+  "version": "1.0.0",
+  "status": "draft",
+  "confidence": "Community",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["model-risk", "financial", "governance"],
+  "created_by": "AI Governance Workbench (Phase 3 seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 3 seed data)",
+      "version": "1.0.0",
+      "note": "Initial Edition 1.1 content."
+    }
+  ],
+  "framework_name": "SR 11-7 / OCC Bulletin 2011-12 — Guidance on Model Risk Management",
+  "control_reference": "SR 11-7 (Federal Reserve), OCC 2011-12",
+  "control_text": "Establishes supervisory expectations for identifying, managing, and monitoring model risk across a model's lifecycle, including independent validation, ongoing performance monitoring against expected outcomes, and defined escalation when a model's actual performance diverges materially from its expected performance.",
+  "control_family": "Model risk management",
+  "citations": [
+    {
+      "id": "cite-sr-11-7",
+      "source_type": "regulator",
+      "title": "SR 11-7: Guidance on Model Risk Management",
+      "publisher": "Board of Governors of the Federal Reserve System",
+      "url": "https://www.federalreserve.gov/supervisionreg/srletters/sr1107.htm",
+      "publication_date": "2011-04-04",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "REQUIRES_EVIDENCE",
+      "target_id": "EVI-019",
+      "target_type": "evidence",
+      "reason": "Satisfying this control requires an observable, continuously monitored performance log.",
+      "confidence": "Community"
+    }
+  ]
+}

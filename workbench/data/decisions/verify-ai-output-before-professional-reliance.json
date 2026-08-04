@@ -1,0 +1,81 @@
+{
+  "id": "DEC-022",
+  "slug": "verify-ai-output-before-professional-reliance",
+  "title": "Verify AI-generated output against authoritative primary sources before professional reliance",
+  "description": "A governance decision that any AI-generated content used to support a professional obligation — a legal filing, a professional recommendation, a service delivered under a duty of care — must be independently verified against authoritative primary sources before it is relied upon, submitted, or acted on, rather than trusted on the basis of the AI system's fluency or confident tone.",
+  "version": "1.0.0",
+  "status": "active",
+  "confidence": "Reviewed",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["generative-ai", "professional-services", "hallucination", "verification"],
+  "created_by": "AI Governance Workbench (Phase 3 seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 3 seed data)",
+      "version": "1.0.0",
+      "note": "Initial Edition 1.1 content, part of the Phase 3 canonical expansion, introduced to cover the AI-hallucination-in-professional-reliance failure mode shared by the Mata v. Avianca and DoNotPay incidents."
+    }
+  ],
+  "decision_type": "process",
+  "decision_statement": "Any AI-generated content supporting a professional obligation must be independently verified against an authoritative primary source before it is relied upon, submitted, or acted on.",
+  "problem_statement": "Generative AI systems can produce fluent, confident, entirely fabricated output — including fabricated legal case citations and confidently wrong professional advice — and users who do not independently verify that output against a primary source can rely on it, submit it, or act on it before the fabrication is discovered, causing professional, legal, or consumer harm.",
+  "decision_rationale": "A mandatory verification step against an authoritative primary source, applied before any AI-generated content is relied upon in a professional or duty-of-care context, catches fabrication before it causes downstream harm, regardless of how confident or fluent the AI output appears.",
+  "alternatives_considered": [
+    "Trusting AI output based on the vendor's stated accuracy rate — rejected because aggregate accuracy statistics do not guarantee any individual output is correct, and professional and legal duties attach to individual acts of reliance.",
+    "Disclaimers alone (e.g. 'AI-generated, may be inaccurate') without a verification step — rejected because a disclaimer does not prevent reliance, it only shifts blame after harm has occurred."
+  ],
+  "outcome": "Establishes verification against a primary authoritative source as a mandatory, auditable step before AI-generated content is relied upon professionally, rather than optional best practice.",
+  "citations": [
+    {
+      "id": "cite-mata-avianca-order",
+      "source_type": "court_judgment",
+      "title": "Mata v. Avianca, Inc., No. 22-cv-1461 (PKC), Order on Sanctions",
+      "publisher": "U.S. District Court for the Southern District of New York",
+      "url": "https://www.courtlistener.com/docket/63107798/mata-v-avianca-inc/",
+      "publication_date": "2023-06-22",
+      "accessed_date": "2026-08-04"
+    },
+    {
+      "id": "cite-donotpay-ftc-settlement",
+      "source_type": "regulator",
+      "title": "DoNotPay Settles FTC Allegations that it Deceived Consumers about the AI 'Lawyer' Service it Claims Can Substitute for Actual Legal Consultations",
+      "publisher": "U.S. Federal Trade Commission",
+      "url": "https://www.ftc.gov/news-events/news/press-releases/2024/09/donotpay-settles-ftc-allegations-it-deceived-consumers-about-ai-lawyer-service-it-claims-can",
+      "publication_date": "2024-09-25",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "IMPLEMENTED_BY",
+      "target_id": "PAT-020",
+      "target_type": "pattern",
+      "reason": "The primary-source verification checkpoint is the concrete pattern implementing this decision.",
+      "confidence": "Reviewed"
+    },
+    {
+      "type": "SATISFIES_CONTROL",
+      "target_id": "CTR-022",
+      "target_type": "control",
+      "reason": "Verifying AI-assisted work against primary sources is a concrete way of satisfying the technological-competence duty this control describes.",
+      "confidence": "Reviewed"
+    },
+    {
+      "type": "REQUIRES_EVIDENCE",
+      "target_id": "EVI-020",
+      "target_type": "evidence",
+      "reason": "An auditable verification record is the observable evidence this decision was actually followed, not merely policy.",
+      "confidence": "Reviewed"
+    },
+    {
+      "type": "RAISES_BOARD_QUESTION",
+      "target_id": "BRD-020",
+      "target_type": "board_question",
+      "reason": "This decision directly answers the board's question about whether AI-generated content reaching clients or courts is verified before reliance.",
+      "confidence": "Reviewed"
+    }
+  ]
+}

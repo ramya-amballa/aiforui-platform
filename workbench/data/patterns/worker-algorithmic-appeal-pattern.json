@@ -1,0 +1,54 @@
+{
+  "id": "PAT-016",
+  "slug": "worker-algorithmic-appeal-pattern",
+  "title": "Worker-Facing Algorithmic Decision Transparency & Appeal Pattern",
+  "description": "A pattern for disclosing to a platform worker the automated basis for any decision materially affecting their working conditions, and providing a genuine, human-reviewed appeal channel before the decision takes effect where feasible.",
+  "version": "1.0.0",
+  "status": "draft",
+  "confidence": "Community",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["gig-work", "algorithmic-management", "human-oversight", "transparency"],
+  "created_by": "AI Governance Workbench (Phase 3 seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 3 seed data)",
+      "version": "1.0.0",
+      "note": "Initial Edition 1.1 content."
+    }
+  ],
+  "problem": "Algorithmic management systems can restrict, penalise, or deactivate a platform worker's account based on automated scoring, with the worker given no specific explanation and only a nominal human-review step that courts have found to be symbolic rather than substantive.",
+  "solution": "Disclose to the worker the specific automated basis for any material decision (e.g. which flagged events contributed to a deactivation, which absences were scored against their ranking); ensure any ranking logic distinguishes legally protected non-performance from unjustified non-performance; and route contested decisions to a human reviewer with genuine authority to reverse the automated outcome, logging the appeal and its resolution.",
+  "applicability": "Any platform using algorithmic scoring or ranking to make decisions materially affecting a worker's ability to earn — dispatch prioritisation, account suspension/deactivation, or reliability scoring.",
+  "consequences": "Full disclosure of scoring logic can be gamed by workers seeking to satisfy metrics without improving underlying performance; providing genuine human review at scale requires staffing sufficient to handle appeal volume without becoming a bottleneck.",
+  "maturity": "emerging",
+  "citations": [
+    {
+      "id": "cite-wie-uber-appeal",
+      "source_type": "other",
+      "title": "Historic digital rights win for WIE and the ADCU over Uber and Ola at Amsterdam Court of Appeal",
+      "publisher": "Worker Info Exchange",
+      "url": "https://www.workerinfoexchange.org/post/historic-digital-rights-win-for-wie-and-the-adcu-over-uber-and-ola-at-amsterdam-court-of-appeal",
+      "publication_date": "2023-04-04",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "SATISFIES_CONTROL",
+      "target_id": "CTR-019",
+      "target_type": "control",
+      "reason": "Worker-facing disclosure and human review is the concrete mechanism satisfying the directive's algorithmic-management safeguards.",
+      "confidence": "Community"
+    },
+    {
+      "type": "REQUIRES_EVIDENCE",
+      "target_id": "EVI-016",
+      "target_type": "evidence",
+      "reason": "The pattern's output is a worker algorithmic decision appeal log.",
+      "confidence": "Community"
+    }
+  ]
+}

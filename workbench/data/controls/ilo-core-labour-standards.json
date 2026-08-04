@@ -1,0 +1,45 @@
+{
+  "id": "CTR-020",
+  "slug": "ilo-core-labour-standards",
+  "title": "ILO Declaration on Fundamental Principles and Rights at Work — applied to AI data-labelling supply chains",
+  "description": "General international core labour standards, applied here to the AI data-labelling/content-moderation supply chain in the absence of any dedicated AI-specific labour framework. This absence is itself a notable governance gap: as of this record, no framework equivalent to NIST AI RMF or the EU AI Act exists specifically for AI supply-chain labour conditions. 'Community' confidence reflects both the general (not AI-specific) nature of the source and the fact this is a general framework applied to a novel context, not a verbatim-quoted provision.",
+  "version": "1.0.0",
+  "status": "draft",
+  "confidence": "Community",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["ilo", "labor", "data-labeling", "supply-chain"],
+  "created_by": "AI Governance Workbench (Phase 3 seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 3 seed data)",
+      "version": "1.0.0",
+      "note": "Initial Edition 1.1 content."
+    }
+  ],
+  "framework_name": "ILO Declaration on Fundamental Principles and Rights at Work",
+  "control_reference": "Core principles (freedom of association, elimination of forced/child labour, elimination of discrimination, and — per the 2022 addition — a safe and healthy working environment)",
+  "control_text": "Applied to AI data-labelling supply chains: workers engaged (directly or via a vendor) to perform psychologically demanding content-review work are entitled to a safe and healthy working environment, which in this context implies documented exposure limits, fair compensation, and access to psychological support — general labour principles applied to a context no AI-specific labour framework yet directly governs.",
+  "control_family": "Labour standards",
+  "citations": [
+    {
+      "id": "cite-ilo-declaration",
+      "source_type": "standards_body",
+      "title": "ILO Declaration on Fundamental Principles and Rights at Work",
+      "publisher": "International Labour Organization",
+      "url": "https://www.ilo.org/declaration/lang--en/index.htm",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "REQUIRES_EVIDENCE",
+      "target_id": "EVI-017",
+      "target_type": "evidence",
+      "reason": "Satisfying this control requires an observable, independently-conducted welfare audit.",
+      "confidence": "Community"
+    }
+  ]
+}

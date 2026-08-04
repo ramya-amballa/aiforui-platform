@@ -1,0 +1,91 @@
+{
+  "id": "DEC-017",
+  "slug": "worker-facing-algorithmic-decision-transparency",
+  "title": "Guarantee genuine human review and disclosure before an algorithm penalises or deactivates a platform worker",
+  "description": "Illustrative reference decision modelled on two independent EU court rulings against algorithmic management of platform workers: Uber's Amsterdam 'robo-firing' case and Deliveroo's Bologna ranking-algorithm case. Not a documented decision of any specific organisation.",
+  "version": "1.0.0",
+  "status": "draft",
+  "confidence": "Community",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["gig-work", "algorithmic-management", "human-oversight", "transparency"],
+  "created_by": "AI Governance Workbench (Phase 3 seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 3 seed data)",
+      "version": "1.0.0",
+      "note": "Initial Edition 1.1 content, part of the Phase 3 canonical expansion."
+    }
+  ],
+  "decision_statement": "Before an algorithm restricts, suspends, or deactivates a platform worker's account, or otherwise materially affects their working conditions, the worker must be told the automated system's basis for the decision and given a genuine, human-reviewed opportunity to contest it — and any ranking or scoring logic must distinguish legally protected absences from unjustified ones.",
+  "decision_type": "policy",
+  "decision_context": "Motivated by two independent EU rulings within the same governance concept: Uber's Amsterdam court finding that 'robo-firing' with only symbolic human review violated GDPR Article 22, and Deliveroo's Bologna court finding that treating all rider absences identically was discriminatory.",
+  "governing_body": "Illustrative example — Platform Worker Algorithmic Management Board",
+  "jurisdiction": ["NL", "IT", "EU"],
+  "frameworks_referenced": ["EU Platform Work Directive", "GDPR"],
+  "alternatives_considered": [
+    "Treat algorithmic account deactivation as a routine automated business process not requiring worker-facing explanation.",
+    "Provide a generic appeals process without disclosing the automated system's specific basis for the decision."
+  ],
+  "citations": [
+    {
+      "id": "cite-rb-amsterdam-uber",
+      "source_type": "court_judgment",
+      "title": "Rb. Amsterdam, 14 April 2021 — C/13/696010 / HA ZA 21-81",
+      "publisher": "Rechtbank Amsterdam (via GDPRhub)",
+      "url": "https://gdprhub.eu/index.php?title=Rb._Amsterdam_-_C%2F13%2F696010_%2F_HA_ZA_21-81",
+      "publication_date": "2021-04-14",
+      "accessed_date": "2026-08-04"
+    },
+    {
+      "id": "cite-bologna-deliveroo",
+      "source_type": "court_judgment",
+      "title": "Sentenza Tribunale di Bologna, R.G. 2949/2019 (Sezione Lavoro)",
+      "publisher": "Tribunale Ordinario di Bologna",
+      "url": "https://www.algoritmolegal.com/wp-content/uploads/2021/01/Sentencia-Bologna-Italia-Deliveroo-dic-2020-Original-italiano.pdf",
+      "publication_date": "2020-12-31",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "RESULTED_FROM",
+      "target_id": "INC-024",
+      "target_type": "incident",
+      "reason": "This decision is modelled as a direct governance response to this ruling.",
+      "confidence": "Verified",
+      "citation_ids": ["cite-rb-amsterdam-uber"]
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "target_id": "PAT-016",
+      "target_type": "pattern",
+      "reason": "The decision is put into practice via this single, primary design pattern.",
+      "confidence": "Community"
+    },
+    {
+      "type": "SATISFIES_CONTROL",
+      "target_id": "CTR-019",
+      "target_type": "control",
+      "reason": "Worker-facing disclosure and human review directly satisfy the EU Platform Work Directive's algorithmic-management safeguards.",
+      "confidence": "Community",
+      "citation_ids": ["cite-bologna-deliveroo"]
+    },
+    {
+      "type": "REQUIRES_EVIDENCE",
+      "target_id": "EVI-016",
+      "target_type": "evidence",
+      "reason": "Compliance must be demonstrated by an observable worker appeal log.",
+      "confidence": "Community"
+    },
+    {
+      "type": "RAISES_BOARD_QUESTION",
+      "target_id": "BRD-016",
+      "target_type": "board_question",
+      "reason": "Boards adopting this decision should be asking whether workers can actually obtain human review before losing income.",
+      "confidence": "Community"
+    }
+  ]
+}

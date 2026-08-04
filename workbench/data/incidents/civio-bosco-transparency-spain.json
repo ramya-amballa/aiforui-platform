@@ -1,0 +1,57 @@
+{
+  "id": "INC-022",
+  "slug": "civio-bosco-transparency-spain",
+  "title": "Spain's Supreme Court orders disclosure of BOSCO, the algorithm deciding fuel-poverty subsidy eligibility",
+  "description": "Spanish civil-society organisation Civio fought a multi-year legal battle to obtain the source code of BOSCO, the algorithm Spain's government uses to determine eligibility for the 'bono social eléctrico' (electricity subsidy for vulnerable households), after finding evidence it was wrongly denying benefits to eligible applicants. Spain's Council for Transparency and Good Governance partially granted access in 2019 (technical documentation only), and the National Court rejected Civio's appeal in December 2021 on intellectual-property and public-security grounds. Spain's Supreme Court ultimately ruled in Civio's favour on 11 September 2025, ordering the government to release BOSCO's source code and holding that neither IP rights nor generic security claims can block public access to algorithms used in administrative decision-making.",
+  "version": "1.0.0",
+  "status": "active",
+  "confidence": "Reviewed",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["government", "transparency", "welfare", "due-process"],
+  "created_by": "AI Governance Workbench (Phase 3 seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 3 seed data)",
+      "version": "1.0.0",
+      "note": "Initial Edition 1.1 content, part of the Phase 3 canonical expansion."
+    }
+  ],
+  "occurred_date": "2025-09-11",
+  "organizations_involved": ["Civio (Fundación Ciudadana Civio)", "Consejo de Transparencia y Buen Gobierno", "Tribunal Supremo (Spanish Supreme Court)"],
+  "harm_types": ["discrimination", "financial", "other"],
+  "ai_system_category": "public_benefits_eligibility_algorithm",
+  "jurisdiction": ["ES"],
+  "severity": "medium",
+  "root_cause": "Spain's public administration built and deployed BOSCO to automate eligibility determinations without proactively disclosing its logic, then invoked intellectual-property and public-security exemptions to withhold the source code even after evidence emerged that eligible applicants were being wrongly denied.",
+  "citations": [
+    {
+      "id": "cite-civio-bosco",
+      "source_type": "other",
+      "title": "Civio pulls back the curtain on public algorithms — Spain's Supreme Court orders the Government to release BOSCO's source code",
+      "publisher": "Civio",
+      "url": "https://civio.es/novedades/2025/09/18/civio-pulls-back-the-curtain-on-public-algorithms-spains-supreme-court-orders-the-governments-to-release-boscos-source-code/",
+      "publication_date": "2025-09-18",
+      "accessed_date": "2026-08-04",
+      "excerpt": "The Supreme Court sided with Civio and forced the Government to give access to the source code of BOSCO... establishes that knowing how programmes and algorithms used by public administrations work is a democratic right."
+    }
+  ],
+  "relationships": [
+    {
+      "type": "MITIGATED_BY",
+      "target_id": "DEC-016",
+      "target_type": "decision",
+      "reason": "A requirement to proactively disclose eligibility-algorithm logic addresses the seven-year disclosure fight this incident represents.",
+      "confidence": "Reviewed"
+    },
+    {
+      "type": "RAISES_BOARD_QUESTION",
+      "target_id": "BRD-015",
+      "target_type": "board_question",
+      "reason": "This ruling establishes that algorithmic opacity in public administration is not legally defensible on IP or generic security grounds.",
+      "confidence": "Reviewed"
+    }
+  ]
+}

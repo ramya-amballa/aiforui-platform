@@ -1,0 +1,56 @@
+{
+  "id": "INC-029",
+  "slug": "amazon-rekognition-aclu-congress-test-2018",
+  "title": "ACLU test finds Amazon Rekognition falsely matched 28 members of Congress to mugshots",
+  "description": "On 26 July 2018, the ACLU of Northern California published results of a test in which it used Amazon's Rekognition facial-recognition software, at default match settings, to compare photos of all then-current members of Congress against a database of roughly 25,000 public arrest photos. The test produced 28 false matches, with people of colour disproportionately misidentified — nearly 40% of false matches, against roughly 20% representation in Congress, including six members of the Congressional Black Caucus. The findings contributed to years of subsequent scrutiny, including San Francisco's May 2019 ordinance banning government facial-recognition use — the first such ban by a major US city — and Amazon's own June 2020 moratorium on police use of Rekognition, extended indefinitely in May 2021.",
+  "version": "1.0.0",
+  "status": "active",
+  "confidence": "Reviewed",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["facial-recognition", "discrimination", "privacy"],
+  "created_by": "AI Governance Workbench (Phase 3 seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 3 seed data)",
+      "version": "1.0.0",
+      "note": "Initial Edition 1.1 content, part of the Phase 3 canonical expansion. Amazon disputed the ACLU's methodology at the time (arguing the ACLU used an 80% confidence threshold rather than the 95%+ threshold Amazon recommends for law-enforcement use); neither the SF ordinance nor Amazon's 2020 moratorium cites this test as their sole cause — both followed broader activism and the 2020 protests as more proximate triggers."
+    }
+  ],
+  "occurred_date": "2018-07-26",
+  "organizations_involved": ["American Civil Liberties Union", "Amazon Web Services", "U.S. Congress"],
+  "harm_types": ["discrimination", "privacy_violation"],
+  "ai_system_category": "facial_recognition",
+  "jurisdiction": ["US"],
+  "severity": "high",
+  "root_cause": "The ACLU attributed the false-match rate to limitations and bias in the facial-recognition algorithm as configured with default (lower-confidence) match settings, compounded by broader documented tendencies of facial-recognition systems to perform less accurately on darker-skinned individuals.",
+  "citations": [
+    {
+      "id": "cite-aclu-rekognition",
+      "source_type": "other",
+      "title": "Amazon's Face Recognition Falsely Matched 28 Members of Congress With Mugshots",
+      "publisher": "American Civil Liberties Union",
+      "url": "https://www.aclu.org/news/privacy-technology/amazons-face-recognition-falsely-matched-28",
+      "publication_date": "2018-07-26",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "MITIGATED_BY",
+      "target_id": "DEC-020",
+      "target_type": "decision",
+      "reason": "A requirement for independent public accuracy testing before law-enforcement procurement directly addresses the gap this test exposed.",
+      "confidence": "Reviewed"
+    },
+    {
+      "type": "RAISES_BOARD_QUESTION",
+      "target_id": "BRD-007",
+      "target_type": "board_question",
+      "reason": "This incident belongs to the same biometric consent-and-accuracy governance concept already established by the Rite Aid and Clearview AI cases.",
+      "confidence": "Reviewed"
+    }
+  ]
+}

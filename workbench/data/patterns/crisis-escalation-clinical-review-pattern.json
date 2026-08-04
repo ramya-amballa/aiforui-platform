@@ -1,0 +1,54 @@
+{
+  "id": "PAT-018",
+  "slug": "crisis-escalation-clinical-review-pattern",
+  "title": "Crisis Escalation & Clinical Safety Review Pattern",
+  "description": "A pattern combining pre-deployment clinical review of a chatbot's responses to crisis-adjacent input with a tested escalation path connecting the user to a trained human, so the chatbot never operates as an unsupervised substitute for crisis-capable human support.",
+  "version": "1.0.0",
+  "status": "draft",
+  "confidence": "Community",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["chatbot", "mental-health", "safety", "child-safety"],
+  "created_by": "AI Governance Workbench (Phase 3 seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 3 seed data)",
+      "version": "1.0.0",
+      "note": "Initial Edition 1.1 content."
+    }
+  ],
+  "problem": "A chatbot tuned for general helpfulness can give responses that are actively harmful when a user is in psychological crisis or belongs to a vulnerable population (e.g. active eating-disorder symptoms, suicidal ideation), and without a tested escalation path, no human is positioned to intervene.",
+  "solution": "Before deployment, have qualified clinicians review the chatbot's responses to a structured set of crisis-adjacent and vulnerable-population test inputs; build and test an escalation mechanism that reliably routes a user showing crisis indicators to a trained human responder; and treat any chatbot marketed to or known to reach a vulnerable population as requiring this review regardless of its original intended use case.",
+  "applicability": "Any chatbot deployed in a mental-health-adjacent context, marketed as a companion or emotional-support product, or known to be used by minors or emotionally vulnerable individuals.",
+  "consequences": "Clinical review requires access to qualified reviewers and is not a one-time exercise — it must be repeated as the underlying model changes; an escalation mechanism only helps if it is actually reachable and staffed, which is itself an ongoing operational commitment.",
+  "maturity": "emerging",
+  "citations": [
+    {
+      "id": "cite-npr-neda-tessa",
+      "source_type": "news_publication",
+      "title": "Chatbot that offered bad advice for eating disorders taken down",
+      "publisher": "NPR",
+      "url": "https://www.npr.org/sections/health-shots/2023/06/08/1180838096/an-eating-disorders-chatbot-offered-dieting-advice-raising-fears-about-ai-in-hea",
+      "publication_date": "2023-06-08",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "SATISFIES_CONTROL",
+      "target_id": "CTR-011",
+      "target_type": "control",
+      "reason": "Tested clinical review and escalation is the concrete mechanism satisfying this control's reasonable-safeguards expectation.",
+      "confidence": "Community"
+    },
+    {
+      "type": "REQUIRES_EVIDENCE",
+      "target_id": "EVI-018",
+      "target_type": "evidence",
+      "reason": "The pattern's output is a crisis escalation protocol test report.",
+      "confidence": "Community"
+    }
+  ]
+}

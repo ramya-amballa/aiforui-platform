@@ -1,0 +1,42 @@
+{
+  "id": "BRD-018",
+  "slug": "reachable-human-in-crisis",
+  "title": "If a user in crisis interacts with our chatbot, is a trained human guaranteed to be reachable?",
+  "description": "A board-level oversight question testing whether a chatbot serving an emotionally vulnerable user base has a tested, working escalation path to a trained human, rather than handling crisis-adjacent situations alone.",
+  "version": "1.0.0",
+  "status": "active",
+  "confidence": "Reviewed",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["chatbot", "mental-health", "safety", "board-oversight"],
+  "created_by": "AI Governance Workbench (Phase 3 seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 3 seed data)",
+      "version": "1.0.0",
+      "note": "Initial Edition 1.1 content."
+    }
+  ],
+  "question_text": "If a user showing signs of crisis — an eating-disorder relapse, suicidal ideation, or similar — interacts with our chatbot, does it reliably escalate to a trained human, or does it handle the interaction alone the way Tessa and Character.AI's chatbot reportedly did?",
+  "audience": ["board", "risk_committee", "executive_team"],
+  "rationale": "NEDA's Tessa chatbot gave harmful advice to eating-disorder patients after replacing a human helpline, and the Character.AI wrongful-death lawsuit alleges a companion chatbot fostered unhealthy dependency in a minor without adequate crisis intervention — both cases show that an unsupervised chatbot serving a vulnerable population is a foreseeable safety risk, not a hypothetical one.",
+  "follow_up_actions": [
+    "Request the most recent crisis escalation protocol test report.",
+    "Confirm clinical review specifically included eating-disorder, self-harm, and suicide-adjacent test inputs where relevant to the product's user base.",
+    "Ask who is reachable through the escalation path and whether that reachability has been tested, not assumed."
+  ],
+  "citations": [
+    {
+      "id": "cite-garcia-v-character-ai",
+      "source_type": "court_judgment",
+      "title": "Garcia v. Character Technologies, Inc. et al., 6:2024cv01903",
+      "publisher": "U.S. District Court for the Middle District of Florida",
+      "url": "https://dockets.justia.com/docket/florida/flmdce/6:2024cv01903/433581",
+      "publication_date": "2024-10-22",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": []
+}

@@ -1,0 +1,81 @@
+{
+  "id": "DEC-020",
+  "slug": "independent-accuracy-testing-before-law-enforcement-procurement",
+  "title": "Require independent public accuracy testing before any law-enforcement procurement of facial recognition",
+  "description": "Illustrative reference decision modelled on the ACLU's 2018 test of Amazon Rekognition against members of Congress. Not a documented decision of any specific organisation.",
+  "version": "1.0.0",
+  "status": "draft",
+  "confidence": "Community",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["facial-recognition", "discrimination", "government"],
+  "created_by": "AI Governance Workbench (Phase 3 seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 3 seed data)",
+      "version": "1.0.0",
+      "note": "Initial Edition 1.1 content, part of the Phase 3 canonical expansion. Deliberately reuses the existing biometric-safeguards pattern, control, evidence type, and board question from Edition 1.0's Rite Aid/Clearview cluster (PAT-007, CTR-007, EVI-006, BRD-007) rather than creating near-duplicate objects — this incident is a variant of the same governance concept, applied at the procurement stage rather than post-deployment."
+    }
+  ],
+  "decision_statement": "Before any government body procures facial-recognition technology for law-enforcement use, an independent third party must test the vendor's system for demographic-disaggregated accuracy on a realistic dataset, with results published, and procurement must not proceed if the results are not independently reproducible or show significant disparity.",
+  "decision_type": "policy",
+  "decision_context": "Motivated by the ACLU's demonstration that Amazon Rekognition, at default settings, falsely matched 28 members of Congress to mugshots with people of colour disproportionately misidentified — a test conducted by a third party after the technology was already in use by law enforcement, rather than before procurement.",
+  "governing_body": "Illustrative example — Law Enforcement Technology Procurement Board",
+  "jurisdiction": ["US"],
+  "frameworks_referenced": ["EU AI Act"],
+  "alternatives_considered": [
+    "Rely on the vendor's own accuracy claims without independent verification.",
+    "Test accuracy only after a procurement decision has already been made and the system deployed."
+  ],
+  "citations": [
+    {
+      "id": "cite-aclu-rekognition",
+      "source_type": "other",
+      "title": "Amazon's Face Recognition Falsely Matched 28 Members of Congress With Mugshots",
+      "publisher": "American Civil Liberties Union",
+      "url": "https://www.aclu.org/news/privacy-technology/amazons-face-recognition-falsely-matched-28",
+      "publication_date": "2018-07-26",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "RESULTED_FROM",
+      "target_id": "INC-029",
+      "target_type": "incident",
+      "reason": "This decision is modelled as a direct governance response to this test.",
+      "confidence": "Verified",
+      "citation_ids": ["cite-aclu-rekognition"]
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "target_id": "PAT-007",
+      "target_type": "pattern",
+      "reason": "This decision reuses the existing biometric safeguards pattern rather than defining a new one — demographic-disaggregated accuracy testing is already this pattern's core mechanism, and applying it pre-procurement rather than post-deployment doesn't change what the pattern does.",
+      "confidence": "Community"
+    },
+    {
+      "type": "SATISFIES_CONTROL",
+      "target_id": "CTR-007",
+      "target_type": "control",
+      "reason": "Law enforcement facial recognition is explicitly named among the high-risk categories this control's Annex III lists, making it a direct, not inflated, application.",
+      "confidence": "Community"
+    },
+    {
+      "type": "REQUIRES_EVIDENCE",
+      "target_id": "EVI-006",
+      "target_type": "evidence",
+      "reason": "The existing facial-recognition accuracy log evidence type already covers exactly this requirement.",
+      "confidence": "Community"
+    },
+    {
+      "type": "RAISES_BOARD_QUESTION",
+      "target_id": "BRD-007",
+      "target_type": "board_question",
+      "reason": "The existing biometric consent-and-accuracy board question already covers this concern.",
+      "confidence": "Community"
+    }
+  ]
+}

@@ -13,6 +13,7 @@
     "editorial:citations": "tsx editorial/src/citation-completeness.ts",
     "editorial:coverage": "tsx editorial/src/coverage-dashboard.ts",
     "editorial:health": "tsx editorial/src/graph-health.ts",
+    "editorial:insights": "tsx editorial/src/insights.ts",
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {

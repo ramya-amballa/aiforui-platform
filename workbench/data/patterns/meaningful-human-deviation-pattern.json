@@ -1,0 +1,54 @@
+{
+  "id": "PAT-014",
+  "slug": "meaningful-human-deviation-pattern",
+  "title": "Meaningful Human Deviation Pattern",
+  "description": "A pattern for ensuring a human reviewer positioned 'in the loop' of an automated scoring system genuinely can and does deviate from the score, measured by an observable deviation rate, rather than the review being a symbolic formality that leaves the score de facto controlling.",
+  "version": "1.0.0",
+  "status": "draft",
+  "confidence": "Community",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["credit-scoring", "privacy", "gdpr", "human-oversight"],
+  "created_by": "AI Governance Workbench (Phase 3 seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 3 seed data)",
+      "version": "1.0.0",
+      "note": "Initial Edition 1.1 content."
+    }
+  ],
+  "problem": "A human reviewer nominally positioned between an automated score and a final decision can still leave the score in full control if the reviewer lacks the authority, time, or information to meaningfully disagree — making the 'human in the loop' safeguard illusory while still technically satisfying a policy requirement for human review.",
+  "solution": "Give the human reviewer genuine authority and sufficient context to deviate from the score, and measure the deviation rate as an ongoing metric: a rate at or near zero is itself evidence the review is symbolic rather than meaningful, and should trigger a redesign of the review process.",
+  "applicability": "Any process where a human formally reviews or approves an automated system's score or recommendation before it takes effect on an individual.",
+  "consequences": "A deviation-rate metric can be gamed by encouraging token deviations that don't reflect genuine reconsideration; giving reviewers more authority to deviate can reduce consistency across cases if not paired with clear criteria for when deviation is appropriate.",
+  "maturity": "emerging",
+  "citations": [
+    {
+      "id": "cite-cjeu-schufa",
+      "source_type": "court_judgment",
+      "title": "Judgment of the Court (First Chamber), 7 December 2023 — OQ v Land Hessen (SCHUFA Holding, Scoring), Case C-634/21",
+      "publisher": "Court of Justice of the European Union",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A62021CJ0634",
+      "publication_date": "2023-12-07",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "SATISFIES_CONTROL",
+      "target_id": "CTR-006",
+      "target_type": "control",
+      "reason": "A measured, genuine deviation rate is the concrete mechanism satisfying this control's human-intervention safeguard.",
+      "confidence": "Community"
+    },
+    {
+      "type": "REQUIRES_EVIDENCE",
+      "target_id": "EVI-014",
+      "target_type": "evidence",
+      "reason": "The pattern's output is an observable human deviation rate log.",
+      "confidence": "Community"
+    }
+  ]
+}

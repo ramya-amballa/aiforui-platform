@@ -1,0 +1,46 @@
+{
+  "id": "CTR-022",
+  "slug": "aba-rule-1-1-technological-competence",
+  "title": "ABA Model Rules of Professional Conduct, Rule 1.1, Comment 8 — Technological Competence",
+  "description": "American Bar Association Model Rule of Professional Conduct 1.1 (Competence) and its associated Comment 8, which has been adopted or referenced by most US state bars, requires lawyers to maintain competence including understanding the benefits and risks associated with relevant technology. Reviewed confidence: Comment 8's text and its widespread state adoption are well-documented; a maintainer should confirm current state-by-state adoption status before treating jurisdiction-specific claims as Verified.",
+  "version": "1.0.0",
+  "status": "active",
+  "confidence": "Reviewed",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["legal", "professional-services", "competence"],
+  "created_by": "AI Governance Workbench (Phase 3 seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 3 seed data)",
+      "version": "1.0.0",
+      "note": "Initial Edition 1.1 content. Deliberately cites Model Rule 1.1, Comment 8 rather than a specific state or ABA formal ethics opinion on generative AI, since Comment 8's text and broad state adoption are more reliably verifiable than the contents of any single formal opinion."
+    }
+  ],
+  "framework_name": "ABA Model Rules of Professional Conduct",
+  "control_reference": "Rule 1.1, Comment 8",
+  "control_text": "To maintain the requisite knowledge and skill, a lawyer should keep abreast of changes in the law and its practice, including the benefits and risks associated with relevant technology.",
+  "control_family": "Professional competence",
+  "citations": [
+    {
+      "id": "cite-aba-rule-1-1",
+      "source_type": "standards_body",
+      "title": "Model Rules of Professional Conduct, Rule 1.1: Competence",
+      "publisher": "American Bar Association",
+      "url": "https://www.americanbar.org/groups/professional_responsibility/publications/model_rules_of_professional_conduct/rule_1_1_competence/",
+      "publication_date": "2012-08-01",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "REQUIRES_EVIDENCE",
+      "target_id": "EVI-020",
+      "target_type": "evidence",
+      "reason": "Demonstrating technological competence for AI-assisted work requires an observable verification record.",
+      "confidence": "Reviewed"
+    }
+  ]
+}

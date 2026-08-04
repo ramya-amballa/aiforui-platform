@@ -1,0 +1,42 @@
+{
+  "id": "BRD-015",
+  "slug": "could-we-withstand-a-disclosure-challenge",
+  "title": "Could we publicly disclose exactly how a critical algorithm reaches its decisions, if challenged?",
+  "description": "A board-level oversight question testing whether an organisation could withstand a legal disclosure challenge to a critical decision-making algorithm, rather than assuming IP or security claims would protect it indefinitely.",
+  "version": "1.0.0",
+  "status": "active",
+  "confidence": "Reviewed",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["government", "transparency", "board-oversight"],
+  "created_by": "AI Governance Workbench (Phase 3 seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 3 seed data)",
+      "version": "1.0.0",
+      "note": "Initial Edition 1.1 content."
+    }
+  ],
+  "question_text": "If challenged in court or by a civil-society organisation, could we publicly disclose exactly how a critical eligibility or administrative algorithm reaches its decisions — or are we relying on intellectual-property or security claims that a court, as Spain's Supreme Court did with BOSCO, might reject?",
+  "audience": ["board", "risk_committee"],
+  "rationale": "Civio's seven-year fight over Spain's BOSCO algorithm ended with the Supreme Court holding that IP and generic security claims do not justify withholding an eligibility algorithm's logic from the public — a precedent any organisation running a similar algorithm should assume could apply to them.",
+  "follow_up_actions": [
+    "Request the current public algorithm documentation publication record for every eligibility-determining system.",
+    "Ask legal whether current non-disclosure justifications would withstand a Civio-style challenge.",
+    "Confirm a proactive publication plan exists rather than a defensive one."
+  ],
+  "citations": [
+    {
+      "id": "cite-civio-bosco",
+      "source_type": "other",
+      "title": "Civio pulls back the curtain on public algorithms — Spain's Supreme Court orders the Government to release BOSCO's source code",
+      "publisher": "Civio",
+      "url": "https://civio.es/novedades/2025/09/18/civio-pulls-back-the-curtain-on-public-algorithms-spains-supreme-court-orders-the-governments-to-release-boscos-source-code/",
+      "publication_date": "2025-09-18",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": []
+}

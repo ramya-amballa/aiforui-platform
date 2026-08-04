@@ -1,0 +1,65 @@
+{
+  "id": "INC-031",
+  "slug": "allegheny-family-screening-tool",
+  "title": "AP investigation and DOJ scrutiny of Allegheny County's child-welfare risk-screening algorithm",
+  "description": "The Allegheny Family Screening Tool, used by Allegheny County, Pennsylvania's child welfare agency to help screen abuse/neglect calls and predict foster-care placement risk, was the subject of an Associated Press investigation published 29 April 2022 raising concerns about racial and disability discrimination and lack of transparency. Following the investigation and subsequent civil rights complaints, the US Department of Justice's Civil Rights Division began scrutinising the tool, as reported by AP in January 2023, over concerns it could discriminate against families with disabilities by incorporating diagnoses correlated with disability, poverty, or race as risk factors.",
+  "version": "1.0.0",
+  "status": "active",
+  "confidence": "Reviewed",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["government", "child-welfare", "discrimination", "risk-scoring", "fairness"],
+  "created_by": "AI Governance Workbench (Phase 3 seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 3 seed data)",
+      "version": "1.0.0",
+      "note": "Initial Edition 1.1 content, part of the Phase 3 canonical expansion. DOJ's involvement as of the sourced reporting (Jan 2023) is Civil Rights Division attorneys scrutinising the tool and encouraging formal complaints, not a confirmed formal investigation, lawsuit, or finding of violation; no later resolution was found in this research pass."
+    }
+  ],
+  "occurred_date": "2022-04-29",
+  "organizations_involved": ["Allegheny County Department of Human Services", "Associated Press", "U.S. Department of Justice (Civil Rights Division)"],
+  "harm_types": ["discrimination", "other"],
+  "ai_system_category": "predictive_risk_scoring",
+  "jurisdiction": ["US", "US-PA"],
+  "severity": "high",
+  "root_cause": "The algorithm incorporated data points, including family members' disability-related diagnoses, that critics and DOJ attorneys said could function as discriminatory proxies, systematically increasing risk scores for families with disabled members or from marginalised racial/economic groups — the same proxy-variable failure mode documented in other risk-scoring algorithms.",
+  "citations": [
+    {
+      "id": "cite-ap-allegheny-1",
+      "source_type": "news_publication",
+      "title": "An algorithm that screens for child neglect raises concerns",
+      "publisher": "Associated Press (via WESA)",
+      "url": "https://www.wesa.fm/politics-government/2022-04-29/an-algorithm-that-screens-for-child-neglect-in-allegheny-county-raises-concerns",
+      "publication_date": "2022-04-29",
+      "accessed_date": "2026-08-04"
+    },
+    {
+      "id": "cite-ap-allegheny-2",
+      "source_type": "news_publication",
+      "title": "Child welfare algorithm faces Justice Department scrutiny",
+      "publisher": "Associated Press (via PBS NewsHour)",
+      "url": "https://www.pbs.org/newshour/nation/ap-report-doj-examining-ai-screening-tool-used-by-pa-child-welfare-agency",
+      "publication_date": "2023-01-31",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "MITIGATED_BY",
+      "target_id": "DEC-002",
+      "target_type": "decision",
+      "reason": "This is the same proxy-variable and disaggregated-fairness-testing concern already established by the COMPAS and healthcare risk-scoring incidents, applied to child welfare.",
+      "confidence": "Reviewed"
+    },
+    {
+      "type": "RAISES_BOARD_QUESTION",
+      "target_id": "BRD-002",
+      "target_type": "board_question",
+      "reason": "This incident extends the existing disaggregated-error-rate-disclosure question into the child-welfare domain.",
+      "confidence": "Reviewed"
+    }
+  ]
+}

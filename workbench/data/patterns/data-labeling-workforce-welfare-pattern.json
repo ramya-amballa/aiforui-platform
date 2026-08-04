@@ -1,0 +1,54 @@
+{
+  "id": "PAT-017",
+  "slug": "data-labeling-workforce-welfare-pattern",
+  "title": "Data Labeling Workforce Welfare Pattern",
+  "description": "A pattern for setting and independently auditing wage floors, content-exposure limits, and psychological-support access for any workforce labelling graphic or traumatic content, whether employed directly or through an outsourcing vendor.",
+  "version": "1.0.0",
+  "status": "draft",
+  "confidence": "Community",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["labor", "data-labeling", "safety", "supply-chain"],
+  "created_by": "AI Governance Workbench (Phase 3 seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 3 seed data)",
+      "version": "1.0.0",
+      "note": "Initial Edition 1.1 content."
+    }
+  ],
+  "problem": "AI safety and content-moderation classifiers require large volumes of human-labelled examples of harmful content, and this labour is often outsourced to lower-cost markets where wage, exposure, and psychological-support standards are set contractually but not independently verified in practice.",
+  "solution": "Set a documented wage floor, a maximum daily/weekly exposure limit for graphic content review, and mandatory access to psychological support as contractual requirements for any data-labelling vendor, and conduct independent (not vendor-self-reported) audits of actual working conditions on a recurring basis.",
+  "applicability": "Any organisation that contracts, directly or via a vendor, a workforce to label graphic, traumatic, or otherwise psychologically harmful content for training or safety-classifier purposes.",
+  "consequences": "Independent audits of outsourced labour add cost and require access the client may not contractually have secured; setting a wage floor above local vendor rates can affect vendor selection and pricing.",
+  "maturity": "experimental",
+  "citations": [
+    {
+      "id": "cite-time-openai-kenya",
+      "source_type": "news_publication",
+      "title": "OpenAI Used Kenyan Workers on Less Than $2 Per Hour: Exclusive",
+      "publisher": "TIME",
+      "url": "https://time.com/6247678/openai-chatgpt-kenya-workers/",
+      "publication_date": "2023-01-18",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "SATISFIES_CONTROL",
+      "target_id": "CTR-020",
+      "target_type": "control",
+      "reason": "Documented, audited labour standards are the concrete mechanism applying general labour principles to this context.",
+      "confidence": "Community"
+    },
+    {
+      "type": "REQUIRES_EVIDENCE",
+      "target_id": "EVI-017",
+      "target_type": "evidence",
+      "reason": "The pattern's output is a vendor welfare audit report.",
+      "confidence": "Community"
+    }
+  ]
+}

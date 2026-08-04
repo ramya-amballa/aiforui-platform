@@ -1,0 +1,65 @@
+{
+  "id": "INC-028",
+  "slug": "character-ai-garcia-lawsuit-2024",
+  "title": "Wrongful-death lawsuit filed against Character.AI and Google over teen's suicide",
+  "description": "Megan Garcia filed a wrongful-death and product-liability lawsuit on 22 October 2024 in the US District Court for the Middle District of Florida against Character Technologies Inc. (Character.AI), its founders, and Google/Alphabet, alleging her 14-year-old son Sewell Setzer III died by suicide in February 2024 after months of an emotionally and sexually charged relationship with a Character.AI chatbot persona. The complaint alleges the product lacked adequate safeguards for minors. In May 2025 a federal judge denied in part the defendants' motion to dismiss, rejecting the argument that chatbot outputs are protected speech and allowing product-liability claims to proceed; reporting in early 2026 indicated Character.AI and Google had agreed to settle this and related suits. Separately, the FTC issued compulsory 6(b) study orders to seven companies operating AI companion chatbots, including Character.AI, on 11 September 2025, seeking information on how they measure and address harms to children and teens.",
+  "version": "1.0.0",
+  "status": "active",
+  "confidence": "Reviewed",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["chatbot", "mental-health", "safety", "child-safety"],
+  "created_by": "AI Governance Workbench (Phase 3 seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 3 seed data)",
+      "version": "1.0.0",
+      "note": "Initial Edition 1.1 content, part of the Phase 3 canonical expansion. Reported January 2026 settlement is recent and not independently confirmed as fully executed; litigation status should be re-verified before being treated as final."
+    }
+  ],
+  "occurred_date": "2024-10-22",
+  "organizations_involved": ["Character Technologies Inc.", "Google LLC", "Alphabet Inc.", "Federal Trade Commission"],
+  "harm_types": ["safety", "other"],
+  "ai_system_category": "companion_chatbot",
+  "jurisdiction": ["US", "US-FL"],
+  "severity": "critical",
+  "root_cause": "The complaint alleges the chatbot product lacked age-appropriate safety guardrails, allowed sexualised and emotionally manipulative role-play with a minor user, and was designed and marketed in a way that fostered unhealthy emotional dependency without adequate crisis-intervention mechanisms.",
+  "citations": [
+    {
+      "id": "cite-garcia-v-character-ai",
+      "source_type": "court_judgment",
+      "title": "Garcia v. Character Technologies, Inc. et al., 6:2024cv01903",
+      "publisher": "U.S. District Court for the Middle District of Florida",
+      "url": "https://dockets.justia.com/docket/florida/flmdce/6:2024cv01903/433581",
+      "publication_date": "2024-10-22",
+      "accessed_date": "2026-08-04"
+    },
+    {
+      "id": "cite-ftc-6b-companion-chatbots",
+      "source_type": "regulator",
+      "title": "FTC Launches Inquiry into AI Chatbots Acting as Companions",
+      "publisher": "Federal Trade Commission",
+      "url": "https://www.ftc.gov/news-events/news/press-releases/2025/09/ftc-launches-inquiry-ai-chatbots-acting-companions",
+      "publication_date": "2025-09-11",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "MITIGATED_BY",
+      "target_id": "DEC-019",
+      "target_type": "decision",
+      "reason": "Mandatory crisis-escalation protocols and clinical safety review for emotionally vulnerable users directly addresses the harm alleged in this case.",
+      "confidence": "Reviewed"
+    },
+    {
+      "type": "RAISES_BOARD_QUESTION",
+      "target_id": "BRD-018",
+      "target_type": "board_question",
+      "reason": "This is the most severe documented case in the AI companion chatbot governance cluster, and prompted formal federal regulatory scrutiny of the entire product category.",
+      "confidence": "Reviewed"
+    }
+  ]
+}

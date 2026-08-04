@@ -1,0 +1,56 @@
+{
+  "id": "INC-033",
+  "slug": "mata-v-avianca-chatgpt-hallucinated-citations-2023",
+  "title": "Lawyers sanctioned for filing a ChatGPT-hallucinated legal brief in Mata v. Avianca",
+  "description": "In a personal injury case against Avianca Airlines in the US District Court for the Southern District of New York, attorney Steven A. Schwartz used ChatGPT to research and draft a legal brief, which cited at least six non-existent, AI-fabricated judicial decisions with fake quotes and internal citations. When opposing counsel and the court could not locate the cited cases, Schwartz doubled down and asked ChatGPT to confirm the cases were real, receiving a false confirmation. On 22 June 2023, Judge P. Kevin Castel sanctioned Schwartz and his colleague Peter LoDuca, and their firm, imposing a $5,000 fine and requiring letters be sent to each falsely-identified judge.",
+  "version": "1.0.0",
+  "status": "active",
+  "confidence": "Reviewed",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["generative-ai", "legal", "hallucination", "professional-services"],
+  "created_by": "AI Governance Workbench (Phase 3 seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 3 seed data)",
+      "version": "1.0.0",
+      "note": "Initial Edition 1.1 content, part of the Phase 3 canonical expansion. Introduces the new DEC-022/PAT-020/CTR-022/EVI-020/BRD-020 AI-output-verification cluster, shared with the DoNotPay FTC settlement incident."
+    }
+  ],
+  "occurred_date": "2023-06-22",
+  "organizations_involved": ["Levidow, Levidow & Oberman, P.C.", "U.S. District Court for the Southern District of New York"],
+  "harm_types": ["other"],
+  "ai_system_category": "generative_ai_chatbot",
+  "jurisdiction": ["US"],
+  "severity": "medium",
+  "root_cause": "The attorney relied on ChatGPT's fluent, confident output to research and cite case law without independently verifying any of the cited cases against an authoritative primary legal database, and compounded the error by asking the same AI system to confirm its own fabrications rather than checking a primary source.",
+  "citations": [
+    {
+      "id": "cite-mata-avianca-order",
+      "source_type": "court_judgment",
+      "title": "Mata v. Avianca, Inc., No. 22-cv-1461 (PKC), Order on Sanctions",
+      "publisher": "U.S. District Court for the Southern District of New York",
+      "url": "https://www.courtlistener.com/docket/63107798/mata-v-avianca-inc/",
+      "publication_date": "2023-06-22",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "MITIGATED_BY",
+      "target_id": "DEC-022",
+      "target_type": "decision",
+      "reason": "Mandatory verification of AI-cited case law against a primary legal database before filing would have caught the fabricated citations before submission.",
+      "confidence": "Reviewed"
+    },
+    {
+      "type": "RAISES_BOARD_QUESTION",
+      "target_id": "BRD-020",
+      "target_type": "board_question",
+      "reason": "This is the most prominent early example of unverified generative AI output reaching a court filing.",
+      "confidence": "Reviewed"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "id": "INC-021",
+  "slug": "schufa-cjeu-scoring-2023",
+  "title": "CJEU rules credit-bureau scoring can itself be prohibited automated decision-making under GDPR",
+  "description": "On 7 December 2023, the Court of Justice of the European Union ruled in Case C-634/21 (OQ v Land Hessen) that when a credit reference agency such as SCHUFA Holding AG generates a probability score on a person's creditworthiness, and a third-party lender draws decisively on that score to decide a contract, this constitutes automated individual decision-making under GDPR Article 22(1) — even though the agency itself does not make the final lending decision. The case arose after a German loan applicant was refused a loan based on a SCHUFA score. The ruling was the CJEU's first interpretation of Article 22, and means Article 22 obligations can attach to a scoring intermediary, not only the final decision-maker.",
+  "version": "1.0.0",
+  "status": "active",
+  "confidence": "Reviewed",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["credit-scoring", "privacy", "gdpr", "automated-decision-making"],
+  "created_by": "AI Governance Workbench (Phase 3 seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 3 seed data)",
+      "version": "1.0.0",
+      "note": "Initial Edition 1.1 content, part of the shift to Phase 3 canonical knowledge expansion."
+    }
+  ],
+  "occurred_date": "2023-12-07",
+  "organizations_involved": ["SCHUFA Holding AG", "Land Hessen", "Court of Justice of the European Union"],
+  "harm_types": ["privacy_violation", "financial"],
+  "ai_system_category": "credit_scoring",
+  "jurisdiction": ["DE", "EU"],
+  "severity": "high",
+  "root_cause": "Ambiguity in GDPR Article 22 over whether an entity that only produces a recommendatory score, rather than the final contractual decision, engages in 'automated decision-making' — SCHUFA and lower German courts had previously read the provision narrowly to exclude scoring agencies.",
+  "citations": [
+    {
+      "id": "cite-cjeu-schufa",
+      "source_type": "court_judgment",
+      "title": "Judgment of the Court (First Chamber), 7 December 2023 — OQ v Land Hessen (SCHUFA Holding, Scoring), Case C-634/21",
+      "publisher": "Court of Justice of the European Union",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A62021CJ0634",
+      "publication_date": "2023-12-07",
+      "accessed_date": "2026-08-04",
+      "excerpt": "Automated individual decision-making – Credit information agencies – Automated establishment of a probability value concerning the ability of a person to meet payment commitments in the future ('scoring') – Use of that probability value by third parties."
+    }
+  ],
+  "relationships": [
+    {
+      "type": "MITIGATED_BY",
+      "target_id": "DEC-015",
+      "target_type": "decision",
+      "reason": "A requirement that human reviewers genuinely deviate from a score, not rubber-stamp it, directly addresses the accountability gap this ruling closed.",
+      "confidence": "Reviewed"
+    },
+    {
+      "type": "RAISES_BOARD_QUESTION",
+      "target_id": "BRD-014",
+      "target_type": "board_question",
+      "reason": "This is the binding EU precedent establishing that a score alone can trigger Article 22 obligations.",
+      "confidence": "Reviewed"
+    }
+  ]
+}

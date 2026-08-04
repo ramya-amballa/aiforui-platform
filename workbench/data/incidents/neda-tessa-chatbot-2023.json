@@ -1,0 +1,56 @@
+{
+  "id": "INC-027",
+  "slug": "neda-tessa-chatbot-2023",
+  "title": "NEDA suspends 'Tessa' AI chatbot after it gave harmful weight-loss advice to eating-disorder patients",
+  "description": "The National Eating Disorders Association (NEDA) planned to replace its human-staffed helpline with an AI chatbot named 'Tessa' starting 1 June 2023, notifying helpline staff of layoffs shortly after they had unionised. In late May 2023, eating-disorder activist Sharon Maxwell and psychologist Alexis Conason publicly documented that Tessa, when told about eating-disorder symptoms, recommended calorie counting, a 1-2 lb/week weight-loss target, regular weigh-ins, and measuring body fat with calipers — advice that directly contradicts eating-disorder treatment guidance. NEDA announced on 30 May 2023 that it was disabling the chatbot's program indefinitely pending investigation.",
+  "version": "1.0.0",
+  "status": "active",
+  "confidence": "Reviewed",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["chatbot", "mental-health", "safety", "misinformation"],
+  "created_by": "AI Governance Workbench (Phase 3 seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 3 seed data)",
+      "version": "1.0.0",
+      "note": "Initial Edition 1.1 content, part of the Phase 3 canonical expansion."
+    }
+  ],
+  "occurred_date": "2023-05-30",
+  "organizations_involved": ["National Eating Disorders Association", "Cass"],
+  "harm_types": ["safety", "misinformation"],
+  "ai_system_category": "mental_health_chatbot",
+  "jurisdiction": ["US"],
+  "severity": "high",
+  "root_cause": "A pre-scripted wellness chatbot designed for a narrow body-positivity use case was deployed as a replacement for a trained human crisis helpline without adequate testing for edge cases involving active eating-disorder symptoms and disordered-eating language.",
+  "citations": [
+    {
+      "id": "cite-npr-neda-tessa",
+      "source_type": "news_publication",
+      "title": "Chatbot that offered bad advice for eating disorders taken down",
+      "publisher": "NPR",
+      "url": "https://www.npr.org/sections/health-shots/2023/06/08/1180838096/an-eating-disorders-chatbot-offered-dieting-advice-raising-fears-about-ai-in-hea",
+      "publication_date": "2023-06-08",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "MITIGATED_BY",
+      "target_id": "DEC-019",
+      "target_type": "decision",
+      "reason": "A requirement for clinical safety review before replacing a trained crisis responder with a chatbot addresses exactly this failure.",
+      "confidence": "Reviewed"
+    },
+    {
+      "type": "RAISES_BOARD_QUESTION",
+      "target_id": "BRD-018",
+      "target_type": "board_question",
+      "reason": "This incident shows the risk of unsupervised chatbot deployment to a vulnerable user population.",
+      "confidence": "Reviewed"
+    }
+  ]
+}

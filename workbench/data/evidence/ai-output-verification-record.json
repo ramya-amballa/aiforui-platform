@@ -1,0 +1,38 @@
+{
+  "id": "EVI-020",
+  "slug": "ai-output-verification-record",
+  "title": "AI Output Verification Record",
+  "description": "An observable, per-instance record showing that a specific piece of AI-generated content (a citation, a factual claim, a recommendation) was independently checked against a named authoritative primary source before it was relied upon or submitted, including the outcome of that check.",
+  "version": "1.0.0",
+  "status": "active",
+  "confidence": "Reviewed",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["generative-ai", "professional-services", "hallucination", "audit-log"],
+  "created_by": "AI Governance Workbench (Phase 3 seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 3 seed data)",
+      "version": "1.0.0",
+      "note": "Initial Edition 1.1 content."
+    }
+  ],
+  "evidence_description": "A record identifying the AI-generated claim or citation checked, the primary source consulted to verify it, the date of the check, who performed it, and the outcome (confirmed, corrected, or discarded).",
+  "collection_method": "Manual verification step performed by the professional relying on the AI output, logged at the point of review before submission or delivery.",
+  "retention_period": "Aligned with the underlying professional record-keeping obligation (e.g. client file retention requirements for legal matters).",
+  "artifact_format": "Structured log entry or annotated document trail tied to the specific work product.",
+  "citations": [
+    {
+      "id": "cite-mata-avianca-order",
+      "source_type": "court_judgment",
+      "title": "Mata v. Avianca, Inc., No. 22-cv-1461 (PKC), Order on Sanctions",
+      "publisher": "U.S. District Court for the Southern District of New York",
+      "url": "https://www.courtlistener.com/docket/63107798/mata-v-avianca-inc/",
+      "publication_date": "2023-06-22",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": []
+}

@@ -1,0 +1,65 @@
+{
+  "id": "INC-032",
+  "slug": "snapchat-myai-ico-dpia-2023",
+  "title": "UK ICO issues preliminary enforcement notice against Snap over My AI chatbot's data protection risk assessment",
+  "description": "On 6 October 2023, the UK Information Commissioner's Office (ICO) issued a preliminary enforcement notice against Snap Inc., finding that its data protection impact assessment (DPIA) for the My AI generative chatbot — rolled out to Snapchat's millions of UK users, including 13-to-17-year-olds — failed to adequately assess the data protection risks posed to children and other users, including the risks of sharing sensitive personal information with a generative AI-powered chatbot. The ICO's provisional view was that the risk assessment did not adequately identify and assess these risks. Snap made changes to its DPIA in response, and in December 2023 the ICO announced it was satisfied with the improved risk assessment and closed its investigation without a fine.",
+  "version": "1.0.0",
+  "status": "active",
+  "confidence": "Reviewed",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["generative-ai", "privacy", "gdpr", "regulator-action", "child-safety"],
+  "created_by": "AI Governance Workbench (Phase 3 seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 3 seed data)",
+      "version": "1.0.0",
+      "note": "Initial Edition 1.1 content, part of the Phase 3 canonical expansion. Deliberately reuses the DEC-006/PAT-006/CTR-010/EVI-004/BRD-006 consumer generative-AI/GDPR-legal-basis cluster established by the Italy Garante ChatGPT and Replika incidents, rather than creating near-duplicate governance objects, since this is the same DPIA-adequacy and child-risk-assessment failure mode applied to a different regulator and product."
+    }
+  ],
+  "occurred_date": "2023-10-06",
+  "organizations_involved": ["Information Commissioner's Office (UK)", "Snap Inc."],
+  "harm_types": ["privacy_violation", "safety"],
+  "ai_system_category": "generative_ai_chatbot",
+  "jurisdiction": ["UK"],
+  "severity": "medium",
+  "root_cause": "Snap's data protection impact assessment for My AI did not adequately identify and assess the data protection risks to users, particularly children aged 13-17, posed by a generative AI chatbot capable of eliciting and processing sensitive personal information in conversation, before the feature was rolled out at scale.",
+  "citations": [
+    {
+      "id": "cite-ico-snap-preliminary-notice",
+      "source_type": "regulator",
+      "title": "ICO orders Snap to address risks posed by 'My AI' chatbot",
+      "publisher": "Information Commissioner's Office",
+      "url": "https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2023/10/ico-orders-snap-to-address-risks-posed-by-myai-chatbot/",
+      "publication_date": "2023-10-06",
+      "accessed_date": "2026-08-04"
+    },
+    {
+      "id": "cite-ico-snap-closure",
+      "source_type": "regulator",
+      "title": "ICO statement in response to Snap's updated risk assessment for My AI chatbot",
+      "publisher": "Information Commissioner's Office",
+      "url": "https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2023/12/ico-statement-in-response-to-snap-updated-risk-assessment-for-myai-chatbot/",
+      "publication_date": "2023-12-14",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "MITIGATED_BY",
+      "target_id": "DEC-006",
+      "target_type": "decision",
+      "reason": "A documented, adequate data protection risk assessment addressing child-specific risks before launch addresses exactly the deficiency the ICO identified.",
+      "confidence": "Reviewed"
+    },
+    {
+      "type": "RAISES_BOARD_QUESTION",
+      "target_id": "BRD-006",
+      "target_type": "board_question",
+      "reason": "This incident extends the same consumer generative-AI risk-assessment adequacy question to a UK regulator and a youth-heavy user base.",
+      "confidence": "Reviewed"
+    }
+  ]
+}

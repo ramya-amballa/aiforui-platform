@@ -1,0 +1,65 @@
+{
+  "id": "INC-035",
+  "slug": "meta-eu-ai-training-pause-2024",
+  "title": "Meta pauses training its AI models on EU/UK users' public data after regulator pressure",
+  "description": "In June 2024, Meta announced it would pause plans to train its generative AI models on public content shared by adult users in the EU and UK, after the Irish Data Protection Commission (DPC) — acting on behalf of several EU data protection regulators — requested the delay, and the UK ICO raised concerns and welcomed the pause. Meta had planned to rely on 'legitimate interests' as its GDPR legal basis for using public Facebook and Instagram posts to train its models, with an opt-out mechanism rather than opt-in consent; regulators found this legal-basis approach had not been adequately justified or assessed for the scale and sensitivity of data involved.",
+  "version": "1.0.0",
+  "status": "active",
+  "confidence": "Reviewed",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["generative-ai", "privacy", "gdpr", "regulator-action", "model-training"],
+  "created_by": "AI Governance Workbench (Phase 3 seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 3 seed data)",
+      "version": "1.0.0",
+      "note": "Initial Edition 1.1 content, part of the Phase 3 canonical expansion. Deliberately reuses the DEC-006/PAT-006/CTR-010/EVI-004/BRD-006 consumer generative-AI/GDPR-legal-basis cluster established by the Italy Garante and Snap incidents — this is the same inadequate-legal-basis-assessment failure mode applied to model-training data collection rather than a chatbot feature."
+    }
+  ],
+  "occurred_date": "2024-06-14",
+  "organizations_involved": ["Meta Platforms, Inc.", "Irish Data Protection Commission", "Information Commissioner's Office (UK)"],
+  "harm_types": ["privacy_violation"],
+  "ai_system_category": "generative_ai_model_training",
+  "jurisdiction": ["EU", "UK", "IE"],
+  "severity": "medium",
+  "root_cause": "Meta intended to rely on 'legitimate interests' as its GDPR legal basis for training generative AI models on public user posts, using an opt-out rather than opt-in mechanism, without the legal-basis justification and risk assessment regulators considered adequate for that scale and sensitivity of processing.",
+  "citations": [
+    {
+      "id": "cite-dpc-meta-pause",
+      "source_type": "regulator",
+      "title": "Data Protection Commission welcomes Meta's decision to pause plans to train its Large Language Model using public content shared by adults on Facebook and Instagram across the EU/EEA",
+      "publisher": "Data Protection Commission (Ireland)",
+      "url": "https://www.dataprotection.ie/en/news-media/latest-news/data-protection-commission-welcomes-metas-decision-pause-plans-train-its-large-language-model-using-public-content-shared-adults-facebook-and",
+      "publication_date": "2024-06-14",
+      "accessed_date": "2026-08-04"
+    },
+    {
+      "id": "cite-ico-meta-statement",
+      "source_type": "regulator",
+      "title": "ICO statement in response to Meta pausing generative AI training using UK users' data",
+      "publisher": "Information Commissioner's Office",
+      "url": "https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2024/06/ico-statement-in-response-to-meta-pausing-generative-ai-training-using-uk-users-data/",
+      "publication_date": "2024-06-14",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "MITIGATED_BY",
+      "target_id": "DEC-006",
+      "target_type": "decision",
+      "reason": "A documented, adequately-justified GDPR legal basis assessed before large-scale training data collection addresses exactly the deficiency regulators identified.",
+      "confidence": "Reviewed"
+    },
+    {
+      "type": "RAISES_BOARD_QUESTION",
+      "target_id": "BRD-006",
+      "target_type": "board_question",
+      "reason": "This incident extends the consumer generative-AI legal-basis question to the model-training data pipeline itself, at large platform scale.",
+      "confidence": "Reviewed"
+    }
+  ]
+}

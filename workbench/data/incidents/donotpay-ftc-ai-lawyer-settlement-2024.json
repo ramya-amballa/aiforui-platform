@@ -1,0 +1,56 @@
+{
+  "id": "INC-034",
+  "slug": "donotpay-ftc-ai-lawyer-settlement-2024",
+  "title": "FTC settles with DoNotPay over unsubstantiated 'AI lawyer' service claims",
+  "description": "On 25 September 2024, the US Federal Trade Commission announced a settlement with DoNotPay, Inc., which had marketed itself as offering 'the world's first robot lawyer' and an AI service capable of generating legal documents and substituting for a human lawyer. The FTC alleged DoNotPay could not substantiate claims that its service's output was comparable to advice from a human lawyer, and had not tested its performance against the standard a licensed attorney would provide, nor employed or retained attorneys to ensure the accuracy and quality of the legal documents it generated. DoNotPay agreed to pay $193,000, notify subscribers of certain products of the settlement and its limitations, and was barred from making similar unsubstantiated claims going forward.",
+  "version": "1.0.0",
+  "status": "active",
+  "confidence": "Reviewed",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["generative-ai", "legal", "consumer-protection", "professional-services"],
+  "created_by": "AI Governance Workbench (Phase 3 seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 3 seed data)",
+      "version": "1.0.0",
+      "note": "Initial Edition 1.1 content, part of the Phase 3 canonical expansion. Reuses the DEC-022/PAT-020/CTR-022/EVI-020/BRD-020 AI-output-verification cluster established by the Mata v. Avianca incident, since this is the same failure to verify AI-generated professional output against a competence standard, at a company-product scale rather than a single filing."
+    }
+  ],
+  "occurred_date": "2024-09-25",
+  "organizations_involved": ["DoNotPay, Inc.", "U.S. Federal Trade Commission"],
+  "harm_types": ["financial", "other"],
+  "ai_system_category": "generative_ai_legal_service",
+  "jurisdiction": ["US"],
+  "severity": "medium",
+  "root_cause": "DoNotPay marketed its AI-generated legal document and advice service as comparable to a human lawyer without testing that claim or employing attorneys to verify the accuracy and quality of the AI-generated output before it reached consumers.",
+  "citations": [
+    {
+      "id": "cite-donotpay-ftc-settlement",
+      "source_type": "regulator",
+      "title": "DoNotPay Settles FTC Allegations that it Deceived Consumers about the AI 'Lawyer' Service it Claims Can Substitute for Actual Legal Consultations",
+      "publisher": "U.S. Federal Trade Commission",
+      "url": "https://www.ftc.gov/news-events/news/press-releases/2024/09/donotpay-settles-ftc-allegations-it-deceived-consumers-about-ai-lawyer-service-it-claims-can",
+      "publication_date": "2024-09-25",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "MITIGATED_BY",
+      "target_id": "DEC-022",
+      "target_type": "decision",
+      "reason": "Verifying AI-generated legal document output against a professional accuracy standard before offering it to consumers addresses exactly the deficiency the FTC identified.",
+      "confidence": "Reviewed"
+    },
+    {
+      "type": "RAISES_BOARD_QUESTION",
+      "target_id": "BRD-020",
+      "target_type": "board_question",
+      "reason": "This incident extends the AI-output-verification question to a commercial product making professional-substitute claims at scale.",
+      "confidence": "Reviewed"
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "id": "INC-025",
+  "slug": "deliveroo-italy-bologna-algorithm-ruling",
+  "title": "Bologna court rules Deliveroo's rider-ranking algorithm discriminatory",
+  "description": "The Tribunale di Bologna ruled on 31 December 2020 that Deliveroo Italy's rider-booking algorithm, known as 'Frank,' was discriminatory under Italian anti-discrimination law because it penalised any rider absence from a booked shift — whether due to illness, a technical problem, or participation in a strike — with the same reduction in 'reliability' score, without distinguishing legally-protected reasons for non-attendance from unjustified ones. The case was brought by three CGIL union federations against Deliveroo Italia S.r.l.; the court ordered Deliveroo to pay damages plus legal costs and to publish the ruling.",
+  "version": "1.0.0",
+  "status": "active",
+  "confidence": "Reviewed",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["gig-work", "algorithmic-management", "discrimination", "financial"],
+  "created_by": "AI Governance Workbench (Phase 3 seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 3 seed data)",
+      "version": "1.0.0",
+      "note": "Initial Edition 1.1 content. The case is procedurally a collective anti-discrimination action (Article 28 of Legislative Decree 150/2011), not a full-trial-stage judgment on the employment relationship itself; secondary sources use 'ruling'/'sentenza' loosely."
+    }
+  ],
+  "occurred_date": "2020-12-31",
+  "organizations_involved": ["Deliveroo Italia S.r.l.", "Tribunale di Bologna", "Filt Cgil Bologna", "Filcams Cgil Bologna", "Nidil Cgil Bologna"],
+  "harm_types": ["discrimination", "financial"],
+  "ai_system_category": "gig_worker_ranking_algorithm",
+  "jurisdiction": ["IT", "EU"],
+  "severity": "high",
+  "root_cause": "The algorithm scored and penalised rider absences uniformly, treating all non-attendance (trivial, health-related, or strike-related) as an equivalent negative signal, without any mechanism to distinguish legally protected non-performance from unjustified non-performance.",
+  "citations": [
+    {
+      "id": "cite-bologna-deliveroo",
+      "source_type": "court_judgment",
+      "title": "Sentenza Tribunale di Bologna, R.G. 2949/2019 (Sezione Lavoro)",
+      "publisher": "Tribunale Ordinario di Bologna",
+      "url": "https://www.algoritmolegal.com/wp-content/uploads/2021/01/Sentencia-Bologna-Italia-Deliveroo-dic-2020-Original-italiano.pdf",
+      "publication_date": "2020-12-31",
+      "accessed_date": "2026-08-04"
+    },
+    {
+      "id": "cite-techcrunch-deliveroo",
+      "source_type": "news_publication",
+      "title": "Italian court rules against 'discriminatory' Deliveroo rider-ranking algorithm",
+      "publisher": "TechCrunch",
+      "url": "https://techcrunch.com/2021/01/04/italian-court-rules-against-discriminatory-deliveroo-rider-ranking-algorithm/",
+      "publication_date": "2021-01-04",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "MITIGATED_BY",
+      "target_id": "DEC-017",
+      "target_type": "decision",
+      "reason": "Requiring the algorithm to distinguish protected absences from unjustified ones, with a human-reviewable appeal, addresses exactly the discrimination this ruling found.",
+      "confidence": "Reviewed"
+    },
+    {
+      "type": "RAISES_BOARD_QUESTION",
+      "target_id": "BRD-016",
+      "target_type": "board_question",
+      "reason": "This ruling, alongside the Uber Amsterdam case, established the EU legal pattern this board question addresses.",
+      "confidence": "Reviewed"
+    }
+  ]
+}

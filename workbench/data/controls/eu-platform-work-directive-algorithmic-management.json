@@ -1,0 +1,47 @@
+{
+  "id": "CTR-019",
+  "slug": "eu-platform-work-directive-algorithmic-management",
+  "title": "EU Platform Work Directive — Algorithmic management safeguards for platform workers",
+  "description": "The algorithmic-management provisions of the EU's Platform Work Directive, regulating automated monitoring and decision-making systems used to manage platform/gig workers. Paraphrase pending verification against the primary EUR-Lex consolidated text — hence 'Community' confidence.",
+  "version": "1.0.0",
+  "status": "draft",
+  "confidence": "Community",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["eu-platform-work-directive", "gig-work", "algorithmic-management", "human-oversight"],
+  "created_by": "AI Governance Workbench (Phase 3 seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 3 seed data)",
+      "version": "1.0.0",
+      "note": "Initial Edition 1.1 content."
+    }
+  ],
+  "framework_name": "Directive (EU) 2024/2831 on improving working conditions in platform work",
+  "control_reference": "Articles 7-11",
+  "control_text": "Platforms using automated monitoring or decision-making systems affecting platform workers must: restrict processing of certain sensitive data categories (Art. 7); complete a data-protection impact assessment before deployment (Art. 8); inform workers and their representatives about the systems' use, purpose, and logic (Art. 9); provide human oversight and regular evaluation of the systems' impact on working conditions (Art. 10); and give workers the right to a human explanation of, and to contest, any significant automated decision — with certain decisions (including account restriction, suspension, or termination) prohibited from being taken by fully automated means without human review (Art. 11).",
+  "control_family": "Algorithmic management",
+  "citations": [
+    {
+      "id": "cite-eu-platform-work-directive",
+      "source_type": "legislation",
+      "title": "Directive (EU) 2024/2831 of the European Parliament and of the Council of 23 October 2024 on improving working conditions in platform work",
+      "publisher": "EUR-Lex",
+      "url": "https://eur-lex.europa.eu/eli/dir/2024/2831/oj/eng",
+      "publication_date": "2024-11-11",
+      "accessed_date": "2026-08-04",
+      "locator": "Articles 7-11 (Chapter III)"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "REQUIRES_EVIDENCE",
+      "target_id": "EVI-016",
+      "target_type": "evidence",
+      "reason": "Satisfying this control requires an observable record of worker disclosure and appeal.",
+      "confidence": "Community"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "id": "PAT-020",
+  "slug": "ai-output-primary-source-verification-pattern",
+  "title": "AI Output Primary-Source Verification Pattern",
+  "description": "A pattern requiring that any factual claim, citation, or recommendation produced by a generative AI system be independently checked against an authoritative primary source before it is relied upon, submitted, or delivered to a client or user, with the check itself recorded.",
+  "version": "1.0.0",
+  "status": "active",
+  "confidence": "Reviewed",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["generative-ai", "professional-services", "hallucination", "verification"],
+  "created_by": "AI Governance Workbench (Phase 3 seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 3 seed data)",
+      "version": "1.0.0",
+      "note": "Initial Edition 1.1 content."
+    }
+  ],
+  "problem": "Generative AI systems produce fluent output that can include entirely fabricated facts, case citations, or claims, indistinguishable in tone or confidence from accurate output; a user under time pressure and unfamiliar with the technology's failure modes can rely on or submit fabricated content without noticing.",
+  "solution": "Before any AI-generated factual claim, citation, or recommendation is relied upon, submitted, or delivered, require an independent check against an authoritative primary source (a case reporter, a statute, a verified database) — not against another AI system — and record that the check occurred and what it found.",
+  "applicability": "Any workflow where a professional or service provider uses generative AI to produce content that supports a legal filing, professional advice, or another duty-of-care obligation to a client or the public.",
+  "consequences": "Adds friction and time cost to workflows that generative AI was adopted to speed up, and requires users to have the domain expertise to identify and locate the correct primary source, which is a capability gap the AI tool itself does not close.",
+  "maturity": "emerging",
+  "citations": [
+    {
+      "id": "cite-mata-avianca-order",
+      "source_type": "court_judgment",
+      "title": "Mata v. Avianca, Inc., No. 22-cv-1461 (PKC), Order on Sanctions",
+      "publisher": "U.S. District Court for the Southern District of New York",
+      "url": "https://www.courtlistener.com/docket/63107798/mata-v-avianca-inc/",
+      "publication_date": "2023-06-22",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "SATISFIES_CONTROL",
+      "target_id": "CTR-022",
+      "target_type": "control",
+      "reason": "Primary-source verification is the concrete practice satisfying the technological-competence duty.",
+      "confidence": "Reviewed"
+    },
+    {
+      "type": "REQUIRES_EVIDENCE",
+      "target_id": "EVI-020",
+      "target_type": "evidence",
+      "reason": "The pattern's output is a recorded verification check for each piece of relied-upon AI content.",
+      "confidence": "Reviewed"
+    }
+  ]
+}

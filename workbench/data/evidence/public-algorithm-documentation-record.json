@@ -1,0 +1,38 @@
+{
+  "id": "EVI-015",
+  "slug": "public-algorithm-documentation-record",
+  "title": "Public Algorithm Documentation Publication Record",
+  "description": "A record confirming that a public-body algorithm's decision logic has been published proactively, including the publication date and where it can be found.",
+  "version": "1.0.0",
+  "status": "active",
+  "confidence": "Community",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["government", "transparency", "audit-log"],
+  "created_by": "AI Governance Workbench (Phase 3 seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 3 seed data)",
+      "version": "1.0.0",
+      "note": "Initial Edition 1.1 content."
+    }
+  ],
+  "evidence_description": "A record confirming an algorithm's decision logic was published to the public register, including the publication date, the version of the algorithm documented, and a link to where it is accessible.",
+  "collection_method": "Logged by the register's maintainer at the time of publication or update.",
+  "retention_period": "For the lifetime of the algorithm, plus a minimum of 5 years.",
+  "artifact_format": "Structured export (CSV/JSON) of publication records, plus the published documentation itself.",
+  "citations": [
+    {
+      "id": "cite-civio-bosco",
+      "source_type": "other",
+      "title": "Civio pulls back the curtain on public algorithms — Spain's Supreme Court orders the Government to release BOSCO's source code",
+      "publisher": "Civio",
+      "url": "https://civio.es/novedades/2025/09/18/civio-pulls-back-the-curtain-on-public-algorithms-spains-supreme-court-orders-the-governments-to-release-boscos-source-code/",
+      "publication_date": "2025-09-18",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": []
+}

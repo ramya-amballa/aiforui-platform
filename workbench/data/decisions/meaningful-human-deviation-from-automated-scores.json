@@ -1,0 +1,81 @@
+{
+  "id": "DEC-015",
+  "slug": "meaningful-human-deviation-from-automated-scores",
+  "title": "Treat a decisively-relied-upon score as triggering GDPR Article 22, and require evidence of genuine human deviation",
+  "description": "Illustrative reference decision modelled on the CJEU's SCHUFA ruling (Case C-634/21). Not a documented decision of any specific organisation. Confidence rationale: 'Community' because this is an illustrative response, not a real organisation's adopted policy — the underlying legal holding it responds to is itself 'Reviewed' (see INC-021), a distinction this dataset keeps deliberately explicit.",
+  "version": "1.0.0",
+  "status": "draft",
+  "confidence": "Community",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["credit-scoring", "privacy", "gdpr", "automated-decision-making", "human-oversight"],
+  "created_by": "AI Governance Workbench (Phase 3 seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 3 seed data)",
+      "version": "1.0.0",
+      "note": "Initial Edition 1.1 content."
+    }
+  ],
+  "decision_statement": "Any score or recommendation produced by an automated system, if a downstream decision-maker relies on it decisively (rather than meaningfully weighing it alongside independent judgement), must be treated as triggering GDPR Article 22's automated-decision-making safeguards — regardless of whether the scoring system itself makes the final decision.",
+  "decision_type": "policy",
+  "decision_context": "Motivated by the CJEU's SCHUFA ruling, which held that a credit bureau's score can itself constitute prohibited automated decision-making under GDPR Article 22 when a lender relies on it decisively, closing a gap where scoring intermediaries had argued they bore no Article 22 responsibility.",
+  "governing_body": "Illustrative example — Automated Decision Accountability Board",
+  "jurisdiction": ["DE", "EU"],
+  "frameworks_referenced": ["GDPR"],
+  "alternatives_considered": [
+    "Treat only the final decision-maker as subject to Article 22, leaving scoring intermediaries unregulated.",
+    "Accept a documented human-review step at face value without measuring whether reviewers ever actually deviate from the score."
+  ],
+  "citations": [
+    {
+      "id": "cite-cjeu-schufa",
+      "source_type": "court_judgment",
+      "title": "Judgment of the Court (First Chamber), 7 December 2023 — OQ v Land Hessen (SCHUFA Holding, Scoring), Case C-634/21",
+      "publisher": "Court of Justice of the European Union",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A62021CJ0634",
+      "publication_date": "2023-12-07",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "RESULTED_FROM",
+      "target_id": "INC-021",
+      "target_type": "incident",
+      "reason": "This decision is modelled directly on the CJEU's holding in this case.",
+      "confidence": "Verified",
+      "citation_ids": ["cite-cjeu-schufa"]
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "target_id": "PAT-014",
+      "target_type": "pattern",
+      "reason": "The decision is put into practice via this single, primary design pattern — no secondary pattern is needed for this concept.",
+      "confidence": "Community"
+    },
+    {
+      "type": "SATISFIES_CONTROL",
+      "target_id": "CTR-006",
+      "target_type": "control",
+      "reason": "This decision is a direct application of the existing GDPR Article 22 control — a new control would inflate the mapping without adding meaning.",
+      "confidence": "Community"
+    },
+    {
+      "type": "REQUIRES_EVIDENCE",
+      "target_id": "EVI-014",
+      "target_type": "evidence",
+      "reason": "Compliance must be demonstrated by an observable human deviation rate, not asserted.",
+      "confidence": "Community"
+    },
+    {
+      "type": "RAISES_BOARD_QUESTION",
+      "target_id": "BRD-014",
+      "target_type": "board_question",
+      "reason": "Boards adopting this decision should be asking whether human review is genuine or symbolic.",
+      "confidence": "Community"
+    }
+  ]
+}

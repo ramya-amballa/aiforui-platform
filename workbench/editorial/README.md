@@ -44,8 +44,16 @@ npm run editorial:health
 
 Reports whether the graph is structurally and qualitatively sound: re-runs the actual `/validators` rules (so it can never disagree with `npm run validate` about what's an error), a dedicated **Zero-Orphan Invariant** check (every object with zero relationships is listed individually as an `ERROR` — an isolated node is invisible in a knowledge graph, so this is a hard gate: the command exits non-zero if any orphan exists, independent of and in addition to `/validators`' own orphan check), near-orphan/fragility counts, outbound-edge-limit pressure, verb-usage balance (flags ontology verbs that are never used), confidence maturity (% Verified/Reviewed vs. Draft/Community), and a citation-completeness summary — combined into a single weighted composite health score. Contrast with the Coverage Dashboard: coverage asks "what topics do we cover," health asks "is the graph itself in good shape."
 
+## Editorial Analytics
+
+```sh
+npm run editorial:insights [-- --out=insights-report.md]
+```
+
+The graph explaining itself, computed entirely from canonical `/data` — no generated commentary, no opinion layered on top. Reports: the most frequently invoked Governance Decisions (by incident count), Design Pattern reuse frequency (which patterns more than one Decision implements — the dataset's own signal for which governance responses are genuinely recurring, not one-off), highest-confidence Decisions (with an explicit note on why `Verified` is rare), weakly-covered governance areas (harm types, jurisdictions, AI system categories with thin representation), top tags by frequency as a proxy for emerging themes, cross-framework overlap (evidence types required by controls from more than one distinct framework — where independent regulators converge on the same observable artifact), and incident clusters (incidents grouped by the Decision they share). This is a reporting tool, not a platform feature — no UI, no visualization, no export engine, consistent with the Phase 2 infrastructure freeze.
+
 ## Design notes
 
-- All five tools share `src/lib/graph.ts`, which reuses the exact loaders `/validators` uses (`loadAllData`, `loadOntology`) — "the graph" means the same thing everywhere in this codebase.
+- All six tools share `src/lib/graph.ts`, which reuses the exact loaders `/validators` uses (`loadAllData`, `loadOntology`) — "the graph" means the same thing everywhere in this codebase.
 - `graph-health.ts` imports the real rule functions from `/validators/src/rules` rather than re-implementing structural checks, so the two can't silently drift apart.
 - None of these tools has a write path into `/data`. The wizard writes only to `/ingestion/drafts`, which is non-canonical by construction (see `/docs/ingestion-pipeline.md`).
