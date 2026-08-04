@@ -989,6 +989,149 @@
       "relevanceScore": 0,
       "categoriesMatched": [],
       "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0075",
+      "dateRejected": "2026-08-04",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Jasper",
+      "organisation": "Hot9ja",
+      "url": "https://remoteOK.com/remote-jobs/remote-jasper-hot9ja-1135932",
+      "relevanceScore": 40,
+      "categoriesMatched": [
+        "aiContext",
+        "complianceContext",
+        "consultingContext",
+        "governanceContext",
+        "llm"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: aiContext, complianceContext, consultingContext, governanceContext, llm; no penalties)."
+    },
+    {
+      "id": "rej-0076",
+      "dateRejected": "2026-08-04",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "General Production",
+      "organisation": "Dana Solutions LLC",
+      "url": "https://remoteOK.com/remote-jobs/remote-general-production-dana-solutions-llc-1136069",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0077",
+      "dateRejected": "2026-08-04",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Compatibility",
+      "organisation": "DanielTems",
+      "url": "https://remoteOK.com/remote-jobs/remote-compatibility-danieltems-1135929",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0078",
+      "dateRejected": "2026-08-04",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Profesor A De Ele â EnseÃ±anza Innovadora Horario Flexible",
+      "organisation": "Apprentus",
+      "url": "https://remoteOK.com/remote-jobs/remote-profesor-a-de-ele-ensenanza-innovadora-horario-flexible-apprentus-1136062",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0079",
+      "dateRejected": "2026-08-04",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Estimator USA TX Dickinson R26 04471",
+      "organisation": "BrandSafway",
+      "url": "https://remoteOK.com/remote-jobs/remote-estimator-usa-tx-dickinson-r26-04471-brandsafway-1135942",
+      "relevanceScore": 0,
+      "categoriesMatched": [
+        "complianceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: complianceContext; Healthcare role penalty (-20))."
+    },
+    {
+      "id": "rej-0080",
+      "dateRejected": "2026-08-04",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "We hire rarely â and carefully",
+      "organisation": "MITRITY",
+      "url": "https://remoteOK.com/remote-jobs/remote-we-hire-rarely-and-carefully-mitrity-1135922",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: AI Agents) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0081",
+      "dateRejected": "2026-08-04",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Customer Support Specialist",
+      "organisation": "Resource Guru",
+      "url": "https://remoteOK.com/remote-jobs/remote-customer-support-specialist-resource-guru-1136066",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0082",
+      "dateRejected": "2026-08-04",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Business Development Representative ANZ",
+      "organisation": "JFrog",
+      "url": "https://remoteOK.com/remote-jobs/remote-business-development-representative-anz-jfrog-1135994",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0083",
+      "dateRejected": "2026-08-04",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Cleansing Crew Operators",
+      "organisation": "IndigenousX",
+      "url": "https://remoteOK.com/remote-jobs/remote-cleansing-crew-operators-indigenousx-1136017",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0084",
+      "dateRejected": "2026-08-04",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Field Maintenance Technician CTC_LIS",
+      "organisation": "Cubic Defence Australia &amp; NZ",
+      "url": "https://remoteOK.com/remote-jobs/remote-field-maintenance-technician-ctc-lis-cubic-defence-australia-amp-nz-1136005",
+      "relevanceScore": 0,
+      "categoriesMatched": [
+        "companyIndustry",
+        "complianceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: companyIndustry, complianceContext; HR role penalty (-20))."
+    },
+    {
+      "id": "rej-0085",
+      "dateRejected": "2026-08-04",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Plant Fitter",
+      "organisation": "Queensland Rail",
+      "url": "https://remoteOK.com/remote-jobs/remote-plant-fitter-queensland-rail-1136027",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
     }
   ]
 }

@@ -1,0 +1,1011 @@
+{
+  "date": "2026-08-04",
+  "totalDiscovered": 29,
+  "perSource": {
+    "demandSignals": 0,
+    "greenhouse": 0,
+    "lever": 0,
+    "ashby": 0,
+    "remoteok": 29,
+    "upwork": 0,
+    "linkedinJobs": 0,
+    "googleJobs": 0,
+    "wellfound": 0,
+    "flexjobs": 0,
+    "uaeRecruiters": 0,
+    "consultingFirms": 0
+  },
+  "perSourceErrors": {},
+  "opportunities": [
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Jasper",
+      "organisation": "Hot9ja",
+      "description": "GEO &amp; AI OptimizationWin the new front door of searchMeasure how your brand performs across every major AI answer engine, prioritize the actions that matter, and ship brand-governed content at scale.GEO DiagnosticLearn what AI is saying about your brand, where the gaps are, and what governs the brands AI cites instead.Brand Compliance DiagnosticScan your website and public content to learn how consistently you score for brand governance and compliance.About JasperOur vision, mission, and impact.New!<strong>Optimize your brand for AI search with our GEO Agent.</strong> Learn moreOrchestrate intelligent agents to run end-to-end marketing workflowsâdelivering speed, control, and measurable impact.The Jasper PlatformJasper is the agent workspace built for modern marketing teams. With 100+ specialized AI agents and connected content pipelinesâstructured, end-to-end workflows that turn plans into live marketingâJasper transforms strategy into execution, reducing operational complexity, strengthening brand control, and driving measurable growth across every channel and market.Purpose-built AI agents that execute real marketing work.Repeatable workflows that move work from idea to launch.Maintain quality &amp; authenticity with a rich context hub.Give your team the tools to move faster, stay on brand, and scale content across every channel and market.From first draft to final in record time. Jasper reduces friction across the entire workflow, enabling faster creation, quicker reviews, and more campaigns out the door.From SEO and personalization to global campaigns and ecommerce, Jasper helps teams launch more â and better â content, faster. Build once, deploy everywhere, and measure impact in real time.Jasperâs IQ layer brings your brand guidelines, tone, and messaging into every asset, ensuring authenticity and alignment â no matter whoâs creating.With intuitive tools like Studio and Grid, anyone can design and run automations that scale content creation. No technical setup. No prompt engineering. Just faster marketing that works.Jasperâs Customer Success team and community of Content Engineers help you design smarter workflows, optimize your pipelines, and scale transformation across your org. Youâre not just adopting AI â youâre building a better way to work.Customer Stories10,000+hours saved annuallyCompliant,high-quality, and localized marketing content at scalePeter SoVP of Digital Innovation\"Thrilled to be on Jasperâs Customer Advisory Board. Itâs not just about efficiency gains, itâs about augmenting human creativity, scaling expertise, and unlocking new ways to engage customers and drive business outcomes.\"Elaina ShekhterChief Marketing & Strategy Officer\"Our marketing teams have cracked the code of using Jasper as an agentic partner in our day-to-day lives, transforming how we work, collaborate and evolve as an organization.\"60%of SEO now automated with Jasper7,500product descriptions written by Jasper in 24 hours3xcontent productionTime-to-marketFaster end-to-end campaignsBryan OlshockChief Marketing OfficerâJasper has the potential to fundamentally transform the way marketing teams operate by boosting efficiency, accelerating execution, and delivering high-quality campaigns faster.âFrom SEO to personalization, localization to campaign creation, Jasper provides the building blocks for every marketer to create, automate, and scale with confidence.Performance MarketersPR & Comms MarketerProduct MarketersBrand MarketersContent MarketersField MarketersScale personalization without slowing revenue.PerformancePopularSocial Media CampaignAmplify your brand and engage followers with a cohesive social media campaign.Enterprise onlyLess time managing launches. More time shaping stories.ProductPopularCampaign BriefDraft a comprehensive plan with goals and deliverables for a marketing campaign.Publicly AvailableProtect your brand while you scale it.BrandPopularAd CampaignTarget audiences on Meta, Google, and more with cohesive digital ads.Publicly AvailableTurn content operations into a growth engine.ContentPopularBlog PostWrite long-form content that provides value, drives traffic, and enhances SEO.Publicly AvailableMove faster without losing message control.DigitalPopularPress releaseShare key company news and updates with well-crafted press release.Publicly AvailableLaunch local campaigns at global speed.FieldPopularLanding PageTransform site traffic into valuable leads through engaging landing pages.Publicly AvailableTrust FoundationEnterprise-grade security and an LLM-agnostic architecture prioritize your data protection & privacy while providing superior quality marketing outputs.ResourcesStories, insights, and best practices for AI powered marketing.The foundational knowledge and skills to leverage Jasper for any type of marketing project.How businesses like yours are leveraging Jasper to drive growth and success.Get in touch about your account, partnerships, press, careers, and more.Self-paced guides, courses, events, and resources, plus channels to connect with fellow marketers.Learn how to use generative AI for your specific marketing role and use case.Explore how Jasper agents help teams turn strategy into execution across every channel, market, and audience.ChatGPT, Claude, and Gemini are general-purpose AI models with no built-in knowledge of your brand. Jasper is built specifically for marketing. Jasper IQ embeds your brand voice, style guides, audience profiles, and product knowledge into every output, across your entire team, automatically. Jasper also includes marketing-specific agents, team-scale content pipelines, and enterprise governance controls. And through Jasper's MCP server, your brand context can travel with you into other AI tools as well.Yes, and it does it automatically through Jasper IQ. Jasper IQ stores your brand voice, style guides, audience profiles, and product knowledge, then applies that context to every output across your entire team. Admins set the rules once; every generation follows them. You can maintain multiple brand voices for different audiences, sub-brands, or regions, and extend visual guidelines to image outputs as well.Yes. Jasper includes a library of purpose-built agents, each designed for a specific marketing job: SEO and GEO content, campaign execution, email, social media, personalization, research, and more. These agents apply your brand context automatically and execute end-to-end workflows â not just one-off responses. Teams can also build custom agents using AI Studio and deploy them across their workspace.No. Jasper has a chat interface, but it is not a chatbot. Chatbots respond to questions with a general-purpose model that has no knowledge of your brand. Jasper is AI infrastructure built for marketing teams, with agents that execute specific marketing jobs, pipelines for producing content at scale, and Jasper IQ embedding your brand context into every generation automatically. The chat interface is one entry point into that system, not the system itself.Yes. Jasper generates both text and images, and scales both across marketing workflows. On the text side, Jasper handles the full range of marketing content: articles, emails, ads, social posts, and more. On the image side, Jasper's Image Pipelines produce on-brand product imagery at enterprise scale, up to 10x faster and at up to 50% lower cost than traditional production. Jasper's Image APIs also support background removal, cleanup, upscaling, and image decomposition. And audio and video files can be uploaded to Jasper's Knowledge Base as source material for content generation.Jasper is an AI platform purpose-built for marketing success: it handles far more than content generation. At its core is Jasper IQ, an intelligence layer that embeds your brand voice, audience profiles, style guides, and product knowledge into every output automatically. Marketing teams use Jasper to run campaigns, execute multi-channel workflows, and scale content pipelines with brand consistency built in from the start.By submitting this form, you agree to Jasper's Terms of Service and Privacy Policy.<br/><br/>Please mention the word **VIRTUOUS** and tag RNDAuNjUuNjEuMTQ5 when applying to show you read the job post completely (#RNDAuNjUuNjEuMTQ5). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-jasper-hot9ja-1135932",
+      "location": "Content, ",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 7.0,
+        "alignmentADGL": 8.0,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG",
+        "AI Agents"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "General Production",
+      "organisation": "Dana Solutions LLC",
+      "description": "Cambridge, ON, CA, N1R 5Y2<br><br>Requisition: 66687<br><br><strong>Job Purpose<br><br></strong>Job Description Content for Job Profiles is a work in progress. If you need content to finalize this requisition for posting, please send a message to mydanahrplatform@dana.com.<br><br><strong>Job Duties And Responsibilities<br><br></strong>Job Description Content for Job Profiles is a work in progress. If you need content to finalize this requisition for posting, please send a message to mydanahrplatform@dana.com.<br><br><strong>Skills<br><br></strong><strong>Education and Qualifications<br><br></strong>Join our team of 28,000 problem solvers who are fostering a culture of innovation by leveraging the diverse perspectives of our global team. We believe in facing challenges head-on by finding opportunity and uncovering possibility, where roadblocks and barriers become targets instead of obstacles. We are One Dana with limitless opportunity.<br><br><strong>Our Values<br><br></strong><ul><li>Value Others</li><li>Inspire Innovation</li><li>Grow Responsibly</li><li>Win Together</li></ul><br/><br/>Please mention the word **BREATHTAKINGLY** and tag RNDAuNjUuNjEuMTQ5 when applying to show you read the job post completely (#RNDAuNjUuNjEuMTQ5). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-general-production-dana-solutions-llc-1136069",
+      "location": "Cambridge, ",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Compatibility",
+      "organisation": "DanielTems",
+      "description": "CompatibilityWorking at Stripe is not for everyone<br><br>Not everyone finds success at Stripe. Those who do tend to share a few things in common.<br><br>The right people donât always think theyâre right<br><br>Successful Stripes are rigorous thinkers who appreciate that things worth doing are rarely simple. We want people who are not afraid to be wrong, who can enthusiastically back proposals they initially opposed, and who know how to support decisions with numbers and narrative. We operate in situations of substantial uncertainty and cannot afford either timidity or recklessness.<br><br>The global financial system can seem like a mystifying domain. It isnât. Itâs made of people and computers, like many other systems youâve worked on. Most Stripes donât come from finance, and theyâve thrived by bringing fresh perspectives. We want generalists who can parachute anywhere into our operations, learn a new field quickly, and execute competently beyond their formal remit.<br><br>We know that we canât be successful without nurturing the careers of both generalists and experts. People who thrive in high-conflict work environments often do not enjoy the experience here. We try to embrace kindness while still encouraging Stripes to take measured risks and act boldly, even in the absence of consensus.<br><br>Who is Stripe for?<br><br>Ambitious builders<br><br>Weâre building solutions without clear precedent, solving problems with far-reaching consequences. The people here find that energizing, preferring the joy of discovery to the comfort of certainty.<br><br>Adaptable problem solvers<br><br>AI is changing how the global economy works, how our customers work, and how Stripes work. The people who thrive here adapt quickly and treat obstacles as opportunities.<br><br>Rigorous thinkers<br><br>We argue from first principles, question assumptions, and donât stop at good enough. At Stripe, craft isnât a nice-to-haveâitâs the standard.<br><br>The most successful Stripes are the people who have the intellectual horsepower, the curiosity to learn a very complicated business, and the humility to get up every day and realize thereâs a huge amount of things they donât know.<br><br>Conor McNamaraHead of EMEA<br><br>What all Stripes have in common<br><br>Weâre dedicated to our work and optimistic about the world. We believe entrepreneurship and free markets do good, and building what supports them matters. If thatâs you, read on.<br><br>Motivated by our mission<br><br>Stripe is on a mission to grow the GDP of the internet.<br><br><strong>Ask Yourself:<br><br></strong><ul><li>Do I see free markets and entrepreneurship as powerful forces for advancing progress?</li><li>Does enabling entrepreneurship and helping to unlock the internet economyâs full potential seem like a compelling use of my time and talents?<br><br></li></ul>Embody our operating principles<br><br>âUsers firstâ is a cornerstone principle. Our users trust us to provide an essential service, and itâs a heavy responsibility that we take very seriously.<br><br><strong>Ask Yourself:<br><br></strong><ul><li>Am I motivated to move mountains to protect and support businesses that depend on Stripe?</li><li>Am I driven to overcome obstacles and take on big things to drive progress, or do I feel overwhelmed by the sheer scale and breadth of sometimes nebulous opportunities?<br><br></li></ul>Energized by change<br><br>The pace of change at Stripe and in the broader economy is accelerating. Youâll work outside your domain, take on problems that didnât exist a year ago, and be expected to adapt as quickly as the world does.<br><br><strong>Ask Yourself:<br><br></strong><ul><li>Do I see a fast-moving environment as an opportunity rather than an obstacle?</li><li>Am I comfortable taking on problems outside my domain or experience?<br><br></li></ul>Collaborative, multidisciplinary work<br><br>Building programmable financial infrastructure from first principles is inherently complex. It means that everything we create requires deep, collaborative, multidisciplinary work: technically, organizationally, and geographically.<br><br><strong>Ask Yourself:<br><br></strong><ul><li>Am I excited by navigating complexity at scale?<br><br></li></ul>How we operate<br><br>Youâll bring high standards to everything you do and find others who do the same.<br><br>Users first<br><br>We serve millions of businesses and a meaningful fraction of global GDP. We have a weighty responsibility to those businesses and to society. We work backwards from our usersâ needs, indexing especially on feedback from the most innovative. Everyone at Stripe talks to users.<br><br>Create with craft and beauty<br><br>With careful thought, anything can be made surprisingly great. Across every part of Stripe, we are committed to doing so. Well-crafted work indicates care for the user, and beautiful work indicates care for the world.<br><br>Move with urgency and focus<br><br>We move with speed on what matters most and take the time to invest in what will make us faster tomorrow. Whereas many companies get slower until theyâre eventually mired in mediocrity, we aspire to become the worldâs fastest company.<br><br>Collaborate egolessly<br><br>We work as one team: no fiefdoms, no hoarding information, no ânot my problem.â We question assumptions, debate energetically, and abandon ideas when better ones emerge. Weâre generous with credit and stingy with blame. We learn from mistakes together.<br><br>Stay curious<br><br>Stripe is an applied exercise in learning about how businesses tick and how the world works. Since the details and possibilities are infinite, we are always seeking to learn. Weâre energized by the unfamiliar, preferring the joy of discovery to the comfort of certainty.<br><br>Obsess over talent<br><br>Itâs every Stripeâs responsibility to help hire the best and to push for excellence everywhere. Managers must relentlessly uphold our high talent bar, lead their teams with clarity and context, foster development, and ultimately support Stripes in accomplishing the best work of their careers.<br><br>Our culture<br><br>Like all great workplaces, Stripe has its own working culture, with norms that can surprise, delight, and occasionally perplex.<br><br>Friday Fireside<br><br>Friday Fireside is a weekly Stripe-wide forum hosted by Patrick and John. We hear from a Stripe user and get their unvarnished feedback, invite Stripes to chat about (or demo!) their recent work, and welcome external experts to discuss timely and relevant topics.<br><br>Convergence<br><br>Every December, Stripes come together for Convergenceâa full-day event and Stripe tradition dating back to 2014. Itâs a chance to reflect on the past year, hear about our priorities for the next year, learn from each other, and poke fun at ourselves.<br><br>How we show up in the world<br><br><ul><li>Cheeky Pint<br><br></li></ul>Ideas meet the pub hang. In this podcast series, John Collison sits down with founders, builders, and leaders to discuss their craft over a pint.<br><br>Watch Cheeky Pint <br><br><ul><li>Stripe Press<br><br></li></ul>Stripe Press publishes books about ideas for economic, technological, and scientific progress. We print works we think can be broadly useful.<br><br>Find Stripe Press titles <br><br><ul><li>Works in Progress<br><br></li></ul>Stripeâs online and print magazine focuses on scientific, technological and economic advancement.<br><br>Read about Works in Progress <br><br><ul><li>Frontier<br><br></li></ul>Launched in 2022, Frontier is Stripeâs advance market commitment to buy an initial $1.8B of permanent carbon removal by 2040.<br><br>Learn about Frontier <br><br><ul><li>Intercept<br><br></li></ul>A new initiative focused on dramatically reducing the burden of respiratory viruses.<br><br>Learn about Intercept <br><br>Frequently asked questions<br><br>What is it actually like to work at Stripe day to day?<br><br>Fast-paced, intellectually demanding, and creative. The volume is high, and the problems are high stakes. But you wonât be doing it aloneâwe work with egoless collaboration. Most Stripes will tell you the caliber of their teammates is one of the things they value most, and that it raises their own standard of work.<br><br>How does Stripe invest in your growth?<br><br>Through the work itself, mostly. Stripe gives people stretch projects early, which means youâre solving problems that are hard and consequential to the business. Beyond that, we offer mentorship, direct feedback, and an annual education stipend for courses, conferences, and resources that move your career forward. The expectation is that youâll grow quickly here. Weâre set up to support you.<br><br>How does AI shape the work here?<br><br>AI is embedded in how everyone at Stripe builds, analyzes, and operates. Engineers use AI tools daily to accelerate development. Teams across product, design, and operations are building AI-powered features for the businesses and consumers who rely on Stripe. We think carefully about where AI creates real value versus where it introduces risk.<br><br>What does it mean to do your best work here?<br><br>Stripe is a place to do career-defining work. The stakes are high: millions of businesses rely on Stripe. Itâs a responsibility that requires combining urgency with high standards, an often demanding mix. In exchange, you'll have the support and opportunity to pursue big ideas and change how things work, with a high degree of autonomy.<br><br>More on careers at Stripe<br><br><ul><li>Get our perspective on why what we build matters.<br><br></li></ul>Opportunity <br><br><ul><li>Start your career at the center of the global economyâsee what we offer for early career opportunities.<br><br></li></ul>Emerging talent <br><br><ul><li>Weâre hiring. Explore our open roles and submit your application.<br><br></li></ul>Open roles<br/><br/>Please mention the word **APPRECIATIVELY** and tag RNDAuNjUuNjEuMTQ5 when applying to show you read the job post completely (#RNDAuNjUuNjEuMTQ5). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-compatibility-danieltems-1135929",
+      "location": "How, ",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Profesor A De Ele â EnseÃ±anza Innovadora Horario Flexible",
+      "organisation": "Apprentus",
+      "description": "Oferta de Empleo: Profesor/a de EspaÃ±ol como Lengua Extranjera<br><br>UbicaciÃ³n: Zaragoza<br><br>Buscamos incorporar a un/a Profesor/a de EspaÃ±ol como Lengua Extranjera (ELE) a nuestro equipo docente.<br><br>Si eres un/a profesional apasionado/a por la enseÃ±anza, con experiencia y ganas de formar parte de un entorno educativo estimulante y en constante crecimiento, esta es tu oportunidad.<br><br>Requisitos<br><br>Residencia en Zaragoza<br><br>Experiencia mÃ­nima de 1 aÃ±o en la enseÃ±anza de EspaÃ±ol como Lengua Extranjera (ELE)<br><br>FormaciÃ³n acadÃ©mica relacionada con la enseÃ±anza de idiomas (se valorarÃ¡ formaciÃ³n especÃ­fica en ELE)<br><br>Dominio de metodologÃ­as de enseÃ±anza comunicativas y actualizadas<br><br>Compromiso con la excelencia educativa, capacidad de adaptaciÃ³n y orientaciÃ³n al estudiante<br><br>Habilidad para trabajar en equipo y comunicarse eficazmente en un entorno multicultural<br><br>Te Ofrecemos<br><br>IncorporaciÃ³n a un equipo docente de alto nivel, con formaciÃ³n continua y ambiente colaborativo<br><br>Contrato conforme al convenio colectivo de la educaciÃ³n no reglada<br><br>Salario competitivo, acorde a la experiencia y al convenio colectivo<br><br>Flexibilidad horaria, compatible con otras actividades profesionales o personales<br><br>Si estÃ¡s interesado/a en formar parte de un proyecto educativo innovador y contribuir al Ã©xito de nuestros estudiantes, envÃ­anos tu CV a : ******<br><br>#J-*****-Ljbffr<br/><br/>Please mention the word **KEEN** and tag RNDAuNjUuNjEuMTQ5 when applying to show you read the job post completely (#RNDAuNjUuNjEuMTQ5). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-profesor-a-de-ele-ensenanza-innovadora-horario-flexible-apprentus-1136062",
+      "location": "Zaragoza, ",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Estimator USA TX Dickinson R26 04471",
+      "organisation": "BrandSafway",
+      "description": "At BrandSafway, we know our employees are our greatest asset, which is why we give them the tools, training, and resources to be successful. Come join our growing team!<br><br><ul><li>Requires working knowledge and experience in own job discipline and broadens capabilities</li><li>Continues to build knowledge of the company, processes and customers</li><li>Performs a range of assignments related to job discipline</li><li>Uses prescribed guidelines or policies in analysing situations</li><li>Receives a moderate level of guidance and direction </li><li>Requires expanded conceptual knowledge in own job discipline and broadens capabilities</li><li>Understands key business drivers; uses this understanding to accomplish own work</li><li>Provides informal guidance to new team members</li><li>Solves problems in straightforward situations; analyzes possible solutions using technical experience and judgment and precedents</li><li>Impacts quality of own work and the work of others on the team; works within guidelines and policies</li><li>Explains complex information to others in straightforward situations<br><br></li></ul>BrandSafway offers a competitive benefits package that includes medical, dental, vision, life and disability insurance along with a generous 401k plan.<br><br><strong>About Us<br><br></strong>BrandSafway is a leading global provider of access, specialized services, and forming and shoring solutions to the industrial, commercial and infrastructure markets. Through a network of ~340 strategic locations across 25 countries and ~40,000 employees, BrandSafway delivers a full range of industrial service solutions. BrandSafway supports maintenance and refurbishment projects as well as new construction and expansion plans with unmatched service from expert local labor and management. Todayâs BrandSafway is At Work For YouÂ® â leveraging innovation and economies of scale to increase safety and productivity, while remaining nimble and responsive.<br><br>BrandSafway, including its subsidiaries, is an equal opportunity employer and does not discriminate on the basis of race, creed, color, national origin, religion, gender, marital status, sexual orientation, age, disability, special disabled or veteran status.<br><br><strong>Notice To All Potential Job Candidates<br><br></strong>Please be advised that BrandSafway will never require or ask for any fee from you in exchange for being considered, hired, promoted, transferred or having ongoing employment with us. It is a violation of our Code of Conduct if any employee requests any money or fee from you in exchange for tentatively special treatment or consideration. If anyone, regardless of whether an existing employee, or anyone else, requests payment of any fee in exchange for being hired into our company, you may confidentially contact our HR Compliance department at hrcompliance@brandsafway.com and provide the name of the individual and any other documentation or proof of such an act.<br/><br/>Please mention the word **TRIUMPHANT** and tag RNDAuNjUuNjEuMTQ5 when applying to show you read the job post completely (#RNDAuNjUuNjEuMTQ5). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-estimator-usa-tx-dickinson-r26-04471-brandsafway-1135942",
+      "location": "Dickinson, ",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "We hire rarely â and carefully",
+      "organisation": "MITRITY",
+      "description": "Companies deploy AI agents to move fast, and they do. They make API calls, query databases, modify infrastructure, and interact with customers â all without human approval. That's the point. The problem? Nobody actually knows what these agents are doing.<br/><br/>Please mention the word **TERRIFICALLY** and tag RNDAuNjUuNjEuMTQ5 when applying to show you read the job post completely (#RNDAuNjUuNjEuMTQ5). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-we-hire-rarely-and-carefully-mitrity-1135922",
+      "location": "Ontario, ",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "AI Agents"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Data Entry Administrator",
+      "organisation": "PulseMediaNL",
+      "description": "<strong>About PulseMediaNL<br><br></strong>PulseMediaNL is a forward-thinking digital media company committed to delivering high-quality content, innovative marketing solutions, and exceptional customer experiences. We value accuracy, efficiency, collaboration, and continuous improvement. As our team grows, we are seeking a highly organized and detail-oriented Data Entry Administrator to support our daily operations by maintaining accurate and reliable data across multiple platforms.<br><br>Position Overview<br><br>The Data Entry Administrator is responsible for accurately entering, updating, verifying, and maintaining company data while ensuring the highest standards of quality and confidentiality. This role requires excellent attention to detail, strong organizational skills, and the ability to work independently in a remote environment. The successful candidate will help ensure that business records remain complete, accurate, and accessible, contributing directly to operational efficiency.<br><br>Key Responsibilities<br><br><ul><li>Accurately enter data into company databases, spreadsheets, and internal management systems.</li><li>Review and verify information for completeness, accuracy, and consistency before submission.</li><li>Update existing records with new information while maintaining data integrity.</li><li>Identify and correct errors, inconsistencies, or duplicate entries.</li><li>Organize and maintain digital files, records, and documentation.</li><li>Perform routine data quality checks and audits.</li><li>Generate reports and summaries as requested by management.</li><li>Assist with importing and exporting data between various software platforms.</li><li>Maintain confidential information in accordance with company policies and applicable privacy regulations.</li><li>Collaborate with internal departments to obtain missing or updated information.</li><li>Prioritize tasks to meet deadlines while maintaining a high level of accuracy.</li><li>Support administrative projects and perform additional data-related tasks as assigned.<br><br></li></ul><strong>Required Qualifications<br><br></strong><ul><li>High school diploma or equivalent; an associate's or bachelor's degree is an advantage.</li><li>Previous experience in data entry, administrative support, or office administration preferred.</li><li>Excellent typing skills with a high level of accuracy.</li><li>Strong attention to detail and commitment to producing error-free work.</li><li>Proficiency in Microsoft Office Suite, particularly Excel and Word.</li><li>Experience using Google Workspace, including Google Sheets and Google Docs.</li><li>Comfortable learning and using new software and database systems.</li><li>Strong organizational and time management skills.</li><li>Ability to work independently with minimal supervision.</li><li>Excellent written and verbal communication skills.</li><li>Reliable internet connection and a suitable remote work environment.<br><br></li></ul><strong>Preferred Qualifications<br><br></strong><ul><li>Experience with CRM or ERP software.</li><li>Familiarity with database management systems.</li><li>Knowledge of data privacy and information security best practices.</li><li>Experience working remotely in a professional environment.</li><li>Basic analytical and problem-solving skills.<br><br></li></ul>Key Skills<br><br><ul><li>Data entry accuracy</li><li>Time management</li><li>Organization</li><li>Attention to detail</li><li>Communication</li><li>Problem-solving</li><li>Computer literacy</li><li>Multitasking</li><li>Confidentiality</li><li>Team collaboration<br><br></li></ul>What We Offer<br><br><ul><li>Fully remote work environment.</li><li>Competitive salary.</li><li>Flexible working schedule where applicable.</li><li>Paid time off and company holidays.</li><li>Opportunities for professional development and career growth.</li><li>Supportive and collaborative team culture.</li><li>Ongoing training and skill development.</li><li>Performance recognition and advancement opportunities.</li><li>Access to modern digital collaboration tools.<br><br></li></ul>Success in This Role<br><br>The ideal candidate consistently delivers accurate work, meets deadlines, maintains confidentiality, communicates effectively with colleagues, and demonstrates a proactive approach to improving data quality and administrative processes.<br><br>Equal Opportunity Employer<br><br>PulseMediaNL is an equal opportunity employer. We celebrate diversity and are committed to creating an inclusive workplace where all employees are treated with respect and provided equal opportunities.<br><br>If you are a detail-oriented professional who enjoys working with data and thrives in a remote environment, we encourage you to apply and become part of the PulseMediaNL team.<br/><br/>Please mention the word **RESPITE** and tag RNDAuNjUuNjEuMTQ5 when applying to show you read the job post completely (#RNDAuNjUuNjEuMTQ5). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-data-entry-administrator-pulsemedianl-1135903",
+      "location": "Ø§ÙØ±ÙØ§Ø¶, Ø§ÙØ±ÙØ§Ø¶ Ø§ÙØ±ÙØ§Ø¶ Ø§ÙØ³Ø¹ÙØ¯ÙØ©",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Patient Outreach Specialist",
+      "organisation": "Grapefruit Health",
+      "description": "&lt;p&gt;&lt;span&gt;&lt;strong id=&quot;docs-internal-guid-d2f9f2ed-7fff-9271-9657-97ab474bb4a0&quot;&gt;Patient Outreach Specialist: Remote Healthcare Position&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;&lt;strong id=&quot;docs-internal-guid-d2f9f2ed-7fff-9271-9657-97ab474bb4a0&quot;&gt;Grapefruit Health Â· Remote, U.S. Â· Part-time, Flexible Â· Graduates Only&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;h5&gt;&lt;span&gt;&lt;strong id=&quot;docs-internal-guid-9ce6a45c-7fff-b3a4-432d-8169b305997a&quot;&gt;ABOUT GRAPEFRUIT HEALTH&lt;/strong&gt;&lt;/span&gt;&lt;/h5&gt;&lt;p&gt;&lt;span&gt;Grapefruit Health is a healthcare services company on a mission to solve the growing staffing shortage in healthcare by putting tomorrow&#39;s clinicians to work today. We train and manage healthcare graduates to conduct remote, telephonic patient interactions using our purpose-built software. The result: patients receive timely support, healthcare organizations extend their capacity, and you gain real clinical experience.&lt;/span&gt;&lt;/p&gt;&lt;h5&gt;&lt;span&gt;&lt;strong id=&quot;docs-internal-guid-9ce6a45c-7fff-b3a4-432d-8169b305997a&quot;&gt;THE ROLE&lt;/strong&gt;&lt;/span&gt;&lt;/h5&gt;&lt;p&gt;&lt;span&gt;As a GFH Patient Outreach Specialist, you&#39;ll conduct structured phone-based interactions with patients on behalf of our partner healthcare organizations. Using our software, you&#39;ll follow evidence-informed protocols to check in on patients, complete assessments, and escalate concerns when needed, all from a quiet space of your choosing. You&#39;ll work with patients experiencing different disease states, preventative care needs, medication use, post-discharge follow-up needs, etc. All interactions are telephonic; no video, no in-person contact required. Must be based in the U.S.&lt;/span&gt;&lt;/p&gt;&lt;h5&gt;&lt;span&gt;&lt;strong id=&quot;docs-internal-guid-9ce6a45c-7fff-b3a4-432d-8169b305997a&quot;&gt;WHAT YOU&#39;LL DO&lt;/strong&gt;&lt;/span&gt;&lt;/h5&gt;&lt;ul&gt;&lt;li&gt;&lt;p&gt;&lt;span&gt;Complete a minimum of 20 hours of patient outreach per week on a flexible schedule you build&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;span&gt;Conduct structured telephonic assessments and wellness check-ins using The Grove (Grapefruit Healthâs platform)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;span&gt;Document interaction outcomes accurately within the platform&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;span&gt;Escalate patient safety concerns to a licensed clinical supervisor in real time&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;span&gt;Maintain strict HIPAA compliance and patient confidentiality at all times&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;span&gt;Participate in onboarding training and ongoing check-ins&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;h5&gt;&lt;span&gt;&lt;strong id=&quot;docs-internal-guid-9ce6a45c-7fff-b3a4-432d-8169b305997a&quot;&gt;TRAINING &amp;amp; SUPERVISION&lt;/strong&gt;&lt;/span&gt;&lt;/h5&gt;&lt;p&gt;&lt;span&gt;All new graduate hires complete a â¦14 day paid onboarding covering our platform, communication frameworks, and HIPAA requirements. Once active, you&#39;ll be supervised by our Clinical Leadership Team who are available during your shifts for escalations and support.&lt;/span&gt;&lt;/p&gt;&lt;h5&gt;&lt;span&gt;&lt;strong id=&quot;docs-internal-guid-9ce6a45c-7fff-b3a4-432d-8169b305997a&quot;&gt;WHAT YOU&#39;LL GAIN&lt;/strong&gt;&lt;/span&gt;&lt;/h5&gt;&lt;ul&gt;&lt;li&gt;&lt;p&gt;&lt;span&gt;Verifiable healthcare experience for your resume&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;span&gt;Confidence and fluency in patient communication&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;span&gt;Familiarity with a real clinical software used in professional settings&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;span&gt;The satisfaction of genuinely improving patient outcomes&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;h5&gt;&lt;span&gt;&lt;strong id=&quot;docs-internal-guid-9ce6a45c-7fff-b3a4-432d-8169b305997a&quot;&gt;WHAT WE&#39;RE LOOKING FOR&lt;/strong&gt;&lt;/span&gt;&lt;/h5&gt;&lt;ul&gt;&lt;li&gt;&lt;p&gt;&lt;span&gt;U.S. based required&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;span&gt;Must be a healthcare school graduate â active clinical enrollment does not qualify for this role. You will be rejected if you are in school&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;span&gt;Certification as a medical assistant, community health worker, patient navigator, pharmacy technician, or comparable clinical credential is a plus&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;span&gt;Must have a compatible computer and cell phone with SMS&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;span&gt;Must be able to work at least 20 hours/week&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;span&gt;A quiet, private workspace free of background noise or distractions&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;span&gt;Strong verbal communication skills, or a genuine desire to develop them&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;span&gt;Comfort working independently in a remote environment&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;If you are passionate about helping others and have a knack for building relationships, we encourage you to apply!&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;h5&gt;&lt;strong&gt;&lt;em&gt;Required with Submission&lt;/em&gt;&lt;/strong&gt;&lt;/h5&gt;&lt;ul&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;em&gt;Two-minute or less video explaining why you would be a good fit for Grapefruit Health and why you think learning how to perform care telephonically is important to prepare you to become a clinician. These do not need to be very formal and are mostly for us to evaluate your communication style. Be yourself and have fun with it!&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;/p&gt;&lt;h5&gt;&lt;span&gt;&lt;strong id=&quot;docs-internal-guid-9ce6a45c-7fff-b3a4-432d-8169b305997a&quot;&gt;HEAR FROM OUR TEAM&lt;/strong&gt;&lt;/span&gt;&lt;/h5&gt;&lt;p&gt;&lt;span&gt;âIâve had an amazing experience so far with Grapefruit. I am very thankful for this opportunity, and it has boosted my confidence as a future health care professional and with patient interactions.â -Madison, Pharmacy Student&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;âWorking with Grapefruit Health gave me the opportunity to communicate with real life patients. This program not only gave me the experience I was missing, but also the communication skills that I will carry with me into my career as a nurseâ-Elizabeth, Nursing Student&lt;/span&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;span&gt;Grapefruit Health is an equal opportunity employer. Students work directly for Grapefruit Healthââwe are not a third-party recruiter. All patient data is handled in accordance with HIPAA.&lt;/span&gt;&lt;/p&gt;<br/><br/>Please mention the word **COMMENDABLE** and tag RNDAuNjUuNjEuMTQ5 when applying to show you read the job post completely (#RNDAuNjUuNjEuMTQ5). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-patient-outreach-specialist-grapefruit-health-1135789",
+      "location": "Not specified",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Cleaning Assistant Afternoon Evening",
+      "organisation": "Canadian Base Operators Inc.",
+      "description": "<strong>About This Career Opportunity<br><br></strong>Canadian Base Operatorsâ Southport team is growing! If you are a committed and collaborative professional looking to contribute to a hard-working, innovative team, this opportunity is for you. As a proud partner with Kelowna Aerospace Defence Programs, we deliver numerous support services tailored to our client, the Royal Canadian Air Force (RCAF).<br><br>The Cleaning Assistant is a <strong>full-time permanent </strong>position located in Southport, MB and reports to the Housekeeping Supervisor. Their primary focus is to clean all indoor facilities including classrooms, hangars and offices. Hours of work are <strong>Monday to Friday from 2:00 pm â 10:30 pm</strong>. Duties and responsibilities include but are not limited to:<br><br><ul><li>Clean all areas on site including shared spaces shared spaces and high touch points</li><li>Remove dust</li><li>Vacuum carpets, rugs, furniture</li><li>Sweep, mop and polish floors</li><li>Sanitize washrooms</li><li>Remove and sort garbage and recycling</li><li>Ensure proper use and storage of cleaning items</li><li>Replenish paper supplies</li><li>Ensure work is performed in compliance with health and safety standards and company policies<br><br></li></ul><strong>Competency Requirements<br><br></strong><ul><li>Communicates Effectively </li><li>Customer Focus</li><li>Teamwork and Collaboration</li><li>Values and Respects Others<br><br></li></ul><strong>Work Experience Requirements<br><br></strong><ul><li>Previous cleaning experience desirable, but training will be provided. </li><li>Knowledge of various cleaning equipment and products.<br><br></li></ul><strong>Skills, Abilities, And Other Requirements<br><br></strong><ul><li>Punctual, reliable and trustworthy</li><li>Able to manage time effectively</li><li>Detail oriented</li><li>Able to work alone and in a team environment</li><li>Bending and lifting required, up to 50 lbs</li><li>Maintain professional demeanour</li><li>Eligible to obtain an Enhanced Reliability Clearance by the Canadian Industrial Security Directorate<br><br></li></ul><strong>$500 Signing bonus after successful completion of probation. <br><br></strong>We are committed to building an inclusive workplace. Canadian Base Operators welcomes applications from all qualified individuals, including persons with disabilities. Accommodation is available upon request throughout the recruitment process.<br><br><br/><br/>Please mention the word **PERMISSIBLE** and tag RNDAuNjUuNjEuMTQ5 when applying to show you read the job post completely (#RNDAuNjUuNjEuMTQ5). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-cleaning-assistant-afternoon-evening-canadian-base-operators-inc-1135868",
+      "location": "Southport, ",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Customer Support Specialist",
+      "organisation": "Resource Guru",
+      "description": "<strong>Type: </strong>Full time<br><br><strong>Salary: </strong>Location-dependent (UK: Â£30,000âÂ£35,000 GBP / Canada: CAD $48,000â$57,000) + share options<br><br><strong>Location: </strong>UK or Canada (Atlantic Time Zone only)<br><br>Meet The Guru<br><br>Resource Guru is a blissfully simple scheduling tool that helps busy teams stay on track.<br><br>We boost efficiency, improve resource utilisation, and increase project profitability - while promoting a healthy work/life balance.<br><br>Weâre proud to be one of the leaders in our category, trusted by customers in over 100 countries - including top creative agencies like Publicis, TBWA, Grey, BBH, and M&amp;C Saatchi, as well as household names like NASA, Accenture, CNN, Kraft Heinz, and the NHS. They rely on Resource Guru to manage one of their most valuable assets - their peopleâs time.<br><br>Weâre a small, fully remote team based across the UK and Europe. We collaborate mainly via Slack, with occasional meetups to connect, plan, and celebrate. See if this is the right place for you.<br><br>â­ï¸ The role<br><br>Weâre looking for a Customer Support Specialist to join our team.<br><br>As more teams use Resource Guru and as we continue to support larger, more complex customers we want to make sure every customer receives fast, clear, thoughtful and genuinely helpful support.<br><br>This role is primarily about helping customers by email, understanding their questions, troubleshooting issues, and making sure they get the best possible experience from Resource Guru.<br><br>Youâll work closely with Dana, our Senior Customer Support Specialist, and collaborate with our product and engineering teams when customer questions, bugs or feature requests need to be investigated further. We see Customer Support as a core part of building a great product, so youâll work closely with the rest of the team to help improve Resource Guru, not just answer support tickets.<br><br>This is a great role for someone with some experience in SaaS or online customer support who wants to keep developing their technical, communication and customer-facing skills in a friendly, remote-first team.<br><br>What Youâll Be Doing<br><br>Learning Resource Guru inside out<br><br><ul><li>In your first few months, you'll get to know Resource Guru inside out - how customers use the product, what common questions come up, and how to guide people towards the right answer.<br><br></li></ul>Responding to customer questions<br><br><ul><li>Help customers with day-to-day support questions, including product usage, account setup, billing enquiries, troubleshooting and general \"how do Iâ¦?\" queries.</li><li>Most support is handled by email, though you may occasionally join a phone or video call when that would help resolve something more quickly.<br><br></li></ul>Troubleshooting problems<br><br><ul><li>Investigate customer issues carefully and methodically - asking the right follow-up questions, checking account settings, trying to reproduce a problem, looking for browser-related issues, or escalating a bug to engineering with clear notes.<br><br></li></ul>Working with the wider team<br><br><ul><li>Work closely with Dana and the wider Resource Guru team to understand customer questions, resolve issues, and make sure useful feedback is shared with Product and Engineering.</li><li>Help create clear internal reports when customers report bugs or technical issues, and tag/categorise feature feedback so the team understands what customers need.<br><br></li></ul>Improving our help content<br><br><ul><li>Help keep the Help Centre useful and up to date - updating existing articles, writing new ones, recording simple walkthroughs, or suggesting improvements when you notice customers asking the same questions repeatedly.<br><br></li></ul>Using our support tools<br><br><ul><li>Use tools such as Front, Recurly, Customer.io, HubSpot and other internal systems to manage customer conversations, billing questions and account information. We don't expect you to know all of these already, but you should be comfortable learning new software quickly.<br><br></li></ul>Helping customers feel looked after<br><br><ul><li>A big part of this role is making sure customers feel heard, understood and helped. We care about support that is accurate and efficient, but also warm, human and thoughtful.<br><br></li></ul>What Weâre Looking ForEssential experience<br><br><ul><li>1-3 yearsâ experience in online customer support, ideally for a B2B SaaS or similar software company</li><li>Excellent written and spoken English and the ability to explain things clearly, simply and warmly</li><li>A calm, patient and empathetic approach to helping customers</li><li>Good attention to detail, especially when dealing with billing, account or technical questions</li><li>A practical approach to troubleshooting and problem-solving</li><li>Confidence learning new software tools and understanding how web-based products work</li><li>Some familiarity with basic technical concepts such as browsers, cache, cookies, internet connection issues and permissions</li><li>The ability to work independently in a remote team and manage your time well</li><li>A collaborative and conscientious attitude and willingness to share useful customer feedback with product, engineering and the wider team</li><li>Comfort with asynchronous communication and keeping written conversations clear, concise and on track<br><br></li></ul>You donât need to be a developer, but you should be curious about technology and comfortable investigating how things work.<br><br>Bonus (not required)<br><br>It would be a bonus if you have experience with any of the following:<br><br><ul><li>Supporting a SaaS product</li><li>Helping customers with billing, subscriptions or invoices</li><li>Writing Help Centre articles or customer-facing guides</li><li>Using support tools such as Front, Intercom, Zendesk, HubSpot or similar</li><li>Working in a fully remote team</li><li>Recording short customer help videos or walkthroughs</li><li>Supporting customers across multiple time zones, especially APAC-friendly hours</li><li>Comfortable using AI tools to improve the quality and efficiency of your work<br><br></li></ul>Working Hours<br><br>This is a remote role, for people based in either the UK or Canada (Atlantic Time Zone only). Youâll also need regular overlap with the UK team for training, collaboration and handovers.<br><br>The exact working pattern will depend on your location and the coverage we agree, but you should be clear in your application about where youâre based and what working hours you would expect to keep.<br><br>â Our Hiring Process<br><br><ul><li>Meet with Imogen (Talent/People Ops): 25-30m video call. Imogen will tell you a bit more about what itâs like to be on Team Guru. Please come prepared with any questions about our ways of working or team structure.</li><li>Meet with Dana (Customer Support): 60m video call. Dana will talk with you about your previous support experience, your communication style, your technical troubleshooting skills, and any experience you have with billing or invoice-related enquiries.</li><li>Meet with Percy (cofounder): 30m video call. This will follow a typical interview format with an opportunity for you to ask questions and learn more about the role.</li><li>Reference checks</li><li>Offer! â¨<br><br></li></ul>â­ï¸ What Weâre Offering<br><br><ul><li>A great salary</li><li>Stock options</li><li>Work from anywhere you like - co-working space will be provided if necessary</li><li>30 days paid holiday + Dec 24 - Jan 1 company holiday</li><li>Birthday off + house move day off</li><li>Flexible hours</li><li>Annual training and conference allowance - Â£3,000</li><li>A home office equipment contribution upon joining (then every 3 years) - Â£1,000</li><li>Budget to visit local or international colleagues </li><li>Monthly health &amp; wellbeing contribution - to be used as you see fit - Â£100</li><li>Pension contribution</li><li>International travel - We host Guru Gatherings where we all get a chance to see each other in HD Past locations have included Budapest, Dublin, London, Barcelona and Cape Town. Read more about our most recent trip here</li></ul><br/><br/>Please mention the word **TALENTED** and tag RNDAuNjUuNjEuMTQ5 when applying to show you read the job post completely (#RNDAuNjUuNjEuMTQ5). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-customer-support-specialist-resource-guru-1136066",
+      "location": "Greater London, ",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Business Development Representative ANZ",
+      "organisation": "JFrog",
+      "description": "Fast-Frogward Your Career to Years From Now<br><br>Be part of a team where your work directly shapes the way the worldâs top companies build and secure their software. At JFrog, as a <strong>Business Development Representative</strong>, youâll play a key role in bringing our industry-leading solutions to market, helping customers like Amazon, Google, and Netflix solve their most pressing DevSecOps and AI/ML challenges. Every day offers new opportunities to collaborate, strategize, and innovate in a fast-paced, growth-driven culture. If you thrive in a dynamic environment and want to make an impact in the world of software, JFrog is the place for you.<br><br>We are seeking a driven Business Development Representative (BDR) to join our fast-growing Sales Development team! In this role, you will work closely with Marketing and Sales to help drive JFrogâs solutions. You will develop new business opportunities through outbound prospecting, calling, email campaigns, and inbound lead follow-up<br><br><strong>What Youâll Be Doing As a BDR<br><br></strong>In this role, youâll be a key player in our fast-paced and highly innovative engineering team. You will:<br><br><ul><li>Be the first point of contact for new business prospects and expose them to JFrog products and value proposition.</li><li>Navigate complex business environments and uncover and translate needs into business opportunities.</li><li>Research and evaluate prospect accounts prior to engagement.</li><li>Interact with prospects through direct phone calls, emails, and social media.</li><li>Generate new business pipeline through outbound prospecting activities and inbound lead follow-up.</li><li>Maintain sales data through Salesforce that will influence monthly/quarterly sales reports, pipelines, forecasts, etc.</li><li>Collaborate with sales and marketing to build a sales strategy for generating new prospects.<br><br></li></ul>If you donât meet 100% of the requirements below â thatâs okay, nobodyâs perfect! We believe in hiring people, not just a list of skills. We encourage you to apply if you think this is a role that would make you excited about coming to work every day.<br><br><strong>What You Bring To The Table<br><br></strong><ul><li>2+ years of B2B / B2D SaaS BDR experience - with a proven track record of success - Must, experience in selling deep-tech products to technical roles - preferred</li><li>Experience in prospecting, calling, and emailing to generate new leads</li><li>Strong communication and interpersonal skills</li><li>Self-sufficient and motivated by individual and team achievement</li><li>Highly organised with the ability to multitask, prioritize, and manage time efficiently</li><li>Salesforce knowledge and use of sales automation tools (Salesloft, Outreach, etc.)</li><li>BA/BS degree or equivalent practical experience</li><li>Excellent spoken and written English<br><br></li></ul><strong>About JFrog<br><br></strong>JFrog is the only end-to-end software supply chain platform that provides complete visibility, security, and control for automating the delivery of trusted releases from code to production. Our platform enables organizations to manage, secure, and automate their software delivery process, fueling innovation without worry. We empower companies to build and release software faster and more securely than ever before.<br><br>With over 7,500 customers worldwide, including many Fortune 100 companies, JFrog is at the forefront of global innovation. Join us in shaping the future of software delivery and contributing to solutions that empower some of the world's most influential industries.<br><br>Hereâs what our employees have to say about working at JFrog:<br><br><ul><li>\"I wanted to work in a company that takes technology forward.\"</li><li>\"Our business is so interesting because it is constantly moving, and we have to adapt new solutions to the challenges that arise from the customers.\"</li><li>\"Itâs nice to work for a company with a must-have product, not a nice-to-have.\"<br><br></li></ul><br/><br/>Please mention the word **HELPFUL** and tag RNDAuNjUuNjEuMTQ5 when applying to show you read the job post completely (#RNDAuNjUuNjEuMTQ5). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-business-development-representative-anz-jfrog-1135994",
+      "location": "Sydney, Sydney, New South Wales, Australia",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Managing Director",
+      "organisation": "Berni and Mick Ireland",
+      "description": "<p><strong>Strategic Overview</strong></p><p>We are identifying <strong>a strategic thinker and natural leader</strong>âan individual who thrives on solving complex challenges and inspiring others to do the same. This role is designed for <strong>a professional</strong> with extensive experience as a Managing Director who is ready to leverage their expertise in a new, autonomous career path. We are seeking <strong>the right person</strong> who is eager to make a meaningful impact and thrive within a constantly evolving global environment.</p><p><br></p><p><strong>About the Opportunity</strong></p><p>Representing a global entity with a <strong>20-year track record</strong> and a presence in over <strong>100 countries</strong>, we are currently expanding our executive footprint. We specialize in Strategic Planning, People Development, and Professional Growth. This is <strong>a singular opportunity</strong> for a high-performing professional to move away from the corporate grind and contribute to a world-class mission while maintaining full operational autonomy.</p><p><br></p><p><strong>The Profile &amp; Requirements</strong></p><ul><li><strong>Proven Track Record:</strong> <strong>7+ years of professional experience</strong> as a Managing Director - Business Development or a senior leadership capacity.</li><li><strong>Leadership Maturity:</strong> The ability to lead by example, showing initiative and the capacity to motivate a remote team.</li><li><strong>Strategic Communication:</strong> Exceptional interpersonal skills with an influential presence on digital platforms.</li><li><strong>Problem-Solving:</strong> Advanced critical-thinking abilities with a focus on implementation and results.</li><li><strong>Autonomous Mindset:</strong> A self-starter who excels in a fast-paced, performance-based environment.</li></ul><p><br></p><p><strong>Professional Outcomes</strong></p><ul><li><strong>Independent Status:</strong> Operate as an <strong>Independent Business Consultant</strong> with full portability.</li><li><strong>High-Margin Rewards:</strong> Our structure is built on <strong>Direct Upfront Profits</strong> with <strong>uncapped earning potential</strong>.</li><li><strong>Performance Based Role:</strong> This is a results-driven position where you are rewarded for your strategic output.</li><li><strong>Time Sovereignty:</strong> The flexibility to choose your own hours and control your own professional schedule.</li></ul><p><br></p><p><strong>To Connect</strong> If you are ready to take the next step in your professional journey and align with an organization shaping the future of Strategic Growth, <strong>apply now for an initial screening interview.</strong></p><br/><br/>Please mention the word **REJUVENATING** and tag RNDAuNjUuNjEuMTQ5 when applying to show you read the job post completely (#RNDAuNjUuNjEuMTQ5). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-managing-director-berni-and-mick-ireland-1135908",
+      "location": "Sunshine Coast, Sunshine Coast, Queensland, Australia",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Chief Operating Officer",
+      "organisation": "U.S. Hunger",
+      "description": "<strong>Description<br><br></strong>The Chief Operating Officer (COO) is the senior operational leader of U.S. Hunger, responsible for translating enterprise strategy into daily execution. This role owns P&amp;L performance across all business lines â Full Cart, Hunger Projects, and the Data/Intelligence engine â ensuring the organization's earned-income model (97%+ of total revenue) operates with precision, accountability, and scalability.<br><br>The COO must bring the instincts of an entrepreneur and the discipline of a corporate operator: connecting dots others miss, asking tough questions that drive clarity, and building the systems that allow talented leaders to perform at their highest level. Operational excellence and mission-aligned impact are not in tension here â they are the same thing.<br><br><strong>Enterprise Operations &amp; P&amp;L Execution<br><br></strong><ul><li>Own P&amp;L execution across all business lines â each engine must meet its margin, revenue, and impact targets.</li><li>Establish and drive the operating cadence â monthly reviews, quarterly business performance reporting, and clear accountability across departments.</li><li>Make resource allocation decisions across competing priorities â deploying people, capital, and attention against the highest-value opportunities.</li><li>Present operational performance, capacity, and growth execution to the Board of Directors.</li><li>Partner with the CEO on scenario planning, structural growth strategies, and enterprise-wide decision-making.<br><br></li></ul><strong>Program Leadership â Full Cart &amp; Hunger Projects<br><br></strong><ul><li>Provide executive oversight of Full Cart and Hunger Projects â ensuring delivery excellence, measurable outcomes, and scalability.</li><li>Partner with program directors to evaluate, evolve, and scale programs in response to partner needs, market opportunities, and operational realities.</li><li>Drive integration between program design, data infrastructure, and client-facing delivery â ensuring mission impact and revenue execution are operationally connected.</li><li>Oversee supply chain and logistics operations to ensure consistent, high-quality program delivery at scale.<br><br></li></ul><strong>Revenue Growth &amp; Partner Execution<br><br></strong><ul><li>Own enterprise revenue execution across health plan partnerships, corporate engagement, and strategic growth opportunities â ensuring acquisition and retention targets are consistently met.</li><li>Drive strategies that deepen existing partner relationships and expand engagement across multiple service lines, maximizing long-term value and organizational sustainability.</li><li>Represent U.S. Hunger externally with payors, partners, and stakeholders â translating operational insight into compelling value propositions that differentiate USH in the market.</li><li>Leverage buyer-side CSR experience and existing relationships across the corporate social impact and food access ecosystem to accelerate partner acquisition and deepen engagement.<br><br></li></ul><strong>Cross-Functional Alignment &amp; Executive Leadership<br><br></strong><ul><li>Partner with the Chief Technology Officer to define business requirements, program design priorities, and operational needs that shape the technology and data roadmap â ensuring platform delivery enables execution across all business lines.</li><li>Manage the VP of Finance &amp; Enterprise KPIs and VP of People &amp; Culture â two executives who maintain direct visibility to the CEO through their seat at the executive table â ensuring fiscal discipline, enterprise analytics, and workforce strategy are aligned with operational goals.</li><li>Actively contribute to organizational governance, strategy, and enterprise-wide decision-making as the CEO's primary operational counterpart.<br><br></li></ul><strong>Team Leadership &amp; Development<br><br></strong><ul><li>Build, lead, and develop a high-performing operational leadership team â setting clear expectations, driving accountability, and coaching leaders who are growing into executive-level roles.</li><li>Develop performance metrics and accountability systems that connect individual and team outcomes to enterprise financial and impact objectives.</li><li>Promote a culture of rigorous inquiry, collaboration, and continuous improvement â where leaders are expected to think critically, challenge assumptions, and own their outcomes.</li><li>Foster an environment where staff understand both the business drivers of USH's earned-income model and the transformative impact of their work on the communities served.<br><br></li></ul><em>These essential job functions are not to be construed as a complete statement of all duties performed. Employees will be required to perform other duties as required.<br><br></em><strong>Requirements<br><br></strong><ul><li>10+ years of progressive leadership in operations, business management, or revenue execution â with direct P&amp;L ownership.</li><li>Experience building, running, or scaling a business â including sales growth, client retention, and financial performance accountability.</li><li>Proven ability to lead and develop directors and VPs â coaching strong operators into executive-level leaders while holding them accountable to outcomes.</li><li>Demonstrated pattern of connecting dots across functions â seeing how operational, financial, people, and program decisions impact each other.</li><li>Experience at the board level â presenting performance, defending strategy, and engaging C-suite stakeholders directly.</li><li>Experience in mission-driven, earned-income environments where market discipline and social impact must coexist.</li><li>Strong communication across corporate, nonprofit, healthcare, and community sectors â direct, polished, and confident.</li><li>High emotional intelligence, with the courage to ask tough questions, the polish to challenge constructively, and the vision to see what's possible before it's obvious.</li><li> Background check is required for this role<br><br></li></ul><strong>Essential Physical Skills<br><br></strong><ul><li>Repetitive finger motion as used in computer use.</li><li>Extensive work with computer screens</li><li>Everyday requirements of bending, grabbing, holding, and lifting light objects</li><li>Work on Hunger Projects requires heavy lifting (up to 50 lbs), moving objects, pushing, and pulling, bending and kneeling</li><li>Up to 50% travel time</li></ul><br/><br/>Please mention the word **EXULTINGLY** and tag RNDAuNjUuNjEuMTQ5 when applying to show you read the job post completely (#RNDAuNjUuNjEuMTQ5). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-chief-operating-officer-u-s-hunger-1135756",
+      "location": "Longwood, Longwood, Florida, United States",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Freelance Creative Director",
+      "organisation": "BMWL",
+      "description": "<p><strong>Freelance Creative Director</strong></p><p><span>BMWL (an Axiom Advisors Group company) â Remote / Contract</span></p><p><br></p><p><strong>About Us:</strong></p><p><span>BMWL is a dynamic political consulting and public affairs firm located in the heart of the Bay Area. We specialize in providing strategic communication, advocacy, and campaign management services to a diverse range of clients, including political candidates, advocacy groups, and non-profit organizations. Our team comprises experienced professionals passionate about making a positive impact through effective communication and strategic political consulting.</span></p><p><br></p><p><span>BMWL is committed to creating a diverse and welcoming workplace and is proud to be an equal opportunity employer. We encourage all qualified applicants to apply, including people of color, women, LGBTQIA+ individuals, veterans, and persons with disabilities. If you are unsure whether you meet the qualifications for this role but are still interested, we encourage you to apply.</span></p><p><br></p><p><strong>About the Role</strong></p><p><span>BMWL is seeking a freelance Creative Director to support branding and media development across our client roster. This is a flexible, project-based engagement ideal for a seasoned creative who thrives working with campaigns, advocacy groups, and public affairs clients.</span></p><p><br></p><p><span>What You'll Do</span></p><p><br></p><ul><li><span>Develop creative concepts and brand identities for client campaigns, from initial strategy through final execution</span></li><li><span>Manage media development, including digital ads, video, print collateral, and social content</span></li><li><span>Draft and manage digital ad copy, either writing it directly or overseeing and QC'ing copy produced by others</span></li><li><span>Partner with our internal production and account teams to ensure the creative aligns with the campaign strategy and messaging</span></li><li><span>Present creative concepts to partners and clients, incorporating feedback through revision cycles</span></li><li><span>Maintain brand consistency across multi-platform deliverables</span></li><li><span>Stay current on political/advocacy creative trends and best practices</span></li></ul><p><br></p><p><span>What We're Looking For</span></p><p><br></p><ul><li><span>7+ years of creative direction experience, ideally with political, advocacy, or public affairs clients</span></li><li><span>Strong portfolio spanning brand identity, digital media, and video/print production</span></li><li><span>Comfortable working independently and managing multiple client projects simultaneously</span></li><li><span>Excellent collaborator â able to take direction from partners while bringing a strong creative point of view</span></li><li><span>Familiarity with fast-paced campaign timelines and quick-turn deliverables a plus</span></li></ul><p><br></p><p><span>Engagement Details</span></p><p><br></p><ul><li><span>Freelance/contract basis, flexible hours</span></li><li><span>Remote-friendly, with availability for occasional check-ins with the BMWL/Axiom team</span></li><li><span>Rate: $85â$150/hour (or equivalent day/project rate), commensurate with experience. Final rate depends on scope, project complexity, and campaign timelines.</span></li></ul><p><span><span class=\"ql-cursor\"></span></span></p><p><em>To apply, email your resume and availability for a 45-minute meeting to </em><em>alisonw@bmwl.net</em></p><p><br></p><br/><br/>Please mention the word **TIMELY** and tag RNDAuNjUuNjEuMTQ5 when applying to show you read the job post completely (#RNDAuNjUuNjEuMTQ5). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-freelance-creative-director-bmwl-1135901",
+      "location": "California, California, United States",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Tequila Market Manager New Jersey",
+      "organisation": "Bandero Tequila",
+      "description": "Tequila Market Manager â New Jersey<p><strong>Location:</strong> New Jersey</p><p><strong>Brand:</strong> Bandero Premium Tequila</p><p><strong>Employment Type:</strong> Full-Time</p><p><strong>Compensation:</strong> $85,000 Base Salary | Commission | Full Benefits</p>About Bandero Premium Tequila<p>Bandero Premium Tequila is a fast-growing premium spirits brand entering an exciting new stage of national expansion. With increasing distribution, major retail opportunities, high-profile events, and strategic partnerships, Bandero is building meaningful momentum across the United States.</p><p>The brand is expanding its presence in key markets, developing strong relationships with leading distributors and retailers, and creating memorable consumer experiences through tastings, sponsorships, hospitality programs, and brand activations.</p><p><br></p><p>As Bandero continues to grow its national footprint, New Jersey represents a major opportunity for visibility, influence, and long-term sales growth. We are seeking a driven Market Manager who is excited to help build the market, secure influential placements, and become an important part of the brandâs continued expansion.</p><p><br></p>Position Overview<p>We are seeking an experienced, connected, and results-driven <strong>New Jersey Market Manager</strong> to lead Bandero Premium Tequilaâs growth throughout the state.</p><p><br></p><p>This is an opportunity to join a growing brand at a pivotal stage and play a direct role in shaping Banderoâs success in one of the countryâs most important and competitive wine and spirits markets.</p><p>The New Jersey Market Manager will be responsible for increasing sales, supporting distribution teams, securing new on-premise and off-premise placements, and building lasting relationships with key accounts and industry leaders.</p><p><br></p><p>The ideal candidate has strong roots in the New Jersey hospitality and beverage community, existing relationships with buyers and decision-makers, and the entrepreneurial drive to build a premium spirits brand in a competitive market.</p><p><br></p>Key ResponsibilitiesDistributor Management<ul><li>Work closely with Banderoâs distributor partner to execute sales programs and achieve market goals.</li><li>Build strong relationships with distributor leadership, managers, and sales representatives.</li><li>Conduct regular distributor meetings, sales presentations, ride-alongs, and account visits.</li><li>Motivate and support distributor teams to increase placements, reorders, and overall sales.</li><li>Monitor distributor inventory, depletions, execution, and performance against established goals.</li><li>Ensure distributor activities remain aligned with Banderoâs sales strategy and premium brand positioning.</li></ul>Account Management and Sales<ul><li>Leverage existing relationships and build new connections to grow Banderoâs presence throughout New Jersey.</li><li>Secure new on-premise and off-premise placements.</li><li>Develop relationships with key buyers, beverage directors, restaurant groups, retailers, bars, hotels, lounges, nightclubs, and other influential accounts.</li><li>Manage existing accounts and identify opportunities to increase reorders, menu placements, displays, and promotional support.</li><li>Create targeted sales plans for priority accounts and high-value opportunities.</li><li>Maintain a consistent market presence through regular account visits and follow-up.</li></ul>Brand Building<ul><li>Serve as a knowledgeable and enthusiastic ambassador for Bandero Premium Tequila.</li><li>Host tastings, staff trainings, buyer presentations, events, and activations that reflect Banderoâs premium image.</li><li>Educate distributor teams, retail staff, bartenders, servers, and consumers on the Bandero portfolio and brand story.</li><li>Identify local partnerships, sponsorships, and events that can increase visibility and consumer engagement.</li><li>Ensure Bandero is represented professionally and consistently across all customer and consumer interactions.</li></ul>Market Development<ul><li>Identify opportunities for expansion throughout New Jersey.</li><li>Monitor competitive brands, pricing, promotions, account activity, and market trends.</li><li>Provide insight into the New Jersey market landscape, culture, and key industry players.</li><li>Help develop localized sales, marketing, promotional, and activation strategies.</li><li>Collaborate with company leadership on programs designed to increase distribution and brand awareness.</li></ul>Reporting and KPIs<ul><li>Track and report on placements, reorders, depletions, sales targets, account activity, and promotional effectiveness.</li><li>Maintain an organized pipeline of prospective and active accounts.</li><li>Provide regular market updates, sales reports, competitive insights, and opportunity assessments.</li><li>Manage market expenses responsibly and submit timely documentation.</li><li>Work toward clearly defined sales and distribution goals.</li></ul><p><br></p>Qualifications<ul><li>Proven experience in sales, brand building, market management, or account management in the New Jersey market.</li><li>Existing relationships with New Jersey buyers, distributors, retailers, restaurants, bars, hotels, nightlife venues, or hospitality groups are strongly preferred.</li><li>An established book of business is a significant plus.</li><li>Demonstrated success opening new accounts and growing existing business.</li><li>Experience managing, supporting, and motivating distributor partners.</li><li>Strong understanding of the New Jersey wine and spirits market, including its culture, key accounts, and industry landscape.</li><li>Excellent communication, presentation, negotiation, relationship-management, and organizational skills.</li><li>Self-motivated and able to manage a large territory independently.</li><li>Comfortable working in a fast-paced, entrepreneurial environment.</li><li>Passionate about premium spirits and building a growing brand from the ground up.</li><li>Ability to work flexible hours, including occasional nights and weekends, for events, tastings, and activations.</li><li>Ability and willingness to travel throughout New Jersey as required.</li><li>Valid driverâs license, clean driving record, and reliable transportation.</li><li>Must meet all legal requirements for representing and promoting an alcoholic beverage brand.</li></ul><p><br></p>What We Offer<ul><li>$85,000 annual base salary.</li><li>Commission based on sales performance.</li><li>Health, dental, and vision insurance.</li><li>Accrued paid time off and sick time.</li><li>Paid company holidays.</li><li>Reimbursement for approved business and travel expenses.</li><li>Dynamic and entrepreneurial work environment.</li><li>Opportunity to play a key role in growing Bandero Premium Tequila throughout New Jersey.</li><li>Opportunity for advancement as the brand continues to expand nationally.</li></ul><br/><br/>Please mention the word **RELAXED** and tag RNDAuNjUuNjEuMTQ5 when applying to show you read the job post completely (#RNDAuNjUuNjEuMTQ5). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-tequila-market-manager-new-jersey-bandero-tequila-1135754",
+      "location": "New Jersey, New Jersey, United States",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Human Resources Coordinator",
+      "organisation": "Pacific Health Group",
+      "description": "<strong>Job Snapshot<br><br></strong>Location: Remote - California (San Diego or Southern California Preferred)<br><br>Employment Type: Full-Time<br><br>Compensation: $28-30 per hour<br><br>Schedule: Full-Time<br><br>Work Environment: Remote<br><br>Reports To: Human Resources Manager<br><br><strong>About Pacific Health Group<br><br></strong>At Pacific Health Group, we care deeply about the people and communities we serve. We meet individuals with kindness, respect, and understandingâlistening first, honoring each person's journey, and offering support without judgment.<br><br>Through compassionate, person-centered healthcare, behavioral health services, and social supports, we walk alongside people as they work toward healing, stability, and a healthier, more hopeful life.<br><br><strong>Our Core Values<br><br></strong><ul><li>Speak with integrityâclear, respectful, and honest in every interaction</li><li>Embrace innovation, trying new ideas, learning fast, and improving care. </li><li>Own our roles, staying accountable for outcomes and documenting accurately</li><li>Build genuine connections with members, families, and teammates through empathy and cultural sensitivity</li><li>Lead with trust by being consistent, transparent, and following through</li><li>Celebrate wins together, recognizing individual and team achievements</li><li>Collaborate with purpose, partnering across departments and with community providers to solve problems</li><li>Ask for support and offer support, because thriving together is how we serve our members best<br><br></li></ul><strong>Role Overview &amp; Impact<br><br></strong>The Human Resources Coordinator provides administrative and operational support across the Human Resources department. This entry-level position supports onboarding, employee records, HR system transactions, recruitment coordination, employee communications, and general HR department operations.<br><br>The HR Coordinator serves as an initial point of contact for routine employee and applicant questions and ensures that requests are directed to the appropriate HR team member. The successful candidate will be highly organized, service-oriented, comfortable using technology, and committed to maintaining the confidentiality and accuracy of employee information.<br><br><strong>Key Responsibilities<br><br></strong><strong>Core Responsibilities<br><br></strong><strong>Recruitment &amp; Talent Coordination<br><br></strong><ul><li>Support candidate communications using approved templates</li><li>Track candidate status and documentation in the applicant tracking system</li><li>Assist with pre-employment requirements</li><li>Maintain accurate recruiting records and candidate files</li><li>Support job fairs, community outreach, internship activities, and recruiting events</li><li>Provide a professional, timely, and welcoming candidate experience<br><br></li></ul><strong>Onboarding &amp; Offboarding<br><br></strong><ul><li>Coordinate pre-employment and onboarding activities after an offer has been accepted</li><li>Send new-hire forms, instructions, orientation schedules, and required notices</li><li>Track completion of pre-employment requirements, background checks, employment documents, and onboarding tasks</li><li>Coordinate the timely completion and retention of Form I-9 documentation in accordance with established procedures</li><li>Coordinate with hiring managers, Payroll, Information Technology, Learning and Development, and other departments to support new-hire readiness</li><li>Confirm that new employees receive appropriate system access, equipment information, schedules, and introductory materials</li><li>Support new-hire orientation logistics and attendance tracking</li><li>Follow up on incomplete forms or onboarding requirements</li><li>Initiate separation checklists after receiving appropriate authorization</li><li>Schedule exit interviews or distribute exit questionnaires<br><br></li></ul><strong>HR Compliance &amp; Documentation<br><br></strong><ul><li>Assist with personnel-file, I-9, benefits, training, and HR data audits</li><li>Track required documents, acknowledgments, certifications, and renewal dates</li><li>Assist with preparing records for internal and external audits</li><li>Follow established HR policies, procedures, record-retention requirements, and confidentiality standards</li><li>Escalate incomplete, inconsistent, or potentially noncompliant documentation</li><li>Maintain current versions of approved HR forms, templates, notices, and resources</li><li>Support the distribution and tracking of required employee notices<br><br></li></ul><strong>Benefits &amp; Employee Support<br><br></strong><ul><li>Route plan interpretation and eligibility questions to the HR Generalist or appropriate team member</li><li>Support annual Open Enrollment communications, scheduling, and administrative preparation</li><li>Assist with routine employee reminders and documentation follow-up</li><li>Maintain confidentiality of medical and benefits information</li><li>Support benefits and leave audits as requested<br><br></li></ul><strong>HR Operations &amp; Administrative Support<br><br></strong><ul><li>Provide general administrative support for the HR team, including scheduling meetings, tracking training completion, and preparing reports</li><li>Assist with HR initiatives such as employee engagement events, training programs, and performance review cycles</li><li>Maintain organized HR documentation and assist with reporting needs as requested by leadership<br><br></li></ul><strong>Success Measures<br><br></strong><ul><li>Accurate and timely recruitment coordination and onboarding completion</li><li>Compliance with California labor laws and HR documentation standards</li><li>High responsiveness and professionalism in employee communication</li><li>Well-maintained, audit-ready personnel records</li><li>Efficient support of HR initiatives and department operations<br><br></li></ul><strong>Skills That Set You Apart<br><br></strong><strong>Required Qualifications<br><br></strong><ul><li>High school diploma or equivalent required</li><li>One year of administrative, customer service, office, recruiting, payroll, healthcare, or Human Resources support experience preferred</li><li>An associate degree, bachelor's degree, Human Resources coursework, internship, or relevant professional training may substitute for some experience</li><li>Entry-level candidates with strong administrative and customer-service capabilities are encouraged to apply</li><li>High level of professionalism, discretion, and ability to handle confidential information</li><li>Proficiency in Google Workspace (Docs, Sheets, Drive, Slides)</li><li>Ability to work independently while collaborating effectively within a remote team<br><br></li></ul><strong>Benefits<br><br></strong><strong>Time Off &amp; Leave<br><br></strong><ul><li>Paid Time Off</li><li>Holidays</li><li>Volunteer time</li><li>Bereavement<br><br></li></ul><strong>Health &amp; Wellness<br><br></strong><ul><li>Medical coverage</li><li>FSAs or other wellness benefits</li><li>Disability and EAP<br><br></li></ul><strong>Financial &amp; Professional<br><br></strong><ul><li>401(k)</li><li>Stipends</li><li>Professional development<br><br></li></ul><strong>Culture &amp; Perks<br><br></strong><ul><li>Employee discounts</li><li>Team events</li><li>Growth opportunities<br><br></li></ul><strong>Equal Opportunity Employer<br><br></strong>Pacific Health Group is an Equal Opportunity Employer. We are committed to creating an inclusive and equitable workplace where all individuals are treated with dignity and respect. All qualified applicants will receive consideration for employment without regard to race, color, religion or creed, sex (including pregnancy, childbirth, breastfeeding, and related medical conditions), gender, gender identity or gender expression, sexual orientation, national origin or ancestry, citizenship status, physical or mental disability, medical condition (including cancer and genetic characteristics), age (40 and over), marital status, military or veteran status, genetic information, or status as a victim of domestic violence, assault, or stalking. We value diversity in all forms and encourage individuals from historically underrepresented communities to apply.<br><br><strong>Job Application &amp; Offer Disclaimer<br><br></strong>Pacific Health Group is committed to maintaining a transparent, lawful, and secure hiring process in compliance with California labor laws and employment standards. Employment offers are contingent upon meeting role qualifications and successfully completing all required recruitment steps, which may include:<br><br><ul><li>Submission of an internal application</li><li>Recruiter pre-screen </li><li>Skills assessment if applicable</li><li>Final interview with hiring leadership</li><li>Formal verbal offer from authorized hiring representatives<br><br></li></ul>Important Notice: Any communication claiming to represent Pacific Health Group that bypasses this process is not authorized.<br><br><strong>AI &amp; Human Interaction in Recruitment<br><br></strong>Pacific Health Group uses AI tools to assist with resume matching based on qualifications, skills, and location. All qualified applications are reviewed by our recruiting and HR team to ensure fair, equitable, and human-centered hiring decisions.<br/><br/>Please mention the word **SUCCEEDED** and tag RNDAuNjUuNjEuMTQ5 when applying to show you read the job post completely (#RNDAuNjUuNjEuMTQ5). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-human-resources-coordinator-pacific-health-group-1135783",
+      "location": "San Diego, San Diego, California, United States",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Tequila Market Manager New York",
+      "organisation": "Bandero Tequila",
+      "description": "<strong>Tequila Market Manager - New York</strong><p><strong>Location:</strong><span> New Jersey</span></p><p><strong>Brand:</strong><span> Bandero Premium Tequila</span></p><p><strong>Employment Type:</strong><span> Full-Time</span></p><p><strong>Compensation:</strong><span> $100,000 Base Salary | Commission | Full Benefits</span></p><strong>About Bandero Premium Tequila</strong><p><span>Bandero Premium Tequila is a fast-growing premium spirits brand entering an exciting new stage of national expansion. With increasing distribution, major retail opportunities, high-profile events, and strategic partnerships, Bandero is building meaningful momentum across the United States.</span></p><p><span>The brand is expanding its presence in key markets, developing strong relationships with leading distributors and retailers, and creating memorable consumer experiences through tastings, sponsorships, hospitality programs, and brand activations.</span></p><p><span>As Bandero continues to grow its national footprint, New York represents a major opportunity for visibility, influence, and long-term sales growth. We are seeking a driven Market Manager who is excited to help build the market from the ground up, secure influential placements, and become an important part of the brandâs continued expansion.</span></p><strong>Position Overview</strong><p><span>We are seeking an experienced, connected, and results-driven </span><strong>New York Market Manager</strong><span> to lead Bandero Premium Tequilaâs growth throughout the state.</span></p><p><span>This is an opportunity to join a growing brand at a pivotal stage and play a direct role in shaping Banderoâs success in one of the most important wine and spirits markets in the country.</span></p><p><span>The New York Market Manager will be responsible for increasing sales, supporting distribution teams, securing new on-premise and off-premise placements, and building lasting relationships with key accounts and industry leaders.</span></p><p><span>The ideal candidate has strong roots in the New York hospitality and beverage community, existing relationships with buyers and decision-makers, and the entrepreneurial drive to build a premium spirits brand in a competitive market.</span></p><p><br></p><strong>Key Responsibilities</strong><strong>Distributor Management</strong><ul><li><span>Work closely with Banderoâs distributor partner to execute sales programs and achieve market goals.</span></li><li><span>Build strong relationships with distributor leadership, managers, and sales representatives.</span></li><li><span>Conduct regular distributor meetings, sales presentations, ride-alongs, and account visits.</span></li><li><span>Motivate and support distributor teams to increase placements, reorders, and overall sales.</span></li><li><span>Monitor distributor inventory, depletions, execution, and performance against established goals.</span></li><li><span>Ensure distributor activities remain aligned with Banderoâs sales strategy and premium brand positioning.</span></li></ul><strong>Account Management and Sales</strong><ul><li><span>Leverage existing relationships and build new connections to grow Banderoâs presence throughout New York.</span></li><li><span>Secure new on-premise and off-premise placements.</span></li><li><span>Develop relationships with key buyers, beverage directors, restaurant groups, retailers, bars, hotels, lounges, nightclubs, and other influential accounts.</span></li><li><span>Manage existing accounts and identify opportunities to increase reorders, menu placements, displays, and promotional support.</span></li><li><span>Create targeted sales plans for priority accounts and high-value opportunities.</span></li><li><span>Maintain a consistent market presence through regular account visits and follow-up.</span></li></ul><strong>Brand Building</strong><ul><li><span>Serve as a knowledgeable and enthusiastic ambassador for Bandero Premium Tequila.</span></li><li><span>Host tastings, staff trainings, buyer presentations, events, and activations that reflect Banderoâs premium image.</span></li><li><span>Educate distributor teams, retail staff, bartenders, servers, and consumers on the Bandero portfolio and brand story.</span></li><li><span>Identify local partnerships, sponsorships, and events that can increase visibility and consumer engagement.</span></li><li><span>Ensure Bandero is represented professionally and consistently across all customer and consumer interactions.</span></li></ul><strong>Market Development</strong><ul><li><span>Identify opportunities for expansion throughout New York.</span></li><li><span>Monitor competitive brands, pricing, promotions, account activity, and market trends.</span></li><li><span>Provide insight into the New York market landscape, culture, and key industry players.</span></li><li><span>Help develop localized sales, marketing, promotional, and activation strategies.</span></li><li><span>Collaborate with company leadership on programs designed to increase distribution and brand awareness.</span></li></ul><strong>Reporting and KPIs</strong><ul><li><span>Track and report on placements, reorders, depletions, sales targets, account activity, and promotional effectiveness.</span></li><li><span>Maintain an organized pipeline of prospective and active accounts.</span></li><li><span>Provide regular market updates, sales reports, competitive insights, and opportunity assessments.</span></li><li><span>Manage market expenses responsibly and submit timely documentation.</span></li><li><span>Work toward clearly defined sales and distribution goals.<br></span></li></ul><strong>Qualifications</strong><ul><li><span>Proven experience in sales, brand building, market management, or account management in the New York market.</span></li><li><span>Existing relationships with New York buyers, distributors, retailers, restaurants, bars, hotels, nightlife venues, or hospitality groups strongly preferred.</span></li><li><span>Established book of business is a significant plus.</span></li><li><span>Demonstrated success opening new accounts and growing existing business.</span></li><li><span>Experience managing, supporting, and motivating distributor partners.</span></li><li><span>Strong understanding of the New York wine and spirits market, including its culture, key accounts, and industry landscape.</span></li><li><span>Excellent communication, presentation, negotiation, relationship-management, and organizational skills.</span></li><li><span>Self-motivated and able to manage a large territory independently.</span></li><li><span>Comfortable working in a fast-paced, entrepreneurial environment.</span></li><li><span>Passionate about premium spirits and building a growing brand from the ground up.</span></li><li><span>Ability to work flexible hours, including occasional nights and weekends, for events, tastings, and activations.</span></li><li><span>Ability and willingness to travel throughout New York as required.</span></li><li><span>Valid driverâs license, clean driving record, and reliable transportation.</span></li><li><span>Must meet all legal requirements for representing and promoting an alcoholic beverage brand.<br></span></li></ul><strong>What We Offer</strong><ul><li><span>Competitive base salary based on experience.</span></li><li><span>Commission based on sales performance.</span></li><li><span>Health, dental, and vision insurance.</span></li><li><span>Accrued paid time off and sick time.</span></li><li><span>Paid company holidays.</span></li><li><span>Reimbursement for approved business and travel expenses.</span></li><li><span>Dynamic and entrepreneurial work environment.</span></li><li><span>Opportunity for advancement as the brand continues to expand nationally.</span></li></ul><p><br></p><br/><br/>Please mention the word **OUTSHINE** and tag RNDAuNjUuNjEuMTQ5 when applying to show you read the job post completely (#RNDAuNjUuNjEuMTQ5). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-tequila-market-manager-new-york-bandero-tequila-1135753",
+      "location": "New York City Metropolitan Area",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Range Keeper",
+      "organisation": "Black &amp; McDonald Limited",
+      "description": "LOCATION: Burwash Training Ranges<br><br>The Range keeper reports to the Project Manager and will provide Shooting Range services for the Military Outdoor Training Ranges located Burwash Ontario.<br><br>You must be suitably physically sound and adaptable enough to do moderate lifting and to walk over rough terrain, have experience/knowledge in the operation of shooting ranges, have a general property maintenance background and be able to operate small-medium sized machinery/tools such as tractors with various attachments (i.e. farm tractor, lawn mower, aerator, front-end bucket, snow blower) power hand mowers, trimmers, walk behind snow blower, plow truck, power saws and hand tools including but not limited to shovels, hammers, saws, rakes, telephones.<br><br>You will be required to work on a flexible schedule on weekdays, weekends and evenings according to range reservations/ schedules as presented by the Company Office.<br><br>You must be a self-starter, demonstrate a good work ethic and provide superior customer service. You will need to display good communication in the English Language as well as inter-personal and organizational skills. Within your duties you will be expected to interface with DND/Police/civilian range users as well as assigned subcontractors.<br><br><strong>Key Responsibilities<br><br></strong>Your duties include<br><br>Scheduling<br><br><ul><li> Repair targets/backings 1080 fig. 11 targets/backings and 1080 targets/backings for fig 12 at Winona Range as well as replacement of 24 figure 11 target frames and 48 target frames for figure 12.</li><li> Repairs include removing and replacing the paper target figures.</li><li> Provide flexible hours to accommodate the march in/ march out process which includes occasional evening/weekend activity</li><li> Oversee in and out inspections.</li><li> Regularly inspect all range property and infrastructure reporting work order needs to the Company office as required and conducting dayâto-day operation and maintenance as required</li><li> With exercise directors (OIC Exercise) conduct in/out inspections ensuring the ranges and buildings are properly returned as found by the users and March in/out forms are signed by the Exercise representative</li><li> Reporting, recording all incidents, damages, causes and vandalism (including graffiti in the Butts)</li><li> Report malfunctioning installed equipment including kitchen and laundry equipment</li><li> Get Project Manager authority before calling in subcontractors;</li><li> Ensuring First Aid Fire Fighting equipment/supplies are maintained and replenished.<br><br></li></ul>Maintain Ranges/infrastructure<br><br><ul><li> Walk the perimeter fence lines ensuring the fences are kept in good repair and growth is cut back to an acceptable level</li><li> Complete all grass cutting and snow removal and ice control operations with equipment provided iaw the performance standards provided by the Regional Manager</li><li> Prune trees, shrubs and plants as required for neat appearance and maintenance.</li><li> Build/Repair target frames ensuring sufficient are on-hand at all times replacing<br><br></li></ul>Facilitiesâ Housekeeping<br><br><ul><li> Conduct janitorial services in all range buildings.</li><li> Conduct routine repairs paying particular attention to occupant safety, protection of occupants and property against further damage</li><li> Provide janitorial supplies as required to assist Range visitors;</li><li> Institute suitable waste disposal and materials recycling;</li><li> Take appropriate measures for the control of pests both indoors and outdoors;</li><li> Pick up litter and garbage as required.<br><br></li></ul>GENERAL REQUIREMNTS<br><br><ul><li> Must have a valid Ontario driverâs license and be prepared to operate Company vehicles/equipment safely in the performance of their duties</li><li> Must work flexible hours according to Range reservations;</li><li> Must be prepared to wear and respond to calls</li><li> Will be required to pass a security clearance and adhere to the Company Code of ethics, Code of conduct and confidentiality agreements;<br><br></li></ul><em>The expected salary range for this role is determined in accordance with the union collective agreement<br><br></em><em>Black &amp; McDonald welcomes and encourages applications from persons with disabilities. Accommodations are available upon request for candidates taking part in all aspects of the recruitment and selection process.<br><br></em><br/><br/>Please mention the word **CONSUMMATE** and tag RNDAuNjUuNjEuMTQ5 when applying to show you read the job post completely (#RNDAuNjUuNjEuMTQ5). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-range-keeper-black-amp-mcdonald-limited-1135751",
+      "location": "Burwash, ",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Cleansing Crew Operators",
+      "organisation": "IndigenousX",
+      "description": "<strong>Description<br><br></strong><ul><li>Inner-City, Sydney location</li><li>Full Time/Permanent opportunity - Multiple positions available across day, afternoon and night shifts</li><li>$75,609 per annum plus superannuation<br><br></li></ul><strong>About The Role<br><br></strong>Step into a dynamic role where every shift makes a visible difference to the city you help keep clean and vibrant. Sydney is a vibrant, dynamic and accessible city with a diverse population, a rich history, world famous tourist attractions and an exciting calendar of events.<br><br>Here at the city of Sydney, no two days are the same. As a Cleansing Crew Operator, youâll have the opportunity to grow your skills with full training across a wide range of cleansing specialised tasks and equipment, cleaning our footpaths, roadways, plazas, public precincts and servicing our street litter bins using a variety of methods including manual cleaning, pressure cleaning, refuse removal trucks and both large and small mechanical sweeping vehicles ensuring our LGA and public spaces are looking their best each day.<br><br>If you enjoy hands on work, operating modern equipment, and having real impact behind the scenes, this is your chance to join a supportive team that keeps the city moving.<br><br>We are seeking self-motivated, dedicated people who take pride in their work and able to complete physically demanding tasks.<br><br><strong>To Work In The Team, You Must<br><br></strong><ul><li>Be physically fit and able.</li><li>Demonstrated ability to conduct manual street cleaning tasks, bulk waste removal such as illegal dumping and servicing of street litter bins.</li><li>Drive and operate a variety of plant equipment including street sweepers and waste compactors.</li><li>Hold current Medium Rigid or Heavy Vehicle (MR/HR) drivers licence.</li><li>Be available to work weekday shifts, some weekends, and public holidays.</li><li>Have a proven clean driving record.</li><li>Adapt to changing priorities and undertake other tasks as directed.</li><li>Experience in waste removal preferred.</li><li>The successful candidate should have previous experience in the safe operation and maintenance of plant and Street Sweepers.<br><br></li></ul>This role has the option of a rostered day off every two weeks, known as a 9-day fortnight.<br><br>The recommended applicant must complete a pre-employment health declaration and a medical assessment.<br><br>Download position description.<br><br><strong>What We Can Offer You<br><br></strong>Youâll work with passionate, welcoming and supportive people who care for our communities and create a future for all.<br><br><strong>Flexible working<br><br></strong><ul><li>3 days of care and cultural leave each year for health and wellbeing activities, cultural and religious days or events of significance</li><li>Collaborative approach to flexible working</li><li>City centre head office, with many public transport options.<br><br></li></ul><strong>Professional development<br><br></strong><ul><li>Leadership and management development program</li><li>Further education program providing reimbursement of course fees, and study and exam leave</li><li>Opportunity to attend external courses and conferences</li><li>Long service and employee recognition awards</li><li>Employee assistance program offering free, confidential counselling<br><br></li></ul><strong>Supporting families<br><br></strong><ul><li>We provide 26 weeks of paid parental leave for all new parents, supporting diverse and inclusive families</li><li>Paid and unpaid adoption and long-term fostering leave</li><li>Paid superannuation for up to 52 weeks of parental leave</li><li>Part-time and job-sharing options available</li><li>Supportive return-to-work environment<br><br></li></ul><strong>Inclusive culture<br><br></strong><ul><li>Recognised as an Inclusive Employer by the Diversity Council of Australia</li><li>Active employee networks including City Women, City Pride, DiverseCity, Inclusive City, Young Professionals and Aboriginal and Torres Strait Islander network</li><li>Recognised family inclusive workplace</li><li>Veteran employment supporter<br><br></li></ul>Find out why a career at the City of Sydney might be right for you.<br><br><strong>How To Apply<br><br></strong>Select âapply nowâ to submit your resume and selection criteria.<br><br>Applications must be submitted online byâ¯11:59pm, Sunday 16 August 2026.<br><br>For more information, contact Diing Aher, Team Leader Projects &amp; Events on +61 458 873 061.<br><br>We welcome candidates from all backgrounds in a workplace as diverse as our communities. Weâre passionate about gender balance, with an executive team two-thirds female and half of leadership roles held by women.<br><br>All applicants, including Aboriginal and Torres Strait Islander peoples, people with disability, veterans and people of diverse sexualities and genders, and those from culturally diverse backgrounds are encouraged to join us.<br><br>Weâre a disability confident recruiter. If you identify as a person with disability and require support for your application or the recruitment process, contact us at â¯recruitment@cityofsydney.nsw.gov.auâ¯or 02 9265 9333.<br><br><strong>Caring for our city, creating a future for all<br><br></strong>Our people are passionate about their communities and connected to their teams. Theyâre motivated by our genuine commitment to diversity and inclusion, and our clear, compelling plan for our global city:â¯Sustainable Sydney 2030 â 2050 Continuing the Vision.<br><br>Be part of a purpose-led organisation with care at its core. Youâll make a difference by acting in the best interests of our communities and city. Be better together with collaborative and inclusive partnerships. Embrace possibilities and be open to new ideas and creating bold solutions.<br/><br/>Please mention the word **REJUVENATING** and tag RNDAuNjUuNjEuMTQ5 when applying to show you read the job post completely (#RNDAuNjUuNjEuMTQ5). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-cleansing-crew-operators-indigenousx-1136017",
+      "location": "Sydney, ",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Other areas",
+      "organisation": "Zegogo Corporation",
+      "description": "Back Jobs Other areas<br><br><ul><li>0 km</li><li>2 km</li><li>5 km</li><li>10 km</li><li>15 km</li><li>30 km</li><li>50 km</li><li>75 km</li><li>100 km</li><li>Kid's clothing and accessories</li><ul><li>Kid's clothes</li><li>Kid's footwear</li><li>Baby strollers</li><li>Baby car seats</li><li>Kids's furniture</li><li>Toys</li><li>Kids's vehicles</li><li>Feeding Supplies</li><li>Back to school</li><li>Other children's products</li></ul><li>Property</li><ul><li>Apartments, rooms</li><li>Houses</li><li>Plots</li><li>Commercial property</li><li>Garages, parking</li><li>Offers from developers</li></ul><li>Vehicles</li><ul><li>Cars</li><li>Trucks</li><li>Buses</li><li>Motorcycle</li><li>Special machinery</li><li>Agricultural machinery</li><li>Water vehicles </li><li>Air vehicles </li><li>Trailers / motorhomes</li><li>Other vehicles</li><li>Car rental</li></ul><li>Business and services</li><ul><li>Construction / repair / cleaning</li><li>Financial services / Partnership</li><li>Transport service / rental vehicles</li><li>Advertising / printing / marketing / internet</li><li>Nannies / nurses </li><li>Raw materials</li><li>Beauty / healthcare</li><li>Equipment</li><li>Education / sport</li><li>Pet services</li><li>Selling a business</li><li>Entertainment / Art / Photo / Video</li><li>Tourism / immigration</li><li>Translation services / typing</li><li>Car and motorcycle services </li><li>Electrical repair and maintenance</li><li>Network marketing</li><li>Legal services</li><li>Rental goods</li><li>Other services</li></ul><li>Fashion &amp; style</li><ul><li>Clothing/footwear</li><li>For the wedding</li><li>Watches</li><li>Accessories </li><li>Gifts</li><li>Beauty / healthcare</li><li>Fashion other</li></ul><li>Spare parts for transport</li><ul><li>Spare parts and accessories</li><li>Tires, rims and wheels</li><li>Spare parts for special/agricultural machinery</li><li>Motorcycle parts and accessories</li><li>Other spare parts</li></ul><li>Hobbies, leisure and sport</li><ul><li>Antiques / collections</li><li>Musical instruments</li><li>Sport / leisure</li><li>Books / magazines</li><li>CD / DVD / records / cassettes</li><li>Tickets</li><li>Search for companions</li><li>Search groups / musicians</li><li>Other </li></ul><li>Jobs</li><ul><li>Retail / Sales / Purchases</li><li>Transport / Logistics</li><li>Construction </li><li>Telecommunications / connection</li><li>Bars / Restaurants</li><li>Jurisprudence and Accounting</li><li>Human Resource Management / HR</li><li>Security / safety</li><li>Household staff</li><li>Beauty / fitness / sport</li><li>Travel / leisure time / entertainment</li><li>Education</li><li>Culture / art</li><li>Medicine / pharmacy</li><li>IT / telecom / computers</li><li>Banking / finance / insurance</li><li>Property </li><li>Marketing / advertising / design</li><li>Manufacture / energy</li><li>Agriculture / agribusiness / forestry</li><li>Secretaries and administrative assistants</li><li>Career start / students</li><li>Service and life</li><li>Other areas</li><li>Work abroad</li></ul><li>Pets</li><ul><li>Free of charge (animals and breeding)</li><li>Dogs</li><li>Cats</li><li>Aquatic animals</li><li>Birds</li><li>Rodents</li><li>Reptiles</li><li>Farm animals</li><li>Other animals</li><li>Pet supplies</li><li>Breeding</li><li>Lost and found</li></ul><li>Free</li><li>Exchange</li><li>Rental of equipment and tools</li><li>House and garden</li><ul><li>Stationery / supplies</li><li>Furniture</li><li>Food / drinks</li><li>Garden supplies</li><li>Home accessories </li><li>Construction and repair</li><li>Tools</li><li>Indoor plants</li><li>Tableware / kitcheware</li><li>Garden tools</li><li>Household equipment / household chemicals</li><li>Other home products</li></ul><li>Restaurants</li><li>Dating</li><li>Electronics</li><ul><li>Games and gaming consoles</li><li>Tablets /ebook readers and accessories </li><li>Laptops and accessories</li><li>Home appliances</li><li>Kitchen appliances</li><li>Climatic equipment</li><li>Personal care</li><li>Accessories and components</li><li>Other electronics</li><li>Phones &amp; accessories</li><li>Computers &amp; hardware</li><li>Photo / video</li><li>TV / video</li><li>Audio<br></li></ul></ul>All countries<br><br>Search in title and description With photo only<br><br>All Temporary job Permanent job<br><br><ul><li> All </li><li> Temporary job</li><li> Permanent job<br><br></li></ul>All Full-time Part-time<br><br><ul><li> All </li><li> Full-time</li><li> Part-time<br><br></li></ul>Jobs Looking for a job<br><br>Sort by Recent Low to high High to low<br><br>Place a banner<br><br>Banner request<br><br>Company name<br><br>Telephone<br><br>E-mail<br><br>Contact person<br><br>Message test<br><br>Attach file<br><br>Nothing found<br/><br/>Please mention the word **TRACTION** and tag RNDAuNjUuNjEuMTQ5 when applying to show you read the job post completely (#RNDAuNjUuNjEuMTQ5). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-other-areas-zegogo-corporation-1135758",
+      "location": "Northern Areas, ",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Product Engineer",
+      "organisation": "SuperPlane",
+      "description": "<h2>About SuperPlane</h2><p><a href=\"https://superplane.com\">SuperPlane</a> is an open source software factory engine: the system that lets AI agents build, test, and ship code while engineers focus on design and decisions. This is going to be how all software gets built, and we're building the engine underneath it.</p><h2>The Role</h2><p>We are hiring a product engineer to join the team and own meaningful projects end to end.</p><p>This is a remote role. We currently work across GMT+2 to GMT-3 and welcome candidates in that range.</p><p>At SuperPlane, we don't split engineering into frontend and backend. Everyone is a well-rounded builder who moves across the stack, makes product and technical calls, asks for help when needed, and delivers features from start to finish. You might spend one day building an API endpoint or workflow engine improvement, and the next day polishing a React surface that users touch every day.</p><p>We're looking for someone at a mid-level to senior level: you've shipped real products, you can work independently, and you're ready to grow fast in a high-trust, high-pace environment. You don't need to have done everything before, but you need to learn quickly and take ownership of what you build.</p><p><br /></p><h2>What We Are Looking For</h2><ul><li><p>You are genuinely full-stack.</p></li><li><p>Your workflow is AI-driven and you know how to stay fast without getting sloppy.</p></li><li><p>You have strong backend experience in a systems-oriented language. While we use Go, we don't expect you to be an expert already, just to ramp up fast.</p></li><li><p>You have solid systems judgment. APIs, data models, reliability, and trade-offs matter to you.</p></li><li><p>You're comfortable with TypeScript and React -- the modern frontend stack.</p></li><li><p>You are comfortable with cloud-native tooling and modern software delivery.</p></li><li><p>You want ownership, not a narrow lane.</p></li><li><p>You want an early-stage company where the pace is high, the standards are high, and the upside is big.</p></li></ul><p><br /></p><h2>How To Apply</h2><p>We care more about proof of work than polished applications, and we want to see how you show up in open source.</p><p>Before you apply, submit at least one pull request to superplanehq/superplane. It can be small and it does not need to be merged.</p><p>When you apply, send your GitHub username and a link to your pull request. We verify both, and applications missing either field will not move forward.</p><p><br /></p><h2>Why You'll Love Working at SuperPlane</h2><ul><li><p>Build a frontier product used by engineers across the globe.</p></li><li><p>Meaningful equity and real ownership.</p></li><li><p>Small team, fast feedback loops.</p></li><li><p>Remote role that lets you focus and create.</p></li></ul><br/><br/>Please mention the word **HEAL** and tag RNDAuNjUuNjEuMTQ5 when applying to show you read the job post completely (#RNDAuNjUuNjEuMTQ5). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-product-engineer-superplane-1135739",
+      "location": "Not specified",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "AI Agents"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Client Onboarding Manager",
+      "organisation": "Connecteam",
+      "description": "<strong>Who Connecteam is:<br><br></strong>Connecteam is the leading platform for managing deskless teams, trusted by over 80,000 businesses worldwide.<br><br>We built Connecteam for real operators - the people running shifts, jobs, and teams across stores and sites. The kind of work that doesnât happen behind a desk, and doesnât have time for messy spreadsheets, scattered group chats, or tools that donât talk to each other.<br><br>Connecteam brings daily operations and team communication into one intuitive app - from hiring and scheduling to training, tasks, and day-to-day coordination. It gives teams the clarity and control to run the day, shift after shift, job after job.<br><br>Backed by $220M+ from Insight Partners, Stripes, and Tiger Global, Connecteam is rapidly expanding worldwide - empowering frontline teams to work smarter, stay connected, and operate with greater efficiency.<br><br><strong>About The Role<br><br></strong>The Onboarding Manager guides new customers who come from a partnership, through the implementation of Connecteam, from initial handoff and kickoff through a successful payroll launch. This is a customer-facing, hands-on implementation role combining project management, system configuration, payroll-process understanding, customer training and cross-functional coordination.<br><br>The Onboarding Manager works closely with customers, in collaboration with the partnerâs Implementation Managers and internal Connecteam teams to ensure employee data, time tracking, PTO, payroll rules and payroll system integrations are configured and validated correctly. The primary goal is to deliver a smooth onboarding experience while ensuring employees are paid accurately and on time.<br><br>Implementations are payroll-first and planned around the customerâs first clock-in date, payroll schedule and go-live timeline. Depending on account size and complexity, the Onboarding Manager may continue supporting the customer through the first one to three payroll cycles.<br><br>Success in this role requires more than technical knowledge. The Onboarding Manager must be highly perceptive, able to read people and situations quickly, and skilled at navigating complex interpersonal dynamics while maintaining trust across multiple internal and external teams.<br><br><strong>Key Responsibilities<br><br></strong><ul><li>Own the customer onboarding process</li><ul><li>Manage a book of business of customers that came from the partnership, from internal handoff through go-live and initial payroll stabilization.</li><li>Build implementation plans around first clock-in, payroll periods, training requirements and payroll-processing deadlines.</li><li>Lead kickoff, setup, training and clientâs payroll.</li><li>Maintain clear timelines, responsibilities, next steps, risks and customer communication throughout each project.</li></ul><li>Lead discovery and solution design</li><ul><li>Understand the customerâs workflows.</li><li>Translate business requirements into a practical Connecteam setup.</li><li>Identify complex requirements and suit the right solution with the design of the relevant setup.</li></ul><li>Configure integrations</li><ul><li>Configure relevant Connecteam account settings</li><li>Set up and manage the integration. </li></ul><li>Deliver training and manage stakeholders</li><ul><li>Train clients on Connecteam platform and integration process.</li><li>Train managers on time tracking and payroll workflows using Connecteam. </li><li>Adapt the training plan to customer size, structure and complexity while keeping sessions practical and process-focused.</li><li>Work closely with the assigned partner Implementation Manager.</li><li>Coordinate clearly across customers, partner, Sales, Support, Product, Integrations and leadership.</li></ul><li>Troubleshoot, escalate and document</li><ul><li>Investigate issues across the full workflow.</li><li>Determine issue owner and route it appropriately</li><li>Escalate payroll-impacting risks with clear documentation</li><li>Maintain accurate account records, architecture decisions, risks, next steps and handoff documentation.<br></li></ul></ul><strong>Experience &amp; Skills<br><br></strong><ul><li>2+ years of experience in implementation, onboarding, customer facing SaaS role with SMB &amp; Mid Market client sizes.</li><li>Strong project management skills with the ability to manage multiple customer implementations and priorities simultaneously.</li><li>Excellent communication, presentation, and training skills with the ability to explain technical concepts to both technical and non-technical audiences.</li><li>Tech-savvy with the ability to quickly learn software, troubleshoot issues, and understand integrations and data flows.</li><li>Strong organizational skills, attention to detail, and a customer-first approach when managing complex implementations.</li><li>Ability to build trusted relationships with customers, internal teams, and external partners in a fast-paced environment.</li><li>Strong problem-solving skills, sound judgment, and the ability to navigate ambiguity and changing customer needs.<br><br></li></ul><strong>Preferred Experience<br><br></strong><ul><li>Experience with payroll, HRIS, workforce management, scheduling, time &amp; attendance, or employee management platforms.</li><li>Experience supporting payroll implementations, PEO environments, or multi-location/multi-entity organizations.</li><li>Experience working in a partner-led or channel-based customer environment.<br><br></li></ul><strong>Benefits:<br><br></strong><ul><li></li><ul><li>Medical, dental, &amp; vision coverage</li><li>Paid time off for vacation, sick days</li><li>401k<br></li></ul></ul><strong>Salary: </strong>$90K<br><br><strong>We are accepting applications from employees working in the following states: Texas, New York, New Jersey, South Carolina, North Carolina, Colorado, Florida, Utah, and Georgia.<br><br></strong>Joining Connecteam Is The Smart Move:<br><br><ul><li>We build our people up. Every team member is treated as a long-term investment and we recognize the value in always nurturing and training them so they can go above and beyond in their skills and job duties.</li><li>We make an impact on our customerâs business. We are on a mission to provide managers of all business types and sizes with the tools they need to communicate, operate, engage, and run their deskless workforce. Our product offers them an effective and affordable solution to run their business.</li><li>We get the job done. Connecteam employees are passionate in executing their job duties so they can drive the company forward and provide real value to our customers. </li><li>We have fun! From weekly happy hours to holiday parties, we always enjoy each otherâs company (and good food, of course). Connecteam is like one big, happy family!</li><li>Everyone is welcome. Connecteam is committed to building an encouraging, caring, and supportive environment. We share a responsibility to support our team and enrich their lives. <br><br></li></ul><strong>Together we will shape the future of work!<br><br></strong><strong>Our privacy policy</strong><br/><br/>Please mention the word **COURAGE** and tag RNDAuNjUuNjEuMTQ5 when applying to show you read the job post completely (#RNDAuNjUuNjEuMTQ5). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-client-onboarding-manager-connecteam-1135743",
+      "location": "Brooklyn, Brooklyn, New York, United States",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Phone Support Specialist Arabic",
+      "organisation": "Revolut",
+      "description": "<p><strong>About the role</strong></p><p>Our Customer Support team is the first point of contact for millions around the world, delivering fast, thoughtful help when it matters most. They're the voice of our customers, working closely with product teams to improve experiences and keep wow-level service at the heart of Revolut.</p><p>Weâre looking for an Arabic-speaking Support Specialist to take ownership of customer issues, think deeper to find solutions, and contribute to the way we support our customers every day.</p><p><br></p><p>To support our 24/7 coverage, this role may include night and weekend shifts, which are fully compensated.</p><p><br></p><p>Up to shape what's next in finance? Let's get in touch.</p><p><br></p><p><br></p><p><strong>What you'll be doing</strong></p><ul><li>Providing customers with a seamless experience to ensure confidence in using our features</li><li>Delivering outstanding customer support over the phone</li><li>Representing Revolut by ensuring professional and consistent communication with customers</li><li>Collaborating with international teams to resolve customer issues</li></ul><p><br></p><p><br></p><p><strong>What you'll need</strong></p><ul><li>A bachelor's degree (must be able to provide at least a provisional certificate)</li><li>18+ months of customer service experience</li><li>Fluency in English (C1+ level)</li><li>Fluency in Arabic (native level)</li><li>Excellent verbal and written communication skills</li><li>The ability to explain complex issues in an easy and understandable manner</li><li>Great numeracy, analytical, and IT skills</li><li>Impeccable attention to detail</li><li>To be driven and self-motivated with a highly flexible team player attitude</li><li>An independent problem-solving approach</li></ul><p><br></p><p><em>Building a global financial super app isnât enough. Our Revoluters are a priority, and thatâs why in 2021 we launched our inaugural D&amp;I Framework, designed to help us thrive and grow everyday. We're not just doing this because it's the right thing to do. Weâre doing it because we know that seeking out diverse talent and creating an inclusive workplace is the way to create exceptional, innovative products and services for our customers. Thatâs why we encourage applications from people with diverse backgrounds and experiences to join this multicultural, hard-working team.</em></p><p><br></p><p><strong><em>Important notice for candidates:</em></strong></p><p><em>Job scams are on the rise. Please keep these guidelines in mind when applying for any open roles.</em></p><p><em>â¢ </em><strong><em>Only apply through official Revolut channels.</em></strong><em> We donât use any third-party services or platforms for our recruitment.</em></p><p><em>â¢ </em><strong><em>Always double-check the emails you receive.</em></strong><em> Make sure all communications are being done through official Revolut emails, with an @revolut.com domain.</em></p><p><br></p><p><strong><em>We won't ask for payment or personal financial information during the hiring process.</em></strong><em> If anyone does ask you for this, itâs a scam. Report it immediately.</em></p><p><br></p><p><em>By submitting this application, I confirm that all the information given by me in this application for employment and any additional documents attached hereto are true to the best of my knowledge and that I have not wilfully suppressed any material fact. I confirm I have disclosed if applicable any previous employment with Revolut. I accept that if any of the information given by me in this application is in any way false or incorrect, my application may be rejected, any offer of employment may be withdrawn or my employment with Revolut may be terminated summarily or I may be dismissed. By submitting this application, I agree that my personal data will be processed in accordance with Revolut's Candidate Privacy Notice</em></p><p><br></p><br/><br/>Please mention the word **NOURISHMENT** and tag RNDAuNjUuNjEuMTQ5 when applying to show you read the job post completely (#RNDAuNjUuNjEuMTQ5). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-phone-support-specialist-arabic-revolut-1135905",
+      "location": "Ø¯Ø¨Ù, Ø¯Ø¨Ù Ø§ÙØ¥ÙØ§Ø±Ø§Øª Ø§ÙØ¹Ø±Ø¨ÙØ© Ø§ÙÙØªØ­Ø¯Ø©",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Contents Crew Lead",
+      "organisation": "First Onsite Property Restoration",
+      "description": "If you enjoy hands-on work, learning advanced restoration techniques, and mentoring others, this is the role for you. As a <strong>Contents Crew Lead</strong> (Internally known as Contents Technician II), you'll play a key part in helping people recover what matters most. You'll take pride in restoring items affected by fire, water, and mold while guiding teammates, mastering specialized equipment, and making a real impact on every project.<br><br><strong>A DAY IN THE LIFE OF A CONTENTS CREW LEAD<br><br></strong>As a Contents Crew Lead, no two days are ever the same. One morning you might be restoring treasured family photos, and by afternoon you could be cleaning specialized equipment or mentoring a new team member. You roll up your sleeves and dive into each job with focus and pride, using advanced tools and cleaning systems to bring belongings back to life. You track and photograph contents, keep meticulous records, and make sure every item is handled with care. You troubleshoot, problem-solve, and stay one step ahead to keep projects on schedule. You take ownership of your work and lead by example, creating a positive, efficient, and safe environment for your team. Every day, your skill, energy, and attention to detail help turn chaos into calm for clients when they need it most.<br><br><strong>Qualifications<br><br></strong><ul><li>Minimum 1 year of experience in restoration, emergency services, or a related field</li><li>Strong knowledge of cleaning methods for fire, water, and mold restoration</li><li>Experience operating Ozone and Hydroxyl machines or similar restoration equipment</li><li>Excellent attention to detail with strong organizational and teamwork skills</li><li>Ability to guide and support Contents Technician I team members</li><li>Proficient in Microsoft Office Suite and comfortable using mobile devices and apps</li><li>Certifications required: Water Damage Restoration Technician (WRT), Fire and Smoke Restoration Technician (FSRT), and Odor Control Technician (OCT)</li><li>Additional certifications considered an asset: Commercial Carpet Cleaning (CCT), Carpet Repair and Reinstallation (RRT), Upholstery and Fabric Cleaning (UFT), and Applied Microbial Remediation (AMRT)</li><li>Valid driver's license and clean driving abstract</li><li>Must be able to participate in a rotating on-call scheduleâ¯â¯â¯</li><li>Ability to complete work activities which may include physical labour, material handling and lifting, climbing ladders, wearing a respirator, and working in tight spaces (attics, basements, and crawlspaces)<br><br></li></ul><strong>Who We Are<br><br></strong>At First Onsite, the work you do every day makes a real impact. You'll help communities rebuild and families recover after unexpected events. We offer competitive pay, comprehensive health and dental benefits, and RRSP matching because we believe in taking care of our people. You'll have opportunities to learn, grow, and build a lasting career across Canada in a culture that values care, collaboration, and doing the right thing. If you thrive in a team environment and want to make a meaningful difference, we'd love to hear from you.<br><br><strong>Let's Rebuild Together<br><br></strong>Your next opportunity starts here. Apply today using our quick, three-minute, mobile-friendly application. <strong>Join First Onsite. Make a difference. Build your future.<br><br></strong>By submitting your application, you consent to the collection, use, disclosure, and storage of your personal information by FirstOnsite Restoration Limited operating as First Onsite Property Restoration (\"First Onsite\") for purposes related to your application for employment. This includes information gathered during the recruitment and interview process. Your personal information may be shared internally with relevant personnel involved in the hiring process.<br><br>First Onsite is committed to handling your personal information in accordance with applicable federal and provincial privacy laws, including the <strong>Personal Information Protection and Electronic Documents Act (PIPEDA)</strong>â¯and any other relevant privacy legislation in your province or territory. If you have questions about how your personal information is handled, or if you wish to request access to your information, please contact our HR Department.<br><br>Salary: $25.00 - $30.00 per hour<br><br><strong><em>Job Posted by ApplicantPro</em></strong><br/><br/>Please mention the word **THRILL** and tag RNDAuNjUuNjEuMTQ5 when applying to show you read the job post completely (#RNDAuNjUuNjEuMTQ5). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-contents-crew-lead-first-onsite-property-restoration-1135871",
+      "location": "Kelowna, ",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "GenAI Engineer AI Builder AI Agent Associate Specialist",
+      "organisation": "Magic Compass Limited",
+      "description": "<p class=\"MsoNormal\"><strong><span lang=\"en-sg\" xml:lang=\"en-sg\"><span lang=\"en-sg\" style=\"font-size:12pt;line-height:115%;font-family:Aptos, sans-serif;\" xml:lang=\"en-sg\">Employment Type:</span><span lang=\"en-sg\" style=\"font-size:12pt;line-height:115%;font-family:Aptos, sans-serif;\" xml:lang=\"en-sg\"> Full-time Contractor, Remote<br />Working Hours: 9:00 AM â 6:00 PM <span>Â </span>Local Time <br /></span><br />About the Role</span></strong></p><p class=\"MsoNormal\" style=\"text-align:justify;\"><span lang=\"en-sg\" xml:lang=\"en-sg\">We are looking for a proactiveÂ </span><strong><span lang=\"en-sg\" style=\"font-size:14pt;line-height:115%;\" xml:lang=\"en-sg\">GenAI Engineer / AI Builder/ AI Agent Associate / AI Application Specialist </span></strong><span lang=\"en-sg\" xml:lang=\"en-sg\">to design and build AI-powered workflows and AI Agents that enhance business productivity across multiple business functions.</span></p><p class=\"MsoNormal\" style=\"text-align:justify;\"><span lang=\"en-sg\" xml:lang=\"en-sg\">You will design, build, and maintain AI solutions that automate business processes, improve operational efficiency, and enable effective Human + AI collaboration across different business functions.</span></p><p class=\"MsoNormal\" style=\"text-align:justify;\"><span lang=\"en-sg\" xml:lang=\"en-sg\">Your initial focus will be supporting our <u>AI and Risk Management team</u>. As our AI capabilities continue to grow, you will work with other business functions to build practical AI solutions that improve productivity and operational excellence.</span></p><p class=\"MsoNormal\" style=\"text-align:justify;\"><span lang=\"en-sg\" xml:lang=\"en-sg\">This role is ideal for someone who enjoys rapidly transforming business requirements into scalable AI applications and turning ideas into real business outcomes.</span></p><div class=\"MsoNormal\" style=\"text-align:center;\" align=\"center\"><hr align=\"center\" size=\"3\" width=\"100%\" /></div><p class=\"MsoNormal\" style=\"text-align:justify;\"><strong><span lang=\"en-sg\" xml:lang=\"en-sg\">Key Responsibilities</span></strong></p><p class=\"MsoNormal\" style=\"text-align:justify;\"><strong><span lang=\"en-sg\" xml:lang=\"en-sg\">AI Agent &amp; Workflow Development</span></strong></p><p class=\"MsoListParagraphCxSpFirst\" style=\"text-align:justify;text-indent:-18pt;\"><span lang=\"en-sg\" style=\"font-family:Symbol;\" xml:lang=\"en-sg\"><span>Â·<span style=\"font:7pt 'Times New Roman';\">Â Â Â Â Â Â  </span></span></span><span lang=\"en-sg\" xml:lang=\"en-sg\">Design, build, and maintain AI Agents for business operations.</span></p><p class=\"MsoListParagraphCxSpMiddle\" style=\"text-align:justify;text-indent:-18pt;\"><span lang=\"en-sg\" style=\"font-family:Symbol;\" xml:lang=\"en-sg\"><span>Â·<span style=\"font:7pt 'Times New Roman';\">Â Â Â Â Â Â  </span></span></span><span lang=\"en-sg\" xml:lang=\"en-sg\">Develop </span><span lang=\"en-sg\" style=\"color:#2e3849;background:#FFFFFF;\" xml:lang=\"en-sg\">monitoring, logging, and observability for agent behaviors and safety rules.</span></p><p class=\"MsoListParagraphCxSpMiddle\" style=\"text-align:justify;text-indent:-18pt;\"><span lang=\"en-sg\" style=\"font-family:Symbol;\" xml:lang=\"en-sg\"><span>Â·<span style=\"font:7pt 'Times New Roman';\">Â Â Â Â Â Â  </span></span></span><span lang=\"en-sg\" xml:lang=\"en-sg\">Develop AI-powered workflows that automate repetitive business processes.</span></p><p class=\"MsoListParagraphCxSpMiddle\" style=\"text-align:justify;text-indent:-18pt;\"><span lang=\"en-sg\" style=\"font-family:Symbol;\" xml:lang=\"en-sg\"><span>Â·<span style=\"font:7pt 'Times New Roman';\">Â Â Â Â Â Â  </span></span></span><span lang=\"en-sg\" xml:lang=\"en-sg\">Translate business requirements into practical AI solutions.</span></p><p class=\"MsoListParagraphCxSpMiddle\" style=\"text-align:justify;text-indent:-18pt;\"><span lang=\"en-sg\" style=\"font-family:Symbol;\" xml:lang=\"en-sg\"><span>Â·<span style=\"font:7pt 'Times New Roman';\">Â Â Â Â Â Â  </span></span></span><span lang=\"en-sg\" xml:lang=\"en-sg\">Build scalable AI applications that improve productivity and operational efficiency.</span></p><p class=\"MsoListParagraphCxSpLast\" style=\"text-align:justify;text-indent:-18pt;\"><span lang=\"en-sg\" style=\"font-family:Symbol;\" xml:lang=\"en-sg\"><span>Â·<span style=\"font:7pt 'Times New Roman';\">Â Â Â Â Â Â  </span></span></span><span lang=\"en-sg\" xml:lang=\"en-sg\">Integrate AI solutions with internal systems and third-party platforms.<br /></span></p><p class=\"MsoNormal\" style=\"text-align:justify;\"><strong><span lang=\"en-sg\" xml:lang=\"en-sg\">Business AI Applications</span></strong></p><p class=\"MsoListParagraphCxSpFirst\" style=\"text-align:justify;text-indent:-18pt;\"><span lang=\"en-sg\" style=\"font-family:Symbol;\" xml:lang=\"en-sg\"><span>Â·<span style=\"font:7pt 'Times New Roman';\">Â Â Â Â Â Â  </span></span></span><span lang=\"en-sg\" xml:lang=\"en-sg\">Develop AI solutions across different business functions, including Risk Management, Testing, Marketing, Operations and Customer Support.</span></p><p class=\"MsoListParagraphCxSpLast\" style=\"text-align:justify;text-indent:-18pt;\"><span lang=\"en-sg\" style=\"font-family:Symbol;\" xml:lang=\"en-sg\"><span>Â·<span style=\"font:7pt 'Times New Roman';\">Â Â Â Â Â Â  </span></span></span><span lang=\"en-sg\" xml:lang=\"en-sg\">Identify opportunities where AI can automate manual work, improve decision-making, and streamline business operations.</span></p><p class=\"MsoNormal\" style=\"text-align:justify;\"><strong><span lang=\"en-sg\" xml:lang=\"en-sg\">AI Development<br /></span></strong></p><p class=\"MsoListParagraphCxSpFirst\" style=\"text-align:justify;text-indent:-18pt;\"><span lang=\"en-sg\" style=\"font-family:Symbol;\" xml:lang=\"en-sg\"><span>Â·<span style=\"font:7pt 'Times New Roman';\">Â Â Â Â Â Â  </span></span></span><span lang=\"en-sg\" xml:lang=\"en-sg\">Build AI applications using modern Large Language Models (LLMs).</span></p><p class=\"MsoListParagraphCxSpMiddle\" style=\"text-align:justify;text-indent:-18pt;\"><span lang=\"en-sg\" style=\"font-family:Symbol;\" xml:lang=\"en-sg\"><span>Â·<span style=\"font:7pt 'Times New Roman';\">Â Â Â Â Â Â  </span></span></span><span lang=\"en-sg\" xml:lang=\"en-sg\">Design prompts, AI workflows, and multi-agent solutions for different business scenarios.</span></p><p class=\"MsoListParagraphCxSpMiddle\" style=\"text-align:justify;text-indent:-18pt;\"><span lang=\"en-sg\" style=\"font-family:Symbol;\" xml:lang=\"en-sg\"><span>Â·<span style=\"font:7pt 'Times New Roman';\">Â Â Â Â Â Â  </span></span></span><span lang=\"en-sg\" xml:lang=\"en-sg\">Develop solutions using RAG, MCP, Function Calling, Memory, and Tool Calling.</span></p><p class=\"MsoListParagraphCxSpMiddle\" style=\"text-align:justify;text-indent:-18pt;\"><span lang=\"en-sg\" style=\"font-family:Symbol;\" xml:lang=\"en-sg\"><span>Â·<span style=\"font:7pt 'Times New Roman';\">Â Â Â Â Â Â  </span></span></span><span lang=\"en-sg\" xml:lang=\"en-sg\">Integrate LLM APIs into internal platforms and automation pipelines.</span></p><p class=\"MsoListParagraphCxSpMiddle\" style=\"text-align:justify;text-indent:-18pt;\"><span lang=\"en-sg\" style=\"font-family:Symbol;\" xml:lang=\"en-sg\"><span>Â·<span style=\"font:7pt 'Times New Roman';\">Â Â Â Â Â Â  </span></span></span><span lang=\"en-sg\" xml:lang=\"en-sg\">Build AI workflows using both code-based and low-code/no-code platforms where appropriate.</span></p><p class=\"MsoListParagraphCxSpLast\" style=\"text-align:justify;text-indent:-18pt;\"><span lang=\"en-sg\" style=\"font-family:Symbol;\" xml:lang=\"en-sg\"><span>Â·<span style=\"font:7pt 'Times New Roman';\">Â Â Â Â Â Â  </span></span></span><span lang=\"en-sg\" xml:lang=\"en-sg\">Continuously evaluate emerging AI technologies and recommend practical business applications.<strong> </strong></span></p><p class=\"MsoNormal\" style=\"text-align:justify;\"><strong><span lang=\"en-sg\" xml:lang=\"en-sg\">Requirements</span></strong></p><p class=\"MsoListParagraphCxSpFirst\" style=\"text-align:justify;text-indent:-18pt;\"><span lang=\"en-sg\" style=\"font-family:Symbol;\" xml:lang=\"en-sg\"><span>Â·<span style=\"font:7pt 'Times New Roman';\">Â Â Â Â Â <strong>Â  </strong></span></span></span><strong><span lang=\"en-sg\" xml:lang=\"en-sg\">1â3 years of experience building AI applications, AI Agents, or workflow automation solutions.</span></strong></p><p class=\"MsoListParagraphCxSpMiddle\" style=\"text-align:justify;text-indent:-18pt;\"><span lang=\"en-sg\" style=\"font-family:Symbol;\" xml:lang=\"en-sg\"><span>Â·<span style=\"font:7pt 'Times New Roman';\">Â Â Â Â Â Â  </span></span></span><span lang=\"en-sg\" xml:lang=\"en-sg\">Hands-on experience with leading AI models such as OpenAI (GPT), Openclaw, Claude, Gemini, DeepSeek, Qwen, Llama, or similar LLMs.</span></p><p class=\"MsoListParagraphCxSpMiddle\" style=\"text-align:justify;text-indent:-18pt;\"><span lang=\"en-sg\" style=\"font-family:Symbol;\" xml:lang=\"en-sg\"><span>Â·<span style=\"font:7pt 'Times New Roman';\">Â Â Â Â Â Â  </span></span></span><span lang=\"en-sg\" xml:lang=\"en-sg\">Experience using modern AI development tools such as Cursor, Claude Code, Codex, Gemini CLI, Genspark, </span><span lang=\"en-us\" xml:lang=\"en-us\">Manus, </span><span lang=\"en-sg\" xml:lang=\"en-sg\">OpenHands, or similar AI-assisted development tools.</span></p><p class=\"MsoListParagraphCxSpMiddle\" style=\"text-align:justify;text-indent:-18pt;\"><span lang=\"en-sg\" style=\"font-family:Symbol;\" xml:lang=\"en-sg\"><span>Â·<span style=\"font:7pt 'Times New Roman';\">Â Â Â Â Â Â  </span></span></span><span lang=\"en-sg\" xml:lang=\"en-sg\">Familiarity with AI Agent frameworks, Agentic AI Concepts </span><span lang=\"en-sg\" style=\"color:#2e3849;background:#FFFFFF;\" xml:lang=\"en-sg\">(planning, tool-using agents, retrieval-augmented generation) â practical exposure or side projects acceptable.</span></p><p class=\"MsoListParagraphCxSpMiddle\" style=\"text-align:justify;text-indent:-18pt;\"><span lang=\"en-sg\" style=\"font-family:Symbol;\" xml:lang=\"en-sg\"><span>Â·<span style=\"font:7pt 'Times New Roman';\">Â Â Â Â Â Â  </span></span></span><span lang=\"en-sg\" xml:lang=\"en-sg\">Experience integrating AI solutions with APIs, third-party services, or internal business systems.</span></p><p class=\"MsoListParagraphCxSpLast\" style=\"text-align:justify;text-indent:-18pt;\"><span lang=\"en-sg\" style=\"font-family:Symbol;\" xml:lang=\"en-sg\"><span>Â·<span style=\"font:7pt 'Times New Roman';\">Â Â Â Â Â Â  </span></span></span><span lang=\"en-sg\" xml:lang=\"en-sg\">Basic programming skills in Python and familiarity with prompt engineering, AI workflow design, or RAG.</span><span lang=\"en-sg\" style=\"font-size:10.5pt;font-family:'Segoe UI', sans-serif;\" xml:lang=\"en-sg\"><br /></span></p><p class=\"MsoListParagraphCxSpLast\" style=\"text-align:justify;text-indent:-18pt;\"><span lang=\"en-sg\" xml:lang=\"en-sg\"><span lang=\"en-sg\" style=\"font-family:Symbol;\" xml:lang=\"en-sg\"><span>Â·<span style=\"font:7pt 'Times New Roman';\"> Â  Â  Â  <span lang=\"en-sg\" style=\"font-size:12pt;line-height:115%;font-family:Aptos, sans-serif;\" xml:lang=\"en-sg\">Experience building multi-agent systems, workflow automation platforms and or deploying AI applications into production environments.</span></span></span></span></span></p><p class=\"MsoListParagraphCxSpFirst\" style=\"text-align:justify;text-indent:-18pt;\"><span lang=\"en-sg\" style=\"font-family:Symbol;\" xml:lang=\"en-sg\"><span>Â·<span style=\"font:7pt 'Times New Roman';\">Â Â Â Â Â Â  </span></span></span><span lang=\"en-sg\" xml:lang=\"en-sg\">Experience in FinTech, Trading, Risk Management and or digital asset.<br /></span></p><p class=\"MsoListParagraphCxSpLast\" style=\"text-align:justify;text-indent:-18pt;\"><span lang=\"en-sg\" style=\"font-family:Symbol;\" xml:lang=\"en-sg\"><span>Â·<span style=\"font:7pt 'Times New Roman';\">Â Â Â Â Â Â  </span></span></span><span lang=\"en-sg\" xml:lang=\"en-sg\">Strong analytical, problem-solving, and communication skills, with a passion for learning and applying emerging AI technologies.</span></p><p class=\"MsoNormal\" style=\"text-align:justify;\"><strong><span lang=\"en-sg\" xml:lang=\"en-sg\">Why Join Us</span></strong></p><ul style=\"margin-top:0cm;\" type=\"disc\"><li class=\"MsoNormal\" style=\"text-align:justify;\"><span lang=\"en-sg\" xml:lang=\"en-sg\">Fully remote working environment with your local working hours.</span></li><li class=\"MsoNormal\" style=\"text-align:justify;\"><span lang=\"en-sg\" xml:lang=\"en-sg\">Build AI solutions that solve real business problems.</span></li><li class=\"MsoNormal\" style=\"text-align:justify;\"><span lang=\"en-sg\" xml:lang=\"en-sg\">Work across multiple business functions and help shape the company's AI transformation.</span></li><li class=\"MsoNormal\" style=\"text-align:justify;\"><span lang=\"en-sg\" xml:lang=\"en-sg\">Work with the latest AI technologies, LLMs, AI Agents, workflow automation, and modern AI development tools.</span></li><li class=\"MsoNormal\" style=\"text-align:justify;\"><span lang=\"en-sg\" xml:lang=\"en-sg\">Opportunity to build practical AI applications with direct business impact.</span></li></ul><br/><br/>Please mention the word **BENEFICIARY** and tag RNDAuNjUuNjEuMTQ5 when applying to show you read the job post completely (#RNDAuNjUuNjEuMTQ5). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-genai-engineer-ai-builder-ai-agent-associate-specialist-magic-compass-limited-1135735",
+      "location": "Not specified",
+      "remote": true,
+      "domainTags": [
+        "AI Governance",
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 7.0,
+        "alignmentADGL": 8.0,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "AI Transformation",
+        "RAG",
+        "AI Agents"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Field Maintenance Technician CTC_LIS",
+      "organisation": "Cubic Defence Australia &amp; NZ",
+      "description": "<p>Field Maintenance Technician â CTC-LIS</p><p><strong>Location:</strong> Townsville, Queensland</p><p><strong>Employment Type:</strong> Full time</p><p><br></p><p><strong>About Cubic Defence</strong></p><p>At Cubic Defence Australia, we deliver world-class training and simulation capability in support of the Australian Defence Force. Our teams help create and sustain technology solutions that support mission success, safety and readiness for those who serve.</p><p><br></p><p><strong>About the Role</strong></p><p>Reporting to the 2IC Field Services, the Field Maintenance Technician is responsible for supporting maintenance activities and ensuring the ongoing availability of Combat Training Centre â Live Instrumentation System (CTC-LIS) equipment. This hands-on role supports the preparation, deployment and maintenance of CTC-LIS Relay Stations, including diagnosis and repair of telecommunications equipment such as UHF, microwave and LTE systems, as well as basic servicing and maintenance of diesel-powered generators.</p><p><br></p><p>This position requires significant time deployed away from Townsville to various Australian Army and non-Defence training areas. During Force-on-Force exercise phases, you will work in a small team environment providing 24-hour maintenance coverage in the field.</p><p><br></p><p><strong>Key Responsibilities</strong></p><ul><li>Conduct inspections, maintenance and associated repairs of CTC-LIS instrumentation and telemetry equipment.</li><li>Diagnose and repair telecommunications equipment, including UHF, microwave and LTE systems.</li><li>Conduct pre-deployment readiness checks of telemetry and mechanical equipment.</li><li>Maintain CTC-LIS equipment during field deployments.</li><li>Service and perform minor repairs to diesel-powered generators.</li><li>Provide technical advice and assistance during instrumentation function checking phases.</li><li>Be prepared to deputise for the 2IC Field Services during periods of absence.</li><li>Assume a leadership role within a small team environment during field deployments when required.</li></ul><p><br></p><p><strong>About You</strong></p><p>You are a capable and motivated technician with strong fault-finding skills, sound communication ability and the confidence to work in both field and workshop environments. You are comfortable operating in dynamic conditions, prioritising maintenance issues and clearly communicating intent and outcomes.</p><p><br></p><p><strong>Background and Experience</strong></p><ul><li>Experience in the installation and maintenance of communications systems.</li><li>Basic knowledge and understanding of electronics and electrical principles.</li><li>Proven fault-finding and problem-solving skills.</li><li>Ability to identify, analyse and prioritise maintenance issues.</li><li>Ability to work effectively in both field and workshop environments.</li><li>Strong written and verbal communication skills.</li><li>Experience using IT systems and programs.</li></ul><p><br></p><p><strong>Conditions of Employment</strong></p><ul><li>Certificate III in Telecommunications, Electrotechnology or a comparable qualification.</li><li>Clean Heavy Truck Licence to drive company equipment, or willingness to undertake training to obtain one.</li><li>Vehicle Loading Crane high risk licence, or willingness to undertake training to obtain one.</li><li>Work at Heights qualification, or willingness to undertake training to obtain one.</li><li>Forklift licence, or willingness to undertake training to obtain one.</li><li>Successful completion of a National Police Check.</li><li>Ability to obtain and hold an Australian Government Security Vetting Agency security clearance.</li></ul><p><br></p><p><strong>Working Environment</strong></p><p>This role requires significant time deployed in the field and flexibility to support business operations across multiple time zones. From time to time, you may be required to monitor and respond to telephone calls, emails and other necessary communications from Cubic, customers or suppliers outside ordinary working hours to support critical issues or business needs.</p><p><br></p><p><strong>Compliance and General Duties</strong></p><ul><li>Comply with the role job description and Cubicâs Quality Management System.</li><li>Follow Cubic Health, Safety and Environment policies and procedures.</li><li>Comply with established security policies and procedures.</li><li>Follow Cubic Human Resources procedures.</li><li>Perform other duties as requested.</li></ul><p><br></p><p><strong>Apply Now</strong></p><p>If you are a technically skilled professional who enjoys hands-on work, problem-solving in demanding environments and supporting high-tempo military training exercises, we would welcome your application.</p><p><br></p><p><em>The description above is not intended to be an exhaustive list of all job duties, responsibilities and requirements.</em></p><p>#LI-KC1</p><br/><br/>Please mention the word **MERRIMENT** and tag RNDAuNjUuNjEuMTQ5 when applying to show you read the job post completely (#RNDAuNjUuNjEuMTQ5). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-field-maintenance-technician-ctc-lis-cubic-defence-australia-amp-nz-1136005",
+      "location": "Townsville, ",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Plant Fitter",
+      "organisation": "Queensland Rail",
+      "description": "<strong>Youâll connect Queensland. Weâll connect you to an amazing career.<br><br></strong>Queensland Rail is built on true connection. We are a large and fully integrated infrastructure business chartered with a responsibility that is pivotal to the success of Queensland and its people. Our culture is one based on safety and performance.<br><br>Our culture is one based on safety and performance. Learn more about Queensland Railâs purpose, people, and progress by watching our short video here.<br><br><strong>Benefits that Count. What Queensland Rail has to offer: <br><br></strong><ul><li>Permanent position with an industry leader</li><li>Working the current roster on the base rate including penalties you can expect a salary of $95,000 plus 12.75% superannuation</li><li>Travel within roster on paid work time (accommodation provided + generous daily travel allowance)</li><li>PPE, tools, phone &amp; shared vehicle supplied</li><li>Get paid to upskill whilst you complete a Certificate IV Engineering</li><li>Have the opportunity to enhance your skills further by obtaining an MR &amp; HR driverâs license, as well as a CAT3 Driver qualification. </li><li>We pride ourselves on our safety culture, we work safe so that everyone goes home safe.<br><br></li></ul>And more! <strong>Click here</strong> to see the full range of benefits available to Queensland Rail employees.<br><br><strong>Hours and Salary<br><br></strong>The team work throughout the region and operate on two rosters:<br><br><ul><li>Whilst away they are on a 9 on 5 off roster - travelling Tuesday working through the weekend on penalty rates and return the following Wednesday </li><li>Whilst working locally the team operate on a 9 day fortnight â Monday to Friday, then Monday to Thursday </li><li>There is flexibility to switch rosters when you need</li><li>All travel is on work time. You meet at the depot and travel together from there on paid time<br><br></li></ul><strong>Purpose that Counts. <br><br></strong>Working out of our <strong>Townsville </strong><strong>depot</strong>, your role is to maximise machine availability by efficiently maintaining, servicing, repairing and performing approved modifications on our world-class resurfacing fleet. This includes ballast regulators, tamper-liners, and other essential civil plant equipment.<br><br>We are a dedicated team of 14 skilled Plant Fitters and 1 Electrician, covering a vast and diverse area stretching from Rockhampton to Cairns, Townsville to Mt Isa, and including the Croydon to Normanton line.<br><br>In this role you will:<br><br><ul><li>Carry out effective and efficient preventative maintenance</li><li>Practice effective troubleshooting methods to repair plant breakdowns</li><li>Ensure all aspects of work are compliant with Queensland Railâs policies and safe work procedures</li><li>Prepare and provide plant maintenance documentation and reports<br><br></li></ul><strong>People Who Count.<br><br></strong>We are looking to connect with someone who Is reliable, safety-focused individual who takes pride in their work and enjoys being part of a supportive team. To be successful in this role, you must have:<br><br><ul><li>Mechanical Trade Certificate</li><li>Current manual driversâ licence</li><li>Capacity to travel and work throughout regional Queensland<br><br></li></ul>For further information please click here to view the Position Description.<br><br>We look forward to hearing from motivated individuals who are ready to make an impact and work as part of a dedicated team!<br><br><strong>Supporting a Diverse Workforce<br><br></strong>Queensland Rail acknowledges the Traditional Owners and Elders of the lands and waterways our network traverses.<br><br>Our teams are <strong>People who Count.</strong> We encourage diversity in our teams, including different genders, age, race, disability status, sexual orientation, religions, neurodiversity, education levels and many more aspects. No two journeys are the same, and itâs because of our differences that as a collective, we achieve great things. Please advise if you would like to discuss reasonable adjustments in the recruitment process.<br><br><strong>Your journey matters. Make it with us. <br><br></strong>Thereâs never been a more exciting time to join Queensland Rail. If you're ready to make a real impact and help shape our future, we encourage you to submit your resume and cover letter by <strong>11:59pm Sunday 16th August 2026.<br><br></strong>To learn more about this opportunity please contact Jelena.Nikolovski@qr.com.au<br/><br/>Please mention the word **PRIVILEGED** and tag RNDAuNjUuNjEuMTQ5 when applying to show you read the job post completely (#RNDAuNjUuNjEuMTQ5). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-plant-fitter-queensland-rail-1136027",
+      "location": "Townsville, ",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "AIå¹è®­è®²å¸ ç¡åé¡¹ç®ï¼çº¿ä¸ï¼",
+      "organisation": "è½¯è£è®¾è®¡å¬å¸",
+      "description": "è¯¥èä½æ¥æºäºçè æä»¬æ­£å¨æé ä¸å¥é¢åæªæ¥ç AI + å¤§æ¨¡å + æºè½ä½å®æè¯¾ç¨ï¼ç°é¢åå¨å½æåå¨æ ¡ç¡å£«/åå£«åå­¦ï¼æä»»è¯¾ç¨è®²å¸ï¼åä¸è¯¾ç¨å±å»ºä¸æå­¦æ¯æã å¦æä½ å¯¹ AI åæ»¡å¥½å¥ï¼æ³æææ¯åæå½±ååï¼è¿ä¼æ¯ä¸ä¸ªå¾å¥½çèµ·ç¹ã æå±é¨é¨ï¼æ°å­åç§»å¨ä¸­å¿ æåäººæ°ï¼5å<br><br>ä½ å°åä¸ï¼ - æä»» AI / å¤§æ¨¡å / æºè½ä½ç¸å³è¯¾ç¨ççº¿ä¸è®²å¸ï¼è´è´£æå­¦æ¯æ - åä¸è¯¾ç¨åå®¹å±å»ºï¼æ¡ä¾è®¾è®¡ãå®æä¼åãç­çä½ç³»ï¼ - å¸¦é¢å­¦åå®æé¡¹ç®å®è·µï¼å¦ï¼AI Agentãèªå¨åå·¥å·ãåºç¨å¼åç­ï¼ - æé ä¸ªäººææ¯å½±ååï¼ææºä¼åä¸å¬å¼åäº«/è¯¾ç¨ç½²åï¼<br><br>æä»¬å¸æä½ å·å¤ï¼ - å¨è¯»ç¡å£« / åå£«ï¼å·å¤è®¡ç®æºãè½¯ä»¶ãçµå­ä¿¡æ¯ãäººå·¥æºè½ãèªå¨åç­ç¸å³ä¸ä¸ç¡å£«åä»¥ä¸å­¦åï¼å«å¨è¯»ï¼ - çæææ¥è§¦è¿ä»¥ä¸ä»»ä¸æ¹åï¼ å¤§è¯­è¨æ¨¡åï¼å¦ GPTãå¼æº LLM ç­ï¼ AI Agent / LangChain / RAG ç­æ¡æ¶ Python / æ°æ®å¤ç / åç«¯å¼å - æä¸å®è¡¨è¾¾è½åï¼æ¿æåä¸åäº«ä¸ç­ç - æè´£ä»»å¿ï¼è½æå¨æåä¸è¯¾ç¨ï¼æ¶é´çµæ´»ï¼<br><br>æ¶çåæ¥ï¼ - 0.8k â 2k / hï¼æè¯¾ç¨ææ¨¡åç»ç®ï¼ - å¯è·å¾è¯¾ç¨å±å»ºè¯æ / é¡¹ç®ç»å - æ·±åº¦åä¸ AI åæ²¿åºç¨è½å°ï¼æ¯åçº¯åè®ºææ´âæ¥å°æ°âï¼ - ç»è¯ä¸ç¾¤å AI çåé¢ä¼ä¼´ï¼å«è¡ä¸ä»ä¸èï¼<br><br>å åé¡¹ï¼éå¿é¡»ï¼ 1. æ AI é¡¹ç®ç»éª / å¼æºé¡¹ç®åä¸ç»å 2. ææå­¦ãå©ææç¤¾ç¾¤è¿è¥ç»éª 3. æåå®¹åä½ï¼åå®¢ / Bç« / å°çº¢ä¹¦ç­ï¼<br><br>æ¥åæ¹å¼ï¼ç´æ¥æéæåéä»¥ä¸ä¿¡æ¯è³æå®é®ç®± è¯·åéä»¥ä¸ä¿¡æ¯ï¼ å­¦æ ¡ + ä¸ä¸ + å¹´çº§ ææ¯æ¹å / ç¸å³ç»éª å¯æå¥æ¶é´ï¼æ¯å¨å¤§æ¦æ¶é¿ï¼ ç®åè¯´æï¼ä¸ºä»ä¹æ³åä¸è¿ä¸ªé¡¹ç®<br><br>å³äºæä»¬ | æä»¬å¨åä»ä¹<br><br>æä»¬ç¸ä¿¡ï¼ AI ä¸åªæ¯å·¥å·ï¼èæ¯ä¸ä¸ä»£çäº§ååºç¡è®¾æ½ã è¿ä¸ªé¡¹ç®ä¸ä»æ¯âåè¯¾ç¨âï¼æ´æ¯å¨ä¸èµ·æ¢ç´¢ï¼ æ®éäººå¦ä½ç¨ AI æ¾å¤§è½åï¼çè³æ¹åè·¯å¾ã<br><br>å¦æä½ ä¸æ³åªâå­¦ AIâï¼èæ¯æ³çæ­£åä¸ãå®è·µãå±å»ºï¼æ¬¢è¿å å¥æä»¬ã<br/><br/>Please mention the word **FREE** and tag RNDAuNjUuNjEuMTQ5 when applying to show you read the job post completely (#RNDAuNjUuNjEuMTQ5). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/",
+      "location": "å¹¿å·, ",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Regional General Manager Airports",
+      "organisation": "WestJet",
+      "description": "<strong>Why WestJet<br><br></strong>Since our story took off in 1996, WestJet has strived to enrich the lives of everyone in our world; a career with us is no exception. Weâre proud to be one of Canadaâs most admired and respected corporate cultures and continuously aim for the highest standards of service and success.<br><br><strong>Join us, this is where your career story takes off.<br><br></strong>This position is eligible for remote work, within Canada, under our mobile workforce program.<br><br><strong>Regional General Manager, Airports<br><br></strong>As the Regional General Manager, you will provide strategic leadership and direction to deliver safe operations while driving excellence in operational performance and guest service through our contracted service partners across the designated region. Reporting directly to the Vice President of Airports, you will lead a team of Regional Managers and collaborate closely with internal and external stakeholders to maintain regulatory compliance, foster positive relationships, and ensure a consistent, high-quality guest experience across all airport touchpoints within the region.<br><br>This role requires an experienced leader who holds service partners accountable for delivering WestJet's operational and service standards while balancing the needs of our guests, our partners, and our business. You will coach and support service partners in developing and executing airport action plans that address performance gaps, strengthen safety, and improve the guest experience.<br><br>The Regional General Manager will provide strategic oversight of airport operations across the region by identifying emerging risks, monitoring operational performance, and ensuring consistent execution of WestJet's standards and priorities. Through strong partnerships with service providers and airport authorities, you will drive continuous improvement, enhance operational resilience, and ensure our airports consistently deliver safe, reliable operations and an exceptional guest experience.<br><br><strong>Key Deliverables Include<br><br></strong><ul><li>Foster a Safety Above All culture with Regional Managers by ensuring service partners achieve safety targets, monitoring performance trends, and addressing operational risks.</li><li>Lead, coach, and develop a high-performing team of Regional Managers to deliver operational performance, guest satisfaction, employee engagement, and financial results.</li><li>Provide strategic oversight of airport operations, ensuring consistent execution of WestJet's operational and guest standards and priorities.</li><li>Deliver regional operational performance by achieving operational, guest experience, and financial objectives while driving continuous improvement through station action plans.</li><li>Provide governance through audits, operational reviews, and performance assessments to ensure adherence to standards, identify risks, and drive corrective actions.</li><li>Analyze operational performance and safety data to identify trends and risks, inform operational decision making, prioritize resources, and strengthen oversight across the region.</li><li>Serve as the senior escalation point for Regional Managers, providing leadership and decision support for complex operational, guest, commercial, safety, and irregular operations.</li><li>Partner with the Strategic Procurement team to develop service partner strategies, support partner selection, and ensure service partners deliver safe, high-performing, and cost-effective operations.</li><li>Build and maintain executive relationships with airport authorities, service partner leadership, government agencies, bargaining agents, and other key stakeholders.</li><li>Lead regional operational planning to ensure airports are resourced and operationally ready for seasonal demand, network growth, start-ups, restarts, service partner transitions, station closures, and other strategic initiatives.</li><li>Champion innovation and continuous improvement by leveraging data and implementing initiatives that enhance operational performance, the guest experience, employee engagement, and financial results.</li><li>Participate as a member of the Airports Leadership Team to establish departmental priorities, contribute to strategic direction, and lead the development and execution of departmental initiatives. <br><br></li></ul><strong>Experience And Qualifications<br><br></strong><ul><li>3+ years Airports leadership experience required </li><li>Business leadership experience with a significant level of internal and external dependencies and relationships. </li><li>Possess strong business acumen to deliver departmental plans including budget. </li><li>Proven ability to multitask &amp; handle changing priorities. </li><li>Confident in presenting materials and reports to the next 2 levels. </li><li>Post-secondary education with a business application an asset. </li><li>Ability to manage multiple leaders and locations simultaneously. </li><li>Proficient in PC based applications, Microsoft Project, Word, Excel and Outlook. </li><li>Ability to travel &amp; spend time away for significant periods of time. </li><li>Project management skills considered an asset. </li><li>Knowledge of International regulations and guidelines (for example - TSA/Civil Aviation, UK High Commission etc.) an asset. </li><li>Proven track record of effectively influencing leadership teams via handling partners and developing strong direct leadership teams. </li><li>IATA SGHA experience would be beneficial. <br><br></li></ul><strong>The Benefits Of Being a WestJetter<br><br></strong>WestJet provides all WestJetters with a competitive total rewards package. On top of that, we offer:<br><br><ul><li>A fun and friendly culture with colleagues who work together to win</li><li>Travel privileges for you and your family, effective from your start date</li><li>Savings and Benefit programs that are flexible to meet your specific needs <br><br></li></ul><strong>Think weâre a great fit? Apply now!<br><br></strong><strong>About WestJet Group Of Companies<br><br></strong>WestJet took to the skies in 1996 with just over 200 employees and three aircraft operating service to five destinations. Since then, WestJet has pioneered low-cost travel in Canada, cutting airfares in half, and increasing the flying population in Canada by more than 50 per cent. Since the Sunwing Airlines integration in 2025, more than 15,000 WestJetters support nearly 200 aircraft and connect guests to our global network of more than 100 destinations across North America, Central America, the Caribbean, Europe and Asia. The WestJet Group is a major Canadian employer and includes WestJet Airlines, WestJet Encore and Sunwing Vacations Group. Weâre Canadaâs leading value airline and largest vacation provider, with a united purpose of providing affordable and accessible air and vacation travel to Canadians.<br><br><strong>Our safety promise<br><br></strong>At WestJet, the safety and security of our people and our guests is a core value and at the heart of what we do. Safety and security are shared responsibilities all team members are expected to use safe work practices to ensure their well-being and the safety of others. WestJet recognizes that the use of Alcohol and Drugs can adversely impact a safe work environment and the well-being of others including guests, suppliers and the public, as well as place WestJet's operations at risk. All roles that are identified as Safey-Sensitive are required to pass a Pre-Employment Alcohol and Drug Test as per WestJet'sâ¯Alcohol and Drug Policy.â¯<br><br><strong>Our commitment to diversity, equity and inclusion<br><br></strong>We embrace what makes each of us unique, and what makes us uniquely WestJet. We welcome diverse skills, experiences and backgrounds so if you're passionate about this role, we encourage you to apply â even if you don't meet every qualification listed. WestJet is committed to inclusiveness, equity and accessibility throughout the selection process. If you require accommodation at any stage, please contact our Talent Acquisition team at talent@westjet.com.<br><br>We value the time and effort you put into your application. Our recruitment process is highly competitive and while every applicant will receive communication regarding their application status, only those selected to move forward will be contacted with next steps. If this role isnât the right fit, we encourage you to explore future opportunities with us.<br><br><strong>About<br><br></strong><strong>For more information about everything WestJet, please visit westjet.com/aboutus.<br><br></strong>If you wish to withdraw your application or request that your personal information be deleted, please contact us at talent@westjet.com.<br/><br/>Please mention the word **OVERTAKING** and tag RNDAuNjUuNjEuMTQ5 when applying to show you read the job post completely (#RNDAuNjUuNjEuMTQ5). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-regional-general-manager-airports-westjet-1135745",
+      "location": "Mississauga, ",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    }
+  ]
+}

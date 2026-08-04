@@ -8,8 +8,13 @@
     "founderDecisions": "array — decision-log.json's own decisions, read-only"
   },
   "recurringPriorities": [],
-  "recurringAlerts": [],
-  "daysTracked": 1,
+  "recurringAlerts": [
+    {
+      "alertType": "No website enquiries received",
+      "daysFired": 2
+    }
+  ],
+  "daysTracked": 2,
   "lessonsLearnedLibrary": [],
   "recurringGovernanceRisks": [],
   "founderDecisions": []
