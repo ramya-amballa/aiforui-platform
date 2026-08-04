@@ -1,0 +1,81 @@
+{
+  "id": "DEC-008",
+  "slug": "biometric-collection-consent-requirement",
+  "title": "Require documented informed consent before collecting or processing biometric identifiers",
+  "description": "Illustrative reference decision modelled on the multi-jurisdiction regulatory response to Clearview AI's non-consensual facial-recognition database. Not a documented decision of any specific organisation.",
+  "version": "1.0.0",
+  "status": "draft",
+  "confidence": "Community",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["facial-recognition", "privacy", "biometric", "consent"],
+  "created_by": "AI Governance Workbench (Phase 2A seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 2A seed data)",
+      "version": "1.0.0",
+      "note": "Initial Phase 2A seed content, part of the Foundational Twenty."
+    }
+  ],
+  "decision_statement": "Biometric identifiers (faceprints, fingerprints, voiceprints, iris/retina scans) must never be collected or processed — including by scraping publicly available images — without documented, informed consent from each individual, regardless of whether the data source is technically public.",
+  "decision_type": "policy",
+  "decision_context": "Motivated by the coordinated multi-country regulatory response to Clearview AI, which built a facial-recognition database by scraping public images without consent and was subsequently found unlawful by data protection authorities in Canada, Australia, Italy, and the UK, and restricted under Illinois's BIPA in the US.",
+  "governing_body": "Illustrative example — Biometric Systems Governance Board",
+  "jurisdiction": ["US", "EU"],
+  "frameworks_referenced": ["BIPA"],
+  "alternatives_considered": [
+    "Treat publicly-posted images as implicitly consented to for any downstream use.",
+    "Rely on a jurisdiction-by-jurisdiction compliance approach rather than a single global consent standard."
+  ],
+  "citations": [
+    {
+      "id": "cite-clearview-aclu-settlement",
+      "source_type": "other",
+      "title": "In Big Win, Settlement Ensures Clearview AI Complies With Groundbreaking Illinois Biometric Privacy Law",
+      "publisher": "American Civil Liberties Union",
+      "url": "https://www.aclu.org/press-releases/big-win-settlement-ensures-clearview-ai-complies-with-groundbreaking-illinois",
+      "publication_date": "2022-05-09",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "RESULTED_FROM",
+      "target_id": "INC-015",
+      "target_type": "incident",
+      "reason": "This decision is modelled as a direct governance response to this multi-jurisdiction enforcement pattern.",
+      "confidence": "Verified",
+      "citation_ids": ["cite-clearview-aclu-settlement"]
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "target_id": "PAT-007",
+      "target_type": "pattern",
+      "reason": "The decision is put into practice via this design pattern.",
+      "confidence": "Community"
+    },
+    {
+      "type": "SATISFIES_CONTROL",
+      "target_id": "CTR-012",
+      "target_type": "control",
+      "reason": "Documented informed consent directly satisfies BIPA's core requirement.",
+      "confidence": "Community"
+    },
+    {
+      "type": "REQUIRES_EVIDENCE",
+      "target_id": "EVI-007",
+      "target_type": "evidence",
+      "reason": "Compliance must be demonstrated by a documented consent record for each biometric collection point.",
+      "confidence": "Community"
+    },
+    {
+      "type": "RAISES_BOARD_QUESTION",
+      "target_id": "BRD-007",
+      "target_type": "board_question",
+      "reason": "Boards adopting this decision should be asking whether every biometric collection point has documented consent.",
+      "confidence": "Community"
+    }
+  ]
+}

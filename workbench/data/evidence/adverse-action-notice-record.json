@@ -1,0 +1,38 @@
+{
+  "id": "EVI-009",
+  "slug": "adverse-action-notice-record",
+  "title": "Adverse Action Notice Record",
+  "description": "A record of the specific, individualised reason given to a consumer for an adverse credit or lending decision an automated system contributed to.",
+  "version": "1.0.0",
+  "status": "active",
+  "confidence": "Community",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["credit-scoring", "transparency", "explainability"],
+  "created_by": "AI Governance Workbench (Phase 2A seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 2A seed data)",
+      "version": "1.0.0",
+      "note": "Initial Phase 2A seed content."
+    }
+  ],
+  "evidence_description": "A per-applicant record of the specific reasons given for an adverse credit or lending decision, including the underlying contributing factors identified by the underwriting model, retained for later review if a dispute arises.",
+  "collection_method": "Generated automatically at decision time by the underwriting system, alongside the notice sent to the consumer.",
+  "retention_period": "Minimum 25 months, aligned with typical US adverse-action record-keeping requirements.",
+  "artifact_format": "Structured export (CSV/JSON) of per-applicant reasons and contributing factors.",
+  "citations": [
+    {
+      "id": "cite-nydfs-apple-card-report",
+      "source_type": "regulator",
+      "title": "Report on Apple Card Investigation",
+      "publisher": "New York State Department of Financial Services",
+      "url": "https://www.dfs.ny.gov/reports_and_publications/202103_report_apple_card_investigation",
+      "publication_date": "2021-03-23",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": []
+}

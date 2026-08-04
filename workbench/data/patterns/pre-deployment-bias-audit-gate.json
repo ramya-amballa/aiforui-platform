@@ -45,6 +45,13 @@
       "confidence": "Community"
     },
     {
+      "type": "SATISFIES_CONTROL",
+      "target_id": "CTR-002",
+      "target_type": "control",
+      "reason": "The same audit also demonstrates the adverse-impact assessment the EEOC's Title VII AI guidance describes.",
+      "confidence": "Community"
+    },
+    {
       "type": "REQUIRES_EVIDENCE",
       "target_id": "EVI-001",
       "target_type": "evidence",

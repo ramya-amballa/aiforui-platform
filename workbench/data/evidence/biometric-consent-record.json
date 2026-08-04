@@ -1,0 +1,38 @@
+{
+  "id": "EVI-007",
+  "slug": "biometric-consent-record",
+  "title": "Biometric Consent Record",
+  "description": "A record showing that written notice was given and informed consent obtained from each individual before their biometric identifiers were collected or processed.",
+  "version": "1.0.0",
+  "status": "active",
+  "confidence": "Community",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["privacy", "biometric", "consent"],
+  "created_by": "AI Governance Workbench (Phase 2A seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 2A seed data)",
+      "version": "1.0.0",
+      "note": "Initial Phase 2A seed content."
+    }
+  ],
+  "evidence_description": "A record, per individual or per data source, showing the written notice given and consent obtained before biometric identifiers were collected, including for data sourced from third parties or public scraping.",
+  "collection_method": "Consent-management system logging notice delivery and consent capture at each collection point.",
+  "retention_period": "For the lifetime of the biometric data held, plus a minimum of 3 years after deletion.",
+  "artifact_format": "Structured export (CSV/JSON) of consent records, keyed to each collection point or data source.",
+  "citations": [
+    {
+      "id": "cite-clearview-aclu-settlement",
+      "source_type": "other",
+      "title": "In Big Win, Settlement Ensures Clearview AI Complies With Groundbreaking Illinois Biometric Privacy Law",
+      "publisher": "American Civil Liberties Union",
+      "url": "https://www.aclu.org/press-releases/big-win-settlement-ensures-clearview-ai-complies-with-groundbreaking-illinois",
+      "publication_date": "2022-05-09",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": []
+}

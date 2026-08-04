@@ -1,0 +1,47 @@
+{
+  "id": "CTR-015",
+  "slug": "nist-ai-rmf-manage-4-1",
+  "title": "NIST AI RMF MANAGE 4.1 — Post-deployment monitoring and incident response",
+  "description": "The post-deployment monitoring and incident-response control within the MANAGE function of the NIST AI Risk Management Framework. Paraphrase pending verification against the primary NIST publication — hence 'Community' confidence.",
+  "version": "1.0.0",
+  "status": "draft",
+  "confidence": "Community",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["nist-ai-rmf", "incident-response", "manage-function", "safety"],
+  "created_by": "AI Governance Workbench (Phase 2A seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 2A seed data)",
+      "version": "1.0.0",
+      "note": "Initial Phase 2A seed content."
+    }
+  ],
+  "framework_name": "NIST AI Risk Management Framework (AI RMF 1.0)",
+  "control_reference": "MANAGE 4.1",
+  "control_text": "Post-deployment AI system monitoring plans are implemented, including mechanisms for user feedback, appeal and override, incident response, recovery, decommissioning, and change management.",
+  "control_family": "Manage",
+  "citations": [
+    {
+      "id": "cite-nist-ai-rmf-1-0",
+      "source_type": "standards_body",
+      "title": "Artificial Intelligence Risk Management Framework (AI RMF 1.0)",
+      "publisher": "National Institute of Standards and Technology (NIST)",
+      "url": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf",
+      "publication_date": "2023-01-26",
+      "accessed_date": "2026-08-04",
+      "locator": "MANAGE function, category 4.1"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "REQUIRES_EVIDENCE",
+      "target_id": "EVI-010",
+      "target_type": "evidence",
+      "reason": "Satisfying this control requires evidence that incident-response and decommissioning mechanisms were actually tested.",
+      "confidence": "Community"
+    }
+  ]
+}

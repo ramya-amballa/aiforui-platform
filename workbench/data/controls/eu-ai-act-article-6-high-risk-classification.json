@@ -1,0 +1,47 @@
+{
+  "id": "CTR-007",
+  "slug": "eu-ai-act-article-6-high-risk-classification",
+  "title": "EU AI Act Article 6 and Annex III — High-risk AI system classification",
+  "description": "The classification test determining which AI systems are 'high-risk' under the EU AI Act. Paraphrase pending verification against the primary EUR-Lex text — hence 'Community' confidence.",
+  "version": "1.0.0",
+  "status": "draft",
+  "confidence": "Community",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["eu-ai-act", "due-process", "classification"],
+  "created_by": "AI Governance Workbench (Phase 2A seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 2A seed data)",
+      "version": "1.0.0",
+      "note": "Initial Phase 2A seed content."
+    }
+  ],
+  "framework_name": "EU Artificial Intelligence Act (Regulation (EU) 2024/1689)",
+  "control_reference": "Article 6 (and Annex III)",
+  "control_text": "An AI system is classified as 'high-risk' either as a safety component of a product regulated under existing EU harmonisation law, or because it falls into one of the use-case categories listed in Annex III — including employment/worker management, access to essential private and public services (e.g. benefits eligibility, credit scoring), law enforcement, migration, and education — unless it does not pose a significant risk or materially influence the decision outcome.",
+  "control_family": "Classification",
+  "citations": [
+    {
+      "id": "cite-eu-ai-act",
+      "source_type": "legislation",
+      "title": "Regulation (EU) 2024/1689 laying down harmonised rules on artificial intelligence (Artificial Intelligence Act)",
+      "publisher": "EUR-Lex / Official Journal of the European Union",
+      "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng",
+      "publication_date": "2024-07-12",
+      "accessed_date": "2026-08-04",
+      "locator": "Article 6 and Annex III"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "REQUIRES_EVIDENCE",
+      "target_id": "EVI-004",
+      "target_type": "evidence",
+      "reason": "The classification determination is documented as part of the data protection impact assessment.",
+      "confidence": "Community"
+    }
+  ]
+}

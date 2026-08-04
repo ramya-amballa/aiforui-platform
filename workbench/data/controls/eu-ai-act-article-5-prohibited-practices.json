@@ -1,0 +1,47 @@
+{
+  "id": "CTR-013",
+  "slug": "eu-ai-act-article-5-prohibited-practices",
+  "title": "EU AI Act Article 5 — Prohibited AI practices",
+  "description": "The list of AI practices considered unacceptable risk and banned outright under the EU AI Act. Referenced here as a general framework anchor for manipulative-technique concerns (e.g. deceptive synthetic media) rather than as the enforcing law in the specific US robocall case it is linked to. Paraphrase pending verification against the primary EUR-Lex text — hence 'Community' confidence.",
+  "version": "1.0.0",
+  "status": "draft",
+  "confidence": "Community",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["eu-ai-act", "misinformation", "deepfake", "prohibited-practices"],
+  "created_by": "AI Governance Workbench (Phase 2A seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 2A seed data)",
+      "version": "1.0.0",
+      "note": "Initial Phase 2A seed content."
+    }
+  ],
+  "framework_name": "EU Artificial Intelligence Act (Regulation (EU) 2024/1689)",
+  "control_reference": "Article 5",
+  "control_text": "Bans specific AI practices considered unacceptable risk, including subliminal, manipulative, or deceptive techniques that materially distort a person's behaviour and cause harm, exploitation of vulnerabilities, social scoring of individuals, and (with narrow exceptions) real-time remote biometric identification in public spaces by law enforcement.",
+  "control_family": "Prohibited practices",
+  "citations": [
+    {
+      "id": "cite-eu-ai-act",
+      "source_type": "legislation",
+      "title": "Regulation (EU) 2024/1689 laying down harmonised rules on artificial intelligence (Artificial Intelligence Act)",
+      "publisher": "EUR-Lex / Official Journal of the European Union",
+      "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng",
+      "publication_date": "2024-07-12",
+      "accessed_date": "2026-08-04",
+      "locator": "Article 5"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "REQUIRES_EVIDENCE",
+      "target_id": "EVI-008",
+      "target_type": "evidence",
+      "reason": "Demonstrating a manipulative-technique risk was addressed is documented via the synthetic media disclosure log.",
+      "confidence": "Community"
+    }
+  ]
+}

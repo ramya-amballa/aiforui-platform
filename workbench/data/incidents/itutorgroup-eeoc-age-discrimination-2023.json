@@ -1,0 +1,56 @@
+{
+  "id": "INC-003",
+  "slug": "itutorgroup-eeoc-age-discrimination-2023",
+  "title": "EEOC settles first AI hiring discrimination lawsuit against iTutorGroup for automatic age-based rejection",
+  "description": "The US Equal Employment Opportunity Commission sued iTutorGroup (and affiliated entities), alleging its job-application software was programmed to automatically reject female applicants aged 55+ and male applicants aged 60+, resulting in over 200 US-based tutoring applicants being rejected because of their age. In August 2023 iTutorGroup agreed to pay $365,000 to the affected applicant class and to adopt anti-discrimination policies, training, monitoring, and a ban on collecting applicant birthdates during initial screening; a federal court approved the consent decree the following month. It is described by the EEOC as the agency's first settlement of an AI-related employment discrimination lawsuit.",
+  "version": "1.0.0",
+  "status": "active",
+  "confidence": "Reviewed",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["hiring", "discrimination", "age", "recruiting"],
+  "created_by": "AI Governance Workbench (Phase 2A seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 2A seed data)",
+      "version": "1.0.0",
+      "note": "Initial Phase 2A seed content, part of the Foundational Twenty. Underlying rejections reportedly occurred March-April 2020; EEOC lawsuit filed May 2022; this record uses the EEOC's public settlement announcement date."
+    }
+  ],
+  "occurred_date": "2023-08-09",
+  "organizations_involved": ["iTutorGroup Inc.", "US Equal Employment Opportunity Commission"],
+  "harm_types": ["discrimination", "financial"],
+  "ai_system_category": "hiring_screening",
+  "jurisdiction": ["US"],
+  "severity": "medium",
+  "root_cause": "Hiring software was configured with hard-coded age-and-gender cutoff rules that automatically rejected applicants above certain ages, operating as a categorical, automated proxy for age discrimination at the initial applicant-screening stage.",
+  "citations": [
+    {
+      "id": "cite-eeoc-itutorgroup",
+      "source_type": "regulator",
+      "title": "iTutorGroup to Pay $365,000 to Settle EEOC Discriminatory Hiring Suit",
+      "publisher": "US Equal Employment Opportunity Commission",
+      "url": "https://www.eeoc.gov/newsroom/itutorgroup-pay-365000-settle-eeoc-discriminatory-hiring-suit",
+      "publication_date": "2023-08-09",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "MITIGATED_BY",
+      "target_id": "DEC-001",
+      "target_type": "decision",
+      "reason": "A pre-deployment bias audit requirement would have surfaced this categorical age-based auto-rejection logic before it screened any real applicants.",
+      "confidence": "Reviewed"
+    },
+    {
+      "type": "RAISES_BOARD_QUESTION",
+      "target_id": "BRD-001",
+      "target_type": "board_question",
+      "reason": "This settlement is a concrete example of the regulatory exposure this board question is designed to pre-empt.",
+      "confidence": "Reviewed"
+    }
+  ]
+}

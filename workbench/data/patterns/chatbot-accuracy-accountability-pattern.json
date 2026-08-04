@@ -1,0 +1,54 @@
+{
+  "id": "PAT-013",
+  "slug": "chatbot-accuracy-accountability-pattern",
+  "title": "Chatbot Output Accuracy & Accountability Pattern",
+  "description": "A pattern for grounding customer-facing chatbot responses in verified source-of-truth policy documents, with an accuracy-review and correction pathway, so the chatbot's statements are treated as accountable company communications rather than disclaimed third-party output.",
+  "version": "1.0.0",
+  "status": "draft",
+  "confidence": "Community",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["chatbot", "customer-service", "liability", "transparency"],
+  "created_by": "AI Governance Workbench (Phase 2A seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 2A seed data)",
+      "version": "1.0.0",
+      "note": "Initial Phase 2A seed content."
+    }
+  ],
+  "problem": "Customer-facing chatbots answer policy questions (refunds, eligibility, pricing) by generating free-text responses that can drift from the organisation's actual, current policy, with no review step before the customer relies on the answer.",
+  "solution": "Ground chatbot responses to policy questions in a maintained, versioned source-of-truth document rather than open-ended generation; log every substantive policy statement the chatbot makes; and provide a fast escalation/correction path when a discrepancy is found, treating the correction with the same urgency as a human agent's documented error.",
+  "applicability": "Any customer-facing conversational AI system that answers questions about pricing, eligibility, refunds, or other binding policy terms.",
+  "consequences": "Grounding reduces but does not eliminate the risk of incorrect answers (source documents can themselves be ambiguous or stale); logging and review add operational overhead proportional to conversation volume.",
+  "maturity": "emerging",
+  "citations": [
+    {
+      "id": "cite-moffatt-v-air-canada",
+      "source_type": "court_judgment",
+      "title": "Moffatt v. Air Canada, 2024 BCCRT 149",
+      "publisher": "Civil Resolution Tribunal of British Columbia",
+      "url": "https://www.canlii.org/en/bc/bccrt/doc/2024/2024bccrt149/2024bccrt149.html",
+      "publication_date": "2024-02-14",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "SATISFIES_CONTROL",
+      "target_id": "CTR-018",
+      "target_type": "control",
+      "reason": "Grounded, logged responses are a concrete way to meet the transparency/information-to-users obligation this control describes.",
+      "confidence": "Community"
+    },
+    {
+      "type": "REQUIRES_EVIDENCE",
+      "target_id": "EVI-012",
+      "target_type": "evidence",
+      "reason": "The pattern's output is a chatbot response accuracy audit log.",
+      "confidence": "Community"
+    }
+  ]
+}

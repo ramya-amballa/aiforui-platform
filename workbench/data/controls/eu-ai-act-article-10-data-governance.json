@@ -1,0 +1,47 @@
+{
+  "id": "CTR-016",
+  "slug": "eu-ai-act-article-10-data-governance",
+  "title": "EU AI Act Article 10 — Data and data governance",
+  "description": "The training-data quality and governance requirement for high-risk AI systems under the EU AI Act, referenced here as a general data-governance anchor extending naturally to training-data sourcing/provenance practices, though Article 10 is framed primarily around bias/quality rather than IP specifically. Paraphrase pending verification against the primary EUR-Lex text — hence 'Community' confidence.",
+  "version": "1.0.0",
+  "status": "draft",
+  "confidence": "Community",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["eu-ai-act", "data-governance", "training-data"],
+  "created_by": "AI Governance Workbench (Phase 2A seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 2A seed data)",
+      "version": "1.0.0",
+      "note": "Initial Phase 2A seed content."
+    }
+  ],
+  "framework_name": "EU Artificial Intelligence Act (Regulation (EU) 2024/1689)",
+  "control_reference": "Article 10",
+  "control_text": "Training, validation, and testing data for high-risk AI systems must meet quality criteria — relevant, representative, and examined for errors and biases — with appropriate data governance and management practices applied to how the data is sourced, prepared, and documented.",
+  "control_family": "Data governance",
+  "citations": [
+    {
+      "id": "cite-eu-ai-act",
+      "source_type": "legislation",
+      "title": "Regulation (EU) 2024/1689 laying down harmonised rules on artificial intelligence (Artificial Intelligence Act)",
+      "publisher": "EUR-Lex / Official Journal of the European Union",
+      "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng",
+      "publication_date": "2024-07-12",
+      "accessed_date": "2026-08-04",
+      "locator": "Article 10"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "REQUIRES_EVIDENCE",
+      "target_id": "EVI-011",
+      "target_type": "evidence",
+      "reason": "Satisfying this control's data-governance practices is documented via the training data provenance log.",
+      "confidence": "Community"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "id": "BRD-004",
+  "slug": "genuine-human-review-for-adverse-automated-decisions",
+  "title": "Can an affected person actually obtain human review before an automated adverse decision takes effect?",
+  "description": "A board-level oversight question testing whether an organisation's automated decision-making systems provide genuine pre-decision human review, rather than only a theoretical or post-hoc appeals right.",
+  "version": "1.0.0",
+  "status": "active",
+  "confidence": "Reviewed",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["government", "due-process", "automated-decision-making", "board-oversight"],
+  "created_by": "AI Governance Workbench (Phase 2A seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 2A seed data)",
+      "version": "1.0.0",
+      "note": "Initial Phase 2A seed content."
+    }
+  ],
+  "question_text": "For every automated system we use that can adversely affect a person's benefits eligibility, education outcome, or similar legal rights, can that person obtain meaningful human review of the specific decision before it takes effect — and do we have a completed data protection impact assessment showing we thought about this before deployment, not after harm was reported?",
+  "audience": ["board", "risk_committee", "audit_committee"],
+  "rationale": "The Dutch SyRI/childcare-benefits scandal, the UK Ofqual grading algorithm, and Australia's Robodebt scheme each involved an automated system making or heavily informing an adverse decision with no genuine human-review safeguard before the decision took effect — in each case, the harm was only corrected after significant public and legal pressure.",
+  "follow_up_actions": [
+    "Request the current data protection impact assessment for every in-scope automated decision system.",
+    "Confirm the human-review step happens before the adverse decision takes effect, not only via a later appeal.",
+    "Ask whether the system has been classified against relevant high-risk categories and what that classification implied for safeguards."
+  ],
+  "citations": [
+    {
+      "id": "cite-robodebt-royal-commission",
+      "source_type": "regulator",
+      "title": "Final Report — Royal Commission into the Robodebt Scheme",
+      "publisher": "Royal Commission into the Robodebt Scheme (Australian Government)",
+      "url": "https://robodebt.royalcommission.gov.au/publications/report",
+      "publication_date": "2023-07-07",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": []
+}

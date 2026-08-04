@@ -1,0 +1,57 @@
+{
+  "id": "INC-005",
+  "slug": "healthcare-algorithm-racial-bias-obermeyer-2019",
+  "title": "Study finds a widely used US healthcare algorithm systematically underestimated Black patients' illness",
+  "description": "A study published in Science in October 2019 by Obermeyer, Powers, Vogeli, and Mullainathan found that a commercial risk-prediction algorithm used by hospitals and insurers to identify patients for extra care management exhibited significant racial bias. The algorithm used patients' historical healthcare costs as a proxy for healthcare need; because less money is spent on Black patients than white patients with the same underlying level of illness, the algorithm systematically assigned Black patients lower risk scores than equally sick white patients. The researchers calculated that correcting the bias would increase the share of Black patients identified for extra care from about 18% to about 47%, and worked with the algorithm's developer to reduce the bias by changing the proxy variable used.",
+  "version": "1.0.0",
+  "status": "active",
+  "confidence": "Reviewed",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["healthcare", "bias", "discrimination", "risk-scoring", "fairness", "proxy-variable"],
+  "created_by": "AI Governance Workbench (Phase 2A seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 2A seed data)",
+      "version": "1.0.0",
+      "note": "Initial Phase 2A seed content, part of the Foundational Twenty. Algorithm developer commonly reported as Optum (UnitedHealth Group) in subsequent reporting, though not named in the original Science paper itself."
+    }
+  ],
+  "occurred_date": "2019-10-25",
+  "organizations_involved": ["Optum (UnitedHealth Group)", "University of California Berkeley", "Brigham and Women's Hospital", "University of Chicago Booth School of Business"],
+  "harm_types": ["discrimination"],
+  "ai_system_category": "healthcare_risk_prediction",
+  "jurisdiction": ["US"],
+  "severity": "critical",
+  "root_cause": "The algorithm used healthcare cost as a proxy label for healthcare need. Because of unequal historical access to and spending on care, Black patients incurred lower costs than white patients with the same level of illness, causing the model to systematically underpredict Black patients' care needs at a given risk score.",
+  "citations": [
+    {
+      "id": "cite-obermeyer-science-2019",
+      "source_type": "academic_paper",
+      "title": "Dissecting racial bias in an algorithm used to manage the health of populations",
+      "publisher": "Science (American Association for the Advancement of Science)",
+      "url": "https://www.science.org/doi/10.1126/science.aax2342",
+      "publication_date": "2019-10-25",
+      "accessed_date": "2026-08-04",
+      "excerpt": "At a given risk score, Black patients are considerably sicker than White patients, as evidenced by signs of uncontrolled illnesses."
+    }
+  ],
+  "relationships": [
+    {
+      "type": "MITIGATED_BY",
+      "target_id": "DEC-002",
+      "target_type": "decision",
+      "reason": "The same disaggregated-testing requirement that addresses COMPAS-style bias would have caught this proxy-variable-driven disparity before deployment.",
+      "confidence": "Reviewed"
+    },
+    {
+      "type": "RAISES_BOARD_QUESTION",
+      "target_id": "BRD-002",
+      "target_type": "board_question",
+      "reason": "This incident shows the same fairness-metric-disclosure gap in a healthcare context.",
+      "confidence": "Reviewed"
+    }
+  ]
+}

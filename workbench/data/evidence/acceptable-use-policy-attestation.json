@@ -1,0 +1,38 @@
+{
+  "id": "EVI-005",
+  "slug": "acceptable-use-policy-attestation",
+  "title": "Acceptable Use Policy Attestation",
+  "description": "A record showing employees have acknowledged an organisation's generative AI acceptable-use policy, together with configuration records for any technical control (e.g. DLP tooling) enforcing it.",
+  "version": "1.0.0",
+  "status": "active",
+  "confidence": "Community",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["generative-ai", "security", "enterprise-policy"],
+  "created_by": "AI Governance Workbench (Phase 2A seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 2A seed data)",
+      "version": "1.0.0",
+      "note": "Initial Phase 2A seed content."
+    }
+  ],
+  "evidence_description": "A record of which employees have completed acceptable-use policy training and attestation for third-party generative AI tools, plus the current configuration of any technical control (DLP rules, approved-tool allowlist) enforcing that policy.",
+  "collection_method": "HR/training-system attestation records combined with an export of the DLP or endpoint-security tool's active configuration.",
+  "retention_period": "Duration of employment plus 2 years.",
+  "artifact_format": "Structured export (CSV/JSON) of attestation completion and technical-control configuration.",
+  "citations": [
+    {
+      "id": "cite-samsung-chatgpt-ban-bloomberg",
+      "source_type": "news_publication",
+      "title": "Samsung Bans ChatGPT, Google Bard, Other Generative AI Use by Staff After Leak",
+      "publisher": "Bloomberg",
+      "url": "https://www.bloomberg.com/news/articles/2023-05-02/samsung-bans-chatgpt-and-other-generative-ai-use-by-staff-after-leak",
+      "publication_date": "2023-05-02",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": []
+}

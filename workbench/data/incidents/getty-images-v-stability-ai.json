@@ -1,0 +1,56 @@
+{
+  "id": "INC-019",
+  "slug": "getty-images-v-stability-ai",
+  "title": "Getty Images v. Stability AI tests whether generative AI training on scraped images infringes copyright",
+  "description": "Getty Images sued Stability AI in the UK High Court in January 2023, alleging that millions of its copyrighted images were used without a licence to train the Stable Diffusion generative image model, alongside separate trademark and database-right claims. Getty dropped its primary training/scraping-based copyright claim during trial, reportedly for jurisdictional and evidentiary reasons. On 4 November 2025, the High Court rejected Getty's remaining secondary copyright infringement claim and its broader trademark claim, finding only limited trademark infringement tied to early Stable Diffusion outputs that reproduced a Getty watermark, and awarded no finding of copyright infringement.",
+  "version": "1.0.0",
+  "status": "active",
+  "confidence": "Reviewed",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["generative-ai", "intellectual-property", "training-data", "litigation"],
+  "created_by": "AI Governance Workbench (Phase 2A seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 2A seed data)",
+      "version": "1.0.0",
+      "note": "Initial Phase 2A seed content, part of the Foundational Twenty. The 'millions of images' figure is as alleged by Getty in pleadings, not a court-established fact. Whether the judgment is under appeal was not confirmed at time of writing; treat 'final' status as unconfirmed."
+    }
+  ],
+  "occurred_date": "2023-01-16",
+  "organizations_involved": ["Getty Images (US) Inc", "Stability AI Limited", "UK High Court (Chancery Division)"],
+  "harm_types": ["financial", "other"],
+  "ai_system_category": "generative_ai_image",
+  "jurisdiction": ["UK"],
+  "severity": "medium",
+  "root_cause": "Alleged unlicensed use of copyrighted training images scraped from the internet to train a commercial generative AI model, combined with unresolved legal questions about whether AI model training constitutes copyright infringement under UK law and whether the training activity occurred within UK jurisdiction.",
+  "citations": [
+    {
+      "id": "cite-getty-stability-judgment",
+      "source_type": "court_judgment",
+      "title": "Getty Images (US) Inc and others v Stability AI Limited [2025] EWHC 2863 (Ch)",
+      "publisher": "Courts and Tribunals Judiciary (England and Wales High Court)",
+      "url": "https://www.judiciary.uk/judgments/getty-images-v-stability-ai/",
+      "publication_date": "2025-11-04",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "MITIGATED_BY",
+      "target_id": "DEC-012",
+      "target_type": "decision",
+      "reason": "A requirement to document training-data provenance and licensing review before commercial deployment addresses the underlying governance gap this litigation exposed.",
+      "confidence": "Reviewed"
+    },
+    {
+      "type": "RAISES_BOARD_QUESTION",
+      "target_id": "BRD-011",
+      "target_type": "board_question",
+      "reason": "This is the most closely watched generative-AI training-data litigation to reach a first-instance judgment.",
+      "confidence": "Reviewed"
+    }
+  ]
+}

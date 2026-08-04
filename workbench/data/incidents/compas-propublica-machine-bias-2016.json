@@ -1,0 +1,56 @@
+{
+  "id": "INC-004",
+  "slug": "compas-propublica-machine-bias-2016",
+  "title": "ProPublica's Machine Bias investigation finds racial disparity in COMPAS recidivism scores",
+  "description": "ProPublica published an investigation into the COMPAS risk-assessment tool, made by Northpointe (later Equivant) and used by US courts to help predict a defendant's likelihood of reoffending. Analysing risk scores for over 7,000 people arrested in Broward County, Florida, ProPublica found the tool was substantially more likely to falsely flag Black defendants as future criminals than white defendants, while white defendants were more often falsely flagged as low risk. Northpointe disputed the methodology, arguing the tool was well-calibrated by race even though error rates differed by race — a tension that became a landmark case study in competing statistical definitions of algorithmic fairness.",
+  "version": "1.0.0",
+  "status": "active",
+  "confidence": "Reviewed",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["criminal-justice", "bias", "discrimination", "risk-scoring", "fairness"],
+  "created_by": "AI Governance Workbench (Phase 2A seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 2A seed data)",
+      "version": "1.0.0",
+      "note": "Initial Phase 2A seed content, part of the Foundational Twenty."
+    }
+  ],
+  "occurred_date": "2016-05-23",
+  "organizations_involved": ["ProPublica", "Northpointe (Equivant)", "Broward County, Florida courts"],
+  "harm_types": ["discrimination"],
+  "ai_system_category": "risk_assessment_algorithm",
+  "jurisdiction": ["US", "US-FL"],
+  "severity": "high",
+  "root_cause": "A proprietary risk-scoring model was deployed in high-stakes bail, sentencing, and parole decisions without adequate testing or public transparency into whether its error rates were balanced across racial groups.",
+  "citations": [
+    {
+      "id": "cite-propublica-machine-bias",
+      "source_type": "news_publication",
+      "title": "Machine Bias — There's Software Used Across the Country to Predict Future Criminals. And It's Biased Against Blacks.",
+      "publisher": "ProPublica",
+      "url": "https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing",
+      "publication_date": "2016-05-23",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "MITIGATED_BY",
+      "target_id": "DEC-002",
+      "target_type": "decision",
+      "reason": "Requiring disaggregated error-rate testing before deploying a risk-scoring tool addresses exactly the disparity this investigation documented.",
+      "confidence": "Reviewed"
+    },
+    {
+      "type": "RAISES_BOARD_QUESTION",
+      "target_id": "BRD-002",
+      "target_type": "board_question",
+      "reason": "This is a canonical example of the fairness-metric disclosure question this board question is designed to surface.",
+      "confidence": "Reviewed"
+    }
+  ]
+}

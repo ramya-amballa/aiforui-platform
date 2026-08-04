@@ -1,0 +1,38 @@
+{
+  "id": "EVI-002",
+  "slug": "fairness-metrics-report",
+  "title": "Fairness Metrics Report",
+  "description": "A report documenting a risk-scoring model's error rates (false positive/negative, calibration) disaggregated by protected group, and the justification for any proxy variable used in place of the true outcome of interest.",
+  "version": "1.0.0",
+  "status": "active",
+  "confidence": "Reviewed",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["bias", "risk-scoring", "fairness", "audit-report"],
+  "created_by": "AI Governance Workbench (Phase 2A seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 2A seed data)",
+      "version": "1.0.0",
+      "note": "Initial Phase 2A seed content."
+    }
+  ],
+  "evidence_description": "A report giving a risk-scoring model's false-positive rate, false-negative rate, and calibration separately for each protected group tested, together with documentation of any proxy variable used and its correlation with protected characteristics.",
+  "collection_method": "Statistical analysis performed by the model owner or an independent auditor against a representative labelled dataset.",
+  "retention_period": "Minimum 3 years, and retained for the lifetime of the model version it was produced for.",
+  "artifact_format": "PDF or structured report; underlying disaggregated statistics retained as a structured export (CSV/JSON).",
+  "citations": [
+    {
+      "id": "cite-obermeyer-science-2019",
+      "source_type": "academic_paper",
+      "title": "Dissecting racial bias in an algorithm used to manage the health of populations",
+      "publisher": "Science (American Association for the Advancement of Science)",
+      "url": "https://www.science.org/doi/10.1126/science.aax2342",
+      "publication_date": "2019-10-25",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": []
+}

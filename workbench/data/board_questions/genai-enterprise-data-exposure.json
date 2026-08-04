@@ -1,0 +1,42 @@
+{
+  "id": "BRD-005",
+  "slug": "genai-enterprise-data-exposure",
+  "title": "Do we know what data our employees are entering into third-party AI tools?",
+  "description": "A board-level oversight question testing whether an organisation's generative AI usage policy is technically enforced, rather than a document employees may not follow under time pressure.",
+  "version": "1.0.0",
+  "status": "active",
+  "confidence": "Reviewed",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["generative-ai", "security", "enterprise-policy", "board-oversight"],
+  "created_by": "AI Governance Workbench (Phase 2A seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 2A seed data)",
+      "version": "1.0.0",
+      "note": "Initial Phase 2A seed content."
+    }
+  ],
+  "question_text": "Has management assessed what categories of confidential or proprietary data employees could enter into third-party generative AI tools, and is that policy enforced by a technical control — not just a document employees are expected to remember under time pressure?",
+  "audience": ["board", "risk_committee", "executive_team"],
+  "rationale": "Samsung employees leaked confidential source code and internal notes into ChatGPT within weeks of the tool being permitted, with no technical control in place — showing that policy text alone does not prevent this class of leak.",
+  "follow_up_actions": [
+    "Request the current acceptable-use policy attestation and technical-control configuration.",
+    "Ask whether an approved, contractually-protected enterprise-tier AI tool is available as a sanctioned alternative.",
+    "Confirm incident response procedures exist for a suspected data leak via a third-party AI tool."
+  ],
+  "citations": [
+    {
+      "id": "cite-samsung-chatgpt-ban-bloomberg",
+      "source_type": "news_publication",
+      "title": "Samsung Bans ChatGPT, Google Bard, Other Generative AI Use by Staff After Leak",
+      "publisher": "Bloomberg",
+      "url": "https://www.bloomberg.com/news/articles/2023-05-02/samsung-bans-chatgpt-and-other-generative-ai-use-by-staff-after-leak",
+      "publication_date": "2023-05-02",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": []
+}

@@ -1,0 +1,55 @@
+{
+  "id": "CTR-011",
+  "slug": "ftc-act-section-5-unfairness",
+  "title": "FTC Act Section 5 — Unfair or deceptive acts or practices, as applied to AI",
+  "description": "The FTC's general unfairness/deception authority, as applied to AI/algorithmic harms in enforcement actions such as the Rite Aid facial-recognition case. Paraphrase pending verification against primary FTC sources — hence 'Community' confidence.",
+  "version": "1.0.0",
+  "status": "draft",
+  "confidence": "Community",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["ftc", "facial-recognition", "discrimination", "consumer-protection"],
+  "created_by": "AI Governance Workbench (Phase 2A seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 2A seed data)",
+      "version": "1.0.0",
+      "note": "Initial Phase 2A seed content."
+    }
+  ],
+  "framework_name": "FTC Act Section 5 (15 U.S.C. § 45)",
+  "control_reference": "Section 5(a)",
+  "control_text": "Prohibits unfair or deceptive acts or practices in commerce. The FTC has applied this authority to AI/algorithmic harms — for example, alleging that a company's failure to implement reasonable safeguards around a facial-recognition surveillance system that produced disproportionate false-match harms against protected groups constituted an unfair act or practice.",
+  "control_family": "Consumer protection",
+  "citations": [
+    {
+      "id": "cite-ftc-ai-fairness-blog",
+      "source_type": "regulator",
+      "title": "Aiming for truth, fairness, and equity in your company's use of AI",
+      "publisher": "Federal Trade Commission, Business Guidance Blog",
+      "url": "https://www.ftc.gov/business-guidance/blog/2021/04/aiming-truth-fairness-equity-your-companys-use-ai",
+      "publication_date": "2021-04-19",
+      "accessed_date": "2026-08-04"
+    },
+    {
+      "id": "cite-ftc-rite-aid",
+      "source_type": "regulator",
+      "title": "Rite Aid Banned from Using AI Facial Recognition After FTC Says Retailer Deployed Technology without Reasonable Safeguards",
+      "publisher": "Federal Trade Commission",
+      "url": "https://www.ftc.gov/news-events/news/press-releases/2023/12/rite-aid-banned-using-ai-facial-recognition-after-ftc-says-retailer-deployed-technology-without",
+      "publication_date": "2023-12-19",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "REQUIRES_EVIDENCE",
+      "target_id": "EVI-006",
+      "target_type": "evidence",
+      "reason": "Satisfying this control requires documented evidence that reasonable accuracy and human-review safeguards were in place.",
+      "confidence": "Community"
+    }
+  ]
+}

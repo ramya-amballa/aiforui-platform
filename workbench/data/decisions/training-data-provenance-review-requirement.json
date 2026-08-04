@@ -1,0 +1,81 @@
+{
+  "id": "DEC-012",
+  "slug": "training-data-provenance-review-requirement",
+  "title": "Require documented training-data provenance and licensing review before deploying a generative model commercially",
+  "description": "Illustrative reference decision modelled on the Getty Images v. Stability AI litigation. Not a documented decision of any specific organisation.",
+  "version": "1.0.0",
+  "status": "draft",
+  "confidence": "Community",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["generative-ai", "intellectual-property", "training-data"],
+  "created_by": "AI Governance Workbench (Phase 2A seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 2A seed data)",
+      "version": "1.0.0",
+      "note": "Initial Phase 2A seed content, part of the Foundational Twenty."
+    }
+  ],
+  "decision_statement": "Before a generative model is deployed commercially, the organisation must document the provenance of its training data sources and complete a licensing review identifying any dataset obtained by scraping copyrighted or trademarked material, with a documented risk decision (licence, exclude, or accept identified risk) for each source.",
+  "decision_type": "risk_acceptance",
+  "decision_context": "Motivated by Getty Images v. Stability AI, in which a major generative image model's commercial deployment was challenged over its use of scraped, copyrighted training images without a licence.",
+  "governing_body": "Illustrative example — Generative Model Governance Board",
+  "jurisdiction": ["UK"],
+  "frameworks_referenced": ["EU AI Act"],
+  "alternatives_considered": [
+    "Treat all publicly accessible training data as usable without a documented provenance review.",
+    "Address provenance questions only reactively, in response to a legal challenge."
+  ],
+  "citations": [
+    {
+      "id": "cite-getty-stability-judgment",
+      "source_type": "court_judgment",
+      "title": "Getty Images (US) Inc and others v Stability AI Limited [2025] EWHC 2863 (Ch)",
+      "publisher": "Courts and Tribunals Judiciary (England and Wales High Court)",
+      "url": "https://www.judiciary.uk/judgments/getty-images-v-stability-ai/",
+      "publication_date": "2025-11-04",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "RESULTED_FROM",
+      "target_id": "INC-019",
+      "target_type": "incident",
+      "reason": "This decision is modelled as a direct governance response to this litigation.",
+      "confidence": "Verified",
+      "citation_ids": ["cite-getty-stability-judgment"]
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "target_id": "PAT-011",
+      "target_type": "pattern",
+      "reason": "The decision is put into practice via this design pattern.",
+      "confidence": "Community"
+    },
+    {
+      "type": "SATISFIES_CONTROL",
+      "target_id": "CTR-016",
+      "target_type": "control",
+      "reason": "A documented provenance review is a concrete extension of this control's data-governance requirement to sourcing practices.",
+      "confidence": "Community"
+    },
+    {
+      "type": "REQUIRES_EVIDENCE",
+      "target_id": "EVI-011",
+      "target_type": "evidence",
+      "reason": "Compliance must be demonstrated by a documented training data provenance log.",
+      "confidence": "Community"
+    },
+    {
+      "type": "RAISES_BOARD_QUESTION",
+      "target_id": "BRD-011",
+      "target_type": "board_question",
+      "reason": "Boards adopting this decision should be asking whether a defensible provenance record actually exists.",
+      "confidence": "Community"
+    }
+  ]
+}

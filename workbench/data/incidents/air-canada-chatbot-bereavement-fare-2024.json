@@ -1,0 +1,78 @@
+{
+  "id": "INC-002",
+  "slug": "air-canada-chatbot-bereavement-fare-2024",
+  "title": "Air Canada held liable for its chatbot giving incorrect bereavement-fare information",
+  "description": "A customer relied on Air Canada's website chatbot for guidance on the airline's bereavement fare policy and was given inaccurate information about retroactive refund eligibility. Air Canada argued it should not be liable for its chatbot's statements, treating it as a separate legal entity. The Civil Resolution Tribunal of British Columbia rejected that argument and held Air Canada responsible for information provided by its own chatbot, awarding the customer damages.",
+  "version": "1.0.0",
+  "status": "active",
+  "confidence": "Reviewed",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": [
+    "chatbot",
+    "customer-service",
+    "misinformation",
+    "liability"
+  ],
+  "created_by": "AI Governance Workbench (Phase 1 seed data)",
+  "reviewed_by": "AI Governance Workbench (Phase 2A editorial pass)",
+  "approved_by": "AI Governance Workbench (Phase 2A editorial pass)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-03",
+      "by": "AI Governance Workbench (Phase 1 seed data)",
+      "version": "1.0.0",
+      "note": "Captured from source: Moffatt v. Air Canada, 2024 BCCRT 149 (Civil Resolution Tribunal of British Columbia)."
+    },
+    {
+      "event": "approved",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 2A editorial pass)",
+      "version": "1.0.0",
+      "note": "Facts cross-checked against the CanLII-published tribunal decision and secondary legal commentary before promotion into the Foundational Twenty set."
+    }
+  ],
+  "citations": [
+    {
+      "id": "cite-source",
+      "source_type": "court_judgment",
+      "title": "Moffatt v. Air Canada, 2024 BCCRT 149",
+      "publisher": "Civil Resolution Tribunal of British Columbia",
+      "url": "https://www.canlii.org/en/bc/bccrt/doc/2024/2024bccrt149/2024bccrt149.html",
+      "publication_date": "2024-02-14",
+      "accessed_date": "2026-08-03",
+      "excerpt": "Air Canada argues it cannot be held liable for information provided by one of its agents, servants, or representatives — including a chatbot... this is a remarkable submission... Air Canada does not explain why it believes that is the case... the chatbot is still just a part of Air Canada's website. It should be obvious to Air Canada that it is responsible for all the information on its website."
+    }
+  ],
+  "relationships": [
+    {
+      "type": "MITIGATED_BY",
+      "target_id": "DEC-014",
+      "target_type": "decision",
+      "reason": "Treating chatbot output with the same accuracy accountability as a human agent's statements would have required Air Canada to catch or correct the bereavement-fare misinformation before a customer relied on it.",
+      "confidence": "Reviewed"
+    },
+    {
+      "type": "RAISES_BOARD_QUESTION",
+      "target_id": "BRD-013",
+      "target_type": "board_question",
+      "reason": "This is the canonical case establishing that a company cannot disclaim liability for its own chatbot's statements.",
+      "confidence": "Reviewed"
+    }
+  ],
+  "occurred_date": "2024-02-14",
+  "organizations_involved": [
+    "Air Canada"
+  ],
+  "harm_types": [
+    "financial",
+    "misinformation"
+  ],
+  "ai_system_category": "customer_service_chatbot",
+  "jurisdiction": [
+    "CA-BC"
+  ],
+  "severity": "medium",
+  "root_cause": "The chatbot provided customer-facing policy information that conflicted with the airline's actual bereavement fare policy, and no process caught the discrepancy before the customer relied on it."
+}

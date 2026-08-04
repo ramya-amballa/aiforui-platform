@@ -8,6 +8,11 @@
     "validate": "tsx validators/src/validate.ts",
     "ingest:validate-draft": "tsx ingestion/src/validate-draft.ts",
     "ingest:promote": "tsx ingestion/src/promote.ts",
+    "editorial:wizard": "tsx editorial/src/incident-wizard.ts",
+    "editorial:suggest": "tsx editorial/src/suggest-relationships.ts",
+    "editorial:citations": "tsx editorial/src/citation-completeness.ts",
+    "editorial:coverage": "tsx editorial/src/coverage-dashboard.ts",
+    "editorial:health": "tsx editorial/src/graph-health.ts",
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {

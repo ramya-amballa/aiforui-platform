@@ -1,0 +1,90 @@
+{
+  "id": "DEC-006",
+  "slug": "gdpr-legal-basis-gate-for-consumer-ai",
+  "title": "Require a documented GDPR legal basis and age-verification before launching a consumer AI product to EU users",
+  "description": "Illustrative reference decision modelled on the Italian Garante's enforcement actions against ChatGPT and Replika. Not a documented decision of any specific organisation.",
+  "version": "1.0.0",
+  "status": "draft",
+  "confidence": "Community",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["generative-ai", "privacy", "gdpr", "child-safety"],
+  "created_by": "AI Governance Workbench (Phase 2A seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 2A seed data)",
+      "version": "1.0.0",
+      "note": "Initial Phase 2A seed content, part of the Foundational Twenty."
+    }
+  ],
+  "decision_statement": "Before a consumer-facing AI product processes EU users' personal data, the organisation must document its GDPR legal basis for that processing (including for any training data drawn from user interactions), publish a clear privacy notice, and implement an effective age-verification mechanism where the product could plausibly be used by minors.",
+  "decision_type": "policy",
+  "decision_context": "Motivated by two Italian Garante enforcement actions in early 2023 — against ChatGPT and against the AI companion app Replika — both citing an inadequate GDPR legal basis and ineffective age verification.",
+  "governing_body": "Illustrative example — Consumer AI Product Governance Board",
+  "jurisdiction": ["IT", "EU"],
+  "frameworks_referenced": ["GDPR"],
+  "alternatives_considered": [
+    "Launch first in the EU and address legal-basis documentation reactively if a regulator raises concerns.",
+    "Rely on terms-of-service age restrictions without a technical verification mechanism."
+  ],
+  "citations": [
+    {
+      "id": "cite-garante-chatgpt-block",
+      "source_type": "regulator",
+      "title": "Intelligenza artificiale: il Garante blocca ChatGPT. Raccolta illecita di dati personali. Assenza di sistemi per la verifica dell'età dei minori",
+      "publisher": "Garante per la protezione dei dati personali",
+      "url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/9870847",
+      "publication_date": "2023-03-31",
+      "accessed_date": "2026-08-04"
+    },
+    {
+      "id": "cite-garante-replika-block",
+      "source_type": "regulator",
+      "title": "Intelligenza artificiale, dal Garante privacy stop al chatbot 'Replika'. Troppi i rischi per i minori e le persone emotivamente fragili",
+      "publisher": "Garante per la protezione dei dati personali",
+      "url": "https://www.garanteprivacy.it/web/guest/home/docweb/-/docweb-display/docweb/9852506",
+      "publication_date": "2023-02-03",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "RESULTED_FROM",
+      "target_id": "INC-012",
+      "target_type": "incident",
+      "reason": "This decision is modelled as a direct governance response to this enforcement action.",
+      "confidence": "Verified",
+      "citation_ids": ["cite-garante-chatgpt-block"]
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "target_id": "PAT-006",
+      "target_type": "pattern",
+      "reason": "The decision is put into practice via this design pattern.",
+      "confidence": "Community"
+    },
+    {
+      "type": "SATISFIES_CONTROL",
+      "target_id": "CTR-010",
+      "target_type": "control",
+      "reason": "A documented legal basis and privacy notice satisfy this control's core data-processing principles.",
+      "confidence": "Community"
+    },
+    {
+      "type": "REQUIRES_EVIDENCE",
+      "target_id": "EVI-004",
+      "target_type": "evidence",
+      "reason": "Compliance is demonstrated by the same data protection impact assessment used for other GDPR-triggering processing.",
+      "confidence": "Community"
+    },
+    {
+      "type": "RAISES_BOARD_QUESTION",
+      "target_id": "BRD-006",
+      "target_type": "board_question",
+      "reason": "Boards adopting this decision should be asking whether age verification is effective, not merely present in terms of service.",
+      "confidence": "Community"
+    }
+  ]
+}

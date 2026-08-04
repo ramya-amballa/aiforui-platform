@@ -1,0 +1,47 @@
+{
+  "id": "CTR-009",
+  "slug": "nist-ai-rmf-govern-1-2",
+  "title": "NIST AI RMF GOVERN 1.2 — Accountability structures for AI risk",
+  "description": "The accountability-structures control within the GOVERN function of the NIST AI Risk Management Framework. Paraphrase pending verification against the primary NIST publication — hence 'Community' confidence.",
+  "version": "1.0.0",
+  "status": "draft",
+  "confidence": "Community",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["nist-ai-rmf", "governance", "govern-function", "enterprise-policy"],
+  "created_by": "AI Governance Workbench (Phase 2A seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 2A seed data)",
+      "version": "1.0.0",
+      "note": "Initial Phase 2A seed content."
+    }
+  ],
+  "framework_name": "NIST AI Risk Management Framework (AI RMF 1.0)",
+  "control_reference": "GOVERN 1.2",
+  "control_text": "Accountability structures are in place, with roles, responsibilities, and lines of communication for mapping, measuring, and managing AI risks clearly documented and understood across the organization.",
+  "control_family": "Govern",
+  "citations": [
+    {
+      "id": "cite-nist-ai-rmf-1-0",
+      "source_type": "standards_body",
+      "title": "Artificial Intelligence Risk Management Framework (AI RMF 1.0)",
+      "publisher": "National Institute of Standards and Technology (NIST)",
+      "url": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf",
+      "publication_date": "2023-01-26",
+      "accessed_date": "2026-08-04",
+      "locator": "GOVERN function, category 1.2"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "REQUIRES_EVIDENCE",
+      "target_id": "EVI-005",
+      "target_type": "evidence",
+      "reason": "Satisfying this control requires a documented, attested policy with a named owner.",
+      "confidence": "Community"
+    }
+  ]
+}

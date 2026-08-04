@@ -33,3 +33,6 @@ jobs:
 
       - name: Validate dataset
         run: npm run validate
+
+      - name: Graph health (Zero-Orphan Invariant gate)
+        run: npm run editorial:health

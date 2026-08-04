@@ -1,0 +1,65 @@
+{
+  "id": "INC-015",
+  "slug": "clearview-ai-facial-recognition",
+  "title": "Clearview AI's mass facial-recognition database triggers multi-country regulatory action",
+  "description": "Clearview AI built a facial-recognition database by scraping billions of images from the public web and social media without consent, then sold search access to law enforcement and other agencies. Following a January 2020 New York Times exposé, multiple data protection authorities and courts found the practice unlawful: Canadian privacy commissioners (February 2021) and Australia's OAIC (November 2021) found Clearview breached national privacy law and ordered deletion of residents' biometric data; Italy's Garante fined Clearview EUR 20 million (March 2022); the UK ICO fined Clearview over £7.5 million and ordered UK data deletion (May 2022), a fine later contested on jurisdictional grounds with the UK Upper Tribunal reinstating the ICO's jurisdiction in October 2025 and remitting the case for reconsideration; and a 2022 settlement with the ACLU under Illinois's BIPA permanently barred Clearview from selling database access to most private companies and individuals nationwide in the US.",
+  "version": "1.0.0",
+  "status": "active",
+  "confidence": "Reviewed",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["facial-recognition", "privacy", "biometric", "regulator-action"],
+  "created_by": "AI Governance Workbench (Phase 2A seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 2A seed data)",
+      "version": "1.0.0",
+      "note": "Initial Phase 2A seed content, part of the Foundational Twenty. This is a multi-year, multi-jurisdiction cluster of related enforcement actions rather than a single-dated incident; occurred_date marks the originating NYT exposé. The UK ICO fine's final status remained unresolved (case remitted, appeal pending) as of the most recent research for this record and should be re-verified before being treated as settled."
+    }
+  ],
+  "occurred_date": "2020-01-18",
+  "organizations_involved": ["Clearview AI", "UK Information Commissioner's Office", "Garante per la protezione dei dati personali", "Office of the Privacy Commissioner of Canada", "Office of the Australian Information Commissioner", "American Civil Liberties Union"],
+  "harm_types": ["privacy_violation", "security"],
+  "ai_system_category": "facial_recognition",
+  "jurisdiction": ["US", "UK", "IT", "EU", "AU", "CA"],
+  "severity": "critical",
+  "root_cause": "Clearview AI's business model relied on scraping publicly accessible images at massive scale without user consent, notice, or a valid legal basis under multiple countries' data-protection frameworks, then monetising the resulting biometric database via sales to government and law-enforcement clients.",
+  "citations": [
+    {
+      "id": "cite-clearview-italy-fine",
+      "source_type": "regulator",
+      "title": "Facial recognition: Italian SA fines Clearview AI EUR 20 million",
+      "publisher": "Garante per la protezione dei dati personali, via European Data Protection Board",
+      "url": "https://www.edpb.europa.eu/news/national-news/2022/facial-recognition-italian-sa-fines-clearview-ai-eur-20-million_en",
+      "publication_date": "2022-03-09",
+      "accessed_date": "2026-08-04"
+    },
+    {
+      "id": "cite-clearview-aclu-settlement",
+      "source_type": "other",
+      "title": "In Big Win, Settlement Ensures Clearview AI Complies With Groundbreaking Illinois Biometric Privacy Law",
+      "publisher": "American Civil Liberties Union",
+      "url": "https://www.aclu.org/press-releases/big-win-settlement-ensures-clearview-ai-complies-with-groundbreaking-illinois",
+      "publication_date": "2022-05-09",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "MITIGATED_BY",
+      "target_id": "DEC-008",
+      "target_type": "decision",
+      "reason": "A documented informed-consent requirement before biometric collection addresses the core practice regulators found unlawful across jurisdictions.",
+      "confidence": "Reviewed"
+    },
+    {
+      "type": "RAISES_BOARD_QUESTION",
+      "target_id": "BRD-007",
+      "target_type": "board_question",
+      "reason": "This is the most extensively litigated example of non-consensual biometric data collection at scale.",
+      "confidence": "Reviewed"
+    }
+  ]
+}

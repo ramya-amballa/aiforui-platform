@@ -1,0 +1,38 @@
+{
+  "id": "EVI-012",
+  "slug": "chatbot-response-accuracy-audit-log",
+  "title": "Chatbot Response Accuracy Audit Log",
+  "description": "A log of customer-facing chatbot responses to policy-sensitive questions, periodically sampled and reviewed against the current source-of-truth policy, with discrepancies and corrections recorded.",
+  "version": "1.0.0",
+  "status": "active",
+  "confidence": "Community",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["chatbot", "customer-service", "audit-log"],
+  "created_by": "AI Governance Workbench (Phase 2A seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 2A seed data)",
+      "version": "1.0.0",
+      "note": "Initial Phase 2A seed content."
+    }
+  ],
+  "evidence_description": "A structured log sampling chatbot responses to policy-sensitive questions (refunds, eligibility, pricing), each entry reviewed against the current source-of-truth policy document, with any discrepancy and its correction recorded.",
+  "collection_method": "Automated sampling of conversation transcripts, reviewed by a policy owner on a recurring schedule.",
+  "retention_period": "Minimum 3 years, aligned with typical consumer-protection record-keeping expectations.",
+  "artifact_format": "Structured export (CSV/JSON) of sampled transcripts plus reviewer annotations.",
+  "citations": [
+    {
+      "id": "cite-moffatt-v-air-canada",
+      "source_type": "court_judgment",
+      "title": "Moffatt v. Air Canada, 2024 BCCRT 149",
+      "publisher": "Civil Resolution Tribunal of British Columbia",
+      "url": "https://www.canlii.org/en/bc/bccrt/doc/2024/2024bccrt149/2024bccrt149.html",
+      "publication_date": "2024-02-14",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": []
+}

@@ -1,0 +1,38 @@
+{
+  "id": "EVI-013",
+  "slug": "content-safety-review-report",
+  "title": "Content Safety Review Report",
+  "description": "A report documenting pre-release testing of a generative content feature against context-specific prompt categories, including any identified conflicts between safety/fairness adjustments and factual accuracy, and the outcome of a staged rollout.",
+  "version": "1.0.0",
+  "status": "active",
+  "confidence": "Community",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["generative-ai", "content-safety", "audit-report"],
+  "created_by": "AI Governance Workbench (Phase 2A seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 2A seed data)",
+      "version": "1.0.0",
+      "note": "Initial Phase 2A seed content."
+    }
+  ],
+  "evidence_description": "A report enumerating the prompt categories tested before release of a generative content feature, findings for each category (including any factual-accuracy vs. safety/fairness tension identified), remediations applied, and results from the limited-audience staged-rollout phase.",
+  "collection_method": "Structured pre-release testing conducted by the product/safety team, combined with monitoring data from the staged-rollout phase.",
+  "retention_period": "Minimum 3 years, and retained for the lifetime of the feature version tested.",
+  "artifact_format": "PDF report; per-category test results retained as structured data.",
+  "citations": [
+    {
+      "id": "cite-google-gemini-apology",
+      "source_type": "company_statement",
+      "title": "Gemini image generation got it wrong. We'll do better.",
+      "publisher": "Google (The Keyword)",
+      "url": "https://blog.google/products/gemini/gemini-image-generation-issue/",
+      "publication_date": "2024-02-23",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": []
+}

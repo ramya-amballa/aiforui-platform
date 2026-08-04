@@ -42,12 +42,17 @@ The brief for this project is explicit: "the primary organizing principle is Gov
   /data           The canonical dataset itself, one JSON file per object, one directory per entity type
   /relationships  The machine-readable relationship ontology (allowed verbs and triples)
   /validators     The validation engine (TypeScript + ajv) that enforces schemas + graph-level rules
+  /editorial      Deterministic authoring/QA tools for maintainers (Phase 2A) — see /editorial/README.md
   /ingestion      The draft -> human review -> canonical pipeline for turning news into Incidents
-  /search         Reserved for a future search index build step — deliberately empty in Phase 1
+  /search         Reserved for a future search index build step — deliberately empty
   /docs           This documentation set
 ```
 
 `/schemas`, `/relationships`, and `/validators` together form the *rulebook*. `/data` is the *dataset* the rulebook governs. `/ingestion` is the *only sanctioned path* by which new, non-trivial content (starting with Incidents sourced from news) enters `/data`. Every other addition to `/data` (Decisions, Patterns, Controls, Evidence, Board Questions) goes in directly via a pull request, because those entity types are authored/curated judgement calls rather than facts extracted from a single external event — see `/docs/contributing.md`.
+
+## Why `/editorial` doesn't get a write path into `/data`
+
+`/editorial` (Phase 2A) exists to make contributions more consistent — a wizard that catches malformed drafts at entry time, a rule-based engine that suggests plausible relationships, checkers that score citation and graph quality. Every one of these is deliberately advisory: the wizard writes only to `/ingestion/drafts` (non-canonical by construction), and every other tool only prints a report. None of them can write to `/data`. This isn't an oversight to fix later — it's the Canonical Principle applied directly: a tool that suggests is a view onto the graph, and only a PR passing `/validators` is allowed to change the graph itself. See `/ONTOLOGY.md`.
 
 ## Why confidence and status are both first-class fields
 

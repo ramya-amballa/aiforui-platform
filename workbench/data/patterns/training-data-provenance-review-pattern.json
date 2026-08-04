@@ -1,0 +1,54 @@
+{
+  "id": "PAT-011",
+  "slug": "training-data-provenance-review-pattern",
+  "title": "Training Data Provenance Review Pattern",
+  "description": "A pattern for documenting the source, licence status, and collection method of every dataset used to train a generative model, with an explicit risk decision recorded for any source obtained by scraping copyrighted or trademarked material.",
+  "version": "1.0.0",
+  "status": "draft",
+  "confidence": "Community",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["generative-ai", "intellectual-property", "training-data"],
+  "created_by": "AI Governance Workbench (Phase 2A seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 2A seed data)",
+      "version": "1.0.0",
+      "note": "Initial Phase 2A seed content."
+    }
+  ],
+  "problem": "Generative models are often trained on large, aggregated datasets assembled by scraping the public web, with no per-source record of licence status, provenance, or the specific legal risk each source carries — making it difficult to assess or defend the model's commercial deployment when a rights holder objects.",
+  "solution": "Maintain a per-source log of every dataset used in training, including its origin, collection method, and licence status; for any source obtained by scraping copyrighted or trademarked material, record an explicit risk decision (obtain a licence, exclude the source, or document an accepted-risk rationale) before the model is deployed commercially.",
+  "applicability": "Any organisation training or fine-tuning a generative model (image, text, audio, or video) intended for commercial deployment.",
+  "consequences": "Provenance review of web-scale datasets is labour-intensive and may be infeasible to do exhaustively; excluding all uncertain-provenance sources can materially reduce model quality, creating a real tension between legal risk reduction and model performance.",
+  "maturity": "emerging",
+  "citations": [
+    {
+      "id": "cite-getty-stability-judgment",
+      "source_type": "court_judgment",
+      "title": "Getty Images (US) Inc and others v Stability AI Limited [2025] EWHC 2863 (Ch)",
+      "publisher": "Courts and Tribunals Judiciary (England and Wales High Court)",
+      "url": "https://www.judiciary.uk/judgments/getty-images-v-stability-ai/",
+      "publication_date": "2025-11-04",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "SATISFIES_CONTROL",
+      "target_id": "CTR-016",
+      "target_type": "control",
+      "reason": "A documented per-source provenance record is the concrete mechanism satisfying this control's data-governance requirement.",
+      "confidence": "Community"
+    },
+    {
+      "type": "REQUIRES_EVIDENCE",
+      "target_id": "EVI-011",
+      "target_type": "evidence",
+      "reason": "The pattern's output is a training data provenance log.",
+      "confidence": "Community"
+    }
+  ]
+}

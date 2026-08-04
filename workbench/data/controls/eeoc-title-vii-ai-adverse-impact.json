@@ -1,0 +1,46 @@
+{
+  "id": "CTR-002",
+  "slug": "eeoc-title-vii-ai-adverse-impact",
+  "title": "EEOC Technical Assistance — AI and Title VII adverse impact in employment selection",
+  "description": "Non-binding EEOC technical assistance explaining how existing Title VII disparate-impact principles apply to algorithmic/AI employment-selection tools. Not a statutory or regulatory provision itself.",
+  "version": "1.0.0",
+  "status": "draft",
+  "confidence": "Community",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["eeoc", "hiring", "fairness", "bias", "discrimination"],
+  "created_by": "AI Governance Workbench (Phase 2A seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 2A seed data)",
+      "version": "1.0.0",
+      "note": "Initial Phase 2A seed content."
+    }
+  ],
+  "framework_name": "EEOC Technical Assistance on AI and Title VII of the Civil Rights Act of 1964",
+  "control_reference": "Select Issues: Assessing Adverse Impact in Software, Algorithms, and Artificial Intelligence Used in Employment Selection Procedures",
+  "control_text": "Existing Title VII disparate-impact principles apply to employers' use of algorithmic decision-making tools and AI in employment selection procedures (hiring, promotion, firing); employers may remain liable for adverse impact caused by such tools even when built or administered by a third-party vendor, and passing a bright-line statistical threshold (e.g. the 'four-fifths rule') does not by itself guarantee a tool will not be found to have an unlawful disparate impact.",
+  "control_family": "Non-discrimination",
+  "citations": [
+    {
+      "id": "cite-eeoc-ai-guidance",
+      "source_type": "regulator",
+      "title": "Select Issues: Assessing Adverse Impact in Software, Algorithms, and Artificial Intelligence Used in Employment Selection Procedures Under Title VII of the Civil Rights Act of 1964",
+      "publisher": "US Equal Employment Opportunity Commission",
+      "url": "https://www.eeoc.gov/laws/guidance/select-issues-assessing-adverse-impact-software-algorithms-and-artificial",
+      "publication_date": "2023-05-18",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "REQUIRES_EVIDENCE",
+      "target_id": "EVI-001",
+      "target_type": "evidence",
+      "reason": "Satisfying this guidance's expectations requires a documented bias audit demonstrating adverse impact was assessed.",
+      "confidence": "Community"
+    }
+  ]
+}

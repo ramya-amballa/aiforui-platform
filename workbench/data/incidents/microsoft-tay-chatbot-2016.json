@@ -1,0 +1,57 @@
+{
+  "id": "INC-018",
+  "slug": "microsoft-tay-chatbot-2016",
+  "title": "Microsoft's Tay chatbot manipulated into racist tweets, shut down within hours",
+  "description": "On 23 March 2016, Microsoft launched 'Tay,' an AI chatbot on Twitter designed to learn conversational language by engaging with users. Coordinated trolling exploited Tay's learning and 'repeat after me' mechanisms, prompting it to post racist, sexist, and otherwise offensive tweets within hours of launch. Microsoft took Tay offline roughly 16 hours after launch and issued a public apology two days later, acknowledging a critical oversight in anticipating this kind of coordinated adversarial attack.",
+  "version": "1.0.0",
+  "status": "active",
+  "confidence": "Reviewed",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["generative-ai", "conversational-ai", "reputational", "adversarial", "safety"],
+  "created_by": "AI Governance Workbench (Phase 2A seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 2A seed data)",
+      "version": "1.0.0",
+      "note": "Initial Phase 2A seed content, part of the Foundational Twenty."
+    }
+  ],
+  "occurred_date": "2016-03-23",
+  "organizations_involved": ["Microsoft"],
+  "harm_types": ["reputational", "other"],
+  "ai_system_category": "conversational_chatbot",
+  "jurisdiction": ["US"],
+  "severity": "medium",
+  "root_cause": "Tay's design allowed it to directly learn from and repeat phrases supplied by users with insufficient content filtering or abuse safeguards; a coordinated group of users deliberately exploited this by feeding it offensive material, and no rapid detect-and-disable mechanism caught the pattern before it escalated publicly.",
+  "citations": [
+    {
+      "id": "cite-microsoft-tay-apology",
+      "source_type": "company_statement",
+      "title": "Learning from Tay's introduction",
+      "publisher": "The Official Microsoft Blog",
+      "url": "https://blogs.microsoft.com/blog/2016/03/25/learning-tays-introduction/",
+      "publication_date": "2016-03-25",
+      "accessed_date": "2026-08-04",
+      "excerpt": "We are deeply sorry for the unintended offensive and hurtful tweets from Tay, which do not represent who we are or what we stand for, nor how we designed Tay."
+    }
+  ],
+  "relationships": [
+    {
+      "type": "MITIGATED_BY",
+      "target_id": "DEC-011",
+      "target_type": "decision",
+      "reason": "A requirement for adversarial red-teaming and a tested kill-switch before launch addresses exactly this failure mode.",
+      "confidence": "Reviewed"
+    },
+    {
+      "type": "RAISES_BOARD_QUESTION",
+      "target_id": "BRD-010",
+      "target_type": "board_question",
+      "reason": "This is the canonical early example of the rapid-response question this board question is designed to surface.",
+      "confidence": "Reviewed"
+    }
+  ]
+}

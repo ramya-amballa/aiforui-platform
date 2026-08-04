@@ -1,0 +1,38 @@
+{
+  "id": "EVI-010",
+  "slug": "red-team-test-report",
+  "title": "Red-Team Test Report",
+  "description": "A report documenting adversarial red-team testing of a publicly-facing AI system, including simulated coordinated-manipulation attempts, and confirmation that the kill-switch/rollback mechanism was tested and worked within its target response time.",
+  "version": "1.0.0",
+  "status": "active",
+  "confidence": "Reviewed",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["generative-ai", "adversarial", "safety", "audit-report"],
+  "created_by": "AI Governance Workbench (Phase 2A seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 2A seed data)",
+      "version": "1.0.0",
+      "note": "Initial Phase 2A seed content."
+    }
+  ],
+  "evidence_description": "A report documenting the scenarios tested during adversarial red-teaming (including coordinated-manipulation simulations), findings, remediations applied, and a record of the kill-switch/rollback drill including measured response time.",
+  "collection_method": "Structured red-team exercise conducted before launch and on a recurring schedule thereafter, with drill results logged automatically where possible.",
+  "retention_period": "Minimum 3 years, and retained for the lifetime of the system version tested.",
+  "artifact_format": "PDF report; drill timing data retained as structured export.",
+  "citations": [
+    {
+      "id": "cite-microsoft-tay-apology",
+      "source_type": "company_statement",
+      "title": "Learning from Tay's introduction",
+      "publisher": "The Official Microsoft Blog",
+      "url": "https://blogs.microsoft.com/blog/2016/03/25/learning-tays-introduction/",
+      "publication_date": "2016-03-25",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": []
+}

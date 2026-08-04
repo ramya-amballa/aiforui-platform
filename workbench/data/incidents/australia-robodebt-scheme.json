@@ -1,0 +1,57 @@
+{
+  "id": "INC-010",
+  "slug": "australia-robodebt-scheme",
+  "title": "Australia's Robodebt automated debt-recovery scheme ruled unlawful",
+  "description": "From around July 2015 to November 2019, Australia's Services Australia (Centrelink) used an automated system that compared welfare recipients' reported income against income averaged from Australian Taxation Office data to algorithmically calculate and issue debt notices, reversing the burden of proof onto recipients to disprove the debt. The Federal Court found in 2019 that debts calculated this way were not legally valid, and the Commonwealth subsequently admitted the income-averaging method was unlawful. A Royal Commission's final report, delivered 7 July 2023, found the scheme was 'crude and cruel,' legally unsound from inception, and linked it to widespread financial and psychological harm.",
+  "version": "1.0.0",
+  "status": "active",
+  "confidence": "Reviewed",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["government", "welfare", "financial", "automated-debt-recovery", "due-process"],
+  "created_by": "AI Governance Workbench (Phase 2A seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 2A seed data)",
+      "version": "1.0.0",
+      "note": "Initial Phase 2A seed content, part of the Foundational Twenty. Figures for total debts unlawfully raised and people affected vary by source and by settlement tranche; treat specific dollar figures as approximate pending direct verification against the Royal Commission report."
+    }
+  ],
+  "occurred_date": "2015-07-01",
+  "organizations_involved": ["Services Australia (Department of Human Services)", "Australian Taxation Office", "Robodebt Royal Commission"],
+  "harm_types": ["financial", "safety"],
+  "ai_system_category": "automated_debt_recovery",
+  "jurisdiction": ["AU"],
+  "severity": "critical",
+  "root_cause": "The system used income averaging as sole proof of overpayment instead of actual fortnightly income — a method known to be legally unsound before implementation — combined with reversing the onus of proof onto welfare recipients and inadequate human review.",
+  "citations": [
+    {
+      "id": "cite-robodebt-royal-commission",
+      "source_type": "regulator",
+      "title": "Final Report — Royal Commission into the Robodebt Scheme",
+      "publisher": "Royal Commission into the Robodebt Scheme (Australian Government)",
+      "url": "https://robodebt.royalcommission.gov.au/publications/report",
+      "publication_date": "2023-07-07",
+      "accessed_date": "2026-08-04",
+      "excerpt": "Robodebt was a crude and cruel mechanism, neither fair nor legal, and it made many people feel like criminals."
+    }
+  ],
+  "relationships": [
+    {
+      "type": "MITIGATED_BY",
+      "target_id": "DEC-004",
+      "target_type": "decision",
+      "reason": "A documented legal basis and meaningful human-review requirement before an automated adverse decision would have caught the unlawful income-averaging method before it was ever applied.",
+      "confidence": "Reviewed"
+    },
+    {
+      "type": "RAISES_BOARD_QUESTION",
+      "target_id": "BRD-004",
+      "target_type": "board_question",
+      "reason": "This incident is the clearest example of what happens when an automated adverse-decision system operates without a genuine right to human review.",
+      "confidence": "Reviewed"
+    }
+  ]
+}

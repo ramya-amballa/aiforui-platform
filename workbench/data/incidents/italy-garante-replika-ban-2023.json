@@ -1,0 +1,56 @@
+{
+  "id": "INC-013",
+  "slug": "italy-garante-replika-ban-2023",
+  "title": "Italy's data protection authority orders AI companion app Replika to stop processing users' data",
+  "description": "On 2 February 2023, Italy's Garante per la protezione dei dati personali issued an urgent order requiring Luka Inc., maker of the AI companion app Replika, to stop processing the personal data of users in Italy. The regulator cited risks to minors and emotionally vulnerable individuals, the absence of any effective age-verification mechanism despite Replika's own terms nominally restricting the app to adults, and the lack of a valid legal basis under GDPR for processing data through emotionally intensive, human-like interactions.",
+  "version": "1.0.0",
+  "status": "active",
+  "confidence": "Reviewed",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["generative-ai", "privacy", "gdpr", "regulator-action", "child-safety"],
+  "created_by": "AI Governance Workbench (Phase 2A seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 2A seed data)",
+      "version": "1.0.0",
+      "note": "Initial Phase 2A seed content, part of the Foundational Twenty."
+    }
+  ],
+  "occurred_date": "2023-02-02",
+  "organizations_involved": ["Garante per la protezione dei dati personali", "Luka Inc. (Replika)"],
+  "harm_types": ["privacy_violation", "safety"],
+  "ai_system_category": "ai_companion_app",
+  "jurisdiction": ["IT", "EU"],
+  "severity": "high",
+  "root_cause": "Replika lacked any functioning age-verification system, allowing minors potential access to emotionally/psychologically intensive companion-chatbot interactions, and the company had not established an adequate GDPR legal basis for processing personal data given the app's psychologically impactful design.",
+  "citations": [
+    {
+      "id": "cite-garante-replika-block",
+      "source_type": "regulator",
+      "title": "Intelligenza artificiale, dal Garante privacy stop al chatbot 'Replika'. Troppi i rischi per i minori e le persone emotivamente fragili",
+      "publisher": "Garante per la protezione dei dati personali",
+      "url": "https://www.garanteprivacy.it/web/guest/home/docweb/-/docweb-display/docweb/9852506",
+      "publication_date": "2023-02-03",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "MITIGATED_BY",
+      "target_id": "DEC-006",
+      "target_type": "decision",
+      "reason": "The same GDPR legal-basis and age-verification requirement addresses this incident's core deficiencies.",
+      "confidence": "Reviewed"
+    },
+    {
+      "type": "RAISES_BOARD_QUESTION",
+      "target_id": "BRD-006",
+      "target_type": "board_question",
+      "reason": "This incident shows the same regulatory pattern applied to a psychologically higher-stakes product category.",
+      "confidence": "Reviewed"
+    }
+  ]
+}

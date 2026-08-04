@@ -1,0 +1,55 @@
+{
+  "id": "INC-009",
+  "slug": "uk-ofqual-2020-grading-algorithm",
+  "title": "UK exam regulator's grading algorithm downgrades results, scrapped after public backlash",
+  "description": "After COVID-19 cancelled 2020 UK A-level and GCSE exams, exams regulator Ofqual used a statistical standardisation algorithm — weighted substantially by each school's historical grade distribution — to moderate teacher-predicted grades. A large share of A-level grades were adjusted downward from teacher predictions, with downgrades disproportionately affecting students at larger state schools and disadvantaged areas, while small classes (often at private schools) were less affected. Following widespread public protest after results day on 13 August 2020, the UK government and Ofqual announced days later that the algorithm-derived results would be scrapped in favour of teacher-assessed grades.",
+  "version": "1.0.0",
+  "status": "active",
+  "confidence": "Reviewed",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["government", "education", "discrimination", "automated-grading", "due-process"],
+  "created_by": "AI Governance Workbench (Phase 2A seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 2A seed data)",
+      "version": "1.0.0",
+      "note": "Initial Phase 2A seed content, part of the Foundational Twenty."
+    }
+  ],
+  "occurred_date": "2020-08-13",
+  "organizations_involved": ["Ofqual (Office of Qualifications and Examinations Regulation)", "UK Department for Education"],
+  "harm_types": ["discrimination", "reputational"],
+  "ai_system_category": "automated_grading",
+  "jurisdiction": ["UK"],
+  "severity": "medium",
+  "root_cause": "The standardisation model weighted a school's historical grade-distribution performance heavily relative to individual teacher-predicted grades, systematically disadvantaging students at schools with historically poorer results (correlated with deprivation) regardless of individual performance, deployed without adequate testing of demographic-level impact or public consultation.",
+  "citations": [
+    {
+      "id": "cite-ofqual-2020-controversy",
+      "source_type": "news_publication",
+      "title": "2020 UK GCSE and A-Level grading controversy",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/2020_UK_GCSE_and_A-Level_grading_controversy",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "MITIGATED_BY",
+      "target_id": "DEC-004",
+      "target_type": "decision",
+      "reason": "A documented legal basis and meaningful human-review requirement would have surfaced the demographic impact of this standardisation model before results day.",
+      "confidence": "Reviewed"
+    },
+    {
+      "type": "RAISES_BOARD_QUESTION",
+      "target_id": "BRD-004",
+      "target_type": "board_question",
+      "reason": "This incident shows the same due-process gap in an education context.",
+      "confidence": "Reviewed"
+    }
+  ]
+}

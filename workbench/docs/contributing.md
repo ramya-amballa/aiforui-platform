@@ -1,6 +1,6 @@
 # Contributing
 
-The AI Governance Workbench is built for community contribution from day one — that's a core project principle, not an afterthought. This is Phase 1's contribution model for the data layer; it will extend, not change, once a frontend/API exists.
+The AI Governance Workbench is built for community contribution from day one — that's a core project principle, not an afterthought. This is the contribution model for the data layer: every change is a pull request against `/data`, gated by `npm run validate`. Phase 2A added `/editorial` tooling (a wizard, a relationship-suggestion engine, quality checkers — see `/editorial/README.md`) to make that PR easier to get right the first time, but the model itself — PR in, validator gate, human merge — will extend, not change, once a frontend/API exists.
 
 ## Adding or editing a Decision, Pattern, Control, Evidence type, or Board Question
 
@@ -15,7 +15,7 @@ The AI Governance Workbench is built for community contribution from day one —
 
 ## Adding an Incident
 
-Incidents sourced from an external event (a news article, a ruling, a regulator statement) go through the ingestion pipeline instead of being hand-written directly into `/data/incidents` — see `/docs/ingestion-pipeline.md`. If you're instead adding an incident you already have full, well-sourced knowledge of and don't need the draft/review scaffolding for, writing directly into `/data/incidents` following the schema is fine too; the pipeline is a convenience for the common "I read something, someone else should sanity-check it" case, not a mandatory gate.
+Incidents sourced from an external event (a news article, a ruling, a regulator statement) go through the ingestion pipeline instead of being hand-written directly into `/data/incidents` — see `/docs/ingestion-pipeline.md`. Run `npm run editorial:wizard` to build the draft interactively rather than hand-writing the JSON; it validates as you go. If you're instead adding an incident you already have full, well-sourced knowledge of and don't need the draft/review scaffolding for, writing directly into `/data/incidents` following the schema is fine too; the pipeline is a convenience for the common "I read something, someone else should sanity-check it" case, not a mandatory gate.
 
 ## AI-assisted contributions
 
@@ -30,8 +30,9 @@ See "Extending the ontology" in `/docs/relationship-model.md`. In short: `/relat
 A pull request touching `/workbench/data` should:
 
 - Pass `npm run validate` with zero issues.
-- Have citations that actually support the claims they're attached to (a reviewer should spot-check at least one).
+- Have citations that actually support the claims they're attached to (a reviewer should spot-check at least one; `npm run editorial:citations` flags obviously weak ones).
 - Not silently change the `confidence` of an existing object without explanation — a downgrade or upgrade in trust level is itself a claim that deserves a sentence in the PR description.
+- Not introduce a new orphan node — `npm run editorial:health`'s Zero-Orphan Invariant check will catch this, but it's worth confirming before pushing.
 
 ## What Phase 1 does not yet support
 

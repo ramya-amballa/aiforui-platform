@@ -1,0 +1,38 @@
+{
+  "id": "EVI-011",
+  "slug": "training-data-provenance-log",
+  "title": "Training Data Provenance Log",
+  "description": "A per-source log documenting the origin, collection method, and licence status of every dataset used to train a generative model, with a recorded risk decision for any source of uncertain provenance.",
+  "version": "1.0.0",
+  "status": "active",
+  "confidence": "Community",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["generative-ai", "intellectual-property", "training-data", "audit-log"],
+  "created_by": "AI Governance Workbench (Phase 2A seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 2A seed data)",
+      "version": "1.0.0",
+      "note": "Initial Phase 2A seed content."
+    }
+  ],
+  "evidence_description": "A structured log listing every dataset source used to train a generative model, its collection method, its licence status, and — for any source of uncertain provenance — the documented risk decision (licensed, excluded, or accepted risk with rationale).",
+  "collection_method": "Compiled by the model training team and reviewed by legal/compliance before commercial deployment, updated whenever a new data source is added.",
+  "retention_period": "For the lifetime of the model version it documents, plus a minimum of 5 years.",
+  "artifact_format": "Structured export (CSV/JSON) of per-source provenance records.",
+  "citations": [
+    {
+      "id": "cite-getty-stability-judgment",
+      "source_type": "court_judgment",
+      "title": "Getty Images (US) Inc and others v Stability AI Limited [2025] EWHC 2863 (Ch)",
+      "publisher": "Courts and Tribunals Judiciary (England and Wales High Court)",
+      "url": "https://www.judiciary.uk/judgments/getty-images-v-stability-ai/",
+      "publication_date": "2025-11-04",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": []
+}

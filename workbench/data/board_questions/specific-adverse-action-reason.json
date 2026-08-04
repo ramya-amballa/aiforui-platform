@@ -1,0 +1,42 @@
+{
+  "id": "BRD-009",
+  "slug": "specific-adverse-action-reason",
+  "title": "Can we give a specific reason for every automated credit denial, not just cite model complexity?",
+  "description": "A board-level oversight question testing whether an organisation can produce an individualised explanation for an adverse credit decision on demand, rather than relying on the model's complexity as a reason not to explain.",
+  "version": "1.0.0",
+  "status": "active",
+  "confidence": "Reviewed",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["credit-scoring", "transparency", "explainability", "board-oversight"],
+  "created_by": "AI Governance Workbench (Phase 2A seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 2A seed data)",
+      "version": "1.0.0",
+      "note": "Initial Phase 2A seed content."
+    }
+  ],
+  "question_text": "Can we provide a specific, accurate reason to any customer denied credit, given a reduced limit, or offered worse pricing by an automated underwriting system — and could we do so quickly enough to respond to a public allegation of bias, the way the Apple Card controversy demanded?",
+  "audience": ["board", "risk_committee", "audit_committee"],
+  "rationale": "The Apple Card/Goldman Sachs controversy escalated publicly in part because neither side could quickly point to a specific, individualised explanation for the disputed credit-limit decision.",
+  "follow_up_actions": [
+    "Request a sample adverse-action notice record and confirm reasons given are specific, not generic.",
+    "Confirm underlying contributing factors are retained and reviewable if a dispute arises.",
+    "Ask how quickly the organisation could produce a specific explanation in response to a public allegation."
+  ],
+  "citations": [
+    {
+      "id": "cite-nydfs-apple-card-report",
+      "source_type": "regulator",
+      "title": "Report on Apple Card Investigation",
+      "publisher": "New York State Department of Financial Services",
+      "url": "https://www.dfs.ny.gov/reports_and_publications/202103_report_apple_card_investigation",
+      "publication_date": "2021-03-23",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": []
+}

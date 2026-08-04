@@ -1,0 +1,65 @@
+{
+  "id": "INC-016",
+  "slug": "nh-biden-deepfake-robocall-2024",
+  "title": "AI-generated Biden deepfake robocall targets New Hampshire primary voters",
+  "description": "On 21 January 2024, thousands of New Hampshire voters received a robocall using an AI-cloned voice of President Biden urging them not to vote in the 23 January Democratic primary. Political consultant Steve Kramer admitted commissioning the calls, saying he intended to draw attention to AI's risks in elections. The FCC adopted a $6 million forfeiture order against Kramer in September 2024 for Truth in Caller ID Act violations (spoofed caller ID on roughly 3,000 calls), and separately issued a declaratory ruling in February 2024 clarifying that AI-generated voices count as 'artificial' voices regulated under the Telephone Consumer Protection Act. Kramer was also criminally indicted in New Hampshire on voter-suppression and candidate-impersonation charges but was acquitted on all charges by a jury in June 2025.",
+  "version": "1.0.0",
+  "status": "active",
+  "confidence": "Reviewed",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["generative-ai", "misinformation", "elections", "deepfake", "regulator-action"],
+  "created_by": "AI Governance Workbench (Phase 2A seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 2A seed data)",
+      "version": "1.0.0",
+      "note": "Initial Phase 2A seed content, part of the Foundational Twenty. Whether the FCC's $6M civil forfeiture has actually been paid is unclear from available reporting; Kramer's separate criminal acquittal (June 2025) does not affect the FCC's civil order."
+    }
+  ],
+  "occurred_date": "2024-01-21",
+  "organizations_involved": ["Federal Communications Commission", "Steve Kramer", "New Hampshire Department of Justice"],
+  "harm_types": ["misinformation", "other"],
+  "ai_system_category": "robocall_voice_cloning",
+  "jurisdiction": ["US", "US-NH"],
+  "severity": "high",
+  "root_cause": "Use of readily available AI voice-cloning technology combined with caller-ID spoofing to impersonate a sitting president in a political disinformation and voter-suppression scheme, exploiting the absence of prior explicit regulation of AI-generated robocall voices.",
+  "citations": [
+    {
+      "id": "cite-fcc-forfeiture-order",
+      "source_type": "regulator",
+      "title": "FCC Fines Man Behind Election Interference Scheme $6 Million (Forfeiture Order)",
+      "publisher": "Federal Communications Commission",
+      "url": "https://docs.fcc.gov/public/attachments/DOC-405811A1.pdf",
+      "publication_date": "2024-09-26",
+      "accessed_date": "2026-08-04"
+    },
+    {
+      "id": "cite-fcc-ai-voices-illegal",
+      "source_type": "regulator",
+      "title": "FCC Makes AI-Generated Voices in Robocalls Illegal",
+      "publisher": "Federal Communications Commission",
+      "url": "https://www.fcc.gov/document/fcc-makes-ai-generated-voices-robocalls-illegal",
+      "publication_date": "2024-02-08",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "MITIGATED_BY",
+      "target_id": "DEC-009",
+      "target_type": "decision",
+      "reason": "A requirement to detect and label synthetic voice content before mass distribution addresses exactly this misuse.",
+      "confidence": "Reviewed"
+    },
+    {
+      "type": "RAISES_BOARD_QUESTION",
+      "target_id": "BRD-008",
+      "target_type": "board_question",
+      "reason": "This is the first major, regulator-confirmed case of AI voice cloning used in an attempted election interference scheme.",
+      "confidence": "Reviewed"
+    }
+  ]
+}

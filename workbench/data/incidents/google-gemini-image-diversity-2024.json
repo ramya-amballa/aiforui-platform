@@ -1,0 +1,56 @@
+{
+  "id": "INC-020",
+  "slug": "google-gemini-image-diversity-2024",
+  "title": "Google pauses Gemini image generator after historically inaccurate diverse depictions",
+  "description": "In February 2024, Google's Gemini AI image-generation feature was found to produce historically and factually inaccurate images — including racially diverse depictions of 1943 German Wehrmacht soldiers and the US Founding Fathers — after users circulated examples publicly. Google attributed the errors to diversity tuning applied without regard for context, combined with an overly cautious prompt-filtering system. Google publicly apologised, calling the results 'embarrassing and wrong,' and paused Gemini's ability to generate images of people while it worked on a fix.",
+  "version": "1.0.0",
+  "status": "active",
+  "confidence": "Reviewed",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["generative-ai", "discrimination", "misinformation", "reputational", "content-safety"],
+  "created_by": "AI Governance Workbench (Phase 2A seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 2A seed data)",
+      "version": "1.0.0",
+      "note": "Initial Phase 2A seed content, part of the Foundational Twenty. The episode unfolded over roughly three days (viral reports ~Feb 20-21, formal apology Feb 23); occurred_date is an approximate midpoint."
+    }
+  ],
+  "occurred_date": "2024-02-21",
+  "organizations_involved": ["Google", "Alphabet Inc."],
+  "harm_types": ["discrimination", "misinformation", "reputational"],
+  "ai_system_category": "generative_ai_image",
+  "jurisdiction": ["US"],
+  "severity": "medium",
+  "root_cause": "Fairness/diversity tuning for the image generator was applied indiscriminately, inserting demographic diversity into prompts where historical accuracy required specific, non-diverse depictions, compounded by an overly cautious safety layer that misclassified benign historical prompts as sensitive — and the combination was not caught by pre-release content-safety review across a broad enough range of prompts.",
+  "citations": [
+    {
+      "id": "cite-google-gemini-apology",
+      "source_type": "company_statement",
+      "title": "Gemini image generation got it wrong. We'll do better.",
+      "publisher": "Google (The Keyword)",
+      "url": "https://blog.google/products/gemini/gemini-image-generation-issue/",
+      "publication_date": "2024-02-23",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "MITIGATED_BY",
+      "target_id": "DEC-013",
+      "target_type": "decision",
+      "reason": "A requirement to understand and test the specific context a generative feature will be used in, before broad release, addresses exactly this failure.",
+      "confidence": "Reviewed"
+    },
+    {
+      "type": "RAISES_BOARD_QUESTION",
+      "target_id": "BRD-012",
+      "target_type": "board_question",
+      "reason": "This is a prominent example of the reputational risk a generative content feature can create without adequate pre-release review.",
+      "confidence": "Reviewed"
+    }
+  ]
+}

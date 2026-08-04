@@ -1,0 +1,42 @@
+{
+  "id": "BRD-002",
+  "slug": "disaggregated-error-rate-disclosure",
+  "title": "Do we know whether our risk-scoring algorithms are equally accurate across demographic groups?",
+  "description": "A board-level oversight question testing whether an organisation has actually measured — not assumed — that a risk-scoring algorithm's errors are evenly distributed across protected groups, and whether any proxy variable it relies on has been scrutinised.",
+  "version": "1.0.0",
+  "status": "active",
+  "confidence": "Reviewed",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["bias", "risk-scoring", "fairness", "board-oversight"],
+  "created_by": "AI Governance Workbench (Phase 2A seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 2A seed data)",
+      "version": "1.0.0",
+      "note": "Initial Phase 2A seed content."
+    }
+  ],
+  "question_text": "For every risk-scoring algorithm we use in a high-stakes decision, can management show us the false-positive and false-negative rates broken out by protected group — not just an aggregate accuracy number — and can they name every proxy variable the model relies on and justify why it isn't a stand-in for a protected characteristic?",
+  "audience": ["board", "risk_committee", "audit_committee"],
+  "rationale": "Both COMPAS and a major US healthcare risk-prediction algorithm looked reasonable on aggregate accuracy while hiding large, harmful disparities that only appeared once results were disaggregated by group — in the healthcare case, traced to an unexamined proxy variable (cost) standing in for actual need.",
+  "follow_up_actions": [
+    "Request the most recent fairness metrics report for every in-scope risk-scoring model.",
+    "Ask what proxy variables the model uses and whether their correlation with protected characteristics has been tested.",
+    "Confirm the analysis is re-run whenever the model or its training data changes materially."
+  ],
+  "citations": [
+    {
+      "id": "cite-propublica-machine-bias",
+      "source_type": "news_publication",
+      "title": "Machine Bias — There's Software Used Across the Country to Predict Future Criminals. And It's Biased Against Blacks.",
+      "publisher": "ProPublica",
+      "url": "https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing",
+      "publication_date": "2016-05-23",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": []
+}

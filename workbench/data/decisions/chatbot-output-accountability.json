@@ -1,0 +1,81 @@
+{
+  "id": "DEC-014",
+  "slug": "chatbot-output-accountability",
+  "title": "Treat customer-facing chatbot output as an accountable company communication",
+  "description": "Illustrative reference decision modelled on the reasoning in Moffatt v. Air Canada (2024 BCCRT 149), where a tribunal rejected the argument that a company is not responsible for its own chatbot's statements. Not a documented decision of any specific organisation.",
+  "version": "1.0.0",
+  "status": "draft",
+  "confidence": "Community",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["chatbot", "customer-service", "liability", "transparency"],
+  "created_by": "AI Governance Workbench (Phase 2A seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 2A seed data)",
+      "version": "1.0.0",
+      "note": "Initial Phase 2A seed content, part of the Foundational Twenty."
+    }
+  ],
+  "decision_statement": "Any customer-facing AI chatbot's substantive statements (pricing, policy, eligibility) must be treated as binding company communications subject to the same accuracy review, correction, and escalation process as a human agent's statements — not as a disclaimed third party's output.",
+  "decision_type": "policy",
+  "decision_context": "Motivated by Moffatt v. Air Canada, in which the airline unsuccessfully argued its chatbot was 'a separate legal entity' responsible for its own errors.",
+  "governing_body": "Illustrative example — Customer Experience Technology Governance Board",
+  "jurisdiction": ["CA-BC"],
+  "frameworks_referenced": ["EU AI Act"],
+  "alternatives_considered": [
+    "Disclaim chatbot statements as non-binding and rely on terms-of-service fine print.",
+    "Route all policy-sensitive queries to a human agent instead of the chatbot."
+  ],
+  "citations": [
+    {
+      "id": "cite-moffatt-v-air-canada",
+      "source_type": "court_judgment",
+      "title": "Moffatt v. Air Canada, 2024 BCCRT 149",
+      "publisher": "Civil Resolution Tribunal of British Columbia",
+      "url": "https://www.canlii.org/en/bc/bccrt/doc/2024/2024bccrt149/2024bccrt149.html",
+      "publication_date": "2024-02-14",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "RESULTED_FROM",
+      "target_id": "INC-002",
+      "target_type": "incident",
+      "reason": "This decision is modelled directly on the tribunal's reasoning in this incident.",
+      "confidence": "Verified",
+      "citation_ids": ["cite-moffatt-v-air-canada"]
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "target_id": "PAT-013",
+      "target_type": "pattern",
+      "reason": "The decision is put into practice via this design pattern.",
+      "confidence": "Community"
+    },
+    {
+      "type": "SATISFIES_CONTROL",
+      "target_id": "CTR-018",
+      "target_type": "control",
+      "reason": "Holding chatbot output to the same accuracy bar as human agents satisfies the transparency/information obligation this control describes.",
+      "confidence": "Community"
+    },
+    {
+      "type": "REQUIRES_EVIDENCE",
+      "target_id": "EVI-012",
+      "target_type": "evidence",
+      "reason": "Compliance must be demonstrated by a record of chatbot response accuracy review.",
+      "confidence": "Community"
+    },
+    {
+      "type": "RAISES_BOARD_QUESTION",
+      "target_id": "BRD-013",
+      "target_type": "board_question",
+      "reason": "Boards adopting this decision should be asking about liability exposure for chatbot errors.",
+      "confidence": "Community"
+    }
+  ]
+}

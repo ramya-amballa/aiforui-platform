@@ -1,0 +1,46 @@
+{
+  "id": "CTR-012",
+  "slug": "illinois-bipa-consent",
+  "title": "Illinois BIPA — Informed consent before collecting biometric identifiers",
+  "description": "The informed-consent and private-right-of-action provisions of the Illinois Biometric Information Privacy Act. Paraphrase pending verification against the primary statute text — hence 'Community' confidence.",
+  "version": "1.0.0",
+  "status": "draft",
+  "confidence": "Community",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["bipa", "privacy", "biometric", "consent"],
+  "created_by": "AI Governance Workbench (Phase 2A seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 2A seed data)",
+      "version": "1.0.0",
+      "note": "Initial Phase 2A seed content. Specific statutory damages figures ($1,000/$5,000 per violation) are commonly cited but not independently verified against the primary statute text in this pass."
+    }
+  ],
+  "framework_name": "Illinois Biometric Information Privacy Act (BIPA)",
+  "control_reference": "740 ILCS 14/15 (notice and consent); 740 ILCS 14/20 (private right of action)",
+  "control_text": "Private entities must provide written notice and obtain written consent before collecting, capturing, or otherwise obtaining a person's biometric identifiers or biometric information (fingerprints, retina/iris scans, voiceprints, face/hand geometry scans). The statute creates a private right of action allowing individuals to sue for statutory damages without needing to show actual injury.",
+  "control_family": "Consent",
+  "citations": [
+    {
+      "id": "cite-bipa-statute",
+      "source_type": "legislation",
+      "title": "Biometric Information Privacy Act, 740 ILCS 14/",
+      "publisher": "Illinois General Assembly (Illinois Compiled Statutes)",
+      "url": "https://www.ilga.gov/Legislation/ILCS/Articles?ActID=3004&ChapterID=57",
+      "publication_date": "2008-10-03",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "REQUIRES_EVIDENCE",
+      "target_id": "EVI-007",
+      "target_type": "evidence",
+      "reason": "This control's own text is the definition of what the evidence record must capture.",
+      "confidence": "Community"
+    }
+  ]
+}

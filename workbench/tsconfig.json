@@ -12,5 +12,5 @@
     "noUnusedParameters": true,
     "outDir": "dist"
   },
-  "include": ["validators/src", "ingestion/src"]
+  "include": ["validators/src", "ingestion/src", "editorial/src"]
 }
