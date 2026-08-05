@@ -75,6 +75,10 @@ Nothing in Phase 1 is exposed over an API, but nothing about `/data`'s design sh
 
 No frontend, dashboard, search page, or graph visualisation — per the brief. `/search` exists as a directory (matching the required repository structure) but contains only a placeholder explaining what it's reserved for, so a later phase has a clear landing spot without Phase 1 guessing at a search index design prematurely.
 
+## Governance and publication (Phase 4)
+
+Everything above is architecture in the technical sense: why the repository is shaped the way it is. `/workbench/VISION.md` and `/workbench/GOVERNANCE_CHARTER.md` are architecture in the institutional sense — why the *project*, not just the codebase, is shaped the way it is, and how it stays that way after any one contributor moves on. `EDITORIAL_POLICY.md`, `CITATION_POLICY.md`, `VERSION_POLICY.md`, `REVIEW_PROCESS.md`, and `CONFLICT_OF_INTEREST.md` are the operational policies that follow from that charter. None of them change anything described above; they govern how content flows through the architecture that's already here.
+
 ## The Explorer (Phase 3)
 
 `/workbench/explorer` is the first public interface onto the graph: a static, search-first site (Next.js, `output: "export"` — no server, no database) with universal search, per-entity browsing and filtering, executive-briefing-style node detail pages, a framework explorer, and a supplemental graph visualization. It is built entirely on top of the Canonical Principle above: a build step (`explorer/scripts/build-data.ts`) reads `/data` and `/relationships/ontology.json` and emits a derived, gitignored JSON graph that every page and the client-side search index are generated from. Nothing in `/explorer` can write back to `/data` — it is a pure view, same as `/editorial`'s reports. See `/workbench/explorer/README.md` for the full architecture (routes, search, graph visualization, filtering, executive export).
