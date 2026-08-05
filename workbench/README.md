@@ -4,7 +4,7 @@ A data-first, schema-driven knowledge graph for AI governance — organised arou
 
 **This is independent of AOS.** AOS (elsewhere in this repository) is the flagship consulting operating system used to run engagements. The Workbench is a separate, public knowledge platform aimed at building industry authority — nothing here depends on AOS, and nothing in AOS should come to depend on this without a deliberate integration decision.
 
-This is **Phase 1 + Phase 2A**: the data foundation, the editorial tooling that keeps future contributions consistent, and a seed dataset (the "Foundational Twenty"). No frontend, dashboard, search page, or graph visualisation is built yet — see [`ONTOLOGY.md`](ONTOLOGY.md) for the Canonical Principle this is built on, and [`/docs/architecture.md`](docs/architecture.md) for the fuller reasoning.
+This spans **Phase 1 through Phase 3**: the data foundation, the editorial tooling that keeps contributions consistent, a growing curated dataset (Edition 1.1: 139 objects across 35 real, independently-verified incidents), and — as of Phase 3 — the Explorer, a public, search-first interface for browsing and traversing the graph. See [`ONTOLOGY.md`](ONTOLOGY.md) for the Canonical Principle this is built on, and [`/docs/architecture.md`](docs/architecture.md) for the fuller reasoning.
 
 ## What's here
 
@@ -15,9 +15,10 @@ This is **Phase 1 + Phase 2A**: the data foundation, the editorial tooling that 
   /data           The canonical dataset (one JSON file per object)
   /relationships  The machine-readable relationship ontology
   /validators     The validation engine (TypeScript + ajv) — the merge gate
-  /editorial      Deterministic authoring/QA tools for maintainers (wizard, suggestions, coverage, health)
+  /editorial      Deterministic authoring/QA tools for maintainers (wizard, suggestions, coverage, health, insights)
   /ingestion      The draft -> human review -> canonical pipeline for Incidents
-  /search         Reserved for a future search index (empty)
+  /explorer       The public interface: search, browsing, node pages, framework pages, graph view (Phase 3)
+  /search         Superseded by /explorer's local search — see /search/README.md
   /docs           Full documentation set (start here for the "why" behind everything)
 ```
 
@@ -52,6 +53,16 @@ Governance Decision (`DEC-`), Incident (`INC-`), Design Pattern (`PAT-`), Framew
 
 `/editorial` — deterministic, rule-based tools that improve contribution quality and consistency without automating editorial judgment: an Incident Authoring Wizard, a Relationship Suggestion Engine, a Citation Completeness Checker, a Coverage Metrics Dashboard, and a Graph Health Report (which enforces the Zero-Orphan Invariant as a hard gate). See [`/editorial/README.md`](editorial/README.md).
 
-## Example dataset: the Foundational Twenty
+## Example dataset: the Foundational Twenty, and beyond
 
-The dataset in `/data` is 91 objects across 20 real, independently-verified AI governance incidents (`INC-001` through `INC-020`), organised into 13 governance-concept clusters and fully linked through Decisions, Patterns, Controls, Evidence, and Board Questions — selected to maximise breadth of governance concepts, not media popularity. Every relationship states its `reason`; see [`/docs/foundational-twenty.md`](docs/foundational-twenty.md) for the full map and known gaps, and the `citations` on each object for sources.
+The dataset in `/data` started as 91 objects across 20 real, independently-verified AI governance incidents (the "Foundational Twenty," `INC-001`–`INC-020`) and has since grown, edition by edition — see [`/docs/releases`](docs/releases/README.md) for the numbered, citable edition history (currently Edition 1.1: 139 objects, 35 incidents). Every relationship states its `reason`; see [`/docs/foundational-twenty.md`](docs/foundational-twenty.md) for the original selection rationale, and the `citations` on each object for sources.
+
+## Explorer (Phase 3)
+
+`/explorer` is the public, interactive interface onto the graph — universal search, per-entity browsing and filtering, executive-briefing node detail pages, a framework explorer, and a supplemental graph visualization, all statically generated from `/data` with no backend. See [`/explorer/README.md`](explorer/README.md) for the full architecture.
+
+```sh
+cd workbench/explorer
+npm install
+npm run dev      # regenerates data from /workbench/data, starts a dev server
+```

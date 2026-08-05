@@ -1,5 +1,5 @@
-# Search (reserved, not built in Phase 1)
+# Search (superseded by /explorer)
 
-This directory exists to match the module's target repository structure. Phase 1 is scoped to the data foundation only — no search index, search page, or query API is built here yet. See `/docs/architecture.md` for why.
+This directory was reserved in Phase 1 for a future search index build step. Phase 3 built that capability inside `/workbench/explorer` instead of here: `explorer/lib/search.ts` builds a local, in-browser [MiniSearch](https://github.com/lucaong/minisearch) index from `explorer/data/generated/graph.json`, itself a *derived* artifact regenerated from `/data` on every build (`explorer/scripts/build-data.ts`) — the principle this directory originally described, just realized as part of the Explorer rather than as a standalone module.
 
-When search is built (Phase 2+), it should be a *derived* artifact generated from `/data` — e.g. a build step that reads every validated object and produces a search index (full-text and/or graph-traversal) — never a second source of truth. Anything placed here in the future should be regeneratable from `/data` alone.
+This directory is kept only so the historical placeholder isn't silently deleted. See `/workbench/explorer/README.md` for the actual search architecture.

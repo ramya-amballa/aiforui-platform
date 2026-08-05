@@ -44,7 +44,8 @@ The brief for this project is explicit: "the primary organizing principle is Gov
   /validators     The validation engine (TypeScript + ajv) that enforces schemas + graph-level rules
   /editorial      Deterministic authoring/QA tools for maintainers (Phase 2A) — see /editorial/README.md
   /ingestion      The draft -> human review -> canonical pipeline for turning news into Incidents
-  /search         Reserved for a future search index build step — deliberately empty
+  /search         Superseded by /explorer's local search — see /search/README.md
+  /explorer       The public interface: a static, search-first way to browse and traverse the graph (Phase 3)
   /docs           This documentation set
 ```
 
@@ -72,4 +73,8 @@ Nothing in Phase 1 is exposed over an API, but nothing about `/data`'s design sh
 
 ## What Phase 1 deliberately does not build
 
-No frontend, dashboard, search page, or graph visualisation — per the brief. `/search` exists as a directory (matching the required repository structure) but contains only a placeholder explaining what it's reserved for, so Phase 2 has a clear landing spot without Phase 1 guessing at a search index design prematurely.
+No frontend, dashboard, search page, or graph visualisation — per the brief. `/search` exists as a directory (matching the required repository structure) but contains only a placeholder explaining what it's reserved for, so a later phase has a clear landing spot without Phase 1 guessing at a search index design prematurely.
+
+## The Explorer (Phase 3)
+
+`/workbench/explorer` is the first public interface onto the graph: a static, search-first site (Next.js, `output: "export"` — no server, no database) with universal search, per-entity browsing and filtering, executive-briefing-style node detail pages, a framework explorer, and a supplemental graph visualization. It is built entirely on top of the Canonical Principle above: a build step (`explorer/scripts/build-data.ts`) reads `/data` and `/relationships/ontology.json` and emits a derived, gitignored JSON graph that every page and the client-side search index are generated from. Nothing in `/explorer` can write back to `/data` — it is a pure view, same as `/editorial`'s reports. See `/workbench/explorer/README.md` for the full architecture (routes, search, graph visualization, filtering, executive export).

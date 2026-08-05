@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --border: theme("colors.ink.200");
+  --border-strong: theme("colors.ink.300");
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+  }
+  body {
+    @apply bg-white text-ink-900 text-base antialiased;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-semibold tracking-tight text-ink-900;
+  }
+  a {
+    @apply text-accent-600;
+  }
+  ::selection {
+    @apply bg-accent-100;
+  }
+}
+
+@layer components {
+  .id-tag {
+    @apply font-mono text-xs tracking-tight text-ink-500;
+  }
+
+  .card {
+    @apply border border-ink-200 rounded-md bg-white;
+  }
+
+  .btn {
+    @apply inline-flex items-center gap-1.5 rounded border border-ink-300 bg-white px-2.5 py-1.5 text-sm font-medium text-ink-700 hover:border-ink-400 hover:bg-ink-50 transition-colors;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-1.5 rounded bg-ink-900 px-2.5 py-1.5 text-sm font-medium text-white hover:bg-ink-800 transition-colors;
+  }
+
+  .field-label {
+    @apply text-xs font-semibold uppercase tracking-wide text-ink-500;
+  }
+
+  .prose-body {
+    @apply text-[0.9375rem] leading-relaxed text-ink-700;
+  }
+
+  .section-heading {
+    @apply text-sm font-semibold uppercase tracking-wide text-ink-500 mb-2;
+  }
+}
+
+/* Print / PDF-ready layout */
+@media print {
+  header,
+  footer,
+  .no-print,
+  nav {
+    display: none !important;
+  }
+  body {
+    font-size: 11pt;
+    color: black;
+  }
+  a {
+    color: black !important;
+    text-decoration: none !important;
+  }
+  .card {
+    border: 1px solid #ccc !important;
+    break-inside: avoid;
+  }
+  main {
+    max-width: 100% !important;
+  }
+}
