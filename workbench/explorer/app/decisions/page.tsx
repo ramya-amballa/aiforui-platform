@@ -3,7 +3,11 @@ import { PageHeader } from "@/components/PageHeader";
 import { nodesByType } from "@/lib/data";
 import { ENTITY_LABEL_PLURAL, ENTITY_DESCRIPTION } from "@/lib/types";
 
-export const metadata = { title: "Governance Decisions — AI Governance Workbench" };
+export const metadata = {
+  title: "Governance Decisions",
+  description: ENTITY_DESCRIPTION.decision,
+  alternates: { canonical: "/decisions/" },
+};
 
 export default function DecisionsPage() {
   const nodes = nodesByType("decision");

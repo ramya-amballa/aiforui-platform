@@ -3,7 +3,11 @@ import { PageHeader } from "@/components/PageHeader";
 import { nodesByType } from "@/lib/data";
 import { ENTITY_LABEL_PLURAL, ENTITY_DESCRIPTION } from "@/lib/types";
 
-export const metadata = { title: "Board Questions — AI Governance Workbench" };
+export const metadata = {
+  title: "Board Questions",
+  description: ENTITY_DESCRIPTION.board_question,
+  alternates: { canonical: "/board-questions/" },
+};
 
 export default function BoardQuestionsPage() {
   const nodes = nodesByType("board_question");

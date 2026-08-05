@@ -1,7 +1,11 @@
 import { graph } from "@/lib/data";
 import { QualityDashboard } from "@/components/QualityDashboard";
 
-export const metadata = { title: "Our Standards — AI Governance Workbench" };
+export const metadata = {
+  title: "Our Standards",
+  description: "The project's editorial and structural standards, backed by a live Quality Dashboard computed directly from the repository's own validation and editorial tooling.",
+  alternates: { canonical: "/standards/" },
+};
 
 function Section({ id, title, lede, items }: { id: string; title: string; lede: string; items: string[] }) {
   return (

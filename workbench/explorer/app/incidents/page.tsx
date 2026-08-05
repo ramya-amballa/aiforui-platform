@@ -3,7 +3,11 @@ import { PageHeader } from "@/components/PageHeader";
 import { nodesByType } from "@/lib/data";
 import { ENTITY_LABEL_PLURAL, ENTITY_DESCRIPTION } from "@/lib/types";
 
-export const metadata = { title: "Incidents — AI Governance Workbench" };
+export const metadata = {
+  title: "Incidents",
+  description: ENTITY_DESCRIPTION.incident,
+  alternates: { canonical: "/incidents/" },
+};
 
 export default function IncidentsPage() {
   const nodes = nodesByType("incident");

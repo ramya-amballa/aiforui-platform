@@ -1,4 +1,5 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { nodesByType, getNode, relatedByVerb } from "@/lib/data";
 import { DetailHeader } from "@/components/DetailHeader";
@@ -10,6 +11,18 @@ import { ANCHOR_ID } from "@/lib/anchors";
 
 export function generateStaticParams() {
   return nodesByType("control").map((n) => ({ slug: n.slug }));
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const node = getNode("control", slug);
+  if (!node) return {};
+  return {
+    title: node.title,
+    description: node.description,
+    alternates: { canonical: `/controls/${node.slug}/` },
+    openGraph: { title: node.title, description: node.description },
+  };
 }
 
 export default async function ControlDetailPage({ params }: { params: Promise<{ slug: string }> }) {

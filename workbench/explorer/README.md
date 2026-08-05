@@ -70,3 +70,7 @@ npm run build    # regenerates data, produces a static export in /out
 npm run typecheck
 npm run lint
 ```
+
+## Deployment
+
+The Explorer deploys to Vercel as a static export. See [`DEPLOYMENT.md`](DEPLOYMENT.md) for the one-click import steps, why the build needs a cross-directory install hook, the security headers in `vercel.json`, and the custom-domain (`workbench.aiforui.com`) setup.

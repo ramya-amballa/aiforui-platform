@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { graph, frameworkDetail } from "@/lib/data";
 import { NodeListItem } from "@/components/NodeListItem";
@@ -5,6 +6,22 @@ import type { GraphNode } from "@/lib/types";
 
 export function generateStaticParams() {
   return graph.frameworks.map((f) => ({ slug: f.slug }));
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const detail = frameworkDetail(slug);
+  if (!detail) return {};
+  const description =
+    detail.framework.status === "covered"
+      ? `${detail.controls.length} control${detail.controls.length === 1 ? "" : "s"} from ${detail.framework.label} mapped in the AI Governance Workbench, with every decision, pattern, incident, evidence type, and board question that connects to them.`
+      : `${detail.framework.label}: a known coverage gap in the AI Governance Workbench dataset — no control cites this framework yet.`;
+  return {
+    title: detail.framework.label,
+    description,
+    alternates: { canonical: `/frameworks/${slug}/` },
+    openGraph: { title: detail.framework.label, description },
+  };
 }
 
 function Group({ title, nodes }: { title: string; nodes: GraphNode[] }) {

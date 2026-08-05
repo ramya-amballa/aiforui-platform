@@ -1,4 +1,8 @@
-export const metadata = { title: "Source Transparency — AI Governance Workbench" };
+export const metadata = {
+  title: "Source Transparency",
+  description: "Where the Workbench's information comes from, how source types are ranked, and how confidence is assigned to every canonical object.",
+  alternates: { canonical: "/sources/" },
+};
 
 const SOURCE_TYPES: { label: string; note: string }[] = [
   { label: "Regulator", note: "An order, guidance document, or enforcement action issued directly by a regulatory body — preferred over reporting about it whenever the primary document is public." },

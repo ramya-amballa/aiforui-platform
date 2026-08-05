@@ -3,7 +3,11 @@ import { PageHeader } from "@/components/PageHeader";
 import { nodesByType } from "@/lib/data";
 import { ENTITY_LABEL_PLURAL, ENTITY_DESCRIPTION } from "@/lib/types";
 
-export const metadata = { title: "Evidence Types — AI Governance Workbench" };
+export const metadata = {
+  title: "Evidence Types",
+  description: ENTITY_DESCRIPTION.evidence,
+  alternates: { canonical: "/evidence/" },
+};
 
 export default function EvidencePage() {
   const nodes = nodesByType("evidence");

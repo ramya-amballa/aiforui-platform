@@ -4,9 +4,60 @@ import "./globals.css";
 import { SearchProvider } from "@/components/SearchProvider";
 import { Header } from "@/components/Header";
 
+const SITE_URL = "https://workbench.aiforui.com";
+const SITE_TITLE = "AI Governance Workbench";
+const SITE_DESCRIPTION =
+  "An open, practitioner-built knowledge graph connecting real AI governance incidents to the decisions, patterns, controls, evidence, and board questions they imply.";
+
 export const metadata: Metadata = {
-  title: "AI Governance Workbench",
-  description: "The open knowledge graph for AI governance decisions.",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: SITE_TITLE,
+    template: `%s — ${SITE_TITLE}`,
+  },
+  description: SITE_DESCRIPTION,
+  applicationName: SITE_TITLE,
+  authors: [{ name: "AI for U&I" }],
+  keywords: [
+    "AI governance",
+    "AI risk management",
+    "AI incidents",
+    "NIST AI RMF",
+    "EU AI Act",
+    "AI governance framework",
+    "board oversight of AI",
+    "AI compliance",
+  ],
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    url: SITE_URL,
+    siteName: SITE_TITLE,
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: SITE_TITLE }],
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    images: ["/og-image.png"],
+  },
+  icons: {
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico", sizes: "any" },
+    ],
+    apple: "/apple-touch-icon.png",
+  },
+  manifest: "/manifest.webmanifest",
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

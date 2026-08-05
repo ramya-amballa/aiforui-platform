@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { nodesByType, getNode, relatedByVerb } from "@/lib/data";
 import { DetailHeader } from "@/components/DetailHeader";
@@ -10,6 +11,18 @@ import { ANCHOR_ID } from "@/lib/anchors";
 
 export function generateStaticParams() {
   return nodesByType("decision").map((n) => ({ slug: n.slug }));
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const node = getNode("decision", slug);
+  if (!node) return {};
+  return {
+    title: node.title,
+    description: node.description,
+    alternates: { canonical: `/decisions/${node.slug}/` },
+    openGraph: { title: node.title, description: node.description },
+  };
 }
 
 export default async function DecisionDetailPage({ params }: { params: Promise<{ slug: string }> }) {

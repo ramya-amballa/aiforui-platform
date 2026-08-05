@@ -2,7 +2,11 @@ import { GraphView } from "@/components/GraphView";
 import { PageHeader } from "@/components/PageHeader";
 import { graph } from "@/lib/data";
 
-export const metadata = { title: "Graph — AI Governance Workbench" };
+export const metadata = {
+  title: "Graph",
+  description: "A supplemental, full-graph visualization of every canonical object and relationship in the AI Governance Workbench.",
+  alternates: { canonical: "/graph/" },
+};
 
 export default function GraphPage() {
   return (

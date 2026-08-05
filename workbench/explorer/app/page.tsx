@@ -1,8 +1,13 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { EntityCard } from "@/components/EntityCard";
 import { HomeQueryChips } from "@/components/HomeQueryChips";
 import { graph } from "@/lib/data";
 import { ENTITY_TYPES } from "@/lib/types";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 export default function HomePage() {
   const totalObjects = graph.nodes.length;

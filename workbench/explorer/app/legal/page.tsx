@@ -1,4 +1,8 @@
-export const metadata = { title: "Legal Disclaimer — AI Governance Workbench" };
+export const metadata = {
+  title: "Legal Disclaimer",
+  description: "The AI Governance Workbench's educational-purposes-only scope, no-professional-reliance notice, and how factual claims are written.",
+  alternates: { canonical: "/legal/" },
+};
 
 function P({ children }: { children: React.ReactNode }) {
   return <p className="prose-body mt-3">{children}</p>;

@@ -1,4 +1,8 @@
-export const metadata = { title: "Corrections — AI Governance Workbench" };
+export const metadata = {
+  title: "Corrections",
+  description: "How to report a factual error in the AI Governance Workbench and how corrections are reviewed and handled.",
+  alternates: { canonical: "/corrections/" },
+};
 
 export default function CorrectionsPage() {
   return (

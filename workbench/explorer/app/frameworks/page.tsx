@@ -2,7 +2,11 @@ import Link from "next/link";
 import { graph } from "@/lib/data";
 import { PageHeader } from "@/components/PageHeader";
 
-export const metadata = { title: "Frameworks — AI Governance Workbench" };
+export const metadata = {
+  title: "Frameworks",
+  description: "Every regulatory and standards framework mapped in the dataset — NIST AI RMF, EU AI Act, GDPR, and more — with what maps to each and what's still a known coverage gap.",
+  alternates: { canonical: "/frameworks/" },
+};
 
 export default function FrameworksPage() {
   return (
