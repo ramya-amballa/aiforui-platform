@@ -2,13 +2,18 @@
   "id": "BRD-007",
   "slug": "biometric-consent-and-accuracy-safeguards",
   "title": "Does every biometric collection point have documented consent and tested accuracy safeguards?",
-  "description": "A board-level oversight question testing whether an organisation's biometric systems have both a documented legal basis for collection and independently confirmed accuracy before any biometric match affects a real person.",
-  "version": "1.0.0",
+  "description": "A board-level oversight question testing whether an organization's biometric systems have both a documented legal basis for collection and independently confirmed accuracy before any biometric match affects a real person.",
+  "version": "1.0.1",
   "status": "active",
   "confidence": "Reviewed",
   "created_date": "2026-08-04",
-  "updated_date": "2026-08-04",
-  "tags": ["facial-recognition", "privacy", "biometric", "board-oversight"],
+  "updated_date": "2026-08-05",
+  "tags": [
+    "facial-recognition",
+    "privacy",
+    "biometric",
+    "board-oversight"
+  ],
   "created_by": "AI Governance Workbench (Phase 2A seed data)",
   "history": [
     {
@@ -17,10 +22,21 @@
       "by": "AI Governance Workbench (Phase 2A seed data)",
       "version": "1.0.0",
       "note": "Initial Phase 2A seed content."
+    },
+    {
+      "event": "updated",
+      "date": "2026-08-05",
+      "by": "AI Governance Workbench (Editorial Quality Audit)",
+      "version": "1.0.1",
+      "note": "Normalized US/UK spelling variants to the American-English house style (schema field names, e.g. organizations_involved, are already American; majority framework citations - NIST, FTC, EEOC, FCRA, BIPA - are American sources)."
     }
   ],
   "question_text": "For every point in our systems where biometric data (facial images, fingerprints, voiceprints) is collected or matched, do we have a documented legal basis and consent record, and — separately — has the accuracy of any matching system been independently tested across demographic groups, with a human required to confirm any match before it triggers action against a real person?",
-  "audience": ["board", "risk_committee", "audit_committee"],
+  "audience": [
+    "board",
+    "risk_committee",
+    "audit_committee"
+  ],
   "rationale": "Rite Aid and Clearview AI represent the two most common ways biometric governance fails: acting on unconfirmed, biased matches (Rite Aid), and collecting biometric data without consent in the first place (Clearview). Both led to major regulatory enforcement.",
   "follow_up_actions": [
     "Request the current biometric consent record and facial-recognition accuracy/human-review log.",

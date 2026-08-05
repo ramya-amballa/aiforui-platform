@@ -1,14 +1,19 @@
 {
   "id": "CTR-020",
   "slug": "ilo-core-labour-standards",
-  "title": "ILO Declaration on Fundamental Principles and Rights at Work — applied to AI data-labelling supply chains",
-  "description": "General international core labour standards, applied here to the AI data-labelling/content-moderation supply chain in the absence of any dedicated AI-specific labour framework. This absence is itself a notable governance gap: as of this record, no framework equivalent to NIST AI RMF or the EU AI Act exists specifically for AI supply-chain labour conditions. 'Community' confidence reflects both the general (not AI-specific) nature of the source and the fact this is a general framework applied to a novel context, not a verbatim-quoted provision.",
-  "version": "1.0.0",
+  "title": "ILO Declaration on Fundamental Principles and Rights at Work — applied to AI data-labeling supply chains",
+  "description": "General international core labor standards, applied here to the AI data-labeling/content-moderation supply chain in the absence of any dedicated AI-specific labor framework. This absence is itself a notable governance gap: as of this record, no framework equivalent to NIST AI RMF or the EU AI Act exists specifically for AI supply-chain labor conditions. 'Community' confidence reflects both the general (not AI-specific) nature of the source and the fact this is a general framework applied to a novel context, not a verbatim-quoted provision.",
+  "version": "1.0.1",
   "status": "draft",
   "confidence": "Community",
   "created_date": "2026-08-04",
-  "updated_date": "2026-08-04",
-  "tags": ["ilo", "labor", "data-labeling", "supply-chain"],
+  "updated_date": "2026-08-05",
+  "tags": [
+    "ilo",
+    "labor",
+    "data-labeling",
+    "supply-chain"
+  ],
   "created_by": "AI Governance Workbench (Phase 3 seed data)",
   "history": [
     {
@@ -17,12 +22,19 @@
       "by": "AI Governance Workbench (Phase 3 seed data)",
       "version": "1.0.0",
       "note": "Initial Edition 1.1 content."
+    },
+    {
+      "event": "updated",
+      "date": "2026-08-05",
+      "by": "AI Governance Workbench (Editorial Quality Audit)",
+      "version": "1.0.1",
+      "note": "Normalized US/UK spelling variants to the American-English house style (schema field names, e.g. organizations_involved, are already American; majority framework citations - NIST, FTC, EEOC, FCRA, BIPA - are American sources)."
     }
   ],
   "framework_name": "ILO Declaration on Fundamental Principles and Rights at Work",
-  "control_reference": "Core principles (freedom of association, elimination of forced/child labour, elimination of discrimination, and — per the 2022 addition — a safe and healthy working environment)",
-  "control_text": "Applied to AI data-labelling supply chains: workers engaged (directly or via a vendor) to perform psychologically demanding content-review work are entitled to a safe and healthy working environment, which in this context implies documented exposure limits, fair compensation, and access to psychological support — general labour principles applied to a context no AI-specific labour framework yet directly governs.",
-  "control_family": "Labour standards",
+  "control_reference": "Core principles (freedom of association, elimination of forced/child labor, elimination of discrimination, and — per the 2022 addition — a safe and healthy working environment)",
+  "control_text": "Applied to AI data-labeling supply chains: workers engaged (directly or via a vendor) to perform psychologically demanding content-review work are entitled to a safe and healthy working environment, which in this context implies documented exposure limits, fair compensation, and access to psychological support — general labor principles applied to a context no AI-specific labor framework yet directly governs.",
+  "control_family": "Labor standards",
   "citations": [
     {
       "id": "cite-ilo-declaration",

@@ -2,13 +2,17 @@
   "id": "EVI-005",
   "slug": "acceptable-use-policy-attestation",
   "title": "Acceptable Use Policy Attestation",
-  "description": "A record showing employees have acknowledged an organisation's generative AI acceptable-use policy, together with configuration records for any technical control (e.g. DLP tooling) enforcing it.",
-  "version": "1.0.0",
+  "description": "A record showing employees have acknowledged an organization's generative AI acceptable-use policy, together with configuration records for any technical control (e.g. DLP tooling) enforcing it.",
+  "version": "1.0.1",
   "status": "active",
   "confidence": "Community",
   "created_date": "2026-08-04",
-  "updated_date": "2026-08-04",
-  "tags": ["generative-ai", "security", "enterprise-policy"],
+  "updated_date": "2026-08-05",
+  "tags": [
+    "generative-ai",
+    "security",
+    "enterprise-policy"
+  ],
   "created_by": "AI Governance Workbench (Phase 2A seed data)",
   "history": [
     {
@@ -17,6 +21,13 @@
       "by": "AI Governance Workbench (Phase 2A seed data)",
       "version": "1.0.0",
       "note": "Initial Phase 2A seed content."
+    },
+    {
+      "event": "updated",
+      "date": "2026-08-05",
+      "by": "AI Governance Workbench (Editorial Quality Audit)",
+      "version": "1.0.1",
+      "note": "Normalized US/UK spelling variants to the American-English house style (schema field names, e.g. organizations_involved, are already American; majority framework citations - NIST, FTC, EEOC, FCRA, BIPA - are American sources)."
     }
   ],
   "evidence_description": "A record of which employees have completed acceptable-use policy training and attestation for third-party generative AI tools, plus the current configuration of any technical control (DLP rules, approved-tool allowlist) enforcing that policy.",

@@ -52,8 +52,16 @@ npm run editorial:insights [-- --out=insights-report.md]
 
 The graph explaining itself, computed entirely from canonical `/data` — no generated commentary, no opinion layered on top. Reports: the most frequently invoked Governance Decisions (by incident count), Design Pattern reuse frequency (which patterns more than one Decision implements — the dataset's own signal for which governance responses are genuinely recurring, not one-off), highest-confidence Decisions (with an explicit note on why `Verified` is rare), weakly-covered governance areas (harm types, jurisdictions, AI system categories with thin representation), top tags by frequency as a proxy for emerging themes, cross-framework overlap (evidence types required by controls from more than one distinct framework — where independent regulators converge on the same observable artifact), and incident clusters (incidents grouped by the Decision they share). This is a reporting tool, not a platform feature — no UI, no visualization, no export engine, consistent with the Phase 2 infrastructure freeze.
 
+## Repository Quality Audit
+
+```sh
+npm run editorial:audit [-- --out=audit-report.md]
+```
+
+Checks the things `/validators` structurally can't: naming-convention consistency per entity type (do Pattern titles all end in "Pattern," do Board Questions all read as questions, do Decisions all open with an imperative verb), US/UK spelling consistency in editorially-authored prose (explicitly excluding citation titles/publishers/excerpts, since "correcting" a verbatim external quotation would misrepresent the source), tag hygiene (near-duplicate tags from inconsistent hyphenation), relationship-rationale depth (reason strings reused verbatim across many edges — not wrong, but a signal of generic rather than incident-specific reasoning), a redundant confirmation that every relationship triple is ontology-valid, citation depth against the Edition 1.2 target of 80/100, and taxonomy sprawl in free-text categorical fields. Findings are graded ERROR / WARNING / INFO: ERROR should block a release, WARNING is what a maintainer fixes as part of the same pass that runs the audit, INFO is logged for future editorial judgment and is deliberately never auto-fixed (closing the citation-depth gap, for instance, requires re-reading real sources — this tool can measure the gap, not close it). Like every other `/editorial` tool, this is read-only: it never writes to `/data`.
+
 ## Design notes
 
-- All six tools share `src/lib/graph.ts`, which reuses the exact loaders `/validators` uses (`loadAllData`, `loadOntology`) — "the graph" means the same thing everywhere in this codebase.
+- All seven tools share `src/lib/graph.ts`, which reuses the exact loaders `/validators` uses (`loadAllData`, `loadOntology`) — "the graph" means the same thing everywhere in this codebase.
 - `graph-health.ts` imports the real rule functions from `/validators/src/rules` rather than re-implementing structural checks, so the two can't silently drift apart.
 - None of these tools has a write path into `/data`. The wizard writes only to `/ingestion/drafts`, which is non-canonical by construction (see `/docs/ingestion-pipeline.md`).

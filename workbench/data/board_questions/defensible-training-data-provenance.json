@@ -2,13 +2,18 @@
   "id": "BRD-011",
   "slug": "defensible-training-data-provenance",
   "title": "Could we defend our training data sourcing if a rights holder challenged it?",
-  "description": "A board-level oversight question testing whether an organisation has a documented, defensible record of where its generative model's training data came from, before a legal challenge forces the question.",
-  "version": "1.0.0",
+  "description": "A board-level oversight question testing whether an organization has a documented, defensible record of where its generative model's training data came from, before a legal challenge forces the question.",
+  "version": "1.0.1",
   "status": "active",
   "confidence": "Reviewed",
   "created_date": "2026-08-04",
-  "updated_date": "2026-08-04",
-  "tags": ["generative-ai", "intellectual-property", "training-data", "board-oversight"],
+  "updated_date": "2026-08-05",
+  "tags": [
+    "generative-ai",
+    "intellectual-property",
+    "training-data",
+    "board-oversight"
+  ],
   "created_by": "AI Governance Workbench (Phase 2A seed data)",
   "history": [
     {
@@ -17,10 +22,21 @@
       "by": "AI Governance Workbench (Phase 2A seed data)",
       "version": "1.0.0",
       "note": "Initial Phase 2A seed content."
+    },
+    {
+      "event": "updated",
+      "date": "2026-08-05",
+      "by": "AI Governance Workbench (Editorial Quality Audit)",
+      "version": "1.0.1",
+      "note": "Normalized US/UK spelling variants to the American-English house style (schema field names, e.g. organizations_involved, are already American; majority framework citations - NIST, FTC, EEOC, FCRA, BIPA - are American sources)."
     }
   ],
   "question_text": "Do we have a documented, defensible basis for the data used to train any generative model we deploy or procure — including a record of which sources were scraped, which were licensed, and what risk decision was made for each — or would we be assembling that record for the first time only after a rights holder's legal challenge, as in Getty Images v. Stability AI?",
-  "audience": ["board", "risk_committee", "audit_committee"],
+  "audience": [
+    "board",
+    "risk_committee",
+    "audit_committee"
+  ],
   "rationale": "Getty Images v. Stability AI shows that a generative model's commercial deployment can be challenged years after launch over training-data sourcing decisions that were never documented at the time.",
   "follow_up_actions": [
     "Request the current training data provenance log for any generative model developed or fine-tuned in-house.",

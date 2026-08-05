@@ -1,14 +1,19 @@
 {
   "id": "PAT-006",
   "slug": "age-verification-legal-basis-gate-pattern",
-  "title": "Age Verification & Legal Basis Gate for Consumer AI",
+  "title": "Consumer AI Age Verification & Legal Basis Gate Pattern",
   "description": "A pattern requiring a documented GDPR legal basis, published privacy notice, and effective age-verification mechanism before a consumer AI product is made available to EU users, rather than launching first and addressing compliance reactively.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "status": "draft",
   "confidence": "Community",
   "created_date": "2026-08-04",
-  "updated_date": "2026-08-04",
-  "tags": ["generative-ai", "privacy", "gdpr", "child-safety"],
+  "updated_date": "2026-08-05",
+  "tags": [
+    "generative-ai",
+    "privacy",
+    "gdpr",
+    "child-safety"
+  ],
   "created_by": "AI Governance Workbench (Phase 2A seed data)",
   "history": [
     {
@@ -17,6 +22,13 @@
       "by": "AI Governance Workbench (Phase 2A seed data)",
       "version": "1.0.0",
       "note": "Initial Phase 2A seed content."
+    },
+    {
+      "event": "updated",
+      "date": "2026-08-05",
+      "by": "AI Governance Workbench (Editorial Quality Audit)",
+      "version": "1.0.1",
+      "note": "Normalized title to match the dataset's 'ends with Pattern' naming convention, reordered for grammatical clarity (was \"Age Verification & Legal Basis Gate for Consumer AI\")."
     }
   ],
   "problem": "Consumer AI products, particularly conversational or companion-style products, are often launched globally without first confirming a GDPR legal basis for processing EU users' data or verifying that users below a product's stated minimum age are actually excluded.",

@@ -14,6 +14,7 @@
     "editorial:coverage": "tsx editorial/src/coverage-dashboard.ts",
     "editorial:health": "tsx editorial/src/graph-health.ts",
     "editorial:insights": "tsx editorial/src/insights.ts",
+    "editorial:audit": "tsx editorial/src/audit.ts",
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {

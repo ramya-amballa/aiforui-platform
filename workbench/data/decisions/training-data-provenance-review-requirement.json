@@ -2,13 +2,17 @@
   "id": "DEC-012",
   "slug": "training-data-provenance-review-requirement",
   "title": "Require documented training-data provenance and licensing review before deploying a generative model commercially",
-  "description": "Illustrative reference decision modelled on the Getty Images v. Stability AI litigation. Not a documented decision of any specific organisation.",
-  "version": "1.0.0",
+  "description": "Illustrative reference decision modelled on the Getty Images v. Stability AI litigation. Not a documented decision of any specific organization.",
+  "version": "1.0.1",
   "status": "draft",
   "confidence": "Community",
   "created_date": "2026-08-04",
-  "updated_date": "2026-08-04",
-  "tags": ["generative-ai", "intellectual-property", "training-data"],
+  "updated_date": "2026-08-05",
+  "tags": [
+    "generative-ai",
+    "intellectual-property",
+    "training-data"
+  ],
   "created_by": "AI Governance Workbench (Phase 2A seed data)",
   "history": [
     {
@@ -17,14 +21,25 @@
       "by": "AI Governance Workbench (Phase 2A seed data)",
       "version": "1.0.0",
       "note": "Initial Phase 2A seed content, part of the Foundational Twenty."
+    },
+    {
+      "event": "updated",
+      "date": "2026-08-05",
+      "by": "AI Governance Workbench (Editorial Quality Audit)",
+      "version": "1.0.1",
+      "note": "Normalized US/UK spelling variants to the American-English house style (schema field names, e.g. organizations_involved, are already American; majority framework citations - NIST, FTC, EEOC, FCRA, BIPA - are American sources). Normalized a duplicated relationship-reason phrasing (\"...via this design pattern.\" -> \"...via this single, primary design pattern.\") to one canonical wording."
     }
   ],
-  "decision_statement": "Before a generative model is deployed commercially, the organisation must document the provenance of its training data sources and complete a licensing review identifying any dataset obtained by scraping copyrighted or trademarked material, with a documented risk decision (licence, exclude, or accept identified risk) for each source.",
+  "decision_statement": "Before a generative model is deployed commercially, the organization must document the provenance of its training data sources and complete a licensing review identifying any dataset obtained by scraping copyrighted or trademarked material, with a documented risk decision (license, exclude, or accept identified risk) for each source.",
   "decision_type": "risk_acceptance",
-  "decision_context": "Motivated by Getty Images v. Stability AI, in which a major generative image model's commercial deployment was challenged over its use of scraped, copyrighted training images without a licence.",
+  "decision_context": "Motivated by Getty Images v. Stability AI, in which a major generative image model's commercial deployment was challenged over its use of scraped, copyrighted training images without a license.",
   "governing_body": "Illustrative example — Generative Model Governance Board",
-  "jurisdiction": ["UK"],
-  "frameworks_referenced": ["EU AI Act"],
+  "jurisdiction": [
+    "UK"
+  ],
+  "frameworks_referenced": [
+    "EU AI Act"
+  ],
   "alternatives_considered": [
     "Treat all publicly accessible training data as usable without a documented provenance review.",
     "Address provenance questions only reactively, in response to a legal challenge."
@@ -47,13 +62,15 @@
       "target_type": "incident",
       "reason": "This decision is modelled as a direct governance response to this litigation.",
       "confidence": "Verified",
-      "citation_ids": ["cite-getty-stability-judgment"]
+      "citation_ids": [
+        "cite-getty-stability-judgment"
+      ]
     },
     {
       "type": "IMPLEMENTED_BY",
       "target_id": "PAT-011",
       "target_type": "pattern",
-      "reason": "The decision is put into practice via this design pattern.",
+      "reason": "The decision is put into practice via this single, primary design pattern.",
       "confidence": "Community"
     },
     {

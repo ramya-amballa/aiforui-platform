@@ -3,12 +3,16 @@
   "slug": "pre-decision-human-review-gate-pattern",
   "title": "Pre-Decision Human Review Gate Pattern",
   "description": "A pattern in which an automated adverse decision about an individual's rights or benefits cannot take effect until a qualified human has reviewed the specific case, with a completed data protection impact assessment and documented legal basis in place before the system is used at all.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "status": "draft",
   "confidence": "Community",
   "created_date": "2026-08-04",
-  "updated_date": "2026-08-04",
-  "tags": ["government", "due-process", "automated-decision-making"],
+  "updated_date": "2026-08-05",
+  "tags": [
+    "government",
+    "due-process",
+    "automated-decision-making"
+  ],
   "created_by": "AI Governance Workbench (Phase 2A seed data)",
   "history": [
     {
@@ -17,11 +21,18 @@
       "by": "AI Governance Workbench (Phase 2A seed data)",
       "version": "1.0.0",
       "note": "Initial Phase 2A seed content."
+    },
+    {
+      "event": "updated",
+      "date": "2026-08-05",
+      "by": "AI Governance Workbench (Editorial Quality Audit)",
+      "version": "1.0.1",
+      "note": "Normalized US/UK spelling variants to the American-English house style (schema field names, e.g. organizations_involved, are already American; majority framework citations - NIST, FTC, EEOC, FCRA, BIPA - are American sources)."
     }
   ],
   "problem": "Automated systems that flag individuals for adverse action (a fraud investigation, a debt notice, a downgraded exam grade) are often deployed with an appeals process available only after the adverse action has already taken effect, by which point the harm — reputational, financial, or otherwise — has already occurred.",
   "solution": "Require a documented legal basis and a completed data protection impact assessment before the system processes any individual's data; require a qualified human to review and affirmatively approve each adverse decision before it takes effect, with visibility into the automated system's specific basis for flagging that individual; and classify the system against relevant high-risk categories (e.g. welfare eligibility, education, essential services) so the appropriate level of scrutiny is applied from the start.",
-  "applicability": "Any automated or algorithmic system used by a government body, or any organisation, to make or heavily inform a decision that adversely affects an individual's welfare eligibility, education outcomes, immigration status, or similar legal rights.",
+  "applicability": "Any automated or algorithmic system used by a government body, or any organization, to make or heavily inform a decision that adversely affects an individual's welfare eligibility, education outcomes, immigration status, or similar legal rights.",
   "consequences": "Pre-decision human review at scale requires enough trained staff to meaningfully engage with each flagged case rather than rubber-stamping the system's output; a DPIA and legal-basis review add lead time before a system can be deployed or materially changed.",
   "maturity": "emerging",
   "citations": [

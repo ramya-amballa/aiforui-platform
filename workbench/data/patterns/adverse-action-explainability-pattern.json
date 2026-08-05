@@ -3,12 +3,16 @@
   "slug": "adverse-action-explainability-pattern",
   "title": "Adverse Action Explainability Pattern",
   "description": "A pattern for generating a specific, individualised, accurate reason for any adverse credit or lending decision an automated system contributes to, rather than a generic boilerplate explanation.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "status": "draft",
   "confidence": "Community",
   "created_date": "2026-08-04",
-  "updated_date": "2026-08-04",
-  "tags": ["credit-scoring", "transparency", "explainability"],
+  "updated_date": "2026-08-05",
+  "tags": [
+    "credit-scoring",
+    "transparency",
+    "explainability"
+  ],
   "created_by": "AI Governance Workbench (Phase 2A seed data)",
   "history": [
     {
@@ -17,9 +21,16 @@
       "by": "AI Governance Workbench (Phase 2A seed data)",
       "version": "1.0.0",
       "note": "Initial Phase 2A seed content."
+    },
+    {
+      "event": "updated",
+      "date": "2026-08-05",
+      "by": "AI Governance Workbench (Editorial Quality Audit)",
+      "version": "1.0.1",
+      "note": "Normalized US/UK spelling variants to the American-English house style (schema field names, e.g. organizations_involved, are already American; majority framework citations - NIST, FTC, EEOC, FCRA, BIPA - are American sources)."
     }
   ],
-  "problem": "A complex underwriting model can produce accurate decisions while giving applicants only a generic explanation ('creditworthiness'), which prevents both the applicant and the organisation itself from quickly confirming or refuting an allegation of unfair treatment.",
+  "problem": "A complex underwriting model can produce accurate decisions while giving applicants only a generic explanation ('creditworthiness'), which prevents both the applicant and the organization itself from quickly confirming or refuting an allegation of unfair treatment.",
   "solution": "Generate the top contributing factors behind each adverse credit decision at the individual-applicant level (e.g. via a feature-attribution method appropriate to the model), translate them into plain-language reasons, and issue them as part of the adverse-action notice, retaining the underlying factor data for later review if a dispute arises.",
   "applicability": "Any automated or algorithmic system that contributes to a credit, lending, insurance-pricing, or similar consumer-facing eligibility decision.",
   "consequences": "Feature-attribution explanations for complex models are themselves an active area of methodological debate and can be misleading if not validated; generating and storing per-applicant explanations adds infrastructure cost.",

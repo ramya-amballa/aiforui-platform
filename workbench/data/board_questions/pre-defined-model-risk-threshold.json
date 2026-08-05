@@ -2,13 +2,17 @@
   "id": "BRD-019",
   "slug": "pre-defined-model-risk-threshold",
   "title": "Do we have a pre-defined threshold at which we would automatically pause an algorithmic program with financial exposure?",
-  "description": "A board-level oversight question testing whether an organisation has a binding, tested kill criterion for an algorithmic program committing its own capital, rather than relying on discretionary judgement after losses have already accumulated.",
-  "version": "1.0.0",
+  "description": "A board-level oversight question testing whether an organization has a binding, tested kill criterion for an algorithmic program committing its own capital, rather than relying on discretionary judgment after losses have already accumulated.",
+  "version": "1.0.1",
   "status": "active",
   "confidence": "Reviewed",
   "created_date": "2026-08-04",
-  "updated_date": "2026-08-04",
-  "tags": ["financial", "model-risk", "board-oversight"],
+  "updated_date": "2026-08-05",
+  "tags": [
+    "financial",
+    "model-risk",
+    "board-oversight"
+  ],
   "created_by": "AI Governance Workbench (Phase 3 seed data)",
   "history": [
     {
@@ -17,10 +21,21 @@
       "by": "AI Governance Workbench (Phase 3 seed data)",
       "version": "1.0.0",
       "note": "Initial Edition 1.1 content."
+    },
+    {
+      "event": "updated",
+      "date": "2026-08-05",
+      "by": "AI Governance Workbench (Editorial Quality Audit)",
+      "version": "1.0.1",
+      "note": "Normalized US/UK spelling variants to the American-English house style (schema field names, e.g. organizations_involved, are already American; majority framework citations - NIST, FTC, EEOC, FCRA, BIPA - are American sources)."
     }
   ],
   "question_text": "Do we have a pre-defined, binding threshold of prediction error or cumulative loss at which an algorithmic program committing our own capital would automatically pause — and has that threshold and pause mechanism ever actually been tested, or does it exist only on paper the way Zillow's apparently did not before its algorithmic home-buying losses reached hundreds of millions of dollars?",
-  "audience": ["board", "risk_committee", "audit_committee"],
+  "audience": [
+    "board",
+    "risk_committee",
+    "audit_committee"
+  ],
   "rationale": "Zillow's algorithmic home-buying program continued scaling through a period of systematic mispricing until losses had already reached hundreds of millions of dollars, resulting in a full business-line shutdown and roughly 2,000 layoffs.",
   "follow_up_actions": [
     "Request the current model performance kill-criterion monitoring log for every algorithmic program with direct financial exposure.",

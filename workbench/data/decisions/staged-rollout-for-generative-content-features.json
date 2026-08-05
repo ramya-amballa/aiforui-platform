@@ -2,13 +2,17 @@
   "id": "DEC-013",
   "slug": "staged-rollout-for-generative-content-features",
   "title": "Require context-aware pre-release testing and staged rollout for generative content features",
-  "description": "Illustrative reference decision modelled on the Google Gemini image-generation controversy. Not a documented decision of any specific organisation.",
-  "version": "1.0.0",
+  "description": "Illustrative reference decision modelled on the Google Gemini image-generation controversy. Not a documented decision of any specific organization.",
+  "version": "1.0.1",
   "status": "draft",
   "confidence": "Community",
   "created_date": "2026-08-04",
-  "updated_date": "2026-08-04",
-  "tags": ["generative-ai", "content-safety", "reputational"],
+  "updated_date": "2026-08-05",
+  "tags": [
+    "generative-ai",
+    "content-safety",
+    "reputational"
+  ],
   "created_by": "AI Governance Workbench (Phase 2A seed data)",
   "history": [
     {
@@ -17,14 +21,25 @@
       "by": "AI Governance Workbench (Phase 2A seed data)",
       "version": "1.0.0",
       "note": "Initial Phase 2A seed content, part of the Foundational Twenty."
+    },
+    {
+      "event": "updated",
+      "date": "2026-08-05",
+      "by": "AI Governance Workbench (Editorial Quality Audit)",
+      "version": "1.0.1",
+      "note": "Normalized US/UK spelling variants to the American-English house style (schema field names, e.g. organizations_involved, are already American; majority framework citations - NIST, FTC, EEOC, FCRA, BIPA - are American sources). Normalized a duplicated relationship-reason phrasing (\"...via this design pattern.\" -> \"...via this single, primary design pattern.\") to one canonical wording."
     }
   ],
-  "decision_statement": "Before broadly releasing a generative content feature, the organisation must test its output against a diverse, context-specific set of prompts — including prompts where a safety or fairness adjustment could plausibly conflict with factual/historical accuracy — and release to a limited audience first, with a fast feedback and rollback path, before full public availability.",
+  "decision_statement": "Before broadly releasing a generative content feature, the organization must test its output against a diverse, context-specific set of prompts — including prompts where a safety or fairness adjustment could plausibly conflict with factual/historical accuracy — and release to a limited audience first, with a fast feedback and rollback path, before full public availability.",
   "decision_type": "policy",
   "decision_context": "Motivated by Google Gemini's image generator producing historically inaccurate depictions after a fairness-tuning adjustment was applied without testing its effect on factual/historical prompts specifically.",
   "governing_body": "Illustrative example — Generative Content Safety Governance Board",
-  "jurisdiction": ["US"],
-  "frameworks_referenced": ["NIST AI RMF"],
+  "jurisdiction": [
+    "US"
+  ],
+  "frameworks_referenced": [
+    "NIST AI RMF"
+  ],
   "alternatives_considered": [
     "Apply a single global safety/fairness adjustment across all prompt types without context-specific testing.",
     "Release directly to full public availability without a staged rollout."
@@ -47,13 +62,15 @@
       "target_type": "incident",
       "reason": "This decision is modelled as a direct governance response to this incident.",
       "confidence": "Verified",
-      "citation_ids": ["cite-google-gemini-apology"]
+      "citation_ids": [
+        "cite-google-gemini-apology"
+      ]
     },
     {
       "type": "IMPLEMENTED_BY",
       "target_id": "PAT-012",
       "target_type": "pattern",
-      "reason": "The decision is put into practice via this design pattern.",
+      "reason": "The decision is put into practice via this single, primary design pattern.",
       "confidence": "Community"
     },
     {

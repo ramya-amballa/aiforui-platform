@@ -2,13 +2,18 @@
   "id": "PAT-017",
   "slug": "data-labeling-workforce-welfare-pattern",
   "title": "Data Labeling Workforce Welfare Pattern",
-  "description": "A pattern for setting and independently auditing wage floors, content-exposure limits, and psychological-support access for any workforce labelling graphic or traumatic content, whether employed directly or through an outsourcing vendor.",
-  "version": "1.0.0",
+  "description": "A pattern for setting and independently auditing wage floors, content-exposure limits, and psychological-support access for any workforce labeling graphic or traumatic content, whether employed directly or through an outsourcing vendor.",
+  "version": "1.0.1",
   "status": "draft",
   "confidence": "Community",
   "created_date": "2026-08-04",
-  "updated_date": "2026-08-04",
-  "tags": ["labor", "data-labeling", "safety", "supply-chain"],
+  "updated_date": "2026-08-05",
+  "tags": [
+    "labor",
+    "data-labeling",
+    "safety",
+    "supply-chain"
+  ],
   "created_by": "AI Governance Workbench (Phase 3 seed data)",
   "history": [
     {
@@ -17,12 +22,19 @@
       "by": "AI Governance Workbench (Phase 3 seed data)",
       "version": "1.0.0",
       "note": "Initial Edition 1.1 content."
+    },
+    {
+      "event": "updated",
+      "date": "2026-08-05",
+      "by": "AI Governance Workbench (Editorial Quality Audit)",
+      "version": "1.0.1",
+      "note": "Normalized US/UK spelling variants to the American-English house style (schema field names, e.g. organizations_involved, are already American; majority framework citations - NIST, FTC, EEOC, FCRA, BIPA - are American sources)."
     }
   ],
-  "problem": "AI safety and content-moderation classifiers require large volumes of human-labelled examples of harmful content, and this labour is often outsourced to lower-cost markets where wage, exposure, and psychological-support standards are set contractually but not independently verified in practice.",
-  "solution": "Set a documented wage floor, a maximum daily/weekly exposure limit for graphic content review, and mandatory access to psychological support as contractual requirements for any data-labelling vendor, and conduct independent (not vendor-self-reported) audits of actual working conditions on a recurring basis.",
-  "applicability": "Any organisation that contracts, directly or via a vendor, a workforce to label graphic, traumatic, or otherwise psychologically harmful content for training or safety-classifier purposes.",
-  "consequences": "Independent audits of outsourced labour add cost and require access the client may not contractually have secured; setting a wage floor above local vendor rates can affect vendor selection and pricing.",
+  "problem": "AI safety and content-moderation classifiers require large volumes of human-labeled examples of harmful content, and this labor is often outsourced to lower-cost markets where wage, exposure, and psychological-support standards are set contractually but not independently verified in practice.",
+  "solution": "Set a documented wage floor, a maximum daily/weekly exposure limit for graphic content review, and mandatory access to psychological support as contractual requirements for any data-labeling vendor, and conduct independent (not vendor-self-reported) audits of actual working conditions on a recurring basis.",
+  "applicability": "Any organization that contracts, directly or via a vendor, a workforce to label graphic, traumatic, or otherwise psychologically harmful content for training or safety-classifier purposes.",
+  "consequences": "Independent audits of outsourced labor add cost and require access the client may not contractually have secured; setting a wage floor above local vendor rates can affect vendor selection and pricing.",
   "maturity": "experimental",
   "citations": [
     {
@@ -40,7 +52,7 @@
       "type": "SATISFIES_CONTROL",
       "target_id": "CTR-020",
       "target_type": "control",
-      "reason": "Documented, audited labour standards are the concrete mechanism applying general labour principles to this context.",
+      "reason": "Documented, audited labor standards are the concrete mechanism applying general labor principles to this context.",
       "confidence": "Community"
     },
     {

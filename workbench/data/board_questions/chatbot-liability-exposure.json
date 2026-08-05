@@ -2,13 +2,18 @@
   "id": "BRD-013",
   "slug": "chatbot-liability-exposure",
   "title": "Would we treat a chatbot error the way we'd treat a human agent's error?",
-  "description": "A board-level oversight question testing whether an organisation has actually extended its existing accountability and correction processes to AI chatbot output, rather than assuming a chatbot's statements carry less liability than a human agent's.",
-  "version": "1.0.0",
+  "description": "A board-level oversight question testing whether an organization has actually extended its existing accountability and correction processes to AI chatbot output, rather than assuming a chatbot's statements carry less liability than a human agent's.",
+  "version": "1.0.1",
   "status": "active",
   "confidence": "Reviewed",
   "created_date": "2026-08-04",
-  "updated_date": "2026-08-04",
-  "tags": ["chatbot", "customer-service", "liability", "board-oversight"],
+  "updated_date": "2026-08-05",
+  "tags": [
+    "chatbot",
+    "customer-service",
+    "liability",
+    "board-oversight"
+  ],
   "created_by": "AI Governance Workbench (Phase 2A seed data)",
   "history": [
     {
@@ -17,15 +22,26 @@
       "by": "AI Governance Workbench (Phase 2A seed data)",
       "version": "1.0.0",
       "note": "Initial Phase 2A seed content."
+    },
+    {
+      "event": "updated",
+      "date": "2026-08-05",
+      "by": "AI Governance Workbench (Editorial Quality Audit)",
+      "version": "1.0.1",
+      "note": "Normalized US/UK spelling variants to the American-English house style (schema field names, e.g. organizations_involved, are already American; majority framework citations - NIST, FTC, EEOC, FCRA, BIPA - are American sources)."
     }
   ],
   "question_text": "If our customer-facing AI chatbot gives a customer incorrect information about pricing, eligibility, or policy, have we assessed our legal liability exposure the same way we would for a human agent's documented error — and would that liability hold up if challenged, as Air Canada's disclaimer argument did not?",
-  "audience": ["board", "risk_committee", "executive_team"],
-  "rationale": "Moffatt v. Air Canada shows that a 'the chatbot is a separate entity' defence does not hold up in practice. Boards should confirm their own organisation is not relying on an equivalent, untested assumption.",
+  "audience": [
+    "board",
+    "risk_committee",
+    "executive_team"
+  ],
+  "rationale": "Moffatt v. Air Canada shows that a 'the chatbot is a separate entity' defence does not hold up in practice. Boards should confirm their own organization is not relying on an equivalent, untested assumption.",
   "follow_up_actions": [
     "Confirm chatbot responses to policy-sensitive questions are grounded in current source-of-truth policy documents.",
     "Confirm there is a review/correction process for chatbot errors comparable to the process for human agent errors.",
-    "Ask legal/compliance whether the organisation's terms of service attempt to disclaim chatbot statements, and whether that disclaimer has been tested."
+    "Ask legal/compliance whether the organization's terms of service attempt to disclaim chatbot statements, and whether that disclaimer has been tested."
   ],
   "citations": [
     {

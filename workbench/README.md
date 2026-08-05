@@ -48,10 +48,11 @@ Governance Decision (`DEC-`), Incident (`INC-`), Design Pattern (`PAT-`), Framew
 - [`ingestion-pipeline.md`](docs/ingestion-pipeline.md) — how a news article becomes a validated Incident
 - [`contributing.md`](docs/contributing.md) — how to add or edit data and what a PR needs before merge
 - [`foundational-twenty.md`](docs/foundational-twenty.md) — the seed dataset's selection rationale, governance-concept clusters, and known coverage gaps
+- [`quality-audit-2026-08.md`](docs/quality-audit-2026-08.md) — repository-wide naming/terminology/citation-depth audit ahead of Edition 1.2
 
 ## Editorial tooling (Phase 2A)
 
-`/editorial` — deterministic, rule-based tools that improve contribution quality and consistency without automating editorial judgment: an Incident Authoring Wizard, a Relationship Suggestion Engine, a Citation Completeness Checker, a Coverage Metrics Dashboard, and a Graph Health Report (which enforces the Zero-Orphan Invariant as a hard gate). See [`/editorial/README.md`](editorial/README.md).
+`/editorial` — deterministic, rule-based tools that improve contribution quality and consistency without automating editorial judgment: an Incident Authoring Wizard, a Relationship Suggestion Engine, a Citation Completeness Checker, a Coverage Metrics Dashboard, a Graph Health Report (which enforces the Zero-Orphan Invariant as a hard gate), an Editorial Analytics report, and a Repository Quality Audit (naming/terminology/citation-depth consistency). See [`/editorial/README.md`](editorial/README.md).
 
 ## Example dataset: the Foundational Twenty, and beyond
 

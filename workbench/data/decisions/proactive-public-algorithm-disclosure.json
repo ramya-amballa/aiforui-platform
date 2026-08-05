@@ -2,13 +2,17 @@
   "id": "DEC-016",
   "slug": "proactive-public-algorithm-disclosure",
   "title": "Proactively disclose the logic of any algorithm used to determine eligibility for a public benefit",
-  "description": "Illustrative reference decision modelled on Civio's litigation to obtain disclosure of Spain's BOSCO algorithm. Not a documented decision of any specific organisation.",
-  "version": "1.0.0",
+  "description": "Illustrative reference decision modelled on Civio's litigation to obtain disclosure of Spain's BOSCO algorithm. Not a documented decision of any specific organization.",
+  "version": "1.0.1",
   "status": "draft",
   "confidence": "Community",
   "created_date": "2026-08-04",
-  "updated_date": "2026-08-04",
-  "tags": ["government", "transparency", "welfare"],
+  "updated_date": "2026-08-05",
+  "tags": [
+    "government",
+    "transparency",
+    "welfare"
+  ],
   "created_by": "AI Governance Workbench (Phase 3 seed data)",
   "history": [
     {
@@ -17,14 +21,25 @@
       "by": "AI Governance Workbench (Phase 3 seed data)",
       "version": "1.0.0",
       "note": "Initial Edition 1.1 content."
+    },
+    {
+      "event": "updated",
+      "date": "2026-08-05",
+      "by": "AI Governance Workbench (Editorial Quality Audit)",
+      "version": "1.0.1",
+      "note": "Normalized US/UK spelling variants to the American-English house style (schema field names, e.g. organizations_involved, are already American; majority framework citations - NIST, FTC, EEOC, FCRA, BIPA - are American sources)."
     }
   ],
   "decision_statement": "Any algorithm a public body uses to determine eligibility for a benefit or service must have its decision logic published proactively, before a disclosure dispute arises — intellectual-property or generic security claims are not, by themselves, an adequate basis to withhold it.",
   "decision_type": "policy",
-  "decision_context": "Motivated by Civio's seven-year legal fight to obtain Spain's BOSCO algorithm, which Spain's Supreme Court ultimately resolved in favour of disclosure, holding that public understanding of how administrative algorithms work is a democratic right.",
+  "decision_context": "Motivated by Civio's seven-year legal fight to obtain Spain's BOSCO algorithm, which Spain's Supreme Court ultimately resolved in favor of disclosure, holding that public understanding of how administrative algorithms work is a democratic right.",
   "governing_body": "Illustrative example — Public Algorithm Transparency Board",
-  "jurisdiction": ["ES"],
-  "frameworks_referenced": ["EU AI Act"],
+  "jurisdiction": [
+    "ES"
+  ],
+  "frameworks_referenced": [
+    "EU AI Act"
+  ],
   "alternatives_considered": [
     "Disclose only technical documentation, not the source code itself, as Spain's transparency council initially did.",
     "Wait for a formal legal challenge before considering disclosure, rather than publishing proactively."
@@ -47,7 +62,9 @@
       "target_type": "incident",
       "reason": "This decision is modelled as a direct governance response to this litigation.",
       "confidence": "Verified",
-      "citation_ids": ["cite-civio-bosco"]
+      "citation_ids": [
+        "cite-civio-bosco"
+      ]
     },
     {
       "type": "IMPLEMENTED_BY",

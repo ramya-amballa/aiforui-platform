@@ -2,13 +2,19 @@
   "id": "DEC-004",
   "slug": "meaningful-human-review-for-automated-adverse-decisions",
   "title": "Require a documented legal basis and meaningful human review before an automated system informs an adverse decision about a person's rights or benefits",
-  "description": "Illustrative reference decision modelled on three documented government automated-decision failures: the Dutch SyRI/childcare-benefits scandal, the UK Ofqual grading algorithm, and Australia's Robodebt scheme. Not a documented decision of any specific organisation.",
-  "version": "1.0.0",
+  "description": "Illustrative reference decision modelled on three documented government automated-decision failures: the Dutch SyRI/childcare-benefits scandal, the UK Ofqual grading algorithm, and Australia's Robodebt scheme. Not a documented decision of any specific organization.",
+  "version": "1.0.1",
   "status": "draft",
   "confidence": "Community",
   "created_date": "2026-08-04",
-  "updated_date": "2026-08-04",
-  "tags": ["government", "welfare", "due-process", "discrimination", "automated-decision-making"],
+  "updated_date": "2026-08-05",
+  "tags": [
+    "government",
+    "welfare",
+    "due-process",
+    "discrimination",
+    "automated-decision-making"
+  ],
   "created_by": "AI Governance Workbench (Phase 2A seed data)",
   "history": [
     {
@@ -17,14 +23,29 @@
       "by": "AI Governance Workbench (Phase 2A seed data)",
       "version": "1.0.0",
       "note": "Initial Phase 2A seed content, part of the Foundational Twenty."
+    },
+    {
+      "event": "updated",
+      "date": "2026-08-05",
+      "by": "AI Governance Workbench (Editorial Quality Audit)",
+      "version": "1.0.1",
+      "note": "Normalized US/UK spelling variants to the American-English house style (schema field names, e.g. organizations_involved, are already American; majority framework citations - NIST, FTC, EEOC, FCRA, BIPA - are American sources). Normalized a duplicated relationship-reason phrasing (\"...via this design pattern.\" -> \"...via this single, primary design pattern.\") to one canonical wording."
     }
   ],
-  "decision_statement": "Before an automated or algorithmic system is used to make or materially inform a decision that adversely affects a person's welfare eligibility, exam results, immigration status, or similar legal rights, the organisation must document the legal basis for the processing, complete a data protection impact assessment, and guarantee the affected person a right to meaningful human review before the decision takes effect — not merely an appeals process after harm has occurred.",
+  "decision_statement": "Before an automated or algorithmic system is used to make or materially inform a decision that adversely affects a person's welfare eligibility, exam results, immigration status, or similar legal rights, the organization must document the legal basis for the processing, complete a data protection impact assessment, and guarantee the affected person a right to meaningful human review before the decision takes effect — not merely an appeals process after harm has occurred.",
   "decision_type": "policy",
   "decision_context": "Motivated by three independent, well-documented government automated-decision failures across three countries, each involving an algorithm making or heavily informing an adverse decision about individuals' welfare, education, or benefits without adequate legal basis, impact assessment, or a genuine human-review safeguard before harm occurred.",
   "governing_body": "Illustrative example — Public Sector Automated Decision-Making Governance Board",
-  "jurisdiction": ["NL", "UK", "AU", "EU"],
-  "frameworks_referenced": ["GDPR", "EU AI Act"],
+  "jurisdiction": [
+    "NL",
+    "UK",
+    "AU",
+    "EU"
+  ],
+  "frameworks_referenced": [
+    "GDPR",
+    "EU AI Act"
+  ],
   "alternatives_considered": [
     "Rely on a post-hoc appeals process rather than pre-decision human review.",
     "Treat impact assessment as a one-time exercise rather than repeating it when the system or its data changes."
@@ -56,13 +77,15 @@
       "target_type": "incident",
       "reason": "This decision is modelled as a direct governance response to this incident, the most severe of the three.",
       "confidence": "Verified",
-      "citation_ids": ["cite-syri-judgment"]
+      "citation_ids": [
+        "cite-syri-judgment"
+      ]
     },
     {
       "type": "IMPLEMENTED_BY",
       "target_id": "PAT-004",
       "target_type": "pattern",
-      "reason": "The decision is put into practice via this design pattern.",
+      "reason": "The decision is put into practice via this single, primary design pattern.",
       "confidence": "Community"
     },
     {

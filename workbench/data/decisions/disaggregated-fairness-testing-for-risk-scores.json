@@ -2,13 +2,20 @@
   "id": "DEC-002",
   "slug": "disaggregated-fairness-testing-for-risk-scores",
   "title": "Require disaggregated error-rate testing before deploying any risk-scoring algorithm in a high-stakes decision",
-  "description": "Illustrative reference decision modelled on lessons from the COMPAS recidivism-scoring controversy and the Obermeyer healthcare risk-prediction study. Not a documented decision of any specific organisation.",
-  "version": "1.0.0",
+  "description": "Illustrative reference decision modelled on lessons from the COMPAS recidivism-scoring controversy and the Obermeyer healthcare risk-prediction study. Not a documented decision of any specific organization.",
+  "version": "1.0.1",
   "status": "draft",
   "confidence": "Community",
   "created_date": "2026-08-04",
-  "updated_date": "2026-08-04",
-  "tags": ["bias", "risk-scoring", "fairness", "proxy-variable", "criminal-justice", "healthcare"],
+  "updated_date": "2026-08-05",
+  "tags": [
+    "bias",
+    "risk-scoring",
+    "fairness",
+    "proxy-variable",
+    "criminal-justice",
+    "healthcare"
+  ],
   "created_by": "AI Governance Workbench (Phase 2A seed data)",
   "history": [
     {
@@ -17,14 +24,25 @@
       "by": "AI Governance Workbench (Phase 2A seed data)",
       "version": "1.0.0",
       "note": "Initial Phase 2A seed content, part of the Foundational Twenty."
+    },
+    {
+      "event": "updated",
+      "date": "2026-08-05",
+      "by": "AI Governance Workbench (Editorial Quality Audit)",
+      "version": "1.0.1",
+      "note": "Normalized US/UK spelling variants to the American-English house style (schema field names, e.g. organizations_involved, are already American; majority framework citations - NIST, FTC, EEOC, FCRA, BIPA - are American sources). Normalized a duplicated relationship-reason phrasing (\"...via this design pattern.\" -> \"...via this single, primary design pattern.\") to one canonical wording."
     }
   ],
   "decision_statement": "Before deploying any algorithm that scores individuals' risk (recidivism, illness, default, etc.) to inform a high-stakes decision, the model's error rates (false positive and false negative rates) must be measured and disclosed separately for each protected group, and any proxy variable used as a stand-in for the true outcome of interest must be documented and justified against the risk that it correlates with a protected characteristic.",
   "decision_type": "policy",
   "decision_context": "Motivated by two independent, well-documented cases — COMPAS and a widely used US healthcare risk-prediction algorithm — in which risk scores were later found to differ systematically in accuracy across racial groups, in one case traced directly to a proxy variable (healthcare cost) that itself reflected historical inequity.",
   "governing_body": "Illustrative example — Algorithmic Risk Assessment Governance Board",
-  "jurisdiction": ["US"],
-  "frameworks_referenced": ["NIST AI RMF"],
+  "jurisdiction": [
+    "US"
+  ],
+  "frameworks_referenced": [
+    "NIST AI RMF"
+  ],
   "alternatives_considered": [
     "Rely on a single aggregate accuracy metric rather than disaggregating by group.",
     "Trust a vendor's internal fairness testing without independent disaggregated verification."
@@ -56,13 +74,15 @@
       "target_type": "incident",
       "reason": "This decision is modelled as a governance response to the disparity documented in this incident.",
       "confidence": "Verified",
-      "citation_ids": ["cite-propublica-machine-bias"]
+      "citation_ids": [
+        "cite-propublica-machine-bias"
+      ]
     },
     {
       "type": "IMPLEMENTED_BY",
       "target_id": "PAT-002",
       "target_type": "pattern",
-      "reason": "The decision is put into practice via this design pattern.",
+      "reason": "The decision is put into practice via this single, primary design pattern.",
       "confidence": "Community"
     },
     {
@@ -71,7 +91,9 @@
       "target_type": "control",
       "reason": "Disaggregated testing satisfies the impact-identification requirement this control describes.",
       "confidence": "Community",
-      "citation_ids": ["cite-obermeyer-science-2019"]
+      "citation_ids": [
+        "cite-obermeyer-science-2019"
+      ]
     },
     {
       "type": "REQUIRES_EVIDENCE",

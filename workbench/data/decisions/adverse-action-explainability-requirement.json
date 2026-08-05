@@ -2,13 +2,18 @@
   "id": "DEC-010",
   "slug": "adverse-action-explainability-requirement",
   "title": "Require a specific, accurate adverse-action explanation whenever an automated system contributes to a credit decision",
-  "description": "Illustrative reference decision modelled on the Apple Card/Goldman Sachs gender-bias allegations and the resulting NYDFS investigation. Not a documented decision of any specific organisation.",
-  "version": "1.0.0",
+  "description": "Illustrative reference decision modelled on the Apple Card/Goldman Sachs gender-bias allegations and the resulting NYDFS investigation. Not a documented decision of any specific organization.",
+  "version": "1.0.1",
   "status": "draft",
   "confidence": "Community",
   "created_date": "2026-08-04",
-  "updated_date": "2026-08-04",
-  "tags": ["credit-scoring", "transparency", "explainability", "financial"],
+  "updated_date": "2026-08-05",
+  "tags": [
+    "credit-scoring",
+    "transparency",
+    "explainability",
+    "financial"
+  ],
   "created_by": "AI Governance Workbench (Phase 2A seed data)",
   "history": [
     {
@@ -17,14 +22,26 @@
       "by": "AI Governance Workbench (Phase 2A seed data)",
       "version": "1.0.0",
       "note": "Initial Phase 2A seed content, part of the Foundational Twenty."
+    },
+    {
+      "event": "updated",
+      "date": "2026-08-05",
+      "by": "AI Governance Workbench (Editorial Quality Audit)",
+      "version": "1.0.1",
+      "note": "Normalized US/UK spelling variants to the American-English house style (schema field names, e.g. organizations_involved, are already American; majority framework citations - NIST, FTC, EEOC, FCRA, BIPA - are American sources). Normalized a duplicated relationship-reason phrasing (\"...via this design pattern.\" -> \"...via this single, primary design pattern.\") to one canonical wording."
     }
   ],
-  "decision_statement": "Whenever an automated or algorithmic system contributes to a credit, lending, or pricing decision, the organisation must be able to give the affected individual a specific, accurate reason for any adverse outcome — model complexity is not an acceptable excuse for a vague or generic explanation.",
+  "decision_statement": "Whenever an automated or algorithmic system contributes to a credit, lending, or pricing decision, the organization must be able to give the affected individual a specific, accurate reason for any adverse outcome — model complexity is not an acceptable excuse for a vague or generic explanation.",
   "decision_type": "policy",
   "decision_context": "Motivated by the Apple Card/Goldman Sachs credit-limit controversy, in which public allegations of gender bias could not be quickly confirmed or refuted because neither the company nor the applicants could point to a specific, individualised explanation of the underwriting decision.",
   "governing_body": "Illustrative example — Algorithmic Underwriting Governance Board",
-  "jurisdiction": ["US", "US-NY"],
-  "frameworks_referenced": ["FCRA"],
+  "jurisdiction": [
+    "US",
+    "US-NY"
+  ],
+  "frameworks_referenced": [
+    "FCRA"
+  ],
   "alternatives_considered": [
     "Provide only a generic adverse-action notice citing 'creditworthiness' without individualised reasons.",
     "Treat model complexity as a valid reason to withhold a specific explanation."
@@ -47,13 +64,15 @@
       "target_type": "incident",
       "reason": "This decision is modelled as a direct governance response to this incident.",
       "confidence": "Verified",
-      "citation_ids": ["cite-nydfs-apple-card-report"]
+      "citation_ids": [
+        "cite-nydfs-apple-card-report"
+      ]
     },
     {
       "type": "IMPLEMENTED_BY",
       "target_id": "PAT-009",
       "target_type": "pattern",
-      "reason": "The decision is put into practice via this design pattern.",
+      "reason": "The decision is put into practice via this single, primary design pattern.",
       "confidence": "Community"
     },
     {

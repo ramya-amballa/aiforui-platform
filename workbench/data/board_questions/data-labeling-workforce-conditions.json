@@ -2,13 +2,18 @@
   "id": "BRD-017",
   "slug": "data-labeling-workforce-conditions",
   "title": "Do we know the working conditions of the people who labeled our training data?",
-  "description": "A board-level oversight question testing whether an organisation has visibility into the actual (not merely contractual) conditions of the workforce that labels its training or safety-classifier data.",
-  "version": "1.0.0",
+  "description": "A board-level oversight question testing whether an organization has visibility into the actual (not merely contractual) conditions of the workforce that labels its training or safety-classifier data.",
+  "version": "1.0.1",
   "status": "active",
   "confidence": "Reviewed",
   "created_date": "2026-08-04",
-  "updated_date": "2026-08-04",
-  "tags": ["labor", "data-labeling", "supply-chain", "board-oversight"],
+  "updated_date": "2026-08-05",
+  "tags": [
+    "labor",
+    "data-labeling",
+    "supply-chain",
+    "board-oversight"
+  ],
   "created_by": "AI Governance Workbench (Phase 3 seed data)",
   "history": [
     {
@@ -17,13 +22,23 @@
       "by": "AI Governance Workbench (Phase 3 seed data)",
       "version": "1.0.0",
       "note": "Initial Edition 1.1 content."
+    },
+    {
+      "event": "updated",
+      "date": "2026-08-05",
+      "by": "AI Governance Workbench (Editorial Quality Audit)",
+      "version": "1.0.1",
+      "note": "Normalized US/UK spelling variants to the American-English house style (schema field names, e.g. organizations_involved, are already American; majority framework citations - NIST, FTC, EEOC, FCRA, BIPA - are American sources)."
     }
   ],
   "question_text": "Do we know the actual wages, content-exposure levels, and psychological-support access of the workforce — ours or a vendor's — that labels our training or safety-classifier data, and is that knowledge based on independent audit or only the vendor's own contractual claims?",
-  "audience": ["board", "risk_committee"],
-  "rationale": "Reporting on OpenAI's use of Kenyan data labellers, paid under $2/hour to review graphic content with reported lasting psychological harm, showed that labour conditions several tiers down an AI supply chain can go unexamined by the company ultimately benefiting from the labelled data.",
+  "audience": [
+    "board",
+    "risk_committee"
+  ],
+  "rationale": "Reporting on OpenAI's use of Kenyan data labelers, paid under $2/hour to review graphic content with reported lasting psychological harm, showed that labor conditions several tiers down an AI supply chain can go unexamined by the company ultimately benefiting from the labeled data.",
   "follow_up_actions": [
-    "Request the most recent independent data-labelling vendor welfare audit.",
+    "Request the most recent independent data-labeling vendor welfare audit.",
     "Confirm audits are conducted by an independent party, not self-reported by the vendor.",
     "Ask what wage floor and content-exposure limits are contractually required, and whether they've ever been verified in practice."
   ],

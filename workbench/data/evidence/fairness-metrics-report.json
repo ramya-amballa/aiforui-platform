@@ -3,12 +3,17 @@
   "slug": "fairness-metrics-report",
   "title": "Fairness Metrics Report",
   "description": "A report documenting a risk-scoring model's error rates (false positive/negative, calibration) disaggregated by protected group, and the justification for any proxy variable used in place of the true outcome of interest.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "status": "active",
   "confidence": "Reviewed",
   "created_date": "2026-08-04",
-  "updated_date": "2026-08-04",
-  "tags": ["bias", "risk-scoring", "fairness", "audit-report"],
+  "updated_date": "2026-08-05",
+  "tags": [
+    "bias",
+    "risk-scoring",
+    "fairness",
+    "audit-report"
+  ],
   "created_by": "AI Governance Workbench (Phase 2A seed data)",
   "history": [
     {
@@ -17,10 +22,17 @@
       "by": "AI Governance Workbench (Phase 2A seed data)",
       "version": "1.0.0",
       "note": "Initial Phase 2A seed content."
+    },
+    {
+      "event": "updated",
+      "date": "2026-08-05",
+      "by": "AI Governance Workbench (Editorial Quality Audit)",
+      "version": "1.0.1",
+      "note": "Normalized US/UK spelling variants to the American-English house style (schema field names, e.g. organizations_involved, are already American; majority framework citations - NIST, FTC, EEOC, FCRA, BIPA - are American sources)."
     }
   ],
   "evidence_description": "A report giving a risk-scoring model's false-positive rate, false-negative rate, and calibration separately for each protected group tested, together with documentation of any proxy variable used and its correlation with protected characteristics.",
-  "collection_method": "Statistical analysis performed by the model owner or an independent auditor against a representative labelled dataset.",
+  "collection_method": "Statistical analysis performed by the model owner or an independent auditor against a representative labeled dataset.",
   "retention_period": "Minimum 3 years, and retained for the lifetime of the model version it was produced for.",
   "artifact_format": "PDF or structured report; underlying disaggregated statistics retained as a structured export (CSV/JSON).",
   "citations": [

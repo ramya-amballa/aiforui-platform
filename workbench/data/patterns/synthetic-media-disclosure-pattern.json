@@ -2,13 +2,18 @@
   "id": "PAT-008",
   "slug": "synthetic-media-disclosure-pattern",
   "title": "Synthetic Media Disclosure Pattern",
-  "description": "A pattern for detecting and labelling AI-generated voice or likeness content in mass communications before distribution, so recipients are not deceived into believing synthetic content is authentic.",
-  "version": "1.0.0",
+  "description": "A pattern for detecting and labeling AI-generated voice or likeness content in mass communications before distribution, so recipients are not deceived into believing synthetic content is authentic.",
+  "version": "1.0.1",
   "status": "draft",
   "confidence": "Community",
   "created_date": "2026-08-04",
-  "updated_date": "2026-08-04",
-  "tags": ["generative-ai", "misinformation", "deepfake", "transparency"],
+  "updated_date": "2026-08-05",
+  "tags": [
+    "generative-ai",
+    "misinformation",
+    "deepfake",
+    "transparency"
+  ],
   "created_by": "AI Governance Workbench (Phase 2A seed data)",
   "history": [
     {
@@ -17,6 +22,13 @@
       "by": "AI Governance Workbench (Phase 2A seed data)",
       "version": "1.0.0",
       "note": "Initial Phase 2A seed content."
+    },
+    {
+      "event": "updated",
+      "date": "2026-08-05",
+      "by": "AI Governance Workbench (Editorial Quality Audit)",
+      "version": "1.0.1",
+      "note": "Normalized US/UK spelling variants to the American-English house style (schema field names, e.g. organizations_involved, are already American; majority framework citations - NIST, FTC, EEOC, FCRA, BIPA - are American sources)."
     }
   ],
   "problem": "AI voice-cloning and likeness-generation tools make it cheap and easy to produce highly convincing synthetic media at scale, which can be distributed through mass channels (robocalls, broadcast, social media) before any human reviewer or platform detects it is not authentic.",

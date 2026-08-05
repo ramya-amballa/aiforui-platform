@@ -2,13 +2,18 @@
   "id": "BRD-009",
   "slug": "specific-adverse-action-reason",
   "title": "Can we give a specific reason for every automated credit denial, not just cite model complexity?",
-  "description": "A board-level oversight question testing whether an organisation can produce an individualised explanation for an adverse credit decision on demand, rather than relying on the model's complexity as a reason not to explain.",
-  "version": "1.0.0",
+  "description": "A board-level oversight question testing whether an organization can produce an individualised explanation for an adverse credit decision on demand, rather than relying on the model's complexity as a reason not to explain.",
+  "version": "1.0.1",
   "status": "active",
   "confidence": "Reviewed",
   "created_date": "2026-08-04",
-  "updated_date": "2026-08-04",
-  "tags": ["credit-scoring", "transparency", "explainability", "board-oversight"],
+  "updated_date": "2026-08-05",
+  "tags": [
+    "credit-scoring",
+    "transparency",
+    "explainability",
+    "board-oversight"
+  ],
   "created_by": "AI Governance Workbench (Phase 2A seed data)",
   "history": [
     {
@@ -17,15 +22,26 @@
       "by": "AI Governance Workbench (Phase 2A seed data)",
       "version": "1.0.0",
       "note": "Initial Phase 2A seed content."
+    },
+    {
+      "event": "updated",
+      "date": "2026-08-05",
+      "by": "AI Governance Workbench (Editorial Quality Audit)",
+      "version": "1.0.1",
+      "note": "Normalized US/UK spelling variants to the American-English house style (schema field names, e.g. organizations_involved, are already American; majority framework citations - NIST, FTC, EEOC, FCRA, BIPA - are American sources)."
     }
   ],
   "question_text": "Can we provide a specific, accurate reason to any customer denied credit, given a reduced limit, or offered worse pricing by an automated underwriting system — and could we do so quickly enough to respond to a public allegation of bias, the way the Apple Card controversy demanded?",
-  "audience": ["board", "risk_committee", "audit_committee"],
+  "audience": [
+    "board",
+    "risk_committee",
+    "audit_committee"
+  ],
   "rationale": "The Apple Card/Goldman Sachs controversy escalated publicly in part because neither side could quickly point to a specific, individualised explanation for the disputed credit-limit decision.",
   "follow_up_actions": [
     "Request a sample adverse-action notice record and confirm reasons given are specific, not generic.",
     "Confirm underlying contributing factors are retained and reviewable if a dispute arises.",
-    "Ask how quickly the organisation could produce a specific explanation in response to a public allegation."
+    "Ask how quickly the organization could produce a specific explanation in response to a public allegation."
   ],
   "citations": [
     {

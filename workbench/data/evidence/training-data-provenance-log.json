@@ -2,13 +2,18 @@
   "id": "EVI-011",
   "slug": "training-data-provenance-log",
   "title": "Training Data Provenance Log",
-  "description": "A per-source log documenting the origin, collection method, and licence status of every dataset used to train a generative model, with a recorded risk decision for any source of uncertain provenance.",
-  "version": "1.0.0",
+  "description": "A per-source log documenting the origin, collection method, and license status of every dataset used to train a generative model, with a recorded risk decision for any source of uncertain provenance.",
+  "version": "1.0.1",
   "status": "active",
   "confidence": "Community",
   "created_date": "2026-08-04",
-  "updated_date": "2026-08-04",
-  "tags": ["generative-ai", "intellectual-property", "training-data", "audit-log"],
+  "updated_date": "2026-08-05",
+  "tags": [
+    "generative-ai",
+    "intellectual-property",
+    "training-data",
+    "audit-log"
+  ],
   "created_by": "AI Governance Workbench (Phase 2A seed data)",
   "history": [
     {
@@ -17,9 +22,16 @@
       "by": "AI Governance Workbench (Phase 2A seed data)",
       "version": "1.0.0",
       "note": "Initial Phase 2A seed content."
+    },
+    {
+      "event": "updated",
+      "date": "2026-08-05",
+      "by": "AI Governance Workbench (Editorial Quality Audit)",
+      "version": "1.0.1",
+      "note": "Normalized US/UK spelling variants to the American-English house style (schema field names, e.g. organizations_involved, are already American; majority framework citations - NIST, FTC, EEOC, FCRA, BIPA - are American sources)."
     }
   ],
-  "evidence_description": "A structured log listing every dataset source used to train a generative model, its collection method, its licence status, and — for any source of uncertain provenance — the documented risk decision (licensed, excluded, or accepted risk with rationale).",
+  "evidence_description": "A structured log listing every dataset source used to train a generative model, its collection method, its license status, and — for any source of uncertain provenance — the documented risk decision (licensed, excluded, or accepted risk with rationale).",
   "collection_method": "Compiled by the model training team and reviewed by legal/compliance before commercial deployment, updated whenever a new data source is added.",
   "retention_period": "For the lifetime of the model version it documents, plus a minimum of 5 years.",
   "artifact_format": "Structured export (CSV/JSON) of per-source provenance records.",

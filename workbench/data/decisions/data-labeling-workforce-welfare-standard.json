@@ -1,14 +1,19 @@
 {
   "id": "DEC-018",
   "slug": "data-labeling-workforce-welfare-standard",
-  "title": "Require documented labour and psychological-safety standards for any data-labelling workforce",
-  "description": "Illustrative reference decision modelled on the TIME investigation into OpenAI's use of Kenyan data labellers. Not a documented decision of any specific organisation. Confidence rationale: 'Community' — this concept has no dedicated AI-specific labour framework to anchor to yet (see CTR-020), which is itself an honest governance gap this dataset records rather than papering over.",
-  "version": "1.0.0",
+  "title": "Require documented labor and psychological-safety standards for any data-labeling workforce",
+  "description": "Illustrative reference decision modelled on the TIME investigation into OpenAI's use of Kenyan data labelers. Not a documented decision of any specific organization. Confidence rationale: 'Community' — this concept has no dedicated AI-specific labor framework to anchor to yet (see CTR-020), which is itself an honest governance gap this dataset records rather than papering over.",
+  "version": "1.0.1",
   "status": "draft",
   "confidence": "Community",
   "created_date": "2026-08-04",
-  "updated_date": "2026-08-04",
-  "tags": ["labor", "data-labeling", "safety", "supply-chain"],
+  "updated_date": "2026-08-05",
+  "tags": [
+    "labor",
+    "data-labeling",
+    "safety",
+    "supply-chain"
+  ],
   "created_by": "AI Governance Workbench (Phase 3 seed data)",
   "history": [
     {
@@ -17,17 +22,29 @@
       "by": "AI Governance Workbench (Phase 3 seed data)",
       "version": "1.0.0",
       "note": "Initial Edition 1.1 content, part of the Phase 3 canonical expansion."
+    },
+    {
+      "event": "updated",
+      "date": "2026-08-05",
+      "by": "AI Governance Workbench (Editorial Quality Audit)",
+      "version": "1.0.1",
+      "note": "Normalized US/UK spelling variants to the American-English house style (schema field names, e.g. organizations_involved, are already American; majority framework citations - NIST, FTC, EEOC, FCRA, BIPA - are American sources)."
     }
   ],
-  "decision_statement": "Before contracting a third-party workforce (directly or via an outsourcing vendor) to label training or safety-classifier data containing graphic, traumatic, or otherwise psychologically harmful content, the organisation must require documented wage floors, exposure limits, and access to psychological support for that workforce, and must audit the vendor's actual practice, not only its contractual commitments.",
+  "decision_statement": "Before contracting a third-party workforce (directly or via an outsourcing vendor) to label training or safety-classifier data containing graphic, traumatic, or otherwise psychologically harmful content, the organization must require documented wage floors, exposure limits, and access to psychological support for that workforce, and must audit the vendor's actual practice, not only its contractual commitments.",
   "decision_type": "policy",
-  "decision_context": "Motivated by reporting that Kenyan data labellers were paid under $2/hour to review extremely graphic content in order to build OpenAI's content-safety classifier, with workers reporting lasting psychological trauma.",
+  "decision_context": "Motivated by reporting that Kenyan data labelers were paid under $2/hour to review extremely graphic content in order to build OpenAI's content-safety classifier, with workers reporting lasting psychological trauma.",
   "governing_body": "Illustrative example — AI Supply Chain Labor Standards Board",
-  "jurisdiction": ["US", "KE"],
-  "frameworks_referenced": ["ILO Declaration on Fundamental Principles and Rights at Work"],
+  "jurisdiction": [
+    "US",
+    "KE"
+  ],
+  "frameworks_referenced": [
+    "ILO Declaration on Fundamental Principles and Rights at Work"
+  ],
   "alternatives_considered": [
-    "Rely on a vendor's own contractual labour commitments without independent audit.",
-    "Treat data-labelling labour conditions as entirely the outsourcing vendor's responsibility, outside the client's governance scope."
+    "Rely on a vendor's own contractual labor commitments without independent audit.",
+    "Treat data-labeling labor conditions as entirely the outsourcing vendor's responsibility, outside the client's governance scope."
   ],
   "citations": [
     {
@@ -47,7 +64,9 @@
       "target_type": "incident",
       "reason": "This decision is modelled as a direct governance response to this investigation.",
       "confidence": "Verified",
-      "citation_ids": ["cite-time-openai-kenya"]
+      "citation_ids": [
+        "cite-time-openai-kenya"
+      ]
     },
     {
       "type": "IMPLEMENTED_BY",
@@ -60,7 +79,7 @@
       "type": "SATISFIES_CONTROL",
       "target_id": "CTR-020",
       "target_type": "control",
-      "reason": "Documented wage and psychological-safety standards are a direct application of general ILO labour principles to this specific AI supply-chain context.",
+      "reason": "Documented wage and psychological-safety standards are a direct application of general ILO labor principles to this specific AI supply-chain context.",
       "confidence": "Community"
     },
     {
@@ -74,7 +93,7 @@
       "type": "RAISES_BOARD_QUESTION",
       "target_id": "BRD-017",
       "target_type": "board_question",
-      "reason": "Boards adopting this decision should be asking whether they actually know their data-labelling workforce's conditions.",
+      "reason": "Boards adopting this decision should be asking whether they actually know their data-labeling workforce's conditions.",
       "confidence": "Community"
     }
   ]
