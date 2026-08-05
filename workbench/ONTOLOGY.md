@@ -2,6 +2,8 @@
 
 This is the single page that defines every core term in the AI Governance Workbench. If a document elsewhere in `/workbench` and this page ever disagree, this page wins — fix the other document, not this one, unless the ontology itself is deliberately changing.
 
+For *why* the project exists, who it serves, and where it's going, see [`VISION.md`](VISION.md) — this page defines terms and rules; that one defines purpose.
+
 ## Canonical Principle
 
 > **The Knowledge Graph is the product. Everything else is a view.**

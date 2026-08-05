@@ -4,7 +4,7 @@ A data-first, schema-driven knowledge graph for AI governance — organised arou
 
 **This is independent of AOS.** AOS (elsewhere in this repository) is the flagship consulting operating system used to run engagements. The Workbench is a separate, public knowledge platform aimed at building industry authority — nothing here depends on AOS, and nothing in AOS should come to depend on this without a deliberate integration decision.
 
-This spans **Phase 1 through Phase 3**: the data foundation, the editorial tooling that keeps contributions consistent, a growing curated dataset (Edition 1.1: 139 objects across 35 real, independently-verified incidents), and — as of Phase 3 — the Explorer, a public, search-first interface for browsing and traversing the graph. See [`ONTOLOGY.md`](ONTOLOGY.md) for the Canonical Principle this is built on, and [`/docs/architecture.md`](docs/architecture.md) for the fuller reasoning.
+This spans **Phase 1 through Phase 3**: the data foundation, the editorial tooling that keeps contributions consistent, a growing curated dataset (Edition 1.1: 139 objects across 35 real, independently-verified incidents), and — as of Phase 3 — the Explorer, a public, search-first interface for browsing and traversing the graph. Start with [`VISION.md`](VISION.md) for why this project exists and where it's going; see [`ONTOLOGY.md`](ONTOLOGY.md) for the Canonical Principle this is built on, and [`/docs/architecture.md`](docs/architecture.md) for the fuller technical reasoning.
 
 ## What's here
 
