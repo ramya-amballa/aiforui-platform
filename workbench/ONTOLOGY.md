@@ -2,7 +2,7 @@
 
 This is the single page that defines every core term in the AI Governance Workbench. If a document elsewhere in `/workbench` and this page ever disagree, this page wins — fix the other document, not this one, unless the ontology itself is deliberately changing.
 
-For *why* the project exists, who it serves, and where it's going, see [`VISION.md`](VISION.md) — this page defines terms and rules; that one defines purpose.
+For *why* the project exists, who it serves, and where it's going, see [`VISION.md`](VISION.md) — this page defines terms and rules; that one defines purpose. For exactly which of these terms and rules are now frozen as architectural invariants, see [`FOUNDATION_COMPLETE.md`](FOUNDATION_COMPLETE.md).
 
 ## Canonical Principle
 

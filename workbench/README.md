@@ -4,7 +4,7 @@ A data-first, schema-driven knowledge graph for AI governance — organised arou
 
 **This is independent of AOS.** AOS (elsewhere in this repository) is the flagship consulting operating system used to run engagements. The Workbench is a separate, public knowledge platform aimed at building industry authority — nothing here depends on AOS, and nothing in AOS should come to depend on this without a deliberate integration decision.
 
-This spans **Phase 1 through Phase 4**: the data foundation, the editorial tooling that keeps contributions consistent, a growing curated dataset (Edition 1.1: 139 objects across 35 real, independently-verified incidents), the Explorer (a public, search-first interface for browsing and traversing the graph), and — as of Phase 4 — the governance and publication layer that makes this a maintained public reference rather than just a repository. Start with [`VISION.md`](VISION.md) for why this project exists and where it's going, and [`GOVERNANCE_CHARTER.md`](GOVERNANCE_CHARTER.md) for how it's governed; see [`ONTOLOGY.md`](ONTOLOGY.md) for the Canonical Principle this is built on, and [`/docs/architecture.md`](docs/architecture.md) for the fuller technical reasoning.
+This spans **Phase 1 through Phase 4**: the data foundation, the editorial tooling that keeps contributions consistent, a growing curated dataset (Edition 1.1: 139 objects across 35 real, independently-verified incidents), the Explorer (a public, search-first interface for browsing and traversing the graph), and — as of Phase 4 — the governance and publication layer that makes this a maintained public reference rather than just a repository. Start with [`VISION.md`](VISION.md) for why this project exists and where it's going, and [`GOVERNANCE_CHARTER.md`](GOVERNANCE_CHARTER.md) for how it's governed; see [`ONTOLOGY.md`](ONTOLOGY.md) for the Canonical Principle this is built on, and [`/docs/architecture.md`](docs/architecture.md) for the fuller technical reasoning. **[`FOUNDATION_COMPLETE.md`](FOUNDATION_COMPLETE.md)** declares the architecture stable as of Edition 1.1 and states exactly what's frozen and what future contributors must not break — read it before proposing a structural change.
 
 ## What's here
 
@@ -64,6 +64,7 @@ Governance Decision (`DEC-`), Incident (`INC-`), Design Pattern (`PAT-`), Framew
 - [`CONFLICT_OF_INTEREST.md`](CONFLICT_OF_INTEREST.md) — commercial relationships, vendor neutrality, disclosure and recusal
 - [`RELEASE_CHECKLIST.md`](RELEASE_CHECKLIST.md) — the deterministic gate every edition passes before publication
 - [`docs/readiness-audit-2026-08.md`](docs/readiness-audit-2026-08.md) — the repository-wide documentation consistency audit this phase produced
+- [`FOUNDATION_COMPLETE.md`](FOUNDATION_COMPLETE.md) — what has been built, the architectural invariants now frozen, and the single test every future contribution is evaluated against
 
 ## Editorial tooling (Phase 2A)
 
