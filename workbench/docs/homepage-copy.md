@@ -10,7 +10,7 @@ The current homepage copy (in production as of Edition 1.1) is already close to 
 
 **Eyebrow / kicker** *(new — small label above the H1, establishing category before the name)*
 
-> AI Governance Reference
+> An Open Practitioner Reference by AI for U&I
 
 **H1**
 
@@ -19,6 +19,8 @@ The current homepage copy (in production as of Edition 1.1) is already close to 
 **Subhead**
 
 > The open knowledge graph connecting real AI governance incidents to the decisions, patterns, controls, evidence, and board-level questions they imply.
+
+*(Why this eyebrow, not "AI Governance Reference": the Workbench is a recognizable project in its own right — not a rebrand, not a separate mission — and this line does the identity work without a wordmark or a design system: it names the project, credits AI for U&I as steward without implying the Workbench is merely a feature of the consulting business, and gives every future consulting, research, or training reference a natural, honest way to point back to it. See `VISION.md`'s independence framing for why this stays a credit line, not a promotional one.)*
 
 **Lede paragraph** *(answers "what is this" and "why does it exist")*
 

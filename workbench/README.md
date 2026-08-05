@@ -1,5 +1,7 @@
 # AI Governance Workbench
 
+*An Open Practitioner Reference by AI for U&I*
+
 A data-first, schema-driven knowledge graph for AI governance — organised around **Governance Decisions**, the way MDN Web Docs organises web platform knowledge, Refactoring.Guru organises design patterns, and MITRE ATT&CK organises adversary tactics. Not a new governance framework; a searchable, interconnected reference built from real-world governance decisions, incidents, patterns, controls, evidence, and board-level questions.
 
 **This is independent of AOS.** AOS (elsewhere in this repository) is the flagship consulting operating system used to run engagements. The Workbench is a separate, public knowledge platform aimed at building industry authority — nothing here depends on AOS, and nothing in AOS should come to depend on this without a deliberate integration decision.
@@ -18,6 +20,7 @@ This spans **Phase 1 through Phase 4**: the data foundation, the editorial tooli
   /editorial      Deterministic authoring/QA tools for maintainers (wizard, suggestions, coverage, health, insights)
   /ingestion      The draft -> human review -> canonical pipeline for Incidents
   /explorer       The public interface: search, browsing, node pages, framework pages, graph view (Phase 3)
+  /playbooks      Governance Playbooks: hand-assembled practitioner references derived from /data (Phase 5)
   /search         Superseded by /explorer's local search — see /search/README.md
   /docs           Full documentation set (start here for the "why" behind everything)
 ```
@@ -83,3 +86,7 @@ cd workbench/explorer
 npm install
 npm run dev      # regenerates data from /workbench/data, starts a dev server
 ```
+
+## Practitioner Toolkit (Phase 5)
+
+`/playbooks` holds Governance Playbooks — practitioner-ready documents assembled by hand from canonical data, one topic at a time, no generator or template engine. The first, [`customer-facing-ai-governance.md`](playbooks/customer-facing-ai-governance.md), is the reference implementation: executive summary, historical incidents, governance decisions, design patterns, framework mapping, required evidence, board questions, an architecture review checklist, an audit checklist, common failure modes, and an explicit statement of what the graph does and doesn't yet cover. See [`FOUNDATION_COMPLETE.md`](FOUNDATION_COMPLETE.md) for the standard every future playbook is held to.
