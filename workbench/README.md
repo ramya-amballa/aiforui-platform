@@ -79,7 +79,7 @@ The dataset in `/data` started as 91 objects across 20 real, independently-verif
 
 ## Explorer (Phase 3)
 
-`/explorer` is the public, interactive interface onto the graph — universal search, per-entity browsing and filtering, executive-briefing node detail pages, a framework explorer, and a supplemental graph visualization, all statically generated from `/data` with no backend. See [`/explorer/README.md`](explorer/README.md) for the full architecture.
+`/explorer` is the public, interactive interface onto the graph — universal search, per-entity browsing and filtering, executive-briefing node detail pages, a framework explorer, a supplemental graph visualization, and an **Our Standards** page with a live Quality Dashboard computed from the project's real validation and editorial tooling — all statically generated from `/data` with no backend. See [`/explorer/README.md`](explorer/README.md) for the full architecture.
 
 ```sh
 cd workbench/explorer

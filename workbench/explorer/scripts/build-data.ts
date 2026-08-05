@@ -15,6 +15,7 @@ import type {
   SearchDocument,
   GraphData,
 } from "../lib/types.ts";
+import { computeQuality } from "./quality.ts";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const WORKBENCH_ROOT = join(__dirname, "..", "..");
@@ -191,6 +192,9 @@ function main(): void {
     (Object.keys(ENTITY_DIRS) as EntityType[]).map((t) => [t, nodes.filter((n) => n.entity_type === t).length]),
   ) as Record<EntityType, number>;
 
+  console.log("Running live quality checks (schema validation, relationship integrity, typecheck, editorial audit)...");
+  const quality = computeQuality();
+
   const graph: GraphData = {
     generated_at: new Date().toISOString(),
     counts,
@@ -201,6 +205,7 @@ function main(): void {
       verb: r.verb,
       description: r.description,
     })),
+    quality,
   };
 
   mkdirSync(OUT_DIR, { recursive: true });

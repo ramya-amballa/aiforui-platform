@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { EntityCard } from "@/components/EntityCard";
 import { HomeQueryChips } from "@/components/HomeQueryChips";
 import { graph } from "@/lib/data";
@@ -20,6 +21,14 @@ export default function HomePage() {
             Every relationship is typed and carries an explicit reason. Nothing here is AI-generated speculation —
             it is a curated, citable dataset with an interactive way to explore it.
           </p>
+          <p className="mt-4 text-sm text-ink-500">
+            Every canonical object is version-controlled, human-reviewed, and validated against deterministic
+            quality standards before publication.{" "}
+            <Link href="/standards/" className="text-accent-600 hover:underline">
+              See our standards →
+            </Link>
+          </p>
+
           <div className="mt-6">
             <HomeQueryChips />
           </div>

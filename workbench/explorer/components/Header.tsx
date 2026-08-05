@@ -13,6 +13,7 @@ const NAV_LINKS = [
   { href: "/board-questions/", label: "Board Questions" },
   { href: "/frameworks/", label: "Frameworks" },
   { href: "/graph/", label: "Graph" },
+  { href: "/standards/", label: "Our Standards" },
 ];
 
 export function Header() {

@@ -186,6 +186,29 @@ export interface SearchDocument {
   extra: string;
 }
 
+export interface CheckResult {
+  pass: boolean | null;
+  detail: string;
+}
+
+export interface QualityReport {
+  generated_at: string;
+  canonical_objects: number;
+  real_incidents: number;
+  entity_types: number;
+  checks: {
+    schema_validation: CheckResult;
+    zero_orphans: CheckResult;
+    relationship_integrity: CheckResult;
+    type_check: CheckResult;
+    editorial_audit: CheckResult;
+  };
+  citation_completeness: {
+    average: number;
+    target: number;
+  };
+}
+
 export interface GraphData {
   generated_at: string;
   counts: Record<EntityType, number>;
@@ -193,4 +216,5 @@ export interface GraphData {
   frameworks: FrameworkGroup[];
   search_documents: SearchDocument[];
   relationship_verbs: { verb: RelationshipVerb; description: string }[];
+  quality: QualityReport;
 }

@@ -15,6 +15,7 @@ This is a **view**, not a second source of truth. Per the Canonical Principle (`
 /frameworks                 Framework index (NIST AI RMF, EU AI Act, GDPR, ...)
 /frameworks/[slug]          What maps to one framework: controls, decisions, incidents, evidence, board questions
 /graph                      Supplemental full-graph visualization
+/standards                  Our Standards: practitioner-facing quality policy + live Quality Dashboard
 ```
 
 Every route is statically generated (`next build && next export`, `output: "export"` in `next.config.mjs`). There is no backend, no database, and no runtime API — the entire site is static HTML/JS/CSS that could be served from any CDN or `file://`.
@@ -24,6 +25,10 @@ Every route is statically generated (`next build && next export`, `output: "expo
 `scripts/build-data.ts` is the *only* place the Explorer reads `/workbench/data` and `/workbench/relationships/ontology.json`. It runs as a `predev`/`prebuild` npm hook (see `package.json`) and emits `data/generated/graph.json` — nodes with pre-resolved inbound/outbound relationships, derived framework groupings, and flattened search documents. That file is gitignored: it is always regenerated from canonical data, never hand-edited, and never a second source of truth (the same rule `/workbench/search/README.md` states for any future search index). Every page imports typed accessors from `lib/data.ts`, never the raw JSON directly.
 
 If the canonical dataset changes, the Explorer's content changes automatically on the next build — there is nothing to keep in sync by hand.
+
+## Quality dashboard architecture
+
+`/standards` makes the project's editorial and structural standards public, backed by a live-computed `graph.quality` block (`scripts/quality.ts`) rather than hand-maintained numbers. Every check reuses the actual, frozen tooling instead of re-implementing it — the same precedent `/editorial/graph-health.ts` already set for not letting two copies of a check drift apart: schema validation, relationship integrity, and the Zero-Orphan check call the real rule functions from `/validators/src/rules` directly; citation completeness calls `/editorial/src/lib/citation-score.ts`'s `scoreCitations`; type-check and the editorial audit are run as the actual `npm run typecheck` / `npm run editorial:audit` commands via a subprocess, with their real exit codes captured. If a check can't be run in a given build environment (e.g. a missing dependency), it's reported as unverified (`pass: null`), never silently assumed to pass — the whole point of this page is that nothing on it is asserted without a corresponding, reproducible check.
 
 ## Search architecture
 
