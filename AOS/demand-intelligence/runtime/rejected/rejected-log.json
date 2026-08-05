@@ -1132,6 +1132,90 @@
       "relevanceScore": 0,
       "categoriesMatched": [],
       "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0086",
+      "dateRejected": "2026-08-05",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Student Success Coach",
+      "organisation": "FindTutors",
+      "url": "https://remoteOK.com/remote-jobs/remote-student-success-coach-findtutors-1136086",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0087",
+      "dateRejected": "2026-08-05",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Food &amp; Beverage Positions",
+      "organisation": "MEF Ltd",
+      "url": "https://remoteOK.com/remote-jobs/remote-food-amp-beverage-positions-mef-ltd-1136052",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0088",
+      "dateRejected": "2026-08-05",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Sales Coordinator New York",
+      "organisation": "Tito's Handmade Vodka",
+      "url": "https://remoteOK.com/remote-jobs/remote-sales-coordinator-new-york-titos-handmade-vodka-1136055",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0089",
+      "dateRejected": "2026-08-05",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Handy Person",
+      "organisation": "London Borough of Merton",
+      "url": "https://remoteOK.com/remote-jobs/remote-handy-person-london-borough-of-merton-1136058",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0090",
+      "dateRejected": "2026-08-05",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Test Job 3",
+      "organisation": "PinPoint Middleware Test Company",
+      "url": "https://remoteOK.com/remote-jobs/remote-test-job-3-pinpoint-middleware-test-company-1136043",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0091",
+      "dateRejected": "2026-08-05",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Data Entry &amp; Administrative Assistant",
+      "organisation": "Re Lytics Hires",
+      "url": "https://remoteOK.com/remote-jobs/remote-data-entry-amp-administrative-assistant-re-lytics-hires-1136107",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0092",
+      "dateRejected": "2026-08-05",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "AGC Studio",
+      "organisation": "AGC Studio",
+      "url": "https://remoteOK.com/remote-jobs/remote-agc-studio-agc-studio-1135931",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: AI Agents) — likely a substring false positive upstream, not a real opportunity."
     }
   ]
 }
