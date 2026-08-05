@@ -16,6 +16,9 @@ This is a **view**, not a second source of truth. Per the Canonical Principle (`
 /frameworks/[slug]          What maps to one framework: controls, decisions, incidents, evidence, board questions
 /graph                      Supplemental full-graph visualization
 /standards                  Our Standards: practitioner-facing quality policy + live Quality Dashboard
+/sources                    Source Transparency: where information comes from, how confidence is assigned
+/corrections                How to report a factual error and how corrections are handled
+/legal                      Legal Disclaimer
 ```
 
 Every route is statically generated (`next build && next export`, `output: "export"` in `next.config.mjs`). There is no backend, no database, and no runtime API — the entire site is static HTML/JS/CSS that could be served from any CDN or `file://`.
@@ -29,6 +32,10 @@ If the canonical dataset changes, the Explorer's content changes automatically o
 ## Quality dashboard architecture
 
 `/standards` makes the project's editorial and structural standards public, backed by a live-computed `graph.quality` block (`scripts/quality.ts`) rather than hand-maintained numbers. Every check reuses the actual, frozen tooling instead of re-implementing it — the same precedent `/editorial/graph-health.ts` already set for not letting two copies of a check drift apart: schema validation, relationship integrity, and the Zero-Orphan check call the real rule functions from `/validators/src/rules` directly; citation completeness calls `/editorial/src/lib/citation-score.ts`'s `scoreCitations`; type-check and the editorial audit are run as the actual `npm run typecheck` / `npm run editorial:audit` commands via a subprocess, with their real exit codes captured. If a check can't be run in a given build environment (e.g. a missing dependency), it's reported as unverified (`pass: null`), never silently assumed to pass — the whole point of this page is that nothing on it is asserted without a corresponding, reproducible check.
+
+## Trust and legal pages
+
+`/sources`, `/corrections`, and `/legal` are the practitioner-facing renderings of `CITATION_POLICY.md`/`docs/confidence-model.md`, `EDITORIAL_POLICY.md`'s correction policy, and `LEGAL_DISCLAIMER.md` respectively — content, not new architecture, linked from the footer on every page. Every node detail page (`components/DetailHeader.tsx`) also shows a "Last reviewed / Published in Edition" line, computed from the object's `updated_date`/`version` and a per-entity-type ID-range table (`EDITION_CUTOFFS` in `scripts/build-data.ts`) that maps an object's ID to the edition that first published it. That table is hand-maintained from `/docs/releases/edition-*.md` — it can't be derived from `/data` alone, since an edition boundary is a publication decision — and `RELEASE_CHECKLIST.md` includes updating it as a required step for every future edition, specifically so this line never goes stale.
 
 ## Search architecture
 

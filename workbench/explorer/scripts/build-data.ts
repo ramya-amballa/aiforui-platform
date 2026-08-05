@@ -23,6 +23,26 @@ const DATA_ROOT = join(WORKBENCH_ROOT, "data");
 const ONTOLOGY_PATH = join(WORKBENCH_ROOT, "relationships", "ontology.json");
 const OUT_DIR = join(__dirname, "..", "data", "generated");
 
+// Which edition first published each ID range, per entity type. Derived by
+// hand from /docs/releases/edition-*.md — not computable from /data alone,
+// since an edition boundary is a publication decision, not a data field.
+// Update this table (and RELEASE_CHECKLIST.md's corresponding step) whenever
+// a new edition ships.
+const EDITION_CUTOFFS: Record<EntityType, { max: number; edition: string }[]> = {
+  decision: [{ max: 14, edition: "1.0" }, { max: Infinity, edition: "1.1" }],
+  incident: [{ max: 20, edition: "1.0" }, { max: Infinity, edition: "1.1" }],
+  pattern: [{ max: 13, edition: "1.0" }, { max: Infinity, edition: "1.1" }],
+  control: [{ max: 18, edition: "1.0" }, { max: Infinity, edition: "1.1" }],
+  evidence: [{ max: 13, edition: "1.0" }, { max: Infinity, edition: "1.1" }],
+  board_question: [{ max: 13, edition: "1.0" }, { max: Infinity, edition: "1.1" }],
+};
+
+function firstEdition(type: EntityType, id: string): string {
+  const num = parseInt(id.split("-")[1] ?? "0", 10);
+  const bounds = EDITION_CUTOFFS[type];
+  return bounds.find((b) => num <= b.max)?.edition ?? bounds[bounds.length - 1].edition;
+}
+
 const ENTITY_DIRS: Record<EntityType, string> = {
   decision: "decisions",
   incident: "incidents",
@@ -122,6 +142,7 @@ function main(): void {
       relationships_out,
       relationships_in: [],
       related_frameworks: [],
+      first_edition: firstEdition(type, raw.id),
     };
   });
 

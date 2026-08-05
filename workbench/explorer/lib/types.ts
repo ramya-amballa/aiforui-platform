@@ -163,6 +163,7 @@ export interface GraphNode extends RawEntity {
   relationships_out: ResolvedRelationship[];
   relationships_in: ResolvedRelationship[];
   related_frameworks: string[];
+  first_edition: string;
 }
 
 export interface FrameworkGroup {

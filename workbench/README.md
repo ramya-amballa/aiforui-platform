@@ -67,6 +67,7 @@ Governance Decision (`DEC-`), Incident (`INC-`), Design Pattern (`PAT-`), Framew
 - [`CONFLICT_OF_INTEREST.md`](CONFLICT_OF_INTEREST.md) — commercial relationships, vendor neutrality, disclosure and recusal
 - [`RELEASE_CHECKLIST.md`](RELEASE_CHECKLIST.md) — the deterministic gate every edition passes before publication
 - [`docs/readiness-audit-2026-08.md`](docs/readiness-audit-2026-08.md) — the repository-wide documentation consistency audit this phase produced
+- [`LEGAL_DISCLAIMER.md`](LEGAL_DISCLAIMER.md) — educational-purposes-only scope, no professional reliance, how factual claims are written, corrections
 - [`FOUNDATION_COMPLETE.md`](FOUNDATION_COMPLETE.md) — what has been built, the architectural invariants now frozen, and the single test every future contribution is evaluated against
 
 ## Editorial tooling (Phase 2A)
@@ -79,7 +80,7 @@ The dataset in `/data` started as 91 objects across 20 real, independently-verif
 
 ## Explorer (Phase 3)
 
-`/explorer` is the public, interactive interface onto the graph — universal search, per-entity browsing and filtering, executive-briefing node detail pages, a framework explorer, a supplemental graph visualization, and an **Our Standards** page with a live Quality Dashboard computed from the project's real validation and editorial tooling — all statically generated from `/data` with no backend. See [`/explorer/README.md`](explorer/README.md) for the full architecture.
+`/explorer` is the public, interactive interface onto the graph — universal search, per-entity browsing and filtering, executive-briefing node detail pages (each showing when it was last reviewed and which edition first published it), a framework explorer, a supplemental graph visualization, an **Our Standards** page with a live Quality Dashboard computed from the project's real validation and editorial tooling, and practitioner-facing Source Transparency, Corrections, and Legal Disclaimer pages — all statically generated from `/data` with no backend. See [`/explorer/README.md`](explorer/README.md) for the full architecture.
 
 ```sh
 cd workbench/explorer

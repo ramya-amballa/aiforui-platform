@@ -75,6 +75,7 @@ For any release that includes an Explorer change (a permitted bug fix or perform
 - Every object added or edited since the last edition has a correctly bumped `version` and a corresponding `history` entry (spot-check, since `validate` does not currently enforce this mechanically — see `VERSION_POLICY.md`'s object-version section).
 - `/docs/releases/README.md`'s edition index table is updated with the new edition's status and date.
 - The edition itself is named consistently with `VERSION_POLICY.md`'s numbering rules (minor vs. major).
+- `explorer/scripts/build-data.ts`'s `EDITION_CUTOFFS` table is updated with this edition's ID ranges per entity type, so every node detail page's "Published in Edition X" line stays accurate rather than silently going stale.
 
 ## 11. Documentation completeness
 

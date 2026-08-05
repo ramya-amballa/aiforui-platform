@@ -124,6 +124,21 @@ export default function StandardsPage() {
         </p>
         <QualityDashboard quality={graph.quality} />
       </section>
+
+      <section className="mt-8 border-t border-ink-200 pt-6">
+        <h2 className="mb-3 text-sm font-semibold uppercase tracking-wide text-ink-400">Related</h2>
+        <div className="flex flex-wrap gap-3 text-sm">
+          <a href="/sources/" className="text-accent-600 hover:underline">
+            Source Transparency — where information comes from and how confidence is assigned
+          </a>
+          <a href="/corrections/" className="text-accent-600 hover:underline">
+            Corrections — how to report an error
+          </a>
+          <a href="/legal/" className="text-accent-600 hover:underline">
+            Legal Disclaimer
+          </a>
+        </div>
+      </section>
     </article>
   );
 }

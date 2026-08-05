@@ -27,6 +27,9 @@ export function DetailHeader({ node }: { node: GraphNode }) {
           ))}
         </div>
       )}
+      <p className="mt-3 text-xs text-ink-400">
+        Last reviewed {node.updated_date} (v{node.version}) · Published in Edition {node.first_edition}
+      </p>
     </div>
   );
 }
