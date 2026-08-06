@@ -1216,6 +1216,125 @@
       "relevanceScore": 0,
       "categoriesMatched": [],
       "reason": "No relevance signals matched in posting text (upstream keyword match: AI Agents) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0093",
+      "dateRejected": "2026-08-06",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Head of Security",
+      "organisation": "Tremendous",
+      "url": "https://remoteOK.com/remote-jobs/remote-head-of-security-tremendous-1136210",
+      "relevanceScore": 18,
+      "categoriesMatched": [
+        "complianceContext",
+        "cybersecurityContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: complianceContext, cybersecurityContext; no penalties)."
+    },
+    {
+      "id": "rej-0094",
+      "dateRejected": "2026-08-06",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Send us your CV",
+      "organisation": "NibraSec",
+      "url": "https://remoteOK.com/remote-jobs/remote-send-us-your-cv-nibrasec-1136114",
+      "relevanceScore": 10,
+      "categoriesMatched": [
+        "complianceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: complianceContext; no penalties)."
+    },
+    {
+      "id": "rej-0095",
+      "dateRejected": "2026-08-06",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Optimize",
+      "organisation": "Yemma",
+      "url": "https://remoteOK.com/remote-jobs/remote-optimize-yemma-1136111",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0096",
+      "dateRejected": "2026-08-06",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Share",
+      "organisation": "Yemma",
+      "url": "https://remoteOK.com/remote-jobs/remote-share-yemma-1136112",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0097",
+      "dateRejected": "2026-08-06",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Data Entry Assistant",
+      "organisation": "PT. Mastersystem Infotama",
+      "url": "https://remoteOK.com/remote-jobs/remote-data-entry-assistant-pt-mastersystem-infotama-1136103",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0098",
+      "dateRejected": "2026-08-06",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Tier 2 Member Support Agent",
+      "organisation": "PadSplit",
+      "url": "https://remoteOK.com/remote-jobs/remote-tier-2-member-support-agent-padsplit-1136218",
+      "relevanceScore": 0,
+      "categoriesMatched": [
+        "aiContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: aiContext; Isolated weak-keyword penalty (-15))."
+    },
+    {
+      "id": "rej-0099",
+      "dateRejected": "2026-08-06",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Clinical Coordination Manager",
+      "organisation": "Enable Dental",
+      "url": "https://remoteOK.com/remote-jobs/remote-clinical-coordination-manager-enable-dental-1136096",
+      "relevanceScore": 0,
+      "categoriesMatched": [
+        "governanceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: governanceContext; Healthcare role penalty (-20))."
+    },
+    {
+      "id": "rej-0100",
+      "dateRejected": "2026-08-06",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Administrative Assistant",
+      "organisation": "TIMBERTEK",
+      "url": "https://remoteOK.com/remote-jobs/remote-administrative-assistant-timbertek-1136108",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0101",
+      "dateRejected": "2026-08-06",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Partner Support Associate",
+      "organisation": "Check",
+      "url": "https://remoteOK.com/remote-jobs/remote-partner-support-associate-check-1136095",
+      "relevanceScore": 5,
+      "categoriesMatched": [
+        "companyIndustry"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: companyIndustry; no penalties)."
     }
   ]
 }

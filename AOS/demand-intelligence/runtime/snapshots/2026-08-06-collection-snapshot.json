@@ -1,0 +1,497 @@
+{
+  "date": "2026-08-06",
+  "totalDiscovered": 14,
+  "perSource": {
+    "demandSignals": 0,
+    "greenhouse": 0,
+    "lever": 0,
+    "ashby": 0,
+    "remoteok": 14,
+    "upwork": 0,
+    "linkedinJobs": 0,
+    "googleJobs": 0,
+    "wellfound": 0,
+    "flexjobs": 0,
+    "uaeRecruiters": 0,
+    "consultingFirms": 0
+  },
+  "perSourceErrors": {},
+  "opportunities": [
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Head of Security",
+      "organisation": "Tremendous",
+      "description": "Tremendous is the global platform built for businesses to send payoutsâgift cards and moneyâto anyone, anywhere, instantly. We're trusted by 20,000+ organizations, from startups to giants like Atlassian, MIT, and United Way, to reach millions of recipients worldwide.<br><br>We're profitable and growing without outside investors. We're fully remote, with a high-documentation, low-meeting culture that leaves more time for the work that mattersâand for your life outside it. Our employee NPS sits in the high 80s.<br><br>We move billions of dollars through our systems. That makes security existential, and it's why we're making our first dedicated security hire.<br><br><strong>About The Role<br><br></strong><strong>You'll be our first Head of Security.</strong> There's already a real foundation hereâbug bounty, pen tests, automated code and configuration scanning on the production and code side, phishing simulations on the people side. Youâll add to it across access and identity, SecOps and monitoring, incident response, vendor security, employee security practices, and policy. You'll own the whole posture.<br><br><strong>This is a player-coach role.</strong> Early on, you'll do the scoping and the hands-on work yourself; this is not a role where you direct from above. As the work demands it, we're fully prepared to build a team hereâand we're looking to you to define what that team should be and when.<br><br><strong>You'll report to </strong><strong>the VP of Engineering</strong>, Tremendous' most senior technical leader. We've deliberately placed security with Engineering so you're set up to drive real implementation fastâembedded with the people whose work you're securing, not siloed in a compliance function. As the security function matures, we'll revisit this.<br><br><strong>What You'll Do<br><br></strong><ul><li>Own Tremendous' security posture end-to-end, partnering with our engineering team on production infrastructure and code security. </li><li>Assess where we have gaps, prioritize them, and tackle our highest-leverage gaps first. Weâll have opinions, but you own the prioritization and implementation. </li><li>Treat incident response as core, not afterthought. We may not be able to prevent a breach, but your job is making sure it's small, contained, and that we know exactly what to do. </li><li>Drive security as a cultural shift across the companyâintroducing controls incrementally, working with teams rather than over them. \"Yes, and,\" not \"no.\"</li><li>Lead our AI-security posture. We invest heavily in AI tooling; your job is to manage that risk and enable it, not to ban it. </li><li>Define when and how to staff up the security function, and hire your own team. <br><br></li></ul><strong>What You'll Bring<br><br></strong><ul><li>Real, hands-on security experience at a company that scaledâideally as an early security hire who grew with the business through high growth. </li><li>Deep experience in at least one core security domainâproduct/production security, security operations, or access/identity and policyâwith enough range to reason across the others. You defined the security posture, not just executed someone elseâs playbook. </li><li>An engineer's mindset. You reach for code to solve problems and can read our codebase and understand our infrastructure (Ruby on Rails; TypeScript + React; PostgreSQL; Google Cloud). You won't write much day-to-day, but you're not lost in the code. </li><li>Judgment over checklists. You can explain the actual risk of a given decision, hold a firm line where it matters, and give ground where \"best practice\" doesn't apply to us or real business need pulls the other way. You can hold your own in a debate about whether to open up broad data access for AI tooling. </li><li>Bedside manner. You drive hard change by bringing the team around to your point of view, rather than just telling them no. Engineers and the rest of the company want to work with you. </li><li>Experience building or co-building a small security team is a plus. </li><li>Fintech, payments, or regulated-industry experience is a plus. <br><br></li></ul><strong>What's Cool About The Role<br><br></strong><ul><li>You define the function. First security leader, with the budget for the required tools and team. </li><li>A real mandate. The push for this hire comes straight from the founders. </li><li>We invest in your tools. Everyone has a $5k/month budget for AI tools. Use it. </li><li>Competitive pay and equity. Base salary $250,000â$330,000, plus meaningful equity. </li><li>Fully remote. Work from anywhere in the Americas. </li><li>Great culture. Read more about how we work in our public handbook. <br><br></li></ul>Compensation Range: $250K - $330K<br><br><br/><br/>Please mention the word **GOLDEN** and tag RMTcyLjIxNC40NC4xNDc= when applying to show you read the job post completely (#RMTcyLjIxNC40NC4xNDc=). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-head-of-security-tremendous-1136210",
+      "location": "New York, New York, New York, United States",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Send us your CV",
+      "organisation": "NibraSec",
+      "description": "01<br><br>Equity that actually compounds<br><br>First hires get founding-engineer-sized grants. We'd rather give up percentage points than dilute on talent later.<br><br>02<br><br>Ownership, not OKR theatre<br><br>You own a surface end to end. No layers of product managers between you and the work, and no week-long debates about how to write a spec.<br><br>03<br><br>A problem that genuinely matters<br><br>Compliance is the soft underbelly of every AI rollout. The companies that fail their first AI audit will be replaced by the ones that didn't. We're building for the ones that won't.<br/><br/>Please mention the word **FREE** and tag RMTcyLjIxNC40NC4xNDc= when applying to show you read the job post completely (#RMTcyLjIxNC40NC4xNDc=). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-send-us-your-cv-nibrasec-1136114",
+      "location": "Atherstone On Stour, ",
+      "remote": true,
+      "domainTags": [
+        "AI Governance",
+        "Third-Party Risk"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 6,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 3.0,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "AI Audit"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Optimize",
+      "organisation": "Yemma",
+      "description": "Storage<br><br>Yemma is a secure and easy-to-use cloud service for storing, sharing and using all types of data files.<br><br>Read more<br/><br/>Please mention the word **INSIGHTFUL** and tag RMTcyLjIxNC40NC4xNDc= when applying to show you read the job post completely (#RMTcyLjIxNC40NC4xNDc=). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-optimize-yemma-1136111",
+      "location": "Read, ",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Share",
+      "organisation": "Yemma",
+      "description": "Storage<br><br>Yemma is a secure and easy-to-use cloud service for storing, sharing and using all types of data files.<br><br>Read more<br/><br/>Please mention the word **WHOOOA** and tag RMTcyLjIxNC40NC4xNDc= when applying to show you read the job post completely (#RMTcyLjIxNC40NC4xNDc=). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-share-yemma-1136112",
+      "location": "Read, ",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Data Entry Assistant",
+      "organisation": "PT. Mastersystem Infotama",
+      "description": "We are looking for a Data Entry Assistant to join our remote team.<br><br>This is an entry-level position, and no previous experience is required. Full training will be provided to help you succeed in your role.<br><br>This opportunity is ideal for students, fresh graduates, stay-at-home parents, and anyone looking for a flexible remote job.<br><br><strong>Responsibilities<br><br></strong><ul><li> Enter and update information in online databases</li><li> Review records for accuracy</li><li> Organize electronic files and documents</li><li> Maintain data confidentiality</li><li> Complete assigned tasks within deadlines</li><li> Follow simple instructions and company procedures<br><br></li></ul><strong>Requirements<br><br></strong><ul><li> No experience required</li><li> Basic computer skills</li><li> Good attention to detail</li><li> Reliable internet connection</li><li> Ability to work independently</li><li> Willingness to learn<br><br></li></ul><strong>Benefits<br><br></strong><ul><li> 100% Remote Work</li><li> Flexible Schedule</li><li> Paid Training</li><li> Friendly Team</li><li> Career Growth Opportunities</li><li> Performance Bonuses<br><br></li></ul><strong>Minimum Qualifications<br><br></strong>No previous work experience is required. Fresh graduates, students, and individuals looking for their first remote job are encouraged to apply. Applicants should have basic computer skills, attention to detail, a reliable internet connection, and the ability to follow instructions while completing data entry tasks accurately.<br/><br/>Please mention the word **INDIVIDUALIZED** and tag RMTcyLjIxNC40NC4xNDc= when applying to show you read the job post completely (#RMTcyLjIxNC40NC4xNDc=). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-data-entry-assistant-pt-mastersystem-infotama-1136103",
+      "location": "Quezon City, Quezon City, National Capital Region, Philippines",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Tier 2 Member Support Agent",
+      "organisation": "PadSplit",
+      "description": "<p><span>PadSplit is a pioneering real estate platform operating in the shared housing industry, committed to providing affordable housing accommodations for low-income earners. We are dedicated to helping solve the affordable housing crisis while leveraging housing as a vehicle for financial empowerment for our members.  </span><span>Our principles are </span><strong>Care, Show it, Prove it,<span> and weâve been proving it through our actions since 2018.</span><p><br></p><p><span>We are on a mission to change the world â </span><strong>one room at a time.<span>&nbsp; Join us!</span><p><br></p><p><span>Learn more about PadSplit </span>here</p><p><br></p><p><strong>The Role We Need:</strong></p><br><p>&nbsp;</p><br><p>As a member of the escalations team, you are considered a senior member of the Customer Experience organization. This role involves handling more complex or escalated inquiries that require a higher level of expertise and customer service finesse. Advocates in this position need to be proactive problem-solvers equipped with a strong understanding of our policies, procedures, and the unique needs of our members. By collaborating closely with other departments and utilizing feedback, they contribute to refining our support processes and enhancing the overall member experience.</p><br><p>&nbsp;</p><br><p><strong>The Person We Are Looking For:</strong></p><br><p>&nbsp;</p><br><p>The ideal person should have a knack for problem-solving, especially in situations that require thoughtful analysis and a careful approach. Exceptional communication skills are essential, as the role involves conveying information clearly and confidently to our members while resolving their issues. We're looking for someone who thrives in a collaborative environment, works well across teams, and can actively contribute to improving our support processes. Above all, the ideal candidate is committed to creating a positive experience that builds trust and satisfaction among our members.</p><p><p><br></p><strong>Hereâs What Youâll Do Day-To-Day:</strong><ul><br><li>Act as the main escalation point for complex Member support issues that need effective critical thinking, research, and problem-solving abilities</li><br><li>Manage a range of complex cases, such as policy-related inquiries, financial disputes, platform issues, and membership matters</li><br><li>Assume responsibility for cases from beginning to end, ensuring a prompt and satisfactory resolution</li><br><li>Serve as the representative of PadSplit, ensuring that all interactions are conducted with empathy, professionalism, and efficiency</li><br><li>Develop innovative solutions for the unique challenges that arise, balancing both member needs and company policies</li><br><li>Assist and educate members about our platform, policies, and product offerings, ensuring they fully understand their options</li><br><li>Maintain an in-depth understanding of our ever-evolving web and mobile products, processes, and policies</li><br><li>Identify recurring issues and trends, offering insights and suggestions for process and policy improvements to enhance the Member experience</li><br><li>Serve as the voice of the customer, advocating for members&rsquo; needs and supporting ongoing improvements in our Customer Experience (CX) operations</li><br><li>Collaborate closely with other teams, such as Product, Operations, and Host Support, to guarantee a seamless experience for our Members</li><br><li>Assume responsibility for special projects within the Customer Experience team, contributing to process enhancements and operational efficiency</li><br><br></ul><p><br></p><strong>Hereâs What Youâll Need To Be Successful:</strong><ul><br><li>Comfortable working in a fast-paced, ever-evolving environment where priorities can shift quickly</li><br><li>Able to stay composed under pressure while handling complex Member interactions</li><br><li>Strong verbal and written communication skills, ensuring clarity and professionalism in every interaction</li><br><li>Ability to break down complex topics and explain them in a clear, concise, and empathetic manner</li><br><li>A natural problem-solver who can analyze information, investigate issues, and think critically to resolve complex Member concerns</li><br><li>Ability to develop creative solutions while balancing Member needs and company policies</li><br><li>Energized by customer interactions, with a genuine passion for helping others and enhancing the Member experience</li><br><li>Skilled at balancing empathy with firmness, ensuring fair and effective resolutions</li><br><li>Ability to prioritize multiple tasks, manage workloads efficiently, and meet response time expectations</li><br><li>Highly detail-oriented and capable of tracking cases through resolution</li><br><li>Comfortable navigating multiple systems, online platforms, and support tools</li><br><li>Able to quickly adapt to new technologies, processes, and policy changes</li><br><li>Possesses a strong sense of intellectual curiosity, eager to learn, adapt, and improve</li><br><li>A collaborative team player with a positive, \"can-do\" attitude, always ready to support colleagues and contribute to team success</li><br><br></ul><p><br></p><strong>The Interview Process:</strong><ul><br><li>Your application will be reviewed for possible next steps by the Hiring Manager</li><br><li>If you meet eligibility requirements, the next step would be a video interview with a member of the PeopleOps team for about thirty (30) minutes</li><br><li>If warranted, the next step would be a video panel interview with our Tier 2 Member Support Team Leads at PadSplit for one (1) hour. For this interview, the candidate would execute a live writing assessment</li><br><li>If warranted, the next step would be a video interview with our Manager of T2 Member Support for forty (40) minutes. For this interview, we will assess your overall fit with a set of role-related questions</li><br><li>If warranted, we move to offer!</li><br><br></ul></p><p><br></p><br><p><strong>Notice to Applicants:<p><br></p><p><span>PadSplit participates in E-Verify. All new employees are required to complete an I-9 form and be authorized to work in the United States. Employment is contingent upon successful completion of the E-Verify process.</span></p><p><br></p><p><span>We are interested in every qualified candidate who is eligible to work in the United States. However, we are not able to sponsor visas.</span></p><p><br></p><p><em>PadSplit is an Equal Opportunity Employer. All qualified applicants will receive consideration for employment without regard to race, color, religion, sex, sexual orientation, gender identity, national origin, disability, or status as a protected veteran.</em></p><br><p>We may use artificial intelligence (AI) tools to support parts of the hiring process, such as reviewing applications, analyzing resumes, or assessing responses and identifying potential inconsistencies or verification signals in application materials based on available information. These tools assist our recruitment team but do not replace human judgment. Final hiring decisions are ultimately made by humans. If you would like more information about how your data is processed, please contact us.</p><br><br><br><span>Compensation is based on the role's scope, national market benchmarks, the person's expertise and experience, and the impact of their contributions to our business goals.</span></strong></p></strong></p></strong></p><br/><br/>Please mention the word **BULLISH** and tag RMTcyLjIxNC40NC4xNDc= when applying to show you read the job post completely (#RMTcyLjIxNC40NC4xNDc=). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-tier-2-member-support-agent-padsplit-1136218",
+      "location": "Ormoc, Ormoc, Eastern Visayas, Philippines",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Clinical Coordination Manager",
+      "organisation": "Enable Dental",
+      "description": "Department: Support Operations<br><br>Reports To: Director, Support Operations<br><br>Location: Remote (U.S.)<br><br>Position Type: Full-Time, Exempt<br><br><strong>Position Summary<br><br></strong>The Clinical Coordinator Department Manager oversees the Clinical Coordination team responsible for maintaining accurate, appropriately filled provider schedules across all markets. This role provides leadership, operational oversight, training, workload management, process improvement, and cross-department collaboration to support consistent scheduling performance.<br><br>This leader sets daily and weekly priorities, delegates work, holds the team accountable, monitors current and upcoming schedule health, and identifies risks before they impact provider days. The manager ensures accepted treatment and unscheduled new-patient backlogs are actively worked and that scheduling barriers are tracked and escalated to the appropriate owner.<br><br><strong>Key Responsibilities<br><br></strong><strong>Team Leadership &amp; Performance Management<br><br></strong><ul><li>Lead, mentor, and develop Clinical Coordinators through clear priorities, delegation, accountability, and follow-through</li><li>Conduct regular 1:1s, performance reviews, coaching, and ongoing training refreshers</li><li>Oversee team scheduling, workload balancing, and coverage across markets based on provider days, appointment volume, and overall workload</li><li>Support onboarding and competency development for new team members</li><li>Foster a positive, efficient, and collaborative culture grounded in service excellence and ownership<br><br></li></ul><strong>Appointment Readiness &amp; Schedule Reliability<br><br></strong><ul><li>Monitor the 0-14-day schedule and upcoming weeks to identify open capacity, underfilled provider days, and scheduling risks early</li><li>Ensure accepted treatment and unscheduled new-patient backlogs are actively worked in accordance with provider availability, market zoning, and scheduling priorities</li><li>Ensure Clinical Coordinators identify, track, and escalate scheduling barriers, including outstanding medical clearances, insurance verification, pre-medication needs, facility documentation, and lab-case concerns, to the appropriate department or owner</li><li>Monitor Clinical Days at Goal and schedule disruptions to ensure timely follow-up and improve filled provider days across applicable markets</li><li>Ensure schedules are entered timely and accurately while production-based scheduling remains focused appropriately<br><br></li></ul><strong>Root-Cause Analysis &amp; Continuous Improvement<br><br></strong><ul><li>Analyze recurring scheduling barriers, backlog trends, fall-aparts, and schedule-health concerns to identify operational gaps and root causes</li><li>Develop preventive strategies and implement workflow or SOP improvements within Clinical Coordination</li><li>Coordinate any workflow change affecting another department or external partner with the appropriate department leader or Account Manager before implementation</li><li>Support system optimization, automation initiatives, and process refinements in CareStack and Healier<br><br></li></ul><strong>Cross-Functional Collaboration<br><br></strong><ul><li>Partner across departments to resolve scheduling barriers, maintain clear ownership, and support consistent patient flow</li><li>Serve as an escalation point for complex scheduling needs or facility and provider concerns</li><li>Independently address department concerns, communicate risks and updates, and escalate to the Director when additional leadership support is needed<br><br></li></ul><strong>Data, Reporting &amp; Accountability<br><br></strong><ul><li>Monitor and report team performance and operational health indicators, including:</li><li>Clinical Days at Goal</li><li>0-14-day schedule health and upcoming provider weeks</li><li>Accepted treatment and unscheduled new-patient backlog progress</li><li>Schedule-entry timeliness</li><li>Reschedule, cancellation, and fall-apart trends</li><li>Outstanding scheduling barriers and escalations</li><li>Provide weekly insights, actions taken, next steps, and performance updates to leadership</li><li>Ensure accurate documentation standards in CareStack and Healier<br><br></li></ul><strong>Requirements<br><br></strong><strong>Qualifications<br><br></strong><ul><li>Experience: 5+ years in dental, medical, or clinical scheduling/coordination; minimum 2 years leadership experience</li><li>Systems: Experience with CareStack, or similar EMR platforms and Google Suite required</li><li>Knowledge: Strong understanding of medical/dental workflows, provider scheduling, multi-facility coordination, pre-med &amp; medical clearance processes, insurance verification, lab case coordination, and multi-facility scheduling</li><li>Leadership: Demonstrated success managing remote teams, assigning and delegating work, coaching performance, holding employees accountable, and implementing process improvements. </li><li>Skills:</li><ul><li>Excellent communication and relationship-building skills</li><li>Strong organizational, delegation, and prioritization abilities</li><li>Ability to independently assess problems, make decisions, and follow through</li><li>Ability to remain calm and solution-focused in a fast-paced environment<br></li></ul></ul><strong>Key Competencies<br><br></strong><ul><li>Leadership &amp; team development</li><li>Delegation, accountability &amp; follow-through</li><li>Proactive problem solving &amp; root-cause thinking</li><li>Schedule-health oversight &amp; workload management</li><li>Workflow optimization &amp; accuracy</li><li>Efficient decision-making &amp; prioritization</li><li>Cross-functional collaboration</li><li>Service-minded communication with professionalism and empathy<br><br></li></ul><strong>Work Environment<br><br></strong><ul><li>Fully remote role requiring reliable internet access</li><li>Requires ongoing communication with team members, facilities, providers, and internal departments via virtual platforms</li><li>Occasional travel for leadership meetings, in-field shadow sessions, or training as needed<br><br></li></ul><strong>Benefits<br><br></strong>Compensation: Base compensation $60,000-65,000 annually<br><br>Benefits: Medical, Dental, Vision, 401(k), Life Insurance, Paid Time Off<br/><br/>Please mention the word **DEPENDABLE** and tag RMTcyLjIxNC40NC4xNDc= when applying to show you read the job post completely (#RMTcyLjIxNC40NC4xNDc=). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-clinical-coordination-manager-enable-dental-1136096",
+      "location": "Austin, Austin, Texas, United States",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Administrative Assistant",
+      "organisation": "TIMBERTEK",
+      "description": "<p>Job description:</p><p><br></p><p>Admin Assistant:</p><p><br></p><p>About the Role:</p><p><br></p><p>TIMBERTEK is a Dubai-based wood flooring company specializing in solid wood flooring installation, restoration, maintenance, sanding, and polishing for premium residential and hospitality projects.</p><p><br></p><p>We are looking for a proactive and detail-oriented Admin assistant to support our day-to-day operations, coordinate projects, and ensure smooth communication between clients, suppliers, and the internal team.</p><p><br></p><p>Key Responsibilities:</p><p><br></p><ul><li>Oversee daily administrative tasks, including documentation, filing, and record management.</li><li>Coordinate schedules between the sales team, site team, and clients for installations, maintenance, and restoration projects.</li><li>Prepare quotations, invoices, and maintain payment records.</li><li>Maintain project documentation, service records, and job files.</li><li>Monitor inventory of flooring materials, finishing products, and tools, and coordinate replenishment with suppliers.</li><li>Assist the site team with scheduling, site access arrangements, and client follow-ups.</li><li>Respond to client enquiries via phone, email, and WhatsApp, and arrange site visits and quotation requests.</li><li>Maintain supplier and client databases, contracts, and related documentation.</li><li>Support general office administration, including attendance records and procurement of office and site supplies.</li><li>Prepare basic reports on project progress, service requests, and ongoing jobs.</li></ul><p><br></p><p><br></p><p><br></p><p>Requirements:</p><p><br></p><ul><li>Prior experience in the renovation or maintenance industry is essential.</li><li>Bachelor's degree or diploma in Business Administration or a related field, or equivalent practical experience.</li><li>Minimum 2 years of experience in administration or office coordination, preferably within fit-out, interiors, flooring, maintenance, construction, or contracting.</li><li>Strong organizational skills with the ability to manage multiple tasks and coordinate with clients, suppliers, and site teams.</li><li>Proficient in Microsoft Office and comfortable learning CRM, scheduling software, and AI tools to improve workflow.</li><li>Process-oriented with strong organizational and problem-solving skills.</li><li>Detail-oriented with a high level of accuracy.</li><li>Strong written English and communication skills.</li></ul><p><br></p><p><br></p><p><br></p><p>Salary: AED 3000 per month</p><p><br></p><p>Work Arrangement:</p><p><br></p><p>This role is currently work-from-home. Depending on business requirements and performance, it may transition to a remote, hybrid, or onsite position in the future.</p><p><br></p><p>Why Join Us?</p><p><br></p><p>Join a collaborative and fast-paced team where your attention to detail, organizational skills, and ideas for improving processes will be valued and encouraged.</p><p><br></p><p>Job Type: Full-time</p><p><br></p><p>Work Location: Remote</p><br/><br/>Please mention the word **SMILE** and tag RMTcyLjIxNC40NC4xNDc= when applying to show you read the job post completely (#RMTcyLjIxNC40NC4xNDc=). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-administrative-assistant-timbertek-1136108",
+      "location": "Ø¯Ø¨Ù, Ø¯Ø¨Ù Ø§ÙØ¥ÙØ§Ø±Ø§Øª Ø§ÙØ¹Ø±Ø¨ÙØ© Ø§ÙÙØªØ­Ø¯Ø©",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Partner Support Associate",
+      "organisation": "Check",
+      "description": "<strong>About Check<br><br></strong>Payroll is broken. <strong>Come fix it alongside a team thatâs as passionate as you are! <br><br></strong>At Check, weâre not just building our own business â weâre building payroll businesses together with every one of our partners. As the inventors of embedded payroll, weâre redefining how people get paid and making it easier for payroll businesses to launch, grow, and thrive.<br><br>On our team you'll use creative problem-solving, critical thinking, and grit to simplify the complexity of payroll for thousands of employers of every size, across all industries. We ignore conventional role boundaries in favor of the unique strengths and values each builder brings to our mission: <em><strong>make paying people simple</strong>. <br><br></em><ul><li>Check out the full story</li><li>Tune in<br><br></li></ul><em>Check is far more than just API infrastructure. Weâre a springboard for building and scaling payroll businesses.<br><br></em>The Support team plays a critical role in keeping payroll running for thousands of businesses and millions of workers by supporting the platforms that build payroll products on top of Check's infrastructure. When questions arise or something doesn't behave as expected, we investigate what happened, explain it clearly, and drive toward a solution.<br><br>This role sits at the intersection of payroll expertise and technical product knowledge, and the work is fast-moving, analytical, and highly investigative. A typical day involves untangling complex payroll scenarios, identifying root causes, partnering across the company to solve problems, and communicating clearly with partners whose payroll expertise may range from seasoned professionals to first-time operators. Along the way, you'll develop deep expertise in Check's platform, payroll operations, and the broader payroll ecosystem while building trusted relationships with the partner teams you support.<br><br>Support sits at the center of Check's product ecosystem. We work closely with Engineering, Product, Tax, Risk, and other teams to troubleshoot issues, surface product insights, and improve the platform. Few roles offer the same visibility into how modern payroll infrastructure operates at scale. If you enjoy solving layered problems, asking thoughtful questions, and translating technical concepts into clear, actionable guidance, you'll thrive here.<br><br><strong>In This Role, You Will<br><br></strong><ul><li>Provide exceptional partner support. You'll manage a high volume of partner requests, primarily through written communication, balancing urgency with thoughtful investigation while consistently meeting or exceeding SLAs.</li><li>Investigate complex payroll problems. You'll dive deep into payroll and tax questions, break issues into manageable pieces, trace root causes through our systems, and drive issues toward resolution with accuracy, curiosity, and ownership.</li><li>Collaborate across the company to resolve issues. You'll partner closely with Engineering, Product, Tax, Risk, and other teams to troubleshoot issues, escalate bugs, and help drive solutions that unblock partners quickly.</li><li>Surface patterns and improve the system. You'll identify recurring partner questions, operational friction points, and product trends, surfacing insights that improve documentation, workflows, and product behavior.</li><li>Build trusted relationships. Whether youâre working with experienced payroll professionals or teams who are brand new to the industry, youâll build trust by bringing empathy, ownership, and transparency to every interaction and explaining technical or operational issues in ways they understand.</li><li>Escalate thoughtfully. Youâll exercise careful judgment about how and when to pull others in on a problem or escalate upward, and youâll ensure everyone has clear context so they can quickly understand the problem and help identify a path to resolution.</li><li>Deliver service that feels personal. Youâll build lasting relationships with our partners by developing a deep understanding of their platforms and the businesses they serve. Youâll establish yourself as a reliable and trusted resource by making people feel heard, helped, and valued.<br><br></li></ul><strong>Many backgrounds could fit this role, but ideal candidates will have most or all of the following:<br><br></strong><ul><li>2+ years in a client- or partner-facing role, supporting customers, partners, or technical products.</li><li>1+ years working at a payroll provider, payroll platform, HR technology company, fintech company, or in a role that required applying payroll knowledge to solve customer problems</li><li>Experience balancing multiple priorities in a fast-paced support or operations environment</li><li>Strong investigative instincts and genuine curiosity to understand not just what happened, but why</li><li>Exceptional attention to detail and the ability to maintain accuracy while solving complex problems</li><li>Comfortable collaborating across technical, operational, and administrative teams to solve partner problems and enable new business capabilities</li><li>Excellent written communication skills with the ability to explain complex technical or operational concepts clearly and empathetically</li><li>Experience using ticketing or case management systems (Zendesk preferred)</li><li>Willingness and availability to attend our annual 3 day company offsite each spring<br><br></li></ul>Travel &amp; Office Policy<br><br>The Check team is distributed across the US. Roles can be remote, hybrid, or based in one of our offices in <strong>New York City</strong> or <strong>San Francisco</strong>. We offer ample opportunities and encourage employees to attend team offsites, events, and hackathons throughout year. All Checketeers gather in the spring for our annual 3-day company retreat.<br><br>For our in-office and hybrid employees, our offices are open all week. We provide meals on <strong>Tuesdays</strong> and <strong>Thursdays</strong> and there are regular happy hours, game nights, and other in-person events.<br><br>Remote work at Check requires the ability to perform all responsibilities without distraction or disruption, while maintaining quality, effective communication, and productivity.<br><br><li><br><br></li><em>Check is proud to be an Equal Opportunity employer. We do not discriminate based on race, religion, color, national origin, sex (including pregnancy, childbirth, or related medical conditions), sexual orientation, gender, gender identity, gender expression, transgender status, sexual stereotypes, age, status as a protected veteran, status as an individual with a disability, or other applicable legally protected characteristics. We also consider qualified applicants with criminal histories, provided they are consistent with applicable federal, state, and local laws. Check is committed to providing reasonable accommodations for candidates with disabilities in our recruiting process.<br><br></em><em>Check participates in E-Verify and will provide the federal government with Form I-9 information from all new employees to confirm that they are authorized to work in the U.S. Check does not use E-Verify to pre-screen applicants.</em><br/><br/>Please mention the word **IMAGINATIVE** and tag RMTcyLjIxNC40NC4xNDc= when applying to show you read the job post completely (#RMTcyLjIxNC40NC4xNDc=). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-partner-support-associate-check-1136095",
+      "location": "New York City Metropolitan Area",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Student Success Coach",
+      "organisation": "FindTutors",
+      "description": "<strong><em>FindTutors </em></strong>is one of the leading online education platforms in the UK, connecting students with tutors and mentors who support both academic achievement and personal development. We help learners at all stages of education build confidence, improve performance, and reach their goals through personalised guidance.<br><br><strong>About The Role<br><br></strong>We are looking for empathetic and positive individuals to join us as <strong>Student Success Coaches</strong>. This online role focuses on student wellbeing, motivation, and goal-setting, supporting young people not only with their studies but also with their personal growth.<br><br>As a Student Success Coach, you will help students overcome academic stress, improve focus, and develop strong organisation and study skills through flexible online sessions.<br><br><strong><strong>Key responsibilities<br><br></strong></strong>Support students in setting and achieving personal and academic goals.<br><br>Teach effective study habits, time management, and mindset strategies.<br><br>Encourage motivation, confidence, and resilience.<br><br>Provide a safe and supportive environment for students to express challenges and progress.<br><br><strong>Requirements<br><br></strong>No formal coaching experience required.<br><br>Strong listening and communication skills.<br><br>Interest in student wellbeing and personal development.<br><br>Friendly, patient, and supportive attitude.<br><br><strong><strong>What we offer<br><br></strong></strong>Flexible working hours.<br><br>Remote sessions from anywhere in the UK.<br><br>Set your own pay rate (Â£20âÂ£40/hour).<br><br>Opportunity to make a meaningful impact on studentsâ lives through academic and personal support.<br><br>Start supporting students in their academic journey and personal growth today by joining <strong><em>FindTutors </em></strong>as a Student Success Coach.<br/><br/>Please mention the word **SPONTANEOUS** and tag RMTcyLjIxNC40NC4xNDc= when applying to show you read the job post completely (#RMTcyLjIxNC40NC4xNDc=). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-student-success-coach-findtutors-1136086",
+      "location": "London, London, England, United Kingdom",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Food &amp; Beverage Positions",
+      "organisation": "MEF Ltd",
+      "description": "<p><em>We're Hiring!</em></p><p><br></p><p><em>Join the team at one of our signature luxury hotel properties.</em></p><p><span>&nbsp;</span></p><p><em>We're currently looking for passionate individuals for a variety of Food &amp; Beverage Service roles. If you're dedicated to delivering exceptional guest experiences and are looking to grow your career in luxury hospitality, we'd love to hear from you.</em></p><p><span>&nbsp;</span></p><p><em>Apply today or share this opportunity with someone who might be the perfect fit.</em></p><p><span>&nbsp;</span></p><br/><br/>Please mention the word **ILU** and tag RMTcyLjIxNC40NC4xNDc= when applying to show you read the job post completely (#RMTcyLjIxNC40NC4xNDc=). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-food-amp-beverage-positions-mef-ltd-1136052",
+      "location": "Hamilton, ",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Sales Coordinator New York",
+      "organisation": "Tito's Handmade Vodka",
+      "description": "<p><strong>About the Company:Â </strong></p><p>Built on a dream and distilled in Austin, Texas, Tito's Handmade Vodka has been bringing people (and dogs) together over the last two decades. Tito's Handmade Vodka has gained a reputation for its high-quality vodka, charitable contributions, and its goal to make people happy while making the world a better place.Â </p><p>Â </p><p><strong>About the Position:Â </strong></p><p>Tito's Handmade Vodka is seeking a motivated, enthusiastic individual with a passion for sales to join our talented team! This person will support sales order solicitation efforts with the goal of increasing sales orders, identify sales order opportunities, coordinate sales programming geared towards driving additional sales of Tito's products by the distributor, and handle other sales order solicitation support activities as necessary. Our ideal candidate will be ready to become an expert of the Tito's Handmade Vodka brand and enthusiastically communicate product knowledge to distributors, retailers, and end consumers by sharing the Tito's story and expounding on the virtues of the product for purposes of driving sales orders to the distributor and ultimately to Tito's.Â Â </p><p>Â </p><p><strong>Core Responsibilities:Â </strong></p><ul><li>Coordinate sales programming geared towards driving additional sales requests forÂ Tito's products made to the distributor and ultimately to Tito's, including coordinating with third-party demo agencies, coordinating sales programming related to product displays, executing sampling activity and cocktail presentations for on- and off-premise retail accountsÂ </li></ul><ul><li>Execution of local sales solicitation strategy and addressing opportunities to drive sales orders to the distributor and ultimately to Tito'sÂ </li></ul><ul><li>Develop and maintain relationships with retail customers of the distributor, including those who purchase Tito's products and those who may in the future purchase Tito's productsÂ </li></ul><ul><li>Any and all additional activities necessary to support sales solicitation in the regionÂ <br><br></li></ul><strong>Requirements<br><br></strong><p><strong>Minimum Requirements:Â </strong></p><ul><li>2 years of retail sales experience reflecting increasing levels of responsibilityÂ </li><li>Bilingual (English/Spanish) proficiency required. Must be able to communicate effectively in both English and Spanish with customers, distributors, and retailers.</li></ul><ul><li>Be knowledgeable of Federal and State regulations as they pertain to the sale of alcoholic beverages</li><li>High School diploma or state-issued equivalency certificate required; Bachelor's degree preferredÂ </li><li>21 years of age or olderÂ </li><li>Organized, Energetic &amp; ProactiveÂ </li><li>Proficient in Microsoft Office suite (Word, Excel, PowerPoint, etc.)</li><li>Polished Sales &amp; Communication SkillsÂ </li><li>Physically capable of executing all essential functions to perform the jobÂ </li><li>Must possess a valid driver's license, maintain an acceptable driving record, and have access to reliable transportation for travel throughout the assigned territory. Use of a personal vehicle for business travel is required.</li><li>Legally able to work in USAÂ <br><br></li></ul><strong>Benefits<br><br></strong><ul><li>Competitive Base Salary ($50,000 - $91,000) + Bonus Plan</li><li>Car, Phone &amp; Internet Allowance</li><li>Expense Account</li><li>Comprehensive medical, dental, and vision insurance</li><li>Company-paid life and disability insurance</li><li>Voluntary insurance plans</li><li>401(k) plan with company match</li><li>Paid time off, including vacation, sick, and flex time</li><li>Paid Parental Leave</li><li>Adoption Assistance Program</li><li>Dependent Care Flexible Spending Account (FSA)</li><li>Health Savings Account (HSA)</li><li>Lifestyle Spending Account (LSA)</li><li>Financial Wellness Benefit</li><li>Employee Assistance Program (EAP)<br></li></ul><p><strong>Equal Opportunity Employer</strong></p><p><strong>Fifth Generation Distilled Spirits, Inc.</strong></p><br/><br/>Please mention the word **FASCINATE** and tag RMTcyLjIxNC40NC4xNDc= when applying to show you read the job post completely (#RMTcyLjIxNC40NC4xNDc=). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-sales-coordinator-new-york-titos-handmade-vodka-1136055",
+      "location": "New York, New York, New York, United States",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Handy Person",
+      "organisation": "London Borough of Merton",
+      "description": "Advert Text<br><br><strong>About The Role<br><br></strong>Adult Social Services requires a handyperson to join their team. You must be able to work flexibly to meet the demands of a responsive service, have excellent communication skills and have a full driving licence held for a minimum of two years.<br><br><strong>Our Ideal candidate<br><br></strong><ul><li>You will need an understanding of the needs of older people and people with a disability and help them to live independently in their own homes.</li><li>You will be required to carry out small repairs, minor adaptations, and energy efficiency work.<br><br></li></ul><strong>What We Offer<br><br></strong>At Merton Council, we are Merton UnitedâOne Borough, One Team. We are committed to nurturing civic pride, building a sustainable future, and creating a borough where sport and active living are at the heart of our communities.<br><br>We pride ourselves on creating a workplace that encourages creativity, supports wellbeing, and delivers real, tangible impacts in the community.<br><br>Please see our why work for us page on our website for more information about a great range of benefits that go beyond salary and offer flexibility to suit you Work for Merton : Working for us | Merton Council<br><br>Closing date: 1st September 2026<br><br>Interviews to be held on the 9th September 2026<br/><br/>Please mention the word **PERSEVERE** and tag RMTcyLjIxNC40NC4xNDc= when applying to show you read the job post completely (#RMTcyLjIxNC40NC4xNDc=). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-handy-person-london-borough-of-merton-1136058",
+      "location": "Morden, ",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Test Job 3",
+      "organisation": "PinPoint Middleware Test Company",
+      "description": "<p><strong>Application Deadline: </strong> 7 August 2026</p><p><strong>Department: </strong>Operations</p><p><strong>Location: </strong>London<br><br></p><strong>Description<br><br></strong>Letterpress everyday carry pork belly street art chillwave, man bun jianbing. Ramps wolf small batch snackwave skateboard. You probably haven't heard of them pitchfork blue bottle salvia snackwave pug. Marfa neutra 8-bit hashtag tbh tilde. Polaroid chambray sustainable viral banjo, brooklyn tacos hot chicken aesthetic man braid food truck actually snackwave. Prism ethical polaroid ramps, shabby chic flannel hoodie VHS williamsburg organic copper mug gluten-free la croix XOXO. Taiyaki raclette lyft affogato.<br><br><br><strong>Key Responsibilities<br><br></strong>+1 tacos pickled snackwave live-edge, try-hard cray leggings small batch adaptogen semiotics banh mi microdosing. Stumptown enamel pin before they sold out waistcoat. Selfies mixtape cloud bread green juice. Kombucha fanny pack iPhone tacos, cold-pressed palo santo health goth brooklyn celiac bitters vice 8-bit VHS.<br><br><strong>Area One</strong><ul><li>Responsibility One</li><li>Responsibility Two</li><li>Responsibility Three</li></ul><strong>Area Two</strong><ul><li>Responsibility Four</li><li>Responsibility Five</li><li>Responsibility Six</li><li>Responsibility Seven</li><li>Responsibility Eight</li></ul><strong>Area Three</strong><ul><li>Responsibility Nine</li><li>Responsibility Ten<br><br></li></ul><strong>Skills, Knowledge and Experience<br><br></strong>3 wolf moon drinking vinegar godard stumptown. Beard PBR&amp;B fanny pack, kinfolk craft beer kickstarter venmo franzen bespoke disrupt activated charcoal humblebrag. Gentrify hell of jean shorts, quinoa pok pok banh mi fixie sriracha austin. Vegan green juice polaroid disrupt stumptown synth you probably haven't heard of them blog chicharrones salvia tacos enamel pin. Prism tacos cred try-hard. Street art pabst skateboard pork belly shabby chic actually. Single-origin coffee glossier tumblr shoreditch kitsch keffiyeh woke forage.<br><br>Lomo bicycle rights cred, williamsburg shaman irony offal taxidermy vaporware lyft pok pok waistcoat la croix.<br><br><strong>Essential</strong><ul><li>Skill One</li><li>Skill Two</li><li>Skill Three</li><li>Experience One</li><li>Experience Two</li><li>Qualification One</li></ul><strong>Desirable</strong><ul><li>Skill Four</li></ul><br/><br/>Please mention the word **PLUSH** and tag RMTcyLjIxNC40NC4xNDc= when applying to show you read the job post completely (#RMTcyLjIxNC40NC4xNDc=). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-test-job-3-pinpoint-middleware-test-company-1136043",
+      "location": "London, ",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    }
+  ]
+}
