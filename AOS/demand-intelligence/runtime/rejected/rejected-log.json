@@ -1335,6 +1335,161 @@
         "companyIndustry"
       ],
       "reason": "Weak/insufficient relevance signal (matched: companyIndustry; no penalties)."
+    },
+    {
+      "id": "rej-0102",
+      "dateRejected": "2026-08-07",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Technical Storekeeper",
+      "organisation": "Carnival Corporation",
+      "url": "https://remoteOK.com/remote-jobs/remote-technical-storekeeper-carnival-corporation-1136268",
+      "relevanceScore": 0,
+      "categoriesMatched": [
+        "complianceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: complianceContext; Administrative role penalty (-18))."
+    },
+    {
+      "id": "rej-0103",
+      "dateRejected": "2026-08-07",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Routesetters",
+      "organisation": "SetRsoft",
+      "url": "https://remoteOK.com/remote-jobs/remote-routesetters-setrsoft-1136200",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0104",
+      "dateRejected": "2026-08-07",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Java Developer",
+      "organisation": "Clera",
+      "url": "https://remoteOK.com/remote-jobs/remote-java-developer-clera-1136188",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0105",
+      "dateRejected": "2026-08-07",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "owlette",
+      "organisation": "Tridant",
+      "url": "https://remoteOK.com/remote-jobs/remote-owlette-tridant-1136206",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0106",
+      "dateRejected": "2026-08-07",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Cabin Crew Virtual Interviews PAN India",
+      "organisation": "Akasa Air",
+      "url": "https://remoteOK.com/remote-jobs/remote-cabin-crew-virtual-interviews-pan-india-akasa-air-1136223",
+      "relevanceScore": 15,
+      "categoriesMatched": [
+        "companyIndustry",
+        "complianceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: companyIndustry, complianceContext; no penalties)."
+    },
+    {
+      "id": "rej-0107",
+      "dateRejected": "2026-08-07",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Brand Strategy",
+      "organisation": "Capgemini",
+      "url": "https://remoteOK.com/remote-jobs/remote-brand-strategy-capgemini-1136220",
+      "relevanceScore": 0,
+      "categoriesMatched": [
+        "aiContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: aiContext; Isolated weak-keyword penalty (-15))."
+    },
+    {
+      "id": "rej-0108",
+      "dateRejected": "2026-08-07",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Management",
+      "organisation": "Amoi Group",
+      "url": "https://remoteOK.com/remote-jobs/remote-management-amoi-group-1136243",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0109",
+      "dateRejected": "2026-08-07",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Professional",
+      "organisation": "Pak Business World",
+      "url": "https://remoteOK.com/remote-jobs/remote-professional-pak-business-world-1136245",
+      "relevanceScore": 0,
+      "categoriesMatched": [
+        "aiContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: aiContext; Isolated weak-keyword penalty (-15))."
+    },
+    {
+      "id": "rej-0110",
+      "dateRejected": "2026-08-07",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Speculative application",
+      "organisation": "Amann Girrbach MEA &amp; Turkey",
+      "url": "https://remoteOK.com/remote-jobs/remote-speculative-application-amann-girrbach-mea-amp-turkey-1136132",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0111",
+      "dateRejected": "2026-08-07",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Product Manager",
+      "organisation": "OpenSkills",
+      "url": "https://remoteOK.com/remote-jobs/remote-product-manager-openskills-1136133",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0112",
+      "dateRejected": "2026-08-07",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Go Ahead London",
+      "organisation": "Kent Country",
+      "url": "https://remoteOK.com/remote-jobs/remote-go-ahead-london-kent-country-1136204",
+      "relevanceScore": 10,
+      "categoriesMatched": [
+        "governanceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: governanceContext; no penalties)."
+    },
+    {
+      "id": "rej-0113",
+      "dateRejected": "2026-08-07",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Go South Coast",
+      "organisation": "Kent Country",
+      "url": "https://remoteOK.com/remote-jobs/remote-go-south-coast-kent-country-1136227",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
     }
   ]
 }
