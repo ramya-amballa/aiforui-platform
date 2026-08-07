@@ -1,0 +1,107 @@
+{
+  "id": "DEC-003",
+  "slug": "verified-human-oversight-for-automated-driving",
+  "title": "Require monitored, verified human-oversight fallback before deploying automated driving systems on public roads",
+  "description": "Illustrative reference decision modelled on findings from the Uber Tempe fatality and the Tesla Autopilot NHTSA recall. Not a documented decision of any specific organization.",
+  "version": "1.0.1",
+  "status": "draft",
+  "confidence": "Community",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-05",
+  "tags": [
+    "autonomous-vehicle",
+    "safety",
+    "human-oversight"
+  ],
+  "created_by": "AI Governance Workbench (Phase 2A seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 2A seed data)",
+      "version": "1.0.0",
+      "note": "Initial Phase 2A seed content, part of the Foundational Twenty."
+    },
+    {
+      "event": "updated",
+      "date": "2026-08-05",
+      "by": "AI Governance Workbench (Editorial Quality Audit)",
+      "version": "1.0.1",
+      "note": "Normalized US/UK spelling variants to the American-English house style (schema field names, e.g. organizations_involved, are already American; majority framework citations - NIST, FTC, EEOC, FCRA, BIPA - are American sources). Normalized a duplicated relationship-reason phrasing (\"...via this design pattern.\" -> \"...via this single, primary design pattern.\") to one canonical wording."
+    }
+  ],
+  "decision_statement": "Any automated or driver-assist system deployed on public roads must have a verified, actively monitored human-oversight fallback — with driver engagement itself monitored, not merely required by policy — and the system's automatic emergency braking must remain enabled at all times during autonomous operation.",
+  "decision_type": "technical_control",
+  "decision_context": "Motivated by two documented safety failures — a pedestrian fatality involving a distracted safety driver and disabled emergency braking, and a two-million-vehicle recall over inadequate driver-engagement monitoring — both traced to the gap between a system's nominal human-oversight requirement and whether that oversight was actually enforced.",
+  "governing_body": "Illustrative example — Autonomous Systems Safety Governance Board",
+  "jurisdiction": [
+    "US"
+  ],
+  "frameworks_referenced": [
+    "EU AI Act"
+  ],
+  "alternatives_considered": [
+    "Rely on driver terms-of-use/policy requiring attention, without active monitoring.",
+    "Permit disabling stock emergency braking during autonomous-mode testing for smoother test data collection."
+  ],
+  "citations": [
+    {
+      "id": "cite-ntsb-uber-har1903",
+      "source_type": "regulator",
+      "title": "Collision Between Vehicle Controlled by Developmental Automated Driving System and Pedestrian, Tempe, Arizona, March 18, 2018 (NTSB/HAR-19/03)",
+      "publisher": "National Transportation Safety Board",
+      "url": "https://www.ntsb.gov/investigations/accidentreports/reports/har1903.pdf",
+      "publication_date": "2019-11-19",
+      "accessed_date": "2026-08-04"
+    },
+    {
+      "id": "cite-nhtsa-23v838",
+      "source_type": "regulator",
+      "title": "Part 573 Safety Recall Report 23V-838",
+      "publisher": "National Highway Traffic Safety Administration",
+      "url": "https://static.nhtsa.gov/odi/rcl/2023/RCLRPT-23V838-8276.PDF",
+      "publication_date": "2023-12-05",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "RESULTED_FROM",
+      "target_id": "INC-006",
+      "target_type": "incident",
+      "reason": "This decision is modelled as a direct governance response to this fatality.",
+      "confidence": "Verified",
+      "citation_ids": [
+        "cite-ntsb-uber-har1903"
+      ]
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "target_id": "PAT-003",
+      "target_type": "pattern",
+      "reason": "The decision is put into practice via this single, primary design pattern.",
+      "confidence": "Community"
+    },
+    {
+      "type": "SATISFIES_CONTROL",
+      "target_id": "CTR-004",
+      "target_type": "control",
+      "reason": "A monitored human-oversight fallback directly satisfies this control's human-oversight requirement.",
+      "confidence": "Community"
+    },
+    {
+      "type": "REQUIRES_EVIDENCE",
+      "target_id": "EVI-003",
+      "target_type": "evidence",
+      "reason": "Compliance must be demonstrated by a documented safety case covering the oversight fallback.",
+      "confidence": "Community"
+    },
+    {
+      "type": "RAISES_BOARD_QUESTION",
+      "target_id": "BRD-003",
+      "target_type": "board_question",
+      "reason": "Boards adopting this decision should be asking whether the safety fallback has actually been tested, not just documented.",
+      "confidence": "Community"
+    }
+  ]
+}

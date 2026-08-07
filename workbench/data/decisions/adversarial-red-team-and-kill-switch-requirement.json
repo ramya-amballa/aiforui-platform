@@ -1,0 +1,100 @@
+{
+  "id": "DEC-011",
+  "slug": "adversarial-red-team-and-kill-switch-requirement",
+  "title": "Require adversarial red-teaming and a tested kill switch before deploying a publicly-facing AI system that learns from live input",
+  "description": "Illustrative reference decision modelled on the Microsoft Tay chatbot incident. Not a documented decision of any specific organization.",
+  "version": "1.0.1",
+  "status": "draft",
+  "confidence": "Community",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-05",
+  "tags": [
+    "generative-ai",
+    "conversational-ai",
+    "adversarial",
+    "safety",
+    "incident-response"
+  ],
+  "created_by": "AI Governance Workbench (Phase 2A seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 2A seed data)",
+      "version": "1.0.0",
+      "note": "Initial Phase 2A seed content, part of the Foundational Twenty."
+    },
+    {
+      "event": "updated",
+      "date": "2026-08-05",
+      "by": "AI Governance Workbench (Editorial Quality Audit)",
+      "version": "1.0.1",
+      "note": "Normalized US/UK spelling variants to the American-English house style (schema field names, e.g. organizations_involved, are already American; majority framework citations - NIST, FTC, EEOC, FCRA, BIPA - are American sources). Normalized a duplicated relationship-reason phrasing (\"...via this design pattern.\" -> \"...via this single, primary design pattern.\") to one canonical wording."
+    }
+  ],
+  "decision_statement": "Before deploying a publicly-facing AI system that adapts its behaviour from live user input, the organization must conduct adversarial red-teaming specifically targeting coordinated manipulation attempts, and must have a tested kill-switch/rollback mechanism capable of disabling the system within minutes of detecting harmful output at scale.",
+  "decision_type": "technical_control",
+  "decision_context": "Motivated by Microsoft's Tay chatbot, which was manipulated into posting offensive content within hours of launch by coordinated trolling exploiting its live-learning design, and was only disabled after the harm had already become public.",
+  "governing_body": "Illustrative example — Public-Facing AI Systems Governance Board",
+  "jurisdiction": [
+    "US"
+  ],
+  "frameworks_referenced": [
+    "NIST AI RMF"
+  ],
+  "alternatives_considered": [
+    "Rely on post-launch monitoring alone without pre-launch adversarial testing.",
+    "Treat a kill-switch as a manual, undocumented ad hoc response rather than a tested, rehearsed procedure."
+  ],
+  "citations": [
+    {
+      "id": "cite-microsoft-tay-apology",
+      "source_type": "company_statement",
+      "title": "Learning from Tay's introduction",
+      "publisher": "The Official Microsoft Blog",
+      "url": "https://blogs.microsoft.com/blog/2016/03/25/learning-tays-introduction/",
+      "publication_date": "2016-03-25",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "RESULTED_FROM",
+      "target_id": "INC-018",
+      "target_type": "incident",
+      "reason": "This decision is modelled as a direct governance response to this incident.",
+      "confidence": "Verified",
+      "citation_ids": [
+        "cite-microsoft-tay-apology"
+      ]
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "target_id": "PAT-010",
+      "target_type": "pattern",
+      "reason": "The decision is put into practice via this single, primary design pattern.",
+      "confidence": "Community"
+    },
+    {
+      "type": "SATISFIES_CONTROL",
+      "target_id": "CTR-015",
+      "target_type": "control",
+      "reason": "A tested kill-switch and rollback plan is the concrete implementation of this control's post-deployment monitoring requirement.",
+      "confidence": "Community"
+    },
+    {
+      "type": "REQUIRES_EVIDENCE",
+      "target_id": "EVI-010",
+      "target_type": "evidence",
+      "reason": "Compliance must be demonstrated by a documented red-team test report.",
+      "confidence": "Community"
+    },
+    {
+      "type": "RAISES_BOARD_QUESTION",
+      "target_id": "BRD-010",
+      "target_type": "board_question",
+      "reason": "Boards adopting this decision should be asking how quickly a harmful public-facing AI system could actually be disabled.",
+      "confidence": "Community"
+    }
+  ]
+}

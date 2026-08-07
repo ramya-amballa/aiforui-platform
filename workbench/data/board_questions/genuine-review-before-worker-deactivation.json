@@ -1,0 +1,42 @@
+{
+  "id": "BRD-016",
+  "slug": "genuine-review-before-worker-deactivation",
+  "title": "Can a platform worker deactivated by an algorithm obtain genuine human review before losing their livelihood?",
+  "description": "A board-level oversight question testing whether a platform's worker-facing algorithmic decisions come with real disclosure and human review, not a process courts might find symbolic.",
+  "version": "1.0.0",
+  "status": "active",
+  "confidence": "Reviewed",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["gig-work", "algorithmic-management", "human-oversight", "board-oversight"],
+  "created_by": "AI Governance Workbench (Phase 3 seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 3 seed data)",
+      "version": "1.0.0",
+      "note": "Initial Edition 1.1 content."
+    }
+  ],
+  "question_text": "If our platform's algorithm restricts, penalises, or deactivates a worker's account, is the worker told the specific basis and given a human review with real authority to reverse the decision — or would a court, as happened to Uber in Amsterdam, find our review 'not much more than a purely symbolic act'?",
+  "audience": ["board", "risk_committee", "executive_team"],
+  "rationale": "Two independent EU court rulings — against Uber in Amsterdam and Deliveroo in Bologna — found that algorithmic management systems penalising or deactivating workers without genuine disclosure and human review violated worker protections.",
+  "follow_up_actions": [
+    "Request the current worker algorithmic decision appeal log and confirm reversal rates are non-trivial.",
+    "Confirm workers are told the specific automated basis for a decision, not a generic explanation.",
+    "Ask whether scoring logic distinguishes legally protected non-performance (illness, protected activity) from unjustified non-performance."
+  ],
+  "citations": [
+    {
+      "id": "cite-rb-amsterdam-uber",
+      "source_type": "court_judgment",
+      "title": "Rb. Amsterdam, 14 April 2021 — C/13/696010 / HA ZA 21-81",
+      "publisher": "Rechtbank Amsterdam (via GDPRhub)",
+      "url": "https://gdprhub.eu/index.php?title=Rb._Amsterdam_-_C%2F13%2F696010_%2F_HA_ZA_21-81",
+      "publication_date": "2021-04-14",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": []
+}

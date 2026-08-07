@@ -1,0 +1,42 @@
+{
+  "id": "BRD-006",
+  "slug": "effective-age-verification",
+  "title": "Is our age verification actually effective, or just a checkbox?",
+  "description": "A board-level oversight question testing whether a consumer AI product's age-verification and GDPR legal-basis documentation would withstand regulatory scrutiny, rather than assuming terms-of-service language is sufficient.",
+  "version": "1.0.0",
+  "status": "active",
+  "confidence": "Reviewed",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["generative-ai", "privacy", "gdpr", "child-safety", "board-oversight"],
+  "created_by": "AI Governance Workbench (Phase 2A seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 2A seed data)",
+      "version": "1.0.0",
+      "note": "Initial Phase 2A seed content."
+    }
+  ],
+  "question_text": "For any consumer AI product we operate that could plausibly be used by minors, is our age-verification mechanism actually effective — not just a self-reported checkbox — and can we point to a documented GDPR legal basis for every category of EU user data we process, including data used for model training?",
+  "audience": ["board", "risk_committee"],
+  "rationale": "Italy's Garante found both ChatGPT and the AI companion app Replika lacked effective age verification and an adequate GDPR legal basis, resulting in the first Western regulatory bans of consumer generative AI products.",
+  "follow_up_actions": [
+    "Request the current data protection impact assessment covering EU user data processing.",
+    "Ask what age-verification mechanism is in place and how its effectiveness was tested.",
+    "Confirm the privacy notice discloses whether user interactions are used for model training, and whether users can opt out."
+  ],
+  "citations": [
+    {
+      "id": "cite-garante-chatgpt-block",
+      "source_type": "regulator",
+      "title": "Intelligenza artificiale: il Garante blocca ChatGPT. Raccolta illecita di dati personali. Assenza di sistemi per la verifica dell'età dei minori",
+      "publisher": "Garante per la protezione dei dati personali",
+      "url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/9870847",
+      "publication_date": "2023-03-31",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": []
+}

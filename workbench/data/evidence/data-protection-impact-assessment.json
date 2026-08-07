@@ -1,0 +1,38 @@
+{
+  "id": "EVI-004",
+  "slug": "data-protection-impact-assessment",
+  "title": "Data Protection Impact Assessment (DPIA)",
+  "description": "A documented assessment of the risks a proposed automated processing activity poses to individuals' rights and freedoms, the system's high-risk classification, and the safeguards (including human review) put in place before processing begins.",
+  "version": "1.0.0",
+  "status": "active",
+  "confidence": "Reviewed",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["government", "due-process", "privacy", "audit-report"],
+  "created_by": "AI Governance Workbench (Phase 2A seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 2A seed data)",
+      "version": "1.0.0",
+      "note": "Initial Phase 2A seed content."
+    }
+  ],
+  "evidence_description": "A report documenting the necessity and proportionality of an automated processing activity, its risks to individuals' rights and freedoms, its classification against relevant high-risk categories, and the safeguards (including a specific pre-decision human-review mechanism) implemented to mitigate identified risks.",
+  "collection_method": "Conducted by the data controller (or a data protection officer) before processing begins, and repeated whenever the system or its data changes materially.",
+  "retention_period": "For the lifetime of the processing activity, plus a minimum of 3 years after it ends.",
+  "artifact_format": "PDF or structured report, typically following a data protection authority's published DPIA template.",
+  "citations": [
+    {
+      "id": "cite-syri-judgment",
+      "source_type": "court_judgment",
+      "title": "NJCM c.s./De Staat der Nederlanden (SyRI judgment), ECLI:NL:RBDHA:2020:1878",
+      "publisher": "District Court of The Hague (Rechtbank Den Haag)",
+      "url": "https://www.escr-net.org/caselaw/2020/nederlands-juristen-comite-voor-mensenrechten-et-al-v-netherlands-eclinlrbdha20201878/",
+      "publication_date": "2020-02-05",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": []
+}

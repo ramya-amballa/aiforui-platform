@@ -1,0 +1,65 @@
+{
+  "id": "INC-008",
+  "slug": "dutch-syri-childcare-benefits-scandal",
+  "title": "Dutch SyRI algorithm struck down by court; childcare benefits scandal topples government",
+  "description": "The Dutch government used automated systems to detect welfare/benefits fraud. SyRI (Systeem Risico Indicatie), a secret algorithmic risk-profiling tool cross-referencing government data to flag individuals for fraud investigation, was struck down by The Hague District Court in February 2020 for violating the right to privacy under Article 8 of the European Convention on Human Rights. Separately, the Dutch Tax and Customs Administration used a self-learning algorithm in its childcare benefits fraud-detection process that treated dual nationality as a risk factor; tens of thousands of families, disproportionately those with a migration background, were wrongly accused of fraud and forced to repay benefits, often plunging them into severe debt and, in many reported cases, separation of children from parents. A December 2020 parliamentary inquiry, 'Unprecedented Injustice,' found the rule of law had been violated, and the Dutch cabinet resigned on 15 January 2021 as a result.",
+  "version": "1.0.0",
+  "status": "active",
+  "confidence": "Reviewed",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["government", "welfare", "discrimination", "algorithmic-risk-profiling", "due-process"],
+  "created_by": "AI Governance Workbench (Phase 2A seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 2A seed data)",
+      "version": "1.0.0",
+      "note": "Initial Phase 2A seed content, part of the Foundational Twenty. SyRI (used by the Ministry of Social Affairs) and the childcare-benefits fraud-detection algorithm (used by the Tax and Customs Administration) are related but technically distinct systems, simplified into one record here. Figures for families/children affected vary across sources (commonly 20,000-35,000 families); treat precise counts as approximate."
+    }
+  ],
+  "occurred_date": "2020-02-05",
+  "organizations_involved": ["Dutch Tax and Customs Administration (Belastingdienst)", "Dutch Ministry of Social Affairs and Employment", "District Court of The Hague", "Rutte III Cabinet"],
+  "harm_types": ["discrimination", "financial", "privacy_violation"],
+  "ai_system_category": "algorithmic_risk_profiling",
+  "jurisdiction": ["NL", "EU"],
+  "severity": "critical",
+  "root_cause": "Automated risk-scoring systems used opaque, undisclosed algorithms that treated dual/foreign nationality and low income as risk factors, with inadequate legal safeguards, human oversight, or transparency, compounded by a zero-tolerance fraud enforcement culture that reversed the burden of proof onto benefit recipients.",
+  "citations": [
+    {
+      "id": "cite-syri-judgment",
+      "source_type": "court_judgment",
+      "title": "NJCM c.s./De Staat der Nederlanden (SyRI judgment), ECLI:NL:RBDHA:2020:1878",
+      "publisher": "District Court of The Hague (Rechtbank Den Haag)",
+      "url": "https://www.escr-net.org/caselaw/2020/nederlands-juristen-comite-voor-mensenrechten-et-al-v-netherlands-eclinlrbdha20201878/",
+      "publication_date": "2020-02-05",
+      "accessed_date": "2026-08-04"
+    },
+    {
+      "id": "cite-dutch-cabinet-resignation",
+      "source_type": "news_publication",
+      "title": "Dutch government resigns after childcare benefits scandal",
+      "publisher": "CNBC",
+      "url": "https://www.cnbc.com/2021/01/15/dutch-government-resigns-after-childcare-benefits-scandal-.html",
+      "publication_date": "2021-01-15",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "MITIGATED_BY",
+      "target_id": "DEC-004",
+      "target_type": "decision",
+      "reason": "A requirement for a documented legal basis, DPIA, and meaningful human review before an automated system informs an adverse benefits decision addresses exactly this failure.",
+      "confidence": "Reviewed"
+    },
+    {
+      "type": "RAISES_BOARD_QUESTION",
+      "target_id": "BRD-004",
+      "target_type": "board_question",
+      "reason": "This is the most severe documented example of the due-process gap this board question is designed to surface.",
+      "confidence": "Reviewed"
+    }
+  ]
+}

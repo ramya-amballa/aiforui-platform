@@ -1,0 +1,56 @@
+{
+  "id": "INC-006",
+  "slug": "uber-av-tempe-fatality-2018",
+  "title": "Uber self-driving test vehicle kills pedestrian Elaine Herzberg in Tempe, Arizona",
+  "description": "On the night of 18 March 2018, an Uber Advanced Technologies Group self-driving test vehicle, operating in autonomous mode with a human safety driver aboard, struck and killed 49-year-old pedestrian Elaine Herzberg as she crossed a road with a bicycle in Tempe, Arizona — widely reported as the first pedestrian fatality involving a fully autonomous test vehicle. The NTSB's November 2019 final report found the probable cause was the safety driver's failure to monitor the driving environment because she was visually distracted by her personal phone, while citing Uber's inadequate safety culture, disabled emergency braking, and a system not designed to recognize a jaywalking pedestrian as contributing factors. The NTSB also noted Herzberg was crossing outside a crosswalk and had methamphetamine in her system, and found Arizona's Department of Transportation provided insufficient oversight of AV testing.",
+  "version": "1.0.0",
+  "status": "active",
+  "confidence": "Reviewed",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["autonomous-vehicle", "safety", "human-oversight"],
+  "created_by": "AI Governance Workbench (Phase 2A seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 2A seed data)",
+      "version": "1.0.0",
+      "note": "Initial Phase 2A seed content, part of the Foundational Twenty."
+    }
+  ],
+  "occurred_date": "2018-03-18",
+  "organizations_involved": ["Uber Advanced Technologies Group", "National Transportation Safety Board", "Arizona Department of Transportation"],
+  "harm_types": ["safety"],
+  "ai_system_category": "autonomous_vehicle",
+  "jurisdiction": ["US-AZ"],
+  "severity": "critical",
+  "root_cause": "The vehicle's software failed to correctly classify and predict the pedestrian's path in time to brake; Uber had disabled the vehicle's stock automatic emergency braking and had not enabled its own system's automatic braking in autonomous mode; and the human safety driver, whose job was to catch exactly this kind of failure, was distracted by a personal phone.",
+  "citations": [
+    {
+      "id": "cite-ntsb-uber-har1903",
+      "source_type": "regulator",
+      "title": "Collision Between Vehicle Controlled by Developmental Automated Driving System and Pedestrian, Tempe, Arizona, March 18, 2018 (NTSB/HAR-19/03)",
+      "publisher": "National Transportation Safety Board",
+      "url": "https://www.ntsb.gov/investigations/accidentreports/reports/har1903.pdf",
+      "publication_date": "2019-11-19",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "MITIGATED_BY",
+      "target_id": "DEC-003",
+      "target_type": "decision",
+      "reason": "A requirement for verified, monitored human-oversight fallback would have addressed the exact failure mode the NTSB identified.",
+      "confidence": "Reviewed"
+    },
+    {
+      "type": "RAISES_BOARD_QUESTION",
+      "target_id": "BRD-003",
+      "target_type": "board_question",
+      "reason": "This is the canonical case establishing why boards should ask about tested safety fallbacks before approving public AV deployment.",
+      "confidence": "Reviewed"
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "id": "DEC-005",
+  "slug": "enterprise-genai-acceptable-use-policy",
+  "title": "Require a technically-enforced acceptable-use policy before permitting employee use of third-party generative AI tools",
+  "description": "Illustrative reference decision modelled on the Samsung ChatGPT data leak. Not a documented decision of any specific organization.",
+  "version": "1.0.1",
+  "status": "draft",
+  "confidence": "Community",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-05",
+  "tags": [
+    "generative-ai",
+    "security",
+    "privacy",
+    "enterprise-policy"
+  ],
+  "created_by": "AI Governance Workbench (Phase 2A seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 2A seed data)",
+      "version": "1.0.0",
+      "note": "Initial Phase 2A seed content, part of the Foundational Twenty."
+    },
+    {
+      "event": "updated",
+      "date": "2026-08-05",
+      "by": "AI Governance Workbench (Editorial Quality Audit)",
+      "version": "1.0.1",
+      "note": "Normalized US/UK spelling variants to the American-English house style (schema field names, e.g. organizations_involved, are already American; majority framework citations - NIST, FTC, EEOC, FCRA, BIPA - are American sources). Normalized a duplicated relationship-reason phrasing (\"...via this design pattern.\" -> \"...via this single, primary design pattern.\") to one canonical wording."
+    }
+  ],
+  "decision_statement": "Before employees are permitted to use third-party generative AI tools on company devices or with company data, the organization must publish a specific acceptable-use policy defining what data categories may never be entered, and back it with a technical control (e.g. data-loss-prevention tooling or an approved enterprise-tier tool with contractual no-retention terms) rather than relying on policy text alone.",
+  "decision_type": "policy",
+  "decision_context": "Motivated by Samsung employees pasting confidential source code and internal meeting notes into a consumer-tier ChatGPT account within weeks of an internal ban being lifted, with no technical control preventing it.",
+  "governing_body": "Illustrative example — Enterprise AI Use Governance Board",
+  "jurisdiction": [
+    "KR"
+  ],
+  "frameworks_referenced": [
+    "NIST AI RMF"
+  ],
+  "alternatives_considered": [
+    "Publish a policy document without any technical enforcement.",
+    "Ban all third-party generative AI tools outright rather than defining an acceptable-use boundary."
+  ],
+  "citations": [
+    {
+      "id": "cite-samsung-chatgpt-ban-bloomberg",
+      "source_type": "news_publication",
+      "title": "Samsung Bans ChatGPT, Google Bard, Other Generative AI Use by Staff After Leak",
+      "publisher": "Bloomberg",
+      "url": "https://www.bloomberg.com/news/articles/2023-05-02/samsung-bans-chatgpt-and-other-generative-ai-use-by-staff-after-leak",
+      "publication_date": "2023-05-02",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "RESULTED_FROM",
+      "target_id": "INC-011",
+      "target_type": "incident",
+      "reason": "This decision is modelled as a direct governance response to this leak.",
+      "confidence": "Verified",
+      "citation_ids": [
+        "cite-samsung-chatgpt-ban-bloomberg"
+      ]
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "target_id": "PAT-005",
+      "target_type": "pattern",
+      "reason": "The decision is put into practice via this single, primary design pattern.",
+      "confidence": "Community"
+    },
+    {
+      "type": "SATISFIES_CONTROL",
+      "target_id": "CTR-009",
+      "target_type": "control",
+      "reason": "A published, technically-enforced policy is a concrete accountability structure for managing this class of AI risk.",
+      "confidence": "Community"
+    },
+    {
+      "type": "REQUIRES_EVIDENCE",
+      "target_id": "EVI-005",
+      "target_type": "evidence",
+      "reason": "Compliance must be demonstrated by attestation and technical-control records.",
+      "confidence": "Community"
+    },
+    {
+      "type": "RAISES_BOARD_QUESTION",
+      "target_id": "BRD-005",
+      "target_type": "board_question",
+      "reason": "Boards adopting this decision should be asking whether the policy is technically enforced, not just written.",
+      "confidence": "Community"
+    }
+  ]
+}

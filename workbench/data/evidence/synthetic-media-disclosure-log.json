@@ -1,0 +1,38 @@
+{
+  "id": "EVI-008",
+  "slug": "synthetic-media-disclosure-log",
+  "title": "Synthetic Media Disclosure Log",
+  "description": "A log of mass communications that used AI-generated voice or likeness content, recording whether the required disclosure was applied and any detection-system findings.",
+  "version": "1.0.0",
+  "status": "active",
+  "confidence": "Community",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["generative-ai", "misinformation", "deepfake", "audit-log"],
+  "created_by": "AI Governance Workbench (Phase 2A seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 2A seed data)",
+      "version": "1.0.0",
+      "note": "Initial Phase 2A seed content."
+    }
+  ],
+  "evidence_description": "A record of every outbound mass communication identified (by automated detection or self-declaration) as using AI-generated voice or likeness content, whether the required disclosure was applied, and the outcome of any review.",
+  "collection_method": "Automated detection system output combined with sender self-declaration at submission time.",
+  "retention_period": "Minimum 3 years, longer where required by election-law record-keeping rules.",
+  "artifact_format": "Structured export (CSV/JSON) of flagged communications and disclosure status.",
+  "citations": [
+    {
+      "id": "cite-fcc-ai-voices-illegal",
+      "source_type": "regulator",
+      "title": "FCC Makes AI-Generated Voices in Robocalls Illegal",
+      "publisher": "Federal Communications Commission",
+      "url": "https://www.fcc.gov/document/fcc-makes-ai-generated-voices-robocalls-illegal",
+      "publication_date": "2024-02-08",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": []
+}

@@ -1,0 +1,66 @@
+{
+  "id": "PAT-008",
+  "slug": "synthetic-media-disclosure-pattern",
+  "title": "Synthetic Media Disclosure Pattern",
+  "description": "A pattern for detecting and labeling AI-generated voice or likeness content in mass communications before distribution, so recipients are not deceived into believing synthetic content is authentic.",
+  "version": "1.0.1",
+  "status": "draft",
+  "confidence": "Community",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-05",
+  "tags": [
+    "generative-ai",
+    "misinformation",
+    "deepfake",
+    "transparency"
+  ],
+  "created_by": "AI Governance Workbench (Phase 2A seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 2A seed data)",
+      "version": "1.0.0",
+      "note": "Initial Phase 2A seed content."
+    },
+    {
+      "event": "updated",
+      "date": "2026-08-05",
+      "by": "AI Governance Workbench (Editorial Quality Audit)",
+      "version": "1.0.1",
+      "note": "Normalized US/UK spelling variants to the American-English house style (schema field names, e.g. organizations_involved, are already American; majority framework citations - NIST, FTC, EEOC, FCRA, BIPA - are American sources)."
+    }
+  ],
+  "problem": "AI voice-cloning and likeness-generation tools make it cheap and easy to produce highly convincing synthetic media at scale, which can be distributed through mass channels (robocalls, broadcast, social media) before any human reviewer or platform detects it is not authentic.",
+  "solution": "Apply automated synthetic-media detection to outbound mass communications where feasible (carrier-level robocall screening, platform-level upload scanning), require an audible or visible disclosure whenever AI-generated voice or likeness is used, and log every detected or disclosed instance for review.",
+  "applicability": "Any channel capable of mass-distributing voice or video content — telecom carriers, broadcast media, and social platforms — particularly around elections or other high-stakes public communications.",
+  "consequences": "Detection technology for synthetic media is imperfect and evolves alongside generation technology, producing both false positives and false negatives; disclosure requirements are difficult to enforce against actors operating outside regulated channels.",
+  "maturity": "experimental",
+  "citations": [
+    {
+      "id": "cite-fcc-ai-voices-illegal",
+      "source_type": "regulator",
+      "title": "FCC Makes AI-Generated Voices in Robocalls Illegal",
+      "publisher": "Federal Communications Commission",
+      "url": "https://www.fcc.gov/document/fcc-makes-ai-generated-voices-robocalls-illegal",
+      "publication_date": "2024-02-08",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "SATISFIES_CONTROL",
+      "target_id": "CTR-013",
+      "target_type": "control",
+      "reason": "Detection and disclosure are the concrete mechanism addressing manipulative synthetic media.",
+      "confidence": "Community"
+    },
+    {
+      "type": "REQUIRES_EVIDENCE",
+      "target_id": "EVI-008",
+      "target_type": "evidence",
+      "reason": "The pattern's output is a synthetic media disclosure log.",
+      "confidence": "Community"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "id": "PAT-002",
+  "slug": "disaggregated-fairness-metrics-pattern",
+  "title": "Disaggregated Fairness Metrics Pattern",
+  "description": "A pattern for measuring and disclosing a risk-scoring model's error rates separately by protected group, and documenting the justification for any proxy variable used, rather than relying on a single aggregate accuracy figure.",
+  "version": "1.0.0",
+  "status": "draft",
+  "confidence": "Community",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["bias", "risk-scoring", "fairness", "proxy-variable"],
+  "created_by": "AI Governance Workbench (Phase 2A seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 2A seed data)",
+      "version": "1.0.0",
+      "note": "Initial Phase 2A seed content."
+    }
+  ],
+  "problem": "A risk-scoring model can look accurate on an aggregate metric while its false-positive and false-negative rates differ substantially across protected groups, or while it relies on a proxy variable (e.g. cost as a stand-in for need) that itself encodes historical inequity.",
+  "solution": "Report false-positive rate, false-negative rate, and calibration separately for each protected group the model may legally be tested against; document every proxy variable used in place of the true outcome of interest, with an explicit assessment of whether it correlates with a protected characteristic; and re-run this analysis whenever the model or its training data changes materially.",
+  "applicability": "Any model that produces a risk, priority, or eligibility score used to inform a high-stakes decision about an individual — criminal justice, healthcare, credit, hiring, or benefits eligibility.",
+  "consequences": "Requires access to demographic data for testing purposes, which itself must be governed carefully; disaggregation can surface tensions between competing fairness definitions (e.g. equal calibration vs. equal error rates) that have no single objectively 'correct' resolution and require a documented, deliberate choice.",
+  "maturity": "established",
+  "citations": [
+    {
+      "id": "cite-obermeyer-science-2019",
+      "source_type": "academic_paper",
+      "title": "Dissecting racial bias in an algorithm used to manage the health of populations",
+      "publisher": "Science (American Association for the Advancement of Science)",
+      "url": "https://www.science.org/doi/10.1126/science.aax2342",
+      "publication_date": "2019-10-25",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "SATISFIES_CONTROL",
+      "target_id": "CTR-003",
+      "target_type": "control",
+      "reason": "Disaggregated metrics are the concrete mechanism satisfying this control's impact-identification requirement.",
+      "confidence": "Community"
+    },
+    {
+      "type": "REQUIRES_EVIDENCE",
+      "target_id": "EVI-002",
+      "target_type": "evidence",
+      "reason": "The pattern's output is a fairness metrics report.",
+      "confidence": "Community"
+    }
+  ]
+}

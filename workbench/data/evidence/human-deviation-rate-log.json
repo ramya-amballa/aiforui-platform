@@ -1,0 +1,38 @@
+{
+  "id": "EVI-014",
+  "slug": "human-deviation-rate-log",
+  "title": "Human Deviation Rate Log",
+  "description": "An observable log of how often, and in what direction, a human reviewer's final decision deviates from an automated system's score or recommendation — the evidence that a human-review safeguard is genuine rather than symbolic.",
+  "version": "1.0.0",
+  "status": "active",
+  "confidence": "Community",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["credit-scoring", "human-oversight", "audit-log"],
+  "created_by": "AI Governance Workbench (Phase 3 seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 3 seed data)",
+      "version": "1.0.0",
+      "note": "Initial Edition 1.1 content."
+    }
+  ],
+  "evidence_description": "A record, for each case reviewed, of the automated score/recommendation, the human reviewer's final decision, and whether they diverged — aggregated into a deviation rate over time. This is deliberately observable evidence, not a self-assessment: it is derived directly from the score and the recorded decision, not from a reviewer's own account of how carefully they considered the case.",
+  "collection_method": "Automatically logged at decision time by comparing the system's score/recommendation to the recorded human decision.",
+  "retention_period": "Minimum 3 years.",
+  "artifact_format": "Structured export (CSV/JSON) of per-case score/decision pairs and the aggregate deviation rate.",
+  "citations": [
+    {
+      "id": "cite-cjeu-schufa",
+      "source_type": "court_judgment",
+      "title": "Judgment of the Court (First Chamber), 7 December 2023 — OQ v Land Hessen (SCHUFA Holding, Scoring), Case C-634/21",
+      "publisher": "Court of Justice of the European Union",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A62021CJ0634",
+      "publication_date": "2023-12-07",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": []
+}

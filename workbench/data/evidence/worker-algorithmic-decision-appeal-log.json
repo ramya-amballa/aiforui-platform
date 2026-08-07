@@ -1,0 +1,38 @@
+{
+  "id": "EVI-016",
+  "slug": "worker-algorithmic-decision-appeal-log",
+  "title": "Worker Algorithmic Decision Appeal Log",
+  "description": "An observable log of automated decisions materially affecting a platform worker (account restrictions, deactivations, scoring penalties), whether the worker was informed of the basis, and the outcome of any appeal.",
+  "version": "1.0.0",
+  "status": "active",
+  "confidence": "Community",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["gig-work", "algorithmic-management", "audit-log"],
+  "created_by": "AI Governance Workbench (Phase 3 seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 3 seed data)",
+      "version": "1.0.0",
+      "note": "Initial Edition 1.1 content."
+    }
+  ],
+  "evidence_description": "A record of every automated decision materially affecting a platform worker, the disclosed basis given to the worker, whether the worker appealed, and the human reviewer's resolution — including cases where the reviewer reversed the automated outcome, which is the observable signal that review is genuine.",
+  "collection_method": "Automatically logged at decision time, with appeal outcomes recorded by the human reviewer.",
+  "retention_period": "Minimum 3 years.",
+  "artifact_format": "Structured export (CSV/JSON) of decision, disclosure, and appeal records.",
+  "citations": [
+    {
+      "id": "cite-wie-uber-appeal",
+      "source_type": "other",
+      "title": "Historic digital rights win for WIE and the ADCU over Uber and Ola at Amsterdam Court of Appeal",
+      "publisher": "Worker Info Exchange",
+      "url": "https://www.workerinfoexchange.org/post/historic-digital-rights-win-for-wie-and-the-adcu-over-uber-and-ola-at-amsterdam-court-of-appeal",
+      "publication_date": "2023-04-04",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": []
+}

@@ -1,0 +1,57 @@
+{
+  "id": "INC-017",
+  "slug": "apple-card-goldman-sachs-gender-bias-2019",
+  "title": "Apple Card credit algorithm faces viral gender-bias allegations and NYDFS investigation",
+  "description": "In November 2019, software entrepreneur David Heinemeier Hansson tweeted that Apple Card, issued by Goldman Sachs, gave him a credit limit reported as roughly 20 times higher than his wife's despite her having a higher credit score, prompting similar public accounts from other users including Apple co-founder Steve Wozniak. The New York State Department of Financial Services opened an investigation into whether Goldman Sachs' credit-limit underwriting algorithm violated fair lending laws. In March 2021, NYDFS published findings stating it found no evidence of unlawful discrimination and that applicants with similar credit characteristics generally received similar outcomes regardless of gender, while noting the episode highlighted ongoing disparities in access to credit and the need for greater transparency in algorithmic underwriting.",
+  "version": "1.0.0",
+  "status": "active",
+  "confidence": "Reviewed",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["credit-scoring", "discrimination", "financial", "transparency", "explainability"],
+  "created_by": "AI Governance Workbench (Phase 2A seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 2A seed data)",
+      "version": "1.0.0",
+      "note": "Initial Phase 2A seed content, part of the Foundational Twenty. The 'roughly 20 times' credit-limit multiplier is Hansson's own public claim; NYDFS's report does not appear to confirm that specific figure as a validated finding."
+    }
+  ],
+  "occurred_date": "2019-11-07",
+  "organizations_involved": ["Apple", "Goldman Sachs", "New York State Department of Financial Services"],
+  "harm_types": ["discrimination", "reputational", "financial"],
+  "ai_system_category": "credit_scoring",
+  "jurisdiction": ["US", "US-NY"],
+  "severity": "medium",
+  "root_cause": "Publicly alleged discriminatory treatment by Goldman Sachs' credit-limit underwriting algorithm; NYDFS's subsequent investigation attributed outcome disparities to permissible underwriting factors (differing individual credit histories) rather than discriminatory algorithm design, but flagged transparency concerns in how the underwriting process explained itself to applicants.",
+  "citations": [
+    {
+      "id": "cite-nydfs-apple-card-report",
+      "source_type": "regulator",
+      "title": "Report on Apple Card Investigation",
+      "publisher": "New York State Department of Financial Services",
+      "url": "https://www.dfs.ny.gov/reports_and_publications/202103_report_apple_card_investigation",
+      "publication_date": "2021-03-23",
+      "accessed_date": "2026-08-04",
+      "excerpt": "While we found no fair lending violations, our inquiry stands as a reminder of disparities in access to credit that continue nearly 50 years after the passage of the Equal Credit Opportunity Act (ECOA)."
+    }
+  ],
+  "relationships": [
+    {
+      "type": "MITIGATED_BY",
+      "target_id": "DEC-010",
+      "target_type": "decision",
+      "reason": "A requirement to provide a specific, accurate adverse-action reason directly addresses the transparency gap NYDFS flagged.",
+      "confidence": "Reviewed"
+    },
+    {
+      "type": "RAISES_BOARD_QUESTION",
+      "target_id": "BRD-009",
+      "target_type": "board_question",
+      "reason": "This is the most widely publicized example of the explainability gap this board question is designed to surface.",
+      "confidence": "Reviewed"
+    }
+  ]
+}

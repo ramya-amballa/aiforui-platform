@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://workbench.aiforui.dev/schemas/incident.schema.json",
+  "title": "Incident",
+  "description": "A real-world event in which an AI system caused, or was alleged to have caused, harm, failure, or a governance breach. Incidents are the primary evidence base for why governance decisions get made.",
+  "allOf": [
+    { "$ref": "https://workbench.aiforui.dev/schemas/common/base-entity.schema.json" },
+    {
+      "type": "object",
+      "required": ["id", "occurred_date"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^INC-\\d{3,}$"
+        },
+        "occurred_date": {
+          "type": "string",
+          "format": "date",
+          "description": "Date the incident occurred (or was first publicly disclosed, if the occurrence date is unknown). Distinct from created_date, which is record-creation time."
+        },
+        "organizations_involved": {
+          "type": "array",
+          "items": { "type": "string" },
+          "uniqueItems": true,
+          "description": "Organisations named as operating, deploying, or affected by the AI system involved."
+        },
+        "harm_types": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "discrimination",
+              "privacy_violation",
+              "safety",
+              "financial",
+              "reputational",
+              "misinformation",
+              "security",
+              "other"
+            ]
+          },
+          "uniqueItems": true,
+          "description": "Categories of harm caused or alleged."
+        },
+        "ai_system_category": {
+          "type": "string",
+          "description": "The kind of AI system involved (e.g. 'facial_recognition', 'generative_ai', 'credit_scoring', 'hiring_screening')."
+        },
+        "jurisdiction": {
+          "type": "array",
+          "items": { "type": "string" },
+          "uniqueItems": true,
+          "description": "Jurisdictions where the incident occurred or had legal effect."
+        },
+        "severity": {
+          "type": "string",
+          "enum": ["low", "medium", "high", "critical"],
+          "description": "Contributor-assessed severity of the incident's impact."
+        },
+        "root_cause": {
+          "type": "string",
+          "description": "Known or alleged underlying cause of the incident."
+        }
+      }
+    }
+  ]
+}

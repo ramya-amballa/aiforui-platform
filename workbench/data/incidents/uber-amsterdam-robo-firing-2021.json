@@ -1,0 +1,65 @@
+{
+  "id": "INC-024",
+  "slug": "uber-amsterdam-robo-firing-2021",
+  "title": "Amsterdam court orders Uber to reinstate drivers 'robo-fired' by automated fraud detection",
+  "description": "The District Court of Amsterdam issued a default judgment on 14 April 2021 ordering Uber to reinstate six drivers — five in the UK, one in the Netherlands — dismissed after Uber's automated systems flagged them for alleged fraudulent activity, ruling this qualified as a decision based solely on automated processing prohibited under GDPR Article 22(1) absent an applicable exemption. The drivers were represented by the App Drivers & Couriers Union and Worker Info Exchange. In a contested appeal on 4 April 2023, the Amsterdam Court of Appeal again ruled largely against Uber (and against Ola Cabs in a related case), rejecting the companies' claim that human reviewers had meaningfully checked the algorithmic decisions, describing such review as 'not much more than a purely symbolic act.'",
+  "version": "1.0.0",
+  "status": "active",
+  "confidence": "Reviewed",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["gig-work", "algorithmic-management", "financial", "privacy", "human-oversight"],
+  "created_by": "AI Governance Workbench (Phase 3 seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 3 seed data)",
+      "version": "1.0.0",
+      "note": "Initial Edition 1.1 content. A reported ~€100,474 damages figure for the April 2021 ruling could not be independently verified against a primary source and is omitted from this record."
+    }
+  ],
+  "occurred_date": "2021-04-14",
+  "organizations_involved": ["Uber Technologies Inc.", "App Drivers & Couriers Union", "Worker Info Exchange", "District Court of Amsterdam"],
+  "harm_types": ["financial", "discrimination", "privacy_violation"],
+  "ai_system_category": "automated_fraud_detection",
+  "jurisdiction": ["NL", "EU"],
+  "severity": "high",
+  "root_cause": "Uber's fraud-detection system flagged and deactivated drivers' accounts based on automated risk-scoring, with human 'review' that courts found to be superficial rather than a genuine check on the algorithm's output, violating GDPR's restriction on solely automated decisions with significant effects on individuals.",
+  "citations": [
+    {
+      "id": "cite-rb-amsterdam-uber",
+      "source_type": "court_judgment",
+      "title": "Rb. Amsterdam, 14 April 2021 — C/13/696010 / HA ZA 21-81",
+      "publisher": "Rechtbank Amsterdam (via GDPRhub)",
+      "url": "https://gdprhub.eu/index.php?title=Rb._Amsterdam_-_C%2F13%2F696010_%2F_HA_ZA_21-81",
+      "publication_date": "2021-04-14",
+      "accessed_date": "2026-08-04"
+    },
+    {
+      "id": "cite-wie-uber-appeal",
+      "source_type": "other",
+      "title": "Historic digital rights win for WIE and the ADCU over Uber and Ola at Amsterdam Court of Appeal",
+      "publisher": "Worker Info Exchange",
+      "url": "https://www.workerinfoexchange.org/post/historic-digital-rights-win-for-wie-and-the-adcu-over-uber-and-ola-at-amsterdam-court-of-appeal",
+      "publication_date": "2023-04-04",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "MITIGATED_BY",
+      "target_id": "DEC-017",
+      "target_type": "decision",
+      "reason": "A guaranteed, genuine human-review right before an algorithm deactivates a worker's account directly addresses this ruling's finding.",
+      "confidence": "Reviewed"
+    },
+    {
+      "type": "RAISES_BOARD_QUESTION",
+      "target_id": "BRD-016",
+      "target_type": "board_question",
+      "reason": "This is the first ruling to enforce GDPR Article 22 protections against automated platform-worker terminations.",
+      "confidence": "Reviewed"
+    }
+  ]
+}

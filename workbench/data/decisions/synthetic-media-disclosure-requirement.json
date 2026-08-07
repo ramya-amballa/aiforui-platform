@@ -1,0 +1,100 @@
+{
+  "id": "DEC-009",
+  "slug": "synthetic-media-disclosure-requirement",
+  "title": "Prohibit undisclosed AI-generated synthetic voice or likeness in mass political communications",
+  "description": "Illustrative reference decision modelled on the FCC's response to the New Hampshire AI-generated Biden robocall. Not a documented decision of any specific organization.",
+  "version": "1.0.1",
+  "status": "draft",
+  "confidence": "Community",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-05",
+  "tags": [
+    "generative-ai",
+    "misinformation",
+    "elections",
+    "deepfake",
+    "transparency"
+  ],
+  "created_by": "AI Governance Workbench (Phase 2A seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 2A seed data)",
+      "version": "1.0.0",
+      "note": "Initial Phase 2A seed content, part of the Foundational Twenty."
+    },
+    {
+      "event": "updated",
+      "date": "2026-08-05",
+      "by": "AI Governance Workbench (Editorial Quality Audit)",
+      "version": "1.0.1",
+      "note": "Normalized US/UK spelling variants to the American-English house style (schema field names, e.g. organizations_involved, are already American; majority framework citations - NIST, FTC, EEOC, FCRA, BIPA - are American sources). Normalized a duplicated relationship-reason phrasing (\"...via this design pattern.\" -> \"...via this single, primary design pattern.\") to one canonical wording."
+    }
+  ],
+  "decision_statement": "Any mass communication (robocall, broadcast, mass text) using an AI-generated or AI-cloned voice or likeness must carry a clear, audible or visible disclosure that the content is AI-generated, and platforms/carriers that detect synthetic voice content in political communications must flag it before further distribution rather than relying solely on after-the-fact enforcement.",
+  "decision_type": "policy",
+  "decision_context": "Motivated by the FCC's finding that an AI-cloned voice of a sitting president was used in a robocall campaign attempting to suppress primary-election turnout, leading to the FCC's ruling that AI-generated voices are 'artificial' voices subject to existing robocall regulation.",
+  "governing_body": "Illustrative example — Election Integrity & Synthetic Media Governance Board",
+  "jurisdiction": [
+    "US"
+  ],
+  "frameworks_referenced": [
+    "EU AI Act"
+  ],
+  "alternatives_considered": [
+    "Rely entirely on after-the-fact enforcement against bad actors rather than upstream detection/disclosure.",
+    "Limit the disclosure requirement to broadcast media, excluding robocalls and mass text."
+  ],
+  "citations": [
+    {
+      "id": "cite-fcc-ai-voices-illegal",
+      "source_type": "regulator",
+      "title": "FCC Makes AI-Generated Voices in Robocalls Illegal",
+      "publisher": "Federal Communications Commission",
+      "url": "https://www.fcc.gov/document/fcc-makes-ai-generated-voices-robocalls-illegal",
+      "publication_date": "2024-02-08",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "RESULTED_FROM",
+      "target_id": "INC-016",
+      "target_type": "incident",
+      "reason": "This decision is modelled as a direct governance response to this incident.",
+      "confidence": "Verified",
+      "citation_ids": [
+        "cite-fcc-ai-voices-illegal"
+      ]
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "target_id": "PAT-008",
+      "target_type": "pattern",
+      "reason": "The decision is put into practice via this single, primary design pattern.",
+      "confidence": "Community"
+    },
+    {
+      "type": "SATISFIES_CONTROL",
+      "target_id": "CTR-013",
+      "target_type": "control",
+      "reason": "Disclosure requirements directly address the manipulative-technique concern this control describes.",
+      "confidence": "Community"
+    },
+    {
+      "type": "REQUIRES_EVIDENCE",
+      "target_id": "EVI-008",
+      "target_type": "evidence",
+      "reason": "Compliance must be demonstrated by a documented disclosure log.",
+      "confidence": "Community"
+    },
+    {
+      "type": "RAISES_BOARD_QUESTION",
+      "target_id": "BRD-008",
+      "target_type": "board_question",
+      "reason": "Boards adopting this decision should be asking about deepfake detection and rapid-response readiness.",
+      "confidence": "Community"
+    }
+  ]
+}

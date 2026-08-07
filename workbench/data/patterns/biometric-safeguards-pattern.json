@@ -1,0 +1,68 @@
+{
+  "id": "PAT-007",
+  "slug": "biometric-safeguards-pattern",
+  "title": "Biometric Collection & Use Safeguards Pattern",
+  "description": "A pattern combining documented informed consent at every biometric collection point with independent human confirmation before any biometric match triggers an adverse action, and demographic-disaggregated accuracy testing before deployment.",
+  "version": "1.0.0",
+  "status": "draft",
+  "confidence": "Community",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["facial-recognition", "privacy", "biometric", "consent", "human-oversight"],
+  "created_by": "AI Governance Workbench (Phase 2A seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 2A seed data)",
+      "version": "1.0.0",
+      "note": "Initial Phase 2A seed content."
+    }
+  ],
+  "problem": "Biometric systems fail in two distinct, equally serious ways: data is collected without the individual's knowledge or consent (as with images scraped from the public web), and matches are acted upon automatically without independent human confirmation, compounding any accuracy or bias problem in the underlying model.",
+  "solution": "Require documented, informed consent before any biometric identifier is collected or processed, regardless of source; test match accuracy and false-positive rate separately across demographic groups before deployment; and require a trained human to independently confirm any match before it triggers an adverse action against an individual.",
+  "applicability": "Any system that collects, stores, or matches biometric identifiers — facial recognition, fingerprint, voiceprint, or iris/retina systems — whether for security, loss-prevention, authentication, or law-enforcement support.",
+  "consequences": "Consent-gating scraped or third-party data sources can be operationally difficult to retrofit onto an existing dataset; mandatory human confirmation adds latency and staffing cost to systems designed for real-time response.",
+  "maturity": "established",
+  "citations": [
+    {
+      "id": "cite-ftc-rite-aid",
+      "source_type": "regulator",
+      "title": "Rite Aid Banned from Using AI Facial Recognition After FTC Says Retailer Deployed Technology without Reasonable Safeguards",
+      "publisher": "Federal Trade Commission",
+      "url": "https://www.ftc.gov/news-events/news/press-releases/2023/12/rite-aid-banned-using-ai-facial-recognition-after-ftc-says-retailer-deployed-technology-without",
+      "publication_date": "2023-12-19",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "SATISFIES_CONTROL",
+      "target_id": "CTR-011",
+      "target_type": "control",
+      "reason": "Independent human confirmation before adverse action addresses the unfairness theory this control describes.",
+      "confidence": "Community"
+    },
+    {
+      "type": "SATISFIES_CONTROL",
+      "target_id": "CTR-012",
+      "target_type": "control",
+      "reason": "Documented consent at every collection point directly satisfies this control.",
+      "confidence": "Community"
+    },
+    {
+      "type": "REQUIRES_EVIDENCE",
+      "target_id": "EVI-006",
+      "target_type": "evidence",
+      "reason": "The pattern's accuracy-testing and human-review step produces this evidence type.",
+      "confidence": "Community"
+    },
+    {
+      "type": "REQUIRES_EVIDENCE",
+      "target_id": "EVI-007",
+      "target_type": "evidence",
+      "reason": "The pattern's consent step produces this evidence type.",
+      "confidence": "Community"
+    }
+  ]
+}

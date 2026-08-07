@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://workbench.aiforui.dev/schemas/board_question.schema.json",
+  "title": "Board Question",
+  "description": "A question a board, audit committee, or risk committee should ask in light of a decision, incident, or control — translating governance knowledge into oversight practice.",
+  "allOf": [
+    { "$ref": "https://workbench.aiforui.dev/schemas/common/base-entity.schema.json" },
+    {
+      "type": "object",
+      "required": ["id", "question_text"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^BRD-\\d{3,}$"
+        },
+        "question_text": {
+          "type": "string",
+          "minLength": 1,
+          "description": "The question itself, phrased for a non-technical board audience."
+        },
+        "audience": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["board", "audit_committee", "risk_committee", "executive_team", "other"]
+          },
+          "uniqueItems": true,
+          "description": "Who this question is intended for."
+        },
+        "rationale": {
+          "type": "string",
+          "description": "Why this question matters and what it is meant to surface."
+        },
+        "follow_up_actions": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Suggested next steps depending on how the question is answered."
+        }
+      }
+    }
+  ]
+}

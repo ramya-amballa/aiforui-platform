@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://workbench.aiforui.dev/schemas/control.schema.json",
+  "title": "Framework Control",
+  "description": "A specific control or requirement drawn from a named governance framework, regulation, or standard (e.g. NIST AI RMF, ISO/IEC 42001, EU AI Act). Controls give decisions and patterns a mapping back to recognised external frameworks.",
+  "allOf": [
+    { "$ref": "https://workbench.aiforui.dev/schemas/common/base-entity.schema.json" },
+    {
+      "type": "object",
+      "required": ["id", "framework_name", "control_reference", "control_text"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^CTR-\\d{3,}$"
+        },
+        "framework_name": {
+          "type": "string",
+          "minLength": 1,
+          "description": "The governance framework or standard this control belongs to (e.g. 'NIST AI RMF', 'ISO/IEC 42001', 'EU AI Act')."
+        },
+        "control_reference": {
+          "type": "string",
+          "minLength": 1,
+          "description": "The framework's own identifier for this control (e.g. 'MEASURE 2.11', 'Annex III')."
+        },
+        "control_text": {
+          "type": "string",
+          "minLength": 1,
+          "description": "The control's requirement, quoted or faithfully paraphrased from the source framework."
+        },
+        "control_family": {
+          "type": "string",
+          "description": "The grouping or category this control sits within (e.g. 'Measure', 'Govern')."
+        }
+      }
+    }
+  ]
+}

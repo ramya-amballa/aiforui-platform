@@ -1,0 +1,54 @@
+{
+  "id": "PAT-012",
+  "slug": "context-aware-content-safety-review-pattern",
+  "title": "Context-Aware Content Safety Review Pattern",
+  "description": "A pattern for testing a generative content feature's output against context-specific prompt categories — including cases where a global safety or fairness adjustment could conflict with factual accuracy — before staged public release.",
+  "version": "1.0.0",
+  "status": "draft",
+  "confidence": "Community",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["generative-ai", "content-safety", "reputational"],
+  "created_by": "AI Governance Workbench (Phase 2A seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 2A seed data)",
+      "version": "1.0.0",
+      "note": "Initial Phase 2A seed content."
+    }
+  ],
+  "problem": "A safety or fairness adjustment tuned and tested against one broad category of prompts (e.g. generic requests for people) can produce absurd or harmful results on a different category (e.g. historically specific requests) if that category was never tested separately, and the failure often surfaces only after public release.",
+  "solution": "Enumerate the distinct prompt categories a generative feature will plausibly be used for, including ones where a safety/fairness adjustment could conflict with factual or historical accuracy, and test each category explicitly before release; release first to a limited audience with a fast feedback channel and a rollback path, expanding to full availability only after the limited release surfaces no material issues.",
+  "applicability": "Any generative content feature (image, text, audio, or video) being released or materially updated for public or broad internal use.",
+  "consequences": "Enumerating every plausible prompt category is inherently incomplete; staged rollout delays full availability and requires monitoring infrastructure to detect issues during the limited-release phase.",
+  "maturity": "emerging",
+  "citations": [
+    {
+      "id": "cite-google-gemini-apology",
+      "source_type": "company_statement",
+      "title": "Gemini image generation got it wrong. We'll do better.",
+      "publisher": "Google (The Keyword)",
+      "url": "https://blog.google/products/gemini/gemini-image-generation-issue/",
+      "publication_date": "2024-02-23",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "SATISFIES_CONTROL",
+      "target_id": "CTR-017",
+      "target_type": "control",
+      "reason": "Context-specific testing before release is the concrete mechanism satisfying this control.",
+      "confidence": "Community"
+    },
+    {
+      "type": "REQUIRES_EVIDENCE",
+      "target_id": "EVI-013",
+      "target_type": "evidence",
+      "reason": "The pattern's output is a content safety review report.",
+      "confidence": "Community"
+    }
+  ]
+}

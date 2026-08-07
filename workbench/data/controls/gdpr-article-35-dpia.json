@@ -1,0 +1,47 @@
+{
+  "id": "CTR-008",
+  "slug": "gdpr-article-35-dpia",
+  "title": "GDPR Article 35 — Data Protection Impact Assessment",
+  "description": "The requirement to conduct a Data Protection Impact Assessment for high-risk processing under the GDPR. Paraphrase pending verification against the primary EUR-Lex text — hence 'Community' confidence.",
+  "version": "1.0.0",
+  "status": "draft",
+  "confidence": "Community",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["gdpr", "due-process", "privacy"],
+  "created_by": "AI Governance Workbench (Phase 2A seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 2A seed data)",
+      "version": "1.0.0",
+      "note": "Initial Phase 2A seed content."
+    }
+  ],
+  "framework_name": "General Data Protection Regulation (Regulation (EU) 2016/679)",
+  "control_reference": "Article 35",
+  "control_text": "Controllers must carry out a Data Protection Impact Assessment before processing that is likely to result in a high risk to individuals' rights and freedoms, such as systematic and extensive automated decision-making or profiling that produces legal or similarly significant effects. Article 35 DPIA obligations are broader than just automated-decision-making — they also cover large-scale special-category data processing and large-scale public monitoring.",
+  "control_family": "Impact assessment",
+  "citations": [
+    {
+      "id": "cite-gdpr",
+      "source_type": "legislation",
+      "title": "Regulation (EU) 2016/679 (General Data Protection Regulation)",
+      "publisher": "EUR-Lex / Official Journal of the European Union",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679",
+      "publication_date": "2016-05-04",
+      "accessed_date": "2026-08-04",
+      "locator": "Article 35"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "REQUIRES_EVIDENCE",
+      "target_id": "EVI-004",
+      "target_type": "evidence",
+      "reason": "This control's namesake artifact is exactly this evidence type.",
+      "confidence": "Community"
+    }
+  ]
+}

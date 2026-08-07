@@ -1,0 +1,58 @@
+{
+  "id": "BRD-008",
+  "slug": "deepfake-detection-readiness",
+  "title": "Could our organization's voice or likeness be convincingly deep-faked, and are we ready if it is?",
+  "description": "A board-level oversight question testing whether an organization has a detection and rapid-response plan for synthetic media impersonating its leadership, brand, or communications channels.",
+  "version": "1.0.1",
+  "status": "active",
+  "confidence": "Reviewed",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-05",
+  "tags": [
+    "generative-ai",
+    "misinformation",
+    "deepfake",
+    "board-oversight"
+  ],
+  "created_by": "AI Governance Workbench (Phase 2A seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 2A seed data)",
+      "version": "1.0.0",
+      "note": "Initial Phase 2A seed content."
+    },
+    {
+      "event": "updated",
+      "date": "2026-08-05",
+      "by": "AI Governance Workbench (Editorial Quality Audit)",
+      "version": "1.0.1",
+      "note": "Normalized US/UK spelling variants to the American-English house style (schema field names, e.g. organizations_involved, are already American; majority framework citations - NIST, FTC, EEOC, FCRA, BIPA - are American sources)."
+    }
+  ],
+  "question_text": "If someone used AI voice-cloning or likeness-generation to impersonate our CEO, another executive, or our brand in a convincing way — as happened with a sitting US president in the New Hampshire robocall case — how quickly would we detect it, and do we have a rapid-response plan to alert affected audiences?",
+  "audience": [
+    "board",
+    "executive_team",
+    "risk_committee"
+  ],
+  "rationale": "The New Hampshire deepfake robocall showed that a convincing AI-cloned voice of a well-known public figure can be distributed at scale before any detection or disclosure mechanism intervenes.",
+  "follow_up_actions": [
+    "Confirm whether any synthetic-media detection capability monitors channels using the organization's brand or leadership likeness.",
+    "Establish a rapid-response communication plan for a suspected deepfake impersonation event.",
+    "Review the synthetic media disclosure log for any prior flagged incidents involving the organization."
+  ],
+  "citations": [
+    {
+      "id": "cite-fcc-forfeiture-order",
+      "source_type": "regulator",
+      "title": "FCC Fines Man Behind Election Interference Scheme $6 Million (Forfeiture Order)",
+      "publisher": "Federal Communications Commission",
+      "url": "https://docs.fcc.gov/public/attachments/DOC-405811A1.pdf",
+      "publication_date": "2024-09-26",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": []
+}

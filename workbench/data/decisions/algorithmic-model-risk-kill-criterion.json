@@ -1,0 +1,98 @@
+{
+  "id": "DEC-021",
+  "slug": "algorithmic-model-risk-kill-criterion",
+  "title": "Require a pre-defined model-risk kill criterion before scaling an algorithmic program with direct financial exposure",
+  "description": "Illustrative reference decision modelled on Zillow's shutdown of its algorithmic home-buying business. Not a documented decision of any specific organization.",
+  "version": "1.0.1",
+  "status": "draft",
+  "confidence": "Community",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-05",
+  "tags": [
+    "financial",
+    "model-risk",
+    "algorithmic-pricing"
+  ],
+  "created_by": "AI Governance Workbench (Phase 3 seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 3 seed data)",
+      "version": "1.0.0",
+      "note": "Initial Edition 1.1 content, part of the Phase 3 canonical expansion."
+    },
+    {
+      "event": "updated",
+      "date": "2026-08-05",
+      "by": "AI Governance Workbench (Editorial Quality Audit)",
+      "version": "1.0.1",
+      "note": "Normalized US/UK spelling variants to the American-English house style (schema field names, e.g. organizations_involved, are already American; majority framework citations - NIST, FTC, EEOC, FCRA, BIPA - are American sources)."
+    }
+  ],
+  "decision_statement": "Before scaling an algorithmic program that commits the organization's own capital based on a model's predictions (pricing, purchasing, underwriting), a pre-defined threshold of prediction error or cumulative loss must be set in advance, monitored continuously, and enforced as an automatic pause — not a discretionary judgment call made under pressure to keep growing the program.",
+  "decision_type": "risk_acceptance",
+  "decision_context": "Motivated by Zillow's algorithmic home-buying program, which continued scaling through a period of model mispricing until losses had already reached hundreds of millions of dollars before the company intervened.",
+  "governing_body": "Illustrative example — Algorithmic Financial Risk Board",
+  "jurisdiction": [
+    "US"
+  ],
+  "frameworks_referenced": [
+    "SR 11-7 (Federal Reserve/OCC model risk management guidance)"
+  ],
+  "alternatives_considered": [
+    "Monitor model performance without a pre-committed automatic pause threshold, relying on management discretion.",
+    "Set a kill criterion only for downside scenarios already experienced, rather than for prediction-error thresholds that could catch a new failure mode."
+  ],
+  "citations": [
+    {
+      "id": "cite-zillow-8k",
+      "source_type": "regulator",
+      "title": "Zillow Group, Inc. Form 8-K (Q3 2021 results)",
+      "publisher": "U.S. Securities and Exchange Commission",
+      "url": "https://www.sec.gov/Archives/edgar/data/1617640/000161764021000085/q32021991.htm",
+      "publication_date": "2021-11-02",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "RESULTED_FROM",
+      "target_id": "INC-030",
+      "target_type": "incident",
+      "reason": "This decision is modelled as a direct governance response to this shutdown.",
+      "confidence": "Verified",
+      "citation_ids": [
+        "cite-zillow-8k"
+      ]
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "target_id": "PAT-019",
+      "target_type": "pattern",
+      "reason": "The decision is put into practice via this single, primary design pattern.",
+      "confidence": "Community"
+    },
+    {
+      "type": "SATISFIES_CONTROL",
+      "target_id": "CTR-021",
+      "target_type": "control",
+      "reason": "A pre-defined kill criterion is a direct application of established model-risk-management guidance.",
+      "confidence": "Community"
+    },
+    {
+      "type": "REQUIRES_EVIDENCE",
+      "target_id": "EVI-019",
+      "target_type": "evidence",
+      "reason": "Compliance must be demonstrated by an observable monitoring log against the pre-defined threshold.",
+      "confidence": "Community"
+    },
+    {
+      "type": "RAISES_BOARD_QUESTION",
+      "target_id": "BRD-019",
+      "target_type": "board_question",
+      "reason": "Boards adopting this decision should be asking whether a kill criterion actually exists and has been tested.",
+      "confidence": "Community"
+    }
+  ]
+}

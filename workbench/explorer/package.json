@@ -1,0 +1,42 @@
+{
+  "name": "@aiforui/governance-workbench-explorer",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Static, search-first interface for exploring the AI Governance Workbench knowledge graph. Derived entirely from /workbench/data at build time.",
+  "type": "module",
+  "scripts": {
+    "build-data": "tsx scripts/build-data.ts",
+    "predev": "npm --prefix .. install --no-audit --no-fund && npm run build-data",
+    "prebuild": "npm --prefix .. install --no-audit --no-fund && npm run build-data",
+    "dev": "next dev",
+    "build": "next build",
+    "vercel-build": "npm run build",
+    "start": "npx serve out -l 3000",
+    "typecheck": "tsc --noEmit",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "d3-force": "^3.0.0",
+    "minisearch": "^7.1.1",
+    "next": "^15.0.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/d3-force": "^3.0.10",
+    "@types/node": "^22.0.0",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "autoprefixer": "^10.5.4",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "^15.0.0",
+    "playwright": "^1.62.1",
+    "postcss": "^8.5.25",
+    "tailwindcss": "^3.4.19",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.0"
+  },
+  "engines": {
+    "node": ">=18.18.0"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "CTR-004",
+  "slug": "eu-ai-act-article-14-human-oversight",
+  "title": "EU AI Act Article 14 — Human oversight",
+  "description": "The human-oversight requirement for high-risk AI systems within the EU AI Act. Paraphrase pending verification against the primary EUR-Lex text — hence 'Community' confidence.",
+  "version": "1.0.0",
+  "status": "draft",
+  "confidence": "Community",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["eu-ai-act", "human-oversight", "safety"],
+  "created_by": "AI Governance Workbench (Phase 2A seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 2A seed data)",
+      "version": "1.0.0",
+      "note": "Initial Phase 2A seed content."
+    }
+  ],
+  "framework_name": "EU Artificial Intelligence Act (Regulation (EU) 2024/1689)",
+  "control_reference": "Article 14",
+  "control_text": "High-risk AI systems must be designed to allow effective human oversight, including the ability for a human overseer to understand the system's capabilities and limitations, monitor its operation, correctly interpret its output, decide not to use it in a given situation, and intervene in or interrupt its operation.",
+  "control_family": "Human oversight",
+  "citations": [
+    {
+      "id": "cite-eu-ai-act",
+      "source_type": "legislation",
+      "title": "Regulation (EU) 2024/1689 laying down harmonised rules on artificial intelligence (Artificial Intelligence Act)",
+      "publisher": "EUR-Lex / Official Journal of the European Union",
+      "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng",
+      "publication_date": "2024-07-12",
+      "accessed_date": "2026-08-04",
+      "locator": "Article 14"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "REQUIRES_EVIDENCE",
+      "target_id": "EVI-003",
+      "target_type": "evidence",
+      "reason": "Satisfying this control requires a documented safety case demonstrating the oversight mechanism actually works.",
+      "confidence": "Community"
+    }
+  ]
+}

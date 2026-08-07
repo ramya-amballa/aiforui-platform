@@ -1,0 +1,57 @@
+{
+  "id": "INC-014",
+  "slug": "ftc-rite-aid-facial-recognition-2023",
+  "title": "FTC bans Rite Aid from using facial recognition after biased, harmful misidentifications",
+  "description": "On 19 December 2023, the FTC announced a settlement banning Rite Aid Corporation from using facial recognition technology for surveillance purposes in its stores for five years. The FTC alleged that between roughly 2012 and 2020, Rite Aid deployed facial recognition in hundreds of stores to flag suspected shoplifters without reasonable safeguards, causing employees to act on false-positive alerts that wrongly accused customers of criminal conduct, with the harms falling disproportionately on Black, Asian, Latino, and women consumers. The order also required Rite Aid to delete or destroy facial recognition data and algorithms derived from the program and to implement a comprehensive data security and biometric-information safeguards program.",
+  "version": "1.0.0",
+  "status": "active",
+  "confidence": "Reviewed",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["facial-recognition", "discrimination", "privacy", "regulator-action"],
+  "created_by": "AI Governance Workbench (Phase 2A seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 2A seed data)",
+      "version": "1.0.0",
+      "note": "Initial Phase 2A seed content, part of the Foundational Twenty."
+    }
+  ],
+  "occurred_date": "2023-12-19",
+  "organizations_involved": ["Federal Trade Commission", "Rite Aid Corporation"],
+  "harm_types": ["discrimination", "privacy_violation", "reputational"],
+  "ai_system_category": "facial_recognition",
+  "jurisdiction": ["US"],
+  "severity": "high",
+  "root_cause": "Deployment of an imperfect facial-recognition matching system at scale without adequate accuracy testing, human-review safeguards before acting on a match, or performance monitoring across demographic groups, using a store-image database built from low-quality, uncurated photos that increased false-match rates.",
+  "citations": [
+    {
+      "id": "cite-ftc-rite-aid",
+      "source_type": "regulator",
+      "title": "Rite Aid Banned from Using AI Facial Recognition After FTC Says Retailer Deployed Technology without Reasonable Safeguards",
+      "publisher": "Federal Trade Commission",
+      "url": "https://www.ftc.gov/news-events/news/press-releases/2023/12/rite-aid-banned-using-ai-facial-recognition-after-ftc-says-retailer-deployed-technology-without",
+      "publication_date": "2023-12-19",
+      "accessed_date": "2026-08-04",
+      "excerpt": "As a result of Rite Aid's failures, Black, Asian, Latino, and women consumers were especially likely to be harmed by Rite Aid's use of facial recognition technology."
+    }
+  ],
+  "relationships": [
+    {
+      "type": "MITIGATED_BY",
+      "target_id": "DEC-007",
+      "target_type": "decision",
+      "reason": "A requirement for accuracy testing and human review before any adverse action addresses exactly the failure the FTC identified.",
+      "confidence": "Reviewed"
+    },
+    {
+      "type": "RAISES_BOARD_QUESTION",
+      "target_id": "BRD-007",
+      "target_type": "board_question",
+      "reason": "This is a canonical enforcement example of the biometric governance gap this board question is designed to surface.",
+      "confidence": "Reviewed"
+    }
+  ]
+}

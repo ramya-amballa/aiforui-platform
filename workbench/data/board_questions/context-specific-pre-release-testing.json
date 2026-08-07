@@ -1,0 +1,42 @@
+{
+  "id": "BRD-012",
+  "slug": "context-specific-pre-release-testing",
+  "title": "Was our generative content feature tested against context-specific failure modes before release?",
+  "description": "A board-level oversight question testing whether a generative content feature's pre-release testing covered context-specific prompt categories, not just a single broad test set.",
+  "version": "1.0.0",
+  "status": "active",
+  "confidence": "Reviewed",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["generative-ai", "content-safety", "reputational", "board-oversight"],
+  "created_by": "AI Governance Workbench (Phase 2A seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 2A seed data)",
+      "version": "1.0.0",
+      "note": "Initial Phase 2A seed content."
+    }
+  ],
+  "question_text": "Before enabling a new generative AI content feature to the public, was it tested against context-specific prompt categories — including cases where a safety or fairness adjustment could conflict with factual or historical accuracy — and did we use a staged rollout with a fast rollback path, rather than releasing directly to full public availability?",
+  "audience": ["board", "executive_team", "risk_committee"],
+  "rationale": "Google Gemini's image generator was tuned and tested in ways that did not anticipate its effect on historically specific prompts, and the resulting reputational harm was significant even though no individual was directly harmed.",
+  "follow_up_actions": [
+    "Request the content safety review report for the most recently released generative feature.",
+    "Confirm testing explicitly covered categories where safety/fairness tuning could conflict with accuracy.",
+    "Ask whether a staged rollout with monitoring preceded full public availability."
+  ],
+  "citations": [
+    {
+      "id": "cite-google-gemini-apology",
+      "source_type": "company_statement",
+      "title": "Gemini image generation got it wrong. We'll do better.",
+      "publisher": "Google (The Keyword)",
+      "url": "https://blog.google/products/gemini/gemini-image-generation-issue/",
+      "publication_date": "2024-02-23",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": []
+}

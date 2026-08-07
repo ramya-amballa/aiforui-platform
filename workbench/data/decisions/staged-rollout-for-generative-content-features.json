@@ -1,0 +1,98 @@
+{
+  "id": "DEC-013",
+  "slug": "staged-rollout-for-generative-content-features",
+  "title": "Require context-aware pre-release testing and staged rollout for generative content features",
+  "description": "Illustrative reference decision modelled on the Google Gemini image-generation controversy. Not a documented decision of any specific organization.",
+  "version": "1.0.1",
+  "status": "draft",
+  "confidence": "Community",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-05",
+  "tags": [
+    "generative-ai",
+    "content-safety",
+    "reputational"
+  ],
+  "created_by": "AI Governance Workbench (Phase 2A seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 2A seed data)",
+      "version": "1.0.0",
+      "note": "Initial Phase 2A seed content, part of the Foundational Twenty."
+    },
+    {
+      "event": "updated",
+      "date": "2026-08-05",
+      "by": "AI Governance Workbench (Editorial Quality Audit)",
+      "version": "1.0.1",
+      "note": "Normalized US/UK spelling variants to the American-English house style (schema field names, e.g. organizations_involved, are already American; majority framework citations - NIST, FTC, EEOC, FCRA, BIPA - are American sources). Normalized a duplicated relationship-reason phrasing (\"...via this design pattern.\" -> \"...via this single, primary design pattern.\") to one canonical wording."
+    }
+  ],
+  "decision_statement": "Before broadly releasing a generative content feature, the organization must test its output against a diverse, context-specific set of prompts — including prompts where a safety or fairness adjustment could plausibly conflict with factual/historical accuracy — and release to a limited audience first, with a fast feedback and rollback path, before full public availability.",
+  "decision_type": "policy",
+  "decision_context": "Motivated by Google Gemini's image generator producing historically inaccurate depictions after a fairness-tuning adjustment was applied without testing its effect on factual/historical prompts specifically.",
+  "governing_body": "Illustrative example — Generative Content Safety Governance Board",
+  "jurisdiction": [
+    "US"
+  ],
+  "frameworks_referenced": [
+    "NIST AI RMF"
+  ],
+  "alternatives_considered": [
+    "Apply a single global safety/fairness adjustment across all prompt types without context-specific testing.",
+    "Release directly to full public availability without a staged rollout."
+  ],
+  "citations": [
+    {
+      "id": "cite-google-gemini-apology",
+      "source_type": "company_statement",
+      "title": "Gemini image generation got it wrong. We'll do better.",
+      "publisher": "Google (The Keyword)",
+      "url": "https://blog.google/products/gemini/gemini-image-generation-issue/",
+      "publication_date": "2024-02-23",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "RESULTED_FROM",
+      "target_id": "INC-020",
+      "target_type": "incident",
+      "reason": "This decision is modelled as a direct governance response to this incident.",
+      "confidence": "Verified",
+      "citation_ids": [
+        "cite-google-gemini-apology"
+      ]
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "target_id": "PAT-012",
+      "target_type": "pattern",
+      "reason": "The decision is put into practice via this single, primary design pattern.",
+      "confidence": "Community"
+    },
+    {
+      "type": "SATISFIES_CONTROL",
+      "target_id": "CTR-017",
+      "target_type": "control",
+      "reason": "Context-specific pre-release testing directly satisfies this control's intended-context requirement.",
+      "confidence": "Community"
+    },
+    {
+      "type": "REQUIRES_EVIDENCE",
+      "target_id": "EVI-013",
+      "target_type": "evidence",
+      "reason": "Compliance must be demonstrated by a documented content safety review report.",
+      "confidence": "Community"
+    },
+    {
+      "type": "RAISES_BOARD_QUESTION",
+      "target_id": "BRD-012",
+      "target_type": "board_question",
+      "reason": "Boards adopting this decision should be asking whether pre-release testing covers context-specific failure modes.",
+      "confidence": "Community"
+    }
+  ]
+}

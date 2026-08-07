@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://workbench.aiforui.dev/ingestion/schemas/draft-incident.schema.json",
+  "title": "Draft Incident",
+  "description": "A candidate incident captured from a news article or other source, awaiting human review. This is deliberately a separate, looser schema from the canonical Incident schema in /schemas/incident.schema.json — draft content is never treated as canonical knowledge, and never lives in /data. See /docs/ingestion-pipeline.md.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "source", "raw_excerpt", "extraction_method", "suggested_incident", "human_review", "created_date"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Draft-namespace identifier, distinct from the 'incident-' namespace used once promoted.",
+      "pattern": "^draft-incident-[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "created_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date this draft was captured."
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source_type", "title", "publisher", "retrieved_date"],
+      "properties": {
+        "source_type": {
+          "type": "string",
+          "enum": [
+            "regulator",
+            "legislation",
+            "court_judgment",
+            "company_statement",
+            "academic_paper",
+            "standards_body",
+            "news_publication",
+            "other"
+          ]
+        },
+        "title": { "type": "string", "minLength": 1 },
+        "publisher": { "type": "string", "minLength": 1 },
+        "url": { "type": "string", "format": "uri" },
+        "published_date": { "type": "string", "format": "date" },
+        "retrieved_date": { "type": "string", "format": "date" }
+      }
+    },
+    "raw_excerpt": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Verbatim excerpt captured from the source, kept as the ground truth the draft was built from."
+    },
+    "extraction_method": {
+      "type": "string",
+      "enum": ["human", "ai_assisted"],
+      "description": "How the suggested_incident content below was drafted. AI-assisted drafts require human review before promotion exactly like human ones — this field is for transparency, not for skipping review."
+    },
+    "captured_by": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Name/handle of the person who captured this draft (may differ from the reviewer who later approves it). Carried through to the promoted record's created_by."
+    },
+    "suggested_incident": {
+      "type": "object",
+      "description": "The reviewer's/extractor's candidate content for the eventual canonical Incident record. Not schema-validated against incident.schema.json until promotion, since it is expected to be incomplete or provisional at this stage.",
+      "additionalProperties": false,
+      "required": ["title", "description", "occurred_date"],
+      "properties": {
+        "title": { "type": "string", "minLength": 1 },
+        "description": { "type": "string", "minLength": 1 },
+        "occurred_date": { "type": "string", "format": "date" },
+        "organizations_involved": { "type": "array", "items": { "type": "string" } },
+        "harm_types": { "type": "array", "items": { "type": "string" } },
+        "ai_system_category": { "type": "string" },
+        "jurisdiction": { "type": "array", "items": { "type": "string" } },
+        "severity": { "type": "string", "enum": ["low", "medium", "high", "critical"] },
+        "root_cause": { "type": "string" },
+        "tags": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "human_review": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status"],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": ["pending", "approved", "rejected", "needs_changes"]
+        },
+        "reviewer": {
+          "type": "string",
+          "description": "Name/handle of the human reviewer. Required before status can be 'approved' (enforced by the promote script, not this schema, since JSON Schema conditionals here would be harder to read than a clear runtime check)."
+        },
+        "reviewed_date": { "type": "string", "format": "date" },
+        "notes": { "type": "string" },
+        "confidence_assigned": {
+          "type": "string",
+          "enum": ["Verified", "Reviewed", "Draft", "Community", "Archived"],
+          "description": "The confidence level the reviewer assigns to the promoted record. Required before promotion."
+        }
+      }
+    }
+  }
+}

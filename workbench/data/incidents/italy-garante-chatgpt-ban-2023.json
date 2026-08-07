@@ -1,0 +1,56 @@
+{
+  "id": "INC-012",
+  "slug": "italy-garante-chatgpt-ban-2023",
+  "title": "Italy's data protection authority temporarily bans ChatGPT over GDPR violations",
+  "description": "On 30 March 2023, Italy's Garante per la protezione dei dati personali ordered OpenAI to immediately stop processing Italian users' personal data, citing a lack of legal basis for the large-scale data collection used to train ChatGPT, the absence of age-verification mechanisms, and a recent data breach exposing user chat titles and payment information. Italy became the first Western country to block a major generative AI chatbot. After OpenAI implemented requested changes — including a privacy notice, an opt-out for training data, and an age-verification gate — the Garante lifted the restriction the following month.",
+  "version": "1.0.0",
+  "status": "active",
+  "confidence": "Reviewed",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["generative-ai", "privacy", "gdpr", "regulator-action"],
+  "created_by": "AI Governance Workbench (Phase 2A seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 2A seed data)",
+      "version": "1.0.0",
+      "note": "Initial Phase 2A seed content, part of the Foundational Twenty. Exact ban-lift date (commonly reported as 28 April 2023) drawn from secondary reporting rather than a directly confirmed primary Garante document."
+    }
+  ],
+  "occurred_date": "2023-03-30",
+  "organizations_involved": ["Garante per la protezione dei dati personali", "OpenAI"],
+  "harm_types": ["privacy_violation"],
+  "ai_system_category": "generative_ai_chatbot",
+  "jurisdiction": ["IT", "EU"],
+  "severity": "high",
+  "root_cause": "OpenAI processed large volumes of personal data — scraped for training and generated through user conversations — without an adequate legal basis under GDPR, lacked transparency/privacy notices for EU users, and had no effective age-verification despite the service being usable by minors.",
+  "citations": [
+    {
+      "id": "cite-garante-chatgpt-block",
+      "source_type": "regulator",
+      "title": "Intelligenza artificiale: il Garante blocca ChatGPT. Raccolta illecita di dati personali. Assenza di sistemi per la verifica dell'età dei minori",
+      "publisher": "Garante per la protezione dei dati personali",
+      "url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/9870847",
+      "publication_date": "2023-03-31",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "MITIGATED_BY",
+      "target_id": "DEC-006",
+      "target_type": "decision",
+      "reason": "A documented GDPR legal basis and age-verification gate before EU launch addresses exactly the deficiencies the Garante identified.",
+      "confidence": "Reviewed"
+    },
+    {
+      "type": "RAISES_BOARD_QUESTION",
+      "target_id": "BRD-006",
+      "target_type": "board_question",
+      "reason": "This is the first, and most prominent, regulator action of its kind against a consumer generative AI product.",
+      "confidence": "Reviewed"
+    }
+  ]
+}

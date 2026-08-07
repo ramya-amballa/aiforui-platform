@@ -1,0 +1,38 @@
+{
+  "id": "EVI-003",
+  "slug": "automated-driving-safety-case-report",
+  "title": "Automated Driving Safety Case Report",
+  "description": "A report documenting the tested performance of an automated driving system's human-oversight fallback and safety safeguards, including driver-engagement monitoring results and emergency-braking configuration.",
+  "version": "1.0.0",
+  "status": "active",
+  "confidence": "Reviewed",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["autonomous-vehicle", "safety", "audit-report"],
+  "created_by": "AI Governance Workbench (Phase 2A seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 2A seed data)",
+      "version": "1.0.0",
+      "note": "Initial Phase 2A seed content."
+    }
+  ],
+  "evidence_description": "A report documenting how an automated driving system's human-oversight fallback was tested (including driver-engagement monitoring performance), confirmation that automatic emergency braking remained enabled during autonomous operation, and a log of disengagement/near-miss events reviewed.",
+  "collection_method": "Combination of automated telemetry (engagement monitoring, braking configuration) and periodic manual safety review.",
+  "retention_period": "Minimum 5 years, aligned with typical vehicle safety record-keeping expectations.",
+  "artifact_format": "PDF safety case report; underlying telemetry retained as structured data.",
+  "citations": [
+    {
+      "id": "cite-ntsb-uber-har1903",
+      "source_type": "regulator",
+      "title": "Collision Between Vehicle Controlled by Developmental Automated Driving System and Pedestrian, Tempe, Arizona, March 18, 2018 (NTSB/HAR-19/03)",
+      "publisher": "National Transportation Safety Board",
+      "url": "https://www.ntsb.gov/investigations/accidentreports/reports/har1903.pdf",
+      "publication_date": "2019-11-19",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": []
+}

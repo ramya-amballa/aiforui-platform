@@ -1,0 +1,38 @@
+{
+  "id": "EVI-018",
+  "slug": "crisis-escalation-protocol-test-report",
+  "title": "Crisis Escalation Protocol Test Report",
+  "description": "A report documenting clinical review of a chatbot's responses to crisis-adjacent test inputs, and a tested confirmation that the escalation path to a trained human actually works.",
+  "version": "1.0.0",
+  "status": "active",
+  "confidence": "Community",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["chatbot", "mental-health", "safety", "audit-report"],
+  "created_by": "AI Governance Workbench (Phase 3 seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 3 seed data)",
+      "version": "1.0.0",
+      "note": "Initial Edition 1.1 content."
+    }
+  ],
+  "evidence_description": "A report documenting the clinical reviewer's findings against a structured set of crisis-adjacent test inputs, remediations applied, and a timed test of the escalation path confirming a user showing crisis indicators is actually routed to a reachable, trained human.",
+  "collection_method": "Structured clinical review exercise conducted before launch and on a recurring schedule, with escalation drills logged automatically where possible.",
+  "retention_period": "Minimum 3 years, and retained for the lifetime of the chatbot version tested.",
+  "artifact_format": "PDF report; escalation drill timing retained as structured export.",
+  "citations": [
+    {
+      "id": "cite-npr-neda-tessa",
+      "source_type": "news_publication",
+      "title": "Chatbot that offered bad advice for eating disorders taken down",
+      "publisher": "NPR",
+      "url": "https://www.npr.org/sections/health-shots/2023/06/08/1180838096/an-eating-disorders-chatbot-offered-dieting-advice-raising-fears-about-ai-in-hea",
+      "publication_date": "2023-06-08",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": []
+}

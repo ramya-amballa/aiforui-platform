@@ -1,0 +1,65 @@
+{
+  "id": "INC-023",
+  "slug": "france-parcoursup-algorithm-transparency",
+  "title": "French courts split on forcing disclosure of Parcoursup's local university admissions algorithms",
+  "description": "Parcoursup, France's national algorithm-driven platform matching secondary-school graduates to higher-education places since 2018, faced years of legal challenges over the opacity of the 'local algorithms' individual universities use to pre-sort applicants. After CNIL's March 2018 opinion pushed the ministry to publish the national algorithm's source code, student union UNEF sued for disclosure of universities' local algorithms; the Conseil d'État ruled in June 2019 that these were not subject to communication. The Conseil constitutionnel then held in April 2020 that a constitutional right of access to administrative documents required universities to disclose their selection criteria and reasoning, but only after admissions decisions were finalised — a partial transparency outcome that left the algorithms themselves undisclosed in advance of decisions.",
+  "version": "1.0.0",
+  "status": "active",
+  "confidence": "Reviewed",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["government", "education", "transparency", "due-process"],
+  "created_by": "AI Governance Workbench (Phase 3 seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 3 seed data)",
+      "version": "1.0.0",
+      "note": "Initial Edition 1.1 content. Legal history spans 2018-2020 across multiple distinct rulings; this record uses the Conseil constitutionnel's 3 April 2020 decision as the primary anchor since it is the most-cited resolution, but does not represent full closure of the underlying transparency question."
+    }
+  ],
+  "occurred_date": "2020-04-03",
+  "organizations_involved": ["Ministère de l'Enseignement supérieur", "CNIL", "Conseil d'État", "Conseil constitutionnel", "UNEF"],
+  "harm_types": ["other", "discrimination"],
+  "ai_system_category": "student_admissions_matching_algorithm",
+  "jurisdiction": ["FR"],
+  "severity": "medium",
+  "root_cause": "French universities used locally-built ranking tools to pre-sort applicants without disclosing the criteria or logic, and the Conseil d'État found applicable law did not require disclosing these local processes in advance, prompting a constitutional challenge over the right of access to administrative documents.",
+  "citations": [
+    {
+      "id": "cite-conseil-constitutionnel-parcoursup",
+      "source_type": "court_judgment",
+      "title": "Décision n° 2020-834 QPC du 3 avril 2020 (Union nationale des étudiants de France)",
+      "publisher": "Conseil constitutionnel",
+      "url": "https://www.conseil-constitutionnel.fr/en/decision/2020/2020834QPC.htm",
+      "publication_date": "2020-04-03",
+      "accessed_date": "2026-08-04"
+    },
+    {
+      "id": "cite-conseil-detat-parcoursup",
+      "source_type": "court_judgment",
+      "title": "Décision n° 427916 (12 juin 2019)",
+      "publisher": "Conseil d'État",
+      "url": "https://www.conseil-etat.fr/fr/arianeweb/CE/decision/2019-06-12/427916",
+      "publication_date": "2019-06-12",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "MITIGATED_BY",
+      "target_id": "DEC-004",
+      "target_type": "decision",
+      "reason": "Parcoursup's automated, high-stakes sorting of applicants for a public service (higher education) without pre-decision disclosure is the same due-process concern DEC-004 addresses in welfare, grading, and debt-recovery contexts.",
+      "confidence": "Reviewed"
+    },
+    {
+      "type": "RAISES_BOARD_QUESTION",
+      "target_id": "BRD-004",
+      "target_type": "board_question",
+      "reason": "This incident extends the same genuine-human-review question into public education admissions.",
+      "confidence": "Reviewed"
+    }
+  ]
+}

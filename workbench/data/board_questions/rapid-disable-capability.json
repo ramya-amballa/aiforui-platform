@@ -1,0 +1,59 @@
+{
+  "id": "BRD-010",
+  "slug": "rapid-disable-capability",
+  "title": "If our public-facing AI system started producing harmful output, how fast could we disable it?",
+  "description": "A board-level oversight question testing whether an organization's incident-response capability for a publicly-facing AI system has actually been tested, not just planned.",
+  "version": "1.0.1",
+  "status": "active",
+  "confidence": "Reviewed",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-05",
+  "tags": [
+    "generative-ai",
+    "adversarial",
+    "safety",
+    "incident-response",
+    "board-oversight"
+  ],
+  "created_by": "AI Governance Workbench (Phase 2A seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 2A seed data)",
+      "version": "1.0.0",
+      "note": "Initial Phase 2A seed content."
+    },
+    {
+      "event": "updated",
+      "date": "2026-08-05",
+      "by": "AI Governance Workbench (Editorial Quality Audit)",
+      "version": "1.0.1",
+      "note": "Normalized US/UK spelling variants to the American-English house style (schema field names, e.g. organizations_involved, are already American; majority framework citations - NIST, FTC, EEOC, FCRA, BIPA - are American sources)."
+    }
+  ],
+  "question_text": "If our public-facing AI system began producing harmful or offensive output — through adversarial manipulation or otherwise — how quickly could we detect and disable it, and has that response actually been drilled, the way it was not before Microsoft's Tay chatbot was manipulated within hours of launch?",
+  "audience": [
+    "board",
+    "risk_committee",
+    "executive_team"
+  ],
+  "rationale": "Tay went from launch to public, high-profile failure in under a day because there was no adversarial testing beforehand and no rehearsed rapid-disable capability once the manipulation was underway.",
+  "follow_up_actions": [
+    "Request the most recent red-team test report and confirm it includes a timed kill-switch drill.",
+    "Confirm red-teaming specifically includes coordinated-manipulation scenarios, not just individual bad prompts.",
+    "Ask who has authority to trigger the kill switch and how quickly they can be reached."
+  ],
+  "citations": [
+    {
+      "id": "cite-microsoft-tay-apology",
+      "source_type": "company_statement",
+      "title": "Learning from Tay's introduction",
+      "publisher": "The Official Microsoft Blog",
+      "url": "https://blogs.microsoft.com/blog/2016/03/25/learning-tays-introduction/",
+      "publication_date": "2016-03-25",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": []
+}

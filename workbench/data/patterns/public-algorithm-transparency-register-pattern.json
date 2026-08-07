@@ -1,0 +1,54 @@
+{
+  "id": "PAT-015",
+  "slug": "public-algorithm-transparency-register-pattern",
+  "title": "Public Algorithm Transparency Register Pattern",
+  "description": "A pattern for maintaining a public, proactively-updated register of every algorithm a public body uses in eligibility or administrative decisions, including its logic and the criteria it applies, published before any disclosure dispute arises.",
+  "version": "1.0.0",
+  "status": "draft",
+  "confidence": "Community",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["government", "transparency", "welfare"],
+  "created_by": "AI Governance Workbench (Phase 3 seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 3 seed data)",
+      "version": "1.0.0",
+      "note": "Initial Edition 1.1 content."
+    }
+  ],
+  "problem": "Public bodies deploy administrative algorithms and only face pressure to explain their logic after a disclosure request or legal challenge, by which point applicants may already have been wrongly denied for years with no visibility into why.",
+  "solution": "Maintain a public register listing every algorithm used in an eligibility or administrative decision, its intended purpose, its decision logic in plain language, and a channel for civil-society review — published proactively as a matter of course, not produced defensively in response to a request.",
+  "applicability": "Any public body deploying an algorithm to determine eligibility for a benefit, service, or other administrative outcome.",
+  "consequences": "Publishing decision logic can expose it to gaming by applicants seeking to satisfy criteria without genuinely qualifying; maintaining an accurate, current register requires an ongoing documentation discipline that can lapse without dedicated ownership.",
+  "maturity": "experimental",
+  "citations": [
+    {
+      "id": "cite-civio-bosco",
+      "source_type": "other",
+      "title": "Civio pulls back the curtain on public algorithms — Spain's Supreme Court orders the Government to release BOSCO's source code",
+      "publisher": "Civio",
+      "url": "https://civio.es/novedades/2025/09/18/civio-pulls-back-the-curtain-on-public-algorithms-spains-supreme-court-orders-the-governments-to-release-boscos-source-code/",
+      "publication_date": "2025-09-18",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "SATISFIES_CONTROL",
+      "target_id": "CTR-018",
+      "target_type": "control",
+      "reason": "A public register is a concrete mechanism satisfying this control's transparency requirement.",
+      "confidence": "Community"
+    },
+    {
+      "type": "REQUIRES_EVIDENCE",
+      "target_id": "EVI-015",
+      "target_type": "evidence",
+      "reason": "The pattern's output is a public algorithm documentation publication record.",
+      "confidence": "Community"
+    }
+  ]
+}

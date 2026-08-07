@@ -1,0 +1,38 @@
+{
+  "id": "EVI-019",
+  "slug": "model-performance-kill-criterion-log",
+  "title": "Model Performance Kill-Criterion Monitoring Log",
+  "description": "A continuously-updated observable log comparing a model's actual performance (prediction error, realised loss) against its pre-defined kill criterion, including any breach and the resulting pause.",
+  "version": "1.0.0",
+  "status": "active",
+  "confidence": "Community",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["model-risk", "financial", "audit-log"],
+  "created_by": "AI Governance Workbench (Phase 3 seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 3 seed data)",
+      "version": "1.0.0",
+      "note": "Initial Edition 1.1 content."
+    }
+  ],
+  "evidence_description": "A record of the model's actual performance against its pre-defined kill-criterion threshold at regular intervals, including the threshold value, actual measured performance, and — if breached — the timestamp and details of the resulting automatic pause.",
+  "collection_method": "Automated monitoring pipeline comparing live performance metrics to the pre-defined threshold on a recurring schedule.",
+  "retention_period": "Minimum 5 years, aligned with typical financial model-risk record-keeping expectations.",
+  "artifact_format": "Structured export (CSV/JSON) of performance-versus-threshold measurements over time.",
+  "citations": [
+    {
+      "id": "cite-zillow-8k",
+      "source_type": "regulator",
+      "title": "Zillow Group, Inc. Form 8-K (Q3 2021 results)",
+      "publisher": "U.S. Securities and Exchange Commission",
+      "url": "https://www.sec.gov/Archives/edgar/data/1617640/000161764021000085/q32021991.htm",
+      "publication_date": "2021-11-02",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": []
+}

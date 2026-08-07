@@ -1,0 +1,42 @@
+{
+  "id": "BRD-014",
+  "slug": "genuine-versus-symbolic-human-review",
+  "title": "If a human approves every automated recommendation without ever deviating, are we actually providing human review?",
+  "description": "A board-level oversight question testing whether a nominal human-review safeguard on an automated scoring system is genuine, using the observable deviation rate as the test rather than the existence of a review step on paper.",
+  "version": "1.0.0",
+  "status": "active",
+  "confidence": "Reviewed",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["credit-scoring", "human-oversight", "board-oversight"],
+  "created_by": "AI Governance Workbench (Phase 3 seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 3 seed data)",
+      "version": "1.0.0",
+      "note": "Initial Edition 1.1 content."
+    }
+  ],
+  "question_text": "What is the deviation rate between our automated scores and the human reviewer's final decision — and if it is at or near zero, are we prepared for a regulator to conclude, as the CJEU did for SCHUFA-style scoring, that the score itself is making the decision?",
+  "audience": ["board", "risk_committee", "audit_committee"],
+  "rationale": "The CJEU's SCHUFA ruling means an automated score can trigger GDPR Article 22 obligations even when a human formally makes the final call, if that human's review is not meaningful. A near-zero deviation rate is direct, observable evidence the review may be symbolic.",
+  "follow_up_actions": [
+    "Request the current human deviation rate log for every scored decision process.",
+    "If the deviation rate is near zero, ask whether reviewers have the authority, time, and information to genuinely disagree.",
+    "Confirm legal has assessed GDPR Article 22 exposure in light of the SCHUFA ruling."
+  ],
+  "citations": [
+    {
+      "id": "cite-cjeu-schufa",
+      "source_type": "court_judgment",
+      "title": "Judgment of the Court (First Chamber), 7 December 2023 — OQ v Land Hessen (SCHUFA Holding, Scoring), Case C-634/21",
+      "publisher": "Court of Justice of the European Union",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A62021CJ0634",
+      "publication_date": "2023-12-07",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": []
+}

@@ -1,0 +1,74 @@
+{
+  "id": "PAT-001",
+  "slug": "pre-deployment-bias-audit-gate",
+  "title": "Pre-Deployment Bias Audit Gate Pattern",
+  "description": "A release-gating pattern that blocks an AI-based hiring or screening tool from reaching live candidates until an independent bias audit has been completed and its results documented.",
+  "version": "1.0.1",
+  "status": "draft",
+  "confidence": "Community",
+  "created_date": "2026-08-03",
+  "updated_date": "2026-08-05",
+  "tags": [
+    "hiring",
+    "bias",
+    "release-gate",
+    "audit"
+  ],
+  "created_by": "AI Governance Workbench (Phase 1 seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-03",
+      "by": "AI Governance Workbench (Phase 1 seed data)",
+      "version": "1.0.0",
+      "note": "Initial Phase 1 seed content. Awaiting first named-human review."
+    },
+    {
+      "event": "updated",
+      "date": "2026-08-05",
+      "by": "AI Governance Workbench (Editorial Quality Audit)",
+      "version": "1.0.1",
+      "note": "Normalized title to match the dataset's 'ends with Pattern' naming convention (was \"Pre-Deployment Bias Audit Gate\"). Normalized US/UK spelling variants to the American-English house style (schema field names, e.g. organizations_involved, are already American; majority framework citations - NIST, FTC, EEOC, FCRA, BIPA - are American sources)."
+    }
+  ],
+  "problem": "Organizations deploy AI-based candidate screening or ranking tools without any structured check for disparate impact on protected groups, discovering bias only after harm has occurred, been reported publicly, or triggered regulatory scrutiny.",
+  "solution": "Introduce a mandatory, independently-conducted bias audit as a release gate before an AI hiring tool is used on live candidates. The audit measures selection-rate disparities across protected characteristics using historical or representative test data, documents methodology and results, and must be re-run whenever the model, training data, or scoring logic materially changes.",
+  "applicability": "Any AI system used to screen, rank, or score candidates or employees for hiring, promotion, or termination decisions, particularly where the tool operates in or affects candidates in a jurisdiction with a legal bias-audit mandate (e.g. New York City).",
+  "consequences": "Adds lead time and cost before deployment and before each material model change. Requires access to disaggregated demographic data to compute selection-rate disparities, which itself introduces separate data-privacy handling obligations that must be governed independently.",
+  "maturity": "emerging",
+  "citations": [
+    {
+      "id": "cite-nyc-ll144-rules",
+      "source_type": "regulator",
+      "title": "Automated Employment Decision Tools (Local Law 144 rules)",
+      "publisher": "NYC Department of Consumer and Worker Protection (DCWP)",
+      "url": "https://rules.cityofnewyork.us/rule/automated-employment-decision-tools-2/",
+      "accessed_date": "2026-08-03",
+      "locator": "Rule implementing NYC Local Law 144-2021 (Bias Audit Law)",
+      "excerpt": "Employers using automated employment decision tools must enlist an independent auditor to conduct an annual bias audit and publish a summary of the results."
+    }
+  ],
+  "relationships": [
+    {
+      "type": "SATISFIES_CONTROL",
+      "target_id": "CTR-001",
+      "target_type": "control",
+      "reason": "The audit performed by this pattern is the mechanism that satisfies the fairness/bias evaluation control.",
+      "confidence": "Community"
+    },
+    {
+      "type": "SATISFIES_CONTROL",
+      "target_id": "CTR-002",
+      "target_type": "control",
+      "reason": "The same audit also demonstrates the adverse-impact assessment the EEOC's Title VII AI guidance describes.",
+      "confidence": "Community"
+    },
+    {
+      "type": "REQUIRES_EVIDENCE",
+      "target_id": "EVI-001",
+      "target_type": "evidence",
+      "reason": "The gate's output is a bias audit report.",
+      "confidence": "Community"
+    }
+  ]
+}

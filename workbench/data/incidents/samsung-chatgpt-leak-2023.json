@@ -1,0 +1,56 @@
+{
+  "id": "INC-011",
+  "slug": "samsung-chatgpt-leak-2023",
+  "title": "Samsung semiconductor employees leak confidential data to ChatGPT",
+  "description": "After Samsung's semiconductor division lifted an internal ban and allowed employees to use ChatGPT from March 2023, engineers pasted confidential source code, chip-defect-detection code, and internal meeting notes into the chatbot on at least three separate occasions within about three weeks. Because such inputs could be retained or exposed by the third-party service, Samsung subsequently banned employee use of ChatGPT and other generative AI tools on company devices and networks, announced around 1-2 May 2023.",
+  "version": "1.0.0",
+  "status": "active",
+  "confidence": "Reviewed",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["generative-ai", "security", "privacy", "enterprise-policy"],
+  "created_by": "AI Governance Workbench (Phase 2A seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 2A seed data)",
+      "version": "1.0.0",
+      "note": "Initial Phase 2A seed content, part of the Foundational Twenty. Exact dates of the three individual leak incidents are drawn from secondary English-language reporting on original Korean-language coverage and are approximate."
+    }
+  ],
+  "occurred_date": "2023-04-01",
+  "organizations_involved": ["Samsung Electronics", "OpenAI"],
+  "harm_types": ["security", "privacy_violation", "financial"],
+  "ai_system_category": "generative_ai_chatbot",
+  "jurisdiction": ["KR"],
+  "severity": "high",
+  "root_cause": "Absence of technical controls (e.g. data-loss-prevention tooling) or clear employee guidance after the internal ChatGPT ban was lifted, combined with employees' lack of awareness that data submitted to a third-party generative AI service could be retained on external servers.",
+  "citations": [
+    {
+      "id": "cite-samsung-chatgpt-ban-bloomberg",
+      "source_type": "news_publication",
+      "title": "Samsung Bans ChatGPT, Google Bard, Other Generative AI Use by Staff After Leak",
+      "publisher": "Bloomberg",
+      "url": "https://www.bloomberg.com/news/articles/2023-05-02/samsung-bans-chatgpt-and-other-generative-ai-use-by-staff-after-leak",
+      "publication_date": "2023-05-02",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "MITIGATED_BY",
+      "target_id": "DEC-005",
+      "target_type": "decision",
+      "reason": "A documented, technically-enforced acceptable-use policy for third-party generative AI tools directly addresses this leak.",
+      "confidence": "Reviewed"
+    },
+    {
+      "type": "RAISES_BOARD_QUESTION",
+      "target_id": "BRD-005",
+      "target_type": "board_question",
+      "reason": "This is a canonical example of the enterprise data-exposure risk this board question is designed to surface.",
+      "confidence": "Reviewed"
+    }
+  ]
+}

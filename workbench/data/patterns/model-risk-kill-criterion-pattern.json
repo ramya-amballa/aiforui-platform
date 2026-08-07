@@ -1,0 +1,65 @@
+{
+  "id": "PAT-019",
+  "slug": "model-risk-kill-criterion-pattern",
+  "title": "Algorithmic Model-Risk Kill Criterion Pattern",
+  "description": "A pattern for setting a pre-defined, continuously-monitored threshold of prediction error or cumulative loss for an algorithmic program with direct financial exposure, enforced as an automatic pause rather than a discretionary judgment call.",
+  "version": "1.0.1",
+  "status": "draft",
+  "confidence": "Community",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-05",
+  "tags": [
+    "financial",
+    "model-risk",
+    "algorithmic-pricing"
+  ],
+  "created_by": "AI Governance Workbench (Phase 3 seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 3 seed data)",
+      "version": "1.0.0",
+      "note": "Initial Edition 1.1 content."
+    },
+    {
+      "event": "updated",
+      "date": "2026-08-05",
+      "by": "AI Governance Workbench (Editorial Quality Audit)",
+      "version": "1.0.1",
+      "note": "Normalized US/UK spelling variants to the American-English house style (schema field names, e.g. organizations_involved, are already American; majority framework citations - NIST, FTC, EEOC, FCRA, BIPA - are American sources)."
+    }
+  ],
+  "problem": "An algorithmic program committing an organization's own capital based on model predictions can continue scaling through a period of degraded model accuracy, because the decision to pause is left to management judgment under pressure to keep growing a strategically important business line — by the time a discretionary pause happens, losses can already be severe.",
+  "solution": "Before scaling the program, define a specific, measurable threshold (e.g. prediction error rate, cumulative realised loss versus forecast) at which the program automatically pauses pending review, monitor actual performance against that threshold continuously, and treat the threshold as binding rather than advisory — a breach triggers a pause, not a discussion about whether to pause.",
+  "applicability": "Any algorithmic program that commits the organization's own capital based on a model's predictions — automated pricing, purchasing, or underwriting programs.",
+  "consequences": "A binding kill criterion can pause a program during a temporary anomaly that would have self-corrected, creating an opportunity cost; setting the threshold requires enough historical data to distinguish normal model variance from genuine degradation, which may not exist for a genuinely novel program.",
+  "maturity": "emerging",
+  "citations": [
+    {
+      "id": "cite-zillow-8k",
+      "source_type": "regulator",
+      "title": "Zillow Group, Inc. Form 8-K (Q3 2021 results)",
+      "publisher": "U.S. Securities and Exchange Commission",
+      "url": "https://www.sec.gov/Archives/edgar/data/1617640/000161764021000085/q32021991.htm",
+      "publication_date": "2021-11-02",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "SATISFIES_CONTROL",
+      "target_id": "CTR-021",
+      "target_type": "control",
+      "reason": "A binding, monitored kill criterion is the concrete mechanism satisfying model-risk-management guidance.",
+      "confidence": "Community"
+    },
+    {
+      "type": "REQUIRES_EVIDENCE",
+      "target_id": "EVI-019",
+      "target_type": "evidence",
+      "reason": "The pattern's output is a model performance monitoring log against the kill criterion.",
+      "confidence": "Community"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "id": "EVI-017",
+  "slug": "data-labeling-vendor-welfare-audit",
+  "title": "Data Labeling Vendor Welfare Audit Report",
+  "description": "An independently-conducted audit of a data-labeling vendor's actual wage levels, content-exposure limits, and psychological-support provision, as distinct from the vendor's contractual commitments.",
+  "version": "1.0.1",
+  "status": "active",
+  "confidence": "Community",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-05",
+  "tags": [
+    "labor",
+    "data-labeling",
+    "audit-report"
+  ],
+  "created_by": "AI Governance Workbench (Phase 3 seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 3 seed data)",
+      "version": "1.0.0",
+      "note": "Initial Edition 1.1 content."
+    },
+    {
+      "event": "updated",
+      "date": "2026-08-05",
+      "by": "AI Governance Workbench (Editorial Quality Audit)",
+      "version": "1.0.1",
+      "note": "Normalized US/UK spelling variants to the American-English house style (schema field names, e.g. organizations_involved, are already American; majority framework citations - NIST, FTC, EEOC, FCRA, BIPA - are American sources)."
+    }
+  ],
+  "evidence_description": "A report from an independent auditor (not the vendor itself) documenting actual wages paid, hours worked on graphic-content review, and access to and uptake of psychological support, compared against the client's required standards.",
+  "collection_method": "Independent third-party audit, including worker interviews, conducted on a recurring schedule.",
+  "retention_period": "Minimum 3 years.",
+  "artifact_format": "PDF audit report; underlying interview/wage data retained as structured export where consented.",
+  "citations": [
+    {
+      "id": "cite-time-openai-kenya",
+      "source_type": "news_publication",
+      "title": "OpenAI Used Kenyan Workers on Less Than $2 Per Hour: Exclusive",
+      "publisher": "TIME",
+      "url": "https://time.com/6247678/openai-chatgpt-kenya-workers/",
+      "publication_date": "2023-01-18",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": []
+}

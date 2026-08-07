@@ -1,0 +1,56 @@
+{
+  "id": "INC-007",
+  "slug": "tesla-autopilot-nhtsa-recall-2023",
+  "title": "NHTSA investigation into Tesla Autopilot crashes leads to a two-million-vehicle recall",
+  "description": "Following a roughly two-year investigation into crashes involving Tesla's Autopilot driver-assist feature, including collisions with stationary emergency vehicles, the US National Highway Traffic Safety Administration found that Autopilot's driver-engagement controls could give drivers a false sense of security and were insufficient to prevent foreseeable misuse, identifying at least 13 fatal crashes where such misuse appeared to play a role. On 5 December 2023, Tesla agreed to a voluntary recall (NHTSA campaign 23V-838) covering roughly two million US vehicles, remedied via a free over-the-air software update that added visual alerts and could restrict Autosteer access after repeated driver misuse. NHTSA subsequently opened a follow-up investigation into whether the recall remedy was adequate.",
+  "version": "1.0.0",
+  "status": "active",
+  "confidence": "Reviewed",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["autonomous-vehicle", "safety", "human-oversight", "recall"],
+  "created_by": "AI Governance Workbench (Phase 2A seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 2A seed data)",
+      "version": "1.0.0",
+      "note": "Initial Phase 2A seed content, part of the Foundational Twenty. Exact vehicle count and fatal-crash figures are drawn from secondary reporting on the NHTSA investigation and recall report rather than a directly verified primary-document read; treat as approximate pending direct confirmation."
+    }
+  ],
+  "occurred_date": "2023-12-05",
+  "organizations_involved": ["Tesla Inc.", "National Highway Traffic Safety Administration"],
+  "harm_types": ["safety"],
+  "ai_system_category": "advanced_driver_assistance_system",
+  "jurisdiction": ["US"],
+  "severity": "high",
+  "root_cause": "NHTSA found Autopilot's system for ensuring driver engagement was inadequate, allowing foreseeable driver misuse — inattention or use outside intended operating conditions — to go uncorrected, contributing to crashes including some with stationary emergency vehicles.",
+  "citations": [
+    {
+      "id": "cite-nhtsa-23v838",
+      "source_type": "regulator",
+      "title": "Part 573 Safety Recall Report 23V-838",
+      "publisher": "National Highway Traffic Safety Administration",
+      "url": "https://static.nhtsa.gov/odi/rcl/2023/RCLRPT-23V838-8276.PDF",
+      "publication_date": "2023-12-05",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "MITIGATED_BY",
+      "target_id": "DEC-003",
+      "target_type": "decision",
+      "reason": "The same human-oversight and engagement-monitoring requirement addresses the gap NHTSA identified in Autopilot's driver-engagement controls.",
+      "confidence": "Reviewed"
+    },
+    {
+      "type": "RAISES_BOARD_QUESTION",
+      "target_id": "BRD-003",
+      "target_type": "board_question",
+      "reason": "This recall shows the same oversight gap at much larger fleet scale than the Uber incident.",
+      "confidence": "Reviewed"
+    }
+  ]
+}

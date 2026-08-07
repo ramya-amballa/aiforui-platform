@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://workbench.aiforui.dev/schemas/common/history-entry.schema.json",
+  "title": "History Entry",
+  "description": "One append-only entry in an object's lifecycle log, recording what happened, when, by whom, and against which version. See /docs/confidence-model.md and /ONTOLOGY.md ('Version').",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["event", "date", "by", "version"],
+  "properties": {
+    "event": {
+      "type": "string",
+      "enum": ["created", "updated", "reviewed", "approved", "archived", "retracted"]
+    },
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+    "by": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Name/handle of the person responsible for this event."
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$",
+      "description": "The object's 'version' field at the time of this event."
+    },
+    "note": {
+      "type": "string",
+      "description": "Optional short explanation of what changed or why."
+    }
+  }
+}

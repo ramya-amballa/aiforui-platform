@@ -1,0 +1,99 @@
+{
+  "id": "DEC-007",
+  "slug": "facial-recognition-accuracy-human-review-gate",
+  "title": "Require accuracy testing and human review before facial recognition triggers any adverse action against a customer",
+  "description": "Illustrative reference decision modelled on the FTC's enforcement action against Rite Aid. Not a documented decision of any specific organization.",
+  "version": "1.0.1",
+  "status": "draft",
+  "confidence": "Community",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-05",
+  "tags": [
+    "facial-recognition",
+    "discrimination",
+    "privacy",
+    "human-oversight"
+  ],
+  "created_by": "AI Governance Workbench (Phase 2A seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 2A seed data)",
+      "version": "1.0.0",
+      "note": "Initial Phase 2A seed content, part of the Foundational Twenty."
+    },
+    {
+      "event": "updated",
+      "date": "2026-08-05",
+      "by": "AI Governance Workbench (Editorial Quality Audit)",
+      "version": "1.0.1",
+      "note": "Normalized US/UK spelling variants to the American-English house style (schema field names, e.g. organizations_involved, are already American; majority framework citations - NIST, FTC, EEOC, FCRA, BIPA - are American sources). Normalized a duplicated relationship-reason phrasing (\"...via this design pattern.\" -> \"...via this single, primary design pattern.\") to one canonical wording."
+    }
+  ],
+  "decision_statement": "Facial recognition used for loss-prevention or surveillance purposes must be tested for accuracy and false-match rate across demographic groups before deployment, and a facial-recognition match alone must never trigger an adverse action against a customer (denial of service, accusation, removal) without a trained human independently confirming the match first.",
+  "decision_type": "technical_control",
+  "decision_context": "Motivated by the FTC's finding that Rite Aid deployed facial recognition without reasonable safeguards, causing employees to act on false-positive alerts that disproportionately harmed Black, Asian, Latino, and women consumers.",
+  "governing_body": "Illustrative example — Biometric Systems Governance Board",
+  "jurisdiction": [
+    "US"
+  ],
+  "frameworks_referenced": [
+    "FTC Act"
+  ],
+  "alternatives_considered": [
+    "Permit staff to act immediately on any facial-recognition alert without independent confirmation.",
+    "Rely on the vendor's claimed accuracy figures without independent, demographic-disaggregated testing."
+  ],
+  "citations": [
+    {
+      "id": "cite-ftc-rite-aid",
+      "source_type": "regulator",
+      "title": "Rite Aid Banned from Using AI Facial Recognition After FTC Says Retailer Deployed Technology without Reasonable Safeguards",
+      "publisher": "Federal Trade Commission",
+      "url": "https://www.ftc.gov/news-events/news/press-releases/2023/12/rite-aid-banned-using-ai-facial-recognition-after-ftc-says-retailer-deployed-technology-without",
+      "publication_date": "2023-12-19",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "RESULTED_FROM",
+      "target_id": "INC-014",
+      "target_type": "incident",
+      "reason": "This decision is modelled as a direct governance response to this enforcement action.",
+      "confidence": "Verified",
+      "citation_ids": [
+        "cite-ftc-rite-aid"
+      ]
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "target_id": "PAT-007",
+      "target_type": "pattern",
+      "reason": "The decision is put into practice via this single, primary design pattern.",
+      "confidence": "Community"
+    },
+    {
+      "type": "SATISFIES_CONTROL",
+      "target_id": "CTR-011",
+      "target_type": "control",
+      "reason": "Accuracy testing and a human-confirmation step address the unfairness theory the FTC applied under this authority.",
+      "confidence": "Community"
+    },
+    {
+      "type": "REQUIRES_EVIDENCE",
+      "target_id": "EVI-006",
+      "target_type": "evidence",
+      "reason": "Compliance must be demonstrated by a documented accuracy and human-review log.",
+      "confidence": "Community"
+    },
+    {
+      "type": "RAISES_BOARD_QUESTION",
+      "target_id": "BRD-007",
+      "target_type": "board_question",
+      "reason": "Boards adopting this decision should be asking whether biometric systems have documented consent and accuracy safeguards.",
+      "confidence": "Community"
+    }
+  ]
+}

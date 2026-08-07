@@ -1,0 +1,38 @@
+{
+  "id": "EVI-006",
+  "slug": "facial-recognition-accuracy-review-log",
+  "title": "Facial Recognition Accuracy & Human Review Log",
+  "description": "A log documenting demographic-disaggregated accuracy testing for a facial-recognition system and, for each match acted upon, confirmation that a trained human independently reviewed it before any adverse action.",
+  "version": "1.0.0",
+  "status": "active",
+  "confidence": "Community",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["facial-recognition", "discrimination", "audit-log"],
+  "created_by": "AI Governance Workbench (Phase 2A seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 2A seed data)",
+      "version": "1.0.0",
+      "note": "Initial Phase 2A seed content."
+    }
+  ],
+  "evidence_description": "A record of a facial-recognition system's tested false-match rate by demographic group, and, for every match that led to a customer-facing action, documentation that a trained human independently confirmed the match beforehand.",
+  "collection_method": "Automated logging of match/confirmation events, combined with periodic independent accuracy testing.",
+  "retention_period": "Minimum 3 years.",
+  "artifact_format": "Structured export (CSV/JSON) of match/confirmation events; PDF summary of accuracy testing results.",
+  "citations": [
+    {
+      "id": "cite-ftc-rite-aid",
+      "source_type": "regulator",
+      "title": "Rite Aid Banned from Using AI Facial Recognition After FTC Says Retailer Deployed Technology without Reasonable Safeguards",
+      "publisher": "Federal Trade Commission",
+      "url": "https://www.ftc.gov/news-events/news/press-releases/2023/12/rite-aid-banned-using-ai-facial-recognition-after-ftc-says-retailer-deployed-technology-without",
+      "publication_date": "2023-12-19",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": []
+}

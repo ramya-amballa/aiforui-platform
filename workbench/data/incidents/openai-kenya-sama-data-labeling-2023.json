@@ -1,0 +1,78 @@
+{
+  "id": "INC-026",
+  "slug": "openai-kenya-sama-data-labeling-2023",
+  "title": "TIME investigation reveals Kenyan data labelers paid under $2/hour to make ChatGPT safer",
+  "description": "TIME journalist Billy Perrigo published an investigation on 18 January 2023 revealing that OpenAI had outsourced the labeling of graphic and traumatic text — depicting child sexual abuse, violence, self-harm, and torture — to Sama, an outsourcing firm employing workers in Kenya, in order to build a safety classifier filtering toxic content from ChatGPT. Sama's Kenya-based data labelers were paid between roughly $1.32 and $2 per hour, and workers reported lasting psychological trauma from constant exposure to the material. Sama terminated its content-moderation contract with OpenAI in February 2022, ahead of schedule, citing the disturbing nature of the material.",
+  "version": "1.0.1",
+  "status": "active",
+  "confidence": "Reviewed",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-05",
+  "tags": [
+    "generative-ai",
+    "labor",
+    "data-labeling",
+    "safety"
+  ],
+  "created_by": "AI Governance Workbench (Phase 3 seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 3 seed data)",
+      "version": "1.0.0",
+      "note": "Initial Edition 1.1 content, part of the Phase 3 canonical expansion. Subsequent worker-organizing and litigation (African Content Moderators Union, formed May 2023; lawsuits against Sama) relate to the broader Kenyan content-moderation workforce and are not fully disambiguated by employer in available reporting."
+    },
+    {
+      "event": "updated",
+      "date": "2026-08-05",
+      "by": "AI Governance Workbench (Editorial Quality Audit)",
+      "version": "1.0.1",
+      "note": "Normalized US/UK spelling variants to the American-English house style (schema field names, e.g. organizations_involved, are already American; majority framework citations - NIST, FTC, EEOC, FCRA, BIPA - are American sources)."
+    }
+  ],
+  "occurred_date": "2023-01-18",
+  "organizations_involved": [
+    "OpenAI",
+    "Sama"
+  ],
+  "harm_types": [
+    "safety",
+    "other"
+  ],
+  "ai_system_category": "content_moderation_data_labeling",
+  "jurisdiction": [
+    "US",
+    "KE"
+  ],
+  "severity": "high",
+  "root_cause": "OpenAI's need for large volumes of human-labeled examples of extremely harmful text to train a safety classifier was met by outsourcing the labeling work to a lower-cost labor market via a business-process outsourcing vendor, with wage levels, psychological support, and safeguards inadequate for workers repeatedly exposed to graphic, traumatic content.",
+  "citations": [
+    {
+      "id": "cite-time-openai-kenya",
+      "source_type": "news_publication",
+      "title": "OpenAI Used Kenyan Workers on Less Than $2 Per Hour: Exclusive",
+      "publisher": "TIME",
+      "url": "https://time.com/6247678/openai-chatgpt-kenya-workers/",
+      "publication_date": "2023-01-18",
+      "accessed_date": "2026-08-04",
+      "excerpt": "workers ... were paid a take-home wage of between around $1.32 and $2 per hour depending on seniority and performance"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "MITIGATED_BY",
+      "target_id": "DEC-018",
+      "target_type": "decision",
+      "reason": "A requirement for documented labor and psychological-safety standards for data-labeling vendors directly addresses the conditions this investigation exposed.",
+      "confidence": "Reviewed"
+    },
+    {
+      "type": "RAISES_BOARD_QUESTION",
+      "target_id": "BRD-017",
+      "target_type": "board_question",
+      "reason": "This is the most prominent documented case of AI supply-chain labor harm at the data-labeling stage.",
+      "confidence": "Reviewed"
+    }
+  ]
+}

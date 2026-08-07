@@ -1,0 +1,65 @@
+{
+  "id": "INC-030",
+  "slug": "zillow-offers-algorithmic-shutdown-2021",
+  "title": "Zillow shuts down algorithmic home-buying business after pricing model failures",
+  "description": "On 2 November 2021, Zillow Group announced it would wind down its 'Zillow Offers' iBuying business, which used an automated home-valuation algorithm to make cash offers on houses. The algorithm systematically mispriced homes amid volatile 2021 housing conditions, forcing Zillow to record a Q3 2021 inventory write-down of roughly $304 million, with an additional projected $240-265 million in Q4 losses, and to cut approximately 25% of its workforce (around 2,000 employees).",
+  "version": "1.0.0",
+  "status": "active",
+  "confidence": "Reviewed",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-04",
+  "tags": ["financial", "model-risk", "algorithmic-pricing"],
+  "created_by": "AI Governance Workbench (Phase 3 seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 3 seed data)",
+      "version": "1.0.0",
+      "note": "Initial Edition 1.1 content, part of the Phase 3 canonical expansion. The Q3 write-down ($304M) is confirmed via SEC filing; the combined 'over $540M' total includes a Q4 projection made at announcement time, not a final audited figure."
+    }
+  ],
+  "occurred_date": "2021-11-02",
+  "organizations_involved": ["Zillow Group, Inc."],
+  "harm_types": ["financial", "other"],
+  "ai_system_category": "algorithmic_pricing_valuation",
+  "jurisdiction": ["US"],
+  "severity": "high",
+  "root_cause": "Zillow's home-price-prediction algorithm could not reliably forecast home prices during a period of unusual market volatility, causing the company to systematically overpay for homes relative to what it could resell them for, compounded by operational capacity constraints in renovating and reselling inventory fast enough.",
+  "citations": [
+    {
+      "id": "cite-zillow-8k",
+      "source_type": "regulator",
+      "title": "Zillow Group, Inc. Form 8-K (Q3 2021 results)",
+      "publisher": "U.S. Securities and Exchange Commission",
+      "url": "https://www.sec.gov/Archives/edgar/data/1617640/000161764021000085/q32021991.htm",
+      "publication_date": "2021-11-02",
+      "accessed_date": "2026-08-04"
+    },
+    {
+      "id": "cite-geekwire-zillow",
+      "source_type": "news_publication",
+      "title": "Zillow to shutter home buying business and lay off 2,000 employees as its big real estate bet falters",
+      "publisher": "GeekWire",
+      "url": "https://www.geekwire.com/2021/zillow-shutter-home-buying-business-lay-off-2k-employees-big-real-estate-bet-falters/",
+      "publication_date": "2021-11-02",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "MITIGATED_BY",
+      "target_id": "DEC-021",
+      "target_type": "decision",
+      "reason": "A pre-defined model-risk kill criterion would have paused the program before losses compounded to this scale.",
+      "confidence": "Reviewed"
+    },
+    {
+      "type": "RAISES_BOARD_QUESTION",
+      "target_id": "BRD-019",
+      "target_type": "board_question",
+      "reason": "This is a well-documented example of algorithmic financial exposure without a pre-defined risk threshold.",
+      "confidence": "Reviewed"
+    }
+  ]
+}

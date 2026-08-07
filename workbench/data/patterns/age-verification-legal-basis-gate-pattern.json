@@ -1,0 +1,66 @@
+{
+  "id": "PAT-006",
+  "slug": "age-verification-legal-basis-gate-pattern",
+  "title": "Consumer AI Age Verification & Legal Basis Gate Pattern",
+  "description": "A pattern requiring a documented GDPR legal basis, published privacy notice, and effective age-verification mechanism before a consumer AI product is made available to EU users, rather than launching first and addressing compliance reactively.",
+  "version": "1.0.1",
+  "status": "draft",
+  "confidence": "Community",
+  "created_date": "2026-08-04",
+  "updated_date": "2026-08-05",
+  "tags": [
+    "generative-ai",
+    "privacy",
+    "gdpr",
+    "child-safety"
+  ],
+  "created_by": "AI Governance Workbench (Phase 2A seed data)",
+  "history": [
+    {
+      "event": "created",
+      "date": "2026-08-04",
+      "by": "AI Governance Workbench (Phase 2A seed data)",
+      "version": "1.0.0",
+      "note": "Initial Phase 2A seed content."
+    },
+    {
+      "event": "updated",
+      "date": "2026-08-05",
+      "by": "AI Governance Workbench (Editorial Quality Audit)",
+      "version": "1.0.1",
+      "note": "Normalized title to match the dataset's 'ends with Pattern' naming convention, reordered for grammatical clarity (was \"Age Verification & Legal Basis Gate for Consumer AI\")."
+    }
+  ],
+  "problem": "Consumer AI products, particularly conversational or companion-style products, are often launched globally without first confirming a GDPR legal basis for processing EU users' data or verifying that users below a product's stated minimum age are actually excluded.",
+  "solution": "Before EU launch, document the specific legal basis relied on for each category of processing (including any use of user interactions for model training), publish a privacy notice in plain language, and implement an age-verification step stronger than a self-reported checkbox for any product that could plausibly be used by minors.",
+  "applicability": "Any consumer-facing generative AI or AI companion product available to EU users, particularly products with emotionally engaging or companion-style interaction design.",
+  "consequences": "Effective age verification is a genuinely hard problem (most methods are either weak or privacy-invasive); documenting a legal basis for training-data use may constrain which data can be used for model improvement.",
+  "maturity": "emerging",
+  "citations": [
+    {
+      "id": "cite-garante-replika-block",
+      "source_type": "regulator",
+      "title": "Intelligenza artificiale, dal Garante privacy stop al chatbot 'Replika'. Troppi i rischi per i minori e le persone emotivamente fragili",
+      "publisher": "Garante per la protezione dei dati personali",
+      "url": "https://www.garanteprivacy.it/web/guest/home/docweb/-/docweb-display/docweb/9852506",
+      "publication_date": "2023-02-03",
+      "accessed_date": "2026-08-04"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "SATISFIES_CONTROL",
+      "target_id": "CTR-010",
+      "target_type": "control",
+      "reason": "A documented legal basis and privacy notice are the concrete mechanism satisfying this control.",
+      "confidence": "Community"
+    },
+    {
+      "type": "REQUIRES_EVIDENCE",
+      "target_id": "EVI-004",
+      "target_type": "evidence",
+      "reason": "The pattern's output feeds the same data protection impact assessment evidence type used elsewhere for GDPR-triggering processing.",
+      "confidence": "Community"
+    }
+  ]
+}

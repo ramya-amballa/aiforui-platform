@@ -1,0 +1,38 @@
+name: Workbench Validate
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "workbench/**"
+  pull_request:
+    paths:
+      - "workbench/**"
+  workflow_dispatch: {}
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: workbench
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+          cache-dependency-path: workbench/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Type-check
+        run: npm run typecheck
+
+      - name: Validate dataset
+        run: npm run validate
+
+      - name: Graph health (Zero-Orphan Invariant gate)
+        run: npm run editorial:health
