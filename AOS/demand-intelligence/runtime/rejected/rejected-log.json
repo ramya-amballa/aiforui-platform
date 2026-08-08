@@ -1490,6 +1490,30 @@
       "relevanceScore": 0,
       "categoriesMatched": [],
       "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0114",
+      "dateRejected": "2026-08-08",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Porter",
+      "organisation": "NHS Ayrshire &amp; Arran",
+      "url": "https://remoteOK.com/remote-jobs/remote-porter-nhs-ayrshire-amp-arran-1136291",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0115",
+      "dateRejected": "2026-08-08",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Chief Engineer",
+      "organisation": "Svitzer",
+      "url": "https://remoteOK.com/remote-jobs/remote-chief-engineer-svitzer-1136275",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
     }
   ]
 }
