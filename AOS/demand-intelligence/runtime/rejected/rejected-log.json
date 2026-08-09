@@ -1514,6 +1514,42 @@
       "relevanceScore": 0,
       "categoriesMatched": [],
       "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0116",
+      "dateRejected": "2026-08-09",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "How Apply",
+      "organisation": "The Philadelphia School",
+      "url": "https://remoteOK.com/remote-jobs/remote-how-apply-the-philadelphia-school-1136304",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0117",
+      "dateRejected": "2026-08-09",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Our vacancies",
+      "organisation": "Geeks Ltd",
+      "url": "https://remoteOK.com/remote-jobs/remote-our-vacancies-geeks-ltd-1136289",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0118",
+      "dateRejected": "2026-08-09",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "CANDIDATURE SPONTANÃE",
+      "organisation": "ALSEI",
+      "url": "https://remoteOK.com/remote-jobs/remote-candidature-spontanee-alsei-1136286",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
     }
   ]
 }
