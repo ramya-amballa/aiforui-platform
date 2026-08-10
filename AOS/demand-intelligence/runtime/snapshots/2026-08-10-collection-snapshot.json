@@ -1,0 +1,361 @@
+{
+  "date": "2026-08-10",
+  "totalDiscovered": 10,
+  "perSource": {
+    "demandSignals": 0,
+    "greenhouse": 0,
+    "lever": 0,
+    "ashby": 0,
+    "remoteok": 10,
+    "upwork": 0,
+    "linkedinJobs": 0,
+    "googleJobs": 0,
+    "wellfound": 0,
+    "flexjobs": 0,
+    "uaeRecruiters": 0,
+    "consultingFirms": 0
+  },
+  "perSourceErrors": {},
+  "opportunities": [
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Beekeeper Academy of Achievement",
+      "organisation": "American Academy of Achievement",
+      "description": "<ul><li>Home</li><li>Our Members</li><ul><li>Member Interviews</li><li>The Arts</li><li>Business</li><li>Science &amp; Exploration</li><li>Public Service</li><li>Sports</li><li>Achiever Universe</li></ul><li>The Summit</li><ul><li>Overview</li><li>2024</li><li>2022</li><li>2019</li><li>2017</li><li>2014</li><li>2012</li><li>2010</li><li>2009</li><li>2008</li><li>2007</li><li>2006</li><li>2005</li><li>2004</li><li>2003</li><li>2002</li></ul><li>Our History</li><ul><li>About The Academy</li><li>Academy Patrons</li><li>Delegate Alumni</li><li>Directors &amp; Our Team</li><li>Golden Plate Awards Council</li><li>Golden Plate Awardees</li></ul><li>Keys to Success</li><ul><li>Overview</li><li>Passion</li><li>Vision</li><li>Preparation</li><li>Courage</li><li>Perseverance</li><li>Integrity</li><li>The American Dream</li><li>Recommended Books</li><li>Find My Role Model<br></li></ul></ul>Back to home<br><br>Career: Beekeeper<br><br>Sorry, no results were found.<br><br><ul><li>Hank Aaron</li><li>Kareem Abdul-Jabbar</li><li>Lynsey Addario</li><li>Edward Albee</li><li>Tenley Albright, M.D.</li><li>Svetlana Alexievich</li><li>Dame Julie Andrews</li><li>Maya Angelou</li><li>Frances H. Arnold, Ph.D.</li><li>Robert D. Ballard, Ph.D.</li><li>Sir Roger Bannister</li><li>John Banville</li><li>Ehud Barak</li><li>Lee R. Berger, Ph.D.</li><li>Sir Tim Berners-Lee</li><li>Yogi Berra</li><li>Jeffrey P. Bezos</li><li>Benazir Bhutto</li><li>Simone Biles</li><li>Keith L. Black, M.D.</li><li>Elizabeth Blackburn, Ph.D.</li><li>David Boies</li><li>Norman E. Borlaug, Ph.D.</li><li>Benjamin C. Bradlee</li><li>Sergey Brin</li><li>J. Carter Brown</li><li>General Charles Q. Brown, Jr., USAF</li><li>Linda B. Buck, Ph.D.</li><li>Carol Burnett</li><li>George H. W. Bush</li><li>Susan Butcher</li><li>Sir Michael Caine</li><li>James Cameron</li><li>Benjamin S. Carson, M.D.</li><li>Jimmy Carter</li><li>Johnny Cash</li><li>William J. Clinton</li><li>Francis S. Collins, M.D., Ph.D.</li><li>Denton A. Cooley, M.D.</li><li>Francis Ford Coppola</li><li>Ray Dalio</li><li>Dame Olivia de Havilland</li><li>Michael E. DeBakey, M.D.</li><li>Michael S. Dell</li><li>Ron Dennis</li><li>Joan Didion</li><li>David Herbert Donald, Ph.D.</li><li>David Doubilet</li><li>Jennifer A. Doudna, Ph.D.</li><li>Rita Dove</li><li>Gustavo Dudamel</li><li>Sylvia Earle, Ph.D.</li><li>Mohamed ElBaradei</li><li>Gertrude B. Elion, M.Sc.</li><li>Larry J. Ellison</li><li>Nora Ephron</li><li>Julius Erving</li><li>Tony Fadell</li><li>Paul Farmer, M.D.</li><li>Suzanne Farrell</li><li>Anthony S. Fauci, M.D.</li><li>Sally Field</li><li>Lord Norman Foster</li><li>Aretha Franklin</li><li>Milton Friedman, Ph.D.</li><li>Carlos Fuentes</li><li>Athol Fugard</li><li>Peter Gabriel</li><li>Ernest J. Gaines</li><li>William H. Gates III</li><li>Leymah Gbowee</li><li>Frank O. Gehry</li><li>Murray Gell-Mann, Ph.D.</li><li>Vince Gill</li><li>Ruth Bader Ginsburg</li><li>Louise GlÃ¼ck</li><li>Whoopi Goldberg</li><li>Dame Jane Goodall</li><li>Doris Kearns Goodwin, Ph.D.</li><li>Mikhail S. Gorbachev</li><li>Nadine Gordimer</li><li>Stephen Jay Gould, Ph.D.</li><li>Carol W. Greider, Ph.D.</li><li>John Grisham</li><li>Sir John Gurdon</li><li>Dorothy Hamill</li><li>Sir Demis Hassabis</li><li>Lauryn Hill</li><li>Sir Edmund Hillary</li><li>Reid Hoffman</li><li>Khaled Hosseini, M.D.</li><li>Ron Howard</li><li>John Hume</li><li>Louis Ignarro, Ph.D.</li><li>Daniel K. Inouye</li><li>Jeremy Irons</li><li>John Irving</li><li>Sir Kazuo Ishiguro</li><li>Sir Peter Jackson</li><li>Donald C. Johanson, Ph.D.</li><li>Frank M. Johnson, Jr.</li><li>Philip C. Johnson</li><li>Chuck Jones</li><li>James Earl Jones</li><li>Quincy Jones</li><li>Beverly Joubert</li><li>Dereck Joubert</li><li>Paul Kagame</li><li>Katalin KarikÃ³, Ph.D.</li><li>Thomas Keller</li><li>Anthony M. Kennedy</li><li>B.B. King</li><li>Carole King</li><li>Coretta Scott King</li><li>Henry A. Kissinger, Ph.D.</li><li>Willem J. Kolff, M.D., Ph.D.</li><li>Wendy Kopp</li><li>Henry R. Kravis</li><li>Nicholas D. Kristof</li><li>Mike Krzyzewski</li><li>Ray Kurzweil</li><li>Eric S. Lander, Ph.D.</li><li>Robert S. Langer, Sc.D.</li><li>Richard E. Leakey</li><li>Katie Ledecky</li><li>Leon Lederman, Ph.D.</li><li>Robert J. Lefkowitz, M.D.</li><li>Congressman John R. Lewis</li><li>Maya Lin</li><li>Lord Andrew Lloyd Webber</li><li>George Lucas</li><li>Paul B. MacCready, Ph.D.</li><li>Norman Mailer</li><li>Peyton Manning</li><li>Wynton Marsalis</li><li>John C. Mather, Ph.D.</li><li>Johnny Mathis</li><li>Ernst Mayr, Ph.D.</li><li>Willie Mays</li><li>Frank McCourt</li><li>David McCullough</li><li>Audra McDonald</li><li>Admiral William H. McRaven, USN</li><li>W. S. Merwin</li><li>Reinhold Messner</li><li>James A. Michener</li><li>Marvin Minsky, Ph.D.</li><li>Mario J. Molina, Ph.D.</li><li>N. Scott Momaday, Ph.D.</li><li>Story Musgrave, M.D.</li><li>Ralph Nader</li><li>Peggy Noonan</li><li>Jessye Norman</li><li>Lt. Thomas R. Norris, USN</li><li>Lynn Nottage</li><li>Joyce Carol Oates</li><li>Pierre Omidyar</li><li>Jimmy Page</li><li>Larry Page</li><li>Arnold Palmer</li><li>Leon Panetta</li><li>Rosa Parks</li><li>Suzan-Lori Parks</li><li>Linus C. Pauling, Ph.D.</li><li>Shimon Peres</li><li>Itzhak Perlman</li><li>General David H. Petraeus, USA</li><li>Sidney Poitier</li><li>General Colin L. Powell, USA</li><li>Harold Prince</li><li>Venki Ramakrishnan, Ph.D.</li><li>Lord Martin Rees</li><li>Lloyd Richards</li><li>Sally K. Ride, Ph.D.</li><li>Cal Ripken Jr.</li><li>Sonny Rollins</li><li>Anthony D. Romero</li><li>James Rosenquist</li><li>Martine Rothblatt, Ph.D.</li><li>Pete Rozelle</li><li>Bill Russell</li><li>Albie Sachs</li><li>Oliver Sacks, M.D.</li><li>Jonas Salk, M.D.</li><li>Frederick Sanger, Ph.D.</li><li>George B. Schaller, Ph.D.</li><li>Barry Scheck</li><li>Richard Evans Schultes, Ph.D.</li><li>General H. Norman Schwarzkopf, USA</li><li>Stephen A. Schwarzman</li><li>Glenn T. Seaborg, Ph.D.</li><li>Neil Sheehan</li><li>Admiral Alan B. Shepard, Jr., USN</li><li>Cindy Sherman</li><li>Ellen Johnson Sirleaf</li><li>Carlos Slim HelÃº</li><li>Frederick W. Smith</li><li>Stephen Sondheim</li><li>Sonia Sotomayor</li><li>Wole Soyinka</li></ul><ul><li>Our History</li><ul><li>About the Academy</li><li>Academy Patrons</li><li>Delegate Alumni</li><li>Directors &amp; Our Team</li><li>Golden Plate Awards Council</li><li>Golden Plate Awardees<br><br></li></ul></ul><ul><li>Our Members</li><ul><li>The Arts</li><li>Business</li><li>Science &amp; Exploration</li><li>Public Service</li><li>Sports</li><li>Achiever Universe<br><br></li></ul></ul><ul><li>Keys to Success</li><ul><li>Keys to Success</li><li>Find My Role Model</li><li>Recommended Books</li></ul><li>The Summit</li><ul><li>Overview</li><li>Summit by Year<br></li></ul></ul>More from the Academy<br><br><ul><li> Podcast </li><li> Apple Books <br><br></li></ul>Â© 1996 - 2026 American Academy of Achievement. All Rights Reserved.<br><br><ul><li>Underwriter</li><li>Contact Us</li><li>Frequently Asked Questions</li><li>Privacy Policy</li><li>Usage Policy<br><br></li></ul>View the full list of achievers<br/><br/>Please mention the word **UNRESTRICTED** and tag RNTIuMTU0LjIwLjUw when applying to show you read the job post completely (#RNTIuMTU0LjIwLjUw). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-beekeeper-academy-of-achievement-american-academy-of-achievement-1136345",
+      "location": "Thunder Bay, ",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "How Apply",
+      "organisation": "The Philadelphia School",
+      "description": "<ul><li>Medical, dental, vision insurance</li><li>Retirement plan with employer match</li><li>Paid vacation, school holidays, personal days</li><li>Family, medical, parental leave</li><li>Professional development opportunities</li><li>Tuition remission for faculty/staff, discount on summer programs and after school clubs</li><li>Extended day coverage for faculty/staff children</li><li>Commuter benefits</li></ul><br/><br/>Please mention the word **TRUSTED** and tag RNTIuMTU0LjIwLjUw when applying to show you read the job post completely (#RNTIuMTU0LjIwLjUw). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-how-apply-the-philadelphia-school-1136304",
+      "location": "Jabalpur, ",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Our vacancies",
+      "organisation": "Geeks Ltd",
+      "description": "Innovation only goes so far: Adoption makes the difference. At Geeks, we donât just create new software, we break the barriers that stop people using it.<br><br>Itâs powered by our curiosity, courage and commitment. Curiosity to grow. Courage to generate real value. Commitment to the team around us.<br><br>That powers the biggest change: your growth into a tech leader.<br/><br/>Please mention the word **PEACEFULLY** and tag RNTIuMTU0LjIwLjUw when applying to show you read the job post completely (#RNTIuMTU0LjIwLjUw). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-our-vacancies-geeks-ltd-1136289",
+      "location": "ç§å°æ²å³ç¿¼åæ, ",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "CANDIDATURE SPONTANÃE",
+      "organisation": "ALSEI",
+      "description": "Candidature spontanÃ©e<br><br>Nom *<br><br>PrÃ©nom *<br><br>E-mail *<br><br>TÃ©lÃ©phone<br><br>CV *<br><br>Modal title<br><br>Parcourir...<br><br><ul><li>image<br><br></li></ul><strong>nomFileFull</strong> <br><br><ul><li>nomFileFull : messError <br><br></li></ul>Extensions autorisÃ©es : pdf, doc, docx<br><br>Lettre de motivation<br><br>Modal title<br><br>Parcourir...<br><br><ul><li>image<br><br></li></ul><strong>nomFileFull</strong> <br><br><ul><li>nomFileFull : messError <br><br></li></ul>Extensions autorisÃ©es : pdf, doc, docx<br><br>Je consens Ã  communiquer mes informations personnelles Ã  ALSEI ENTREPRISE et ses partenaires<br><br>ALSEI ENTREPRISE sâengage Ã  protÃ©ger et Ã  respecter votre vie privÃ©e. Les donnÃ©es Ã  caractÃ¨re personnel qui vous sont demandÃ©es dans les formulaires de cette page sont indispensables pour traiter votre demande; consultez notre politique de confidentialitÃ© pour en savoir plus sur la collecte et le traitement de vos donnÃ©es personnelles opÃ©rÃ©s conformÃ©ment au RÃ¨glement GÃ©nÃ©ral sur la Protection des DonnÃ©es (RGPD).<br><br>Par Ailleurs, Nous Aimerions Ponctuellement Vous Tenir InformÃ© Dâautres Contenus Qui Pourraient Vous IntÃ©resser. Si Vous Souhaitez Vous y Opposer, Veuillez DÃ©cocher La Case Correspondante Ci-avant<br><br>Vous pourrez vous dÃ©sabonner de ces communications Ã  tout moment.<br><br><ul><li>Accueil</li><li>Nos disponibilitÃ©s</li><li>Nos rÃ©fÃ©rences</li><li>ActualitÃ©s</li><li>Contactez-nous</li><li>Rejoignez-nous</li><li>Mentions lÃ©gales</li><li>Plan du site</li><li>Qui sommes-nous ?</li><li>PrÃ©sentation</li><li>AmÃ©nager le territoire</li><li>Chiffres clÃ©s</li><li>Gouvernance</li><li>Une prÃ©sence nationale</li><li>Nos engagements responsables</li><li>Le Groupe ALSEI</li><li>Nos mÃ©tiers</li><li>MaÃ®trise d'ouvrage</li><li>Asset management<br><br></li></ul>Suivez-nous sur les rÃ©seaux sociaux<br><br>Contactez-nous 01 40 40 29 40<br><br>Mentions lÃ©gales<br><br>@ ALSEI ENTREPRISE - Tous droits rÃ©servÃ©s<br><br>CrÃ©ation Agence digitale Alphalives<br/><br/>Please mention the word **REVERE** and tag RNTIuMTU0LjIwLjUw when applying to show you read the job post completely (#RNTIuMTU0LjIwLjUw). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-candidature-spontanee-alsei-1136286",
+      "location": "The Pas, ",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Porter",
+      "organisation": "NHS Ayrshire &amp; Arran",
+      "description": "NHS Scotland is committed to encouraging equality and diversity among our workforce and eliminating unlawful discrimination. The aim is for our workforce to be truly representative and for each employee to feel respected and able to give their best. To this end, NHS Scotland welcomes applications from all sections of society.<br/><br/>Please mention the word **MANEUVERABLE** and tag RNTIuMTU0LjIwLjUw when applying to show you read the job post completely (#RNTIuMTU0LjIwLjUw). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-porter-nhs-ayrshire-amp-arran-1136291",
+      "location": "Greater Perth Area, ",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Chief Engineer",
+      "organisation": "Svitzer",
+      "description": "<strong>03-007 Job Descriptions<br><br></strong><strong>Building a Diverse Workplace<br><br></strong>In Svitzer we value the diversity of our talent and will always strive to recruit the best person for the job â we value diversity in all its forms, including but not limited to gender, age, nationality, race, sexual orientation, disability, or religious beliefs. We are proud of our diversity and see it as a genuine source of strength for building high performing teams.<br><br>Donât meet every single requirement? Studies have shown that members from some under-represented groups are less likely to apply for jobs if they donât meet every single qualification. At Svitzer we are dedicated to building a diverse and inclusive workplace, so if youâre excited about this role but your past experience doesnât align perfectly with every qualification in the job description, we encourage you to apply anyway. You may be just the right candidate for this or other roles, and we are excited about hearing from you!<br><br><strong>How To Apply<br><br></strong>To apply for this role, please click on the 'Apply Now' button and create a Candidate Home to manage your applications.<br/><br/>Please mention the word **GLORY** and tag RNTIuMTU0LjIwLjUw when applying to show you read the job post completely (#RNTIuMTU0LjIwLjUw). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-chief-engineer-svitzer-1136275",
+      "location": "Freeport, ",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Technical Storekeeper",
+      "organisation": "Carnival Corporation",
+      "description": "<strong>Job Description<br><br></strong><strong>Job Summary<br><br></strong>The Technical Storekeeper is responsible for handling and managing the receiving, storage, and processing of incoming and outgoing spare parts and technical supplies at one or more Carnival Corporation owned and operated global destination. This role supports the overall management of inventory levels, ensuring that all materials are accurately accounted for, properly stored, and readily available for technical teams as needed. The Technical Storekeeper monitors stock levels, maintains accurate records, coordinates with procurement for replenishment, and ensures compliance with company policies and safety standards. The position requires strong organizational skills, attention to detail, and the ability to work collaboratively with maintenance and technical staff to support smooth operational workflows.<br><br><ul><li> Inventory Management and Record Keeping </li><li>Keep accurate records regarding stock counts, requirements, and reporting needs. </li><li>Review and issue a weekly inventory list of technical spares. </li><li>Update and maintain system records upon arrival of new parts and tools. </li><li>Label and maintain all tools, equipment, and spare parts. </li><li>Audit incoming materials for accurate paperwork and counts. </li><li>Confirm deliveries against invoices for accuracy of store count. </li><li>Monitor inventory levels to prevent shortages or overstock situations. </li><li>Track usage of spare parts to support maintenance planning and budgeting. </li><li> Ordering and Procurement Support</li><li>Place requests for all parts necessary for the storeroom for review and approval. </li><li>Assist with purchasing items and materials as needed. </li><li>Liaise with staff, management, and vendors to source supplies efficiently. </li><li>Coordinate with procurement teams to ensure timely delivery of parts. </li><li>Review vendor quotes and maintain records of supplier transactions. </li><li>Suggest alternatives for unavailable or discontinued parts. </li><li> Stores Organization and Receiving </li><li>Maintain stores in an organized and well-ordered manner. </li><li>Assist with unloading containers, sorting, counting, and receiving materials. </li><li>Ensure proper storage, handling, and labeling of all parts and tools. </li><li>Implement storage systems to maximize space and accessibility. </li><li>Conduct regular inspections to ensure cleanliness and orderliness of storerooms. </li><li>Follow safety protocols when handling heavy or hazardous materials. </li><li> Reporting, Compliance, and Other Duties </li><li>Create required reports related to inventory, usage, and discrepancies. </li><li>Uphold environmental policies and procedures in all store operations. </li><li>Document and report any damaged or defective parts to management. </li><li>Perform any other duties assigned by management. </li><li>Support cross-functional teams by providing required spare parts and technical materials. </li><li>Assist in audits and inspections as needed. <br><br></li></ul><strong>Knowledge, Skills &amp; Abilities Needed<br><br></strong><ul><li>Ability to adhere to the companyâs standards regarding dress and appearance. </li><li>Ability to maintain confidentiality and data protection standards when handling vendor financial or business documents</li><li>Ability to work collaboratively in a team-oriented environment as necessary. </li><li>Strong organizational and time-management skills, with the ability to multitask effectively. </li><li>Excellent written and verbal communication and interpersonal skills. </li><li>Proficiency in Microsoft Office Suite and familiarity with data entry and reporting tools. </li><li>Detail orientated with a proactive approach to problem solving. </li><li>Ability to multi-task and think critically</li><li>Problem-solving and decision-making abilities</li><li>Strong planning and coordination skills, especially in handling multiple priorities under tight deadlines. </li><li>Must be physically fit. </li><li>Ability to work in an outdoor environment as needed. </li><li>May need to stand for long periods of time. </li><li>May be requested to work a shift schedule while at any of the destinations. </li><li>Knowledge: Understanding of workplace policies and procedures / Familiarity with team collaboration tools and techniques. </li><li>Skills: Strong time management and organizational skills</li><li>Abilities: Ability to maintain reliable and consistent attendance / Capacity to be punctual and meet deadlines / Ability to collaborate effectively with colleagues and work as part of a team / Demonstrated professionalism in all interactions and tasks. <br><br></li></ul><strong>HESS Responsibilities<br><br></strong><ul><li>Adhere to all company policies, procedures, and guidelines related to health, safety, environmental protection, and security. </li><li>Take all necessary precautions, use personal protective equipment (PPE), safety devices, and tools correctly and consistently, as required by the nature of the work. </li><li>Promptly report any unsafe conditions, incidents, or environmental concerns to the appropriate supervisor or HESS representative. </li><li>Take reasonable care for your own health and safety, as well as that of colleagues and others who may be affected by your actions. </li><li>Actively participate in HESS trainings and initiatives that promote a safe, secure, and environmentally sustainable workplace. </li><li>Cooperate fully with company efforts to maintain compliance with legal and regulatory requirements. </li><li>Seek opportunities to improve safety and environmental performance in daily tasks. <br><br></li></ul><strong>Essential/Minimum Qualifications<br><br></strong><ul><li>High School Diploma or GED ; equivalent experience is required; additional education in Hospitality or a related field is a plus </li><li>Current Health Certificate<br><br></li></ul><strong>Essential Experience Required<br><br></strong><ul><li>A minimum of two (2) years relevant work experience in a technical role </li><li>Ability to lift at least 50 pounds. </li><li>Ability to create reports and documentation skills. </li><li>Analytical and Numerate Skills </li><li>Strong interpersonal, problem solving, conflict resolution and communication skills. </li><li>Proficient in English </li><li>Proficient in Microsoft Office </li><li>Working knowledge of: Swimming hazards; Beach Hazards; Pool hazards Lifeguard training techniques </li><li>First aid and Cardio-pulmonary Resuscitation (CPR) </li><li>Prolonged periods sitting at a desk and working on a computer. </li><li>Must be able to lift up to 15 pounds at times. </li><li>All island employees must be physically able to participate in emergency lifesaving procedures and drills. Full use/range of motion of arms and legs as well as full visual, verbal and hearing abilities are required to receive and give instructions in the event of an emergency.</li></ul><br/><br/>Please mention the word **AMICABLE** and tag RNTIuMTU0LjIwLjUw when applying to show you read the job post completely (#RNTIuMTU0LjIwLjUw). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-technical-storekeeper-carnival-corporation-1136268",
+      "location": "East Grand Bahama, ",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Routesetters",
+      "organisation": "SetRsoft",
+      "description": "UndoÂ·Ctrl+Z<br><br>RedoÂ·Ctrl+Shift+Z<br><br>open_with<br><br>TranslateÂ·Shift + Left click<br><br>sync<br><br>RotateÂ·Left click<br><br>aspect_ratio<br><br>ScaleÂ·Scroll with mouse<br><br>broken_image<br><br>3D viewer unavailable<br><br>Your browser could not create a WebGL context, which is required to display the 3D wall editor. This is usually caused by disabled hardware acceleration or an incompatible graphics driver.<br><br>Try enabling hardware acceleration in your browser settings (<strong>Settings â System â Use hardware acceleration when available</strong>) and reload the page.<br><br>SetRsoft Creator Studio<br><br>Click on a hold and drag it to the left<br><br>Quick Access<br><br>9<br><br>Holds (Hand/Foot)<br><br>0/0<br><br>0/0<br><br>0/0<br><br>0/0<br><br>0/0<br><br>0/0<br><br>0/0<br><br>0/0<br><br>Volumes<br><br>0/0<br/><br/>Please mention the word **PARDON** and tag RNTIuMTU0LjIwLjUw when applying to show you read the job post completely (#RNTIuMTU0LjIwLjUw). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-routesetters-setrsoft-1136200",
+      "location": "Test Valley, ",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Java Developer",
+      "organisation": "Clera",
+      "description": "<h3>About the Role</h3><p style=\"min-height:1.5em\">We are an early-stage, venture-backed AI infrastructure company building production-ready Kubernetes-based systems for GPU-intensive workloads. Our platform helps companies go from bare metal to fully operational AI clusters in days, and we're looking for a <strong>Java Developer</strong> to join our small, high-impact engineering team.</p><h3>What You'll Do</h3><ul style=\"min-height:1.5em\"><li><p style=\"min-height:1.5em\">Understand customer requirements and translate them into robust, scalable Java-based solutions.</p></li><li><p style=\"min-height:1.5em\">Design, develop, and maintain backend services and infrastructure tooling that supports our distributed systems platform.</p></li><li><p style=\"min-height:1.5em\">Collaborate closely with product and infrastructure engineers to deliver features end-to-end.</p></li><li><p style=\"min-height:1.5em\">Contribute to the reliability and performance of systems handling AI inference pipelines, distributed training, storage orchestration, and GPU scheduling workloads.</p></li><li><p style=\"min-height:1.5em\">Participate in code reviews, architectural discussions, and continuous improvement of engineering practices.</p></li></ul><h3>What We're Looking For</h3><ul style=\"min-height:1.5em\"><li><p style=\"min-height:1.5em\"><strong>Required:</strong></p><ul style=\"min-height:1.5em\"><li><p style=\"min-height:1.5em\">Solid hands-on experience with Java development and the JVM ecosystem.</p></li><li><p style=\"min-height:1.5em\">Familiarity with distributed systems concepts and cloud-native environments.</p></li><li><p style=\"min-height:1.5em\">Experience working with or around Kubernetes, containerization (Docker), or related infrastructure tooling.</p></li><li><p style=\"min-height:1.5em\">Strong problem-solving skills and ability to work effectively in a fast-paced, early-stage environment.</p></li><li><p style=\"min-height:1.5em\">Clear communication skills â we are a small team and direct collaboration matters.</p></li></ul></li><li><p style=\"min-height:1.5em\"><strong>Nice to have:</strong></p><ul style=\"min-height:1.5em\"><li><p style=\"min-height:1.5em\">Experience with GitOps workflows or tools (e.g., Flux, ArgoCD).</p></li><li><p style=\"min-height:1.5em\">Exposure to GPU scheduling, ML infrastructure, or high-performance computing environments.</p></li><li><p style=\"min-height:1.5em\">Familiarity with open-source contribution practices.</p></li><li><p style=\"min-height:1.5em\">Experience in a startup or early-stage company setting.</p></li></ul></li></ul><h3>Compensation &amp; Benefits</h3><p style=\"min-height:1.5em\">Compensation details were not provided for this role. This is a full-time position at an early-stage, VC-backed company where equity participation is typical. Details will be discussed during the interview process.</p><h3>Location</h3><p style=\"min-height:1.5em\">This role is based in <strong>Los Angeles, CA, USA</strong>. The company also has a presence in San Francisco, CA.</p><p style=\"min-height:1.5em\"><strong>Visa sponsorship is not available</strong> for this position.</p><br/><br/>Please mention the word **MERRINESS** and tag RNTIuMTU0LjIwLjUw when applying to show you read the job post completely (#RNTIuMTU0LjIwLjUw). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-java-developer-clera-1136188",
+      "location": "Los Angeles",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "owlette",
+      "organisation": "Tridant",
+      "description": "attention<br><br>is all you need<br><br>monitormonitor all of your computerscomputers<br><br>svg]:px-4 text-background font-semibold px-8 h-12 text-base\" href=\"/register\"&gt;get startedsvg]:px-4 border-border/50 hover:bg-accent-warm/10 hover:border-accent-warm/30 h-12 text-base text-muted-foreground\" href=\"/demo\"&gt;see the live demo<br><br>windows only<br><br><ul><li> free during beta</li><li>FSL-1.1 source on github<br><br></li></ul>explore the live demo<br><br>one dashboard for every screen, every machine, everywhere.<br><br>owlette lets you monitor, control, and update all of your computers remotely â so you always know they're running, even when you're not there.<br><br>live cpu, memory, gpu, and disk usage for every machine. inline sparkline charts track trends over time. know instantly when something drifts.<br><br>full remote process control across your entire fleet. configure startup sequences, manage dependencies, and auto-restart crashed processes before anyone notices.<br><br>deploy software, configurations, and content to any machine, anywhere. fleet-wide rollouts or targeted single-machine updates â your call.<br><br>cortex turns plain-english questions into real diagnostic actions across your fleet. bring your own openai or anthropic key.<br><br>owlette captures the windows display topology you want and watches for drift. when a restart, a driver update, or an accidental change moves a monitor, owlette restores the known-good layout automatically. mosaic-aware.<br><br>define when machines restart, the order processes start in, and the dependencies between them. owlette runs the playbook so you don't have to.<br><br>displays that stay put.<br><br>windows can lose your display layout after a driver update, a restart, or an accidental change. owlette captures the layout you want, watches for drift, and restores it automatically.<br><br>baselinecaptured<br><br>1<br><br>2<br><br>3<br><br>4<br><br>layout saved<br><br>known-good layout<br><br>driftdetected<br><br>1<br><br>2<br><br>3<br><br>4<br><br>layout changed<br><br>drift detected<br><br>restoredack<br><br>1<br><br>2<br><br>3<br><br>4<br><br>baseline restored<br><br>auto-restored<br><br>captured drift detected auto-restored<br><br>drift detection<br><br>owlette watches for changes after restarts, driver updates, and accidental config edits. when something drifts, you'll know.<br><br>auto-restore<br><br>your known-good layout is restored automatically â no manual intervention, no kiosk that needs a keyboard found in the ceiling.<br><br>mosaic-aware<br><br>detects and protects active nvidia mosaic configurations. owlette won't blindly rewrite a wall it shouldn't touch.<br><br>read the display api reference<br><br>every dashboard action, scriptable.<br><br>the same API that powers the dashboard â scoped keys, idempotency, webhooks, OpenAPI. install the CLI on a runner, import the SDK into your backend, or just curl it.<br><br># restart a process across the API URL=\"https://owlette.app/api/sites/$SITE/machines/$MACHINE\" curl -X POST \"$URL/processes/$PROC/restart\" \\ -H \"Authorization: Bearer $OWLETTE_TOKEN\" \\ -H \"Idempotency-Key: $(uuidgen)\"<br><br>scoped keys<br><br>keys are scoped per-site and per-action. a webhook delivery key cannot restart a machine.<br><br>idempotency-key required on writes<br><br>every mutating endpoint enforces idempotency. retry without doubling up.<br><br>webhooks with HMAC signatures<br><br>subscribe to process / deploy / display events. signed payloads, verifiable in any language.<br><br>read the api reference install the cli<br><br>built for<br><br>theme parks/ digital signage/ museums &amp; galleries/ live events/ corporate AV/ worship/ virtual production/ projector walls/ LED installations<br><br>simple, transparent pricing.<br><br>two tiers. no hidden fees. pay only for what you run.<br><br>core<br><br>$10/machine/month<br><br>free during beta<br><br><ul><li> process monitoring &amp; auto-recovery</li><li> start, stop, restart, kill â every process, every machine</li><li> software &amp; file deployment</li><li> display layouts with watchdog auto-revert</li><li> cortex AI fleet assistant (BYOK)*</li><li> 1 site with role-based access</li><li> unlimited machines &amp; members</li><li> email alerts</li><li> email support<br><br></li></ul>svg]:px-4 w-full sm:w-auto mx-auto text-background font-semibold px-10 h-12 text-base\" href=\"/register\"&gt;get started<br><br>new<br><br>pro<br><br>$50/machine/month<br><br>free during beta<br><br>3-machine minimum<br><br><strong>Everything In Core, Plus<br><br></strong><ul><li> roost â incremental project sync with atomic deploy and rollback</li><li> 1 TB included project storage per site</li><li> $0.05/GB overage</li><li> 50-version retention with 30-day rollback</li><li> public REST API with scoped keys</li><li> CLI + TypeScript SDK</li><li> webhooks with HMAC signing</li><li> unlimited sites with multi-site rbac</li><li> priority support<br><br></li></ul>svg]:px-4 w-full sm:w-auto mx-auto text-background font-semibold px-10 h-12 text-base\" href=\"/register\"&gt;get started<br><br>need volume pricing or an enterprise agreement? get in touch<br><br><ul><li> cortex requires your own API key (OpenAI, Anthropic, or compatible)<br><br></li></ul>~10s auto-recovery<br><br>crashed processes detected and restarted in under ten seconds.<br><br>runs offline, syncs on reconnect<br><br>agents monitor and recover locally without the cloud. resync resumes automatically when the connection returns.<br><br>no inbound ports â outbound 443 only<br><br>no vpn. no firewall holes. just https to firebase.<br><br>questions, answered.<br><br>during beta, yes â both tiers, no credit card, no trial clock. after beta: core is $10/machine/month for monitoring, control, deploy, displays, and cortex on a single site. pro is $50/machine/month (3-machine minimum) and adds the public API, CLI, SDK, webhooks, unlimited sites, and roost â incremental project sync with 1 TB included storage per site. no per-user fees on either.<br><br>no. owlette is windows-only. your mac is fine â it doesn't need monitoring. it'll let you know when something's wrong. loudly. in the middle of a show.<br><br>the agent keeps running. it monitors and auto-recovers processes whether or not it can reach the cloud. when the connection returns, it syncs everything it missed. your machines don't need the internet to run. they've been alone before. they know how to survive.<br><br>no inbound ports, no vpn. agents connect outbound over https (port 443) to google's firebase infrastructure. if your network allows general internet access, it just works. locked-down environments may need to whitelist *.googleapis.com and *.firebaseio.com.<br><br>cortex is owlette's ai fleet assistant â ask it the questions you ask yourself every day: \"which nvidia driver are we running?\", \"restart the media server on node 3\", \"what crashed at 3am?\" it translates natural language into real commands across your fleet. you bring your own api key (openai, anthropic, or any compatible provider).<br><br>roost is owlette's project sync. point it at a folder â a TouchDesigner project, a content drop, a build output â and it ships only the bytes that changed to every machine on the site, atomically: a machine gets the whole new version or stays on the old one, never a half-copied mess. every deploy is versioned, so you can roll back to any of the last 50 for up to 30 days. it's part of the pro tier and includes 1 TB of storage per site ($0.05/GB after that). no more zipping a folder and RDP-ing into ten machines at 2am.<br><br>agents connect over tls, credentials are encrypted on-device using a machine-bound key, and oauth tokens are never logged or stored in plaintext. access is managed through firebase auth with optional passkey and two-factor authentication.<br><br>yes â owlette is FSL-1.1-Apache-2.0 (converts to apache 2.0 two years after each release). the full source is on github. fair warning: it requires firebase, a railway (or equivalent) deployment for the web app, and a willingness to blow past your usage limits at 3am debugging support tickets from your neighbor's camper because your furnace broke and it's -10 outside. we won't talk you out of it, but the hosted version exists for a reason.<br/><br/>Please mention the word **GIFTED** and tag RNTIuMTU0LjIwLjUw when applying to show you read the job post completely (#RNTIuMTU0LjIwLjUw). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-owlette-tridant-1136206",
+      "location": "Fleet, ",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    }
+  ]
+}

@@ -1550,6 +1550,18 @@
       "relevanceScore": 0,
       "categoriesMatched": [],
       "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0119",
+      "dateRejected": "2026-08-10",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Beekeeper Academy of Achievement",
+      "organisation": "American Academy of Achievement",
+      "url": "https://remoteOK.com/remote-jobs/remote-beekeeper-academy-of-achievement-american-academy-of-achievement-1136345",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
     }
   ]
 }
