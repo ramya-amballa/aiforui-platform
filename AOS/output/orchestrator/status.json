@@ -9,16 +9,16 @@
     "reportPath": "string — this run's Daily Execution Report, relative to the repo root",
     "logPath": "string — this run's full log, relative to the repo root"
   },
-  "startedAt": "2026-08-10T02:39:44.450896+00:00",
-  "finishedAt": "2026-08-10T02:39:46.230757+00:00",
-  "durationSeconds": 1.78,
+  "startedAt": "2026-08-11T02:33:07.263564+00:00",
+  "finishedAt": "2026-08-11T02:33:08.991191+00:00",
+  "durationSeconds": 1.73,
   "employees": [
     {
       "key": "market-intelligence",
       "name": "Market Intelligence",
       "status": "SUCCESS",
       "attempts": 1,
-      "durationSeconds": 0.11,
+      "durationSeconds": 0.16,
       "error": null,
       "outputs": []
     },
@@ -36,11 +36,10 @@
       "name": "Demand Intelligence",
       "status": "SUCCESS",
       "attempts": 1,
-      "durationSeconds": 0.78,
+      "durationSeconds": 0.74,
       "error": null,
       "outputs": [
-        "demand-intelligence/runtime/rejected/2026-08-10-rejected-report.md",
-        "demand-intelligence/runtime/snapshots/2026-08-10-collection-snapshot.json",
+        "demand-intelligence/runtime/snapshots/2026-08-11-collection-snapshot.json",
         "demand-intelligence/organisation-profiles.json",
         "output/demand-intelligence/top-organisations-this-week.json"
       ]
@@ -50,11 +49,11 @@
       "name": "Revenue Hunter",
       "status": "SUCCESS",
       "attempts": 1,
-      "durationSeconds": 0.04,
+      "durationSeconds": 0.03,
       "error": null,
       "outputs": [
-        "output/revenue-hunter/2026-08-10-revenue-dashboard.md",
-        "output/revenue-hunter/2026-08-10-revenue-forecast.md"
+        "output/revenue-hunter/2026-08-11-revenue-dashboard.md",
+        "output/revenue-hunter/2026-08-11-revenue-forecast.md"
       ]
     },
     {
@@ -98,7 +97,7 @@
       "name": "Relationship Intelligence",
       "status": "SUCCESS",
       "attempts": 1,
-      "durationSeconds": 0.04,
+      "durationSeconds": 0.03,
       "error": null,
       "outputs": []
     },
@@ -107,7 +106,7 @@
       "name": "Reverse Job Hunt",
       "status": "SUCCESS",
       "attempts": 1,
-      "durationSeconds": 0.04,
+      "durationSeconds": 0.03,
       "error": null,
       "outputs": []
     },
@@ -116,7 +115,7 @@
       "name": "Recruiter Intelligence",
       "status": "SUCCESS",
       "attempts": 1,
-      "durationSeconds": 0.04,
+      "durationSeconds": 0.03,
       "error": null,
       "outputs": []
     },
@@ -134,10 +133,10 @@
       "name": "Tender & RFP Intelligence",
       "status": "SUCCESS",
       "attempts": 1,
-      "durationSeconds": 0.07,
+      "durationSeconds": 0.06,
       "error": null,
       "outputs": [
-        "output/tender-intelligence/2026-08-10-tender-intelligence-report.md",
+        "output/tender-intelligence/2026-08-11-tender-intelligence-report.md",
         "output/tender-intelligence/tender-intelligence-feed.json"
       ]
     },
@@ -155,7 +154,7 @@
       "name": "Delivery Intelligence",
       "status": "SUCCESS",
       "attempts": 1,
-      "durationSeconds": 0.04,
+      "durationSeconds": 0.03,
       "error": null,
       "outputs": []
     },
@@ -164,7 +163,7 @@
       "name": "Company 360",
       "status": "SUCCESS",
       "attempts": 1,
-      "durationSeconds": 0.04,
+      "durationSeconds": 0.03,
       "error": null,
       "outputs": []
     },
@@ -173,10 +172,10 @@
       "name": "Executive Memory",
       "status": "SUCCESS",
       "attempts": 1,
-      "durationSeconds": 0.04,
+      "durationSeconds": 0.03,
       "error": null,
       "outputs": [
-        "output/executive-memory/2026-08-10-executive-memory-report.md",
+        "output/executive-memory/2026-08-11-executive-memory-report.md",
         "output/executive-memory/executive-memory-feed.json"
       ]
     },
@@ -185,10 +184,10 @@
       "name": "Market Positioning Intelligence",
       "status": "SUCCESS",
       "attempts": 1,
-      "durationSeconds": 0.04,
+      "durationSeconds": 0.03,
       "error": null,
       "outputs": [
-        "output/market-positioning-intelligence/2026-08-10-market-positioning-report.md",
+        "output/market-positioning-intelligence/2026-08-11-market-positioning-report.md",
         "output/market-positioning-intelligence/market-positioning-feed.json"
       ]
     },
@@ -197,10 +196,10 @@
       "name": "Capacity Management",
       "status": "SUCCESS",
       "attempts": 1,
-      "durationSeconds": 0.04,
+      "durationSeconds": 0.03,
       "error": null,
       "outputs": [
-        "output/capacity-management/2026-08-10-capacity-report.md",
+        "output/capacity-management/2026-08-11-capacity-report.md",
         "output/capacity-management/capacity-feed.json"
       ]
     },
@@ -232,10 +231,10 @@
       "outputs": [
         "output/executive-dashboard/executive-dashboard.md",
         "output/executive-dashboard/executive-dashboard.html",
-        "output/executive-dashboard/2026-08-10-executive-dashboard.md",
-        "output/executive-dashboard/2026-08-10-executive-dashboard.html",
-        "output/daily-briefs/2026/08/10/executive-dashboard.md",
-        "output/daily-briefs/2026/08/10/executive-dashboard.html"
+        "output/executive-dashboard/2026-08-11-executive-dashboard.md",
+        "output/executive-dashboard/2026-08-11-executive-dashboard.html",
+        "output/daily-briefs/2026/08/11/executive-dashboard.md",
+        "output/daily-briefs/2026/08/11/executive-dashboard.html"
       ]
     },
     {
@@ -254,10 +253,10 @@
       "name": "CEO Advisor",
       "status": "SUCCESS",
       "attempts": 1,
-      "durationSeconds": 0.05,
+      "durationSeconds": 0.04,
       "error": null,
       "outputs": [
-        "output/ceo-advisor/2026-08-10-ceo-daily-report.md",
+        "output/ceo-advisor/2026-08-11-ceo-daily-report.md",
         "output/ceo-advisor/ceo-daily-report.md",
         "output/ceo-advisor/ceo-weekly-report.md",
         "output/ceo-advisor/ceo-monthly-business-review.md"
@@ -266,6 +265,6 @@
   ],
   "overallStatus": "SUCCESS",
   "failures": [],
-  "reportPath": "AOS/output/orchestrator/reports/2026-08-10-daily-execution-report.md",
-  "logPath": "AOS/output/orchestrator/logs/2026-08-10-023944-orchestrator.log"
+  "reportPath": "AOS/output/orchestrator/reports/2026-08-11-daily-execution-report.md",
+  "logPath": "AOS/output/orchestrator/logs/2026-08-11-023307-orchestrator.log"
 }
