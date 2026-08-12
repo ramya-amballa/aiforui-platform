@@ -1,6 +1,6 @@
 # CEO Weekly Report
 
-**Generated:** 2026-08-11
+**Generated:** 2026-08-12
 **Window:** trailing 7 days, regenerated every run
 
 **Opportunities found this period:** 0

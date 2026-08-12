@@ -11,10 +11,10 @@
   "recurringAlerts": [
     {
       "alertType": "No website enquiries received",
-      "daysFired": 9
+      "daysFired": 10
     }
   ],
-  "daysTracked": 9,
+  "daysTracked": 10,
   "lessonsLearnedLibrary": [],
   "recurringGovernanceRisks": [],
   "founderDecisions": []

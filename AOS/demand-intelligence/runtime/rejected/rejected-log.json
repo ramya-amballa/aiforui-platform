@@ -1562,6 +1562,42 @@
       "relevanceScore": 0,
       "categoriesMatched": [],
       "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0120",
+      "dateRejected": "2026-08-12",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Detail Specialist",
+      "organisation": "U-Haul",
+      "url": "https://remoteOK.com/remote-jobs/remote-detail-specialist-u-haul-1136363",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0121",
+      "dateRejected": "2026-08-12",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "General Staff Position",
+      "organisation": "Hunt Remotely",
+      "url": "https://remoteOK.com/remote-jobs/remote-general-staff-position-hunt-remotely-1136362",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0122",
+      "dateRejected": "2026-08-12",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Sales Team Member Cotton On Westfield Bondi",
+      "organisation": "Cotton On Group",
+      "url": "https://remoteOK.com/remote-jobs/remote-sales-team-member-cotton-on-westfield-bondi-cotton-on-group-1136393",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
     }
   ]
 }
