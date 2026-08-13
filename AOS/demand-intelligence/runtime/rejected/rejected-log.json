@@ -1598,6 +1598,144 @@
       "relevanceScore": 0,
       "categoriesMatched": [],
       "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0123",
+      "dateRejected": "2026-08-13",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Staff Software Engineer",
+      "organisation": "Evolve",
+      "url": "https://remoteOK.com/remote-jobs/remote-staff-software-engineer-evolve-1136447",
+      "relevanceScore": 25,
+      "categoriesMatched": [
+        "companyIndustry",
+        "complianceContext",
+        "responsibleAi"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: companyIndustry, complianceContext, responsibleAi; no penalties)."
+    },
+    {
+      "id": "rej-0124",
+      "dateRejected": "2026-08-13",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Ganger",
+      "organisation": "Jobs in Council",
+      "url": "https://remoteOK.com/remote-jobs/remote-ganger-jobs-in-council-1136451",
+      "relevanceScore": 15,
+      "categoriesMatched": [
+        "companyIndustry",
+        "governanceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: companyIndustry, governanceContext; no penalties)."
+    },
+    {
+      "id": "rej-0125",
+      "dateRejected": "2026-08-13",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Aragon AI",
+      "organisation": "AI Supermarket",
+      "url": "https://remoteOK.com/remote-jobs/remote-aragon-ai-ai-supermarket-1136388",
+      "relevanceScore": 26,
+      "categoriesMatched": [
+        "complianceContext",
+        "llm",
+        "roleResponsibilities"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: complianceContext, llm, roleResponsibilities; no penalties)."
+    },
+    {
+      "id": "rej-0126",
+      "dateRejected": "2026-08-13",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Talk us here if you canât find the job that youâre looking for",
+      "organisation": "Universal Wolf",
+      "url": "https://remoteOK.com/remote-jobs/remote-talk-us-here-if-you-cant-find-the-job-that-youre-looking-for-universal-wolf-1136450",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0127",
+      "dateRejected": "2026-08-13",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Senior Software QA Engineer",
+      "organisation": "CoverGo",
+      "url": "https://remoteOK.com/remote-jobs/remote-senior-software-qa-engineer-covergo-1136378",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0128",
+      "dateRejected": "2026-08-13",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Handyman",
+      "organisation": "Compass Group Canada",
+      "url": "https://remoteOK.com/remote-jobs/remote-handyman-compass-group-canada-1136553",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0129",
+      "dateRejected": "2026-08-13",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Interdisciplinary",
+      "organisation": "US Army Corps of Engineers",
+      "url": "https://remoteOK.com/remote-jobs/remote-interdisciplinary-us-army-corps-of-engineers-1136453",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0130",
+      "dateRejected": "2026-08-13",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Director Proposal Management Defense and Space",
+      "organisation": "Honeywell Aerospace",
+      "url": "https://remoteOK.com/remote-jobs/remote-director-proposal-management-defense-and-space-honeywell-aerospace-1136470",
+      "relevanceScore": 31,
+      "categoriesMatched": [
+        "aiContext",
+        "companyIndustry",
+        "complianceContext",
+        "governanceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: aiContext, companyIndustry, complianceContext, governanceContext; no penalties)."
+    },
+    {
+      "id": "rej-0131",
+      "dateRejected": "2026-08-13",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "JD Store Management Puerto Rico Premium Outlets Barceloneta PR",
+      "organisation": "JD Finish Line",
+      "url": "https://remoteOK.com/remote-jobs/remote-jd-store-management-puerto-rico-premium-outlets-barceloneta-pr-jd-finish-line-1136459",
+      "relevanceScore": 0,
+      "categoriesMatched": [
+        "complianceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: complianceContext; HR role penalty (-20))."
+    },
+    {
+      "id": "rej-0132",
+      "dateRejected": "2026-08-13",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "labourer general manufacturing",
+      "organisation": "Utility Supply Corporation",
+      "url": "https://remoteOK.com/remote-jobs/remote-labourer-general-manufacturing-utility-supply-corporation-1136550",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
     }
   ]
 }

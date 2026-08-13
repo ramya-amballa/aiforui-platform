@@ -1,0 +1,635 @@
+{
+  "date": "2026-08-13",
+  "totalDiscovered": 18,
+  "perSource": {
+    "demandSignals": 0,
+    "greenhouse": 0,
+    "lever": 0,
+    "ashby": 0,
+    "remoteok": 18,
+    "upwork": 0,
+    "linkedinJobs": 0,
+    "googleJobs": 0,
+    "wellfound": 0,
+    "flexjobs": 0,
+    "uaeRecruiters": 0,
+    "consultingFirms": 0
+  },
+  "perSourceErrors": {},
+  "opportunities": [
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Staff Software Engineer",
+      "organisation": "Evolve",
+      "description": "At Evolve, weâre on a mission to make vacation rental easy for everyone. Our high-performing, customer-obsessed team runs on curiosity, communication, and accountabilityâworking together to create exceptional experiences for our owners and guests. Whether solving big challenges, delivering outstanding results, or celebrating wins, we approach every day with purpose and passion. If youâre ready to join a mission-driven company where every teammate has the opportunity to thrive, Evolve might just be the place for you.\n\nWhy this role\nWe're looking for a highly motivated Staff Engineer to join our Engineering Team to help us build, secure, and scale the infrastructure that powers Evolve end-to-end. You will be a sought-out engineer for the most impactful and broad-ranging problems â from driving DevOps transformation and architecting secure, reliable systems to setting the standard for how we adopt and critically evaluate emerging AI tooling. This is a critical role where you will regularly influence the direction of platform architecture across multiple teams and domains, lead initiatives that tackle systemic tech debt, and ensure cross-functional dependencies and risks are well understood and effectively managed. If you do your best work when the problems are hard, the stakes are high, and the work shapes how an entire engineering organization operates â this role is for you.\n\nWhat youâll do \nDrive DevOps transformation â lead CI/CD pipeline design and optimization, container orchestration strategy (Kubernetes), and cloud infrastructure reliability â establishing patterns that scale across teams and reduce friction from code to production.\nChampion a security-first culture â architect secure infrastructure by default: secrets management, IAM least-privilege, vulnerability scanning, and compliance controls embedded as guardrails, not gates â and hold the bar across every system the team touches.\nApply AI tooling with rigor â leverage AI-assisted development to accelerate platform work while modeling the critical evaluation practices the team needs: validating output, stress-testing assumptions, and setting the standard for responsible AI use at the frontier.\nOwn platform reliability end-to-end â set and drive SLOs/SLAs for business-critical infrastructure, lead incident response, and systematically reduce MTTD/MTTR through automated observability, actionable alerting, and rigorous post-incident follow-through.\nLead infrastructure as code at scale â design scalable, reusable IaC modules (Terraform/Pulumi) that encode organizational standards, reduce toil, and proactively address broad-ranging tech debt through incremental, well-scoped initiatives.\nDefine and drive architectural direction â serve as the primary decision-maker for platform architecture across multiple teams and domains, regularly influencing systems design and ensuring alignment with engineering goals and organizational strategy.\nDeliver high-leverage solutions using emerging technology â stay current with in<br/><br/>Please mention the word **AMIABILY** and tag RNTIuMTU1LjMzLjI0Mw== when applying to show you read the job post completely (#RNTIuMTU1LjMzLjI0Mw==). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-staff-software-engineer-evolve-1136447",
+      "location": "Remote - US",
+      "remote": true,
+      "domainTags": [
+        "AI Governance",
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 6,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 7.0,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "Responsible AI",
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Ganger",
+      "organisation": "Jobs in Council",
+      "description": "<em>Western Downs Regional Council has been awarded the Queensland Large Employer of the Year for the Darling Downs South West Region for 2019, 2021, 2022, 2023 and 2024.<br><br></em><em>Be part of a team that make a real difference within the communities we serve. Our mission drives us, and we want you to be part of the journey.<br><br></em><em>Experience Western Downs It's the people that make it!<br><br></em>The Opportunity<br><br>The Ganger is responsible for providing a range of services to ensure the sustainability of community and council infrastructure aimed at enhancing the liveability and environment of our growing region.<br><br>The purpose of this role is to provide a high level of support to the Works Supervisor in undertaking a leading role whilst performing construction and maintenance tasks.<br><br><strong>About Yourself<br><br></strong>A person in this position will need to hold a relevant Certificate III in Civil Construction or willingness to complete such qualification in a required timeframe, OR be able to demonstrate equivalent related experience.<br><br>It is also highly desirable for the successful candidate to have:<br><br><ul><li>Verification of Competency in the operation of various types of plant</li><li>OH&amp;S Construction Safety Induction White Card</li><li>Open âLRâ class drivers licence required or willingness to obtain</li><li>Heavy Rigid (HR) Queensland Drivers Licence would be desirable<br><br></li></ul><strong>The Benefits Of Working For WDRC<br><br></strong><em>Work / life balance<br><br></em>We understand the importance of balance. Enjoy flexible work arrangements and wellness programs designed to keep you at your best.<br><br><em>Superannuation<br><br></em>In addition to your annual salary, Council will contribute twelve (12) per cent, including the superannuation guarantee contribution.<br><br><em>Growth Opportunities<br><br></em>We invest in your growth. Whether itâs skill development, mentorship, or career advancement, weâve got you covered.<br><br><em>Access to Corporate Health Plan<br><br></em>Take care of yourself and join one of our Corporate Health Plans to improve life.<br><br><em>Health &amp; Wellbeing program and Mental Health Support<br><br></em>Change your lifestyle and live better with healthy ideas. Be your best possible self with provided support and information.<br><br><em>Access to free Employee Assistance Program &amp; confidential counselling<br><br></em>Reach out to someone confidentially if you are experiencing any concerns or problems.<br><br><em>Salary Packaging Available<br><br></em>Restructure your salary to work for you to pay for everyday living expenses such as Motor Vehicles, Superannuation, Remote Area Housing (Rent), Fuel, Gas and Electricity.<br><br><em>Allowances Available (if applicable)<br><br></em>Allowances such as Locality Allowance may be applicable to your position.<br><br><em>Leave Loading<br><br></em>You will receive 17.5% leave loading on top of your base rate of pay, while you are on Annual Leave.<br><br><em>Uniforms and PPE<br><br></em>Uniforms and Personal Protective Equipment (PPE) provided.<br><br><em>Job security in a local government position<br><br></em>Feel secure working for an organisation who believes in strong foundations of respect, balance, communication, teamwork, accountability and leadership.<br><br><em>Relocation Assistance<br><br></em>Relocation assistance of up to $5,000 may be provided to the preferred<br><br>candidate if relocating to the Western Downs Region.<br><br><strong>Living &amp; Working In The Western Downs<br><br></strong>https://www.westerndownsqueensland.com.au/<br><br>If you are looking to join an innovative and dynamic company, that provides staff with a work life balance and opportunities for growth with state of the art mentoring from professionals within its team, this may be the role for you. Be part of the community you serve. TOGETHER WE MAKE A REAL DIFFERENCE.<br><br>Applications close at Midnight AEST on Monday 31 August 2026<br><br>Additional Information<br><br>The recruitment process may include candidates undergoing a pre-employment medical including drug and alcohol testing.<br><br>WDRC reserves the right to close or withdraw vacancies before the advertised closing date, or extend the closing date, without prior notice.<br><br>Applicants must have the legal right to work in Australia. Applicants who hold a valid Australian work visa are encouraged to apply.<br/><br/>Please mention the word **COURAGEOUSNESS** and tag RNTIuMTU1LjMzLjI0Mw== when applying to show you read the job post completely (#RNTIuMTU1LjMzLjI0Mw==). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-ganger-jobs-in-council-1136451",
+      "location": "Chinchilla, ",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Aragon AI",
+      "organisation": "AI Supermarket",
+      "description": "Professional forex trading simulator that replays historical market data so traders can practise strategies risk-free. Test and backtest trading systems across years of tick-level data at any speed, then review statistics on win rate, drawdown and risk-reward. Used by aspiring and experienced traders to build discipline and refine their edge.Text-to-3D and image-to-3D AI platform that generates game-ready 3D models and textures in minutes. Simply describe what you want or upload a reference image and Meshy produces a fully textured, exportable 3D asset. Used by game developers, product designers and metaverse creators to accelerate 3D production pipelines.AI-powered call tracking and analytics platform that shows you exactly which marketing campaigns are generating phone calls and customers. Conversation Intelligence automatically transcribes calls, scores leads and identifies keywords that convert. Trusted by 200,000+ businesses to optimise marketing spend and improve sales performance.AI meeting assistant that automatically joins your calls, records, transcribes and summarises every conversation. Smart search lets you find any moment from past meetings in seconds, and AI creates action items, follow-up emails and CRM updates automatically. Integrated with Zoom, Teams, Meet and 40+ business tools.Chat with any PDF, document or website using AI that reads and understands your files instantly. Ask complex questions, get cited summaries and extract key insights without reading every page. Used by 500,000+ students, lawyers and researchers to save hours of manual reading.AI writing assistant built specifically for academic researchers, students and scientists. Generates literature reviews, helps overcome writer block with auto-completions and cites sources from a database of 200+ million research papers. Trusted by students at Harvard, MIT and Oxford to write better papers in less time.Bilingual translation extension that translates entire web pages, PDFs and ebooks while keeping the original text visible for comparison. Supports 10+ AI translation engines including DeepL, OpenAI and Google for the best accuracy on any content type. Trusted by millions of users for reading foreign-language research, news and documents.The platform where modern web applications are built, deployed and scaled with the fastest global CDN and AI-enhanced developer tools. Push to Git and your site deploys automatically with instant rollbacks, branch previews and serverless functions built in. Trusted by 5 million developers and teams at Twilio, Nike and Peloton.Gemini is Google DeepMinds flagship model integrated across Google Workspace. Supports text, images, audio and video natively.Education Pro is 50% off for verified students, checked via SheerID at checkout.The world's most realistic AI voice generation platform with ultra-low latency and 1,000+ voices in 32 languages. Clone your own voice, create custom AI characters or produce professional voiceovers for videos, podcasts and apps. Used by millions of creators, publishers and developers for next-generation audio experiences.Professional remote recording platform that captures studio-quality audio and video locally on each participant device, regardless of internet quality. AI post-production tools automatically transcribe, clip highlights and generate show notes. The preferred recording studio for top podcasts and video interviews.An all-in-one email marketing and automation platform with AI-powered email generation, landing pages and webinar tools. Build sophisticated automated funnels triggered by subscriber behaviour, purchases and engagement signals. Trusted by 350,000+ businesses worldwide for growing and monetising their audiences.AI-powered job search platform that finds remote roles matching your skills and automatically tailors your resume and cover letter for each application. AI optimises your profile to pass Applicant Tracking Systems and highlights transferable skills employers are looking for. Reduces the time from job search to interview by automating the most tedious parts of applying.The newsletter platform built for growth, monetisation and AI-assisted writing. Create, send and analyse newsletters while growing your subscriber list with built-in referral programs and paid subscriptions. Used by over 100,000 creators and media brands worldwide.Smart calendar automation that protects focus time, schedules meetings and automatically reschedules tasks around your priorities. AI analyses your habits and workload to find the optimal time for deep work, habits and one-on-ones. Trusted by 40,000+ teams to improve productivity without working longer hours.Build and host custom websites, apps and internal tools. Trusted by Meta, Figma, Autodesk and Mattel.The platform where modern web applications are built, deployed and scaled with the fastest global CDN and AI-enhanced developer tools. Push to Git and your site deploys automatically with instant rollbacks, branch previews and serverless functions built in. Trusted by 5 million developers and teams at Twilio, Nike and Peloton.Record in studio quality, edit with AI, go live anywhere.Professional remote recording platform that captures studio-quality audio and video locally on each participant device, regardless of internet quality. AI post-production tools automatically transcribe, clip highlights and generate show notes. The preferred recording studio for top podcasts and video interviews.All-in-one AI assistant â GPT-4o, Claude 3.5 and Gemini in one place.All-in-one AI assistant powered by GPT-4, Claude and Gemini that works across every website in your browser. Chat, summarise pages, translate, write emails and analyse documents without switching tabs. Over 3 million professionals use Monica to save hours every day on research and communication tasks.Ultimate AI translator for web, PDFs and videos â 100+ language pairs.Bilingual translation extension that translates entire web pages, PDFs and ebooks while keeping the original text visible for comparison. Supports 10+ AI translation engines including DeepL, OpenAI and Google for the best accuracy on any content type. Trusted by millions of users for reading foreign-language research, news and documents.AI-powered video editor â if you can edit text, you can make viral clips.An all-in-one audio and video editor where you edit media by editing text, just like a document. AI removes filler words, silences and mistakes automatically, and the Overdub feature clones your voice to fix recording errors without re-recording. Used by podcasters, YouTubers and corporate video teams worldwide.Human-like AI speech in 32+ languages for audiobooks, video and podcasts.The world's most realistic AI voice generation platform with ultra-low latency and 1,000+ voices in 32 languages. Clone your own voice, create custom AI characters or produce professional voiceovers for videos, podcasts and apps. Used by millions of creators, publishers and developers for next-generation audio experiences.AI research workspace for reading, writing, citing and organising academic work.AI writing assistant built specifically for academic researchers, students and scientists. Generates literature reviews, helps overcome writer block with auto-completions and cites sources from a database of 200+ million research papers. Trusted by students at Harvard, MIT and Oxford to write better papers in less time.Turn complex PDFs into easy summaries and chat with any document instantly.Chat with any PDF, document or website using AI that reads and understands your files instantly. Ask complex questions, get cited summaries and extract key insights without reading every page. Used by 500,000+ students, lawyers and researchers to save hours of manual reading.All-in-one email marketing and automation with AI tools to grow audiences.An all-in-one email marketing and automation platform with AI-powered email generation, landing pages and webinar tools. Build sophisticated automated funnels triggered by subscriber behaviour, purchases and engagement signals. Trusted by 350,000+ businesses worldwide for growing and monetising their audiences.Transcribe, summarise, search and analyse meetings automatically.AI meeting assistant that automatically joins your calls, records, transcribes and summarises every conversation. Smart search lets you find any moment from past meetings in seconds, and AI creates action items, follow-up emails and CRM updates automatically. Integrated with Zoom, Teams, Meet and 40+ business tools.AI call tracking that attributes every call and chat to the campaign that drove it.AI-powered call tracking and analytics platform that shows you exactly which marketing campaigns are generating phone calls and customers. Conversation Intelligence automatically transcribes calls, scores leads and identifies keywords that convert. Trusted by 200,000+ businesses to optimise marketing spend and improve sales performance.Generate 1,000+ SEO-optimised articles in hours with WordPress auto-post.Generate long-form, SEO-optimised articles at scale with automatic internal linking and WordPress auto-publishing. Supports 50+ languages and produces fully structured posts with headings, meta descriptions and keyword targeting built in. Used by content agencies to produce 1,000+ articles per month.Turn long-form videos into viral short clips for TikTok, Reels and Shorts.Automatically repurpose long-form videos into multiple short clips optimised for TikTok, YouTube Shorts and Instagram Reels. AI identifies the most engaging moments, adds captions and formats each clip to the correct aspect ratio for every platform. Saves video teams hours of manual clipping and editing every week.Most popular AI 3D model generator â text to 3D in seconds.Text-to-3D and image-to-3D AI platform that generates game-ready 3D models and textures in minutes. Simply describe what you want or upload a reference image and Meshy produces a fully textured, exportable 3D asset. Used by game developers, product designers and metaverse creators to accelerate 3D production pipelines.The #1 email platform for creators â grow and monetize your audience with AI.The newsletter platform built for growth, monetisation and AI-assisted writing. Create, send and analyse newsletters while growing your subscriber list with built-in referral programs and paid subscriptions. Used by over 100,000 creators and media brands worldwide.AI calendar that optimises schedules and protects focus time.Smart calendar automation that protects focus time, schedules meetings and automatically reschedules tasks around your priorities. AI analyses your habits and workload to find the optimal time for deep work, habits and one-on-ones. Trusted by 40,000+ teams to improve productivity without working longer hours.The leading AI headshot generator â selfies to studio quality in minutes.Generate stunning professional headshots from selfies using AI that rivals expensive photography studios. Upload 12-20 casual photos and receive 40+ high-quality headshots in different backgrounds, outfits and styles within hours. Perfect for LinkedIn profiles, company websites and professional profiles.Full-stack web scraping â build, deploy and publish data extraction tools.The web scraping and browser automation platform used by developers to extract data from any website at scale. Build custom scrapers, automate repetitive browser tasks and deploy them on Apify cloud infrastructure without managing servers. Used by data teams, researchers and developers at thousands of companies worldwide.Study, write and solve problems faster â the most accurate AI for school.AI-powered research and analysis tool that synthesises information from multiple sources into clear, structured reports. Ask complex research questions and receive comprehensive answers with citations, comparisons and visualisations. Built for consultants, analysts and decision-makers who need fast, reliable intelligence.Write better content and grow faster across Twitter/X and LinkedIn.A distraction-free writing and scheduling tool for Twitter/X and LinkedIn creators. AI suggests threads, hooks and post ideas based on your writing style, and analytics show exactly what resonates with your audience. Trusted by 80,000+ creators to build their social presence.Create AI videos in 1 minute â 1,000+ avatars and 40,000 voices in 140 languages.Multilingual AI video and avatar creation platform that produces marketing videos and product demos in 140+ languages from a script. Choose from hundreds of realistic AI avatars or clone your own likeness for personalised video at scale. Used by global brands to localise video content for international markets without re-filming.Accurate AI detector, plagiarism checker and fact-checker.The most accurate AI content and plagiarism detector built specifically for publishers and SEO agencies. Scans articles to detect ChatGPT, Claude and other AI writing with high precision, and checks for copied content across the web. Provides readability scores and a full audit trail for content quality assurance.Turn text scripts into professional AI avatar videos in minutes.Create professional AI videos with realistic avatars and text-to-speech in 130+ languages without cameras, studios or actors. Produce training videos, product demos and personalised messages at scale from a simple script. Used by 50,000+ companies including Google, Zoom and Reuters to scale video content production.Land your dream job 3x faster with AI resume and cover letter optimisation.AI-powered job search platform that finds remote roles matching your skills and automatically tailors your resume and cover letter for each application. AI optimises your profile to pass Applicant Tracking Systems and highlights transferable skills employers are looking for. Reduces the time from job search to interview by automating the most tedious parts of applying.<br/><br/>Please mention the word **FAV** and tag RNTIuMTU1LjMzLjI0Mw== when applying to show you read the job post completely (#RNTIuMTU1LjMzLjI0Mw==). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-aragon-ai-ai-supermarket-1136388",
+      "location": "Good Design, ",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Talk us here if you canât find the job that youâre looking for",
+      "organisation": "Universal Wolf",
+      "description": "<strong>Picture the scene; youâve found us and we share your brand values, you'd love to work here and we are in an ideal location for you, thereâs just one catchâ¦ we are not actually advertising any jobs which are relevant to you at the moment.<br><br>So what do you do? You have only really have two optionsâ¦ you either walk away and keep your eye out for future vacancies or you take a chance and send in a speculative application. <br><br></strong><strong>About Us<br><br></strong>We partner with brand leaders in multiple market segments, by demonstrating our Ambition, Appetite and Passion for Better.<br><br>We are part of Tharsus Group on of the Northeast Fastest 50 companies our average turnover growth is + 25% sitting at over Â£80 million.<br><br>We currently have 3 businesses within the group Tharsus, High Frequency Logistics and Universal Wolf.<br><br>We have just won The North East Chamber of Commerce âLarge Company of the Yearâ and âBusiness of the Yearâ Awards, this is a testament to the great work that we are doing.<br><br>With a purpose-built facility we combine sheet metal working expertise and skill, we can do everything from designing the concept to scaled-up production.<br><br><strong>At Universal Wolf, collaboration is key</strong>. We support, encourage and back each other as we work to create the very best experience for our customers. We are always looking for ways to work better and smarter and welcome suggestions from colleagues on how we can make improvements to our processes.<br><br>Our work is varied â we create many different products and supply a range of sectors, so thereâs always something interesting to get stuck into.<br><br><strong>We're in Blyth</strong>, South East Northumberland a great location with access to both the coast and countryside and not far off the A1.<br/><br/>Please mention the word **EXALTEDLY** and tag RNTIuMTU1LjMzLjI0Mw== when applying to show you read the job post completely (#RNTIuMTU1LjMzLjI0Mw==). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-talk-us-here-if-you-cant-find-the-job-that-youre-looking-for-universal-wolf-1136450",
+      "location": "Blyth, ",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Sales Development Representative Attributeâ",
+      "organisation": "DoiT",
+      "description": "Our Sales Development Representative will be an integral part of our sales team. This role is fully remote in the EMEA region in the UK, Ireland, the Netherlands, and Sweden.\n\nWho We Are\nDoiT is a global technology company that works with cloud-driven organizations to leverage the cloud to drive business growth and innovation. We combine data, technology, and human expertise to ensure our customers operate in a well-architected and scalable state - from planning to production. \n\nDelivering DoiT Cloud Intelligence, the only solution that integrates advanced technology with human intelligence, we help our customers solve complex multicloud problems and drive efficiency.\n\nWith decades of multicloud experience, we have specializations in Kubernetes, GenAI, CloudOps, and more. An award-winning strategic partner of AWS, Google Cloud, and Microsoft Azure, we work alongside more than 4,000 customers worldwide. \n\nThe Opportunity\nAs a Sales Development Representative on our Attributeâ¢ team, you will be responsible for outbound lead generation, including email, calling, and using LinkedIn to book demos with qualified prospects on technical teams. Youâll be on the front line of the sales team, filling the pipeline for closers by focusing on the primary metrics of qualified meetings booked and pipeline generated. We are looking f<br/><br/>Please mention the word **THRIVING** and tag RNTIuMTU1LjMzLjI0Mw== when applying to show you read the job post completely (#RNTIuMTU1LjMzLjI0Mw==). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/",
+      "location": "Remote UK",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Senior Software QA Engineer",
+      "organisation": "CoverGo",
+      "description": "Top 3 Reasons To Join Us<ul><li>100% Remote</li><li>International Environment</li><li>Working on the latest tech for the Insurtech Market Leader</li></ul>About Us<p>At CoverGo, our mission is to empower all insurance companies to make insurance 100% digital and accessible to everyone.</p><ul><li>We are a leading global no-code insurance platform for health, life, and P&amp;C</li><li>Weâre the winner of the Insurtech of the Year in all of Asia and other awards globally</li><li>We work with insurance enterprise clients such as AXA, Bupa, MSIG, Dai-ichi, Bank of China Group Insurance, and many more</li><li>We're an international, diverse team of over 120 people with 30 nationalities and team members working remotely from all over the world</li><li>We are fully funded and backed by reputable VC funds and strategic institutional investors</li><li>We have a global presence in Asia, EMEA and the Americas</li><li>Weâve grown our annualized revenue by over 30x since January 2021</li><li>Weâre constantly working towards making CoverGo a workplace that you love coming to. We deeply believe that bringing together a diversity of thoughts, expressions, and perspectives is key to building the best culture for equally diverse communities all over the world</li></ul>What You Will Do<ul><li>Perform manual testing on new technologies</li><li>Identify and resolve simple quality process issues with little to no supervision and guidance </li><li>Write tests scenarios and run them during the testing process</li><li>Identify bugs and report it according to bug template with sufficient detail so that developers can investigate further</li><li>Perform API testing using tools like Postman or Swagger to validate request/response behavior</li><li>Report status to cross-functional teams</li><li>Execute on defined tasks according to guidelines and contribute to solving problems with defined solutions</li><li>Provide support with the team proactively</li><li>Mastering your craft and leveraging it for greater impact</li></ul>What We Need<ul><li>At least 4 years of experience in using manual testing tools and procedures in an agile environment</li><li>Hands-on experience in manual API testing (e.g., using Postman, Swagger, or similar tools), including validating endpoints, status codes, and response payloads</li><li>Deep understanding of QA theory</li><li>Good level of understanding of the software development life cycle and lean/agile QA methodologies</li><li>Enjoy working in a group and collaborating with cross-functional teams to get things done</li><li>Good communication in English is a must</li><li>Continuous learning of innovative approaches to testing and best-practices around it</li><li>Share new ideas and can adapt to work when circumstances change</li></ul> Why You'll Love Working Here <ul><li>Competitive renumeration package</li><li>International Environment</li><li>Paid annual leaves</li><li>Health Insurance</li><li>Annual Performance Bonus</li><li>Remote Work Allowance</li><li>Anniversary Bonus</li><li>Company activities and events</li><li>Learning and development plan</li></ul><p>CoverGo Company Video</p><p>By submitting your application, you confirm that you have read, understood, and accepted the content of CoverGoâs Privacy Notice and you consent to the processing of your data as part of this application.</p><br/><br/>Please mention the word **SLEEK** and tag RNTIuMTU1LjMzLjI0Mw== when applying to show you read the job post completely (#RNTIuMTU1LjMzLjI0Mw==). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-senior-software-qa-engineer-covergo-1136378",
+      "location": "Not specified",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Handyman",
+      "organisation": "Compass Group Canada",
+      "description": "The hourly wage rate for this position is $37.62 . Final compensation will be determined based on relevant skills, experience, qualifications, and internal equity. We are committed to offering competitive compensation and comply with all applicable pay transparency legislation. Further details regarding our total rewards offerings will be shared by the Talent Acquisition team during the hiring process. Canadian work experience is not a requirement for this role. Please note that artificial intelligenceâbased tools may be used at certain stages of the recruitment and applicant screening process.<br><br>This is a posting for an existing job vacancy<br><br><strong>Position Summary<br><br></strong>The Handyman A performs general maintenance and repair work across facility buildings and site infrastructure. The successful candidate will support renovation projects, routine maintenance activities, and corrective repairs while ensuring a safe and productive work environment.<br><br><strong>Key Responsibilities<br><br></strong><ul><li>Complete general maintenance and repair activities.</li><li>Perform basic carpentry including repairs, installations, and adjustments.</li><li>Assist with renovation and construction projects.</li><li>Install and repair doors, locks, hardware, partitions, shelving, and fixtures.</li><li>Perform painting, patching, drywall repairs, and finishing work.</li><li>Complete minor plumbing repairs and fixture replacements.</li><li>Assist with flooring, ceiling tile, and millwork installations.</li><li>Safely operate hand tools, power tools, ladders, and maintenance equipment.</li><li>Move and transport materials, equipment, and supplies.</li><li>Conduct workplace inspections and identify hazards.</li><li>Maintain clean and organized work areas.</li><li>Participate in safety meetings, toolbox talks, and required training.</li><li>Follow all site procedures, safe work practices, and Life Saving Rules.</li><li>Support emergency and non-routine maintenance activities as requ<br><br></li></ul>Whatâs in it for you?<br><br><ul><li> Join an award-winning culture. We have been recognized for being a Great Place to Work, in addition to being selected as a FORTUNE Global 500 Company, Best Workplaces Retail &amp; Hospitality, and FORTUNE Worldâs Most Admired Companies.</li><li>The opportunities with us are endless. As the worldâs largest food and support services company, we offer an extensive range of learning and career opportunities for all our associates.</li><li>Health &amp; Safety. The health and safety of our associates, clients and guests has always been our top priority. We have the right processes in place to ensure our teams have the support they need to stay safe, while helping to keep our guests safe.</li><li> Health Benefits. For our eligible associates, we offer comprehensive health, vision, and dental care coverage.</li><li>A Focus on Mental Health and Wellness. Our Mental Health and Well-Being initiative was created to share credible resources with our associates and the communities we serve on a variety of topics, including mental, physical, spiritual, and financial wellbeing. We also have an Employment Assistance Program which provides our associates with access to 24/7 support, resources, and information.</li><li>We are as diverse as our guests. We believe diverse and inclusive environments support innovation and collaboration, and benefit our associates, clients, and customers. We are committed to Listen, Learn, and Act and our Diversity Inclusion Action Councils (DIAC) are associate led groups that seek to foster inclusion through cultural awareness, engagement and appreciation of diversity. We are Stronger, Together!<br><br></li></ul>Compass Group Canada is committed to nurturing a diverse workforce representative of the communities within which we operate. We encourage and are pleased to consider all qualified candidates, without regard to race, colour, citizenship, religion, sex, marital / family status, sexual orientation, gender identity, aboriginal status, age, disability or persons who may require an accommodation, to apply.<br><br>For accommodation requests during the hiring process, please contact ukg.recruitment@compass-canada.com for further information.<br/><br/>Please mention the word **BREEZE** and tag RNTIuMTU1LjMzLjI0Mw== when applying to show you read the job post completely (#RNTIuMTU1LjMzLjI0Mw==). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-handyman-compass-group-canada-1136553",
+      "location": "Corunna, ",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Interdisciplinary",
+      "organisation": "US Army Corps of Engineers",
+      "description": "<strong>Announcement Type<br><br></strong>USAJOBS<br><br><strong>Locations (City, State)<br><br></strong>Redstone Arsenal, AL<br><br><strong>Position Overview/Duties<br><br></strong>This is a Direct Hire Authority (DHA) solicitation utilizing the DHA for Certain Personnel of the DoD Workforce to recruit and appoint qualified candidates to positions in the competitive service. About the Position: Positions will be working with operations and maintenance services for fuel storage and distribution systems and/or medical facilities.<br/><br/>Please mention the word **PAINLESS** and tag RNTIuMTU1LjMzLjI0Mw== when applying to show you read the job post completely (#RNTIuMTU1LjMzLjI0Mw==). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-interdisciplinary-us-army-corps-of-engineers-1136453",
+      "location": "Redstone Arsenal, ",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Detail Specialist",
+      "organisation": "U-Haul",
+      "description": "<strong>U-Haul Detail Technician<br><br></strong>Are you ready to rev up your career? U-Haul is looking for new team members to clean and detail the newest trucks and trailer fleet in the industry, ensuring that our equipment remains in top condition for our customers. If you have the skills and passion to keep our fleet looking the best, then this is the start of a career opportunity at U-Haul for you!<br><br>Working in our detail bays is a great way to begin your career at U-Haul and allows you to learn on the job and move up to other positions within the Company. We have the largest fleet of trucks and trailers in the industry and we need a first-class team to keep them looking great for our customers.<br><br>While working in our detailing bay, you will also be able to continue to grow through our Technician Training Program, through classes from Ford, GMC and U-Haul itself. U-Haul will provide you with the tools needed to do your job. You will also learn from many of our longtime team members, as U-Haul is known for its longtime team members and our family atmosphere.<br><br>As a U-Haul detailer, you will use U-Haul Companyâs proprietary technology to care for field vehicles. U-Haul provides the support and tools you will need to succeed and grow, so if you want a job with endless opportunities for career growth, apply today!<br><br>Our motto is <strong>âHire Fast Pay Fast.â</strong> You can start today and get paid today! All you must do is come in and get a paid hands-on working interview. We also offer a <strong>$100 Hiring Bonus!<br><br></strong><strong>Primary Responsibilities<br><br></strong><ul><li>Clean and buff trucks and trailers.</li><li>Handle damaged equipment leaving the fleet by removing decals and preparing equipment for sale.</li><li>Use industry standard safety equipment.</li><li>Work in a production line<br><br></li></ul><strong>Minimum Qualifications<br><br></strong><ul><li>Driverâs license</li><li>The ability to work as part of a team as well as individually</li><li>Regular attendance<br><br></li></ul><strong>Perks Of Joining The U-Haul Team<br><br></strong>Get your career moving with a Company that empowers team members to be the healthiest version of themselves! We provide robust wellness benefits, events and resources to help team members become the happiest and healthiest they can be.<br><br>We offer a Technician Training Program that encompasses both Ford and GMC training classes, as well as a Tool-Purchase Program.<br><br><strong>U-Haul Offers<br><br></strong><ul><li>Paid holidays, vacation, and sick days, if eligible </li><li>Career stability </li><li>Gym Reimbursement Program, if eligible</li><li>Opportunities for advancement </li><li>Valuable on-the-job training </li><li>Complete Benefit Plan, if eligible </li><li>RRSP payroll deduction plan </li><li>Deferred profit-sharing plan, if eligible</li><li>You Matter Program (EAP)</li><li>Mindset App Program</li><li>Wellness Programs</li><li>Discounts on Apple products, Dell computers, hotels, and more</li></ul><br/><br/>Please mention the word **ENCOURAGINGLY** and tag RNTIuMTU1LjMzLjI0Mw== when applying to show you read the job post completely (#RNTIuMTU1LjMzLjI0Mw==). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-detail-specialist-u-haul-1136363",
+      "location": "Windsor, ",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "General Staff Position",
+      "organisation": "Hunt Remotely",
+      "description": "Compucorp is currently looking for talented individuals to join our team. We frequently add new positions and encourage interested candidates to apply.<br><br><strong>Application Instructions:</strong> To ensure you have read the job post completely, please include the word <strong>DOMINATED</strong> and the tag <strong>RMTg1LjY2LjkwLjIw</strong> in your application.<br/><br/>Please mention the word **DREAMLAND** and tag RNTIuMTU1LjMzLjI0Mw== when applying to show you read the job post completely (#RNTIuMTU1LjMzLjI0Mw==). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-general-staff-position-hunt-remotely-1136362",
+      "location": "Kharagpur-I, ",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Sales Team Member Cotton On Westfield Bondi",
+      "organisation": "Cotton On Group",
+      "description": "<strong>Job Description<br><br></strong>Do you speak fashion? We're hiring! Letâs Chat!<br><br>Born in Australia, loved around the world.â¯<br><br>At Cotton On, we know good style goes well beyond what's in your wardrobe. Weâre here to inspire, spark joy and bolster self-expression and creativity. We want our community to feel seen, heard and celebrated, and as a brand, we want to use our voice to make a positive difference in people's lives.<br><br>Weâre playfully rebellious and always optimistic. Join our world and let's do good things together.<br><br>Benefits You Will Loveâ¦<br><br>50% off Cotton On Group Brands | Cotton On, Cotton On Body, Cotton On Kids, Rubi Shoes, Typo, Factorie and Supre<br><br>Local and Global career growth -â¯progress your career across our 7 Brands<br><br>Wellness support 24/7 â mental health, relationships, family + more<br><br>Discounts for you and your family - medical, travel, financial + more<br><br>Create meaningful change and make a positive difference in peopleâs lives<br><br>The Role<br><br>Create and deliver amazing moments and experiences for our customer<br><br>Advocate for the Cotton On Group Foundations, and make life changing impact on our projects around the world<br><br>Maintain store appearance by replenishing and merchandising product for our customer to shop<br><br>Work together with your team and drive for results<br><br>Who are we?<br><br>Cotton Onâs purpose is to make a positive difference in peopleâs lives. Born in Australia, Cotton On is a global fashion and lifestyle retailer with eight brands across 22 countries and 1,500 stores. Powered by 20,000 team members, who together with our customers, are making a positive impact through one life-changing Foundation. Taking their Aussie lifestyle to the world and delivering Good along the way, Cotton On brands offer youthful fashion and lifestyle products across women's, menâs, kids, body, accessories and stationery.<br><br>We are proud of our diverse global workforce of 20,000 team members from countless nationalities, and we strongly welcome and encourage individuals of all backgrounds to apply with us.<br><br>We are focused on bringing more voices, experiences and backgrounds to our workforce as we drive diverse and inclusive outcomes for our team and our customers.<br><br>If you have any individual needs in order to fully participate in the recruitment process, please contact us at recruitment@cottonon.com.auâ¯so we may support you in completing the job application process.<br/><br/>Please mention the word **STIRRINGLY** and tag RNTIuMTU1LjMzLjI0Mw== when applying to show you read the job post completely (#RNTIuMTU1LjMzLjI0Mw==). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-sales-team-member-cotton-on-westfield-bondi-cotton-on-group-1136393",
+      "location": "Bondi Junction, ",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Beekeeper Academy of Achievement",
+      "organisation": "American Academy of Achievement",
+      "description": "<ul><li>Home</li><li>Our Members</li><ul><li>Member Interviews</li><li>The Arts</li><li>Business</li><li>Science &amp; Exploration</li><li>Public Service</li><li>Sports</li><li>Achiever Universe</li></ul><li>The Summit</li><ul><li>Overview</li><li>2024</li><li>2022</li><li>2019</li><li>2017</li><li>2014</li><li>2012</li><li>2010</li><li>2009</li><li>2008</li><li>2007</li><li>2006</li><li>2005</li><li>2004</li><li>2003</li><li>2002</li></ul><li>Our History</li><ul><li>About The Academy</li><li>Academy Patrons</li><li>Delegate Alumni</li><li>Directors &amp; Our Team</li><li>Golden Plate Awards Council</li><li>Golden Plate Awardees</li></ul><li>Keys to Success</li><ul><li>Overview</li><li>Passion</li><li>Vision</li><li>Preparation</li><li>Courage</li><li>Perseverance</li><li>Integrity</li><li>The American Dream</li><li>Recommended Books</li><li>Find My Role Model<br></li></ul></ul>Back to home<br><br>Career: Beekeeper<br><br>Sorry, no results were found.<br><br><ul><li>Hank Aaron</li><li>Kareem Abdul-Jabbar</li><li>Lynsey Addario</li><li>Edward Albee</li><li>Tenley Albright, M.D.</li><li>Svetlana Alexievich</li><li>Dame Julie Andrews</li><li>Maya Angelou</li><li>Frances H. Arnold, Ph.D.</li><li>Robert D. Ballard, Ph.D.</li><li>Sir Roger Bannister</li><li>John Banville</li><li>Ehud Barak</li><li>Lee R. Berger, Ph.D.</li><li>Sir Tim Berners-Lee</li><li>Yogi Berra</li><li>Jeffrey P. Bezos</li><li>Benazir Bhutto</li><li>Simone Biles</li><li>Keith L. Black, M.D.</li><li>Elizabeth Blackburn, Ph.D.</li><li>David Boies</li><li>Norman E. Borlaug, Ph.D.</li><li>Benjamin C. Bradlee</li><li>Sergey Brin</li><li>J. Carter Brown</li><li>General Charles Q. Brown, Jr., USAF</li><li>Linda B. Buck, Ph.D.</li><li>Carol Burnett</li><li>George H. W. Bush</li><li>Susan Butcher</li><li>Sir Michael Caine</li><li>James Cameron</li><li>Benjamin S. Carson, M.D.</li><li>Jimmy Carter</li><li>Johnny Cash</li><li>William J. Clinton</li><li>Francis S. Collins, M.D., Ph.D.</li><li>Denton A. Cooley, M.D.</li><li>Francis Ford Coppola</li><li>Ray Dalio</li><li>Dame Olivia de Havilland</li><li>Michael E. DeBakey, M.D.</li><li>Michael S. Dell</li><li>Ron Dennis</li><li>Joan Didion</li><li>David Herbert Donald, Ph.D.</li><li>David Doubilet</li><li>Jennifer A. Doudna, Ph.D.</li><li>Rita Dove</li><li>Gustavo Dudamel</li><li>Sylvia Earle, Ph.D.</li><li>Mohamed ElBaradei</li><li>Gertrude B. Elion, M.Sc.</li><li>Larry J. Ellison</li><li>Nora Ephron</li><li>Julius Erving</li><li>Tony Fadell</li><li>Paul Farmer, M.D.</li><li>Suzanne Farrell</li><li>Anthony S. Fauci, M.D.</li><li>Sally Field</li><li>Lord Norman Foster</li><li>Aretha Franklin</li><li>Milton Friedman, Ph.D.</li><li>Carlos Fuentes</li><li>Athol Fugard</li><li>Peter Gabriel</li><li>Ernest J. Gaines</li><li>William H. Gates III</li><li>Leymah Gbowee</li><li>Frank O. Gehry</li><li>Murray Gell-Mann, Ph.D.</li><li>Vince Gill</li><li>Ruth Bader Ginsburg</li><li>Louise GlÃ¼ck</li><li>Whoopi Goldberg</li><li>Dame Jane Goodall</li><li>Doris Kearns Goodwin, Ph.D.</li><li>Mikhail S. Gorbachev</li><li>Nadine Gordimer</li><li>Stephen Jay Gould, Ph.D.</li><li>Carol W. Greider, Ph.D.</li><li>John Grisham</li><li>Sir John Gurdon</li><li>Dorothy Hamill</li><li>Sir Demis Hassabis</li><li>Lauryn Hill</li><li>Sir Edmund Hillary</li><li>Reid Hoffman</li><li>Khaled Hosseini, M.D.</li><li>Ron Howard</li><li>John Hume</li><li>Louis Ignarro, Ph.D.</li><li>Daniel K. Inouye</li><li>Jeremy Irons</li><li>John Irving</li><li>Sir Kazuo Ishiguro</li><li>Sir Peter Jackson</li><li>Donald C. Johanson, Ph.D.</li><li>Frank M. Johnson, Jr.</li><li>Philip C. Johnson</li><li>Chuck Jones</li><li>James Earl Jones</li><li>Quincy Jones</li><li>Beverly Joubert</li><li>Dereck Joubert</li><li>Paul Kagame</li><li>Katalin KarikÃ³, Ph.D.</li><li>Thomas Keller</li><li>Anthony M. Kennedy</li><li>B.B. King</li><li>Carole King</li><li>Coretta Scott King</li><li>Henry A. Kissinger, Ph.D.</li><li>Willem J. Kolff, M.D., Ph.D.</li><li>Wendy Kopp</li><li>Henry R. Kravis</li><li>Nicholas D. Kristof</li><li>Mike Krzyzewski</li><li>Ray Kurzweil</li><li>Eric S. Lander, Ph.D.</li><li>Robert S. Langer, Sc.D.</li><li>Richard E. Leakey</li><li>Katie Ledecky</li><li>Leon Lederman, Ph.D.</li><li>Robert J. Lefkowitz, M.D.</li><li>Congressman John R. Lewis</li><li>Maya Lin</li><li>Lord Andrew Lloyd Webber</li><li>George Lucas</li><li>Paul B. MacCready, Ph.D.</li><li>Norman Mailer</li><li>Peyton Manning</li><li>Wynton Marsalis</li><li>John C. Mather, Ph.D.</li><li>Johnny Mathis</li><li>Ernst Mayr, Ph.D.</li><li>Willie Mays</li><li>Frank McCourt</li><li>David McCullough</li><li>Audra McDonald</li><li>Admiral William H. McRaven, USN</li><li>W. S. Merwin</li><li>Reinhold Messner</li><li>James A. Michener</li><li>Marvin Minsky, Ph.D.</li><li>Mario J. Molina, Ph.D.</li><li>N. Scott Momaday, Ph.D.</li><li>Story Musgrave, M.D.</li><li>Ralph Nader</li><li>Peggy Noonan</li><li>Jessye Norman</li><li>Lt. Thomas R. Norris, USN</li><li>Lynn Nottage</li><li>Joyce Carol Oates</li><li>Pierre Omidyar</li><li>Jimmy Page</li><li>Larry Page</li><li>Arnold Palmer</li><li>Leon Panetta</li><li>Rosa Parks</li><li>Suzan-Lori Parks</li><li>Linus C. Pauling, Ph.D.</li><li>Shimon Peres</li><li>Itzhak Perlman</li><li>General David H. Petraeus, USA</li><li>Sidney Poitier</li><li>General Colin L. Powell, USA</li><li>Harold Prince</li><li>Venki Ramakrishnan, Ph.D.</li><li>Lord Martin Rees</li><li>Lloyd Richards</li><li>Sally K. Ride, Ph.D.</li><li>Cal Ripken Jr.</li><li>Sonny Rollins</li><li>Anthony D. Romero</li><li>James Rosenquist</li><li>Martine Rothblatt, Ph.D.</li><li>Pete Rozelle</li><li>Bill Russell</li><li>Albie Sachs</li><li>Oliver Sacks, M.D.</li><li>Jonas Salk, M.D.</li><li>Frederick Sanger, Ph.D.</li><li>George B. Schaller, Ph.D.</li><li>Barry Scheck</li><li>Richard Evans Schultes, Ph.D.</li><li>General H. Norman Schwarzkopf, USA</li><li>Stephen A. Schwarzman</li><li>Glenn T. Seaborg, Ph.D.</li><li>Neil Sheehan</li><li>Admiral Alan B. Shepard, Jr., USN</li><li>Cindy Sherman</li><li>Ellen Johnson Sirleaf</li><li>Carlos Slim HelÃº</li><li>Frederick W. Smith</li><li>Stephen Sondheim</li><li>Sonia Sotomayor</li><li>Wole Soyinka</li></ul><ul><li>Our History</li><ul><li>About the Academy</li><li>Academy Patrons</li><li>Delegate Alumni</li><li>Directors &amp; Our Team</li><li>Golden Plate Awards Council</li><li>Golden Plate Awardees<br><br></li></ul></ul><ul><li>Our Members</li><ul><li>The Arts</li><li>Business</li><li>Science &amp; Exploration</li><li>Public Service</li><li>Sports</li><li>Achiever Universe<br><br></li></ul></ul><ul><li>Keys to Success</li><ul><li>Keys to Success</li><li>Find My Role Model</li><li>Recommended Books</li></ul><li>The Summit</li><ul><li>Overview</li><li>Summit by Year<br></li></ul></ul>More from the Academy<br><br><ul><li> Podcast </li><li> Apple Books <br><br></li></ul>Â© 1996 - 2026 American Academy of Achievement. All Rights Reserved.<br><br><ul><li>Underwriter</li><li>Contact Us</li><li>Frequently Asked Questions</li><li>Privacy Policy</li><li>Usage Policy<br><br></li></ul>View the full list of achievers<br/><br/>Please mention the word **UNRESTRICTED** and tag RNTIuMTU1LjMzLjI0Mw== when applying to show you read the job post completely (#RNTIuMTU1LjMzLjI0Mw==). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-beekeeper-academy-of-achievement-american-academy-of-achievement-1136345",
+      "location": "Thunder Bay, ",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Director Proposal Management Defense and Space",
+      "organisation": "Honeywell Aerospace",
+      "description": "<strong>Job Description<br><br></strong>We are seeking an experienced and strategic <strong>Director of Proposal Management</strong> to lead Defense and Space proposal operations supporting U.S. Government, OEM Defense, International Defense, and Space customers. This senior leadership role is responsible for driving winning proposal strategies, leading high-performing teams, improving proposal processes, and ensuring successful execution of complex RFQ, RFI, and RFP opportunities.<br><br>The ideal candidate is a transformational leader with deep expertise in proposal management, government contracting, cross-functional collaboration, and process improvement. This individual will work closely with executive leadership, sales, engineering, finance, and operations teams to secure new business and retain existing customers.<br><br><strong>Responsibilities<br><br></strong><strong>Key Responsibilities<br><br></strong><strong>Team Leadership &amp; Talent Development<br><br></strong><ul><li>Lead, mentor, and develop a diverse team of proposal management professionals.</li><li>Conduct performance evaluations, coaching, and career development planning.</li><li>Establish performance metrics and productivity goals.</li><li>Develop succession plans and build organizational capability for future growth.</li><li>Foster a culture of accountability, collaboration, and continuous improvement.<br><br></li></ul><strong>Process Improvement &amp; Operations Excellence<br><br></strong><ul><li>Identify and implement process improvement initiatives to increase proposal quality, efficiency, and responsiveness.</li><li>Leverage automation and emerging technologies, including generative AI, to improve proposal operations.</li><li>Monitor key operational metrics and present results to executive leadership.</li><li>Improve proposal turnaround times and on-time delivery performance.</li><li>Lead continuous improvement efforts using Lean and Six Sigma methodologies. <br><br></li></ul><strong>Strategic Collaboration<br><br></strong><ul><li>Partner with Sales, Engineering, Finance, Contracts, and Program Management teams to develop compelling solutions.</li><li>Facilitate executive reviews, proposal kickoffs, and compliance reviews.</li><li>Analyze risks, opportunities, and business impacts to support strategic decision-making.</li><li>Present proposal performance, business insights, and organizational recommendations to senior executives. <br><br></li></ul><strong>Qualifications<br><br></strong>Required Qualifications<br><br><ul><li>10+ years of proposal management experience in Aerospace, Defense, Government Contracting, or related industries.</li><li>5+ years of people leadership experience managing professional teams.</li><li>Strong understanding of RFQ, RFI, and RFP processes.</li><li>Knowledge of FAR and government proposal compliance requirements.</li><li>Experience leading cross-functional and geographically dispersed teams.</li><li>Proven success managing multiple priorities in a fast-paced environment.</li><li>Advanced Microsoft Office proficiency.</li><li>Strong presentation, communication, and stakeholder management skills.<br><br></li></ul><strong>Preferred Qualifications<br><br></strong><ul><li>Bachelorâs Degree, Management, Operations, or related field</li><li>APMP membership or certification.</li><li>Six Sigma Green Belt certification.</li><li>Experience with Salesforce.com and data analytics tools.</li><li>Experience implementing process automation and AI-enabled business solutions.</li><li>Background supporting Defense, Aerospace, Aviation, or Space customers.<br><br></li></ul>Key Competencies<br><br><ul><li>Strategic Leadership</li><li>Proposal Management</li><li>Project Management</li><li>Business Process Improvement</li><li>Executive Communication</li><li>Relationship Building</li><li>Data-Driven Decision Making</li><li>Planning &amp; Scheduling</li><li>Risk Management</li><li>Team Development</li><li>Continuous Improvement</li><li>Customer Focus<br><br></li></ul>What Success Looks Like<br><br><ul><li>Increased proposal win rates and business growth.</li><li>Improved proposal productivity, quality, and turnaround times.</li><li>Strong employee engagement and talent development.</li><li>Consistent on-time proposal delivery</li><li>Effective implementation of process improvements and operational efficiencies<br><br></li></ul>Due to compliance with U.S. export control laws and regulations, candidate must be a U.S. person, which is defined as, a U.S. citizen, a U.S. permanent resident, or have protected status in the U.S. under asylum or refugee status.<br><br><strong>Benefits<br><br></strong>Beyond a performance-driven salary, you'll work alongside dedicated experts on technology that's advancing aviation. As a Honeywell Aerospace employee, you're eligible for a comprehensive benefits package that includes:<br><br><ul><li>Employer-subsidized medical, dental, vision and life insurance</li><li>Short-term and long-term disability coverage</li><li>401(k) match, flexible spending accounts and health savings accounts</li><li>Employee assistance program and educational assistance</li><li>Parental leave and 12 paid holidays</li><li>Paid time off for vacation, personal and sick time<br><br></li></ul>Explore your benefits: https://honeywellaerospacebenefits.com/<br><br>The application period for the job is estimated to be 40 days from the job posting date; however, this may be shortened or extended depending on business needs and the availability of qualified candidates.<br><br>Honeywell Aerospace products and services are found on aircraft across commercial aviation, defense and space â from engines and cockpit electronics to cabin systems, mechanical components and connectivity solutions. Our technology helps operators fly more safely, reduce fuel consumption, improve on-time performance and deliver a better experience for the people on board.<br><br>As aviation continues to evolve, we're also developing systems to support autonomous and supersonic platforms, bringing the same focus on safety and efficiency to the next era of flight. With approximately 36,000 employees worldwide and net sales of $17.4B in 2025, Honeywell Aerospace is one of the largest dedicated aerospace companies in the world. Explore our businesses: https://www.honeywellaerospace.com<br><br>Control Systems develops the thermal and motion control systems that help aircraft take off, land safely and protect the people on board. With more than 10 million passengers per day flying on aircraft equipped with our products and more than 75% of commercial flights beginning with our engine start systems, Control Systems reaches farther across the aviation industry than most people realize.<br/><br/>Please mention the word **HARMONIOUS** and tag RNTIuMTU1LjMzLjI0Mw== when applying to show you read the job post completely (#RNTIuMTU1LjMzLjI0Mw==). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-director-proposal-management-defense-and-space-honeywell-aerospace-1136470",
+      "location": "Aguadilla, ",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "How Apply",
+      "organisation": "The Philadelphia School",
+      "description": "<ul><li>Medical, dental, vision insurance</li><li>Retirement plan with employer match</li><li>Paid vacation, school holidays, personal days</li><li>Family, medical, parental leave</li><li>Professional development opportunities</li><li>Tuition remission for faculty/staff, discount on summer programs and after school clubs</li><li>Extended day coverage for faculty/staff children</li><li>Commuter benefits</li></ul><br/><br/>Please mention the word **TRUSTED** and tag RNTIuMTU1LjMzLjI0Mw== when applying to show you read the job post completely (#RNTIuMTU1LjMzLjI0Mw==). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-how-apply-the-philadelphia-school-1136304",
+      "location": "Jabalpur, ",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "JD Store Management Puerto Rico Premium Outlets Barceloneta PR",
+      "organisation": "JD Finish Line",
+      "description": "At JD Finish Line, weâre not just selling products; weâre creating experiences. Our retail stores are a vibrant reflection of our brandâs passion for innovation and customer service. Weâre on the lookout for dynamic managers to lead our team and drive excellence in every customer interaction.<br><br><strong><strong>Position Title(s): </strong> </strong>Assistant Store Manager and Supervisor<br><br><strong><strong>Job Summary:</strong> </strong>As a member of Management, you will be the heartbeat of our store, responsible for managing daily operations, inspiring a high-performance team, and delivering exceptional customer experiences. Youâll have the autonomy to shape the storeâs success and contribute to our companyâs growth.<br><br><strong><strong>Why Join Us? <br><br></strong></strong><ul><li>Competitive Pay &amp; Benefits: Enjoy a comprehensive compensation package including health benefits, retirement plans, and employee discounts.</li><li>Career Growth: Weâre committed to your professional development and offer opportunities for career advancement within our growing company.</li><li>Dynamic Environment: Be part of a vibrant team in a fast-paced and rewarding work environment.</li><li>DE&amp;I Initiatives: Our commitment to Diversity &amp; Inclusion is louder than words. We listen to the voices of our team members, which holds us accountable in creating an equitable and successful company. Together, we are stronger.<br><br></li></ul><strong><strong>Key Responsibilities:<br><br></strong></strong><ul><li>Leadership &amp; Team Management: Recruit, train, and develop a motivated team. Foster a positive work environment, set clear goals, and provide ongoing feedback to ensure top performance.</li><li>Customer Experience: Create an exceptional shopping experience by addressing customer needs, resolving issues, and ensuring high standards of customer service.</li><li>Sales &amp; Performance: Drive store sales and profitability through effective merchandise management, promotional strategies, and achieving sales targets.</li><li>Operational Excellence: Oversee daily operations including inventory management, visual merchandising, and store maintenance. Ensure compliance with company policies, procedures, and health &amp; safety regulations.</li><li>Financial Management: Manage store budgets, control expenses, and analyze sales data to optimize performance and drive revenue growth.</li><li>Marketing &amp; Community Engagement: Implement local marketing initiatives and build strong relationships with the community to enhance brand presence and attract new customers.</li><li>Innovation &amp; Problem-Solving: Stay current with industry trends and competitor activities. Identify opportunities for improvement and implement innovative solutions to enhance store operations.</li><li>Additional duties and projects as required.<br><br></li></ul><strong><strong>Qualifications:<br><br></strong></strong><ul><li>Experience: Proven experience as a Retail Store Manager or similar role, with a track record of achieving sales targets and managing a team.</li><li>Leadership Skills: Strong leadership abilities with excellent communication, interpersonal, and organizational skills.</li><li>Customer-Centric: A passion for delivering outstanding customer service and creating memorable shopping experiences.</li><li>Analytical Skills: Ability to analyze sales data, manage budgets, and make data-driven decisions.</li><li>Flexibility: Willingness to work flexible hours, including weekends and holidays, as needed.</li><li>Tech-Savvy: Proficiency in retail management software and basic computer applications.<br><br></li></ul><strong><strong>Minimum Requirements:<br><br></strong></strong><ul><li>Assistant Store Manager</li><ul><li>Open availability, including availability during the hours necessary to open and close the store, which includes mornings, days, and nights.</li><li>Minimum standard work week of 5 days.</li><li>Average standard work week of 44 hours but increased during peak sales periods (e.g. Holiday, Back-to âSchool).</li></ul><li>Supervisor</li><ul><li>Availability during the hours necessary to open and close the store, which includes mornings, days, and nights.</li><li>Requires a minimum of 5 days of availability.</li><li>Minimum standard of a 30 hour work week.</li></ul><li>All Management </li><ul><li>Availability on weekends and holidays.</li><li>Punctuality and regular attendance consistent with the companyâs policies are required for the position.</li><li>Must have reliable transportation.</li><li>Must speak English clearly in order to converse with customers and effectively supervise staff.</li><li>Must be able to read and write English and perform business-related mathematics in order to carry out normal business and understand corporate sales reports.</li><li>May require the ability to move to different locations within the company's network based on operational needs and career growth.<br></li></ul></ul><strong><strong>Physical Demands:<br><br></strong></strong><ul><li>Requires prolonged standing approximately five to 14 hours per day.</li><li>During peak sale periods (e.g. Holiday, Back-to-School), will work for long periods throughout a one to 12 hour day.</li><li>Requires stooping and kneeling to place merchandise on customerâs feet as well as reaching and pulling to obtain or stock merchandise on storage racks.</li><li>May be required to climb ladder or ascend/descend stairs in order to stock and/or acquire merchandise for sale.</li><li>Required to lift items weighing 5 â 25 lbs regularly. In certain circumstances, weights may be higher. </li><li>Must have good vision, including color differentiation.</li><li>The work environment for this position is a moderately noisy retail setting.<br><br></li></ul><strong><strong>Education:<br><br></strong></strong><ul><li>High School Diploma or GED equivalent; 2+ yearsâ experience in retail leadership strongly preferred; or equivalent combination of education and experience.<br><br></li></ul><em>The minimum requirements and physical demands described here are representative of those that must be met by an employee to successfully perform the essential functions of this job. The requirements listed are representative of the knowledge, skill, and/or ability required. Reasonable accommodations may be made to enable qualified individuals with disabilities to perform the essential functions (and/or as otherwise required by law, including for pregnancy and religious practices). Must be at least 18 years or older.<br><br></em><em>This job description is not intended to cover all aspects, duties, and/or responsibilities required of employees. Employees may be asked to perform additional duties outside of normal job scope on a temporary or permanent basis per company policy. The company reserves the right to modify this job description with or without notice. <br><br></em><strong>EEO Statement:<br><br></strong>The Finish Line, Inc. is an Equal Employment Opportunity employer and is committed to complying with all federal, state, and local EEO laws. The Finish Line, Inc. prohibits discrimination against employees and applicants for employment based on race or color, religion or creed, national origin, alienage or citizenship status, marital status, sex, pregnancy status, age, military status, disability, or any other characteristic or class protected by law. The Finish Line, Inc. provides reasonable accommodations in accordance with applicable laws, including for disabilities, pregnancy, and religious practices.<br><br><strong>Need accessibility assistance to apply?<br><br></strong>Applicants who require accessibility assistance to submit an employment application can either call Finish Line at (317) 613-6890 or email us at talentacquisition@finishline.com. A member of our Talent Acquisition team will respond as soon as reasonably possible. (This email address and phone number is only for individuals seeking accommodation when applying for a job.)<br/><br/>Please mention the word **REJOICINGLY** and tag RNTIuMTU1LjMzLjI0Mw== when applying to show you read the job post completely (#RNTIuMTU1LjMzLjI0Mw==). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-jd-store-management-puerto-rico-premium-outlets-barceloneta-pr-jd-finish-line-1136459",
+      "location": "Barceloneta, ",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Our vacancies",
+      "organisation": "Geeks Ltd",
+      "description": "Innovation only goes so far: Adoption makes the difference. At Geeks, we donât just create new software, we break the barriers that stop people using it.<br><br>Itâs powered by our curiosity, courage and commitment. Curiosity to grow. Courage to generate real value. Commitment to the team around us.<br><br>That powers the biggest change: your growth into a tech leader.<br/><br/>Please mention the word **PEACEFULLY** and tag RNTIuMTU1LjMzLjI0Mw== when applying to show you read the job post completely (#RNTIuMTU1LjMzLjI0Mw==). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-our-vacancies-geeks-ltd-1136289",
+      "location": "ç§å°æ²å³ç¿¼åæ, ",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "CANDIDATURE SPONTANÃE",
+      "organisation": "ALSEI",
+      "description": "Candidature spontanÃ©e<br><br>Nom *<br><br>PrÃ©nom *<br><br>E-mail *<br><br>TÃ©lÃ©phone<br><br>CV *<br><br>Modal title<br><br>Parcourir...<br><br><ul><li>image<br><br></li></ul><strong>nomFileFull</strong> <br><br><ul><li>nomFileFull : messError <br><br></li></ul>Extensions autorisÃ©es : pdf, doc, docx<br><br>Lettre de motivation<br><br>Modal title<br><br>Parcourir...<br><br><ul><li>image<br><br></li></ul><strong>nomFileFull</strong> <br><br><ul><li>nomFileFull : messError <br><br></li></ul>Extensions autorisÃ©es : pdf, doc, docx<br><br>Je consens Ã  communiquer mes informations personnelles Ã  ALSEI ENTREPRISE et ses partenaires<br><br>ALSEI ENTREPRISE sâengage Ã  protÃ©ger et Ã  respecter votre vie privÃ©e. Les donnÃ©es Ã  caractÃ¨re personnel qui vous sont demandÃ©es dans les formulaires de cette page sont indispensables pour traiter votre demande; consultez notre politique de confidentialitÃ© pour en savoir plus sur la collecte et le traitement de vos donnÃ©es personnelles opÃ©rÃ©s conformÃ©ment au RÃ¨glement GÃ©nÃ©ral sur la Protection des DonnÃ©es (RGPD).<br><br>Par Ailleurs, Nous Aimerions Ponctuellement Vous Tenir InformÃ© Dâautres Contenus Qui Pourraient Vous IntÃ©resser. Si Vous Souhaitez Vous y Opposer, Veuillez DÃ©cocher La Case Correspondante Ci-avant<br><br>Vous pourrez vous dÃ©sabonner de ces communications Ã  tout moment.<br><br><ul><li>Accueil</li><li>Nos disponibilitÃ©s</li><li>Nos rÃ©fÃ©rences</li><li>ActualitÃ©s</li><li>Contactez-nous</li><li>Rejoignez-nous</li><li>Mentions lÃ©gales</li><li>Plan du site</li><li>Qui sommes-nous ?</li><li>PrÃ©sentation</li><li>AmÃ©nager le territoire</li><li>Chiffres clÃ©s</li><li>Gouvernance</li><li>Une prÃ©sence nationale</li><li>Nos engagements responsables</li><li>Le Groupe ALSEI</li><li>Nos mÃ©tiers</li><li>MaÃ®trise d'ouvrage</li><li>Asset management<br><br></li></ul>Suivez-nous sur les rÃ©seaux sociaux<br><br>Contactez-nous 01 40 40 29 40<br><br>Mentions lÃ©gales<br><br>@ ALSEI ENTREPRISE - Tous droits rÃ©servÃ©s<br><br>CrÃ©ation Agence digitale Alphalives<br/><br/>Please mention the word **REVERE** and tag RNTIuMTU1LjMzLjI0Mw== when applying to show you read the job post completely (#RNTIuMTU1LjMzLjI0Mw==). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-candidature-spontanee-alsei-1136286",
+      "location": "The Pas, ",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "labourer general manufacturing",
+      "organisation": "Utility Supply Corporation",
+      "description": "<strong>Overview<br><br></strong>Languages<br><br>English<br><br>Education<br><br><ul><li> No degree, certificate or diploma <br><br></li></ul><strong>Experience<br><br></strong>1 year to less than 2 years<br><br>On site<br><br>Work must be completed at the physical location. There is no option to work remotely.<br><br><strong>Benefits<br><br></strong>Health benefits<br><br><ul><li> Dental plan </li><li> Health care plan </li><li> Paramedical services coverage </li><li> Vision care benefits <br><br></li></ul>Financial benefits<br><br><ul><li> Bonus <br><br></li></ul><strong>Other Benefits<br><br></strong><ul><li> Free parking available</li></ul><br/><br/>Please mention the word **GRACIOUS** and tag RNTIuMTU1LjMzLjI0Mw== when applying to show you read the job post completely (#RNTIuMTU1LjMzLjI0Mw==). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-labourer-general-manufacturing-utility-supply-corporation-1136550",
+      "location": "Kitchener, ",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    }
+  ]
+}
