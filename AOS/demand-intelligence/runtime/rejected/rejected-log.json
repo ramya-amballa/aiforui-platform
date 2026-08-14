@@ -1736,6 +1736,44 @@
       "relevanceScore": 0,
       "categoriesMatched": [],
       "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0133",
+      "dateRejected": "2026-08-14",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Customer Service Representative",
+      "organisation": "Adaptive Teams",
+      "url": "https://remoteOK.com/remote-jobs/remote-customer-service-representative-adaptive-teams-1136566",
+      "relevanceScore": 10,
+      "categoriesMatched": [
+        "complianceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: complianceContext; no penalties)."
+    },
+    {
+      "id": "rej-0134",
+      "dateRejected": "2026-08-14",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "E commerce",
+      "organisation": "Kanji Sweets",
+      "url": "https://remoteOK.com/remote-jobs/remote-e-commerce-kanji-sweets-1136559",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0135",
+      "dateRejected": "2026-08-14",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Live In Nanny Bermuda",
+      "organisation": "Tucker's Farm Corporation",
+      "url": "https://remoteOK.com/remote-jobs/remote-live-in-nanny-bermuda-tuckers-farm-corporation-1136562",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
     }
   ]
 }
