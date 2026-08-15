@@ -680,6 +680,26 @@
       "firstSeen": "2026-08-14",
       "source": "RemoteOK",
       "title": "Live In Nanny Bermuda"
+    },
+    "59f8feefe463e7db": {
+      "firstSeen": "2026-08-15",
+      "source": "RemoteOK",
+      "title": "Room Attendant"
+    },
+    "7e6af0dd447d1d40": {
+      "firstSeen": "2026-08-15",
+      "source": "RemoteOK",
+      "title": "Locator"
+    },
+    "89e120a09c2b1f88": {
+      "firstSeen": "2026-08-15",
+      "source": "RemoteOK",
+      "title": "Sub Agent"
+    },
+    "1d102823eceaf956": {
+      "firstSeen": "2026-08-15",
+      "source": "RemoteOK",
+      "title": "Meat Clerk Day"
     }
   }
 }
