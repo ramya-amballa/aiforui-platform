@@ -1918,6 +1918,110 @@
         "roleResponsibilities"
       ],
       "reason": "Weak/insufficient relevance signal (matched: roleResponsibilities; no penalties)."
+    },
+    {
+      "id": "rej-0147",
+      "dateRejected": "2026-08-17",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Member of Technical Staff Engineering",
+      "organisation": "Physical Superintelligence",
+      "url": "https://remoteOK.com/remote-jobs/remote-member-of-technical-staff-engineering-physical-superintelligence-1136798",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0148",
+      "dateRejected": "2026-08-17",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Strategic Account Executive Lodging",
+      "organisation": "FreedomPay",
+      "url": "https://remoteOK.com/remote-jobs/remote-strategic-account-executive-lodging-freedompay-1136797",
+      "relevanceScore": 23,
+      "categoriesMatched": [
+        "companyIndustry",
+        "consultingContext",
+        "governanceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: companyIndustry, consultingContext, governanceContext; no penalties)."
+    },
+    {
+      "id": "rej-0149",
+      "dateRejected": "2026-08-17",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Staff Software Development Engineer SDM",
+      "organisation": "Delinea",
+      "url": "https://remoteOK.com/remote-jobs/remote-staff-software-development-engineer-sdm-delinea-1136796",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0150",
+      "dateRejected": "2026-08-17",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Senior Software Engineer Case Execution",
+      "organisation": "Pivotal Health",
+      "url": "https://remoteOK.com/remote-jobs/remote-senior-software-engineer-case-execution-pivotal-health-1136795",
+      "relevanceScore": 0,
+      "categoriesMatched": [
+        "governanceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: governanceContext; Healthcare role penalty (-20))."
+    },
+    {
+      "id": "rej-0151",
+      "dateRejected": "2026-08-17",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Cabin Cleaning Agent",
+      "organisation": "Menzies Aviation",
+      "url": "https://remoteOK.com/remote-jobs/remote-cabin-cleaning-agent-menzies-aviation-1136812",
+      "relevanceScore": 0,
+      "categoriesMatched": [
+        "complianceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: complianceContext; HR role penalty (-20))."
+    },
+    {
+      "id": "rej-0152",
+      "dateRejected": "2026-08-17",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Porteiro RibeirÃ£o Preto",
+      "organisation": "Savegnago Supermercados",
+      "url": "https://remoteOK.com/remote-jobs/remote-porteiro-ribeirao-preto-savegnago-supermercados-1136821",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0153",
+      "dateRejected": "2026-08-17",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "HIGIENIZADOR DE CARROS JABOTÃO DOS GUARARAPES PE",
+      "organisation": "Localiza&amp;Co",
+      "url": "https://remoteOK.com/remote-jobs/remote-higienizador-de-carros-jabotao-dos-guararapes-pe-localizaampco-1136823",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0154",
+      "dateRejected": "2026-08-17",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Promo merchandiser",
+      "organisation": "Glow &amp; Grow",
+      "url": "https://remoteOK.com/remote-jobs/remote-promo-merchandiser-glow-amp-grow-1136829",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
     }
   ]
 }
