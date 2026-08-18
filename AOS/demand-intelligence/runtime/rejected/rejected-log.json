@@ -2022,6 +2022,54 @@
       "relevanceScore": 0,
       "categoriesMatched": [],
       "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0155",
+      "dateRejected": "2026-08-18",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Flight Attendant",
+      "organisation": "HK Express",
+      "url": "https://remoteOK.com/remote-jobs/remote-flight-attendant-hk-express-1136903",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0156",
+      "dateRejected": "2026-08-18",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Polisher Waldorf Astoria Ras Al Khaimah",
+      "organisation": "Hilton",
+      "url": "https://remoteOK.com/remote-jobs/remote-polisher-waldorf-astoria-ras-al-khaimah-hilton-1136905",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0157",
+      "dateRejected": "2026-08-18",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Aviation Maintenance Technician",
+      "organisation": "FedEx",
+      "url": "https://remoteOK.com/remote-jobs/remote-aviation-maintenance-technician-fedex-1136922",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0158",
+      "dateRejected": "2026-08-18",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Flight Attendant",
+      "organisation": "Hongkong Express",
+      "url": "https://remoteOK.com/remote-jobs/remote-flight-attendant-hongkong-express-1136892",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
     }
   ]
 }
