@@ -34,6 +34,14 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
 
             <dl className="mt-12 space-y-6 border-t border-border pt-8">
               <div>
+                <dt className="text-eyebrow uppercase tracking-widest text-muted">WhatsApp</dt>
+                <dd className="mt-2 text-sm text-ink">
+                  <a href="/api/whatsapp" target="_blank" rel="noopener noreferrer" className="hover:text-accent">
+                    Chat on WhatsApp
+                  </a>
+                </dd>
+              </div>
+              <div>
                 <dt className="text-eyebrow uppercase tracking-widest text-muted">LinkedIn</dt>
                 <dd className="mt-2 text-sm text-ink">
                   <a href={site.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-accent">
