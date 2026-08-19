@@ -2070,6 +2070,73 @@
       "relevanceScore": 0,
       "categoriesMatched": [],
       "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0159",
+      "dateRejected": "2026-08-19",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "General Merchandise Department Manager",
+      "organisation": "Walmart Canada",
+      "url": "https://remoteOK.com/remote-jobs/remote-general-merchandise-department-manager-walmart-canada-1136940",
+      "relevanceScore": 16,
+      "categoriesMatched": [
+        "aiContext",
+        "complianceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: aiContext, complianceContext; no penalties)."
+    },
+    {
+      "id": "rej-0160",
+      "dateRejected": "2026-08-19",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Expression of Interest with First Quantum",
+      "organisation": "First Quantum Minerals",
+      "url": "https://remoteOK.com/remote-jobs/remote-expression-of-interest-with-first-quantum-first-quantum-minerals-1136944",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0161",
+      "dateRejected": "2026-08-19",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Fire Fighter",
+      "organisation": "Adani Airport Holdings Ltd",
+      "url": "https://remoteOK.com/remote-jobs/remote-fire-fighter-adani-airport-holdings-ltd-1136926",
+      "relevanceScore": 10,
+      "categoriesMatched": [
+        "complianceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: complianceContext; no penalties)."
+    },
+    {
+      "id": "rej-0162",
+      "dateRejected": "2026-08-19",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "What does 'fast paced environment' actually mean for my day day",
+      "organisation": "Baldwin Blueprint",
+      "url": "https://remoteOK.com/remote-jobs/remote-what-does-fast-paced-environment-actually-mean-for-my-day-day-baldwin-blueprint-1136931",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0163",
+      "dateRejected": "2026-08-19",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Compensation Benefits Manager",
+      "organisation": "Saisons Brother Holding",
+      "url": "https://remoteOK.com/remote-jobs/remote-compensation-benefits-manager-saisons-brother-holding-1136895",
+      "relevanceScore": 0,
+      "categoriesMatched": [
+        "complianceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: complianceContext; HR role penalty (-20))."
     }
   ]
 }

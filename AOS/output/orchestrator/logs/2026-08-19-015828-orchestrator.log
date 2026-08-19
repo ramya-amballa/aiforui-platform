@@ -1,0 +1,139 @@
+[2026-08-19T01:58:28.232645+00:00] AOS Orchestrator v1.0 — run started 2026-08-19T01:58:28.232314+00:00
+[2026-08-19T01:58:28.232679+00:00] Market Intelligence: attempt 1/3 -> 05-Market-Intelligence/runtime/monitor.py
+  EU AI Act: no feed URLs configured, skipping
+  ISO 42001: no feed URLs configured, skipping
+  NIST AI RMF: no feed URLs configured, skipping
+  DORA: no feed URLs configured, skipping
+  GDPR: no feed URLs configured, skipping
+  CBUAE: no feed URLs configured, skipping
+  RBI: no feed URLs configured, skipping
+  Microsoft AI: no feed URLs configured, skipping
+  OpenAI Enterprise: no feed URLs configured, skipping
+  Anthropic: no feed URLs configured, skipping
+  AI Security: no feed URLs configured, skipping
+  AI Governance: no feed URLs configured, skipping
+  Responsible AI: no feed URLs configured, skipping
+No new developments across any configured source. Nothing to do.
+[2026-08-19T01:58:28.349521+00:00] Market Intelligence: SUCCESS after 1 attempt(s), 0.12s
+[2026-08-19T01:58:28.349651+00:00] Website Intake Runtime: attempt 1/3 -> website-intake/runtime/generate.py
+No new website submissions in runtime/inbox/. Nothing to do.
+[2026-08-19T01:58:28.384034+00:00] Website Intake Runtime: SUCCESS after 1 attempt(s), 0.03s
+[2026-08-19T01:58:28.384128+00:00] Demand Intelligence: attempt 1/3 -> demand-intelligence/runtime/collect.py
+Collecting: demandSignals
+    Demand Signals: spaCy or its 'en_core_web_sm' model isn't installed — skipping. Run: pip install spacy && python3 -m spacy download en_core_web_sm
+Collecting: greenhouse
+  Greenhouse: no boardTokens configured, skipping (add company tokens to sources.json)
+Collecting: lever
+  Lever: no companies configured, skipping (add company slugs to sources.json)
+Collecting: ashby
+  Ashby: no jobBoardNames configured, skipping (add org names to sources.json)
+Collecting: remoteok
+Collecting: upwork
+  Upwork: connector-ready, no credentials configured — skipping
+Collecting: linkedinJobs
+  LinkedIn Jobs: connector-ready, awaiting Talent Solutions/Jobs API partner access — skipping
+Collecting: googleJobs
+  Google Jobs: connector-ready, no API credentials configured — skipping
+Collecting: wellfound
+  Wellfound: connector-ready, no known public/partner API to authenticate against yet — skipping
+Collecting: flexjobs
+  FlexJobs: connector-ready, no API credentials configured — skipping
+Collecting: uaeRecruiters
+  UAE Recruiters: no career page URLs configured, skipping
+Collecting: consultingFirms
+  Consulting Firms: no career page URLs configured, skipping
+Integration Status Dashboard written to AOS/output/demand-intelligence/integration-status-dashboard.md
+Collection Verification Report written to AOS/output/demand-intelligence/2026-08-19-collection-verification-report.md
+
+Discovered 27 postings across 12 sources; 5 are new after dedup.
+Wrote 5 new opportunities to AOS/demand-intelligence/runtime/inbox/2026-08-19-collected.json
+  [rejected] General Merchandise Department Manager -> relevance 16/100 — Weak/insufficient relevance signal (matched: aiContext, complianceContext; no penalties).
+  [rejected] Expression of Interest with First Quantum -> relevance 0/100 — No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity.
+  [rejected] Fire Fighter -> relevance 10/100 — Weak/insufficient relevance signal (matched: complianceContext; no penalties).
+  [rejected] What does 'fast paced environment' actually mean for my day day -> relevance 0/100 — No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity.
+  [rejected] Compensation Benefits Manager -> relevance 0/100 — Weak/insufficient relevance signal (matched: complianceContext; HR role penalty (-20)).
+
+0 opportunities processed, 5 rejected by the relevance engine. No daily report written (nothing passed the relevance threshold).
+[2026-08-19T01:58:29.095957+00:00] Demand Intelligence: SUCCESS after 1 attempt(s), 0.71s
+[2026-08-19T01:58:29.096100+00:00] Revenue Hunter: attempt 1/3 -> revenue-hunter/runtime/generate.py
+No new pipeline entries or stage changes this run.
+
+0 opportunity-sourced entries added, 0 CRM-sourced entries added, 0 stage(s) advanced. Dashboard and forecast written to AOS/output/revenue-hunter
+[2026-08-19T01:58:29.125665+00:00] Revenue Hunter: SUCCESS after 1 attempt(s), 0.03s
+[2026-08-19T01:58:29.125746+00:00] CRM: attempt 1/3 -> crm/runtime/generate.py
+No companies on record in company-intelligence.json yet. Nothing to report.
+[2026-08-19T01:58:29.151866+00:00] CRM: SUCCESS after 1 attempt(s), 0.03s
+[2026-08-19T01:58:29.151953+00:00] Service Mapping Engine: attempt 1/3 -> service-mapping/runtime/generate.py
+No new opportunities to map. Nothing to do.
+[2026-08-19T01:58:29.178691+00:00] Service Mapping Engine: SUCCESS after 1 attempt(s), 0.03s
+[2026-08-19T01:58:29.178762+00:00] Sales Director: attempt 1/3 -> sales-director/runtime/prepare.py
+No new classified opportunities to prepare, and no existing packages missing their proposal files. Nothing to do.
+[2026-08-19T01:58:29.209385+00:00] Sales Director: SUCCESS after 1 attempt(s), 0.03s
+[2026-08-19T01:58:29.209466+00:00] Account Intelligence: attempt 1/3 -> account-intelligence/runtime/generate.py
+No organisations qualified by Demand Intelligence yet. Nothing to do.
+[2026-08-19T01:58:29.239202+00:00] Account Intelligence: SUCCESS after 1 attempt(s), 0.03s
+[2026-08-19T01:58:29.239260+00:00] Relationship Intelligence: attempt 1/3 -> relationship-intelligence/runtime/generate.py
+No relationships tracked yet in relationship-profiles.json. Nothing to do.
+[2026-08-19T01:58:29.268504+00:00] Relationship Intelligence: SUCCESS after 1 attempt(s), 0.03s
+[2026-08-19T01:58:29.268600+00:00] Reverse Job Hunt: attempt 1/3 -> reverse-job-hunt/runtime/generate.py
+No organisations qualified by Demand Intelligence yet. Nothing to do.
+[2026-08-19T01:58:29.298260+00:00] Reverse Job Hunt: SUCCESS after 1 attempt(s), 0.03s
+[2026-08-19T01:58:29.298327+00:00] Recruiter Intelligence: attempt 1/3 -> recruiter-intelligence/runtime/generate.py
+No recruiter or consulting-channel contacts on record yet. Nothing to do.
+[2026-08-19T01:58:29.327308+00:00] Recruiter Intelligence: SUCCESS after 1 attempt(s), 0.03s
+[2026-08-19T01:58:29.327378+00:00] Fractional Advisory Radar: attempt 1/3 -> fractional-advisory-radar/runtime/generate.py
+No organisations qualified by Demand Intelligence yet. Nothing to do.
+[2026-08-19T01:58:29.354483+00:00] Fractional Advisory Radar: SUCCESS after 1 attempt(s), 0.03s
+[2026-08-19T01:58:29.354587+00:00] Tender & RFP Intelligence: attempt 1/3 -> tender-intelligence/runtime/generate.py
+    Tender Intelligence: no feed URLs configured, skipping
+No tenders tracked yet. Nothing more to do.
+0 new tender(s) this run, 0 tracked overall. Report: AOS/output/tender-intelligence/2026-08-19-tender-intelligence-report.md
+[2026-08-19T01:58:29.408621+00:00] Tender & RFP Intelligence: SUCCESS after 1 attempt(s), 0.05s
+[2026-08-19T01:58:29.408696+00:00] Executive Brand Intelligence: attempt 1/3 -> executive-brand-intelligence/runtime/generate.py
+No organisations qualified by Demand Intelligence yet. Nothing to do.
+[2026-08-19T01:58:29.438077+00:00] Executive Brand Intelligence: SUCCESS after 1 attempt(s), 0.03s
+[2026-08-19T01:58:29.438156+00:00] Delivery Intelligence: attempt 1/3 -> delivery-intelligence/runtime/generate.py
+No engagements at stage 'won' yet in pipeline.json. Nothing to do.
+[2026-08-19T01:58:29.467282+00:00] Delivery Intelligence: SUCCESS after 1 attempt(s), 0.03s
+[2026-08-19T01:58:29.467362+00:00] Company 360: attempt 1/3 -> company-360/runtime/generate.py
+No organisations profiled yet by Demand Intelligence. Nothing to do.
+[2026-08-19T01:58:29.497249+00:00] Company 360: SUCCESS after 1 attempt(s), 0.03s
+[2026-08-19T01:58:29.497343+00:00] Executive Memory: attempt 1/3 -> executive-memory/runtime/generate.py
+Days of CEO Advisor priority history: 17
+Recurring priorities: 0 | Recurring alerts: 1
+Lessons Learned entries: 0 | Recurring governance risks: 0
+Founder-recorded decisions: 0
+Report: AOS/output/executive-memory/2026-08-19-executive-memory-report.md
+[2026-08-19T01:58:29.526021+00:00] Executive Memory: SUCCESS after 1 attempt(s), 0.03s
+[2026-08-19T01:58:29.526112+00:00] Market Positioning Intelligence: attempt 1/3 -> market-positioning-intelligence/runtime/generate.py
+Service demand coverage: 0/10 services validated by real demand
+Regulatory tailwinds: 0 source(s), 0 substantive development(s)
+Lost opportunities on record: 0
+Report: AOS/output/market-positioning-intelligence/2026-08-19-market-positioning-report.md
+[2026-08-19T01:58:29.553097+00:00] Market Positioning Intelligence: SUCCESS after 1 attempt(s), 0.03s
+[2026-08-19T01:58:29.553164+00:00] Capacity Management: attempt 1/3 -> capacity-management/runtime/generate.py
+Capacity status: Available Capacity
+Active engagements: 0 (0-0 days) | Pending proposals: 0 (0-0 days)
+Weeks of committed work at 4 days/week: 0.0-0.0
+Report: AOS/output/capacity-management/2026-08-19-capacity-report.md
+[2026-08-19T01:58:29.580126+00:00] Capacity Management: SUCCESS after 1 attempt(s), 0.03s
+[2026-08-19T01:58:29.580190+00:00] Product Manager: attempt 1/3 -> product-manager/runtime/generate.py
+No new or unscored signals from any source. Nothing to do.
+[2026-08-19T01:58:29.605751+00:00] Product Manager: SUCCESS after 1 attempt(s), 0.03s
+[2026-08-19T01:58:29.605827+00:00] Content Director: attempt 1/3 -> content-director/runtime/generate.py
+No new signals from any source. Nothing to do.
+[2026-08-19T01:58:29.633020+00:00] Content Director: SUCCESS after 1 attempt(s), 0.03s
+[2026-08-19T01:58:29.633089+00:00] Daily Brief: attempt 1/3 -> executive-dashboard/runtime/generate.py
+Executive Dashboard written to /home/runner/work/aiforui-platform/aiforui-platform/AOS/output/executive-dashboard/executive-dashboard.md and /home/runner/work/aiforui-platform/aiforui-platform/AOS/output/executive-dashboard/executive-dashboard.html
+Daily Executive Brief archived to AOS/output/daily-briefs/2026/08/19
+[2026-08-19T01:58:29.666752+00:00] Daily Brief: SUCCESS after 1 attempt(s), 0.03s
+[2026-08-19T01:58:29.666858+00:00] Artifact Registry: attempt 1/3 -> artifact-registry/runtime/registry_builder.py
+Artifact Registry: 377 artifact(s) indexed across 16 employee(s).
+Index written to AOS/output/artifact-registry/artifact-index.json
+[2026-08-19T01:58:29.740241+00:00] Artifact Registry: SUCCESS after 1 attempt(s), 0.07s
+[2026-08-19T01:58:29.740318+00:00] CEO Advisor: attempt 1/3 -> ceo-advisor/runtime/generate.py
+No priority candidates today.
+Revenue winnable today: unestimated; at risk: unestimated
+1 strategic alert(s); 0 item(s) on the ignore list.
+[2026-08-19T01:58:29.777297+00:00] CEO Advisor: SUCCESS after 1 attempt(s), 0.04s
+[2026-08-19T01:58:29.778074+00:00] Run finished: SUCCESS. Report: AOS/output/orchestrator/reports/2026-08-19-daily-execution-report.md
