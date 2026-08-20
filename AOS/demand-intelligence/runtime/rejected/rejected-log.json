@@ -2137,6 +2137,120 @@
         "complianceContext"
       ],
       "reason": "Weak/insufficient relevance signal (matched: complianceContext; HR role penalty (-20))."
+    },
+    {
+      "id": "rej-0164",
+      "dateRejected": "2026-08-20",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Unexploded Ordnance Tech II",
+      "organisation": "Alaka`ina Foundation Family of Companies",
+      "url": "https://remoteOK.com/remote-jobs/remote-unexploded-ordnance-tech-ii-alakaina-foundation-family-of-companies-1136955",
+      "relevanceScore": 0,
+      "categoriesMatched": [
+        "companyIndustry"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: companyIndustry; Healthcare role penalty (-40))."
+    },
+    {
+      "id": "rej-0165",
+      "dateRejected": "2026-08-20",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Marketing Operations Specialist",
+      "organisation": "Engine",
+      "url": "https://remoteOK.com/remote-jobs/remote-marketing-operations-specialist-engine-1136950",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0166",
+      "dateRejected": "2026-08-20",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Customer Care Representative Associate Omani Nationals only",
+      "organisation": "FedEx",
+      "url": "https://remoteOK.com/remote-jobs/remote-customer-care-representative-associate-omani-nationals-only-fedex-1136989",
+      "relevanceScore": 10,
+      "categoriesMatched": [
+        "complianceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: complianceContext; no penalties)."
+    },
+    {
+      "id": "rej-0167",
+      "dateRejected": "2026-08-20",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Field Sales Executive",
+      "organisation": "Bhushan International",
+      "url": "https://remoteOK.com/remote-jobs/remote-field-sales-executive-bhushan-international-1136995",
+      "relevanceScore": 5,
+      "categoriesMatched": [
+        "companyIndustry"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: companyIndustry; no penalties)."
+    },
+    {
+      "id": "rej-0168",
+      "dateRejected": "2026-08-20",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Team Member Cotton On Market City Mega",
+      "organisation": "Cotton On Group",
+      "url": "https://remoteOK.com/remote-jobs/remote-team-member-cotton-on-market-city-mega-cotton-on-group-1136969",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0169",
+      "dateRejected": "2026-08-20",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Solutions Delivery Manager",
+      "organisation": "Benchling",
+      "url": "https://remoteOK.com/remote-jobs/remote-solutions-delivery-manager-benchling-1136937",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG, AI Agents) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0170",
+      "dateRejected": "2026-08-20",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Sales Assistant",
+      "organisation": "Antojitos Mexicanos La Jefa",
+      "url": "https://remoteOK.com/remote-jobs/remote-sales-assistant-antojitos-mexicanos-la-jefa-1136975",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0171",
+      "dateRejected": "2026-08-20",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Ground Staff Required Thiruvananthapuram Airport",
+      "organisation": "Fronix Services",
+      "url": "https://remoteOK.com/remote-jobs/remote-ground-staff-required-thiruvananthapuram-airport-fronix-services-1136991",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0172",
+      "dateRejected": "2026-08-20",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Sales Team Member Cotton On Ballina Fair",
+      "organisation": "Cotton On Group",
+      "url": "https://remoteOK.com/remote-jobs/remote-sales-team-member-cotton-on-ballina-fair-cotton-on-group-1136970",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
     }
   ]
 }
