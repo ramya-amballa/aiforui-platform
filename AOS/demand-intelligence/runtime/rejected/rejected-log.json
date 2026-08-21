@@ -2251,6 +2251,44 @@
       "relevanceScore": 0,
       "categoriesMatched": [],
       "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0173",
+      "dateRejected": "2026-08-21",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Trimmer",
+      "organisation": "Canopy Growth Corporation",
+      "url": "https://remoteOK.com/remote-jobs/remote-trimmer-canopy-growth-corporation-1136997",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0174",
+      "dateRejected": "2026-08-21",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Baker Day",
+      "organisation": "Loblaw Companies Limited",
+      "url": "https://remoteOK.com/remote-jobs/remote-baker-day-loblaw-companies-limited-1136999",
+      "relevanceScore": 0,
+      "categoriesMatched": [
+        "aiContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: aiContext; Isolated weak-keyword penalty (-15))."
+    },
+    {
+      "id": "rej-0175",
+      "dateRejected": "2026-08-21",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Technician 1",
+      "organisation": "Sunbelt Rentals, Inc.",
+      "url": "https://remoteOK.com/remote-jobs/remote-technician-1-sunbelt-rentals-inc-1137018",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
     }
   ]
 }
