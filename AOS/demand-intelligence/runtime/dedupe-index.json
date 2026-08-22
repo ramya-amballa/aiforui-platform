@@ -880,6 +880,16 @@
       "firstSeen": "2026-08-21",
       "source": "RemoteOK",
       "title": "Technician 1"
+    },
+    "b4112d3c2063a24b": {
+      "firstSeen": "2026-08-22",
+      "source": "RemoteOK",
+      "title": "Sales Advisor"
+    },
+    "65b6f14592483320": {
+      "firstSeen": "2026-08-22",
+      "source": "RemoteOK",
+      "title": "Front Office Executive"
     }
   }
 }

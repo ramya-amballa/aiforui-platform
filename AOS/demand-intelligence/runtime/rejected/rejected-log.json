@@ -2289,6 +2289,30 @@
       "relevanceScore": 0,
       "categoriesMatched": [],
       "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0176",
+      "dateRejected": "2026-08-22",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Sales Advisor",
+      "organisation": "H&amp;M",
+      "url": "https://remoteOK.com/remote-jobs/remote-sales-advisor-hampm-1137044",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0177",
+      "dateRejected": "2026-08-22",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Front Office Executive",
+      "organisation": "Radisson Hotel Group",
+      "url": "https://remoteOK.com/remote-jobs/remote-front-office-executive-radisson-hotel-group-1137008",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
     }
   ]
 }
