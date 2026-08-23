@@ -1,0 +1,10 @@
+{
+  "schema": {
+    "opportunityId": "string — already mapped, this run and every prior run skips it"
+  },
+  "processed": {
+    "opp-0001": {
+      "dateMapped": "2026-08-23"
+    }
+  }
+}

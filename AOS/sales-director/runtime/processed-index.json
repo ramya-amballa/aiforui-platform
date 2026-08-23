@@ -5,5 +5,15 @@
     "status": "string — Proposal Ready, Needs Review, or Ready To Send",
     "packagePath": "string — path to the generated package, relative to the repo root"
   },
-  "processed": {}
+  "processed": {
+    "opp-0001": {
+      "datePrepared": "2026-08-23",
+      "status": "Needs Review",
+      "packagePath": "AOS/output/sales-director/packages/opp-0001-rainfocus-senior-governance-risk-and-compliance-analyst.md",
+      "proposalPath": "AOS/output/sales-director/packages/opp-0001-rainfocus-senior-governance-risk-and-compliance-analyst-proposal.md",
+      "coverLetterPath": "AOS/output/sales-director/packages/opp-0001-rainfocus-senior-governance-risk-and-compliance-analyst-cover-letter.md",
+      "recruiterMessagePath": "AOS/output/sales-director/packages/opp-0001-rainfocus-senior-governance-risk-and-compliance-analyst-recruiter-message.md",
+      "clientOutreachPath": "AOS/output/sales-director/packages/opp-0001-rainfocus-senior-governance-risk-and-compliance-analyst-client-outreach.md"
+    }
+  }
 }

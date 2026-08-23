@@ -2313,6 +2313,66 @@
       "relevanceScore": 0,
       "categoriesMatched": [],
       "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0178",
+      "dateRejected": "2026-08-23",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Project Systems Specialist",
+      "organisation": "Dart",
+      "url": "https://remoteOK.com/remote-jobs/remote-project-systems-specialist-dart-1137069",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0179",
+      "dateRejected": "2026-08-23",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Estimator Brisbane",
+      "organisation": "McNab",
+      "url": "https://remoteOK.com/remote-jobs/remote-estimator-brisbane-mcnab-1137047",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0180",
+      "dateRejected": "2026-08-23",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Removalist Offsider",
+      "organisation": "Kent Removals &amp; Storage",
+      "url": "https://remoteOK.com/remote-jobs/remote-removalist-offsider-kent-removals-amp-storage-1137059",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0181",
+      "dateRejected": "2026-08-23",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Stock Assistant Supre Parramatta",
+      "organisation": "Cotton On Group",
+      "url": "https://remoteOK.com/remote-jobs/remote-stock-assistant-supre-parramatta-cotton-on-group-1137039",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0182",
+      "dateRejected": "2026-08-23",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Justice Officer Grounds and Services",
+      "organisation": "Department of Justice and Community Safety, Victoria",
+      "url": "https://remoteOK.com/remote-jobs/remote-justice-officer-grounds-and-services-department-of-justice-and-community-safety-victoria-1137067",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
     }
   ]
 }

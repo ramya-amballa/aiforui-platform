@@ -19,5 +19,26 @@
     "nextActionDue": "string — ISO 8601 date",
     "expectedCloseDate": "string — ISO 8601 date, the month this is expected to convert or fall through; used by revenue-forecasting-engine.md to bucket forecasts by month"
   },
-  "pipeline": []
+  "pipeline": [
+    {
+      "id": "rev-0001",
+      "dateAdded": "2026-08-23",
+      "type": "Consulting Project",
+      "title": "Senior Governance Risk and Compliance Analyst",
+      "organisation": "RainFocus",
+      "sourceRef": "opp-0001",
+      "expectedRevenue": "Not yet estimated",
+      "probabilityOfSuccess": 4.0,
+      "effortRequired": 7.0,
+      "strategicValue": 6.0,
+      "score": 52,
+      "band": "Active",
+      "stage": "identified",
+      "owner": "Ramya",
+      "lastTouch": "2026-08-23",
+      "nextAction": "Leave it, next scheduled touch stands.",
+      "nextActionDue": "2026-08-30",
+      "expectedCloseDate": null
+    }
+  ]
 }

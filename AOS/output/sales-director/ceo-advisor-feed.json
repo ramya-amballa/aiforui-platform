@@ -1,0 +1,28 @@
+{
+  "schema": {
+    "opportunityId": "string",
+    "title": "string",
+    "organisation": "string",
+    "status": "string — Proposal Ready, Needs Review, or Ready To Send — the only field 09-CEO-Advisor reads",
+    "packagePath": "string — the combined package (all sections in one file); CEO Advisor does not open this itself",
+    "proposalPath": "string — standalone proposal document, so the dashboard can preview/copy/download it alone",
+    "coverLetterPath": "string — standalone cover letter",
+    "recruiterMessagePath": "string — standalone recruiter outreach message",
+    "clientOutreachPath": "string — standalone client outreach message"
+  },
+  "feed": [
+    {
+      "opportunityId": "opp-0001",
+      "title": "Senior Governance Risk and Compliance Analyst",
+      "organisation": "RainFocus",
+      "status": "Needs Review",
+      "qualificationVerdict": "Consider",
+      "qualificationScore": 5.2,
+      "packagePath": "AOS/output/sales-director/packages/opp-0001-rainfocus-senior-governance-risk-and-compliance-analyst.md",
+      "proposalPath": "AOS/output/sales-director/packages/opp-0001-rainfocus-senior-governance-risk-and-compliance-analyst-proposal.md",
+      "coverLetterPath": "AOS/output/sales-director/packages/opp-0001-rainfocus-senior-governance-risk-and-compliance-analyst-cover-letter.md",
+      "recruiterMessagePath": "AOS/output/sales-director/packages/opp-0001-rainfocus-senior-governance-risk-and-compliance-analyst-recruiter-message.md",
+      "clientOutreachPath": "AOS/output/sales-director/packages/opp-0001-rainfocus-senior-governance-risk-and-compliance-analyst-client-outreach.md"
+    }
+  ]
+}

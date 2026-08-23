@@ -1,0 +1,44 @@
+{
+  "schema": {
+    "opportunityId": "string — matches demand-intelligence/opportunity-schema.json's id",
+    "title": "string",
+    "organisation": "string",
+    "dateMapped": "string — ISO 8601 date",
+    "notApplicable": "boolean — true for Ignore/Convert into Content/Convert into Product Idea; every field below is null when true",
+    "notApplicableReason": "string or null",
+    "primaryService": "string or null — one of service-catalogue.json's primaryServices",
+    "primaryServiceReason": "string or null — which rule matched, for transparency",
+    "secondaryServices": "array of strings — natural follow-on services, ordered",
+    "recommendedEngagementType": "string or null — one of service-catalogue.json's engagementTypes",
+    "estimatedProjectSize": "string or null — Small, Medium, Large, or Enterprise",
+    "projectSizeBasis": "string or null — 'pipeline-revenue' (a real expectedRevenue figure) or 'heuristic-estimate' (Primary-Service default adjusted by the 0-10 expectedRevenue score) — never fabricated, always labelled",
+    "recommendedProposalTemplate": "string or null — a real filename in templates/proposals/",
+    "crossSellOpportunities": "array of strings"
+  },
+  "recommendations": {
+    "opp-0001": {
+      "opportunityId": "opp-0001",
+      "title": "Senior Governance Risk and Compliance Analyst",
+      "organisation": "RainFocus",
+      "dateMapped": "2026-08-23",
+      "notApplicable": false,
+      "notApplicableReason": null,
+      "primaryService": "AI Deployment Governance (ADGL)",
+      "primaryServiceReason": "ADGL/AI Deployment Governance domainTag",
+      "secondaryServices": [
+        "AI Governance Operating Model",
+        "AI Control Library",
+        "Fractional Governance Support"
+      ],
+      "recommendedEngagementType": "Advisory engagement",
+      "estimatedProjectSize": "Large",
+      "projectSizeBasis": "heuristic-estimate",
+      "recommendedProposalTemplate": "ai-governance-proposal-template.md",
+      "crossSellOpportunities": [
+        "Executive Workshop",
+        "The ADGL Methodology",
+        "Executive Capability Overview"
+      ]
+    }
+  }
+}
