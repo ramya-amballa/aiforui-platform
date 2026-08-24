@@ -2373,6 +2373,46 @@
       "relevanceScore": 0,
       "categoriesMatched": [],
       "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0183",
+      "dateRejected": "2026-08-24",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Retail Store Associate",
+      "organisation": "Rowan",
+      "url": "https://remoteOK.com/remote-jobs/remote-retail-store-associate-rowan-1137073",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0184",
+      "dateRejected": "2026-08-24",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Senior Specialist Global QMS",
+      "organisation": "Orca Bio",
+      "url": "https://remoteOK.com/remote-jobs/remote-senior-specialist-global-qms-orca-bio-1137072",
+      "relevanceScore": 30,
+      "categoriesMatched": [
+        "complianceContext",
+        "governanceContext",
+        "roleResponsibilities"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: complianceContext, governanceContext, roleResponsibilities; no penalties)."
+    },
+    {
+      "id": "rej-0185",
+      "dateRejected": "2026-08-24",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Team Manager Newry Extra",
+      "organisation": "Tesco",
+      "url": "https://remoteOK.com/remote-jobs/remote-team-manager-newry-extra-tesco-1137077",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
     }
   ]
 }
