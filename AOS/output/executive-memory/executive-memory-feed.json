@@ -7,14 +7,19 @@
     "recurringGovernanceRisks": "array of {risk, organisations, occurrenceCount}",
     "founderDecisions": "array — decision-log.json's own decisions, read-only"
   },
-  "recurringPriorities": [],
+  "recurringPriorities": [
+    {
+      "organisation": "RainFocus",
+      "daysInTop3": 2
+    }
+  ],
   "recurringAlerts": [
     {
       "alertType": "No website enquiries received",
-      "daysFired": 22
+      "daysFired": 23
     }
   ],
-  "daysTracked": 22,
+  "daysTracked": 23,
   "lessonsLearnedLibrary": [],
   "recurringGovernanceRisks": [],
   "founderDecisions": []
