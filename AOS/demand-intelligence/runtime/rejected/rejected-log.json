@@ -2437,6 +2437,54 @@
       "relevanceScore": 0,
       "categoriesMatched": [],
       "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0188",
+      "dateRejected": "2026-08-27",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Team Manager Newtownards Extra",
+      "organisation": "Tesco",
+      "url": "https://remoteOK.com/remote-jobs/remote-team-manager-newtownards-extra-tesco-1137144",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0189",
+      "dateRejected": "2026-08-27",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Ramp Attendant",
+      "organisation": "Swissport",
+      "url": "https://remoteOK.com/remote-jobs/remote-ramp-attendant-swissport-1137140",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0190",
+      "dateRejected": "2026-08-27",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Video Editor",
+      "organisation": "Locals",
+      "url": "https://remoteOK.com/remote-jobs/remote-video-editor-locals-1137158",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0191",
+      "dateRejected": "2026-08-27",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Senior Backend Engineer Build AI Agents",
+      "organisation": "Salesforge",
+      "url": "https://remoteOK.com/remote-jobs/remote-senior-backend-engineer-build-ai-agents-salesforge-1137114",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: AI Agents) — likely a substring false positive upstream, not a real opportunity."
     }
   ]
 }
