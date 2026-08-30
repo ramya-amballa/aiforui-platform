@@ -1,11 +1,11 @@
 # CEO Weekly Report
 
-**Generated:** 2026-08-29
+**Generated:** 2026-08-30
 **Window:** trailing 7 days, regenerated every run
 
-**Opportunities found this period:** 1
+**Opportunities found this period:** 0
 
-**By classification:** Apply (1)
+**By classification:** none
 
 **Total open pipeline value:** unestimated
 
