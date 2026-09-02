@@ -1,0 +1,43 @@
+# Exam template - formal serif look for certification/exam-prep style content.
+name: exam
+description: "Formal serif theme, muted navy palette."
+
+background:
+  color: "#F4F1EA"
+
+fonts:
+  question: { family: "DejaVu Serif Bold", size: 50, color: "#1E293B" }
+  option_label: { family: "DejaVu Serif Bold", size: 36, color: "#1E3A5F" }
+  option_text: { family: "DejaVu Serif", size: 36, color: "#334155" }
+  timer: { family: "DejaVu Serif Bold", size: 90, color: "#B45309" }
+  banner: { family: "DejaVu Serif Bold", size: 42, color: "#166534" }
+  footer: { family: "DejaVu Serif", size: 22, color: "#64748B" }
+
+colors:
+  option_box: "#FFFFFF"
+  option_box_border: "#CBD5C0"
+  correct_box: "#E7F3E8"
+  correct_box_border: "#166534"
+
+layout:
+  question:
+    position: [140, 130]
+    max_width: 1640
+    line_spacing: 10
+  options:
+    start_position: [140, 480]
+    box_width: 1640
+    box_height: 106
+    row_gap: 24
+    text_padding: 30
+  timer:
+    position: [960, 405]
+  footer:
+    text: "AIforU&I -- Exam Prep Series"
+    position: [140, 1030]
+
+timing:
+  countdown_seconds: 6
+  transition_seconds: 0.5
+
+show_explanation_text: false

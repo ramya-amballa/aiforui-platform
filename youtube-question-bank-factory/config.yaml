@@ -1,0 +1,98 @@
+# ============================================================================
+# Question-Bank Video Factory - Configuration
+# ============================================================================
+# Every setting here can be overridden by an environment variable of the
+# same name in UPPER_CASE (e.g. TTS_PROVIDER, AI_PROVIDER, TTS_CONCURRENCY).
+# No API keys belong in this file - see .env.example.
+# ============================================================================
+
+# ----------------------------------------------------------------------------
+# AI provider - used ONLY for explanation/narration text generation.
+# Never used to invent or search for questions - questions are always
+# supplied by the user's question bank.
+# ----------------------------------------------------------------------------
+ai:
+  provider: local          # local | claude | openai | gemini
+  model: claude-sonnet-5   # provider-specific model id, ignored by "local"
+  temperature: 0.3
+  max_retries: 3
+  retry_backoff_seconds: 2
+  timeout_seconds: 60
+
+# ----------------------------------------------------------------------------
+# Text-to-Speech - MUST be local/offline. No pay-per-character APIs.
+# ----------------------------------------------------------------------------
+tts:
+  provider: kokoro          # kokoro | piper
+  fallback_provider: piper  # used automatically if the primary provider fails to load
+  voice: af_heart            # kokoro voice id (or piper voice model name)
+  speed: 1.0
+  sample_rate: 24000
+  lang: en-us
+  model_dir: models          # where kokoro/piper model weights live locally
+  audio_format: mp3          # mp3 | wav
+  mp3_bitrate: 128k
+  # milliseconds of silence inserted between narration segments (question,
+  # options, countdown, reveal, explanation, takeaway)
+  pause_ms:
+    after_question: 600
+    after_option: 350
+    before_reveal: 1200
+    after_reveal: 500
+    between_explanations: 400
+
+# ----------------------------------------------------------------------------
+# Concurrency - keep this conservative; local TTS is CPU/GPU bound.
+# ----------------------------------------------------------------------------
+concurrency:
+  tts_concurrency: 2
+  ai_concurrency: 3
+  render_concurrency: 1
+
+# ----------------------------------------------------------------------------
+# Video rendering
+# ----------------------------------------------------------------------------
+video:
+  template: default          # default | minimal | exam (see templates/)
+  resolution: [1920, 1080]
+  fps: 30
+  questions_per_video: 60    # default video-size for batch splitting
+  countdown_seconds: 5
+  reveal_seconds: 3
+  transition_seconds: 0.5
+  show_explanation_text: false   # explanation is spoken, not displayed, by default
+
+# ----------------------------------------------------------------------------
+# Retry / fault tolerance
+# ----------------------------------------------------------------------------
+pipeline:
+  max_retries_per_stage: 2
+  retry_backoff_seconds: 3
+  stop_on_error: false        # a single question failure must never halt the batch
+
+# ----------------------------------------------------------------------------
+# Human review thresholds
+# ----------------------------------------------------------------------------
+review:
+  min_confidence_to_auto_pass: 0.75   # validation confidence below this => NEEDS_REVIEW
+  allow_video_for_needs_review: false  # do not produce final audio/video for flagged items unless true
+
+# ----------------------------------------------------------------------------
+# Paths (relative to project root unless absolute)
+# ----------------------------------------------------------------------------
+paths:
+  input_dir: data/input
+  normalized_dir: data/normalized
+  processed_dir: data/processed
+  jobs_dir: data/jobs
+  videos_dir: data/videos
+  reports_dir: data/reports
+  logs_dir: data/logs
+  cache_dir: data/cache
+
+# ----------------------------------------------------------------------------
+# Logging
+# ----------------------------------------------------------------------------
+logging:
+  level: INFO           # DEBUG | INFO | WARNING | ERROR
+  json_logs: false
