@@ -2671,6 +2671,33 @@
       "relevanceScore": 0,
       "categoriesMatched": [],
       "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0207",
+      "dateRejected": "2026-09-02",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Produce Clerk",
+      "organisation": "Food Basics",
+      "url": "https://remoteOK.com/remote-jobs/remote-produce-clerk-food-basics-1137247",
+      "relevanceScore": 16,
+      "categoriesMatched": [
+        "aiContext",
+        "complianceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: aiContext, complianceContext; no penalties)."
+    },
+    {
+      "id": "rej-0208",
+      "dateRejected": "2026-09-02",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Kitchen Porter W Edinburgh",
+      "organisation": "W Hotels",
+      "url": "https://remoteOK.com/remote-jobs/remote-kitchen-porter-w-edinburgh-w-hotels-1137237",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
     }
   ]
 }
