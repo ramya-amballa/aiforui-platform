@@ -2698,6 +2698,106 @@
       "relevanceScore": 0,
       "categoriesMatched": [],
       "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0209",
+      "dateRejected": "2026-09-03",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Chief Steward",
+      "organisation": "W Hotels",
+      "url": "https://remoteOK.com/remote-jobs/remote-chief-steward-w-hotels-1137272",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0210",
+      "dateRejected": "2026-09-03",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Field Officer Bendigo",
+      "organisation": "Department of Justice and Community Safety, Victoria",
+      "url": "https://remoteOK.com/remote-jobs/remote-field-officer-bendigo-department-of-justice-and-community-safety-victoria-1137267",
+      "relevanceScore": 5,
+      "categoriesMatched": [
+        "companyIndustry"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: companyIndustry; no penalties)."
+    },
+    {
+      "id": "rej-0211",
+      "dateRejected": "2026-09-03",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Vehicle Detailer",
+      "organisation": "Clutch",
+      "url": "https://remoteOK.com/remote-jobs/remote-vehicle-detailer-clutch-1137278",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0212",
+      "dateRejected": "2026-09-03",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "H&amp;M Visual Merchandiser Plaza del Sol",
+      "organisation": "H&amp;M",
+      "url": "https://remoteOK.com/remote-jobs/remote-hampm-visual-merchandiser-plaza-del-sol-hampm-1137270",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0213",
+      "dateRejected": "2026-09-03",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Vehicle Technician MOT Tester",
+      "organisation": "Halfords",
+      "url": "https://remoteOK.com/remote-jobs/remote-vehicle-technician-mot-tester-halfords-1137258",
+      "relevanceScore": 10,
+      "categoriesMatched": [
+        "roleResponsibilities"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: roleResponsibilities; no penalties)."
+    },
+    {
+      "id": "rej-0214",
+      "dateRejected": "2026-09-03",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Expression of Interest Canât see a role thatâs right for you",
+      "organisation": "C2 Group",
+      "url": "https://remoteOK.com/remote-jobs/remote-expression-of-interest-cant-see-a-role-thats-right-for-you-c2-group-1137251",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0215",
+      "dateRejected": "2026-09-03",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "HIGIENIZADOR DE CARROS BLUMENAU SC",
+      "organisation": "Localiza&amp;Co",
+      "url": "https://remoteOK.com/remote-jobs/remote-higienizador-de-carros-blumenau-sc-localizaampco-1137269",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0216",
+      "dateRejected": "2026-09-03",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Captains Capitanes",
+      "organisation": "Copa Airlines",
+      "url": "https://remoteOK.com/remote-jobs/remote-captains-capitanes-copa-airlines-1137271",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
     }
   ]
 }
