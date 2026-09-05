@@ -2812,6 +2812,20 @@
         "complianceContext"
       ],
       "reason": "Weak/insufficient relevance signal (matched: complianceContext; no penalties)."
+    },
+    {
+      "id": "rej-0218",
+      "dateRejected": "2026-09-05",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "QA Engineer",
+      "organisation": "SunnyData",
+      "url": "https://remoteOK.com/remote-jobs/remote-qa-engineer-sunnydata-1137300",
+      "relevanceScore": 10,
+      "categoriesMatched": [
+        "roleResponsibilities"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: roleResponsibilities; no penalties)."
     }
   ]
 }
