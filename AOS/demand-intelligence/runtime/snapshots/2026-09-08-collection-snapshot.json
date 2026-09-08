@@ -1,0 +1,735 @@
+{
+  "date": "2026-09-08",
+  "totalDiscovered": 21,
+  "perSource": {
+    "demandSignals": 0,
+    "greenhouse": 0,
+    "lever": 0,
+    "ashby": 0,
+    "remoteok": 21,
+    "upwork": 0,
+    "linkedinJobs": 0,
+    "googleJobs": 0,
+    "wellfound": 0,
+    "flexjobs": 0,
+    "uaeRecruiters": 0,
+    "consultingFirms": 0
+  },
+  "perSourceErrors": {},
+  "opportunities": [
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "QA Engineer",
+      "organisation": "SunnyData",
+      "description": "<p style=\"min-height:1.5em\"><strong>About SunnyData</strong><br />At SunnyData, a leading DataBricks technology partner, our mission is to empower customers with scalable architectures, robust data engineering pipelines, seamless data consumption layers, and advanced ML and AI applications. As a<strong> QA Engineer </strong>with a strong focus on Data, you will understand requirements and translate them into effective test cases, execute and automate those tests, and track testing progress and defects.</p><div style=\"min-height:1.2em;margin-top:0;margin-bottom:0\">Â </div><p style=\"min-height:1.5em\"><strong>The Impact Youâll Have</strong></p><ul style=\"min-height:1.5em\"><li><p style=\"min-height:1.5em\">Understand requirements and translate them into test plans and test cases, ensuring requirements traceability.</p></li><li><p style=\"min-height:1.5em\">Execute test cases, including regression testing, and document results and testing progress.</p></li><li><p style=\"min-height:1.5em\">Document, track, and validate the resolution of software defects in collaboration with Engineering.</p></li><li><p style=\"min-height:1.5em\">Work with business stakeholders to clarify requirements and address testing-related questions.</p></li><li><p style=\"min-height:1.5em\">Collaborate with engineers to investigate defects and determine the right solutions.</p></li><li><p style=\"min-height:1.5em\">Validate data across applications, APIs, databases, and data pipelines to ensure accuracy, consistency, and integrity.</p></li><li><p style=\"min-height:1.5em\">Establish and document testing processes, standards, and best practices.</p></li><li><p style=\"min-height:1.5em\">Contribute to continuous improvement of testing processes and data quality.</p></li><li><p style=\"min-height:1.5em\">Leverage AI tools to improve automation efficiency, data validation, and test coverage.</p></li><li><p style=\"min-height:1.5em\">Collaborate with Engineering and Data teams to ensure high-quality software and reliable data.</p></li></ul><div style=\"min-height:1.2em;margin-top:0;margin-bottom:0\">Â </div><p style=\"min-height:1.5em\"><strong>What We Look For</strong></p><ul style=\"min-height:1.5em\"><li><p style=\"min-height:1.5em\">4+ years of experience in Quality Assurance.</p></li><li><p style=\"min-height:1.5em\">Hands-on experience with test automation using Playwright and/or Cypress.</p></li><li><p style=\"min-height:1.5em\">Strong SQL skills and experience validating data in databases.</p></li><li><p style=\"min-height:1.5em\">Experience testing APIs and data-driven applications.</p></li><li><p style=\"min-height:1.5em\">Understanding of data quality, consistency, and integrity.</p></li><li><p style=\"min-height:1.5em\">Experience with GitHub and CI/CD pipelines.</p></li><li><p style=\"min-height:1.5em\">Cloud experience is a plus.</p></li><li><p style=\"min-height:1.5em\">Strong analytical and problem-solving skills.</p></li><li><p style=\"min-height:1.5em\">Strong attention to detail and ability to effectively document, troubleshoot, and communicate defects and test results.</p></li><li><p style=\"min-height:1.5em\">Strong organizational skills, with the ability to manage multiple testing initiatives and drive them to completion.</p></li><li><p style=\"min-height:1.5em\">Proactive mindset, with the ability to anticipate risks and identify opportunities to improve automation, test coverage, and overall efficiency.</p></li><li><p style=\"min-height:1.5em\">Strong written and verbal communication skills, with the ability to build positive relationships with internal teams and external partners.</p></li><li><p style=\"min-height:1.5em\">Interest and experience in leveraging AI tools to improve automation efficiency, data validation, and test coverage.</p></li><li><p style=\"min-height:1.5em\">Ability to work collaboratively in a fast-paced environment.</p></li></ul><div style=\"min-height:1.2em;margin-top:0;margin-bottom:0\">Â </div><p style=\"min-height:1.5em\"><strong>Education:</strong></p><p style=\"min-height:1.5em\">Bachelorâs Degree in Computer Science, Systems Engineering, Information Technology, Software Engineering, or a related technical field.</p><p style=\"min-height:1.5em\"></p><p style=\"min-height:1.5em\"><strong>Our Commitment to Diversity and Inclusion:</strong></p><p style=\"min-height:1.5em\">SunnyData is dedicated to building a workforce that reflects the world around us. We are an equal opportunity employer committed to unbiased hiring practices. All qualified applicants will receive consideration for employment without regard to race, religion, gender identity, disability, veteran status, or any other protected characteristic.</p><div style=\"min-height:1.2em;margin-top:0;margin-bottom:0\">Â </div><p style=\"min-height:1.5em\"><strong>Why Join SunnyData?</strong></p><ul style=\"min-height:1.5em\"><li><p style=\"min-height:1.5em\"><strong>Innovative Environment</strong>. Work with cutting-edge technologies and industry leaders in data engineering and AI.</p></li><li><p style=\"min-height:1.5em\"><strong>Customer Impact.</strong> Make a real difference in how businesses leverage data for strategic decision-making.</p></li><li><p style=\"min-height:1.5em\"><strong>Career Growth</strong>. Opportunities for professional development and career advancement.</p></li><li><p style=\"min-height:1.5em\"><strong>Collaborative Culture</strong>. Join a supportive team that values collaboration and knowledge sharing.</p></li></ul><br/><br/>Please mention the word **BRILLIANTLY** and tag RMTcyLjE3MS4xMjUuMTk= when applying to show you read the job post completely (#RMTcyLjE3MS4xMjUuMTk=). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-qa-engineer-sunnydata-1137300",
+      "location": "Not specified",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Store Manager Port Macquarie",
+      "organisation": "Ampol",
+      "description": "<strong>Job Description<br><br></strong><p><strong>At Ampol, Weâre Powered by People!â¯ <br><br></strong></p><p>Weâre redefining convenience, and as a Store Manager at Ampol, youâll be at the forefront of this transformation. As the face of our stores, you'll treat each location as your own, driving excellence and creating outstanding one-stop-shop experiences for our customers. <br><br></p><p> <br><br></p><p> <br><br></p><p><strong>As a Store Manager you will; <br><br></strong></p><ul><li>Lead with Collaboration: Provide supportive, valuesâaligned leadership to guide teams toward consistent operational excellence.</li><li>Deliver Exceptional Customer Experiences: Foster warm, personalised service that strengthens customer trust and loyalty.</li><li>Enable Sustainable Performance: Promote balanced decisionâmaking that achieves commercial outcomes while managing costs responsibly.</li><li>Navigate Priorities Effectively: Manage competing demands in a fastâpaced, complianceâfocused environment with strong organisation and adaptability.</li><li>Apply Your Expertise: Leverage your management experience, professional judgement, and flexibility to contribute meaningfully to store performance.</li></ul><p> <br><br></p><p> <br><br></p><p><strong>You will have the following skills and experience; <br><br></strong></p><ul><li>Experience in retail management with a supportive, peopleâfocused leadership style.</li><li>Strong skills in coaching, team development, and fostering an inclusive, highâperforming culture.</li><li>Proven ability in inventory management, visual merchandising, and maintaining operational standards.</li><li>Sound judgement with a solutionsâfocused approach and confidence in using POS and operational technology.</li><li>Strong organisational skills, commitment to safety and compliance, financial acumen, and a history of delivering exceptional customer service.</li></ul><p> <br><br></p><p><br><br><strong>What We Offer:â¯ <br><br></strong></p><p>World-Class Training: Enjoy 6 weeks of on-site training to set you up for success.â¯ <br><br>Career Growth &amp; Competitive Pay: Benefit from generous pay and clear career progression.â¯ <br><br>Fuel Discount Card: Save with a 25% discount on fuel.â¯ <br><br>Comprehensive Leave Entitlements: Including Parental Leave.â¯ <br><br>Bonus Eligibility: Opportunity to earn performance-based bonuses.â¯ <br><br></p><p> <br><br></p><p><br><br><strong>Ready to Lead and Innovate? Apply Now!â¯<br><br></strong></p><p> <br><br></p><p>We are proud to be recognised as an employer of choice for women and are winners of an Employer Brand award through LinkedIn.â¯ <br><br></p><p> <br><br></p><p>Salary range between $65,000 to $82,000  (plus allowances) based on experience. <br><br><br><br></p><strong>Additional Information<br><br></strong><p>By clicking apply, you confirm you have read and agree to our Ampol Recruitment Privacy Collection Statement.<br><br></p><p><em> Weâre an equal opportunity workplace. We not only embrace diversity and inclusion; we celebrate what makes you unique. We welcome applications from people of all ages, cultural backgrounds, and diverse sexualities and genders (including if you identify as transgender). We also highly encourage Aboriginal and Torres Strait Islander peoples to apply for roles with Ampol.</em></p><br/><br/>Please mention the word **ACHIEVIBLE** and tag RMTcyLjE3MS4xMjUuMTk= when applying to show you read the job post completely (#RMTcyLjE3MS4xMjUuMTk=). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-store-manager-port-macquarie-ampol-1137295",
+      "location": "Port Macquarie, ",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Chief Steward",
+      "organisation": "W Hotels",
+      "description": "<strong>Additional Information<br><br></strong><strong>Job Number</strong> 26111393<br><br><strong>Job Category</strong> Food and Beverage &amp; Culinary<br><br><strong>Location</strong> Andrassy ut 25, Budapest, Hungary, Hungary, 1061VIEW ON MAP<br><br><strong>Schedule</strong> Full Time<br><br><strong>Located Remotely?</strong> N<br><br><strong>Position Type</strong>  Non-Management<br><br><strong>Position Summary<br><br></strong>Direct and assist Stewards in order to make clean up more efficient. Ensure water temperature, and chemical levels are appropriate for cleaning and documented. Assist with Banquet plate-ups. Assist cooks and kitchen staff with various tasks as needed. Provide cooks with needed items. Support banquet and buffet by transporting and ensuring adequate stock. Return cleaned items to proper locations. Operate and maintain cleaning equipment and tools, including the dish washing machine, hand wash stations pot-scrubbing station, and trash compactor.<br><br>Assist management in hiring, training, scheduling, evaluating, counseling, disciplining, and motivating and coaching employees. Follow all company and safety and security policies and procedures; report accidents, injuries, and unsafe work conditions to manager; complete safety training and certifications. Ensure uniform and personal appearance are clean and professional; maintain confidentiality of proprietary information; protect company assets. Welcome and acknowledge all guests according to company standards; anticipate and address guestsâ service needs. Speak with others using clear and professional language. Develop and maintain positive working relationships with others; support team to reach common goals. Ensure adherence to quality expectations and standards. Move, lift, carry, push, pull, and place objects weighing less than or equal to 50 pounds without assistance. Stand, sit, or walk for an extended period of time. Reach overhead and below the knees, including bending, twisting, pulling, and stooping. Move over sloping, uneven, or slippery surfaces. Perform other reasonable job duties as requested by Supervisors.<br><br><strong>Preferred Qualifications<br><br></strong>Education: High school diploma or G.E.D. equivalent.<br><br>Related Work Experience: At least 2 years of related work experience.<br><br>Supervisory Experience: At least 1 year of supervisory experience.<br><br>License or Certification: None<br><br><em>At Marriott International, we are dedicated to being an equal opportunity employer, welcoming all and providing access to opportunity. We actively foster an environment where the unique backgrounds of our associates are valued and celebrated.â¯Our greatest strength lies in the rich blend of culture, talent, and experiences of our associates. We are committed to non-discrimination on any protected basis, including disability, veteran status, or other basis protected by applicable law.<br><br></em>W Hotelsâ mission is to Ignite Curiosity, Expand Worlds. We are a place to experience life. Weâre here to open doors and open minds. We are constantly inspired by new faces and new experiences. A tuned-in, up-for-anything spirit is at our core and has made us renowned for reinventing the norms of luxury around the globe. Whatever/Whenever is our culture and service philosophy that brings our guestsâ passions to life. If you are original, innovative, and always looking towards the future of whatâs possible, welcome to W Hotels. In joining W Hotels, you join a portfolio of brands with Marriott International. <strong>Be</strong>  where you can do your best work, <strong>begin</strong>  your purpose, <strong>belong</strong>  to an amazing global team, and <strong>become</strong>  the best version of you.<br/><br/>Please mention the word **APPROVE** and tag RMTcyLjE3MS4xMjUuMTk= when applying to show you read the job post completely (#RMTcyLjE3MS4xMjUuMTk=). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-chief-steward-w-hotels-1137272",
+      "location": "Budapest, ",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Field Officer Bendigo",
+      "organisation": "Department of Justice and Community Safety, Victoria",
+      "description": "<strong>About This Role<br><br></strong><ul><li>Enjoy a variety of field work and office-based work</li><li>Ongoing, Full Time Opportunity in Bendigo</li><li>Salary Range $72,189 - $79,753 plus superannuation <br><br></li></ul><em>Do you have great communication skills and want to be a role model to people hoping for a second chance? If you want to make time to help people get their lives back on track, read on.<br><br></em><strong>Who are we?<br><br></strong><strong>Community Work and Partnerships</strong> We are responsible for the development of mutually beneficial partnerships with government agencies and non-government organisations so that individuals can undertake unpaid work as part of their community-based sentence imposed by the Courts of Victoria. Community work serves as a valuable way for individuals to pay back the community while also reconnecting and reintegrating into the community. We ensure individuals make genuine efforts to undergo rehabilitation, and we keep low risk individuals out of prison and help them contribute to the community.<br><br><strong>What does a Field Officer do?<br><br></strong>Your primary responsibility as a Field Officer will be to supervise a team of clients at community work sites and other community work programs. A field officer carries out many duties and functions, mainly the supervision of individuals completing community work tasks. Other responsibilities include performing site inspections, assess hazards, providing informed workplace health and safety advice, guidance and instruction; maintaining tools and equipment resister and ensuring repairs are undertaken.<br><br><strong>A day in the life of a Field Officer. . .<br><br></strong><em>Your shift starts at a Justice Service Centre location where you collect a bus/ trailer with equipment. You then drive to a site to collect a group of clients, where you will induct, instruct and transport them to a partner not-for-profit organisation in the community. Tasks for the day may involve graffiti removal, painting, litter collection, mowing and weeding. Your responsibility is to instruct the individuals to safely perform each task and monitor the work performed for the partner site before returning them to the drop off point and returning to your depot.<br><br></em><strong>We are looking for individuals with various backgrounds and experience. Some desirable skills include:<br><br></strong><ul><li>You'll need to be able to communicate and demonstrate a range of tasks and ensure a safe environment for work teams.</li><li>Have a strong understanding of Occupational Health and Safety practices and their practical application.</li><li>Quickly build rapport in order to understand the motivations of others, identify issues and suggest courses of action appropriate to their needs.</li><li>Have demonstrated ability to manage conflict and strong problem-solving skills.</li><li>Model appropriate behaviours and attitudes to assist individuals to develop new skills and work practices.</li><li>Carpentry or handyman skills</li><li>Gardening landscaping or painting skills<br><br></li></ul>Field Officers carry out a mixture of field work and office-based work, so it's important that you are able to demonstrate computer skills and written communication skills.<br><br>Transporting individuals is also a key part of the role and Field Officers will be required to drive a 12-seater bus with trailer. A full and current drivers' licence is essential for this position.<br><br>Community Work operates seven days per week and this role will be required to work on weekends. Weekend availability is required.<br><br><strong>For More Information About The Role Please Contact<br><br></strong><strong>Sarah Thompson â</strong> <strong>Manager, Community Work &amp; Partnerships on 0407 427 396 or </strong><strong>Sarah.Thompson@justice.vic.gov.au<br><br></strong><strong>How To Apply<br><br></strong>Please click the Apply button at the bottom of this advertisement. Applications should include a resume uploaded in .doc, .docx, .pdf, .txt or .rtf formats.<br><br><strong>The Assessment Process Will Entail The Following<br><br></strong><ul><li>Several questions in the application form upon submitting your resume</li><li>A phone screen</li><li>An interview</li><li>Reference checks</li><li>Security checks</li><li>Health assessment â medical history and physical fitness components<br><br></li></ul><em>The successful candidate will be required to undergo pre-employment checks which may include reference checks, nationally coordinated criminal history checks (NCCHC), and misconduct screening. Dependant on the role, other checks may include VicRoads checks, drivers licence checks, medical checks, Working with Children Checks, and Declaration of Private Interests (for executive and responsible officer roles). <br><br></em><em>If you require adjustments to the recruitment and selection process, or require an alternative format to any of the application material, please don't hesitate to get in touch with the contact person listed on this ad. <br><br></em><em>Aboriginal and/or Torres Strait Islander people are strongly encouraged to apply.<br><br></em><strong>Child Safe Statement Of Commitment<br><br></strong>The Department of Justice and Community Safety is committed to the safety and wellbeing of children and young people. We seek to prevent harm of any kind impacting children and young people and have zero tolerance for racism, child abuse and inequality. Children and young people's rights, relationships, identity, and culture must be recognised and respected, their voices heard, and their concerns acted upon. We aim to foster a culturally safe, child safe and child friendly environment for all children and young people we have contact with, deliver services to, or are impacted by our work.<br/><br/>Please mention the word **FLAWLESS** and tag RMTcyLjE3MS4xMjUuMTk= when applying to show you read the job post completely (#RMTcyLjE3MS4xMjUuMTk=). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-field-officer-bendigo-department-of-justice-and-community-safety-victoria-1137267",
+      "location": "Bendigo, ",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Vehicle Detailer",
+      "organisation": "Clutch",
+      "description": "<strong>About Clutch<br><br></strong>At Clutch, we are reinventing the way Canadians buy and own cars. We had enough of traditional dealerships that took advantage of customers and knew that we could build an incredible car-buying experience while leaving a positive impact on the communities we serve.<br><br>Clutch is looking for a <strong>Car Detailer</strong> to ensure that all vehicles that progress through our onboarding process are maintained and cleaned to the highest possible standard. Treating every vehicle like it is your own, working well with others, willingness to learn, and having high attention to detail are all essential to succeeding in this role.<br><br><strong>About The Role<br><br></strong>As a Car Detailer, you will be responsible for maintaining the exterior and interior of all incoming vehicles, ensuring each car meets Clutchâs quality standards before entering reconditioning or sales. You will help keep vehicles in showroom condition, while collaborating with other team members to maintain a smooth workflow.<br><br><strong>What Youâll Do<br><br></strong><ul><li>Pressure wash and shampoo the exterior of vehicles </li><li>Steam, extract, and vacuum the interior of vehicles </li><li>Polish swirl marks and scratches </li><li>Dress tires and maintain exterior finishes </li><li>Proactively monitor and maintain detailing supplies and tools </li><li>Continuously help improve detailing processes </li><li>Support the team in maintaining a clean and organized work environment <br><br></li></ul><strong>What Weâre Looking For<br><br></strong><ul><li>Interest in the automotive industry </li><li>Willingness to learn and develop skills as an automotive detailer </li><li>High attention to detail and ability to multitask </li><li>Team player above all else </li><li>Valid G2 or G driverâs license (clean driverâs abstract) </li><li>Post-secondary education is an asset </li><li>Able to commit to a full-time schedule of 40 hours per week, including overtime based on business needs.<br><br></li></ul><strong>Itâd be great if you have<br><br></strong><ul><li>Previous automotive detailing experience </li><li>Comfortable driving manual transmission <br><br></li></ul><strong>Why youâll love it at Clutch<br><br></strong><ul><li>Competitive salary </li><li>Health &amp; dental benefits </li><li>Autonomy &amp; ownership â contribute to processes and help maintain high vehicle quality standards </li><li>Opportunity to grow your skills in automotive operations within a fast-growing company <br><br></li></ul><strong>Employment Type<br><br></strong>Existing, Permanent Full-Time<br><br><strong>Compensation &amp; Benefits<br><br></strong><ul><li>Wage: $20.00 per hour </li><li>Benefits: Comprehensive benefits plans include healthcare, dental care, vision care, prescriptions, life insurance, and dependent coverage; start from day 1. (Applicable for Permanent Full-Time)</li><li>Pay decisions reflect objective criteria: skills, performance, market benchmarking, responsibilities, and working conditions <br><br></li></ul>Clutch is committed to fostering an inclusive workplace where all individuals have an opportunity to succeed. If you require accommodation at any stage of the interview process, please email <strong>talent@clutch.ca</strong><br/><br/>Please mention the word **AFORDABLE** and tag RMTcyLjE3MS4xMjUuMTk= when applying to show you read the job post completely (#RMTcyLjE3MS4xMjUuMTk=). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-vehicle-detailer-clutch-1137278",
+      "location": "Etobicoke, ",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "H&amp;M Visual Merchandiser Plaza del Sol",
+      "organisation": "H&amp;M",
+      "description": "<strong>Job Description<br><br></strong><p><strong>About the Role<br></strong><br>As a Visual Merchandiser, you contribute to an inspiring, elevated, and consistent customer experience by implementing visual standards and commercial excellence. You will be responsible for executing the visual, commercial, and styling curation according to visual &amp; commercial guidelines for the store. You will also use your trend and competitor awareness to provide colleagues with the correct information, coach, upskill and develop the store team to contribute to a great customer experience.<br><br><br><br><strong>A Day in the Life<br></strong><br>Working at H&amp;M means no two days are ever the same, but a typical day will include the following responsibilities*<br><br><br><br><em><strong>Customer Sales &amp; Profit<br><br></strong></em></p><ul><li>Contribute to the total OMNI customer experience in your store by ensuring visual and commercial curation according to guidelines (In-direct)</li><li>Representing yourself and the H&amp;M Brand positively during customer interactions (Direct)</li><li>Organize and plan your workload according to store activation plan and adapt based on business needs in collaboration with your Store Management team and Area Visual Manager</li><li>Launch and maintain the latest global campaigns and sale activities on time according to H&amp;M Brand Standards</li><li>Ensure good garment care, stock levels, and give input on allocation to Store Management and Area teams</li><li>Perform sales report (KPIs) follow-up, identify and prioritize visual &amp; commercial opportunities in collaboration with Store Management team</li><li>Create efficient and effective actions to increase customer satisfaction to reach sales targets, store goals, budget, and follow-up actions in collaboration with Store Management team</li><li>Follow all procedures, best practices for OMNI services, operational routines, legal requirements, and communication in all areas of the store with Store team</li></ul><p><em><strong>Fashion &amp; Trend Awareness<br><br></strong></em></p><ul><li>Keep up-to-date with fashion scene, trends, tendencies, styles, products, brands, competitors, and relevant influencers etc. </li><li>Plan time for fashion &amp; trend awareness to understand trend theory and mood boards for styling techniques and product presentation to anticipate our customerâs needs and enhance our shopping experience in store</li></ul><p><em><strong>Team &amp; Development<br><br></strong></em></p><ul><li>Share, inspire and educate your store teams, keep them updated with seasonal changes, fashion trends, relevant visual &amp; commercial information, in-store communication, including price perception</li><li>Coach and develop the Store teamÂ´s visual and commercial skills to secure high quality of product &amp; commercial presentation according to guidelines</li><li>Support &amp; develop daily routines and best practices for your Store team to always ensure a consistent level of visual &amp; commercial standard while maintaining customer service engagement</li><li>Develop and coach talents and provide onboarding training to new colleagues</li><li>Organize, provide, and carry out the visual &amp; commercial upskilling for you and your colleagues</li><li>Complete Visual Competencies &amp; Commercial 4 All trainings based on Regional &amp; Sales Market learning and development goals</li><li>Support Sales Market and Area teams with expansion (store projects) needs</li></ul><p><em><strong>Visual &amp; Commercial Execution<br><br></strong></em></p><ul><li>Execute the visual &amp; commercial curation &amp; styling for the store based on commercial calendar, allocation, store activation plan and fashion trends according to mood boards and direction from the visual &amp; commercial guidelines</li><li>Carry out sample picking best practice routines including stockroom garment quantities, accessories, and shoes to ensure you create clear trends and stories according to inspiration from the visual &amp; commercial guidelines</li><li>Secure window &amp; styling execution according to visual &amp; commercial guidelines to create inspirational and commercial customer experience</li><li>Provide good customer flow by maintaining commercial layout, fixtures, to secure the best trend story placement</li><li>Secure a strong balance and the maintenance of price signs in windows and throughout the store following guidelines according to Global strategy and Sales Market requirements</li><li>In collaboration with Facilities Management ensure all lighting is working correctly, aimed to highlight our products and display forms in windows and throughout the store</li><li>Maintain and care for all display forms and interior material (fixtures &amp; fittings) with sustainability in mind</li><li>In collaboration with Area Visual Manager ensure your store navigation is maintained and kept up to date according to latest guidelines and store layout</li><li>Ensure your store has enough quantities of sale and other activity including POS material according to local routines</li><li>Keep sales floor and back of house clean, organized, and safe according to local security guidelines<br><br></li></ul><strong>Qualifications<br><br></strong><p><strong>Who You Are<br><br></strong></p><ul><li>For you to be a successful Visual Merchandiser, you must be curious and creative; always looking for inspiration, proactive, solution focused, flexible, with effective communication skills to achieve results cross functionally. </li><li>We look for individuals with fashion interests and leadership skills who can apply their visual and commercial experience working in a dynamic environment to the role. </li><li>Experience with being solution focused to improve product presentation and commercial execution in store</li><li>Good knowledge of visual, commercial, and operational best practises, routines, and tools</li><li>Know how to manage, follow-up and act on selling equation and weekly sales reports</li></ul><p><strong>Why Youâll Love Working at H&amp;M<br><br></strong></p><ul><li>We value diverse backgrounds, including but not limited to race, ethnicity, gender, age, religion, sexual orientation, and disability</li><li>We pride ourselves on being a values-driven organization, guided by our 7 unique values that have been part of our success story for over 75 years</li><li>Youâll have access to our Colleague Resource Groups (CRGs) to find community and networking opportunities among colleagues</li><li>We are an inclusive company where youâre encouraged to be yourself at work</li><li>You will have access to a large global talent community, where career growth and aspirations have no limits</li><li>We believe in supporting your overall wellbeing and offer comprehensive benefits inclusive of health insurance, wellness and family support programs, company match retirement plan, paid leave programs, and paid time off, including a community day to serve your local community</li><li>Youâll be able to express your personal style with our employee discount at H&amp;M, &amp; Other Stories, and COS<br><br></li></ul><strong>Additional Information<br><br></strong><p><em><strong>Compensation: expected base salary range is $16.50 - $18.98 hourly**<br></strong></em><br><strong>EEOC Code: </strong>SLS<br><br><strong>Pay Status: </strong>Non-Exempt, Hourly<br><br></p><p>*This job posting highlights the most critical responsibilities and requirements of the job and is not all-inclusive. There may be additional duties, and responsibilities assigned for this job at the companyâs discretion.<br><br></p><p>**H&amp;M, in good faith, has assessed this posted range of compensation as the accurate range for this role and location at the time of this posting. H&amp;M may ultimately pay more or less than the posted range depending on candidate qualifications. This range may be modified in the future.<br><br></p><p><em>We are committed to providing reasonable accommodations for applicants with disabilities. If you require assistance or accommodation during the application or interview process, please contact us at https://hm.ethicspoint.com, and use Ask a Question.<br><br></em></p><p><strong>Benefits:<br><br></strong></p><p>We offer all our employees at H&amp;M Group attractive benefits with extensive development opportunities around the globe. All our employees receive a staff discount card, usable on all our H&amp;M Group brands in stores and online. Brands covered by the discount are H&amp;M (Beauty and Move included), COS, Weekday, Monki, H&amp;M HOME, &amp; Other Stories, ARKET, Afound. In addition to our staff discount, all our employees are included in our H&amp;M Incentive Program â HIP. You can read more about our H&amp;M Incentive Program here. <br><br></p><p><em>In addition to our global benefits, all our local markets offer different competitive perks and benefits. Please note that they may differ between employment type and countries.</em> <br><br></p><p><em>We offer: 25% Staff Discount - Medical, Pharmacy Vision and Dental Coverage â Employee Assistance Program - Vacation, Wellness, Holiday and Parental Pay â 401K â Commuter Benefits, Health and Dependent Care FSA. Plus, additional Voluntary Benefits.<br><br></em></p><p><strong>Inclusion &amp; Diversity:</strong> <br><br></p><p><em>H&amp;M<strong> </strong></em><em>is a part of H&amp;M Group. At H&amp;M Group, weâre determined to create and maintain inclusive, diverse and equitable workplaces throughout our organisation.</em><em> Our teams should consist of a variety of people that share and combine their knowledge, experience and ideas</em><em>. Having a diverse workforce leads to a positive impact on how we address challenges, on what we perceive possible and on how we choose to relate to our colleagues and customers all over the world. Hence all diversity dimensions are taken into consideration in our recruitment process. </em> <br><br></p><p><em>We strive to have a fair and equal process and therefore kindly ask you not to attach a cover letter in your application as they often contain information that easily can trigger unintentional biases.</em> <br><br></p><p><strong>Company Description:</strong> <br><br></p><p>H&amp;M is a fashion brand that offers the latest styles and inspiration, from fashion pieces and unique designer collaborations to affordable wardrobe essentials. Our business idea is fashion &amp; quality at the best price in a sustainable way.  Learn more about H&amp;M here.</p><br/><br/>Please mention the word **SKILLFUL** and tag RMTcyLjE3MS4xMjUuMTk= when applying to show you read the job post completely (#RMTcyLjE3MS4xMjUuMTk=). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-hampm-visual-merchandiser-plaza-del-sol-hampm-1137270",
+      "location": "BayamÃ³n, ",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Vehicle Technician MOT Tester",
+      "organisation": "Halfords",
+      "description": "<ul><li>On-target earnings up to Â£42,070</li> <li>Comprising a base salary of Â£33,000 - Â£36,770</li> <li>An uncapped monthly bonus scheme with average additional earnings of Â£5,300 per year.</li> <li>5 days a week</li> <li>Earn extra with our refer a friend scheme  T&amp;Cs Apply</li> </ul> <p>Here at Halfords Garage Services, were looking for a skilled Vehicle Technician / MOT Tester to join our new Fusion Centre - upgraded with the latest facilities to lead the way in providing a first-class customer experience and a great working environment.</p> <p>If youre an experienced mechanic with a passion for delivering excellent customer experience and keeping vehicles safe on the road, we want to hear from you.</p> <p>As a Vehicle Technician / MOT Tester, youll carry out MOT tests to DVSA standards and complete a wide range of vehicle maintenance and repair work. From advanced diagnostics &amp; repairs to routine services, youll ensure every job is done to the highest standard.</p> <p>Drive your career forward at Halfords, the UKs largest Automotive service, maintenance and repair business, offering excellent training &amp; development opportunities, a wide range of benefits and an uncapped bonus scheme.</p><p><strong>Benefits Include:</strong></p> <ul> <li>5.6 weeks annual leave</li> <li>Up to 50% off garage bills in our Autocentres and 25% off most our Halfords products in our retail stores</li> <li>Discounts on everything from groceries, shopping, insurance, days out, restaurants and more</li> <li>Family &amp; Friends Discount Events</li> <li>Opportunity to buy a Trade Price Bike &amp; enrol in the Cycle to Work Scheme</li> <li>Financial planning support via Wagestream - access up to 30% of your salary in advance</li> <li>GP Access, 364 days a year, 24 hours a day</li> <li>Join the Share save scheme with a 20% discount on shares</li> <li>Health Cash Plan  to access wellbeing services and claim back healthcare costs</li> <li>Pension Scheme &amp; Life Assurance</li> </ul> <p>You will be given every opportunity to progress your career at Halfords. Access to hybrid training and IMI approved continuous development will be fully supported.</p><p><strong>Skills and experience</strong></p> <ul> <li>Level 3 qualified in Light Vehicle Maintenance &amp; Repair (or equivalent qualification or experience)</li> <li>Valid MOT Testing Licence</li> <li>Full drivers licence with less than 9 points</li> </ul><p><strong>Why Halfords?</strong></p> <p>Were in an exciting chapter  rapidly growing our business with a focus on motoring services and electric mobility. Were the UKs leading retailer of motoring and cycling products and services, and the UKs largest Automotive service, maintenance and repair business. Join us and be part of our success story in getting the nation safely back on the move.</p> <p>Not sure you meet all the criteria? We'd encourage you to take the wheel and apply anyway! At Halfords we are committed to creating an inclusive workplace for our colleagues. We're an equal opportunities employer and proud to welcome applications from all backgrounds and embrace diversity within our one Halfords Family.<br></p><p>LNKD1_UKTJ</p><br/><br/>Please mention the word **MESMERIZINGLY** and tag RMTcyLjE3MS4xMjUuMTk= when applying to show you read the job post completely (#RMTcyLjE3MS4xMjUuMTk=). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-vehicle-technician-mot-tester-halfords-1137258",
+      "location": "Coventry, ",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Expression of Interest Canât see a role thatâs right for you",
+      "organisation": "C2 Group",
+      "description": "Expression of Interest<br><br>Canât see a role thatâs right for you?<br><br>Weâre always interested in hearing from talented people who would like to join our team.<br><br>Click â<strong>Apply Now</strong>â to Submit an expression of interest and attach your CV to tell us about your experience, skills and the type of work youâre looking for.<br><br>While we may not have a suitable vacancy available right now, weâll keep your details on file and contact you if a relevant opportunity arises.<br><br>Please note that submitting an expression of interest does not guarantee employment or a response. We encourage you to continue checking our current vacancies and apply directly for any roles that interest you.<br/><br/>Please mention the word **INTERESTS** and tag RMTcyLjE3MS4xMjUuMTk= when applying to show you read the job post completely (#RMTcyLjE3MS4xMjUuMTk=). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-expression-of-interest-cant-see-a-role-thats-right-for-you-c2-group-1137251",
+      "location": "Greater Sydney Area, ",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Produce Clerk",
+      "organisation": "Food Basics",
+      "description": "<strong>Position Title: </strong>Produce Clerk - Full Time<br><br><strong>Position Type: </strong>Full time<br><br><strong>Job Requisition ID: </strong>49560<br><br><strong>Banner: </strong>Food Basics<br><br><strong>Employment Type: </strong>Permanent<br><br>This position is part of a unionized bargaining unit. The hourly wage for this position starts at $18.00 - $21.35 and is established in accordance with the collective agreement. Depending on a candidateâs relevant knowledge, skills, education, and prior experience, a higher hourly wage may be offered. Any hourly wage offered for this role, whether starting or higher, will fall within the wage scale established for this position in accordance with the collective agreement.<br><br>This is a posting for an existing permanent full-time position<br><br>Experience a rewarding role at Food Basics as a Produce Clerk! You'll be the go-to person for ensuring our produce section is always fresh, well-stocked, and beautifully presented. Share your enthusiasm for fresh fruits and vegetables with our customers and help them find exactly what they need.<br><br>Our produce team is crucial to Food Basics' success, and we're looking for energetic individuals who love working with fresh food and enjoy helping others. If you thrive in a lively environment and are passionate about quality produce, we want you on our team!<br><br><strong>What Youâll Do<br><br></strong><ul><li>Unload shipments of produce and sort items in the backroom and cooler.</li><li>Stock shelves and displays with fresh produce, ensuring items are rotated (first-in, first-out method) to maintain freshness.</li><li>Create visually appealing displays and arrange items neatly.</li><li>Inspect produce for freshness and quality, removing any damaged or spoiled items.</li><li>Ensure that all produce meets the store's quality standards.</li><li>Monitor temperature and humidity levels in the produce section to maintain optimal storage conditions.</li><li>Assist customers with locating specific items and provide information about different produce or products in other departments.</li><li>Offer recommendations on how to select and store produce.</li><li>Answer customer inquiries and address concerns.</li><li>Keep the produce section clean and organized, including sweeping and mopping as needed.</li><li>Clean and sanitize work areas, equipment, and tools regularly.</li><li>Dispose of waste and compostable materials properly.</li><li>Monitor inventory levels and restock items as needed.</li><li>Perform regular inventory counts and report any discrepancies.</li><li>Notify management of low stock or out-of-stock items.</li><li>Ensure all produce is correctly labeled with prices and product information.</li><li>Update signage for promotions, sales, and seasonal items.</li><li>Verify that prices in the system match the displayed prices.</li><li>Reduce and price items as needed.</li><li>Adhere to food safety and sanitation guidelines.</li><li>Use equipment and tools safely and properly.</li><li>Report any safety concerns or incidents to management.</li><li>Assist with gathering shopping carts or baskets and putting them away when needed.</li><li>Assist with special promotions, events, or projects as assigned by management.</li><li>Collaborate with other departments as needed.</li><li>Additional duties assigned by Management.<br><br></li></ul><strong>Qualifications<br><br></strong><ul><li>Customer service driven.</li><li>Able to stock merchandise and create displays.</li><li>Good product knowledge and attention to detail.</li><li>Able to lift between 30 to 50 pounds.</li><li>Retail experience is considered an asset.</li><li>Able to stand for extend periods of time.</li><li>Must be available to work flexible shifts which may include nights, weekends and holidays.<br><br></li></ul><em><strong>The responsibilities and relationships assigned to this role may change as is necessary to achieve Metro's business objectives.<br><br></strong></em><em><strong>Disclosure on Use of Artifical Intelligence in Recruitment:</strong></em> At METRO, we are commited to transparency and fairness in our hiring practices. In compliance with Ontario's Employment Standards Act (Bill 149), we disclose that <strong><em>METRO and certain third-party job boards we use incorporate artificial intelligence (AI) technology to assist in screening, assessing, or selecting applicants for positions. </em></strong>The use of AI helps us efficiently review the large volume of applications we receive, ensuring that every candidate's profile is considered promptly and consistently. This technology supports our goal of providing an equitable and streamlined recruitment experience for all applicants. While AI tools support our recruitment procedures, all decisions throughout the process are made exclusively by METRO's Talent Acquisition team or METRO employees. <strong><em>At no stage does AI determine recruitment outcomes.<br><br></em></strong><em><strong>METRO is committed to providing an inclusive work environment that reflects the communities we serve. The company values, respects and relies on the diversity of backgrounds, experiences, and points of view because it allows us to innovate, make better decisions and better understand our customers. We will consider qualified applications from all walks of life to build the best team.<br><br></strong></em><em><strong>We encourage you to let us know if your current condition requires accommodation in the recruitment process so that we can accommodate you.<br><br></strong></em><em><strong>Please note that we will only contact those whose applications are selected.<br><br></strong></em><em><strong>We respectfully request that agencies do not contact us or send us unsolicited applications.</strong></em><br/><br/>Please mention the word **UNBEATABLE** and tag RMTcyLjE3MS4xMjUuMTk= when applying to show you read the job post completely (#RMTcyLjE3MS4xMjUuMTk=). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-produce-clerk-food-basics-1137247",
+      "location": "Waterloo, ",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Kitchen Porter W Edinburgh",
+      "organisation": "W Hotels",
+      "description": "<strong>Additional Information<br><br></strong><strong>Job Number</strong> 26109811<br><br><strong>Job Category</strong> Food and Beverage &amp; Culinary<br><br><strong>Location</strong> 1 St James Square, Edinburgh, Scotland, United Kingdom, EH1 3AXVIEW ON MAP<br><br><strong>Schedule</strong> Full Time<br><br><strong>Located Remotely?</strong> N<br><br><strong>Position Type</strong>  Non-Management<br><br><strong>Pay Range:</strong> Â£12.71ph<br><br><strong>W Edinburgh is hiring a Kitchen Porter to join our team! We invite you to play an integral part in bringing to life this unique brand with Edinburgh!<br><br></strong><strong>Explore an exciting new career path at W Hotels where your natural talent is celebrated. W Hotelâs work culture is uniquely designed to spark your imagination and curiosity while bringing the W experience to life for guests.<br><br></strong><strong>About w Hotels<br><br></strong>Ignite Curiosity, Expand Worlds. W Hotels are a place to experience life. Weâre here to open doors and open minds. With us, thereâs always more. We dare to deliver a different kind of luxury. One that revels in bold ideas and indulges in the unexpected. We believe luxury is the freedom to be yourself and explore desires: whatever, whenever.<br><br><strong>About w Edinburgh Kitchen<br><br></strong>W Edinburgh brings exciting new culinary destinations to the capital of Scotland. Situated on the 10th and 11th floors of the hotel, the spaces offer unrivalled panoramic view across the city, making it one of the most beautiful places in Edinburgh to dine.<br><br>Our signature restaurant is a partnership with SUSHISAMBA, which celebrates the culture and cuisine of Japan, Brazil and Peru. The menus are a mix of new and signature dishes with an emphasis on bold flavours, the finest ingredients and artful presentations.<br><br>W Lounge is W Edinburghâs social hub for guests and locals alike. Open from 9am until late, W Lounge will showcase the best of Gaelic produce in its food offering, complimented with innovative beverage concepts.<br><br>Furthermore, there is innovative Breakfast, Room Service and Event menus. Supporting all aspects of the kitchen operation will give you the opportunity to find where your passion truly lies.<br><br><strong>About The Role<br><br></strong>Joining the team means you will be instrumental to the success of the hotel and the restaurantâs operation and beyond. We are looking for someone who is passionate about hospitality, eager to learn and committed to excellence!<br><br>As Kitchen Porter, key aspects of your role will include:<br><br><ul><li>Operate and maintain cleaning equipment and tools, including the dish washing machine, hand wash stations pot-scrubbing station, and trash compactor</li><li>Wash and disinfect kitchen and store room areas, tables, tools, knives, and equipment</li><li>Receive deliveries, store perishables properly, and rotate stock</li><li>Ensure clean wares are stored in appropriate areas</li><li>Inspect, pull, and stack cleaned items, send soiled items back for re-scrubbing and re-washing</li><li>Clean and mop all areas in assigned departments<br><br></li></ul>Our ideal Kitchen Porter is someone who has:<br><br><ul><li>Follow all company and safety and security policies and procedures</li><li>A warm, people-oriented demeanour</li><li>A team-first attitude</li><li>Protect company assets</li><li>Develop and maintain positive working relationships with others</li><li>Ensure adherence to quality expectations and standards<br><br></li></ul>In return for your hard work, we give you:<br><br><ul><li>World class training and development, including leadership development</li><li>Unlimited career opportunities (internationally and locally)</li><li>Wellness and mental health programmes</li><li>Discounted accommodation, food and beverage in over 9,000 hotels all over the world!</li><li>Discounts for your friends and family</li><li>Specially curated discounts in thousands of shops<br><br></li></ul><strong>About The Property<br><br></strong>W Edinburgh brings bold architecture and a vibrant lifestyle offering to the Scottish capital. Behind a faÃ§ade featuring a winding steel ribbon â reflecting the cityâs festival spirit â this 12-storey structure is the centerpiece of Edinburgh St James Quarter, incorporating retail, leisure and entertainment facilities along with residential apartments.<br><br>This W hotel helps redefine the cityâs hospitality landscape. Accordingly, it fuses the brandâs signature amenities with modern design and W Happenings, highlighting whatâs new in design, fashion, music and culture.<br><br>Built in 2023, this new W hotel accommodates guests across 244 stylish guestrooms, including 45 suites. While staying here, guests benefit from the brandâs signature Whatever / Whenever service philosophy.<br><br>A real highlight of this property is its rooftop bar and outdoor terrace, pairing exciting cocktails and cuisine with 360-degree views over the historic city. Among the other noteworthy amenities are the W Lounge, a restaurant collaboration with SUSHISAMBA, a FIT workout facility and an AWAY spa, with special functions hosted in 2,450 sq ft of modern event space.<br><br>If this sounds like the perfect place for you, apply to be a Kitchen Porter with us today!<br><br><em>At Marriott International, we are dedicated to being an equal opportunity employer, welcoming all and providing access to opportunity. We actively foster an environment where the unique backgrounds of our associates are valued and celebrated.â¯Our greatest strength lies in the rich blend of culture, talent, and experiences of our associates. We are committed to non-discrimination on any protected basis, including disability, veteran status, or other basis protected by applicable law.<br><br></em>W Hotelsâ mission is to Ignite Curiosity, Expand Worlds. We are a place to experience life. Weâre here to open doors and open minds. We are constantly inspired by new faces and new experiences. A tuned-in, up-for-anything spirit is at our core and has made us renowned for reinventing the norms of luxury around the globe. Whatever/Whenever is our culture and service philosophy that brings our guestsâ passions to life. If you are original, innovative, and always looking towards the future of whatâs possible, welcome to W Hotels. In joining W Hotels, you join a portfolio of brands with Marriott International. <strong>Be</strong>  where you can do your best work, <strong>begin</strong>  your purpose, <strong>belong</strong>  to an amazing global team, and <strong>become</strong>  the best version of you.<br/><br/>Please mention the word **ABUNDANCE** and tag RMTcyLjE3MS4xMjUuMTk= when applying to show you read the job post completely (#RMTcyLjE3MS4xMjUuMTk=). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-kitchen-porter-w-edinburgh-w-hotels-1137237",
+      "location": "Edinburgh, ",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "HIGIENIZADOR DE CARROS MACAÃ RJ",
+      "organisation": "Localiza&amp;Co",
+      "description": "<strong>LOCALIZA&amp;CO<br><br></strong>Estar em constante evoluÃ§Ã£o nos trouxe atÃ© aqui. Ao lado de talentos e habilidades mÃºltiplas nos conectamos em busca da nossa motivaÃ§Ã£o: construir o futuro da mobilidade sustentÃ¡vel. Ã por meio da valorizaÃ§Ã£o da individualidade de cada um que impulsionamos o nosso movimento para conquistar resultados extraordinÃ¡rios, desenvolver nossas operaÃ§Ãµes e criar soluÃ§Ãµes para os nossos clientes.Somos apaixonados por nossa histÃ³ria, por nossas ideias e pela capacidade de realizÃ¡-las.Sabemos que juntos, todos vamos mais longe. Ã assim que conectamos a Localiza&amp;Co com o futuro.<br><br><strong>O QUE VOCÃ IRÃ FAZER COMO HIGIENIZADOR DE CARROS<br><br></strong><ul><li> Lavar os carros disponÃ­veis para venda conforme determinaÃ§Ã£o da lideranÃ§a, observando rigorosamente as partes internas e externas;</li><li> Executar a calibragem dos pneus dos carros, conforme a tabela de calibragem e ligar os carros frequentemente para garantir a durabilidade da bateria;</li><li> Contribuir na identificaÃ§Ã£o de problemas nos veÃ­culos, atravÃ©s de comunicaÃ§Ã£o ao lÃ­der, sobre qualquer defeito, avaria ou falta de acessÃ³rios observados nos carros.<br><br><br></li></ul><strong>O QUE PRECISAMOS<br><br></strong><ul><li> CNH categoria B hÃ¡, no mÃ­nimo, 1 ano</li><li> Ensino fundamental completo</li><li> ExperiÃªncia com serviÃ§os que exigem esforÃ§o fÃ­sico</li><li> Trabalho em equipe<br><br><br></li></ul><strong>BENEFÃCIOS<br><br></strong><ul><li> Uniforme</li><li> ParticipaÃ§Ã£o nos Lucros</li><li> Vale AlimentaÃ§Ã£o</li><li> Vale RefeiÃ§Ã£o</li><li> ConvÃªnio MÃ©dico</li><li> ConvÃªnio OdontolÃ³gico</li><li> Gympass</li><li> PrevidÃªncia Privada</li><li> AuxÃ­lio Creche</li><li> Vale Transporte</li><li> Acesso ilimitado a diversos cursos da nossa Universidade Localiza</li><li> Programas internos de treinamento e desenvolvimento</li><li> Desconto em compra e aluguel de veÃ­culos<br><br><br></li></ul><strong>QUAL SERÃ A JORNADA DO PROCESSO SELETIVO?<br><br></strong><ul><li> Cadastro</li><li> Testes Online</li><li> VÃ­deo</li><li> AnÃ¡lise do seu perfil</li><li> Entrevistas</li><li> Proposta<br><br><br></li></ul>Se vocÃª Ã© uma pessoa com deficiÃªncia e estÃ¡ em dÃºvida se alguma das nossas vagas Ã© pra vocÃª, fique tranquilo. VocÃª pode se candidatar a qualquer uma delas!<br><br><strong>Viva a experiÃªncia de ser Localiza&amp;Co e venha construir o futuro da mobilidade com a gente!</strong><br/><br/>Please mention the word **DELICACY** and tag RMTcyLjE3MS4xMjUuMTk= when applying to show you read the job post completely (#RMTcyLjE3MS4xMjUuMTk=). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-higienizador-de-carros-macae-rj-localizaampco-1137203",
+      "location": "MacaÃ©, ",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "HIGIENIZADOR DE CARROS CURITIBA PR",
+      "organisation": "Localiza&amp;Co",
+      "description": "<strong>LOCALIZA&amp;CO<br><br></strong>Estar em constante evoluÃ§Ã£o nos trouxe atÃ© aqui. Ao lado de talentos e habilidades mÃºltiplas nos conectamos em busca da nossa motivaÃ§Ã£o: construir o futuro da mobilidade sustentÃ¡vel. Ã por meio da valorizaÃ§Ã£o da individualidade de cada um que impulsionamos o nosso movimento para conquistar resultados extraordinÃ¡rios, desenvolver nossas operaÃ§Ãµes e criar soluÃ§Ãµes para os nossos clientes.Somos apaixonados por nossa histÃ³ria, por nossas ideias e pela capacidade de realizÃ¡-las.Sabemos que juntos, todos vamos mais longe. Ã assim que conectamos a Localiza&amp;Co com o futuro.<br><br><strong>O QUE VOCÃ IRÃ FAZER COMO HIGIENIZADOR DE CARROS<br><br></strong><ul><li> Lavar os carros disponÃ­veis para venda conforme determinaÃ§Ã£o da lideranÃ§a, observando rigorosamente as partes internas e externas;</li><li> Executar a calibragem dos pneus dos carros, conforme a tabela de calibragem e ligar os carros frequentemente para garantir a durabilidade da bateria;</li><li> Contribuir na identificaÃ§Ã£o de problemas nos veÃ­culos, atravÃ©s de comunicaÃ§Ã£o ao lÃ­der, sobre qualquer defeito, avaria ou falta de acessÃ³rios observados nos carros.<br><br><br></li></ul><strong>O QUE PRECISAMOS<br><br></strong><ul><li> CNH categoria B hÃ¡, no mÃ­nimo, 1 ano</li><li> Ensino fudamental completo</li><li> ExperiÃªncia com serviÃ§os que exigem esforÃ§o fÃ­sico</li><li> Trabalho em equipe<br><br><br></li></ul><strong>BENEFÃCIOS<br><br></strong><ul><li> Uniforme</li><li> ParticipaÃ§Ã£o nos Lucros</li><li> Vale AlimentaÃ§Ã£o</li><li> Vale RefeiÃ§Ã£o</li><li> ConvÃªnio MÃ©dico</li><li> ConvÃªnio OdontolÃ³gico</li><li> Gympass</li><li> PrevidÃªncia Privada</li><li> AuxÃ­lio Creche</li><li> Vale Transporte</li><li> Acesso ilimitado a diversos cursos da nossa Universidade Localiza</li><li> Programas internos de treinamento e desenvolvimento</li><li> Desconto em compra e aluguel de veÃ­culos<br><br><br></li></ul><strong>QUAL SERÃ A JORNADA DO PROCESSO SELETIVO?<br><br></strong><ul><li> Cadastro</li><li> Testes Online</li><li> VÃ­deo</li><li> AnÃ¡lise do seu perfil</li><li> Entrevistas</li><li> Proposta<br><br><br></li></ul>Se vocÃª Ã© uma pessoa com deficiÃªncia e estÃ¡ em dÃºvida se alguma das nossas vagas Ã© pra vocÃª, fique tranquilo. VocÃª pode se candidatar a qualquer uma delas!<br><br><strong>Viva a experiÃªncia de ser Localiza&amp;Co e venha construir o futuro da mobilidade com a gente!</strong><br/><br/>Please mention the word **RECOVER** and tag RMTcyLjE3MS4xMjUuMTk= when applying to show you read the job post completely (#RMTcyLjE3MS4xMjUuMTk=). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-higienizador-de-carros-curitiba-pr-localizaampco-1137204",
+      "location": "Curitiba, ",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "HIGIENIZADOR DE CARROS BLUMENAU SC",
+      "organisation": "Localiza&amp;Co",
+      "description": "<strong>LOCALIZA&amp;CO<br><br></strong>Estar em constante evoluÃ§Ã£o nos trouxe atÃ© aqui. Ao lado de talentos e habilidades mÃºltiplas nos conectamos em busca da nossa motivaÃ§Ã£o: construir o futuro da mobilidade sustentÃ¡vel. Ã por meio da valorizaÃ§Ã£o da individualidade de cada um que impulsionamos o nosso movimento para conquistar resultados extraordinÃ¡rios, desenvolver nossas operaÃ§Ãµes e criar soluÃ§Ãµes para os nossos clientes.Somos apaixonados por nossa histÃ³ria, por nossas ideias e pela capacidade de realizÃ¡-las.Sabemos que juntos, todos vamos mais longe. Ã assim que conectamos a Localiza&amp;Co com o futuro.<br><br><strong>O QUE VOCÃ IRÃ FAZER COMO HIGIENIZADOR DE CARROS<br><br></strong><ul><li> Lavar os carros disponÃ­veis para venda conforme determinaÃ§Ã£o da lideranÃ§a, observando rigorosamente as partes internas e externas;</li><li> Executar a calibragem dos pneus dos carros, conforme a tabela de calibragem e ligar os carros frequentemente para garantir a durabilidade da bateria;</li><li> Contribuir na identificaÃ§Ã£o de problemas nos veÃ­culos, atravÃ©s de comunicaÃ§Ã£o ao lÃ­der, sobre qualquer defeito, avaria ou falta de acessÃ³rios observados nos carros.<br><br><br></li></ul><strong>O QUE PRECISAMOS<br><br></strong><ul><li> CNH categoria B hÃ¡, no mÃ­nimo, 1 ano</li><li> Ensino fundamental completo</li><li> ExperiÃªncia com serviÃ§os que exigem esforÃ§o fÃ­sico</li><li> Trabalho em equipe<br><br><br></li></ul><strong>BENEFÃCIOS<br><br></strong><ul><li> Uniforme</li><li> ParticipaÃ§Ã£o nos Lucros</li><li> Vale AlimentaÃ§Ã£o</li><li> Vale RefeiÃ§Ã£o</li><li> ConvÃªnio MÃ©dico</li><li> ConvÃªnio OdontolÃ³gico</li><li> Gympass</li><li> PrevidÃªncia Privada</li><li> AuxÃ­lio Creche</li><li> Vale Transporte</li><li> Acesso ilimitado a diversos cursos da nossa Universidade Localiza</li><li> Programas internos de treinamento e desenvolvimento</li><li> Desconto em compra e aluguel de veÃ­culos<br><br><br></li></ul><strong>QUAL SERÃ A JORNADA DO PROCESSO SELETIVO?<br><br></strong><ul><li> Cadastro</li><li> Testes Online</li><li> VÃ­deo</li><li> AnÃ¡lise do seu perfil</li><li> Entrevistas</li><li> Proposta<br><br><br></li></ul>Se vocÃª Ã© uma pessoa com deficiÃªncia e estÃ¡ em dÃºvida se alguma das nossas vagas Ã© pra vocÃª, fique tranquilo. VocÃª pode se candidatar a qualquer uma delas!<br><br><strong>Viva a experiÃªncia de ser Localiza&amp;Co e venha construir o futuro da mobilidade com a gente!</strong><br/><br/>Please mention the word **HAPPIER** and tag RMTcyLjE3MS4xMjUuMTk= when applying to show you read the job post completely (#RMTcyLjE3MS4xMjUuMTk=). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-higienizador-de-carros-blumenau-sc-localizaampco-1137269",
+      "location": "Blumenau, ",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Building Maintenance Technician",
+      "organisation": "Dart",
+      "description": "<p><strong>JOB TITLE:</strong> Building Maintenance Technician</p><p><br></p><p><strong>SALARY:</strong> CI$50,000 - CI$70,000 pa</p><p><br></p><p><strong>WORKING HOURS: </strong>40 HOURS PER WEEK</p><p><br></p><p><strong>TERM OF EMPLOYMENT</strong>: Full-Time</p><p><br></p><p>We are seeking a Building Maintenance Technician to join our team. The successful candidate will be responsible for the inspection, maintenance, troubleshooting, and repair of building infrastructure and systems to ensure safe, reliable, and efficient operation of facilities.</p><p><br></p><p><strong>DO YOU HAVE:</strong></p><p><br></p><p>A high school diploma (or equivalent) and a valid trade license</p><p>A minimum of 5 yearsâ experience in building maintenance within Class A Commercial properties</p><p>Strong HVAC experience in chilled water and DX systems</p><p>Training and certification in electrical, plumbing, HVAC systems maintenance, Pool Operator and Man Lift operation</p><p>A valid Cayman Islands driverâs license</p><p>The ability to operate hand and power tools required, in a safe and efficient manner</p><p>Strong knowledge of building, electrical, plumbing and MEP systems, including related equipment, tools, hazards and safety precautions</p><p>Strong communication, problem-solving, and troubleshooting skills</p><p>The ability to perform physically demanding manual work for extended periods in varying and sometimes adverse conditions is required, including working in inclement weather and with regular exposure to dust and noise, as well as heavy lifting, prolonged standing, and climbing</p><p>The willingness to travel between sites, work at heights, and work outside regular business hours as required</p><p>The ability to read and interpret schematic drawings and blueprints (preferred)</p><p>A commitment to safety, continuous improvement, and professional development</p><p><br></p><p><strong>WE WANT YOU TO:</strong></p><p><br></p><p>Inspect, maintain, troubleshoot, and repair mechanical, electrical, plumbing, fire life safety, and other building systems</p><p>Diagnose faults using schematic drawings, manuals, and blueprints, and complete corrective maintenance efficiently</p><p>Assess faulty equipment, determine repair or replacement needs, review manufacturer specifications and technical documentation, and source the required parts or materials</p><p>Adhere to the DE Engineering Health and Safety Manual and maintain accurate maintenance records</p><p>Respond to corrective maintenance requests and urgent faults, diagnosing root causes and completing repairs effectively</p><p>Inspect and maintain building exteriors, residential units, appliances, fixtures, pools, and site features</p><p>Inspect, operate, maintain, and repair HVAC, solar systems, lighting, and related building systems while identifying performance issues and implementing system upgrades as required</p><p>Support contractor coordination, disaster preparedness, and recovery activities</p><p>Communicate effectively, work collaboratively, promote a safe customer-focused environment, and demonstrate professionalism and sound judgment</p><p><br></p><p><strong>Compensation &amp; Benefits</strong></p><p><br></p><p>At Dart, we're committed to creating a workplace where you thrive, offering a competitive salary and benefits designed for your well-being and growth. Our package includes 100% employer-paid medical insurance premium for the employee, employee and employer pension contributions, life insurance and long-term disability coverage (conditions apply), enhanced leave options including vacation, personal days, maternity, paternity, a wellness screening day and continuing professional development opportunities after successful completion of a six-month probationary period.</p><p><br></p><p><strong>DEADLINE:</strong> Midnight, Friday 18 September 2026.</p><p><br></p><br/><br/>Please mention the word **TERRIFIC** and tag RMTcyLjE3MS4xMjUuMTk= when applying to show you read the job post completely (#RMTcyLjE3MS4xMjUuMTk=). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-building-maintenance-technician-dart-1137212",
+      "location": "George Town, ",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Captains Capitanes",
+      "organisation": "Copa Airlines",
+      "description": "<p>We are seeking B737 Captains who share our commitment to safety and customer service, our Captains are passionate leaders driving results and encouraging a teamwork environment.</p><p>This position will be based in Panama.</p><p><br></p><p><strong>Requirements</strong></p><p>Airline Transport Pilot (ATP) license</p><p>Medical Certificate: current unrestricted First-Class</p><p>5,000 hours minimum of total Flight Time</p><p>1,000 hours of Flight Time as PIC*</p><p>Level 5 ICAO English Language Proficiency</p><p><br></p><p><strong>Benefits</strong></p><ul><li>We offer a competitive compensation package, health insurance and travel benefits for employees and their families.</li></ul><br/><br/>Please mention the word **EXCITING** and tag RMTcyLjE3MS4xMjUuMTk= when applying to show you read the job post completely (#RMTcyLjE3MS4xMjUuMTk=). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-captains-capitanes-copa-airlines-1137271",
+      "location": "PanamÃ¡, ",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Sales Manager",
+      "organisation": "Radisson Hotel Group",
+      "description": "<p>Radisson Hotel Group is one of the world's largest hotel groups with ten distinctive hotel brands, and more than 1,500 hotels in operation and under development in 95+ countries. The Groupâs overarching brand promise is Every Moment Matters with a signature Yes I Can! service ethos.<br><br><br><br>People are at the core of our business success and future. Our people are true Moment Makers and together we bring the culture, spirit, environment and opportunities that empower you to be your best, every day, everywhere, every time. Together, we make Every Moment Matter.<br><br><br><br></p><strong>Job Description<br><br></strong><p>Ambitious, thirsty for results, love interacting with people? We are looking for a natural brand promoter just like you! <br><br></p><p>Our people are at the core of our success. Your role guarantees variety and excitement every day. At RHG, we cherish your entrepreneurial spirit, collaborative nature. We foster an inclusive and supportive culture where, together, we ensure that every moment is truly meaningful. Embrace your uniqueness as an individual in our team and explore the exciting growth opportunities we have for you and the chance to create memorable moments.<br><br></p><p>We are currently seeking a <strong>Sales Manager</strong> to join our vibrant team. At RHG, we are in search of individuals who go beyond the resume â those with character, skills, talents, and a passion for creating memorable experiences. We value mindset as pivotal: anticipating guest needs, supporting your department, and consistently delivering memorable experiences.<br><br></p><p>We are dedicated to nurturing and growing talent, offering pathways for advancement, and fostering a culture of continuous learning.<br><br></p><p>As the <strong>Sales Manager</strong>, you infuse our dynamic Sales Team with an unparalleled level of strategic vision, a results-driven mindset, and an unwavering passion for elevating customer interactions. Your role as a leader is pivotal in steering our sales efforts to new heights, and your ambition sets the tone for achieving exceptional outcomes.<br><br></p><ul><li>Manages all aspects of the hotelâs sales team initiatives. </li><li>Maximize the revenue and growth of the hotel by directing the revenue generates activities in accordance with the business plan. </li><li>Drive new business for your hotel. </li><li>Build effective and collaborative relationships with internal and external stakeholders to ensure all sales opportunities are maximized. <br><br></li></ul><strong>Qualifications<br><br></strong><ul><li>Achieve sales goals by managing the sales team. </li><li>A proven track record in a similar role within a quality environment and to be able to demonstrate excellent standards and sales productivity. </li><li>Commercially astute, multi-tasker who is motivated by challenge. </li><li>Driven and ambitious to increase productivity and sales volume with appropriate techniques. </li><li>Clear thinker with excellent communication abilities and attention to detail </li><li>Strong negotiation skills. </li><li>Ability to enhance the hotels community image. </li><li>Itâs all about the experience and the sale, so say Yes I Can! <br><br></li></ul><strong>Additional Information<br><br></strong><p><strong>Why Join Radisson Hotel Group?<br><br></strong></p><p><strong>Live the Magic of Hospitality - </strong>Be part of a team that creates <strong>exceptional experiences and memorable moments</strong> every day. Let your <strong>Yes I Can!</strong> spirit shine as you bring hospitality to life. <br><br></p><p><strong>Build a Great Career - </strong>No matter your background or experience, we invest in your <strong>growth, learning, and career development</strong>âhelping you reach your full potential. <br><br></p><p><strong>Experience the Team Spirit - </strong>Join a workplace thatâs <strong>inclusive, fun, and meaningful</strong>. We celebrate diversity, support one another and foster a sense of belonging through our <strong>Employee Resource Groups and inclusion initiatives</strong>.<br><br></p><p><strong>Lead with Your Ambition - </strong>Your ideas, passion and drive matter! We empower you to <strong>make a difference</strong>âin hospitality, your community and beyond. <br><br></p><p><strong>Enjoy Global &amp; Local Perks - </strong>No matter where youâre located, youâll enjoy exclusive global benefits - like special hotel rates for you and your loved ones at our hotels worldwide. Plus, youâll have access to local perks and rewards tailored to your country, making your experience even more rewarding! <br><br></p><p><strong>Enjoy benefits such as</strong> - up to 53% off your stay as a Team Member at over 1,500 Radisson Hotels worldwide<br><br>Guaranteed minimum of 30% off for your Friends &amp; Family<br><br>Exclusive Discounts on Breakfast, Food &amp; Beverage, Spa and more<br><br></p><p><strong>Join us in shaping the future of hospitality!</strong> If youâre ready to <strong>bring your talent, energy, and passion</strong>, weâd love to hear from you.  <br><br></p><p><strong>Apply now and letâs make every moment matter.</strong>  <br><br></p><p>We welcome applicants from all <strong>backgrounds, abilities, and experiences</strong>. If you need any adjustments during the application process, please let us know.<br><br></p><br/><br/>Please mention the word **INTRIGUINGLY** and tag RMTcyLjE3MS4xMjUuMTk= when applying to show you read the job post completely (#RMTcyLjE3MS4xMjUuMTk=). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-sales-manager-radisson-hotel-group-1137200",
+      "location": "Visakhapatnam Rural mandal, ",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Donât see your role Apply here",
+      "organisation": "Atreides",
+      "description": "<strong><strong>Not seeing a position that matches your skillset? Kindly submit your resume to be considered for future opportunities.<br><br></strong></strong><strong><strong>Company Overview:</strong></strong> Atreides helps organizations transform large and complex multi-modal datasets into information-rich geospatial data subscriptions that can be used across a wide spectrum of use cases. Currently, Atreides focuses on providing high-fidelity data solutions to enable customers to derive insights quickly.â¯<br><br>We are a fast-moving, high-performance startup. We value a diverse team and believe inclusion drives better performance. We trust our team with autonomy, believing it leads to better results and job satisfaction. With a mission-driven mindset and entrepreneurial spirit, we are building something new and helping unlock the power of massive-scale data to make the world safer, stronger, and more prosperous.<br><br><strong><strong>Team Overview:</strong></strong> We are a passionate team of technologists, data scientists, and analysts with backgrounds in operational intelligence, law enforcement, large multinationals, and cybersecurity operations.â¯ We obsess about designing products that will change the way global companies, governments and non-profits protect themselves from external threats and global adversaries.â¯<br><br><strong>Team Principles<br><br></strong>At Atreides, we believe that teams work best when they:<br><br><ul><li>Remain curious and passionate in all aspects of our work </li><li>Promote clear, direct, and transparent communication </li><li>Embrace the 'measure twice, cut once' philosophy </li><li>Value and encourage diverse ideas and technologies </li><li>Lead with empathy in all interactions <br><br></li></ul><strong>Compensation And Benefits<br><br></strong><ul><li>Competitive salaryâ¯ </li><li>Comprehensive health, dental, and vision insurance plans </li><li>Flexible remote or hybrid work environment </li><li>Additional benefits like flexible hours, work travel opportunities, competitive vacation time and parental leave</li></ul><br/><br/>Please mention the word **CAPABILITY** and tag RMTcyLjE3MS4xMjUuMTk= when applying to show you read the job post completely (#RMTcyLjE3MS4xMjUuMTk=). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-dont-see-your-role-apply-here-atreides-1137186",
+      "location": "Denmark, Denmark, Western Australia, Australia",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "English Teacher",
+      "organisation": "Pembroke School",
+      "description": "<ul><li>Full-time, ongoing</li><li>Commencing Term 1, 2027</li><li>Salary commensurate with years of Service</li><li>Continuous professional development opportunities</li><li>Generous staff benefits</li></ul><p><br></p><p>English at Pembroke is taught by a large, dynamic team across Years 7 to 12, spanning both SACE and the International Baccalaureate. Our Middle School curriculum has been recently redesigned around conceptual threads and a portfolio-based approach to assessment that prioritises the process of learning, not just its products. Our teachers enjoy considerable freedom in text selection, within a framework of high academic expectations, and our faculty culture is one of collegiality, intellectual curiosity and serious engagement with pedagogy. Our staff contribute to curriculum design, and are supported to grow as practitioners at every career stage.</p><p><br></p><p><strong>About the Role</strong></p><p>Successful applicants will teach across the secondary years, with allocations shaped by experience and strengths. Depending on the appointment, this may include Middle School classes, senior SACE English subjects, or IB Diploma Language A courses.</p><p><br></p><p><em>Key Responsibilities include:</em></p><ul><li>Delivering engaging, rigorous and innovative English lessons that foster a love of learning</li><li>Supporting students to develop strong literacy, analytical and communication skills</li><li>Providing purposeful assessment and feedback that supports every students' growth</li><li>Contributing to a positive and collaborative culture across the Middle and Senior Schools</li><li>Actively participating in the life of the School through co-curricular and pastoral care contributions.</li></ul><p><br></p><p><strong>About You</strong></p><p>You are an effective teacher first and foremost, with demonstrated impact on student learning and a command of your subject that lets you teach with both rigour and imagination.</p><p><br></p><p><em>You will bring:</em></p><ul><li>Strong subject knowledge and a love of literature and language that students can feel</li><li>Evidence-informed, responsive pedagogy and high expectations of every learner</li><li>Capacity or willingness to teach across SACE and IB pathways (IB experience is valued but not required; training and support are provided)</li><li>Strong communication with students, families and colleagues</li><li>A collaborative disposition and a genuine interest in contributing to faculty and school life</li></ul><p><br></p><p><strong>Applications at All Career Stages</strong></p><p>We welcome applications from experienced practitioners and from graduate and early-career teachers alike. Early-career appointees are supported through structured mentoring and induction as part of a faculty that takes professional growth seriously.</p><p><br></p><p><strong>Required for Employment (Prior to Commencement)</strong></p><ul><li>Current Working with Children Check (South Australia)</li><li>Current Plink RRHAN-EC training: Masterclass and Fundamentals, including Protective Practices</li><li>First Aid and CPR</li></ul><p><br></p><p><strong>Find Your Place At Pembroke</strong></p><p>At Pembroke, youâll be part of a warm and collaborative school community that values relationships, initiative, and a shared commitment to learning. Whether in the classroom, on the sporting field, or behind the scenes, every role contributes to shaping the rich and inclusive culture of the School. With opportunities for professional growth, a strong sense of belonging, and a genuine appreciation for staff, Pembroke is a place where your work is seen, valued, and celebrated.</p><p><br></p><p>Read more in <em>The Heart of Pembroke - Celebrating our Staff</em>.</p><p><br></p><p>Pembroke School is a co-educational, non-denominational, day and boarding School from Early Learning Centre to Year 12. Renowned for academic excellence and a broad, inclusive program, Pembroke offers the South Australian Certificate of Education (SACE) and is also an International Baccalaureate World School, offering the IB Diploma Programme (IBDP) and Primary Years Programme (PYP).</p><p><br></p><p>Pembroke is a vibrant and exciting School catering for a diverse community of students. With over 1,700 students, the School offers a broad-ranging curriculum and an outstanding choice of co-curricular opportunities. The School employs over 300 permanent and fixed-term staff, plus more than 150 casual employees.</p><p><br></p><p>Pembroke seeks to engage outstanding, diverse and well-qualified staff to work in our welcoming and open School. All staff work together to provide an environment that facilitates each studentâs exploration of their potential, academic progress and personal welfare. Staff are encouraged to maintain a collaborative approach, a broad outlook within their respective field and a commitment to ongoing professional development and continuous improvement. Pembroke is a lively and fulfilling place to work.</p><p><br></p><p><strong>How to Apply</strong></p><p>Applications for this position close on Sunday, 6 September 2026, at 11:59 pm.</p><p><br></p><ul><li>You are required to upload a CV and a cover letter (maximum 2 pages) identifying your interest in applying and what you could bring to the role.</li><li>Your application should be addressed to the Acting Principal, Mr Chris Zielinski.</li><li>The School reserves the right to shortlist and interview candidates before the closing date. Early applications are strongly encouraged.</li><li>For any enquiries regarding this position, please email talent@pembroke.sa.edu.au</li><li>Please do not email your applications.</li><li>Late applications and those submitted via external recruitment agencies will not be considered.</li></ul><p><br></p><p><strong><em>Pembroke School is an equal opportunity employer.</em></strong></p><br/><br/>Please mention the word **CAPTIVATE** and tag RMTcyLjE3MS4xMjUuMTk= when applying to show you read the job post completely (#RMTcyLjE3MS4xMjUuMTk=). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-english-teacher-pembroke-school-1137182",
+      "location": "Adelaide, ",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Store Manager",
+      "organisation": "Crocs, Inc.",
+      "description": "At Crocs, Inc., every career offers a chance to make a real impact. No two journeys look the same. And that's exactly how we like it. Whether youâre welcoming customers into our stores, collaborating with global teams at our headquarters, or keeping operations moving at our distribution centers, your impact is real and valued. At Crocs, Inc. youâre not expected to fit a mold. Youâre encouraged to break it and create something better.<br><br><strong>Overview<br><br></strong>As the Store Manager, you will lead a dedicated team of store associates &amp; leaders every day, to create an exceptional consumer experience.â¯ Your focus will be on driving sales, providing excellent customer service, maintaining visual presentations, and developing talent within the store. This role offers opportunity to grow and collaborate with industry leading teammates and partners.<br><br><strong><strong>What You'll Do<br><br></strong></strong><ul><li> Deliver outstanding service to our consumers using our C.H.A.R.M service model </li><li> Leads the store team in surpassing performance metrics including sales, consumer service and charms </li><li> Apply analytical thinking &amp; company reporting to find opportunities within store, empowering the team to make strategic decisions </li><li> Lead visual presentation, product flow, replenishment, and operational standards throughout the store </li><li> Foster a welcoming, inclusive environment that engages promotes internal growth and builds an external network of talent </li><li> Coordinate, delegate, prioritize and meet store deadlines while ensuring effective follow up on daily activities </li><li> Contribute to crafting a team environment that encourages sharing of suggestions, ideas, and concerns while upholding Crocs Inc. values </li><li> Learn &amp; assist in various departments including consumer service, product knowledge, visual presentation, and stock room management. </li><li> Support team members in the daily execution of retail operations i.e., POS system management and use, stock replenishment, assist in pricing and markdown processes seasonally, promote loyalty programs, maintain cleanliness and recovery standards etc. </li><li> Adhere to Crocs, Inc. Asset Protection policies and procedures, including shortage prevention, inventory control, and compliance procedures <br><br></li></ul><strong><strong>What You'll Bring to the Table<br><br></strong></strong><ul><li> Minimum 18+ years old </li><li> Possess at least A Level / SSCE/ Diploma / Advanced Diploma or above preferred </li><li> Minimum 5 years of total retail experience; preferably with previous Store Manager experience. </li><li> Demonstrated leadership abilities, with a passion for challenging, empowering, and driving team results </li><li> Professional working proficiency in English, proficiency of other language(s) will be an advantage </li><li> Proven communication skills (written and verbal) to successfully connect with store team, operations managers, District Managers &amp; corporate partners </li><li> Flexible to work on rotational shift basis, including nights, Saturdays, Sundays and Public Holidays. </li><li> Intermediate computer proficiency in Microsoft Word, PowerPoint, Excel and Email and able to operate retail Point of Sale system </li><li> Demonstrated leadership abilities, with a passion for challenging, empowering, and driving team results </li><li> Desire to succeed in a high growth, fast-paced retail environment </li><li> The work environment and physical demands described here are representative of but not limited to those that an employee will encounter while performing the essential functions of this job. </li><li> Ability to climb and descend ladders carrying merchandise daily </li><li> Ability to lift 15kg or more with assistance daily <br><br></li></ul>The Company is an Equal Opportunity Employer committed to a diverse and inclusive work environment.â¯This posting is for an existing vacany and we accept applications on an ongoing basis.<br><br>All qualified applicants will receive consideration for employment without regard to race, color, religion, sex, sexual orientation, gender identity, national origin, or disability, or any other classification protected by law.<br><br>Title: Store Manager<br><br>The posted pay range reflects geographic market conditions and may vary by location. Compensation will always meet or exceed applicable local minimum wage requirements.<br><br>This position is eligible to participate in a company incentive program.<br><br>This position is eligible for company benefits including but not limited to medical, dental, and vision coverage, life and AD&amp;D, short and long-term disability coverage, paid time off, employee assistance, and many other additional voluntary benefits. This organization participates in E-Verify<br><br>Job Category: Retail<br/><br/>Please mention the word **ACCOMODATIVE** and tag RMTcyLjE3MS4xMjUuMTk= when applying to show you read the job post completely (#RMTcyLjE3MS4xMjUuMTk=). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-store-manager-crocs-inc-1137181",
+      "location": "Chatswood, ",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Sourcer Private Destinations",
+      "organisation": "Royal Caribbean Group",
+      "description": "<strong>Journey with us!</strong> Combine your career goals and sense of adventure by joining our incredible team of employees at <strong>Royal Caribbean Group</strong>. We are proud to offer a competitive compensation and benefits package, and excellent career development opportunities, each offering unique ways to explore the world.<br><br>We are proud to be the vacation-industry leader with global brands â including Royal Caribbean International, Celebrity Cruises and Silversea Cruises â the most innovative fleet and private destinations, and the best people. Together, we are dedicated to turning the vacation of a lifetime into a lifetime of vacations for our guests.<br><br>Royal Caribbean Groupâs <strong>Shipboard Recruiting team</strong> has an exciting career opportunity for a full time <strong>Sourcer, Private Destinations</strong> reporting to the <strong>Director, Shipboard Recruiting</strong>.<br><br><strong>This position will reside in Nassau Bahamas and will sit in our main office.<br><br></strong><strong>Position Summary<br><br></strong>The Sourcer executes all strategic sourcing activities in partnership with the Private Destinations talent acquisition initiatives across entry levels and functions.<br><br>The goal is to ensure that the organization can consistently proactively deploy the right people, in the right place, at the right time, at the most efficient cost, and for them to be fully engaged.<br><br><strong>Essential Duties And Responsibilities<br><br></strong><ul><li>Builds and implements sourcing strategy.</li><li>Understands and executes current trends and best practices in sourcing and talent attraction.</li><li>Builds talent pipelines from various platforms such as social media, job boards, niche sites, and other similar platforms to implement sourcing strategy.</li><li>Creates candidate pipeline ahead of need and real time.</li><li>Leverages proprietary pipelines of candidates through our ATS and CRM.</li><li>Collaborates with recruiters to develop market strategy, pipeline candidates, provide insights, and share competitive intelligence.</li><li>Partners with the necessary team(s) to establish, develop, and maintain relationships with hiring managers.</li><li>Provides support of inbound sourcing (candidate / req management) as needed.</li><li>Assists with recruitment marketing and events initiatives.</li><li>Help support candidates with applications.</li><li>Assists with overseeing Smartsheet trackers.</li><li>Meets operational business goals and KPIâs.<br><br></li></ul><strong>Qualifications<br><br></strong><ul><li>Bachelorâs degree in human resource management, business administration, or related field from an accredited college or university or the international equivalent required.</li><li>Minimum two (2) yearsâ experience in working for a global/international or reputable local organization in the same capacity.</li><li>Working knowledge of computers, internet access, and the ability to navigate within an automated HRIS system as well as variety software packages such as Excel, Word, and PowerPoint; familiar with social media and relevant company/brand efforts.</li><li>Good working knowledge in recruitment strategies and talent pool management</li><li>Knowledge of accepted human resources practices and the laws governing employment and fair treatment of employees globally.</li><li>Must be tactful, resolute, and committed to providing excellent customer service.</li><li>Must have a flexible approach to change, is able to work effectively in a variety of situations, seeks improvements and looks to the future.</li><li>Strong written and presentational skills; ability to clearly communicate complex messages to a variety of audiences including management.</li><li>Ability to work with colleagues, managers, and stakeholders in effective partnership.<br><br></li></ul><strong>We know there's a lot to consider.</strong> As you go through the application process, our recruiters will be glad to provide guidance, and more relevant details to answer any additional questions. Thank you again for your interest in Royal Caribbean Group. We'll hope to see you onboard soon!<br><br>It is the policy of the Company to ensure equal employment and promotion opportunity to qualified candidates without discrimination or harassment on the basis of race, color, religion, sex, age, national origin, disability, sexual orientation, sexuality, gender identity or expression, marital status, or any other characteristic protected by law. Royal Caribbean Group and each of its subsidiaries prohibit and will not tolerate discrimination or harassment.<br/><br/>Please mention the word **HARMLESS** and tag RMTcyLjE3MS4xMjUuMTk= when applying to show you read the job post completely (#RMTcyLjE3MS4xMjUuMTk=). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-sourcer-private-destinations-royal-caribbean-group-1137172",
+      "location": "Nassau, ",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    },
+    {
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Assistant Manager",
+      "organisation": "Storage King Group",
+      "description": "<strong>About Us<br><br></strong>Storage King is a fast-growing business offering stable and rewarding employment. We have a fun and friendly culture across our store network which currently includes over 200 stores across Australia and New Zealand. Storage King is a market leader in self-storage and with continued growth plans it is an exciting time to become involved with our brand.<br><br><strong>Certified Great Place to Work â 2025/2026 in both Australia and New Zealand<br><br></strong><strong>The Role<br><br></strong>We currently have a <strong>full-time</strong> position available for an Assistant Store Manager to join our teams based in Rozelle &amp; Balmain. Assistant Store Managers are the key support management role in store and work hand in hand with the leadership to deliver exceptional store results and customer service.<br><br><strong>Working Hours<br><br></strong>Tuesday to Saturday<br><br>Total 38 hours per week<br><br>Occasional Sunday shifts may be offered.<br><br><strong>We Are Open<br><br></strong>Monday to Friday 8am - 5pm<br><br>Saturday 8am - 4pm<br><br>Sunday 10am - 4pm<br><br>Some flexibility will be required for this role.<br><br><strong>About You<br><br></strong>To be successful in this role, you will bring:<br><br><ul><li>Ideal if you have a retail, sales or hospitality background</li><li>Willingness to learn new skills associated with a sales and customer service role - training is provided</li><li>Self-motivated and able to work using own initiative or with support and direction</li><li>Enjoy problem solving and taking ownership of tasks</li><li>Passion for delivering customer service excellence, with an above and beyond attitude and work ethic</li><li>Enthusiasm as a team player with a hands on approach to a diverse range of tasks</li><li>Goal orientated and results driven</li><li>Written and verbal communication skills</li><li>Physically fit</li><li>Drivers License<br><br></li></ul><strong>In return we offer:<br><br></strong><ul><li>Competitive hourly rate + monthly and quarterly performance bonuses</li><li>Full training and career progression opportunities</li><li>A flexible working environment and strong team culture</li><li>No late nights or public holidays</li><li>Uniform and laundry allowance</li><li>On-site parking provided</li><li>Discounted health insurance through Medibank</li><li>Assure Wellbeing Program â access to a wide range of free, confidential support services for you and your immediate family. This includes professional counselling, nutrition and lifestyle coaching, financial and legal advice, and wellbeing tools to help you thrive both at work and in life.</li><li>Paid Parental Leave â generous paid leave for primary carers (16 weeks) and partners (4 weeks) after 12 months of service, supporting you during one of lifeâs most important milestones</li><li>Access to exclusive retail discounts on fashion, groceries, travel, and more via our employee platform<br><br></li></ul>Want to learn more about working with us? Visit our careers site to hear from our team, watch employee videos and see what makes Storage King a great place to grow your career. https://storagekingcareers.com.au/<br><br>Self-Storage is a growing industry with opportunities for those who are passionate about creating great customer experiences. If you want to work as part of a close team to find solutions for our customers storage requirements and enjoy contributing to the end to end running of a store, youâd be a great fit for our team!<br><br>If this sounds like the opportunity you've been looking for, weâd love to hear from you â <strong>apply today</strong>!<br><br><em>We value the important work recruitment agencies do, but all our hiring is managed exclusively by our internal recruitment team. We kindly ask agencies not to contact us regarding these opportunities. Thank you for your understanding.</em><br/><br/>Please mention the word **DESERVEDLY** and tag RMTcyLjE3MS4xMjUuMTk= when applying to show you read the job post completely (#RMTcyLjE3MS4xMjUuMTk=). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-assistant-manager-storage-king-group-1137161",
+      "location": "Rozelle, ",
+      "remote": true,
+      "domainTags": [
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5,
+        "probabilityOfWinning": 4,
+        "strategicValue": 4,
+        "relationshipValue": 2,
+        "timeRequired": 7,
+        "geography": 8,
+        "remoteCompatibility": 10,
+        "alignmentAIforUIServices": 5.5,
+        "alignmentADGL": 5.5,
+        "alignmentOPERA": 6,
+        "longTermRelationshipPotential": 5
+      },
+      "scopedEngagement": false,
+      "recurrencePattern": "none",
+      "autoScored": true,
+      "autoCollected": true,
+      "matchedKeywords": [
+        "RAG"
+      ]
+    }
+  ]
+}
