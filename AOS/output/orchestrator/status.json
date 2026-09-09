@@ -9,16 +9,16 @@
     "reportPath": "string — this run's Daily Execution Report, relative to the repo root",
     "logPath": "string — this run's full log, relative to the repo root"
   },
-  "startedAt": "2026-09-08T04:56:26.582412+00:00",
-  "finishedAt": "2026-09-08T04:56:28.749039+00:00",
-  "durationSeconds": 2.17,
+  "startedAt": "2026-09-09T04:56:52.376632+00:00",
+  "finishedAt": "2026-09-09T04:56:54.667554+00:00",
+  "durationSeconds": 2.29,
   "employees": [
     {
       "key": "market-intelligence",
       "name": "Market Intelligence",
       "status": "SUCCESS",
       "attempts": 1,
-      "durationSeconds": 0.4,
+      "durationSeconds": 0.17,
       "error": null,
       "outputs": []
     },
@@ -36,10 +36,10 @@
       "name": "Demand Intelligence",
       "status": "SUCCESS",
       "attempts": 1,
-      "durationSeconds": 0.82,
+      "durationSeconds": 1.06,
       "error": null,
       "outputs": [
-        "demand-intelligence/runtime/snapshots/2026-09-08-collection-snapshot.json",
+        "demand-intelligence/runtime/snapshots/2026-09-09-collection-snapshot.json",
         "demand-intelligence/organisation-profiles.json",
         "output/demand-intelligence/top-organisations-this-week.json"
       ]
@@ -52,8 +52,8 @@
       "durationSeconds": 0.06,
       "error": null,
       "outputs": [
-        "output/revenue-hunter/2026-09-08-revenue-dashboard.md",
-        "output/revenue-hunter/2026-09-08-revenue-forecast.md"
+        "output/revenue-hunter/2026-09-09-revenue-dashboard.md",
+        "output/revenue-hunter/2026-09-09-revenue-forecast.md"
       ]
     },
     {
@@ -61,7 +61,7 @@
       "name": "CRM",
       "status": "SUCCESS",
       "attempts": 1,
-      "durationSeconds": 0.03,
+      "durationSeconds": 0.04,
       "error": null,
       "outputs": []
     },
@@ -70,7 +70,7 @@
       "name": "Service Mapping Engine",
       "status": "SUCCESS",
       "attempts": 1,
-      "durationSeconds": 0.03,
+      "durationSeconds": 0.04,
       "error": null,
       "outputs": [
         "output/service-mapping/service-recommendation-report.md"
@@ -101,7 +101,7 @@
       "name": "Relationship Intelligence",
       "status": "SUCCESS",
       "attempts": 1,
-      "durationSeconds": 0.03,
+      "durationSeconds": 0.04,
       "error": null,
       "outputs": []
     },
@@ -119,7 +119,7 @@
       "name": "Recruiter Intelligence",
       "status": "SUCCESS",
       "attempts": 1,
-      "durationSeconds": 0.03,
+      "durationSeconds": 0.04,
       "error": null,
       "outputs": []
     },
@@ -137,10 +137,10 @@
       "name": "Tender & RFP Intelligence",
       "status": "SUCCESS",
       "attempts": 1,
-      "durationSeconds": 0.06,
+      "durationSeconds": 0.08,
       "error": null,
       "outputs": [
-        "output/tender-intelligence/2026-09-08-tender-intelligence-report.md",
+        "output/tender-intelligence/2026-09-09-tender-intelligence-report.md",
         "output/tender-intelligence/tender-intelligence-feed.json"
       ]
     },
@@ -149,7 +149,7 @@
       "name": "Executive Brand Intelligence",
       "status": "SUCCESS",
       "attempts": 1,
-      "durationSeconds": 0.04,
+      "durationSeconds": 0.05,
       "error": null,
       "outputs": []
     },
@@ -158,7 +158,7 @@
       "name": "Delivery Intelligence",
       "status": "SUCCESS",
       "attempts": 1,
-      "durationSeconds": 0.03,
+      "durationSeconds": 0.04,
       "error": null,
       "outputs": []
     },
@@ -167,7 +167,7 @@
       "name": "Company 360",
       "status": "SUCCESS",
       "attempts": 1,
-      "durationSeconds": 0.03,
+      "durationSeconds": 0.04,
       "error": null,
       "outputs": []
     },
@@ -176,10 +176,10 @@
       "name": "Executive Memory",
       "status": "SUCCESS",
       "attempts": 1,
-      "durationSeconds": 0.03,
+      "durationSeconds": 0.04,
       "error": null,
       "outputs": [
-        "output/executive-memory/2026-09-08-executive-memory-report.md",
+        "output/executive-memory/2026-09-09-executive-memory-report.md",
         "output/executive-memory/executive-memory-feed.json"
       ]
     },
@@ -188,10 +188,10 @@
       "name": "Market Positioning Intelligence",
       "status": "SUCCESS",
       "attempts": 1,
-      "durationSeconds": 0.03,
+      "durationSeconds": 0.04,
       "error": null,
       "outputs": [
-        "output/market-positioning-intelligence/2026-09-08-market-positioning-report.md",
+        "output/market-positioning-intelligence/2026-09-09-market-positioning-report.md",
         "output/market-positioning-intelligence/market-positioning-feed.json"
       ]
     },
@@ -200,10 +200,10 @@
       "name": "Capacity Management",
       "status": "SUCCESS",
       "attempts": 1,
-      "durationSeconds": 0.03,
+      "durationSeconds": 0.04,
       "error": null,
       "outputs": [
-        "output/capacity-management/2026-09-08-capacity-report.md",
+        "output/capacity-management/2026-09-09-capacity-report.md",
         "output/capacity-management/capacity-feed.json"
       ]
     },
@@ -221,7 +221,7 @@
       "name": "Content Director",
       "status": "SUCCESS",
       "attempts": 1,
-      "durationSeconds": 0.03,
+      "durationSeconds": 0.04,
       "error": null,
       "outputs": []
     },
@@ -235,10 +235,10 @@
       "outputs": [
         "output/executive-dashboard/executive-dashboard.md",
         "output/executive-dashboard/executive-dashboard.html",
-        "output/executive-dashboard/2026-09-08-executive-dashboard.md",
-        "output/executive-dashboard/2026-09-08-executive-dashboard.html",
-        "output/daily-briefs/2026/09/08/executive-dashboard.md",
-        "output/daily-briefs/2026/09/08/executive-dashboard.html"
+        "output/executive-dashboard/2026-09-09-executive-dashboard.md",
+        "output/executive-dashboard/2026-09-09-executive-dashboard.html",
+        "output/daily-briefs/2026/09/09/executive-dashboard.md",
+        "output/daily-briefs/2026/09/09/executive-dashboard.html"
       ]
     },
     {
@@ -246,7 +246,7 @@
       "name": "Artifact Registry",
       "status": "SUCCESS",
       "attempts": 1,
-      "durationSeconds": 0.14,
+      "durationSeconds": 0.16,
       "error": null,
       "outputs": [
         "output/artifact-registry/artifact-index.json"
@@ -257,10 +257,10 @@
       "name": "CEO Advisor",
       "status": "SUCCESS",
       "attempts": 1,
-      "durationSeconds": 0.05,
+      "durationSeconds": 0.06,
       "error": null,
       "outputs": [
-        "output/ceo-advisor/2026-09-08-ceo-daily-report.md",
+        "output/ceo-advisor/2026-09-09-ceo-daily-report.md",
         "output/ceo-advisor/ceo-daily-report.md",
         "output/ceo-advisor/ceo-weekly-report.md",
         "output/ceo-advisor/ceo-monthly-business-review.md"
@@ -269,6 +269,6 @@
   ],
   "overallStatus": "SUCCESS",
   "failures": [],
-  "reportPath": "AOS/output/orchestrator/reports/2026-09-08-daily-execution-report.md",
-  "logPath": "AOS/output/orchestrator/logs/2026-09-08-045626-orchestrator.log"
+  "reportPath": "AOS/output/orchestrator/reports/2026-09-09-daily-execution-report.md",
+  "logPath": "AOS/output/orchestrator/logs/2026-09-09-045652-orchestrator.log"
 }
