@@ -38,7 +38,7 @@ tts:
     after_question: 600
     after_option: 350
     before_reveal: 1200
-    after_reveal: 500
+    after_reveal: 1800    # silent pause after "Option B." before the next question begins
     between_explanations: 400
 
 # ----------------------------------------------------------------------------
