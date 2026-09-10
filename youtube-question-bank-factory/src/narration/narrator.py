@@ -12,7 +12,8 @@ fully offline by design.
 
 Narration follows one fixed structure, always:
   1. the question
-  2. all four options, A through D
+  2. every option the question actually has, in order (A, B, C, D, and
+     E/F/... if present -- never assumed to be exactly four)
   3. the existing countdown/timer pause
   4. the reveal -- ONLY the correct option's letter ("Option B."), never
      the option text again, never a lead-in phrase, never a reason
@@ -28,7 +29,7 @@ from __future__ import annotations
 
 import random
 
-from src.models import Explanation, Narration, NarrationSegment, NormalizedQuestion, VALID_OPTION_KEYS
+from src.models import Explanation, Narration, NarrationSegment, NormalizedQuestion, option_keys
 
 _INTROS = [
     # Deliberately sequence-neutral -- none of these implies a previous
@@ -42,9 +43,11 @@ _INTROS = [
     "Let's work through this question together.",
 ]
 _OPTIONS_LEAD = [
+    # Deliberately count-neutral -- a question may have four options or
+    # more, so this phrase bank never claims a specific number.
     "Here are your options.",
     "Here's what you can choose from.",
-    "Take a look at the four options.",
+    "Take a look at the options.",
 ]
 _THINK = [
     "Take a few seconds to think about it.",
@@ -69,7 +72,7 @@ class NarrationAgent:
                                       pause_ms=self.pause_ms.get("after_question", 600)))
 
         segs.append(NarrationSegment("transition", _pick(rng, _OPTIONS_LEAD), pause_ms=250))
-        for key in VALID_OPTION_KEYS:
+        for key in option_keys(q.options):
             segs.append(NarrationSegment("option", f"Option {key}. {q.options[key]}.",
                                           option_key=key,
                                           pause_ms=self.pause_ms.get("after_option", 350)))

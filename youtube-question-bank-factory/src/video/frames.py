@@ -7,7 +7,7 @@ from __future__ import annotations
 
 from PIL import Image, ImageDraw
 
-from src.models import VALID_OPTION_KEYS, NormalizedQuestion
+from src.models import NormalizedQuestion, option_keys
 from src.video.fonts import load_font
 
 # A still-clearly-readable floor for the question font -- pagination
@@ -46,10 +46,11 @@ def _draw_wrapped(draw, text, font, xy, max_width, fill, line_spacing):
 def render_question_frame(tpl: dict, resolution: tuple, q: NormalizedQuestion,
                            highlight_key: str | None = None, timer_text: str | None = None,
                            show_banner: bool = False, question_text_override: str | None = None,
-                           question_font_size: int | None = None, show_options: bool = True) -> Image.Image:
-    """One frame: question + four options, optionally with the correct
-    option highlighted, a countdown number, and/or an "answer revealed"
-    banner. This single function renders every visual state the spec's
+                           question_font_size: int | None = None, show_options: bool = True,
+                           options_page: list | None = None) -> Image.Image:
+    """One frame: question + options, optionally with the correct option
+    highlighted, a countdown number, and/or an "answer revealed" banner.
+    This single function renders every visual state the spec's
     question -> options -> countdown -> reveal sequence needs.
 
     question_text_override/question_font_size/show_options exist only for
@@ -59,6 +60,15 @@ def render_question_frame(tpl: dict, resolution: tuple, q: NormalizedQuestion,
     options for space. Every existing call site that doesn't pass them
     behaves exactly as before -- this is the single question-fits-fine
     frame the whole question+options sequence already used.
+
+    options_page exists only for option pagination (see
+    plan_option_pages): a list of {"key","text","lines","box_h"} entries
+    describing exactly which options -- and how their text wraps --
+    belong on this particular page. When omitted and show_options=True,
+    every option the question has is drawn on a single page at the
+    template's normal single-line box height, in A/B/C/... order -- this
+    is what every pre-pagination call site (including direct test calls)
+    still gets by default.
     """
     w, h = resolution
     bg_color = tpl["background"]["color"]
@@ -79,9 +89,10 @@ def render_question_frame(tpl: dict, resolution: tuple, q: NormalizedQuestion,
         opt_layout = tpl["layout"]["options"]
         ox, oy = opt_layout["start_position"]
         box_w = opt_layout["box_width"]
-        box_h = opt_layout["box_height"]
+        base_box_h = opt_layout["box_height"]
         gap = opt_layout["row_gap"]
         pad = opt_layout["text_padding"]
+        opt_line_spacing = opt_layout.get("line_spacing", 8)
 
         label_font = load_font(tpl["fonts"]["option_label"]["family"], tpl["fonts"]["option_label"]["size"])
         text_font = load_font(tpl["fonts"]["option_text"]["family"], tpl["fonts"]["option_text"]["size"])
@@ -90,8 +101,20 @@ def render_question_frame(tpl: dict, resolution: tuple, q: NormalizedQuestion,
         banner_font = load_font(tpl["fonts"]["banner"]["family"], tpl["fonts"]["banner"]["size"])
         banner_color = tpl["fonts"]["banner"]["color"]
 
-        for i, key in enumerate(VALID_OPTION_KEYS):
-            top = oy + i * (box_h + gap)
+        if options_page is not None:
+            entries = options_page
+        else:
+            entries = [
+                {"key": key, "text": q.options[key], "lines": None, "box_h": base_box_h}
+                for key in option_keys(q.options)
+            ]
+
+        top = oy
+        for entry in entries:
+            key = entry["key"]
+            text = entry["text"]
+            lines = entry.get("lines")
+            box_h = entry.get("box_h") or base_box_h
             is_correct = highlight_key == key
             box_fill = colors["correct_box"] if is_correct else colors["option_box"]
             box_border = colors["correct_box_border"] if is_correct else colors["option_box_border"]
@@ -99,12 +122,27 @@ def render_question_frame(tpl: dict, resolution: tuple, q: NormalizedQuestion,
                 [(ox, top), (ox + box_w, top + box_h)], radius=14, fill=box_fill, outline=box_border, width=3
             )
             label_color = colors["correct_box_border"] if is_correct else tpl["fonts"]["option_label"]["color"]
-            draw.text((ox + pad, top + box_h / 2), f"{key}", font=label_font, fill=label_color, anchor="lm")
             label_w = draw.textlength(f"{key}.  ", font=label_font)
-            draw.text(
-                (ox + pad + label_w, top + box_h / 2), q.options[key], font=text_font,
-                fill=tpl["fonts"]["option_text"]["color"], anchor="lm",
-            )
+
+            if lines and len(lines) > 1:
+                # A wrapped, multi-line option: top-anchored so extra
+                # lines grow downward within its own (already-taller) box
+                # instead of overflowing it.
+                draw.text((ox + pad, top + pad), f"{key}", font=label_font, fill=label_color, anchor="la")
+                line_height = text_font.size + opt_line_spacing
+                ly = top + pad
+                for line in lines:
+                    draw.text(
+                        (ox + pad + label_w, ly), line, font=text_font,
+                        fill=tpl["fonts"]["option_text"]["color"], anchor="la",
+                    )
+                    ly += line_height
+            else:
+                draw.text((ox + pad, top + box_h / 2), f"{key}", font=label_font, fill=label_color, anchor="lm")
+                draw.text(
+                    (ox + pad + label_w, top + box_h / 2), text, font=text_font,
+                    fill=tpl["fonts"]["option_text"]["color"], anchor="lm",
+                )
             # The correctness indicator sits beside its own option box
             # rather than as a separate overlay, so it can never collide
             # with the question text or another option regardless of
@@ -112,6 +150,8 @@ def render_question_frame(tpl: dict, resolution: tuple, q: NormalizedQuestion,
             if is_correct and show_banner:
                 draw.text((ox + box_w - pad, top + box_h / 2), "✓ CORRECT",
                           font=banner_font, fill=banner_color, anchor="rm")
+
+            top += box_h + gap
 
     if timer_text:
         tf = tpl["fonts"]["timer"]
@@ -185,6 +225,98 @@ def plan_question_pages(tpl: dict, question_text: str) -> tuple:
         remaining = remaining[len(chosen):]
 
     return pages, floor_size
+
+
+def plan_option_pages(tpl: dict, options: dict) -> list:
+    """Decides how a question's options are grouped onto one or more
+    pages beneath the question, never overflowing the options area and
+    never shrinking the option font: a long option wraps onto extra
+    lines (growing that option's own box height), and once a page's
+    accumulated options would exceed the available vertical space, the
+    rest continue on a new page -- fitting as many complete options as
+    safely fit, never forcing a fixed count per page. A single option
+    whose own wrapped text is taller than the entire options area is
+    split across consecutive pages of its own, keeping its own letter on
+    every continuation.
+
+    Returns a list of pages; each page is a list of
+    {"key", "text", "lines", "box_h"} entries in A/B/C/... order. Every
+    option key appears on at least one page, and concatenating a given
+    key's "text" values across the pages it appears on reconstructs its
+    original text exactly -- nothing is ever dropped, merged into
+    another option, or reworded.
+    """
+    img = Image.new("RGB", (1, 1))
+    draw = ImageDraw.Draw(img)
+
+    opt_layout = tpl["layout"]["options"]
+    box_w = opt_layout["box_width"]
+    base_box_h = opt_layout["box_height"]
+    gap = opt_layout["row_gap"]
+    pad = opt_layout["text_padding"]
+    oy = opt_layout["start_position"][1]
+
+    label_font = load_font(tpl["fonts"]["option_label"]["family"], tpl["fonts"]["option_label"]["size"])
+    text_font = load_font(tpl["fonts"]["option_text"]["family"], tpl["fonts"]["option_text"]["size"])
+    line_spacing = opt_layout.get("line_spacing", 8)
+    line_height = text_font.size + line_spacing
+    label_w = draw.textlength("X.  ", font=label_font)
+    text_max_width = max(box_w - 2 * pad - label_w, 1)
+
+    footer_cfg = tpl["layout"].get("footer")
+    area_bottom = footer_cfg["position"][1] - 20 if footer_cfg else oy + base_box_h * 6
+    available_height = max(area_bottom - oy, base_box_h)
+    max_lines_per_box = max(1, int((available_height - 2 * pad) // line_height))
+
+    def _entry_for(text: str):
+        lines = _wrap_text(draw, text, text_font, text_max_width)
+        box_h = base_box_h if len(lines) <= 1 else max(base_box_h, len(lines) * line_height + 2 * pad)
+        return lines, box_h
+
+    pages: list = []
+    current_page: list = []
+    current_height = 0.0
+
+    for key in option_keys(options):
+        text = options[key]
+        lines, box_h = _entry_for(text)
+
+        if box_h > available_height:
+            # Doesn't fit on any single page even alone -- split this
+            # option's own text across as many dedicated pages as it
+            # needs, keeping its own letter on each continuation.
+            if current_page:
+                pages.append(current_page)
+                current_page, current_height = [], 0.0
+            remaining = text.split()
+            while remaining:
+                chosen: list = []
+                for word in remaining:
+                    candidate = chosen + [word]
+                    if len(_wrap_text(draw, " ".join(candidate), text_font, text_max_width)) > max_lines_per_box:
+                        break
+                    chosen = candidate
+                if not chosen:
+                    chosen = remaining[:1]  # never drop a word, even one too wide for the box
+                chunk_text = " ".join(chosen)
+                chunk_lines, chunk_box_h = _entry_for(chunk_text)
+                pages.append([{"key": key, "text": chunk_text, "lines": chunk_lines, "box_h": chunk_box_h}])
+                remaining = remaining[len(chosen):]
+            continue
+
+        needed = box_h + (gap if current_page else 0)
+        if current_page and current_height + needed > available_height:
+            pages.append(current_page)
+            current_page, current_height = [], 0.0
+            needed = box_h
+
+        current_page.append({"key": key, "text": text, "lines": lines, "box_h": box_h})
+        current_height += needed
+
+    if current_page:
+        pages.append(current_page)
+
+    return pages or [[]]
 
 
 def render_title_frame(tpl: dict, resolution: tuple, title: str = "", subtitle: str = "") -> Image.Image:

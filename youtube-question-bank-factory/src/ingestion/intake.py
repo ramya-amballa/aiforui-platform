@@ -17,10 +17,13 @@ from typing import Optional
 
 from src.cache import compute_hash
 from src.ingestion.readers import read_question_bank
-from src.models import IngestionIssue, IngestionReport, NormalizedQuestion
+from src.models import MIN_OPTION_COUNT, IngestionIssue, IngestionReport, NormalizedQuestion
 
-REQUIRED_OPTION_COLS = ["option_a", "option_b", "option_c", "option_d"]
-VALID_ANSWERS = {"A", "B", "C", "D"}
+# Option columns are read dynamically (option_a, option_b, option_c, ...)
+# rather than a fixed list -- a question bank may supply 4, 5, 6, or more
+# options, and every one of them must survive as its own independent
+# option, never merged into the last of a fixed set.
+_ALL_OPTION_LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 _WS_RE = re.compile(r"\s+")
 
 
@@ -28,6 +31,24 @@ def _clean_text(v) -> str:
     if v is None:
         return ""
     return _WS_RE.sub(" ", str(v).strip())
+
+
+def _extract_options(row: dict) -> dict:
+    """Reads option_a, option_b, option_c, ... in order, stopping at the
+    first letter whose column is absent or empty for this row -- so a
+    question bank whose sheet has option_e/option_f columns still yields
+    exactly 4 options for a row that only filled in A-D, and 6 options
+    for a row that filled in all six. Nothing is ever capped at D."""
+    options: dict = {}
+    for letter in _ALL_OPTION_LETTERS:
+        col = f"option_{letter.lower()}"
+        if col not in row:
+            break
+        value = _clean_text(row.get(col))
+        if not value:
+            break
+        options[letter] = value
+    return options
 
 
 def _normalize_for_dedupe(text: str) -> str:
@@ -61,12 +82,7 @@ class QuestionIntake:
             row_number = row.get("_row_number")
             qid_raw = _clean_text(row.get("question_id"))
             question = _clean_text(row.get("question"))
-            options = {
-                "A": _clean_text(row.get("option_a")),
-                "B": _clean_text(row.get("option_b")),
-                "C": _clean_text(row.get("option_c")),
-                "D": _clean_text(row.get("option_d")),
-            }
+            options = _extract_options(row)
             correct_answer = _clean_text(row.get("correct_answer")).upper()
             topic = _clean_text(row.get("topic"))
             difficulty = _clean_text(row.get("difficulty"))
@@ -78,22 +94,23 @@ class QuestionIntake:
             if not question:
                 row_issues.append(IngestionIssue(row_number, qid_raw or None, "error", "Missing question text"))
 
-            missing_options = [k for k, v in options.items() if not v]
-            if missing_options:
+            if len(options) < MIN_OPTION_COUNT:
+                have = ", ".join(sorted(options)) or "none"
                 row_issues.append(
                     IngestionIssue(
                         row_number, qid_raw or None, "error",
-                        f"Missing option(s): {', '.join(missing_options)} (all four A-D are required)",
+                        f"At least {MIN_OPTION_COUNT} options (A-D) are required; found only: {have}",
                     )
                 )
 
             if not correct_answer:
                 row_issues.append(IngestionIssue(row_number, qid_raw or None, "error", "Missing correct_answer"))
-            elif correct_answer not in VALID_ANSWERS:
+            elif correct_answer not in options:
                 row_issues.append(
                     IngestionIssue(
                         row_number, qid_raw or None, "error",
-                        f"correct_answer must be one of A/B/C/D, got '{correct_answer}'",
+                        f"correct_answer must be one of this question's own options "
+                        f"({', '.join(sorted(options)) or 'none'}), got '{correct_answer}'",
                     )
                 )
 

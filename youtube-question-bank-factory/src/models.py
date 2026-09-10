@@ -17,7 +17,18 @@ from typing import Any, Optional
 # Question bank
 # ---------------------------------------------------------------------------
 
-VALID_OPTION_KEYS = ("A", "B", "C", "D")
+VALID_OPTION_KEYS = ("A", "B", "C", "D")  # the guaranteed-present minimum set; see MIN_OPTION_COUNT
+MIN_OPTION_COUNT = 4  # every question has at least A-D; some may have more (E, F, ...)
+
+
+def option_keys(options: dict) -> list:
+    """The option letters an actual question has, in A/B/C/... order --
+    never assumes exactly four. A question can have 4, 5, 6, or more
+    options; this is the one place that decides "which/how many options"
+    a question has, so ingestion/narration/rendering/QA all agree. Keys
+    are always single uppercase letters, so a plain sort already gives
+    the correct A < B < C < ... order."""
+    return sorted(options.keys())
 
 
 @dataclass

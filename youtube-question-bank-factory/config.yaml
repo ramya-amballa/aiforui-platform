@@ -38,7 +38,7 @@ tts:
     after_question: 600
     after_option: 350
     before_reveal: 1200
-    after_reveal: 1800    # silent pause after "Option B." before the next question begins
+    after_reveal: 4000    # silent hold on the reveal screen after "Option B." before the next question begins
     after_intro_field: 600  # silent pause between the intro's spoken title and subtitle
     after_intro: 1800     # silent pause after the subtitle (last spoken intro field) before Question 1 begins
     between_explanations: 400

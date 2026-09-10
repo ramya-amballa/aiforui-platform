@@ -22,7 +22,7 @@ from pathlib import Path
 
 from src.cache import compute_hash
 from src.models import AudioResult, NormalizedQuestion
-from src.video.frames import plan_question_pages, render_question_frame, render_title_frame
+from src.video.frames import plan_option_pages, plan_question_pages, render_question_frame, render_title_frame
 
 log = logging.getLogger(__name__)
 
@@ -138,7 +138,19 @@ class VideoRenderer:
 
     def _build_frame_plan(self, q: NormalizedQuestion, audio: AudioResult) -> list:
         """Returns [(PIL.Image, duration_seconds), ...] covering the full
-        audio duration with no gaps."""
+        audio duration with no gaps.
+
+        A question too long to fit cleanly above the options -- or with
+        more options than fit on one page -- gets extra visual pages.
+        It's still the same question, still the same audio segment, no
+        narration added: plan_question_pages/plan_option_pages decide the
+        pages, and the *existing* pre-countdown hold time (head_hold,
+        already sized by the narration audio) is divided across however
+        many pages result, proportional to each page's own text length.
+        The common case -- question and every option already fit on one
+        page -- collapses to exactly one head frame, byte-identical to
+        the pre-pagination behavior.
+        """
         countdown_cue = self._cue(audio, "countdown")
         reveal_cue = self._cue(audio, "reveal")
         total = audio.duration_seconds
@@ -149,35 +161,35 @@ class VideoRenderer:
         plan = []
         head_hold = max(countdown_start, 0.1)
 
-        # A question too long to fit cleanly above the options gets extra
-        # visual pages -- still the same question, still the same audio
-        # segment, no narration added. See plan_question_pages: the common
-        # case (fits at the template's base font size) returns a single
-        # page and behaves exactly as before pagination existed.
-        pages, font_size = plan_question_pages(self.template, q.question)
-        if len(pages) == 1:
-            question_frame = render_question_frame(self.template, self.resolution, q, question_font_size=font_size)
-            plan.append((question_frame, head_hold))
-            final_page_text = q.question
-        else:
-            # The *existing* pre-countdown hold time is divided across
-            # pages, proportional to each page's own text length -- no
-            # time is added beyond what the narration audio already
-            # allocates to this question segment. Only the last page
-            # shows the options, so the countdown/reveal frames that
-            # follow (which always show options) read naturally as a
-            # continuation of it.
-            weights = [max(len(p), 1) for p in pages]
-            total_weight = sum(weights)
-            for i, page_text in enumerate(pages):
-                is_last = i == len(pages) - 1
-                page_duration = head_hold * weights[i] / total_weight
-                page_frame = render_question_frame(
-                    self.template, self.resolution, q,
-                    question_text_override=page_text, question_font_size=font_size, show_options=is_last,
-                )
-                plan.append((page_frame, max(page_duration, 0.05)))
-            final_page_text = pages[-1]
+        q_pages, font_size = plan_question_pages(self.template, q.question)
+        opt_pages = plan_option_pages(self.template, q.options)
+        final_question_text = q_pages[-1]
+        final_options_page = opt_pages[-1]
+
+        # Head frames, in viewing order: any question-only continuation
+        # pages first (no options yet -- they don't compete for space),
+        # then one frame per option page, each showing the *final*
+        # question text alongside that page's options. For the common
+        # case (one question page, one option page) this is exactly the
+        # single combined question+options frame rendering always used.
+        head_frames = [(page_text, None) for page_text in q_pages[:-1]]
+        head_frames += [(final_question_text, opt_page) for opt_page in opt_pages]
+
+        weights = [
+            len(page_text) if opt_page is None else sum(len(e["text"]) for e in opt_page)
+            for page_text, opt_page in head_frames
+        ]
+        weights = [max(w, 1) for w in weights]
+        total_weight = sum(weights)
+
+        for (page_text, opt_page), weight in zip(head_frames, weights):
+            page_duration = head_hold * weight / total_weight
+            page_frame = render_question_frame(
+                self.template, self.resolution, q,
+                question_text_override=page_text, question_font_size=font_size,
+                show_options=opt_page is not None, options_page=opt_page,
+            )
+            plan.append((page_frame, max(page_duration, 0.05)))
 
         countdown_gap = max(reveal_start - countdown_start, 0.0)
         n_ticks = max(1, math.ceil(countdown_gap))
@@ -185,14 +197,22 @@ class VideoRenderer:
             remaining = max(1, round(self.countdown_seconds) - i)
             tick_frame = render_question_frame(
                 self.template, self.resolution, q, timer_text=str(remaining),
-                question_text_override=final_page_text, question_font_size=font_size,
+                question_text_override=final_question_text, question_font_size=font_size,
+                options_page=final_options_page,
             )
             tick_duration = countdown_gap / n_ticks if n_ticks else countdown_gap
             plan.append((tick_frame, max(tick_duration, 0.05)))
 
+        # The reveal must show whichever options page actually contains
+        # the correct answer, so it can be highlighted -- not necessarily
+        # the last one shown during the countdown.
+        reveal_options_page = next(
+            (p for p in opt_pages if any(e["key"] == q.correct_answer for e in p)), final_options_page
+        )
         reveal_frame = render_question_frame(
             self.template, self.resolution, q, highlight_key=q.correct_answer, show_banner=True,
-            question_text_override=final_page_text, question_font_size=font_size,
+            question_text_override=final_question_text, question_font_size=font_size,
+            options_page=reveal_options_page,
         )
         reveal_duration = max(total - reveal_start, 0.5)
         plan.append((reveal_frame, reveal_duration))

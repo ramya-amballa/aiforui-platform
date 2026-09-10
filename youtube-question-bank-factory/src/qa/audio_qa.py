@@ -10,7 +10,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-from src.models import Explanation, VALID_OPTION_KEYS
+from src.models import Explanation, MIN_OPTION_COUNT
 
 
 def check_question(job_dir: Path, question_id: str) -> dict:
@@ -24,10 +24,12 @@ def check_question(job_dir: Path, question_id: str) -> dict:
         return {"question_id": question_id, "passed": False, "issues": issues}
     q = json.loads(question_path.read_text())
 
-    if len(q.get("options", {})) != 4 or set(q["options"]) != set(VALID_OPTION_KEYS):
-        issues.append("question does not have exactly four options A-D")
-    if q.get("correct_answer") not in VALID_OPTION_KEYS:
-        issues.append("correct_answer is not one of A/B/C/D")
+    # A question may have more than four options (E, F, ...) -- only a
+    # minimum of four (A-D) is required, never an exact-four cap.
+    if len(q.get("options", {})) < MIN_OPTION_COUNT:
+        issues.append(f"question has fewer than {MIN_OPTION_COUNT} options")
+    if q.get("correct_answer") not in q.get("options", {}):
+        issues.append("correct_answer is not one of this question's own options")
 
     exp_path = content_dir / "explanation.json"
     if not exp_path.exists():
