@@ -1,0 +1,53 @@
+# Default video template - clean, modern, dark background.
+# All visual parameters live here so the renderer never hard-codes a look.
+name: default
+description: "Dark modern theme, clean typography, green answer reveal."
+
+background:
+  color: "#0B1220"
+
+fonts:
+  # font family names are resolved against a small cross-platform search
+  # path in src/video/renderer.py; absolute paths also work here.
+  question: { family: "DejaVu Sans Bold", size: 54, color: "#F8FAFC" }
+  option_label: { family: "DejaVu Sans Bold", size: 38, color: "#60A5FA" }
+  option_text: { family: "DejaVu Sans", size: 38, color: "#E2E8F0" }
+  timer: { family: "DejaVu Sans Bold", size: 90, color: "#FBBF24" }
+  banner: { family: "DejaVu Sans Bold", size: 46, color: "#22C55E" }
+  footer: { family: "DejaVu Sans", size: 26, color: "#64748B" }
+  intro_title: { family: "DejaVu Sans Bold", size: 72, color: "#F8FAFC" }
+  intro_subtitle: { family: "DejaVu Sans", size: 42, color: "#60A5FA" }
+
+colors:
+  option_box: "#111827"
+  option_box_border: "#1F2937"
+  correct_box: "#064E3B"
+  correct_box_border: "#22C55E"
+
+layout:
+  question:
+    position: [140, 130]
+    max_width: 1640
+    line_spacing: 12
+  options:
+    start_position: [140, 480]
+    box_width: 1640
+    box_height: 110
+    row_gap: 26
+    text_padding: 30
+  timer:
+    position: [960, 405]
+  footer:
+    text: "AIforU&I -- Question Bank"
+    position: [140, 1030]
+  intro:
+    title_position: [140, 380]
+    subtitle_position: [140, 480]
+    max_width: 1640
+    line_spacing: 12
+
+timing:
+  countdown_seconds: 5
+  transition_seconds: 0.5
+
+show_explanation_text: false

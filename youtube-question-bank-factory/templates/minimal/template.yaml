@@ -1,0 +1,50 @@
+# Minimal template - plain light background, no decoration, fast to render.
+name: minimal
+description: "Plain light background, black text, no boxes or banners."
+
+background:
+  color: "#FFFFFF"
+
+fonts:
+  question: { family: "DejaVu Sans Bold", size: 50, color: "#111111" }
+  option_label: { family: "DejaVu Sans Bold", size: 36, color: "#111111" }
+  option_text: { family: "DejaVu Sans", size: 36, color: "#333333" }
+  timer: { family: "DejaVu Sans Bold", size: 90, color: "#111111" }
+  banner: { family: "DejaVu Sans Bold", size: 42, color: "#0A7D34" }
+  footer: { family: "DejaVu Sans", size: 22, color: "#999999" }
+  intro_title: { family: "DejaVu Sans Bold", size: 68, color: "#111111" }
+  intro_subtitle: { family: "DejaVu Sans", size: 40, color: "#333333" }
+
+colors:
+  option_box: "#FFFFFF"
+  option_box_border: "#DDDDDD"
+  correct_box: "#EAFBEF"
+  correct_box_border: "#0A7D34"
+
+layout:
+  question:
+    position: [140, 130]
+    max_width: 1640
+    line_spacing: 10
+  options:
+    start_position: [140, 480]
+    box_width: 1640
+    box_height: 100
+    row_gap: 22
+    text_padding: 28
+  timer:
+    position: [960, 405]
+  footer:
+    text: "AIforU&I -- Question Bank"
+    position: [140, 1030]
+  intro:
+    title_position: [140, 380]
+    subtitle_position: [140, 480]
+    max_width: 1640
+    line_spacing: 10
+
+timing:
+  countdown_seconds: 5
+  transition_seconds: 0.3
+
+show_explanation_text: false

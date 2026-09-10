@@ -1,0 +1,25 @@
+# Core
+click>=8.1
+PyYAML>=6.0
+pandas>=2.0
+openpyxl>=3.1
+numpy>=1.26
+
+# Audio
+soundfile>=0.12
+pydub>=0.25
+
+# Video rendering (frames via Pillow, sequencing/muxing via system ffmpeg)
+Pillow>=10.0
+
+# Local TTS (zero recurring cost)
+kokoro-onnx>=0.4.0
+piper-tts>=1.2
+
+# Testing
+pytest>=8.0
+
+# Optional AI providers (only needed if AI_PROVIDER is set to one of these)
+# anthropic>=0.40
+# openai>=1.50
+# google-generativeai>=0.8

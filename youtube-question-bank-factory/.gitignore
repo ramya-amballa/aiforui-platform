@@ -1,0 +1,33 @@
+# Secrets
+.env
+
+# Local TTS model weights (downloaded, not committed - see SETUP.md)
+models/*.onnx
+models/*.bin
+models/*.onnx.json
+models/piper/
+models/kokoro/
+
+# Generated data - all of this is reproducible from the question bank + cache
+data/input/*
+!data/input/.gitkeep
+data/normalized/*
+!data/normalized/.gitkeep
+data/jobs/*
+!data/jobs/.gitkeep
+data/videos/*
+!data/videos/.gitkeep
+data/reports/*
+!data/reports/.gitkeep
+data/logs/*
+!data/logs/.gitkeep
+data/cache/*
+!data/cache/.gitkeep
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+.venv/
+venv/
