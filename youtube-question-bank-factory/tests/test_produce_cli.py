@@ -1,6 +1,6 @@
 """Real CLI (`produce`) integration tests for the intro Title/Subtitle/
-Short-Introduction flow: interactive prompting, what does and doesn't
-reach the voice, and what ends up on the intro screen."""
+Introduction flow: interactive prompting, what reaches the voice, and
+what does/doesn't end up on the intro screen."""
 from __future__ import annotations
 
 import json
@@ -39,10 +39,13 @@ def test_title_subtitle_and_introduction_are_all_requested_interactively(cfg, sa
     assert result.exit_code == 0, result.output
     assert "Title" in result.output
     assert "Subtitle" in result.output
-    assert "Short Introduction" in result.output
+    assert "Introduction" in result.output
 
 
-def test_title_and_subtitle_are_spoken_but_introduction_is_not(cfg, sample_xlsx, monkeypatch):
+def test_title_subtitle_and_introduction_are_all_spoken(cfg, sample_xlsx, monkeypatch):
+    """Per the corrected requirement, the introduction IS part of the
+    spoken narration/audio -- it must reach the TTS provider just like
+    title and subtitle do."""
     provider = FakeTTSProvider()
     rt = _fake_runtime(cfg, provider)
     monkeypatch.setattr("src.cli.main.get_runtime", lambda: rt)
@@ -60,33 +63,45 @@ def test_title_and_subtitle_are_spoken_but_introduction_is_not(cfg, sample_xlsx,
     spoken_texts = provider.texts
     assert any(t == "AI-300 Practice Questions." for t in spoken_texts), spoken_texts
     assert any(t == "Azure AI Fundamentals." for t in spoken_texts), spoken_texts
-    assert not any(intro_text in t for t in spoken_texts), \
-        "the Short Introduction must never reach the TTS provider"
+    assert any(intro_text in t for t in spoken_texts), \
+        "the introduction must reach the TTS provider"
 
-    # still recorded in the production report for reference -- the video
-    # renderer receives it separately for on-screen display only.
     report = json.loads((cfg.path("paths.reports_dir") / "production_report.json").read_text())
     assert report["video_metadata"]["title"] == "AI-300 Practice Questions"
     assert report["video_metadata"]["subtitle"] == "Azure AI Fundamentals"
     assert report["video_metadata"]["introduction"] == intro_text
 
 
-def test_introduction_is_still_rendered_visually_on_the_intro_screen(cfg, sample_xlsx, monkeypatch, tmp_path):
-    """The introduction text must actually be drawn onto the intro frame,
-    even though it's never spoken."""
+def test_introduction_reaches_tts_but_cannot_be_drawn_on_screen(cfg, sample_xlsx, monkeypatch):
+    """render_title_frame has no parameter for the introduction at all --
+    it is structurally incapable of drawing it, rather than relying on a
+    caller to simply not pass it through."""
+    from src.video.frames import render_title_frame
+
+    with pytest.raises(TypeError):
+        render_title_frame({}, (1920, 1080), "Title", "Subtitle", "Introduction")
+
+
+def test_title_and_subtitle_frames_are_visually_distinct(cfg):
+    """Two separate visual states exist -- title-only, then subtitle-only
+    -- so the intro screen never shows all fields (or the introduction)
+    simultaneously."""
     from src.video.frames import render_title_frame
     from src.video.templates import load_template
 
     tpl = load_template("default")
-    img = render_title_frame(tpl, (1920, 1080), "My Title", "My Subtitle", "My visible-only introduction.")
-    assert img.size == (1920, 1080)
+    title_frame = render_title_frame(tpl, (1920, 1080), title="My Title")
+    subtitle_frame = render_title_frame(tpl, (1920, 1080), subtitle="My Subtitle")
+
+    assert list(title_frame.getdata()) != list(subtitle_frame.getdata())
+
     # A blank/background-only frame would be a single solid color; drawn
-    # text guarantees more than one distinct pixel color is present.
-    colors = img.getcolors(maxcolors=1_000_000)
-    assert colors is not None and len(colors) > 1
+    # text guarantees more than one distinct pixel color is present in each.
+    assert len(title_frame.getcolors(maxcolors=1_000_000)) > 1
+    assert len(subtitle_frame.getcolors(maxcolors=1_000_000)) > 1
 
 
-def test_produce_end_to_end_includes_an_intro_segment_in_the_final_video(cfg, sample_xlsx, monkeypatch):
+def test_produce_end_to_end_includes_an_intro_segment_with_a_pause_before_question_1(cfg, sample_xlsx, monkeypatch):
     rt = _fake_runtime(cfg)
     monkeypatch.setattr("src.cli.main.get_runtime", lambda: rt)
 
@@ -103,9 +118,17 @@ def test_produce_end_to_end_includes_an_intro_segment_in_the_final_video(cfg, sa
     assert final_mp4.exists()
     assert final_mp4.stat().st_size > 1000
 
-    # The intro segment itself was rendered into the job's video_segments dir.
     intro_segment = cfg.path("paths.jobs_dir") / job_id / "video_segments" / f"{job_id}_intro.mp4"
     assert intro_segment.exists()
+
+    # The intro's own synthesized audio ends with the configured
+    # after_intro pause, holding the intro segment on screen that long
+    # before Question 1 begins.
+    intro_timing = json.loads(
+        (cfg.path("paths.jobs_dir") / job_id / "audio" / f"{job_id}_intro" / f"{job_id}_intro.json").read_text()
+    )
+    body_cue = next(c for c in intro_timing["cues"] if c["label"] == "intro_body")
+    assert intro_timing["duration_seconds"] - body_cue["end_seconds"] > 1.0
 
 
 def test_skip_video_never_prompts_for_intro_fields(cfg, sample_xlsx, monkeypatch):

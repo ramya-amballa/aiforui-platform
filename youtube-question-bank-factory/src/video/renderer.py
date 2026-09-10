@@ -81,19 +81,19 @@ class VideoRenderer:
         marker.write_text(seg_hash)
         return out_path
 
-    def render_intro_segment(self, segment_id: str, title: str, subtitle: str, introduction: str,
+    def render_intro_segment(self, segment_id: str, title: str, subtitle: str,
                               audio: AudioResult, out_dir: Path) -> Path:
-        """A single held frame (title + subtitle + the short introduction,
-        all displayed) for the full duration of the intro audio -- the
-        same "hold one frame for the audio's own duration" pattern the
-        reveal frame already uses in _build_frame_plan, just applied to
-        the intro instead of a question.
+        """Two held frames -- title, then subtitle -- sized against the
+        intro narration's own cues, the same "hold a frame for a duration
+        derived from the audio's cues" pattern _build_frame_plan already
+        uses for question segments. The introduction is spoken during the
+        second (subtitle) frame; it is never given a visual state of its
+        own -- render_title_frame has no parameter for it at all, so it
+        cannot end up on screen.
         """
         out_dir = Path(out_dir)
         out_dir.mkdir(parents=True, exist_ok=True)
-        seg_hash = compute_hash(
-            title, subtitle, introduction, self.template, self.resolution, self.fps, audio.narration_hash
-        )
+        seg_hash = compute_hash(title, subtitle, self.template, self.resolution, self.fps, audio.narration_hash)
         out_path = out_dir / f"{segment_id}.mp4"
         marker = out_dir / f"{segment_id}.hash"
 
@@ -104,8 +104,20 @@ class VideoRenderer:
         frames_dir = out_dir / f"_frames_{segment_id}"
         frames_dir.mkdir(parents=True, exist_ok=True)
         try:
-            frame = render_title_frame(self.template, self.resolution, title, subtitle, introduction)
-            plan = [(frame, max(audio.duration_seconds, 0.1))]
+            total = audio.duration_seconds
+            subtitle_cue = self._cue(audio, "intro_subtitle")
+            split_at = subtitle_cue.start_seconds if subtitle_cue else total
+
+            plan = []
+            if split_at > 0:
+                title_frame = render_title_frame(self.template, self.resolution, title=title)
+                plan.append((title_frame, max(split_at, 0.1)))
+
+            remaining = max(total - split_at, 0.0)
+            if remaining > 0 or not plan:
+                subtitle_frame = render_title_frame(self.template, self.resolution, subtitle=subtitle)
+                plan.append((subtitle_frame, max(remaining, 0.1)))
+
             list_path = self._write_frames(plan, frames_dir)
             self._encode(list_path, Path(audio.wav_path), out_path)
         finally:

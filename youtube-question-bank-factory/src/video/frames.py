@@ -112,11 +112,15 @@ def render_question_frame(tpl: dict, resolution: tuple, q: NormalizedQuestion,
     return img
 
 
-def render_title_frame(tpl: dict, resolution: tuple, title: str, subtitle: str, introduction: str) -> Image.Image:
-    """The video's intro screen: title, subtitle, and the short
-    introduction all appear here. Only title and subtitle are ever
-    spoken (see build_intro_narration) -- the introduction is
-    visual-only, drawn here exactly as supplied, never paraphrased.
+def render_title_frame(tpl: dict, resolution: tuple, title: str = "", subtitle: str = "") -> Image.Image:
+    """The video's intro screen. Deliberately has no introduction
+    parameter at all -- the Short Introduction is spoken (see
+    build_intro_narration) but must never be drawn on screen, so this
+    function is structurally incapable of rendering it, rather than
+    relying on a caller to simply not pass it. Call this once with only
+    `title` set for the title frame/state, and once with only `subtitle`
+    set for the subtitle frame/state (see VideoRenderer.render_intro_segment
+    for how the two frames are timed against the narration audio).
     """
     w, h = resolution
     bg_color = tpl["background"]["color"]
@@ -137,11 +141,6 @@ def render_title_frame(tpl: dict, resolution: tuple, title: str, subtitle: str, 
         sf = fonts["intro_subtitle"]
         subtitle_font = load_font(sf["family"], sf["size"])
         _draw_wrapped(draw, subtitle, subtitle_font, intro_layout["subtitle_position"], max_width, sf["color"], line_spacing)
-
-    if introduction:
-        bf = fonts["intro_body"]
-        body_font = load_font(bf["family"], bf["size"])
-        _draw_wrapped(draw, introduction, body_font, intro_layout["body_position"], max_width, bf["color"], line_spacing)
 
     footer_cfg = tpl["layout"].get("footer")
     if footer_cfg:

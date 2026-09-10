@@ -14,7 +14,6 @@ fonts:
   footer: { family: "DejaVu Serif", size: 22, color: "#64748B" }
   intro_title: { family: "DejaVu Serif Bold", size: 68, color: "#1E293B" }
   intro_subtitle: { family: "DejaVu Serif", size: 40, color: "#1E3A5F" }
-  intro_body: { family: "DejaVu Serif", size: 30, color: "#334155" }
 
 colors:
   option_box: "#FFFFFF"
@@ -41,7 +40,6 @@ layout:
   intro:
     title_position: [140, 380]
     subtitle_position: [140, 480]
-    body_position: [140, 620]
     max_width: 1640
     line_spacing: 10
 

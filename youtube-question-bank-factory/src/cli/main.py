@@ -238,12 +238,11 @@ def qa(input_file, job_id):
 # -- produce (the one-command flow) -----------------------------------------
 
 def _build_intro_segment(rt, job, renderer, title: str, subtitle: str, introduction: str):
-    """Synthesizes the intro's spoken audio (title + subtitle only -- the
-    introduction is never passed to TTS, see build_intro_narration) through
-    the existing VoiceAgent, then renders the intro video segment (title +
-    subtitle + introduction, all displayed) held for that audio's own
-    duration -- the same "one frame held for the audio's duration" pattern
-    already used for the answer-reveal frame.
+    """Synthesizes the intro's spoken audio -- title, subtitle, AND the
+    introduction, all three, in that order (see build_intro_narration) --
+    through the existing VoiceAgent, then renders the intro video segment
+    held for that audio's own duration. The introduction is spoken but
+    never displayed: render_intro_segment only ever draws title/subtitle.
     """
     from src.narration.title_narrator import build_intro_narration
 
@@ -252,10 +251,10 @@ def _build_intro_segment(rt, job, renderer, title: str, subtitle: str, introduct
     final_pause_ms = int(pause_cfg.get("after_intro", 1800))
     segment_id = f"{job.job_id}_intro"
 
-    narration = build_intro_narration(segment_id, title, subtitle,
+    narration = build_intro_narration(segment_id, title, subtitle, introduction,
                                        field_pause_ms=field_pause_ms, final_pause_ms=final_pause_ms)
     audio = rt.voice_agent.synthesize_narration(narration, job.audio_dir(segment_id))
-    return renderer.render_intro_segment(segment_id, title, subtitle, introduction, audio, job.dir / "video_segments")
+    return renderer.render_intro_segment(segment_id, title, subtitle, audio, job.dir / "video_segments")
 
 
 @cli.command()

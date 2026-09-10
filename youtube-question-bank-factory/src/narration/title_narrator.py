@@ -1,6 +1,9 @@
-"""Intro narration: the video's Title and Subtitle are spoken (and, per
-the video renderer's own intro frame, also displayed) -- the Short
-Introduction is displayed only and is never synthesized to speech.
+"""Intro narration: Title, Subtitle, and Introduction are all spoken, in
+that order. Title and Subtitle are also displayed on the intro screen (see
+render_title_frame); the Introduction is voice-only -- it reaches TTS like
+any other field here, but the video renderer never draws its text (see
+VideoRenderer.render_intro_segment, which only ever passes title/subtitle
+to render_title_frame).
 
 This reuses the exact same Narration/NarrationSegment shape and the same
 VoiceAgent.synthesize_narration() pipeline that question narration goes
@@ -22,17 +25,17 @@ def _as_spoken_sentence(text: str) -> str:
     return text
 
 
-def build_intro_narration(segment_id: str, title: str, subtitle: str,
+def build_intro_narration(segment_id: str, title: str, subtitle: str, introduction: str,
                            field_pause_ms: int = 600, final_pause_ms: int = 1800) -> Narration:
-    """Title then subtitle, as two separate spoken segments -- the Short
-    Introduction is deliberately excluded here; it is rendered on the
-    intro screen by the video renderer but never passed to TTS. A short
-    pause (field_pause_ms) separates title from subtitle; a longer pause
-    (final_pause_ms) follows the last spoken field, before Question 1
-    begins. A field left empty is simply skipped, and the trailing pause
-    still lands on whichever field ends up last.
+    """Title, subtitle, and introduction, as three separate spoken
+    segments in order -- never concatenated into one narration block. A
+    short pause (field_pause_ms) separates each field from the next; a
+    longer pause (final_pause_ms) follows the introduction (the last
+    field), before Question 1 begins. A field left empty is simply
+    skipped, and the trailing pause still lands on whichever field ends
+    up last.
     """
-    fields = [("intro_title", title), ("intro_subtitle", subtitle)]
+    fields = [("intro_title", title), ("intro_subtitle", subtitle), ("intro_body", introduction)]
     spoken_fields = [(kind, _as_spoken_sentence(text)) for kind, text in fields]
     spoken_fields = [(kind, text) for kind, text in spoken_fields if text]
 
