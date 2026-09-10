@@ -37,12 +37,19 @@ class VideoAssembler:
         self.renderer = renderer
 
     def build_video(self, video_id: str, questions: list, audios: dict,
-                     segments_dir: Path, videos_dir: Path, title: str = "") -> dict:
+                     segments_dir: Path, videos_dir: Path, title: str = "",
+                     intro_segment: Path | None = None) -> dict:
         """questions: list[NormalizedQuestion] in the desired order.
         audios: {question_id: AudioResult}.
+        intro_segment: an already-rendered intro clip (see
+        VideoRenderer.render_intro_segment) to prepend, or None for no
+        intro -- the intro is not a question, so it never appears in the
+        returned included/failed lists.
         Returns a report dict with per-question outcomes and the final path.
         """
         segment_paths = []
+        if intro_segment is not None:
+            segment_paths.append(Path(intro_segment))
         failed = []
         for q in questions:
             audio = audios.get(q.question_id)
@@ -60,7 +67,9 @@ class VideoAssembler:
         out_dir.mkdir(parents=True, exist_ok=True)
         final_path = out_dir / "final.mp4"
 
-        if not segment_paths:
+        # A lone intro clip with no successful question segments is not a
+        # usable video -- never emit final.mp4 for that case.
+        if len(segment_paths) == (1 if intro_segment is not None else 0):
             return {"video_id": video_id, "final_path": None, "included": [], "failed": failed}
 
         list_path = out_dir / "segments.txt"

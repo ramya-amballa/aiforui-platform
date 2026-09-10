@@ -74,7 +74,8 @@ def write_failed_items_csv(job: JobManifest, out_path: Path) -> int:
     return len(rows)
 
 
-def build_production_report(job: JobManifest, audio_qa: dict | None = None, video_qa_results: list | None = None) -> dict:
+def build_production_report(job: JobManifest, audio_qa: dict | None = None, video_qa_results: list | None = None,
+                             video_metadata: dict | None = None) -> dict:
     return {
         "job_id": job.job_id,
         "input_file": job.input_file,
@@ -83,12 +84,13 @@ def build_production_report(job: JobManifest, audio_qa: dict | None = None, vide
         "summary": job.summary(),
         "audio_qa": audio_qa,
         "video_qa": video_qa_results or [],
+        "video_metadata": video_metadata,
     }
 
 
 def write_production_report(job: JobManifest, out_path: Path, audio_qa: dict | None = None,
-                             video_qa_results: list | None = None) -> dict:
-    report = build_production_report(job, audio_qa, video_qa_results)
+                             video_qa_results: list | None = None, video_metadata: dict | None = None) -> dict:
+    report = build_production_report(job, audio_qa, video_qa_results, video_metadata)
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text(json.dumps(report, indent=2, default=str))
     return report

@@ -110,3 +110,44 @@ def render_question_frame(tpl: dict, resolution: tuple, q: NormalizedQuestion,
         draw.text((fx, fy), footer_cfg.get("text", ""), font=footer_font, fill=ff["color"])
 
     return img
+
+
+def render_title_frame(tpl: dict, resolution: tuple, title: str, subtitle: str, introduction: str) -> Image.Image:
+    """The video's intro screen: title, subtitle, and the short
+    introduction all appear here. Only title and subtitle are ever
+    spoken (see build_intro_narration) -- the introduction is
+    visual-only, drawn here exactly as supplied, never paraphrased.
+    """
+    w, h = resolution
+    bg_color = tpl["background"]["color"]
+    img = Image.new("RGB", (w, h), bg_color)
+    draw = ImageDraw.Draw(img)
+
+    intro_layout = tpl["layout"]["intro"]
+    fonts = tpl["fonts"]
+    max_width = intro_layout["max_width"]
+    line_spacing = intro_layout.get("line_spacing", 10)
+
+    if title:
+        tf = fonts["intro_title"]
+        title_font = load_font(tf["family"], tf["size"])
+        _draw_wrapped(draw, title, title_font, intro_layout["title_position"], max_width, tf["color"], line_spacing)
+
+    if subtitle:
+        sf = fonts["intro_subtitle"]
+        subtitle_font = load_font(sf["family"], sf["size"])
+        _draw_wrapped(draw, subtitle, subtitle_font, intro_layout["subtitle_position"], max_width, sf["color"], line_spacing)
+
+    if introduction:
+        bf = fonts["intro_body"]
+        body_font = load_font(bf["family"], bf["size"])
+        _draw_wrapped(draw, introduction, body_font, intro_layout["body_position"], max_width, bf["color"], line_spacing)
+
+    footer_cfg = tpl["layout"].get("footer")
+    if footer_cfg:
+        ff = tpl["fonts"]["footer"]
+        footer_font = load_font(ff["family"], ff["size"])
+        fx, fy = footer_cfg["position"]
+        draw.text((fx, fy), footer_cfg.get("text", ""), font=footer_font, fill=ff["color"])
+
+    return img

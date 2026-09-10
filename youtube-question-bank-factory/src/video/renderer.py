@@ -22,7 +22,7 @@ from pathlib import Path
 
 from src.cache import compute_hash
 from src.models import AudioResult, NormalizedQuestion
-from src.video.frames import render_question_frame
+from src.video.frames import render_question_frame, render_title_frame
 
 log = logging.getLogger(__name__)
 
@@ -71,6 +71,41 @@ class VideoRenderer:
         frames_dir.mkdir(parents=True, exist_ok=True)
         try:
             plan = self._build_frame_plan(q, audio)
+            list_path = self._write_frames(plan, frames_dir)
+            self._encode(list_path, Path(audio.wav_path), out_path)
+        finally:
+            for f in frames_dir.glob("*"):
+                f.unlink()
+            frames_dir.rmdir()
+
+        marker.write_text(seg_hash)
+        return out_path
+
+    def render_intro_segment(self, segment_id: str, title: str, subtitle: str, introduction: str,
+                              audio: AudioResult, out_dir: Path) -> Path:
+        """A single held frame (title + subtitle + the short introduction,
+        all displayed) for the full duration of the intro audio -- the
+        same "hold one frame for the audio's own duration" pattern the
+        reveal frame already uses in _build_frame_plan, just applied to
+        the intro instead of a question.
+        """
+        out_dir = Path(out_dir)
+        out_dir.mkdir(parents=True, exist_ok=True)
+        seg_hash = compute_hash(
+            title, subtitle, introduction, self.template, self.resolution, self.fps, audio.narration_hash
+        )
+        out_path = out_dir / f"{segment_id}.mp4"
+        marker = out_dir / f"{segment_id}.hash"
+
+        if out_path.exists() and marker.exists() and marker.read_text().strip() == seg_hash:
+            log.info("Intro segment %s unchanged - skipping re-render", segment_id)
+            return out_path
+
+        frames_dir = out_dir / f"_frames_{segment_id}"
+        frames_dir.mkdir(parents=True, exist_ok=True)
+        try:
+            frame = render_title_frame(self.template, self.resolution, title, subtitle, introduction)
+            plan = [(frame, max(audio.duration_seconds, 0.1))]
             list_path = self._write_frames(plan, frames_dir)
             self._encode(list_path, Path(audio.wav_path), out_path)
         finally:

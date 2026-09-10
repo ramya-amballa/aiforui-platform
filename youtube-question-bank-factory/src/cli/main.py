@@ -237,6 +237,27 @@ def qa(input_file, job_id):
 
 # -- produce (the one-command flow) -----------------------------------------
 
+def _build_intro_segment(rt, job, renderer, title: str, subtitle: str, introduction: str):
+    """Synthesizes the intro's spoken audio (title + subtitle only -- the
+    introduction is never passed to TTS, see build_intro_narration) through
+    the existing VoiceAgent, then renders the intro video segment (title +
+    subtitle + introduction, all displayed) held for that audio's own
+    duration -- the same "one frame held for the audio's duration" pattern
+    already used for the answer-reveal frame.
+    """
+    from src.narration.title_narrator import build_intro_narration
+
+    pause_cfg = rt.cfg.get("tts.pause_ms", {})
+    field_pause_ms = int(pause_cfg.get("after_intro_field", 600))
+    final_pause_ms = int(pause_cfg.get("after_intro", 1800))
+    segment_id = f"{job.job_id}_intro"
+
+    narration = build_intro_narration(segment_id, title, subtitle,
+                                       field_pause_ms=field_pause_ms, final_pause_ms=final_pause_ms)
+    audio = rt.voice_agent.synthesize_narration(narration, job.audio_dir(segment_id))
+    return renderer.render_intro_segment(segment_id, title, subtitle, introduction, audio, job.dir / "video_segments")
+
+
 @cli.command()
 @click.option("--input", "input_file", required=True, type=click.Path(exists=True))
 @click.option("--video-size", type=int, default=None, help="Questions per video (default from config)")
@@ -245,7 +266,15 @@ def qa(input_file, job_id):
 @click.option("--batch", type=int, default=None, help="Process only the first N questions this run")
 @click.option("--template", default=None)
 @click.option("--skip-video", is_flag=True, default=False, help="Only run audio production, skip rendering")
-def produce(input_file, video_size, manifest_path, include_needs_review, batch, template, skip_video):
+@click.option("--title", "video_title", default=None,
+              help="Video title -- displayed on the intro screen and spoken (asked interactively if omitted)")
+@click.option("--subtitle", "video_subtitle", default=None,
+              help="Video subtitle -- displayed on the intro screen and spoken (asked interactively if omitted)")
+@click.option("--intro-text", "video_intro_text", default=None,
+              help="Short introduction -- displayed on the intro screen only, never spoken "
+                   "(asked interactively if omitted)")
+def produce(input_file, video_size, manifest_path, include_needs_review, batch, template, skip_video,
+            video_title, video_subtitle, video_intro_text):
     """One command: ingest -> validate -> explain -> narrate -> voice ->
     render -> QA -> production report. A single question's failure never
     stops the rest of the batch."""
@@ -262,6 +291,13 @@ def produce(input_file, video_size, manifest_path, include_needs_review, batch, 
     _print_summary(out["summary"])
 
     if not skip_video:
+        if video_title is None:
+            video_title = click.prompt("Title")
+        if video_subtitle is None:
+            video_subtitle = click.prompt("Subtitle")
+        if video_intro_text is None:
+            video_intro_text = click.prompt("Short Introduction")
+
         click.echo("\n== Rendering video(s) ==\n")
         audios = _load_completed_audio(job, questions)
         if audios:
@@ -270,12 +306,14 @@ def produce(input_file, video_size, manifest_path, include_needs_review, batch, 
             segments_dir = job.dir / "video_segments"
             videos_dir = rt.cfg.path("paths.videos_dir")
             by_id = {q.question_id: q for q in questions}
+            intro_segment = _build_intro_segment(rt, job, renderer, video_title, video_subtitle, video_intro_text)
             batches = _resolve_video_batches(job, questions, manifest_path, video_size, rt.cfg)
             for video_id, qids, title in batches:
                 ordered = [by_id[qid] for qid in qids if qid in by_id and qid in audios]
                 if not ordered:
                     continue
-                report = assembler.build_video(video_id, ordered, audios, segments_dir, videos_dir, title=title)
+                report = assembler.build_video(video_id, ordered, audios, segments_dir, videos_dir,
+                                                 title=title, intro_segment=intro_segment)
                 _mark_video_stage(job, report)
                 click.echo(f"  {video_id}: {report['final_path']} (included={len(report['included'])}, failed={len(report['failed'])})")
         else:
@@ -288,7 +326,11 @@ def produce(input_file, video_size, manifest_path, include_needs_review, batch, 
     (reports_dir / "audio_qa_report.json").write_text(json.dumps(audio_report, indent=2))
     write_review_queue_csv(job, reports_dir / "review_queue.csv")
     write_failed_items_csv(job, reports_dir / "failed_items.csv")
-    write_production_report(job, reports_dir / "production_report.json", audio_qa=audio_report)
+    video_metadata = None
+    if not skip_video:
+        video_metadata = {"title": video_title, "subtitle": video_subtitle, "introduction": video_intro_text}
+    write_production_report(job, reports_dir / "production_report.json", audio_qa=audio_report,
+                             video_metadata=video_metadata)
     click.echo(f"Audio QA: {audio_report['passed']}/{audio_report['total']} passed")
     click.echo(f"Reports written to {reports_dir}")
     click.echo(f"\nDone. Job ID: {job.job_id}")

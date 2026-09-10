@@ -18,9 +18,11 @@ class FakeTTSProvider(TTSProvider):
         self.sample_rate = sample_rate
         self.calls = 0
         self.fail_on = fail_on or set()
+        self.texts: list = []  # every text string handed to synthesize(), in call order
 
     def synthesize(self, text: str, voice: str, speed: float) -> tuple:
         self.calls += 1
+        self.texts.append(text)
         if text in self.fail_on:
             from src.tts.base import TTSProviderError
             raise TTSProviderError(f"simulated failure for: {text!r}")

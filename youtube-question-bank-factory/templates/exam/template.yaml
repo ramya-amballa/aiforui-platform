@@ -12,6 +12,9 @@ fonts:
   timer: { family: "DejaVu Serif Bold", size: 90, color: "#B45309" }
   banner: { family: "DejaVu Serif Bold", size: 42, color: "#166534" }
   footer: { family: "DejaVu Serif", size: 22, color: "#64748B" }
+  intro_title: { family: "DejaVu Serif Bold", size: 68, color: "#1E293B" }
+  intro_subtitle: { family: "DejaVu Serif", size: 40, color: "#1E3A5F" }
+  intro_body: { family: "DejaVu Serif", size: 30, color: "#334155" }
 
 colors:
   option_box: "#FFFFFF"
@@ -35,6 +38,12 @@ layout:
   footer:
     text: "AIforU&I -- Exam Prep Series"
     position: [140, 1030]
+  intro:
+    title_position: [140, 380]
+    subtitle_position: [140, 480]
+    body_position: [140, 620]
+    max_width: 1640
+    line_spacing: 10
 
 timing:
   countdown_seconds: 6

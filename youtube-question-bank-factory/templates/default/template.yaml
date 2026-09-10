@@ -15,6 +15,9 @@ fonts:
   timer: { family: "DejaVu Sans Bold", size: 90, color: "#FBBF24" }
   banner: { family: "DejaVu Sans Bold", size: 46, color: "#22C55E" }
   footer: { family: "DejaVu Sans", size: 26, color: "#64748B" }
+  intro_title: { family: "DejaVu Sans Bold", size: 72, color: "#F8FAFC" }
+  intro_subtitle: { family: "DejaVu Sans", size: 42, color: "#60A5FA" }
+  intro_body: { family: "DejaVu Sans", size: 32, color: "#E2E8F0" }
 
 colors:
   option_box: "#111827"
@@ -38,6 +41,12 @@ layout:
   footer:
     text: "AIforU&I -- Question Bank"
     position: [140, 1030]
+  intro:
+    title_position: [140, 380]
+    subtitle_position: [140, 480]
+    body_position: [140, 620]
+    max_width: 1640
+    line_spacing: 12
 
 timing:
   countdown_seconds: 5
