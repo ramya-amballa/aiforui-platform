@@ -22,7 +22,7 @@ from pathlib import Path
 
 from src.cache import compute_hash
 from src.models import AudioResult, NormalizedQuestion
-from src.video.frames import render_question_frame, render_title_frame
+from src.video.frames import plan_question_pages, render_question_frame, render_title_frame
 
 log = logging.getLogger(__name__)
 
@@ -147,20 +147,52 @@ class VideoRenderer:
         reveal_start = reveal_cue.start_seconds if reveal_cue else countdown_start + self.countdown_seconds
 
         plan = []
+        head_hold = max(countdown_start, 0.1)
 
-        question_frame = render_question_frame(self.template, self.resolution, q)
-        plan.append((question_frame, max(countdown_start, 0.1)))
+        # A question too long to fit cleanly above the options gets extra
+        # visual pages -- still the same question, still the same audio
+        # segment, no narration added. See plan_question_pages: the common
+        # case (fits at the template's base font size) returns a single
+        # page and behaves exactly as before pagination existed.
+        pages, font_size = plan_question_pages(self.template, q.question)
+        if len(pages) == 1:
+            question_frame = render_question_frame(self.template, self.resolution, q, question_font_size=font_size)
+            plan.append((question_frame, head_hold))
+            final_page_text = q.question
+        else:
+            # The *existing* pre-countdown hold time is divided across
+            # pages, proportional to each page's own text length -- no
+            # time is added beyond what the narration audio already
+            # allocates to this question segment. Only the last page
+            # shows the options, so the countdown/reveal frames that
+            # follow (which always show options) read naturally as a
+            # continuation of it.
+            weights = [max(len(p), 1) for p in pages]
+            total_weight = sum(weights)
+            for i, page_text in enumerate(pages):
+                is_last = i == len(pages) - 1
+                page_duration = head_hold * weights[i] / total_weight
+                page_frame = render_question_frame(
+                    self.template, self.resolution, q,
+                    question_text_override=page_text, question_font_size=font_size, show_options=is_last,
+                )
+                plan.append((page_frame, max(page_duration, 0.05)))
+            final_page_text = pages[-1]
 
         countdown_gap = max(reveal_start - countdown_start, 0.0)
         n_ticks = max(1, math.ceil(countdown_gap))
         for i in range(n_ticks):
             remaining = max(1, round(self.countdown_seconds) - i)
-            tick_frame = render_question_frame(self.template, self.resolution, q, timer_text=str(remaining))
+            tick_frame = render_question_frame(
+                self.template, self.resolution, q, timer_text=str(remaining),
+                question_text_override=final_page_text, question_font_size=font_size,
+            )
             tick_duration = countdown_gap / n_ticks if n_ticks else countdown_gap
             plan.append((tick_frame, max(tick_duration, 0.05)))
 
         reveal_frame = render_question_frame(
-            self.template, self.resolution, q, highlight_key=q.correct_answer, show_banner=True
+            self.template, self.resolution, q, highlight_key=q.correct_answer, show_banner=True,
+            question_text_override=final_page_text, question_font_size=font_size,
         )
         reveal_duration = max(total - reveal_start, 0.5)
         plan.append((reveal_frame, reveal_duration))
