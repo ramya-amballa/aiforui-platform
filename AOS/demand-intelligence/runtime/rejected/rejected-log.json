@@ -2852,6 +2852,35 @@
         "complianceContext"
       ],
       "reason": "Weak/insufficient relevance signal (matched: complianceContext; no penalties)."
+    },
+    {
+      "id": "rej-0221",
+      "dateRejected": "2026-09-11",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Regional Support Coordinator",
+      "organisation": "MyIntegra",
+      "url": "https://remoteOK.com/remote-jobs/remote-regional-support-coordinator-myintegra-1135990",
+      "relevanceScore": 15,
+      "categoriesMatched": [
+        "companyIndustry",
+        "complianceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: companyIndustry, complianceContext; no penalties)."
+    },
+    {
+      "id": "rej-0222",
+      "dateRejected": "2026-09-11",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Program Administration Manager",
+      "organisation": "Greenlight Action",
+      "url": "https://remoteOK.com/remote-jobs/remote-program-administration-manager-greenlight-action-1135738",
+      "relevanceScore": 0,
+      "categoriesMatched": [
+        "governanceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: governanceContext; Healthcare role penalty (-20))."
     }
   ]
 }
