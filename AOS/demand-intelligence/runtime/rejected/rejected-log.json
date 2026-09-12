@@ -2881,6 +2881,32 @@
         "governanceContext"
       ],
       "reason": "Weak/insufficient relevance signal (matched: governanceContext; Healthcare role penalty (-20))."
+    },
+    {
+      "id": "rej-0223",
+      "dateRejected": "2026-09-12",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Engineering Manager TLM Platform",
+      "organisation": "Harper",
+      "url": "https://remoteOK.com/remote-jobs/remote-engineering-manager-tlm-platform-harper-1137380",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0224",
+      "dateRejected": "2026-09-12",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Senior People & Talent Operations Partner",
+      "organisation": "TestGorilla",
+      "url": "https://remoteOK.com/remote-jobs/remote-senior-people-talent-operations-partner-testgorilla-1137378",
+      "relevanceScore": 0,
+      "categoriesMatched": [
+        "complianceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: complianceContext; Healthcare role penalty (-20); HR role penalty (-20))."
     }
   ]
 }

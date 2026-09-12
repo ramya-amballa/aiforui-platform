@@ -1,6 +1,6 @@
 # Demand Intelligence — Integration Status Dashboard
 
-**Generated:** 2026-09-11
+**Generated:** 2026-09-12
 
 *Regenerated automatically at the end of every collection run (`collect.py` calls `integration_status.py`). Reflects `config/sources.json`'s current configuration and the most recent collection snapshot; regenerate by re-running collection, do not hand-edit.*
 
@@ -14,7 +14,7 @@
 | Upwork | Awaiting credentials | real OAuth2 secrets (client ID, client secret, refresh token) | (0 found in last run) |
 | LinkedIn Jobs | Deprioritized (by choice) | a Talent Solutions/Jobs API partner access token | (0 found in last run) |
 | Wellfound | Deprioritized (by choice) | no known public/partner API exists yet to authenticate against | (0 found in last run) |
-| RemoteOK | Connected | already configured | (37 found in last run) |
+| RemoteOK | Connected | already configured | (35 found in last run) |
 | Greenhouse | Awaiting credentials | public company board tokens (not secret) — one per company to monitor | (0 found in last run) |
 | Lever | Awaiting credentials | public company slugs (not secret) — one per company to monitor | (0 found in last run) |
 | Ashby | Awaiting credentials | public job board names (not secret) — one per organisation to monitor | (0 found in last run) |
