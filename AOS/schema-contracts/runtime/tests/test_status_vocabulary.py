@@ -24,7 +24,12 @@ class GapMarkerTests(unittest.TestCase):
             "Not specified", "Not started", "Not enough signal yet",
             "Not yet estimated", "Not tracked", "None yet", "Not set",
         }
-        self.assertEqual({m.value for m in sv.GapMarker}, expected)
+        self.assertEqual({m.value for m in sv.GapMarker} - {"Not established", "Needs human verification"}, expected)
+
+    def test_opportunity_intelligence_additions_are_distinct_from_the_original_seven(self):
+        self.assertEqual(sv.GapMarker.NOT_ESTABLISHED, "Not established")
+        self.assertEqual(sv.GapMarker.NEEDS_HUMAN_VERIFICATION, "Needs human verification")
+        self.assertNotEqual(sv.GapMarker.NOT_ESTABLISHED, sv.GapMarker.NOT_SPECIFIED)
 
 
 class IsGapMarkerTests(unittest.TestCase):

@@ -1,0 +1,46 @@
+{
+  "_comment": "Deterministic scoring configuration. Every weight here is a plain, inspectable number — nothing in this component's scoring is an LLM judgement call at runtime, so 'why did this get an 87' is always traceable to this file plus the evidence cited in the opportunity's own evidence[] and ramya_fit fields.",
+
+  "employmentFitWeights": {
+    "_note": "Sum to 100. Each dimension is scored 0-1 by tag-overlap between the research-inbox entry's own declared tags and ramya-professional-profile.json's tagged entries, then multiplied by its weight.",
+    "roleRelevance": 20,
+    "seniorityAlignment": 12,
+    "grcTechnologyRiskAlignment": 18,
+    "aiGovernanceAlignment": 18,
+    "tprmAlignment": 12,
+    "regulatedIndustryAlignment": 8,
+    "geographicSuitability": 6,
+    "evidenceStrength": 6
+  },
+
+  "priorityThresholds": {
+    "_note": "Applied to any 0-100 score (employment fit or consulting assessment) to derive the opportunity's priority field.",
+    "High": 75,
+    "Medium": 45
+  },
+
+  "recommendationThresholds": {
+    "_note": "Employment-specific recommended_action thresholds, applied after employmentFitWeights scoring.",
+    "APPLY": 70,
+    "STRENGTHEN_PROFILE_FIRST": 45
+  },
+
+  "consultingHeuristicWeights": {
+    "_note": "Used ONLY when the company has no existing record in account-intelligence-feed.json, fractional-advisory-radar-feed.json, or relationship-profiles.json to read a real score from instead. Sums to 100.",
+    "painEvidence": 25,
+    "urgency": 20,
+    "regulatoryPressure": 20,
+    "decisionMakerAccessibility": 15,
+    "companyMaturitySignal": 10,
+    "relationshipPotential": 10
+  },
+
+  "signalCategoryVocabulary": [
+    "ai_adoption", "governance_trigger", "funding_trigger", "regulatory_trigger", "failure_trigger"
+  ],
+
+  "sharedLookupTables": {
+    "_note": "Read-only cross-references to existing employees' own config, never duplicated here. Paths relative to AOS/.",
+    "stakeholderTitlesByCategory": "account-intelligence/runtime/config/account-intelligence-config.json#categoryToStakeholderTitles"
+  }
+}

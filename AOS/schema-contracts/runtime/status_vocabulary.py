@@ -48,6 +48,17 @@ class GapMarker(str, Enum):
     NOT_TRACKED = "Not tracked"
     NONE_YET = "None yet"
     NOT_SET = "Not set"
+    # Added for opportunity-intelligence/ (see its own model doc):
+    # distinct from the seven above because they mean "we don't know
+    # if this is true," not "this doesn't apply." NOT_ESTABLISHED is
+    # for a fact nothing in Ramya's own profile confirms one way or
+    # the other; NEEDS_HUMAN_VERIFICATION is for a claim that was
+    # proposed but must not be treated as fact until a human checks
+    # it — the two matter because conflating either with, say,
+    # NOT_SPECIFIED would blur "absent" with "unverified," and this
+    # component exists specifically to keep that line sharp.
+    NOT_ESTABLISHED = "Not established"
+    NEEDS_HUMAN_VERIFICATION = "Needs human verification"
 
 
 _VALUES = {marker.value for marker in GapMarker}

@@ -1,0 +1,13 @@
+{
+  "_readme": "Ramya's own authoritative professional profile. Ships empty — nothing here is fabricated or seeded. This file is the ONLY source opportunity_scoring.py and resume_tailoring.py may cite as fact. Fill in verified_experience with real, checkable roles/certifications/projects; transferable_experience and knowledge_training may inform framing but are NEVER rendered as hands-on fact in a draft; claims_requiring_verification are never used in any draft until moved to verified_experience by hand.",
+  "schema": {
+    "verified_experience": "array of {id, category, claim, employer_or_context, dates, evidence_note} — category is one of: role, certification, project, skill, achievement. This is the only category resume_tailoring.py may present as fact.",
+    "transferable_experience": "array of {id, category, claim, context, dates, evidence_note} — real experience in an adjacent area that supports but does not prove the specific claim (e.g. 'led risk assessments' as transferable evidence toward 'AI risk governance', not proof of it)",
+    "knowledge_training": "array of {id, category, claim, source, dates, evidence_note} — training, courses, certifications-in-progress, or studied frameworks; never rendered as implementation experience",
+    "claims_requiring_verification": "array of {id, category, claim, note} — something that might be true but hasn't been confirmed against a real record; excluded from every draft until moved to verified_experience"
+  },
+  "verified_experience": [],
+  "transferable_experience": [],
+  "knowledge_training": [],
+  "claims_requiring_verification": []
+}

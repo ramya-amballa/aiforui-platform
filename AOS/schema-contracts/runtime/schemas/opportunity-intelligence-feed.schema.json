@@ -1,0 +1,8 @@
+{
+  "_comment": "Pilot Schema Contract for opportunity-intelligence-feed.json. Checked by schema_validator.py's minimal structural validator only (required keys + top-level type) — not a full JSON Schema implementation, consistent with every other pilot schema in this directory.",
+  "type": "object",
+  "required": ["schema", "opportunities"],
+  "properties": {
+    "opportunities": {"type": "array"}
+  }
+}

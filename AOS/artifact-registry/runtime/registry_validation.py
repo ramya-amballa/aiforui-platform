@@ -51,6 +51,7 @@ _SCHEMAS_DIR = _SCHEMA_CONTRACTS_RUNTIME / "schemas"
 _SCHEMA_CONTRACTS_BY_PATH_SUFFIX = {
     "output/account-intelligence/account-intelligence-feed.json": "account-intelligence-feed.schema.json",
     "output/artifact-registry/artifact-index.json": "artifact-index.schema.json",
+    "output/opportunity-intelligence/opportunity-intelligence-feed.json": "opportunity-intelligence-feed.schema.json",
 }
 
 _MARKDOWN_CONFIDENCE_PATTERN = re.compile(r"\*\*Confidence score:\*\*\s*(\d+(?:\.\d+)?)\s*/\s*100")
