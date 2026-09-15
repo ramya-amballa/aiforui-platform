@@ -2907,6 +2907,36 @@
         "complianceContext"
       ],
       "reason": "Weak/insufficient relevance signal (matched: complianceContext; Healthcare role penalty (-20); HR role penalty (-20))."
+    },
+    {
+      "id": "rej-0225",
+      "dateRejected": "2026-09-15",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Junior Payroll Assistant",
+      "organisation": "Sleek",
+      "url": "https://remoteOK.com/remote-jobs/remote-junior-payroll-assistant-sleek-1137391",
+      "relevanceScore": 20,
+      "categoriesMatched": [
+        "complianceContext",
+        "governanceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: complianceContext, governanceContext; no penalties)."
+    },
+    {
+      "id": "rej-0226",
+      "dateRejected": "2026-09-15",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Customer Experience Representative",
+      "organisation": "Prop Firm Match Global â FZCO",
+      "url": "https://remoteOK.com/remote-jobs/remote-customer-experience-representative-prop-firm-match-global-fzco-1137390",
+      "relevanceScore": 20,
+      "categoriesMatched": [
+        "complianceContext",
+        "governanceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: complianceContext, governanceContext; no penalties)."
     }
   ]
 }
