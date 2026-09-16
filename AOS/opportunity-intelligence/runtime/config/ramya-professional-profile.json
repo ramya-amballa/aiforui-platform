@@ -1,12 +1,12 @@
 {
-  "_readme": "Ramya's own authoritative professional profile. This file is the ONLY source opportunity_scoring.py and resume_tailoring.py may cite as fact. verified_experience is the only category resume_tailoring.py may present as fact in a draft. transferable_experience and knowledge_training may inform ramya_fit.gaps and framing language but are never rendered as hands-on fact. claims_requiring_verification are never used in any draft until moved to verified_experience by hand. This first populated version was drafted by Claude from (a) real, founder-published content already live on aiforui.org (the About page, and sales-director/runtime/config/practitioner-bank.json, both reviewed and approved before this task) and (b) facts stated directly by Ramya in the profile-population request, per AOS-PRACTICE-VALIDATION-ROADMAP.md's evidence discipline. Anything named in the request but not found in existing published material was classified CLAIM_REQUIRES_VERIFICATION rather than VERIFIED, per the request's own instruction: 'if any fact cannot be confidently supported by existing authoritative material, leave it out or classify it as CLAIM_REQUIRES_VERIFICATION.' This is a DRAFT pending Ramya's own review before it is treated as canonical (see opportunity-intelligence-model.md's 'profile is read-only, founder-authoritative' rule) — nothing in Opportunity Intelligence has written or will write to this file; it is edited by hand only.",
+  "_readme": "Ramya's own authoritative professional profile. This file is the ONLY source opportunity_scoring.py and resume_tailoring.py may cite as fact. verified_experience is the only category resume_tailoring.py may present as fact in a draft. transferable_experience and knowledge_training may inform ramya_fit.gaps and framing language but are never rendered as hands-on fact. claims_requiring_verification are never used in any draft until moved to verified_experience by hand. First populated by Claude from real, founder-published content (aiforui.org's About page, sales-director/runtime/config/practitioner-bank.json) plus facts stated directly by Ramya, per AOS-PRACTICE-VALIDATION-ROADMAP.md's evidence discipline. Second-layer audited by Claude (Sept 2026): every VERIFIED claim re-checked against its cited source; every CLAIM_REQUIRES_VERIFICATION claim re-searched across the full repository for evidence missed the first time. One promotion resulted — 230+ vendors, corroborated by templates/proposals/third-party-risk-proposal-template.md and templates/proposals/dora-proposal-template.md, both real, founder-authored, client-facing content, independent of the About page. Everything else held at its prior classification because no new evidence was found; per the audit's own rule, absence of evidence is never treated as the claim being false, only as not-yet-usable. This is a DRAFT pending Ramya's own review before it is treated as canonical (see opportunity-intelligence-model.md's read-only rule) — nothing in Opportunity Intelligence has written or will write to this file; it is edited by hand only.",
   "schema": {
-    "verified_experience": "array of {id, category, claim, employer_or_context, dates, tags, evidence_note} — category is one of: role, certification, project, skill, achievement. tags drive opportunity_scoring.py's tag-overlap matching. This is the only category resume_tailoring.py may present as fact.",
-    "transferable_experience": "array of {id, category, claim, context, dates, tags, evidence_note} — real experience in an adjacent area that supports but does not prove a specific target-domain claim; contributes to a fit score at a discounted (0.4x) weight, never as strong as a verified match",
-    "knowledge_training": "array of {id, category, claim, source, dates, tags, evidence_note} — training, certifications, frameworks studied, or self-study; tags are still recorded for gap-analysis visibility, but knowledge_training never contributes to an employment fit score (only verified_matches/transferable_matches do) — this is what keeps a certification from silently becoming an implementation claim",
-    "claims_requiring_verification": "array of {id, category, claim, note} — named in the profile-population request but not found in any existing authoritative material; excluded from every draft and from every score until Ramya confirms it and moves it to verified_experience by hand",
-    "target_professional_areas": "array of strings — roles/domains Ramya is targeting, not a claim of experience in them. Descriptive only; not yet consumed by any scoring code.",
-    "engagement_preferences": "array of strings — format/geography/industry preferences, not qualifications. Descriptive only; not yet consumed by any scoring code.",
+    "verified_experience": "array of {id, category, claim, employer_or_context, dates, tags, evidence_source, evidence_note} — category is one of: role, certification, project, skill, achievement. tags drive opportunity_scoring.py's tag-overlap matching. evidence_source is a precise pointer (repo file path or published URL); evidence_note is the narrative explanation. This is the only category resume_tailoring.py may present as fact.",
+    "transferable_experience": "array of {id, category, claim, context, dates, tags, evidence_source, evidence_note} — real experience in an adjacent area that supports but does not prove a specific target-domain claim; contributes to a fit score at a discounted (0.4x) weight, never as strong as a verified match",
+    "knowledge_training": "array of {id, category, claim, source, dates, tags, evidence_source, evidence_note} — training, certifications, frameworks studied, or self-study; tags are still recorded for gap-analysis visibility, but knowledge_training never contributes to an employment fit score (only verified_matches/transferable_matches do) — this is what keeps a certification from silently becoming an implementation claim",
+    "claims_requiring_verification": "array of {id, category, claim, evidence_source, note} — not found in any existing authoritative material as of the last audit; evidence_source is null unless a partial/insufficiently-precise source exists (see note). Excluded from every draft and from every score until Ramya confirms it and moves it to verified_experience by hand.",
+    "target_professional_areas": "array of strings — roles/domains Ramya is targeting, not a claim of experience in them. Descriptive only; not consumed by any scoring code.",
+    "engagement_preferences": "array of strings — format/geography/industry preferences, not qualifications. Descriptive only; not consumed by any scoring code.",
     "guardrails": "array of strings — standing rules for anyone (human or future code) editing or extending this file. Not data to be matched against; a permanent reminder embedded in the file itself."
   },
 
@@ -18,7 +18,8 @@
       "employer_or_context": "PwC, Wells Fargo, JPMorgan Chase, Viatris",
       "dates": "Aug 2017 – Feb 2026",
       "tags": ["grc", "technology risk", "cyber grc", "operational risk", "third-party risk", "tprm", "financial crime", "kyc"],
-      "evidence_note": "Verbatim from aiforui.org's published About page and sales-director/runtime/config/practitioner-bank.json's practitionerExperience entry 'thirteen-years-grc'."
+      "evidence_source": "aiforu-platform/src/app/about/page.tsx; AOS/sales-director/runtime/config/practitioner-bank.json (practitionerExperience id 'thirteen-years-grc')",
+      "evidence_note": "Verbatim from aiforui.org's published About page. Re-confirmed in the Sept 2026 audit; unchanged."
     },
     {
       "id": "pwc-role",
@@ -27,7 +28,8 @@
       "employer_or_context": "PwC India",
       "dates": "Aug 2024 – Feb 2026",
       "tags": ["cyber grc", "technology risk", "grc"],
-      "evidence_note": "aiforui.org About page, employment history table."
+      "evidence_source": "aiforu-platform/src/app/about/page.tsx, employment history table",
+      "evidence_note": "Exact role/employer/dates as published. Re-confirmed in the Sept 2026 audit; unchanged."
     },
     {
       "id": "viatris-role",
@@ -36,7 +38,8 @@
       "employer_or_context": "Viatris",
       "dates": "Aug 2023 – Feb 2024",
       "tags": ["compliance", "grc", "third-party risk", "tprm"],
-      "evidence_note": "aiforui.org About page, employment history table."
+      "evidence_source": "aiforu-platform/src/app/about/page.tsx, employment history table",
+      "evidence_note": "Exact role/employer/dates as published. Re-confirmed in the Sept 2026 audit; unchanged."
     },
     {
       "id": "wells-fargo-role",
@@ -45,7 +48,8 @@
       "employer_or_context": "Wells Fargo",
       "dates": "Mar 2020 – Jul 2023",
       "tags": ["operational risk", "tprm", "third-party risk", "banking"],
-      "evidence_note": "aiforui.org About page, employment history table."
+      "evidence_source": "aiforu-platform/src/app/about/page.tsx, employment history table",
+      "evidence_note": "Exact role/employer/dates as published. Re-confirmed in the Sept 2026 audit; unchanged."
     },
     {
       "id": "jpmc-role",
@@ -54,7 +58,8 @@
       "employer_or_context": "JPMorgan Chase",
       "dates": "Aug 2017 – Mar 2020",
       "tags": ["kyc", "financial crime", "sanctions", "grc", "banking"],
-      "evidence_note": "aiforui.org About page employment table + narrative ('At JPMorgan Chase, that meant global KYC and sanctions operations across multiple jurisdictions')."
+      "evidence_source": "aiforu-platform/src/app/about/page.tsx, employment history table and narrative text",
+      "evidence_note": "'At JPMorgan Chase, that meant global KYC and sanctions operations across multiple jurisdictions' — verbatim. Re-confirmed in the Sept 2026 audit; unchanged."
     },
     {
       "id": "pwc-control-testing-residual-risk",
@@ -63,16 +68,28 @@
       "employer_or_context": "PwC",
       "dates": "Aug 2024 – Feb 2026",
       "tags": ["technology risk", "grc", "control testing", "cyber grc"],
-      "evidence_note": "Verbatim from aiforui.org About page ('At PwC, it meant testing controls across 300+ business-critical applications and cutting residual risk exposure by 35% in a single programme') and practitioner-bank.json's 'pwc-control-testing' entry. This is the one quantified claim in the request that IS corroborated by existing published material."
+      "evidence_source": "aiforu-platform/src/app/about/page.tsx; AOS/sales-director/runtime/config/practitioner-bank.json (practitionerExperience id 'pwc-control-testing')",
+      "evidence_note": "'At PwC, it meant testing controls across 300+ business-critical applications and cutting residual risk exposure by 35% in a single programme' — verbatim. Both figures corroborated exactly. Re-confirmed in the Sept 2026 audit; unchanged."
     },
     {
       "id": "tprm-vendor-governance-lifecycle",
       "category": "project",
       "claim": "Third-party/vendor risk governance for hundreds of vendor relationships end-to-end, including the post-onboarding/exit phase most programmes stop watching once onboarding is signed off.",
       "employer_or_context": "Wells Fargo, Viatris",
-      "dates": "Aug 2023 – Jul 2023 (Viatris) and Mar 2020 – Jul 2023 (Wells Fargo)",
+      "dates": "Aug 2023 – Feb 2024 (Viatris) and Mar 2020 – Jul 2023 (Wells Fargo)",
       "tags": ["tprm", "third-party risk", "supplier risk", "vendor governance", "banking"],
-      "evidence_note": "aiforui.org About page ('Wells Fargo and Viatris... third-party risk governance for hundreds of vendor relationships... through the part of the relationship most programmes stop watching once onboarding is signed off') and practitioner-bank.json's 'tprm-vendor-governance' entry. Note: the published source says 'hundreds', not a specific count — see claims_requiring_verification for the 230+ figure named in the profile-population request, which is not corroborated at this precision."
+      "evidence_source": "aiforu-platform/src/app/about/page.tsx; AOS/sales-director/runtime/config/practitioner-bank.json (practitionerExperience id 'tprm-vendor-governance')",
+      "evidence_note": "'Wells Fargo and Viatris... third-party risk governance for hundreds of vendor relationships... through the part of the relationship most programmes stop watching once onboarding is signed off' — verbatim. This entry deliberately keeps the source's own word 'hundreds' rather than a specific count — see vendor-count-230-plus for the more precise figure, now separately verified from a different source. Corrected a date typo found during this audit (Viatris end date was mis-stated as 'Jul 2023' in the prior version; the About page's own employment table gives Feb 2024)."
+    },
+    {
+      "id": "vendor-count-230-plus",
+      "category": "achievement",
+      "claim": "Governed 230+ third-party/vendor relationships across the full lifecycle, at Wells Fargo and Viatris, in regulated financial services environments.",
+      "employer_or_context": "Wells Fargo, Viatris",
+      "dates": "Mar 2020 – Feb 2024",
+      "tags": ["tprm", "third-party risk", "supplier risk", "vendor governance", "banking"],
+      "evidence_source": "AOS/templates/proposals/third-party-risk-proposal-template.md ('Why AI for U&I' section); AOS/templates/proposals/dora-proposal-template.md ('Why AI for U&I' section)",
+      "evidence_note": "PROMOTED during the Sept 2026 second-layer audit — was CLAIM_REQUIRES_VERIFICATION in the first draft, because the About page and practitioner-bank.json only corroborate 'hundreds', not this specific figure. A repository-wide re-search for this audit found the exact figure independently stated in two real, founder-authored, client-facing proposal templates ('Built from governing 230+ third-party relationships across the full lifecycle at Wells Fargo and Viatris'; 'Built from third-party risk governance for 230+ vendor relationships in regulated financial services environments') — content Ramya has authored and is willing to send to real prospective clients as her own track record, which meets the VERIFIED bar (founder-approved material) independently of the About page. Kept as a separate entry from tprm-vendor-governance-lifecycle rather than merged into it, since the two entries come from different source documents and merging would blur the evidence trail."
     },
     {
       "id": "professional-certifications",
@@ -81,7 +98,8 @@
       "employer_or_context": "Independent certifications",
       "dates": "Not specified",
       "tags": ["certification"],
-      "evidence_note": "Verbatim from aiforui.org About page and practitioner-bank.json's 'certifications' entry. Deliberately tagged with 'certification' only, no domain tags (e.g. 'ai governance') — holding a certification is a verified fact, but per the profile-population request's own explicit rule, a certification must never by itself inflate a fit score toward hands-on AI governance implementation. The knowledge these certifications represent is captured separately under knowledge_training, which does not contribute to a fit score."
+      "evidence_source": "aiforu-platform/src/app/about/page.tsx (const certifications); AOS/sales-director/runtime/config/practitioner-bank.json (practitionerExperience id 'certifications')",
+      "evidence_note": "Verbatim from the published About page. Deliberately tagged with 'certification' only, no domain tags (e.g. 'ai governance') — holding a certification is a verified fact, but per the founder's own explicit rule, a certification must never by itself inflate a fit score toward hands-on AI governance implementation. The knowledge these certifications represent is captured separately under knowledge_training, which does not contribute to a fit score. Re-confirmed in the Sept 2026 audit; unchanged. CAISR's expansion is not stated anywhere in the source material and is not guessed here."
     }
   ],
 
@@ -93,7 +111,8 @@
       "context": "General GRC/technology risk background applied toward the AI governance target area.",
       "dates": "Ongoing",
       "tags": ["ai governance", "ai risk", "grc", "technology risk"],
-      "evidence_note": "A reasoned characterization, not a documented fact — this is exactly what 'transferable' means: real, verified underlying skill (see thirteen-years-grc-experience, pwc-control-testing-residual-risk), applied to a target domain where implementation itself isn't yet evidenced. Contributes to a fit score only at the 0.4x discounted weight opportunity_scoring.py applies to transferable matches."
+      "evidence_source": "Derived from thirteen-years-grc-experience and pwc-control-testing-residual-risk (see their own evidence_source); no independent source of its own, by definition — a transferable claim is a reasoned characterization, not a separately documented fact.",
+      "evidence_note": "Re-confirmed in the Sept 2026 audit; unchanged. Contributes to a fit score only at the 0.4x discounted weight opportunity_scoring.py applies to transferable matches."
     }
   ],
 
@@ -105,7 +124,8 @@
       "source": "NIST AI RMF certification (see professional-certifications)",
       "dates": "Not specified",
       "tags": ["ai governance", "nist ai rmf", "ai risk"],
-      "evidence_note": "Per the profile-population request's own explicit instruction: 'NIST AI RMF work must not be represented as production AI implementation merely because Ramya has studied/certified in the framework.'"
+      "evidence_source": "aiforu-platform/src/app/about/page.tsx (const certifications)",
+      "evidence_note": "Per the founder's own explicit instruction: NIST AI RMF certification must not be represented as production AI implementation. Re-confirmed in the Sept 2026 audit; unchanged."
     },
     {
       "id": "eu-ai-act-knowledge",
@@ -114,7 +134,8 @@
       "source": "Professional positioning / self-study; referenced alongside AI governance certifications",
       "dates": "Not specified",
       "tags": ["ai governance", "eu ai act"],
-      "evidence_note": "Named in the profile-population request under 'KNOWLEDGE / demonstrated professional positioning'; no existing published material documents a specific EU AI Act delivery engagement, so this stays at knowledge tier only."
+      "evidence_source": null,
+      "evidence_note": "Named directly by Ramya as a knowledge area; no repository or published source documents a specific EU AI Act delivery engagement, so this stays at knowledge tier only. Re-confirmed in the Sept 2026 audit; unchanged."
     },
     {
       "id": "gdpr-practitioner-knowledge",
@@ -123,7 +144,8 @@
       "source": "EU GDPR Practitioner certification (see professional-certifications)",
       "dates": "Not specified",
       "tags": ["gdpr", "data protection"],
-      "evidence_note": "Certification itself is verified (see professional-certifications); the substantive GDPR knowledge it represents is kept at knowledge tier, consistent with how every other certification-derived knowledge area is treated in this profile — no certification alone is elevated to hands-on delivery."
+      "evidence_source": "aiforu-platform/src/app/about/page.tsx (const certifications)",
+      "evidence_note": "Certification itself is verified (see professional-certifications); the substantive GDPR knowledge it represents is kept at knowledge tier, consistent with how every other certification-derived knowledge area is treated in this profile. Re-confirmed in the Sept 2026 audit; unchanged."
     },
     {
       "id": "responsible-ai-concepts-knowledge",
@@ -132,64 +154,67 @@
       "source": "Professional positioning / self-study",
       "dates": "Not specified",
       "tags": ["responsible ai", "ai governance", "ai risk"],
-      "evidence_note": "Named in the profile-population request; no existing published material documents hands-on Responsible AI implementation, so this stays at knowledge tier only, per the request's explicit instruction on this exact point."
+      "evidence_source": null,
+      "evidence_note": "Named directly by Ramya; no repository or published source documents hands-on Responsible AI implementation, so this stays at knowledge tier only. Re-confirmed in the Sept 2026 audit; unchanged."
     }
   ],
 
   "claims_requiring_verification": [
     {
-      "id": "vendor-count-230-claim",
-      "category": "achievement",
-      "claim": "230+ vendors governed.",
-      "note": "The profile-population request names this specific figure, but the existing published material (About page, practitioner-bank.json) only corroborates 'hundreds of vendor relationships' — not this precise count. Confirm the exact figure before treating it as fact in any draft."
-    },
-    {
       "id": "policy-count-36-claim",
       "category": "achievement",
       "claim": "Information-security policy architecture involving 36 policies.",
-      "note": "Not found anywhere in existing published material. Confirm before use."
+      "evidence_source": null,
+      "note": "Re-searched the full repository during the Sept 2026 audit (file names, published site content, proposal templates) — no mention found anywhere. Confirm the exact figure before treating it as fact."
     },
     {
       "id": "nist-csf-supplier-framework-claim",
       "category": "project",
       "claim": "Supplier-risk framework explicitly aligned to NIST CSF, covering cyber, ESG, financial and operational-resilience dimensions.",
-      "note": "More specific than what's corroborated (About page describes 'third-party risk governance for hundreds of vendor relationships' generally, without naming NIST CSF alignment or an ESG dimension). Confirm before use."
+      "evidence_source": null,
+      "note": "Re-searched during the Sept 2026 audit: NIST CSF appears in templates/proposals/security-governance-proposal-template.md and templates/delivery/regulatory-framework-annexes.json, but only as generic client-facing methodology content ('confirm the specific standard or assessment driving the work, e.g. ISO 27001, SOC 2, NIST CSF') — never as a personal claim about a framework Ramya herself built. The About page describes 'third-party risk governance for hundreds of vendor relationships' generally, without naming NIST CSF alignment or an ESG dimension. Confirm before use."
     },
     {
       "id": "rsa-archer-tool-claim",
       "category": "skill",
       "claim": "RSA Archer tool experience.",
-      "note": "Named in the profile-population request; not found in any existing published material. Confirm before use."
+      "evidence_source": null,
+      "note": "Re-searched during the Sept 2026 audit — no mention anywhere in the repository. Confirm before use."
     },
     {
       "id": "onetrust-tool-claim",
       "category": "skill",
       "claim": "OneTrust tool experience.",
-      "note": "Named in the profile-population request; not found in any existing published material. Confirm before use."
+      "evidence_source": null,
+      "note": "Re-searched during the Sept 2026 audit. The only 'OneTrust' mentions found in the repository are inside a real job posting's own requirements text (AOS/output/sales-director/packages/opp-0001-rainfocus-.../*.md — 'Experience with OneTrust or related GRC technologies is a plus'), i.e. a prospective employer asking for it, not evidence Ramya has it. Confirm before use."
     },
     {
       "id": "processunity-tool-claim",
       "category": "skill",
       "claim": "ProcessUnity tool experience.",
-      "note": "Named in the profile-population request; not found in any existing published material. Confirm before use."
+      "evidence_source": null,
+      "note": "Re-searched during the Sept 2026 audit — no mention anywhere in the repository. Confirm before use."
     },
     {
       "id": "soc2-iso27001-sox-itgc-delivery-claim",
       "category": "project",
       "claim": "SOC 2, ISO 27001 and SOX ITGC gap-analysis/control-assessment work performed hands-on.",
-      "note": "aiforu-platform's own content (src/content/adgl.ts) mentions ISO 27001/SOC 2/GDPR only in the context of client organisations generally, not as Ramya's own documented delivery work. Confirm before use."
+      "evidence_source": null,
+      "note": "Re-searched during the Sept 2026 audit. aiforu-platform's own content (src/content/adgl.ts) and templates/proposals/security-governance-proposal-template.md mention ISO 27001/SOC 2 only as generic client-facing methodology examples, never as Ramya's own documented delivery work. SOX ITGC does not appear anywhere in the repository outside this profile file. Confirm before use."
     },
     {
       "id": "control-framework-mapping-exposure-claim",
       "category": "skill",
       "claim": "Mapping/control-framework exposure involving ISO 27001, SOC 2, PCI DSS, NIST CSF and GDPR, delivered hands-on.",
-      "note": "Same basis as soc2-iso27001-sox-itgc-delivery-claim — not corroborated as Ramya's own delivery work in any existing published material. Confirm before use."
+      "evidence_source": null,
+      "note": "Same basis as soc2-iso27001-sox-itgc-delivery-claim — every mention of these frameworks found in the repository is generic client-facing methodology content, not documented as Ramya's own delivery work. Confirm before use."
     },
     {
       "id": "cbuae-ai-governance-work-claim",
       "category": "project",
       "claim": "CBUAE (Central Bank of the UAE) AI governance research/work.",
-      "note": "Named in the profile-population request under AI governance knowledge areas; not found anywhere in existing published material. This is specific enough (naming a particular regulator) that it should not be treated as knowledge-tier positioning until confirmed — recommend confirming the exact nature of this work (research paper, engagement, self-study) before it appears anywhere, even as knowledge."
+      "evidence_source": null,
+      "note": "Re-searched during the Sept 2026 audit. 'CBUAE' appears in the repository only as a tracked external regulatory source inside Market Intelligence's own configuration (05-Market-Intelligence/runtime/config/sources.json, regulatory-log.json's source enum, account-intelligence-config.json's regional regulatory-context table) — i.e. a market signal AOS monitors generally, never a record of Ramya's own work with or research on CBUAE. This is specific enough (naming a particular regulator) that it should not be treated as knowledge-tier positioning until confirmed — recommend confirming the exact nature of this work (research paper, engagement, self-study) before it appears anywhere, even as knowledge."
     }
   ],
 
@@ -213,14 +238,15 @@
   ],
 
   "guardrails": [
-    "Do not claim AI engineering.",
+    "Do not claim AI engineering, AI/ML development, or production AI model implementation unless authoritative evidence explicitly supports it.",
     "Do not claim software development.",
-    "Do not claim production AI model implementation.",
     "Do not convert NIST AI RMF (or any framework) study/certification into implementation experience.",
     "Do not convert framework knowledge into delivery experience.",
     "Do not invent clients, projects, employers, certifications, metrics or outcomes.",
-    "Do not silently upgrade TRANSFERABLE or KNOWLEDGE into VERIFIED.",
-    "Do not silently modify this founder-authoritative profile — every change is a human edit, reviewed before use; see opportunity-intelligence-model.md's read-only rule and its enforcing test, test_profile_is_read_only.py.",
+    "Do not silently upgrade TRANSFERABLE or KNOWLEDGE into VERIFIED. Every promotion (see vendor-count-230-plus) must cite a specific, real, newly-found evidence_source, never a hunch that it 'sounds consistent'.",
+    "Do not treat 'not found in existing material' as 'the claim is false' — use CLAIM_REQUIRES_VERIFICATION, never silent deletion, for anything plausible but unconfirmed.",
+    "Do not manufacture precision — if a source says 'hundreds', the profile must not silently say a specific number unless a separate, real source establishes it (see vendor-count-230-plus vs. tprm-vendor-governance-lifecycle for the correct way to handle this).",
+    "Do not silently modify this founder-authoritative profile — every change is a human edit, reviewed before use; see opportunity-intelligence-model.md's read-only rule and its enforcing tests in tests/test_profile_is_read_only.py.",
     "If a future capability proposes a change to this file, it must go through a separate proposal artifact and the approval_queue.py mechanism, exactly as documented in opportunity-intelligence-model.md — never a direct or automatic write."
   ]
 }
