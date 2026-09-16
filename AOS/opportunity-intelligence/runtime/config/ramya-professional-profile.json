@@ -1,13 +1,226 @@
 {
-  "_readme": "Ramya's own authoritative professional profile. Ships empty — nothing here is fabricated or seeded. This file is the ONLY source opportunity_scoring.py and resume_tailoring.py may cite as fact. Fill in verified_experience with real, checkable roles/certifications/projects; transferable_experience and knowledge_training may inform framing but are NEVER rendered as hands-on fact in a draft; claims_requiring_verification are never used in any draft until moved to verified_experience by hand.",
+  "_readme": "Ramya's own authoritative professional profile. This file is the ONLY source opportunity_scoring.py and resume_tailoring.py may cite as fact. verified_experience is the only category resume_tailoring.py may present as fact in a draft. transferable_experience and knowledge_training may inform ramya_fit.gaps and framing language but are never rendered as hands-on fact. claims_requiring_verification are never used in any draft until moved to verified_experience by hand. This first populated version was drafted by Claude from (a) real, founder-published content already live on aiforui.org (the About page, and sales-director/runtime/config/practitioner-bank.json, both reviewed and approved before this task) and (b) facts stated directly by Ramya in the profile-population request, per AOS-PRACTICE-VALIDATION-ROADMAP.md's evidence discipline. Anything named in the request but not found in existing published material was classified CLAIM_REQUIRES_VERIFICATION rather than VERIFIED, per the request's own instruction: 'if any fact cannot be confidently supported by existing authoritative material, leave it out or classify it as CLAIM_REQUIRES_VERIFICATION.' This is a DRAFT pending Ramya's own review before it is treated as canonical (see opportunity-intelligence-model.md's 'profile is read-only, founder-authoritative' rule) — nothing in Opportunity Intelligence has written or will write to this file; it is edited by hand only.",
   "schema": {
-    "verified_experience": "array of {id, category, claim, employer_or_context, dates, evidence_note} — category is one of: role, certification, project, skill, achievement. This is the only category resume_tailoring.py may present as fact.",
-    "transferable_experience": "array of {id, category, claim, context, dates, evidence_note} — real experience in an adjacent area that supports but does not prove the specific claim (e.g. 'led risk assessments' as transferable evidence toward 'AI risk governance', not proof of it)",
-    "knowledge_training": "array of {id, category, claim, source, dates, evidence_note} — training, courses, certifications-in-progress, or studied frameworks; never rendered as implementation experience",
-    "claims_requiring_verification": "array of {id, category, claim, note} — something that might be true but hasn't been confirmed against a real record; excluded from every draft until moved to verified_experience"
+    "verified_experience": "array of {id, category, claim, employer_or_context, dates, tags, evidence_note} — category is one of: role, certification, project, skill, achievement. tags drive opportunity_scoring.py's tag-overlap matching. This is the only category resume_tailoring.py may present as fact.",
+    "transferable_experience": "array of {id, category, claim, context, dates, tags, evidence_note} — real experience in an adjacent area that supports but does not prove a specific target-domain claim; contributes to a fit score at a discounted (0.4x) weight, never as strong as a verified match",
+    "knowledge_training": "array of {id, category, claim, source, dates, tags, evidence_note} — training, certifications, frameworks studied, or self-study; tags are still recorded for gap-analysis visibility, but knowledge_training never contributes to an employment fit score (only verified_matches/transferable_matches do) — this is what keeps a certification from silently becoming an implementation claim",
+    "claims_requiring_verification": "array of {id, category, claim, note} — named in the profile-population request but not found in any existing authoritative material; excluded from every draft and from every score until Ramya confirms it and moves it to verified_experience by hand",
+    "target_professional_areas": "array of strings — roles/domains Ramya is targeting, not a claim of experience in them. Descriptive only; not yet consumed by any scoring code.",
+    "engagement_preferences": "array of strings — format/geography/industry preferences, not qualifications. Descriptive only; not yet consumed by any scoring code.",
+    "guardrails": "array of strings — standing rules for anyone (human or future code) editing or extending this file. Not data to be matched against; a permanent reminder embedded in the file itself."
   },
-  "verified_experience": [],
-  "transferable_experience": [],
-  "knowledge_training": [],
-  "claims_requiring_verification": []
+
+  "verified_experience": [
+    {
+      "id": "thirteen-years-grc-experience",
+      "category": "role",
+      "claim": "13+ years across enterprise technology risk, cybersecurity governance, GRC, operational risk, third-party/supplier risk and financial crime/KYC, across banking, professional services and life sciences.",
+      "employer_or_context": "PwC, Wells Fargo, JPMorgan Chase, Viatris",
+      "dates": "Aug 2017 – Feb 2026",
+      "tags": ["grc", "technology risk", "cyber grc", "operational risk", "third-party risk", "tprm", "financial crime", "kyc"],
+      "evidence_note": "Verbatim from aiforui.org's published About page and sales-director/runtime/config/practitioner-bank.json's practitionerExperience entry 'thirteen-years-grc'."
+    },
+    {
+      "id": "pwc-role",
+      "category": "role",
+      "claim": "Cyber Security Consultant, Governance.",
+      "employer_or_context": "PwC India",
+      "dates": "Aug 2024 – Feb 2026",
+      "tags": ["cyber grc", "technology risk", "grc"],
+      "evidence_note": "aiforui.org About page, employment history table."
+    },
+    {
+      "id": "viatris-role",
+      "category": "role",
+      "claim": "Deputy Manager, Global Compliance.",
+      "employer_or_context": "Viatris",
+      "dates": "Aug 2023 – Feb 2024",
+      "tags": ["compliance", "grc", "third-party risk", "tprm"],
+      "evidence_note": "aiforui.org About page, employment history table."
+    },
+    {
+      "id": "wells-fargo-role",
+      "category": "role",
+      "claim": "Operational Risk Consultant, TPRM.",
+      "employer_or_context": "Wells Fargo",
+      "dates": "Mar 2020 – Jul 2023",
+      "tags": ["operational risk", "tprm", "third-party risk", "banking"],
+      "evidence_note": "aiforui.org About page, employment history table."
+    },
+    {
+      "id": "jpmc-role",
+      "category": "role",
+      "claim": "Team Lead, Operations — global KYC and sanctions operations across multiple jurisdictions.",
+      "employer_or_context": "JPMorgan Chase",
+      "dates": "Aug 2017 – Mar 2020",
+      "tags": ["kyc", "financial crime", "sanctions", "grc", "banking"],
+      "evidence_note": "aiforui.org About page employment table + narrative ('At JPMorgan Chase, that meant global KYC and sanctions operations across multiple jurisdictions')."
+    },
+    {
+      "id": "pwc-control-testing-residual-risk",
+      "category": "achievement",
+      "claim": "Tested controls across 300+ business-critical applications and cut residual risk exposure by 35% in a single programme.",
+      "employer_or_context": "PwC",
+      "dates": "Aug 2024 – Feb 2026",
+      "tags": ["technology risk", "grc", "control testing", "cyber grc"],
+      "evidence_note": "Verbatim from aiforui.org About page ('At PwC, it meant testing controls across 300+ business-critical applications and cutting residual risk exposure by 35% in a single programme') and practitioner-bank.json's 'pwc-control-testing' entry. This is the one quantified claim in the request that IS corroborated by existing published material."
+    },
+    {
+      "id": "tprm-vendor-governance-lifecycle",
+      "category": "project",
+      "claim": "Third-party/vendor risk governance for hundreds of vendor relationships end-to-end, including the post-onboarding/exit phase most programmes stop watching once onboarding is signed off.",
+      "employer_or_context": "Wells Fargo, Viatris",
+      "dates": "Aug 2023 – Jul 2023 (Viatris) and Mar 2020 – Jul 2023 (Wells Fargo)",
+      "tags": ["tprm", "third-party risk", "supplier risk", "vendor governance", "banking"],
+      "evidence_note": "aiforui.org About page ('Wells Fargo and Viatris... third-party risk governance for hundreds of vendor relationships... through the part of the relationship most programmes stop watching once onboarding is signed off') and practitioner-bank.json's 'tprm-vendor-governance' entry. Note: the published source says 'hundreds', not a specific count — see claims_requiring_verification for the 230+ figure named in the profile-population request, which is not corroborated at this precision."
+    },
+    {
+      "id": "professional-certifications",
+      "category": "certification",
+      "claim": "Holds NIST AI RMF, CAISR, EU GDPR Practitioner, and Microsoft AI Transformation Leader certifications.",
+      "employer_or_context": "Independent certifications",
+      "dates": "Not specified",
+      "tags": ["certification"],
+      "evidence_note": "Verbatim from aiforui.org About page and practitioner-bank.json's 'certifications' entry. Deliberately tagged with 'certification' only, no domain tags (e.g. 'ai governance') — holding a certification is a verified fact, but per the profile-population request's own explicit rule, a certification must never by itself inflate a fit score toward hands-on AI governance implementation. The knowledge these certifications represent is captured separately under knowledge_training, which does not contribute to a fit score."
+    }
+  ],
+
+  "transferable_experience": [
+    {
+      "id": "grc-to-ai-governance-transfer",
+      "category": "skill",
+      "claim": "Risk/control framework design, gap-analysis methodology, and governance-programme delivery built over 13+ years of GRC/technology risk/TPRM work is directly relevant to AI governance control design and AI risk-framework operationalization — but hands-on delivery of an AI-specific governance implementation is not yet established.",
+      "context": "General GRC/technology risk background applied toward the AI governance target area.",
+      "dates": "Ongoing",
+      "tags": ["ai governance", "ai risk", "grc", "technology risk"],
+      "evidence_note": "A reasoned characterization, not a documented fact — this is exactly what 'transferable' means: real, verified underlying skill (see thirteen-years-grc-experience, pwc-control-testing-residual-risk), applied to a target domain where implementation itself isn't yet evidenced. Contributes to a fit score only at the 0.4x discounted weight opportunity_scoring.py applies to transferable matches."
+    }
+  ],
+
+  "knowledge_training": [
+    {
+      "id": "nist-ai-rmf-knowledge",
+      "category": "training",
+      "claim": "NIST AI RMF — framework/conceptual knowledge via certification. Not evidence of production AI governance implementation; must never be represented as hands-on AI RMF delivery.",
+      "source": "NIST AI RMF certification (see professional-certifications)",
+      "dates": "Not specified",
+      "tags": ["ai governance", "nist ai rmf", "ai risk"],
+      "evidence_note": "Per the profile-population request's own explicit instruction: 'NIST AI RMF work must not be represented as production AI implementation merely because Ramya has studied/certified in the framework.'"
+    },
+    {
+      "id": "eu-ai-act-knowledge",
+      "category": "training",
+      "claim": "EU AI Act — regulatory/conceptual knowledge. No documented hands-on EU AI Act compliance delivery.",
+      "source": "Professional positioning / self-study; referenced alongside AI governance certifications",
+      "dates": "Not specified",
+      "tags": ["ai governance", "eu ai act"],
+      "evidence_note": "Named in the profile-population request under 'KNOWLEDGE / demonstrated professional positioning'; no existing published material documents a specific EU AI Act delivery engagement, so this stays at knowledge tier only."
+    },
+    {
+      "id": "gdpr-practitioner-knowledge",
+      "category": "certification",
+      "claim": "EU GDPR Practitioner — data-protection framework/practitioner-level knowledge.",
+      "source": "EU GDPR Practitioner certification (see professional-certifications)",
+      "dates": "Not specified",
+      "tags": ["gdpr", "data protection"],
+      "evidence_note": "Certification itself is verified (see professional-certifications); the substantive GDPR knowledge it represents is kept at knowledge tier, consistent with how every other certification-derived knowledge area is treated in this profile — no certification alone is elevated to hands-on delivery."
+    },
+    {
+      "id": "responsible-ai-concepts-knowledge",
+      "category": "training",
+      "claim": "Responsible AI / AI risk concepts and AI governance operating-model concepts — conceptual knowledge, not documented implementation.",
+      "source": "Professional positioning / self-study",
+      "dates": "Not specified",
+      "tags": ["responsible ai", "ai governance", "ai risk"],
+      "evidence_note": "Named in the profile-population request; no existing published material documents hands-on Responsible AI implementation, so this stays at knowledge tier only, per the request's explicit instruction on this exact point."
+    }
+  ],
+
+  "claims_requiring_verification": [
+    {
+      "id": "vendor-count-230-claim",
+      "category": "achievement",
+      "claim": "230+ vendors governed.",
+      "note": "The profile-population request names this specific figure, but the existing published material (About page, practitioner-bank.json) only corroborates 'hundreds of vendor relationships' — not this precise count. Confirm the exact figure before treating it as fact in any draft."
+    },
+    {
+      "id": "policy-count-36-claim",
+      "category": "achievement",
+      "claim": "Information-security policy architecture involving 36 policies.",
+      "note": "Not found anywhere in existing published material. Confirm before use."
+    },
+    {
+      "id": "nist-csf-supplier-framework-claim",
+      "category": "project",
+      "claim": "Supplier-risk framework explicitly aligned to NIST CSF, covering cyber, ESG, financial and operational-resilience dimensions.",
+      "note": "More specific than what's corroborated (About page describes 'third-party risk governance for hundreds of vendor relationships' generally, without naming NIST CSF alignment or an ESG dimension). Confirm before use."
+    },
+    {
+      "id": "rsa-archer-tool-claim",
+      "category": "skill",
+      "claim": "RSA Archer tool experience.",
+      "note": "Named in the profile-population request; not found in any existing published material. Confirm before use."
+    },
+    {
+      "id": "onetrust-tool-claim",
+      "category": "skill",
+      "claim": "OneTrust tool experience.",
+      "note": "Named in the profile-population request; not found in any existing published material. Confirm before use."
+    },
+    {
+      "id": "processunity-tool-claim",
+      "category": "skill",
+      "claim": "ProcessUnity tool experience.",
+      "note": "Named in the profile-population request; not found in any existing published material. Confirm before use."
+    },
+    {
+      "id": "soc2-iso27001-sox-itgc-delivery-claim",
+      "category": "project",
+      "claim": "SOC 2, ISO 27001 and SOX ITGC gap-analysis/control-assessment work performed hands-on.",
+      "note": "aiforu-platform's own content (src/content/adgl.ts) mentions ISO 27001/SOC 2/GDPR only in the context of client organisations generally, not as Ramya's own documented delivery work. Confirm before use."
+    },
+    {
+      "id": "control-framework-mapping-exposure-claim",
+      "category": "skill",
+      "claim": "Mapping/control-framework exposure involving ISO 27001, SOC 2, PCI DSS, NIST CSF and GDPR, delivered hands-on.",
+      "note": "Same basis as soc2-iso27001-sox-itgc-delivery-claim — not corroborated as Ramya's own delivery work in any existing published material. Confirm before use."
+    },
+    {
+      "id": "cbuae-ai-governance-work-claim",
+      "category": "project",
+      "claim": "CBUAE (Central Bank of the UAE) AI governance research/work.",
+      "note": "Named in the profile-population request under AI governance knowledge areas; not found anywhere in existing published material. This is specific enough (naming a particular regulator) that it should not be treated as knowledge-tier positioning until confirmed — recommend confirming the exact nature of this work (research paper, engagement, self-study) before it appears anywhere, even as knowledge."
+    }
+  ],
+
+  "target_professional_areas": [
+    "AI Governance", "AI Risk / Responsible AI", "Technology Risk", "Cyber GRC",
+    "Information Security Governance", "Third-Party Risk Management", "Supplier Risk",
+    "Operational Risk", "Technology Controls / Control Testing", "Senior GRC Advisory",
+    "Fractional GRC / AI Governance Consulting"
+  ],
+
+  "engagement_preferences": [
+    "Senior individual-contributor / advisory roles",
+    "Consulting and fractional advisory work",
+    "Remote / global opportunities",
+    "UAE / GCC",
+    "Europe",
+    "Australia",
+    "India",
+    "Regulated industries",
+    "Roles where governance/risk/advisory expertise matters more than software engineering"
+  ],
+
+  "guardrails": [
+    "Do not claim AI engineering.",
+    "Do not claim software development.",
+    "Do not claim production AI model implementation.",
+    "Do not convert NIST AI RMF (or any framework) study/certification into implementation experience.",
+    "Do not convert framework knowledge into delivery experience.",
+    "Do not invent clients, projects, employers, certifications, metrics or outcomes.",
+    "Do not silently upgrade TRANSFERABLE or KNOWLEDGE into VERIFIED.",
+    "Do not silently modify this founder-authoritative profile — every change is a human edit, reviewed before use; see opportunity-intelligence-model.md's read-only rule and its enforcing test, test_profile_is_read_only.py.",
+    "If a future capability proposes a change to this file, it must go through a separate proposal artifact and the approval_queue.py mechanism, exactly as documented in opportunity-intelligence-model.md — never a direct or automatic write."
+  ]
 }
