@@ -184,6 +184,34 @@ must never render it as "implemented X." `claims_requiring_verification`
 entries are never used in any draft at all until moved to
 `verified_experience` by the founder.
 
+**The profile is read-only to this entire component, with no
+exception, today or in any future extension.** `load_profile()` in
+`opportunity_scoring.py` is the only function anywhere in this
+codebase that references the profile's path, and it only opens the
+file for reading — verified by `tests/test_profile_is_read_only.py`,
+which hashes the real shipped profile file before and after a full
+discovery run and fails if a single byte or the mtime changed, greps
+every module's own source for a write pattern near the filename, and
+fails if any function named anything like `save_profile`/
+`write_profile`/`update_profile` is ever defined. This is enforced as
+a real regression test, not only documented as an intention.
+
+**If a future capability is ever built that would suggest a profile
+change** — for example, noticing after a real, closed engagement that
+a `claims_requiring_verification` entry should be promoted to
+`verified_experience`, or that a verified entry is missing a tag that
+would have mattered for a real opportunity — that suggestion must be
+written to a separate artifact (e.g. `output/opportunity-intelligence/
+profile-change-proposals.json`), never to the profile file itself, and
+must use the exact same `approval_queue.py` state machine already
+built for outreach drafts: it starts at `PENDING_APPROVAL`, and only
+an explicit, human-invoked acceptance (mirroring `generate.py`'s
+`--approve` pattern) may ever cause the profile file to be edited —
+and even then, by the founder's own hand or an explicitly separate,
+clearly-logged write step, never as a side effect of a normal
+discovery run. No such capability exists today; this paragraph is the
+contract it must satisfy if one is ever proposed, not a roadmap item.
+
 ## Consulting / relationship / partnership / referral scoring
 
 Never recomputed if a real answer already exists. Before scoring a
