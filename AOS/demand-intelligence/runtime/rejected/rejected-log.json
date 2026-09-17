@@ -2937,6 +2937,21 @@
         "governanceContext"
       ],
       "reason": "Weak/insufficient relevance signal (matched: complianceContext, governanceContext; no penalties)."
+    },
+    {
+      "id": "rej-0227",
+      "dateRejected": "2026-09-17",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Principal Product Manager",
+      "organisation": "DomainTools",
+      "url": "https://remoteOK.com/remote-jobs/remote-principal-product-manager-domaintools-1137396",
+      "relevanceScore": 14,
+      "categoriesMatched": [
+        "aiContext",
+        "cybersecurityContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: aiContext, cybersecurityContext; no penalties)."
     }
   ]
 }
