@@ -2952,6 +2952,30 @@
         "cybersecurityContext"
       ],
       "reason": "Weak/insufficient relevance signal (matched: aiContext, cybersecurityContext; no penalties)."
+    },
+    {
+      "id": "rej-0228",
+      "dateRejected": "2026-09-18",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Golang Kubernetes Engineer",
+      "organisation": "Arango",
+      "url": "https://remoteOK.com/remote-jobs/remote-golang-kubernetes-engineer-arango-1137400",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: AI Agents) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0229",
+      "dateRejected": "2026-09-18",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "AI agent engineer",
+      "organisation": "Sticker Mule",
+      "url": "https://remoteOK.com/remote-jobs/remote-ai-agent-engineer-sticker-mule-1137399",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: AI Agents) — likely a substring false positive upstream, not a real opportunity."
     }
   ]
 }
