@@ -2976,6 +2976,47 @@
       "relevanceScore": 0,
       "categoriesMatched": [],
       "reason": "No relevance signals matched in posting text (upstream keyword match: AI Agents) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0230",
+      "dateRejected": "2026-09-20",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "VP Pricing & Packaging",
+      "organisation": "Delinea",
+      "url": "https://remoteOK.com/remote-jobs/remote-vp-pricing-packaging-delinea-1137407",
+      "relevanceScore": 18,
+      "categoriesMatched": [
+        "cybersecurityContext",
+        "governanceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: cybersecurityContext, governanceContext; no penalties)."
+    },
+    {
+      "id": "rej-0231",
+      "dateRejected": "2026-09-20",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Customer Success Manager Mexico",
+      "organisation": "JumpCloud",
+      "url": "https://remoteOK.com/remote-jobs/remote-customer-success-manager-mexico-jumpcloud-1137406",
+      "relevanceScore": 12,
+      "categoriesMatched": [
+        "aiRisk"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: aiRisk; no penalties)."
+    },
+    {
+      "id": "rej-0232",
+      "dateRejected": "2026-09-20",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Senior Shopify Developer",
+      "organisation": "Sanctuary Computer",
+      "url": "https://remoteOK.com/remote-jobs/remote-senior-shopify-developer-sanctuary-computer-1137405",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
     }
   ]
 }
