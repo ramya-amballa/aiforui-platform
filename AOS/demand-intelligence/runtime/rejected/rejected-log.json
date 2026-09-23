@@ -3017,6 +3017,20 @@
       "relevanceScore": 0,
       "categoriesMatched": [],
       "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0233",
+      "dateRejected": "2026-09-23",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Senior Growth Product Manager AI Native",
+      "organisation": "Magic Eden",
+      "url": "https://remoteOK.com/remote-jobs/remote-senior-growth-product-manager-ai-native-magic-eden-1137414",
+      "relevanceScore": 8,
+      "categoriesMatched": [
+        "consultingContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: consultingContext; no penalties)."
     }
   ]
 }
