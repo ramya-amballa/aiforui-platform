@@ -3031,6 +3031,18 @@
         "consultingContext"
       ],
       "reason": "Weak/insufficient relevance signal (matched: consultingContext; no penalties)."
+    },
+    {
+      "id": "rej-0234",
+      "dateRejected": "2026-09-24",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Software Developer Security Analytics",
+      "organisation": "RedMimicry",
+      "url": "https://remoteOK.com/remote-jobs/remote-software-developer-security-analytics-redmimicry-1137417",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
     }
   ]
 }
