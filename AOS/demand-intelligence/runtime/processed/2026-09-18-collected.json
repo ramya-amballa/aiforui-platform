@@ -1,0 +1,70 @@
+[
+  {
+    "source": "RemoteOK",
+    "sourceCategory": "Professional Network",
+    "title": "Golang Kubernetes Engineer",
+    "organisation": "Arango",
+    "description": "Remote - Arango delivers a unified, natively multimodel contextual data platform that powers AI agents, assistants, and applications with the unified, current, and trusted business context needed to reason, decide, and act at scale.The Arango Contextual Data Platform connects...<br/><br/>Please mention the word **FESTIVE** and tag RNjQuMjM2LjIwMC4xMTg= when applying to show you read the job post completely (#RNjQuMjM2LjIwMC4xMTg=). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+    "url": "https://remoteOK.com/remote-jobs/remote-golang-kubernetes-engineer-arango-1137400",
+    "location": "Not specified",
+    "remote": true,
+    "domainTags": [
+      "ADGL",
+      "AI Deployment Governance"
+    ],
+    "scores": {
+      "expectedRevenue": 5,
+      "probabilityOfWinning": 4,
+      "strategicValue": 4,
+      "relationshipValue": 2,
+      "timeRequired": 7,
+      "geography": 8,
+      "remoteCompatibility": 10,
+      "alignmentAIforUIServices": 5.5,
+      "alignmentADGL": 5.5,
+      "alignmentOPERA": 6,
+      "longTermRelationshipPotential": 5
+    },
+    "scopedEngagement": false,
+    "recurrencePattern": "none",
+    "autoScored": true,
+    "autoCollected": true,
+    "matchedKeywords": [
+      "AI Agents"
+    ]
+  },
+  {
+    "source": "RemoteOK",
+    "sourceCategory": "Professional Network",
+    "title": "AI agent engineer",
+    "organisation": "Sticker Mule",
+    "description": "<div class=\"_descriptionText_135ul_202\"><div class=\"_descriptionText_5yu8i_201 ashby-job-posting-description\"><p>Sticker Mule is building the most lucrative commerce platform on the Internet by combining software, manufacturing, and AI in one stack.</p><div><br /></div><p>We're hiring an engineer to build, run and manage a team of AI agents to help us innovate faster, improve performance, and better serve customers.</p><div><br /></div><p><strong>Work performed</strong></p><ul><li><p>Identify where agents can help and build them accordingly.</p></li><li><p>Work with department leads to assess AI needs.</p></li><li><p>Help connect agents to appropriate third-party and internal tools.</p></li><li><p>Measure results and remove agents that don't deliver.</p></li><li><p>Test new tools and models as they ship and adopt what works.</p></li><li><p>Advise others on AI capabilities to help them perform.</p></li></ul><div><br /></div><p><strong>Requirements</strong></p><ul><li><p>Experience building agents that run on their own and do meaningful work</p></li><li><p>Strong with Grok, Claude, OpenAI, and open source</p></li><li><p>Comfortable in Go, TypeScript, GraphQL, Postgres, GCP</p></li><li><p>Writes clearly in English</p></li></ul><div><br /></div><p><strong>Compensation</strong></p><ol><li><p>Salary: $150,000â$250,000 USD</p></li><li><p>$20,000 signing bonus</p></li><li><p>4 weeks vacation + country-specific holidays</p></li><li><p>Fully remote</p></li></ol></div></div><br/><br/>Please mention the word **HUMOUR** and tag RNjQuMjM2LjIwMC4xMTg= when applying to show you read the job post completely (#RNjQuMjM2LjIwMC4xMTg=). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+    "url": "https://remoteOK.com/remote-jobs/remote-ai-agent-engineer-sticker-mule-1137399",
+    "location": "Not specified",
+    "remote": true,
+    "domainTags": [
+      "ADGL",
+      "AI Deployment Governance"
+    ],
+    "scores": {
+      "expectedRevenue": 5,
+      "probabilityOfWinning": 4,
+      "strategicValue": 4,
+      "relationshipValue": 2,
+      "timeRequired": 7,
+      "geography": 8,
+      "remoteCompatibility": 10,
+      "alignmentAIforUIServices": 5.5,
+      "alignmentADGL": 5.5,
+      "alignmentOPERA": 6,
+      "longTermRelationshipPotential": 5
+    },
+    "scopedEngagement": false,
+    "recurrencePattern": "none",
+    "autoScored": true,
+    "autoCollected": true,
+    "matchedKeywords": [
+      "AI Agents"
+    ]
+  }
+]

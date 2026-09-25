@@ -2937,6 +2937,112 @@
         "governanceContext"
       ],
       "reason": "Weak/insufficient relevance signal (matched: complianceContext, governanceContext; no penalties)."
+    },
+    {
+      "id": "rej-0227",
+      "dateRejected": "2026-09-17",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Principal Product Manager",
+      "organisation": "DomainTools",
+      "url": "https://remoteOK.com/remote-jobs/remote-principal-product-manager-domaintools-1137396",
+      "relevanceScore": 14,
+      "categoriesMatched": [
+        "aiContext",
+        "cybersecurityContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: aiContext, cybersecurityContext; no penalties)."
+    },
+    {
+      "id": "rej-0228",
+      "dateRejected": "2026-09-18",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Golang Kubernetes Engineer",
+      "organisation": "Arango",
+      "url": "https://remoteOK.com/remote-jobs/remote-golang-kubernetes-engineer-arango-1137400",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: AI Agents) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0229",
+      "dateRejected": "2026-09-18",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "AI agent engineer",
+      "organisation": "Sticker Mule",
+      "url": "https://remoteOK.com/remote-jobs/remote-ai-agent-engineer-sticker-mule-1137399",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: AI Agents) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0230",
+      "dateRejected": "2026-09-20",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "VP Pricing & Packaging",
+      "organisation": "Delinea",
+      "url": "https://remoteOK.com/remote-jobs/remote-vp-pricing-packaging-delinea-1137407",
+      "relevanceScore": 18,
+      "categoriesMatched": [
+        "cybersecurityContext",
+        "governanceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: cybersecurityContext, governanceContext; no penalties)."
+    },
+    {
+      "id": "rej-0231",
+      "dateRejected": "2026-09-20",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Customer Success Manager Mexico",
+      "organisation": "JumpCloud",
+      "url": "https://remoteOK.com/remote-jobs/remote-customer-success-manager-mexico-jumpcloud-1137406",
+      "relevanceScore": 12,
+      "categoriesMatched": [
+        "aiRisk"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: aiRisk; no penalties)."
+    },
+    {
+      "id": "rej-0232",
+      "dateRejected": "2026-09-20",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Senior Shopify Developer",
+      "organisation": "Sanctuary Computer",
+      "url": "https://remoteOK.com/remote-jobs/remote-senior-shopify-developer-sanctuary-computer-1137405",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0233",
+      "dateRejected": "2026-09-23",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Senior Growth Product Manager AI Native",
+      "organisation": "Magic Eden",
+      "url": "https://remoteOK.com/remote-jobs/remote-senior-growth-product-manager-ai-native-magic-eden-1137414",
+      "relevanceScore": 8,
+      "categoriesMatched": [
+        "consultingContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: consultingContext; no penalties)."
+    },
+    {
+      "id": "rej-0234",
+      "dateRejected": "2026-09-24",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Software Developer Security Analytics",
+      "organisation": "RedMimicry",
+      "url": "https://remoteOK.com/remote-jobs/remote-software-developer-security-analytics-redmimicry-1137417",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
     }
   ]
 }

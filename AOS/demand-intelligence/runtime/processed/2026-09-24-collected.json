@@ -1,0 +1,36 @@
+[
+  {
+    "source": "RemoteOK",
+    "sourceCategory": "Professional Network",
+    "title": "Software Developer Security Analytics",
+    "organisation": "RedMimicry",
+    "description": "Remote - Location: Mostly remote (within Germany), with monthly in-person collaboration at our Berlin officeHours: Full-time, 40 hours per weekContract: Fixed-termSalary: EUR 69,000 â 77,000We are building a new capability that turns fragmented, noisy security logs...<br/><br/>Please mention the word **CONTINUITY** and tag RMjAuMjIwLjExOC4y when applying to show you read the job post completely (#RMjAuMjIwLjExOC4y). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+    "url": "https://remoteOK.com/remote-jobs/remote-software-developer-security-analytics-redmimicry-1137417",
+    "location": "Not specified",
+    "remote": true,
+    "domainTags": [
+      "ADGL",
+      "AI Deployment Governance"
+    ],
+    "scores": {
+      "expectedRevenue": 5,
+      "probabilityOfWinning": 4,
+      "strategicValue": 4,
+      "relationshipValue": 2,
+      "timeRequired": 7,
+      "geography": 8,
+      "remoteCompatibility": 10,
+      "alignmentAIforUIServices": 5.5,
+      "alignmentADGL": 5.5,
+      "alignmentOPERA": 6,
+      "longTermRelationshipPotential": 5
+    },
+    "scopedEngagement": false,
+    "recurrencePattern": "none",
+    "autoScored": true,
+    "autoCollected": true,
+    "matchedKeywords": [
+      "RAG"
+    ]
+  }
+]
