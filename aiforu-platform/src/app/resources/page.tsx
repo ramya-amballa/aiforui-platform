@@ -27,6 +27,7 @@ const types: ResourceType[] = [
   "Playbook",
   "Reference Architecture",
   "Toolkit",
+  "Case Study",
 ];
 const tiers: ResourceAccessTier[] = ["Free", "Premium"];
 

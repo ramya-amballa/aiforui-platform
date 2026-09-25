@@ -6,7 +6,13 @@ import { Badge } from "@/components/ui/badge";
 import { Container } from "@/components/ui/container";
 import { Divider } from "@/components/ui/divider";
 import { SectionHeading } from "@/components/ui/section-heading";
-import { operaDesignedFor, operaStages, operaWhyItExists } from "@/content/opera";
+import {
+  operaDesignedFor,
+  operaRetiredTerminologyNote,
+  operaStages,
+  operaV11Clarifications,
+  operaWhyItExists,
+} from "@/content/opera";
 import { buildMetadata } from "@/lib/metadata";
 import { site } from "@/lib/constants";
 
@@ -20,7 +26,7 @@ export default function MethodologyPage() {
   return (
     <>
       <PageHero
-        eyebrow="Methodology"
+        eyebrow="Methodology · v1.1"
         title="The OPERA Methodology"
         description={`How ${site.advisorName} turns AI and technology governance requirements into operational decisions, at every ${site.name} engagement.`}
       />
@@ -56,6 +62,9 @@ export default function MethodologyPage() {
                 <Badge tone="accent">Stage {index + 1}</Badge>
                 <h3 className="mt-3 font-serif text-title text-ink">{stage.name}</h3>
 
+                <p className="mt-6 text-eyebrow uppercase tracking-widest text-muted">Core Question</p>
+                <p className="mt-3 text-sm font-medium leading-relaxed text-ink">{stage.coreQuestion}</p>
+
                 <p className="mt-6 text-eyebrow uppercase tracking-widest text-muted">Governance Decision</p>
                 <ul className="mt-3 space-y-2">
                   {stage.questions.map((question) => (
@@ -80,6 +89,30 @@ export default function MethodologyPage() {
                 <p className="mt-6 border-t border-border pt-4 font-serif text-sm text-accent">{stage.outcome}</p>
               </div>
             ))}
+          </div>
+        </Container>
+      </section>
+
+      <Divider />
+
+      <section className="py-section">
+        <Container size="narrow">
+          <SectionHeading
+            eyebrow="v1.1 Clarifications"
+            title="What v1.1 Changes"
+            description="v1.1 clarifies responsibilities within the existing five stages. It adds no stages, renames no stages and does not change the purpose of any stage. It settles three points: where risk acceptance sits, where incident management sits and where regulatory mapping sits."
+          />
+          <div className="mt-10 space-y-8">
+            {operaV11Clarifications.map((clarification) => (
+              <div key={clarification.title} className="border-l-2 border-accent pl-6">
+                <h3 className="font-serif text-title text-ink">{clarification.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-muted pretty">{clarification.body}</p>
+              </div>
+            ))}
+          </div>
+          <div className="mt-10 rounded-lg border border-border bg-surface p-6">
+            <p className="text-eyebrow uppercase tracking-widest text-muted">Retired Terminology</p>
+            <p className="mt-3 text-sm leading-relaxed text-muted pretty">{operaRetiredTerminologyNote}</p>
           </div>
         </Container>
       </section>

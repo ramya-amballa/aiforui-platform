@@ -102,7 +102,8 @@ export type ResourceType =
   | "Briefing"
   | "Playbook"
   | "Reference Architecture"
-  | "Toolkit";
+  | "Toolkit"
+  | "Case Study";
 
 export type ResourceAccessTier = "Free" | "Premium" | "Coming Soon";
 
@@ -116,6 +117,10 @@ export interface Resource {
   featured: boolean;
   /** Path to a real, downloadable file under public/, when one exists. */
   fileUrl?: string;
+  /** Overrides the default /resources/{slug} link, for a resource that
+   * lives at its own route (e.g. a case study under /cases/). Every
+   * existing resource omits this and is unaffected. */
+  href?: string;
 }
 
 /**

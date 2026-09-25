@@ -102,6 +102,8 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Please provide a valid email address." }, { status: 400 });
   }
 
+  const resolvedSourcePage = sourcePage || "contact";
+
   // Best-effort, non-blocking — see sendToAosIntake()'s own doc comment.
   await sendToAosIntake({
     name,
@@ -109,23 +111,27 @@ export async function POST(request: Request) {
     role,
     email,
     message,
-    sourcePage: sourcePage || "contact",
+    sourcePage: resolvedSourcePage,
     submittedAt: new Date().toISOString(),
   });
 
   const resend = new Resend(apiKey);
   const fromEmail = process.env.RESEND_FROM_EMAIL ?? "AI for U&I Contact Form <onboarding@resend.dev>";
 
+  // Source is included here, not only in the optional AOS intake payload
+  // above, so it's visible on the guaranteed delivery path (email) even
+  // when AOS_INTAKE_GITHUB_TOKEN/AOS_INTAKE_REPO aren't configured.
   const { error } = await resend.emails.send({
     from: fromEmail,
     to: toEmail,
     replyTo: email,
-    subject: `New contact form submission from ${name}`,
+    subject: `New contact form submission from ${name} (source: ${resolvedSourcePage})`,
     text: [
       `Name: ${name}`,
       organization ? `Organisation: ${organization}` : null,
       role ? `Role: ${role}` : null,
       `Email: ${email}`,
+      `Source: ${resolvedSourcePage}`,
       "",
       message,
     ]

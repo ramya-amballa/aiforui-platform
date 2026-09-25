@@ -11,13 +11,16 @@ interface PageProps {
 }
 
 export function generateStaticParams() {
-  return resources.map((resource) => ({ slug: resource.slug }));
+  // Resources with their own `href` (e.g. a case study under /cases/)
+  // have no detail page here — building one would just duplicate their
+  // real page at a second, unlinked URL.
+  return resources.filter((resource) => !resource.href).map((resource) => ({ slug: resource.slug }));
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
   const resource = getResourceBySlug(slug);
-  if (!resource) return buildMetadata({ title: "Resource Not Found", noIndex: true });
+  if (!resource || resource.href) return buildMetadata({ title: "Resource Not Found", noIndex: true });
 
   return buildMetadata({
     title: resource.title,
@@ -29,7 +32,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 export default async function ResourcePage({ params }: PageProps) {
   const { slug } = await params;
   const resource = getResourceBySlug(slug);
-  if (!resource) notFound();
+  // A resource with its own `href` lives at that real route, not here.
+  if (!resource || resource.href) notFound();
 
   return (
     <>
