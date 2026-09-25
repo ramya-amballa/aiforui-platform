@@ -10,6 +10,16 @@ import type { Resource } from "@/types";
  */
 export const resources: Resource[] = [
   {
+    slug: "case-01-customer-ai-assistant",
+    title: "Case 01: Customer AI assistant launch decision (simulated case)",
+    type: "Case Study",
+    accessTier: "Free",
+    domainSlugs: ["ai-governance", "technology-risk"],
+    description: "A simulated pre-launch security finding raises a difficult deployment decision. The architecture, proposed controls, test evidence and conditions that would need to be met before approval could be considered.",
+    featured: true,
+    href: "/cases/case-01",
+  },
+  {
     slug: "adgl-methodology",
     title: "The ADGL Methodology",
     type: "Methodology",
@@ -121,16 +131,6 @@ export const resources: Resource[] = [
     domainSlugs: ["audit-readiness"],
     description: "Build continuous audit evidence into day-to-day control operation, so audit becomes validation, not discovery.",
     featured: false,
-  },
-  {
-    slug: "case-01-customer-ai-assistant",
-    title: "Case 01: Customer AI assistant launch decision (simulated case)",
-    type: "Case Study",
-    accessTier: "Free",
-    domainSlugs: ["ai-governance", "technology-risk"],
-    description: "A simulated pre-launch security finding raises a difficult deployment decision. The architecture, proposed controls, test evidence and conditions that would need to be met before approval could be considered.",
-    featured: false,
-    href: "/cases/case-01",
   },
 ];
 
