@@ -316,14 +316,13 @@ export default function Case01Page() {
       </h2>
       <p>
         <strong>This is a conditional recommendation, not a deployment approval.</strong> As the case stands, the
-        conditions below are not met and the exposure is unresolved. No customer should use the assistant until they
-        are.
+        conditions below are not met and the exposure is unresolved.
       </p>
       <p>
-        The planned launch should be postponed. No customer should use the assistant while the current conditions
-        remain unmet. Following remediation, independent retesting and a new Gate 4 review, the committee may
-        consider a restricted, opt-in launch. Any such decision must explicitly address the continuing exposure to
-        customers outside the pilot group until data-service ownership enforcement is implemented.
+        The planned launch should be postponed. Following remediation, independent retesting and a new Gate 4
+        review, the committee may consider a restricted, opt-in launch. Any such decision must explicitly address
+        the continuing exposure to customers outside the pilot group until data-service ownership enforcement is
+        implemented.
       </p>
       <div className={styles.conds}>
         <h3>Launch conditions include</h3>
