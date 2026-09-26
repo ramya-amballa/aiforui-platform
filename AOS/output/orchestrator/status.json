@@ -9,16 +9,16 @@
     "reportPath": "string — this run's Daily Execution Report, relative to the repo root",
     "logPath": "string — this run's full log, relative to the repo root"
   },
-  "startedAt": "2026-09-25T05:09:00.325718+00:00",
-  "finishedAt": "2026-09-25T05:09:02.244684+00:00",
-  "durationSeconds": 1.92,
+  "startedAt": "2026-09-26T05:14:17.164245+00:00",
+  "finishedAt": "2026-09-26T05:14:18.994965+00:00",
+  "durationSeconds": 1.83,
   "employees": [
     {
       "key": "market-intelligence",
       "name": "Market Intelligence",
       "status": "SUCCESS",
       "attempts": 1,
-      "durationSeconds": 0.1,
+      "durationSeconds": 0.37,
       "error": null,
       "outputs": []
     },
@@ -36,10 +36,10 @@
       "name": "Demand Intelligence",
       "status": "SUCCESS",
       "attempts": 1,
-      "durationSeconds": 0.93,
+      "durationSeconds": 0.62,
       "error": null,
       "outputs": [
-        "demand-intelligence/runtime/snapshots/2026-09-25-collection-snapshot.json",
+        "demand-intelligence/runtime/snapshots/2026-09-26-collection-snapshot.json",
         "demand-intelligence/organisation-profiles.json",
         "output/demand-intelligence/top-organisations-this-week.json"
       ]
@@ -49,11 +49,11 @@
       "name": "Revenue Hunter",
       "status": "SUCCESS",
       "attempts": 1,
-      "durationSeconds": 0.1,
+      "durationSeconds": 0.07,
       "error": null,
       "outputs": [
-        "output/revenue-hunter/2026-09-25-revenue-dashboard.md",
-        "output/revenue-hunter/2026-09-25-revenue-forecast.md"
+        "output/revenue-hunter/2026-09-26-revenue-dashboard.md",
+        "output/revenue-hunter/2026-09-26-revenue-forecast.md"
       ]
     },
     {
@@ -140,7 +140,7 @@
       "durationSeconds": 0.06,
       "error": null,
       "outputs": [
-        "output/tender-intelligence/2026-09-25-tender-intelligence-report.md",
+        "output/tender-intelligence/2026-09-26-tender-intelligence-report.md",
         "output/tender-intelligence/tender-intelligence-feed.json"
       ]
     },
@@ -179,7 +179,7 @@
       "durationSeconds": 0.03,
       "error": null,
       "outputs": [
-        "output/executive-memory/2026-09-25-executive-memory-report.md",
+        "output/executive-memory/2026-09-26-executive-memory-report.md",
         "output/executive-memory/executive-memory-feed.json"
       ]
     },
@@ -191,7 +191,7 @@
       "durationSeconds": 0.03,
       "error": null,
       "outputs": [
-        "output/market-positioning-intelligence/2026-09-25-market-positioning-report.md",
+        "output/market-positioning-intelligence/2026-09-26-market-positioning-report.md",
         "output/market-positioning-intelligence/market-positioning-feed.json"
       ]
     },
@@ -203,7 +203,7 @@
       "durationSeconds": 0.03,
       "error": null,
       "outputs": [
-        "output/capacity-management/2026-09-25-capacity-report.md",
+        "output/capacity-management/2026-09-26-capacity-report.md",
         "output/capacity-management/capacity-feed.json"
       ]
     },
@@ -230,15 +230,15 @@
       "name": "Daily Brief",
       "status": "SUCCESS",
       "attempts": 1,
-      "durationSeconds": 0.03,
+      "durationSeconds": 0.04,
       "error": null,
       "outputs": [
         "output/executive-dashboard/executive-dashboard.md",
         "output/executive-dashboard/executive-dashboard.html",
-        "output/executive-dashboard/2026-09-25-executive-dashboard.md",
-        "output/executive-dashboard/2026-09-25-executive-dashboard.html",
-        "output/daily-briefs/2026/09/25/executive-dashboard.md",
-        "output/daily-briefs/2026/09/25/executive-dashboard.html"
+        "output/executive-dashboard/2026-09-26-executive-dashboard.md",
+        "output/executive-dashboard/2026-09-26-executive-dashboard.html",
+        "output/daily-briefs/2026/09/26/executive-dashboard.md",
+        "output/daily-briefs/2026/09/26/executive-dashboard.html"
       ]
     },
     {
@@ -257,10 +257,10 @@
       "name": "CEO Advisor",
       "status": "SUCCESS",
       "attempts": 1,
-      "durationSeconds": 0.05,
+      "durationSeconds": 0.04,
       "error": null,
       "outputs": [
-        "output/ceo-advisor/2026-09-25-ceo-daily-report.md",
+        "output/ceo-advisor/2026-09-26-ceo-daily-report.md",
         "output/ceo-advisor/ceo-daily-report.md",
         "output/ceo-advisor/ceo-weekly-report.md",
         "output/ceo-advisor/ceo-monthly-business-review.md"
@@ -269,6 +269,6 @@
   ],
   "overallStatus": "SUCCESS",
   "failures": [],
-  "reportPath": "AOS/output/orchestrator/reports/2026-09-25-daily-execution-report.md",
-  "logPath": "AOS/output/orchestrator/logs/2026-09-25-050900-orchestrator.log"
+  "reportPath": "AOS/output/orchestrator/reports/2026-09-26-daily-execution-report.md",
+  "logPath": "AOS/output/orchestrator/logs/2026-09-26-051417-orchestrator.log"
 }
