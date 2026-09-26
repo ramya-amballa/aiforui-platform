@@ -452,9 +452,9 @@ export default function Case01Page() {
             <tr>
               <th>ADGL tier</th>
               <td className={styles.red}>
-                Critical, inherent and at soft launch. Severe, all customers, irreversible, autonomous. The tier does
-                not fall with likelihood, so any soft launch would rest on a named exception, committee approval and
-                CRO acceptance. None has been given.
+                Critical, inherent and after every planned control. Severe, all customers, irreversible, autonomous.
+                The tier does not fall with likelihood, so any launch would rest on a named exception, committee
+                approval and written acceptance. None has been given.
               </td>
             </tr>
             <tr>
@@ -463,7 +463,7 @@ export default function Case01Page() {
             </tr>
             <tr>
               <th>
-                Target at soft launch <span className={`${styles.chip} ${styles["c-hyp"]}`}>Hypothetical</span>
+                Target after independent retest <span className={`${styles.chip} ${styles["c-hyp"]}`}>Hypothetical</span>
               </th>
               <td className={styles.amb}>2 × 5 = 10, High. A target, not an achieved score. It counts only once the independent retest passes.</td>
             </tr>
