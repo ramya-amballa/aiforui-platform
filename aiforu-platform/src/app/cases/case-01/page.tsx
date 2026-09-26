@@ -29,7 +29,8 @@ export default function Case01Page() {
         <strong style={{ color: "inherit" }}>Illustrative simulated case.</strong> The bank, its systems, test
         results, costs and evidence are invented. The reasoning and the work products are mine. This is not a client
         engagement, no control described here has operated in a real organisation, and no approval described here
-        has been given.
+        has been given. The scenario&apos;s internal dates run forward from September 2026 into October and November
+        2026 for narrative purposes; they are fictional and do not describe events that have occurred.
       </div>
       <div className={styles.legend}>
         <p>How to read this case</p>
@@ -318,9 +319,12 @@ export default function Case01Page() {
         are.
       </p>
       <p>
-        Not an unrestricted launch. Not a blanket delay either. An opt-in soft launch on the original date, capped
-        at 10,000 sole-owner customers, read-only, no card actions, no paid media. Any confirmed disclosure would
-        trigger the kill switch without waiting for a committee. Wider launch waits for the data-service fix.
+        Not an unrestricted launch. Not a blanket delay either. Do not deploy on the planned date. Close the unmet
+        conditions, retest the cross-customer controls independently, and re-present at the next Gate 4 review. Only
+        there, and only if every condition is met or covered by an approved exception, could the committee consider
+        a capped opt-in soft launch: 10,000 sole-owner customers, read-only, no card actions, no paid media. Any
+        confirmed disclosure would trigger the kill switch without waiting for a committee. Wider launch waits for
+        the data-service fix.
       </p>
       <div className={styles.conds}>
         <h3>Launch conditions include</h3>
