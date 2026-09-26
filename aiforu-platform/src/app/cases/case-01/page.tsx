@@ -75,12 +75,12 @@ export default function Case01Page() {
             <a href="/downloads/case-01-customer-ai-assistant.pdf">Download the case study and excerpt (PDF)</a>
           </li>
           <li>
-            <a href="/contact?source=case-01-evidence-pack">Request the full evidence pack</a>
+            <a href="/downloads/case-01-evidence-pack-v2.pdf">Download the full evidence pack (PDF)</a>
           </li>
         </ul>
         <p className="note">
-          The full pack contains the risk assessment, control matrix, test scenarios, evidence register and
-          executive decision memorandum. It is under assurance review and shared on request.
+          The full pack contains the ADGL risk classification, control matrix, test scenarios, traceability, Gate 4
+          checklist, evidence register, decision memorandum and an independent review with its open findings.
         </p>
       </section>
 
@@ -260,16 +260,17 @@ export default function Case01Page() {
           <tr>
             <th>Evaluation</th>
             <td>
-              Applicable CBUAE obligations mapped. Cross-customer disclosure rated Critical. Exposure the bank is
-              prepared to consider: a capped cohort only, and only after the flaw is independently retested.
-              Proposed treatment: reduce.
+              Applicable CBUAE obligations mapped. Cross-customer disclosure rated Critical. The bank will consider
+              customer exposure only when every Gate 4 condition is met or covered by an approved exception, and
+              only with written acceptance. Proposed treatment: reduce.
             </td>
           </tr>
           <tr>
             <th>Response</th>
             <td>
-              Three layers of identity control, launch conditions, the incident playbook and kill switch. The CRO
-              would make and record the time-bound residual-risk acceptance here. Not yet made.
+              Three layers of identity control, launch conditions, the incident playbook and kill switch. The
+              committee, with the CRO signing as chair, would make and record any residual-risk acceptance here.
+              None has been made.
             </td>
           </tr>
           <tr>
@@ -303,8 +304,9 @@ export default function Case01Page() {
         confident the build team feels.
       </p>
       <p>
-        Under those rules, cross-customer disclosure stays High even after the interim fixes. The interim controls
-        sit in the same layer that produced the flaw. I did not let the numbers pretend otherwise.
+        Under those rules, cross-customer disclosure stays Critical under ADGL even after the interim fixes. None of
+        them has passed an independent retest, and they sit in the same layer that produced the flaw. I did not let
+        the numbers pretend otherwise.
       </p>
 
       <h2 className={styles.h2}>
@@ -332,13 +334,14 @@ export default function Case01Page() {
           <li>UAE processing and retention confirmed by the cloud provider and corroborated by configuration.</li>
         </ol>
         <p className={styles.small} style={{ margin: "8px 0 0" }}>
-          The complete condition set is being reconciled with the ADGL Gate 4 readiness criteria.
+          These are seven of the 30 Gate 4 conditions in the evidence pack. 3 of the 30 are met.
         </p>
       </div>
       <p>
-        <span className={`${styles.chip} ${styles["c-pend"]}`}>Pending approval</span>The committee has not yet
-        endorsed the soft launch. The CRO would be asked to formally accept one High risk for the capped cohort
-        only, with an expiry date. That acceptance has not been given. If the fix slips, it would not roll forward.
+        <span className={`${styles.chip} ${styles["c-pend"]}`}>Pending approval</span>The committee has not approved
+        deployment. Any launch would need the committee, with the CRO signing as chair, to accept the residual
+        cross-customer risk in writing, with an expiry date. It remains Critical under ADGL. No acceptance has been
+        given.
       </p>
 
       <h2 className={styles.h2}>
@@ -386,6 +389,10 @@ export default function Case01Page() {
           assurance. Independent retest is now a launch condition.
         </li>
       </ul>
+      <p>
+        A second review of the rebuilt evidence pack leaves ten findings open. They are published in the pack
+        rather than closed on paper.
+      </p>
 
       <h2 className={styles.h2}>What the full pack contains</h2>
       <div className={styles.contains}>
@@ -401,18 +408,17 @@ export default function Case01Page() {
         <div>Independent CISO and auditor challenge</div>
       </div>
       <p className={styles.screenOnly}>
-        The full pack is under assurance review.{" "}
-        <a href="/contact?source=case-01-evidence-pack">
-          <strong>Request it →</strong>
+        <a href="/downloads/case-01-evidence-pack-v2.pdf">
+          <strong>Download the full evidence pack →</strong>
         </a>
       </p>
-      <p className={styles.printOnly}>The full pack is under assurance review and available on request at aiforui.org/contact.</p>
+      <p className={styles.printOnly}>The full evidence pack is at aiforui.org/downloads/case-01-evidence-pack-v2.pdf.</p>
 
       <section className={styles.ex} id="excerpt">
         <h2 className={styles.h2}>Evidence-pack excerpt</h2>
         <p className={styles.small}>
           Extracted from the Case 01 evidence pack. Every result and evidence item is simulated. The full pack is
-          under assurance review and shared on request.
+          available as a download.
         </p>
         <h3 className={styles.h3}>Architecture: the flaw and the proposed controls</h3>
         <p className={styles.small}>Shown above in the case study.</p>
@@ -468,15 +474,15 @@ export default function Case01Page() {
             <tr>
               <th>Owner and treatment</th>
               <td>
-                CDO. Reduce. CRO acceptance of High for the capped cohort only is requested, not given{" "}
+                CDO. Reduce. No written acceptance has been requested or given{" "}
                 <span className={`${styles.chip} ${styles["c-pend"]}`}>Pending approval</span>
               </td>
             </tr>
           </tbody>
         </table>
         <p className={styles.small}>
-          The case scores on 5-point likelihood and impact scales. Aligning these with the ADGL scoring scales is
-          part of the open assurance review.
+          ADGL tiers govern every decision. The 5-point score is the bank&apos;s enterprise risk scale, shown for
+          enterprise reporting only.
         </p>
 
         <h3 className={styles.h3}>Five representative controls</h3>
@@ -580,9 +586,10 @@ export default function Case01Page() {
         <p>
           <strong>Not approved. Conditions not met.</strong> The results above show one fail, one partial, one
           control not yet built and a kill switch proven only in staging. On that evidence, no customer exposure is
-          recommended. Once every launch condition passes independent retest, the proposal is an opt-in soft launch
-          capped at 10,000 sole-owner customers, read-only, no paid media. Wider launch not before WC-03 is live and
-          pen tested. Committee endorsement and CRO risk acceptance are both pending{" "}
+          recommended. Once every condition is met or covered by an approved exception, the committee could consider
+          an opt-in soft launch capped at 10,000 sole-owner customers, read-only, no paid media. Until WC-03 is live,
+          one control failure could still expose any customer&apos;s data, not only the cohort&apos;s. Wider launch
+          not before WC-03 is live and pen tested. Committee endorsement and CRO risk acceptance are both pending{" "}
           <span className={`${styles.chip} ${styles["c-pend"]}`}>Pending approval</span>
         </p>
       </section>
