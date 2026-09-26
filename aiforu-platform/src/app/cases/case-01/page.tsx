@@ -29,8 +29,9 @@ export default function Case01Page() {
         <strong style={{ color: "inherit" }}>Illustrative simulated case.</strong> The bank, its systems, test
         results, costs and evidence are invented. The reasoning and the work products are mine. This is not a client
         engagement, no control described here has operated in a real organisation, and no approval described here
-        has been given. The scenario&apos;s internal dates run forward from September 2026 into October and November
-        2026 for narrative purposes; they are fictional and do not describe events that have occurred.
+        has been given. The entire timeline, including the evidence pack&apos;s status date of 8 October 2026, is
+        simulated and set in the near future; no date in this case describes an event that has occurred or is
+        actually scheduled.
       </div>
       <div className={styles.legend}>
         <p>How to read this case</p>
@@ -319,12 +320,11 @@ export default function Case01Page() {
         are.
       </p>
       <p>
-        Not an unrestricted launch. Not a blanket delay either. Do not deploy on the planned date. Close the unmet
-        conditions, retest the cross-customer controls independently, and re-present at the next Gate 4 review. Only
-        there, and only if every condition is met or covered by an approved exception, could the committee consider
-        a capped opt-in soft launch: 10,000 sole-owner customers, read-only, no card actions, no paid media. Any
-        confirmed disclosure would trigger the kill switch without waiting for a committee. Wider launch waits for
-        the data-service fix.
+        Deployment not approved. The planned launch should be postponed. Only three of thirty readiness conditions
+        are met, and none of the three credited controls addresses the cross-customer exposure. Following
+        remediation and independent retesting, the committee may reconsider a restricted launch at a subsequent
+        Gate 4 review. Until the data service independently enforces ownership, a failure could expose data
+        belonging to customers outside the proposed pilot group.
       </p>
       <div className={styles.conds}>
         <h3>Launch conditions include</h3>
