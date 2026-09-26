@@ -74,10 +74,10 @@ export default function Case01Page() {
             <a href="#excerpt">See the evidence-pack excerpt</a>
           </li>
           <li>
-            <a href="/downloads/case-01-customer-ai-assistant.pdf">Download the case study and excerpt (PDF)</a>
+            <a href="/downloads/case-01-case-study-v3.pdf">Download the case study and excerpt (PDF)</a>
           </li>
           <li>
-            <a href="/downloads/case-01-evidence-pack-v2.pdf">Download the full evidence pack (PDF)</a>
+            <a href="/downloads/case-01-evidence-pack-v2-1.pdf">Download the full evidence pack (PDF)</a>
           </li>
         </ul>
         <p className="note">
@@ -410,11 +410,11 @@ export default function Case01Page() {
         <div>Independent CISO and auditor challenge</div>
       </div>
       <p className={styles.screenOnly}>
-        <a href="/downloads/case-01-evidence-pack-v2.pdf">
+        <a href="/downloads/case-01-evidence-pack-v2-1.pdf">
           <strong>Download the full evidence pack →</strong>
         </a>
       </p>
-      <p className={styles.printOnly}>The full evidence pack is at aiforui.org/downloads/case-01-evidence-pack-v2.pdf.</p>
+      <p className={styles.printOnly}>The full evidence pack is at aiforui.org/downloads/case-01-evidence-pack-v2-1.pdf.</p>
 
       <section className={styles.ex} id="excerpt">
         <h2 className={styles.h2}>Evidence-pack excerpt</h2>

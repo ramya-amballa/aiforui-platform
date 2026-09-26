@@ -22,6 +22,20 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  async redirects() {
+    return [
+      {
+        source: "/downloads/case-01-customer-ai-assistant.pdf",
+        destination: "/downloads/case-01-case-study-v3.pdf",
+        permanent: true,
+      },
+      {
+        source: "/downloads/case-01-evidence-pack-v2.pdf",
+        destination: "/downloads/case-01-evidence-pack-v2-1.pdf",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
