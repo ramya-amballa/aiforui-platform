@@ -320,11 +320,10 @@ export default function Case01Page() {
         are.
       </p>
       <p>
-        Deployment not approved. The planned launch should be postponed. Only three of thirty readiness conditions
-        are met, and none of the three credited controls addresses the cross-customer exposure. Following
-        remediation and independent retesting, the committee may reconsider a restricted launch at a subsequent
-        Gate 4 review. Until the data service independently enforces ownership, a failure could expose data
-        belonging to customers outside the proposed pilot group.
+        The planned launch should be postponed. No customer should use the assistant while the current conditions
+        remain unmet. Following remediation, independent retesting and a new Gate 4 review, the committee may
+        consider a restricted, opt-in launch. Any such decision must explicitly address the continuing exposure to
+        customers outside the pilot group until data-service ownership enforcement is implemented.
       </p>
       <div className={styles.conds}>
         <h3>Launch conditions include</h3>
