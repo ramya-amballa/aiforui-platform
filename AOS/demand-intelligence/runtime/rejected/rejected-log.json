@@ -3043,6 +3043,34 @@
       "relevanceScore": 0,
       "categoriesMatched": [],
       "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0235",
+      "dateRejected": "2026-10-02",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Enterprise Sales Development Representative",
+      "organisation": "Toptal",
+      "url": "https://remoteOK.com/remote-jobs/remote-enterprise-sales-development-representative-toptal-1137451",
+      "relevanceScore": 10,
+      "categoriesMatched": [
+        "governanceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: governanceContext; no penalties)."
+    },
+    {
+      "id": "rej-0236",
+      "dateRejected": "2026-10-02",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Client Advisor",
+      "organisation": "Toptal",
+      "url": "https://remoteOK.com/remote-jobs/remote-client-advisor-toptal-1137439",
+      "relevanceScore": 10,
+      "categoriesMatched": [
+        "governanceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: governanceContext; no penalties)."
     }
   ]
 }
