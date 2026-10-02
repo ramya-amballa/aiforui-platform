@@ -41,7 +41,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   const resourceEntries: MetadataRoute.Sitemap = resources.map((resource) => ({
-    url: new URL(`/resources/${resource.slug}`, site.url).toString(),
+    url: new URL(resource.href ?? `/resources/${resource.slug}`, site.url).toString(),
     lastModified: new Date(),
   }));
 

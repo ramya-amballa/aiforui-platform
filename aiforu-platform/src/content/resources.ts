@@ -20,6 +20,16 @@ export const resources: Resource[] = [
     href: "/cases/case-01",
   },
   {
+    slug: "case-02-vendor-ai-authority",
+    title: "Case 02: The vendor's AI was approved to predict failures. Its access told a different story.",
+    type: "Case Study",
+    accessTier: "Free",
+    domainSlugs: ["ai-governance", "third-party-governance"],
+    description: "Reconciling contract, capability, evidence and approval before an industrial vendor AI deployment.",
+    featured: true,
+    href: "/cases/case-02",
+  },
+  {
     slug: "adgl-methodology",
     title: "The ADGL Methodology",
     type: "Methodology",
