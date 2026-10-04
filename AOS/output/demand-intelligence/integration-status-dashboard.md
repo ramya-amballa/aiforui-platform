@@ -1,6 +1,6 @@
 # Demand Intelligence — Integration Status Dashboard
 
-**Generated:** 2026-10-03
+**Generated:** 2026-10-04
 
 *Regenerated automatically at the end of every collection run (`collect.py` calls `integration_status.py`). Reflects `config/sources.json`'s current configuration and the most recent collection snapshot; regenerate by re-running collection, do not hand-edit.*
 

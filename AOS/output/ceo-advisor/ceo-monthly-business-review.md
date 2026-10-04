@@ -1,6 +1,6 @@
 # CEO Monthly Business Review
 
-**Generated:** 2026-10-03
+**Generated:** 2026-10-04
 **Window:** trailing 30 days, regenerated every run
 
 **Opportunities found this period:** 0
