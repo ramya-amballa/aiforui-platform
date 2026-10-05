@@ -3071,6 +3071,21 @@
         "governanceContext"
       ],
       "reason": "Weak/insufficient relevance signal (matched: governanceContext; no penalties)."
+    },
+    {
+      "id": "rej-0237",
+      "dateRejected": "2026-10-05",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Head of Operations",
+      "organisation": "Leverage Live Local",
+      "url": "https://remoteOK.com/remote-jobs/remote-head-of-operations-leverage-live-local-1137461",
+      "relevanceScore": 20,
+      "categoriesMatched": [
+        "complianceContext",
+        "governanceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: complianceContext, governanceContext; no penalties)."
     }
   ]
 }
