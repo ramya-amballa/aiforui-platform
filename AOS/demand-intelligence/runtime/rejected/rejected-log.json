@@ -3086,6 +3086,23 @@
         "governanceContext"
       ],
       "reason": "Weak/insufficient relevance signal (matched: complianceContext, governanceContext; no penalties)."
+    },
+    {
+      "id": "rej-0238",
+      "dateRejected": "2026-10-06",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Federal Business Development Director",
+      "organisation": "Fortanix",
+      "url": "https://remoteOK.com/remote-jobs/remote-federal-business-development-director-fortanix-1137463",
+      "relevanceScore": 27,
+      "categoriesMatched": [
+        "aiContext",
+        "companyIndustry",
+        "consultingContext",
+        "cybersecurityContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: aiContext, companyIndustry, consultingContext, cybersecurityContext; no penalties)."
     }
   ]
 }
