@@ -3103,6 +3103,18 @@
         "cybersecurityContext"
       ],
       "reason": "Weak/insufficient relevance signal (matched: aiContext, companyIndustry, consultingContext, cybersecurityContext; no penalties)."
+    },
+    {
+      "id": "rej-0239",
+      "dateRejected": "2026-10-07",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Platform and Integration Engineer Security Telemetry",
+      "organisation": "RedMimicry",
+      "url": "https://remoteOK.com/remote-jobs/remote-platform-and-integration-engineer-security-telemetry-redmimicry-1137465",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
     }
   ]
 }
