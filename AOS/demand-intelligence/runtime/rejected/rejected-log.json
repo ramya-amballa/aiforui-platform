@@ -3115,6 +3115,18 @@
       "relevanceScore": 0,
       "categoriesMatched": [],
       "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0240",
+      "dateRejected": "2026-10-09",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Telefondienst fÃ¼r Tierarztpraxis Neuruppin o",
+      "organisation": "Tierarzt Plus Partner",
+      "url": "https://remoteOK.com/remote-jobs/remote-telefondienst-fur-tierarztpraxis-neuruppin-o-tierarzt-plus-partner-1137469",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
     }
   ]
 }
