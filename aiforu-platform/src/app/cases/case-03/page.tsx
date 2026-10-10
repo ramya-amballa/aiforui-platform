@@ -316,9 +316,9 @@ export default function Case03Page() {
         treated as valid. The open question is whether it provides evidence for this one.
       </p>
       <p>
-        Continuing means renewing on assurance nobody has examined for this feature. Exiting is the highest-cost
-        option: migrating case history, rebuilding integrations, running two systems in parallel and retraining
-        staff. It is unlikely to finish in 60 days.
+        Continuing would mean renewing before the bank has established what assurance evidence applies to this
+        feature. Exiting is the highest-cost option: migrating case history, rebuilding integrations, running two
+        systems in parallel and retraining staff. It is unlikely to finish in 60 days.
       </p>
       <div className={styles.conds}>
         <h3>What would move the decision</h3>
