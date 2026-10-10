@@ -30,6 +30,16 @@ export const resources: Resource[] = [
     href: "/cases/case-02",
   },
   {
+    slug: "case-03-saas-ai-assurance",
+    title: "Case 03: The certificate predates the feature.",
+    type: "Case Study",
+    accessTier: "Free",
+    domainSlugs: ["ai-governance", "third-party-governance"],
+    description: "Separating when assurance was issued, what it covers, and whether it establishes anything about a new AI feature added to a business-critical SaaS platform.",
+    featured: true,
+    href: "/cases/case-03",
+  },
+  {
     slug: "adgl-methodology",
     title: "The ADGL Methodology",
     type: "Methodology",
