@@ -3127,6 +3127,36 @@
       "relevanceScore": 0,
       "categoriesMatched": [],
       "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0241",
+      "dateRejected": "2026-10-11",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Academic Dean for MiaPrep Online Academy of Ohio",
+      "organisation": "Miaplaza",
+      "url": "https://remoteOK.com/remote-jobs/remote-academic-dean-for-miaprep-online-academy-of-ohio-miaplaza-1137479",
+      "relevanceScore": 20,
+      "categoriesMatched": [
+        "complianceContext",
+        "governanceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: complianceContext, governanceContext; no penalties)."
+    },
+    {
+      "id": "rej-0242",
+      "dateRejected": "2026-10-11",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Product Design Lead",
+      "organisation": "Fuel50",
+      "url": "https://remoteOK.com/remote-jobs/remote-product-design-lead-fuel50-1137474",
+      "relevanceScore": 20,
+      "categoriesMatched": [
+        "complianceContext",
+        "responsibleAi"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: complianceContext, responsibleAi; no penalties)."
     }
   ]
 }
