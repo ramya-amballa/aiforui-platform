@@ -3157,6 +3157,20 @@
         "responsibleAi"
       ],
       "reason": "Weak/insufficient relevance signal (matched: complianceContext, responsibleAi; no penalties)."
+    },
+    {
+      "id": "rej-0243",
+      "dateRejected": "2026-10-12",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Manager Clinical Data Management",
+      "organisation": "EDETEK",
+      "url": "https://remoteOK.com/remote-jobs/remote-manager-clinical-data-management-edetek-1137481",
+      "relevanceScore": 0,
+      "categoriesMatched": [
+        "governanceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: governanceContext; Healthcare role penalty (-20))."
     }
   ]
 }
