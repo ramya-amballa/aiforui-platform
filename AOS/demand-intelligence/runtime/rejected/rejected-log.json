@@ -3171,6 +3171,21 @@
         "governanceContext"
       ],
       "reason": "Weak/insufficient relevance signal (matched: governanceContext; Healthcare role penalty (-20))."
+    },
+    {
+      "id": "rej-0244",
+      "dateRejected": "2026-10-13",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Senior Sales Executive Central Region",
+      "organisation": "SimSpace Corporation",
+      "url": "https://remoteOK.com/remote-jobs/remote-senior-sales-executive-central-region-simspace-corporation-1137498",
+      "relevanceScore": 18,
+      "categoriesMatched": [
+        "complianceContext",
+        "cybersecurityContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: complianceContext, cybersecurityContext; no penalties)."
     }
   ]
 }
