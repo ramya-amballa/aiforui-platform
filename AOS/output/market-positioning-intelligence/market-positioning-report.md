@@ -1,6 +1,6 @@
 # Market Positioning Intelligence
 
-**Generated:** 2026-10-13
+**Generated:** 2026-10-14
 
 *A read-only view of where AI for U&I's own service catalogue stands relative to real demand and regulatory signal AOS already tracks. There is no competitor, market-share or win/loss data source anywhere in AOS — see Competitive Signal below for that honest gap, stated plainly rather than filled in with an invented number.*
 
