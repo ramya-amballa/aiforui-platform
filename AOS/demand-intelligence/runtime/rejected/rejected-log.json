@@ -3200,6 +3200,51 @@
         "llm"
       ],
       "reason": "Weak/insufficient relevance signal (matched: llm; Healthcare role penalty (-20); Isolated weak-keyword penalty (-15))."
+    },
+    {
+      "id": "rej-0246",
+      "dateRejected": "2026-10-17",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Associate Data Scientist",
+      "organisation": "AlgaeCal",
+      "url": "https://remoteOK.com/remote-jobs/remote-associate-data-scientist-algaecal-1137531",
+      "relevanceScore": 0,
+      "categoriesMatched": [
+        "aiContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: aiContext; Isolated weak-keyword penalty (-15))."
+    },
+    {
+      "id": "rej-0247",
+      "dateRejected": "2026-10-17",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Director of IT and Workplace",
+      "organisation": "Hippocratic AI",
+      "url": "https://remoteOK.com/remote-jobs/remote-director-of-it-and-workplace-hippocratic-ai-1137530",
+      "relevanceScore": 26,
+      "categoriesMatched": [
+        "complianceContext",
+        "governanceContext",
+        "llm"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: complianceContext, governanceContext, llm; no penalties)."
+    },
+    {
+      "id": "rej-0248",
+      "dateRejected": "2026-10-17",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Senior Software Engineer II Applied AI",
+      "organisation": "Wrapbook",
+      "url": "https://remoteOK.com/remote-jobs/remote-senior-software-engineer-ii-applied-ai-wrapbook-1137527",
+      "relevanceScore": 12,
+      "categoriesMatched": [
+        "llm",
+        "rag"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: llm, rag; no penalties)."
     }
   ]
 }
