@@ -3245,6 +3245,37 @@
         "rag"
       ],
       "reason": "Weak/insufficient relevance signal (matched: llm, rag; no penalties)."
+    },
+    {
+      "id": "rej-0249",
+      "dateRejected": "2026-10-18",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Head of Technology",
+      "organisation": "Sanctuary Computer",
+      "url": "https://remoteOK.com/remote-jobs/remote-head-of-technology-sanctuary-computer-1137537",
+      "relevanceScore": 18,
+      "categoriesMatched": [
+        "consultingContext",
+        "governanceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: consultingContext, governanceContext; no penalties)."
+    },
+    {
+      "id": "rej-0250",
+      "dateRejected": "2026-10-18",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Director of Product Management and IT Operations",
+      "organisation": "Self Bill Pro",
+      "url": "https://remoteOK.com/remote-jobs/remote-director-of-product-management-and-it-operations-self-bill-pro-1137536",
+      "relevanceScore": 28,
+      "categoriesMatched": [
+        "complianceContext",
+        "cybersecurityContext",
+        "governanceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: complianceContext, cybersecurityContext, governanceContext; no penalties)."
     }
   ]
 }
