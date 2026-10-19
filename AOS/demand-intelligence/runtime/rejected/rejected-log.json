@@ -3276,6 +3276,30 @@
         "governanceContext"
       ],
       "reason": "Weak/insufficient relevance signal (matched: complianceContext, cybersecurityContext, governanceContext; no penalties)."
+    },
+    {
+      "id": "rej-0251",
+      "dateRejected": "2026-10-19",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Technical Account Manager",
+      "organisation": "Yuno",
+      "url": "https://remoteOK.com/remote-jobs/remote-technical-account-manager-yuno-1137540",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0252",
+      "dateRejected": "2026-10-19",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Commercial Account Manager LATAM",
+      "organisation": "Apryse",
+      "url": "https://remoteOK.com/remote-jobs/remote-commercial-account-manager-latam-apryse-1137539",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
     }
   ]
 }
