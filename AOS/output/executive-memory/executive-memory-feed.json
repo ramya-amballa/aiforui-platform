@@ -10,16 +10,16 @@
   "recurringPriorities": [
     {
       "organisation": "RainFocus",
-      "daysInTop3": 61
+      "daysInTop3": 62
     }
   ],
   "recurringAlerts": [
     {
       "alertType": "No website enquiries received",
-      "daysFired": 82
+      "daysFired": 83
     }
   ],
-  "daysTracked": 82,
+  "daysTracked": 83,
   "lessonsLearnedLibrary": [],
   "recurringGovernanceRisks": [],
   "founderDecisions": []
