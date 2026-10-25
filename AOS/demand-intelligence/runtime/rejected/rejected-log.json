@@ -3330,6 +3330,22 @@
         "rag"
       ],
       "reason": "Weak/insufficient relevance signal (matched: aiContext, governanceContext, rag; no penalties)."
+    },
+    {
+      "id": "rej-0255",
+      "dateRejected": "2026-10-25",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Accounting and Implementation Manager",
+      "organisation": "Aprio",
+      "url": "https://remoteOK.com/remote-jobs/remote-accounting-and-implementation-manager-aprio-1137560",
+      "relevanceScore": 28,
+      "categoriesMatched": [
+        "complianceContext",
+        "consultingContext",
+        "governanceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: complianceContext, consultingContext, governanceContext; no penalties)."
     }
   ]
 }
