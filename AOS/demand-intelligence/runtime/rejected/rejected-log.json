@@ -3346,6 +3346,20 @@
         "governanceContext"
       ],
       "reason": "Weak/insufficient relevance signal (matched: complianceContext, consultingContext, governanceContext; no penalties)."
+    },
+    {
+      "id": "rej-0256",
+      "dateRejected": "2026-10-26",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Field Phlebotomy Supervisor Northern California",
+      "organisation": "Getlabs",
+      "url": "https://remoteOK.com/remote-jobs/remote-field-phlebotomy-supervisor-northern-california-getlabs-1137569",
+      "relevanceScore": 0,
+      "categoriesMatched": [
+        "complianceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: complianceContext; Healthcare role penalty (-20))."
     }
   ]
 }
