@@ -3360,6 +3360,20 @@
         "complianceContext"
       ],
       "reason": "Weak/insufficient relevance signal (matched: complianceContext; Healthcare role penalty (-20))."
+    },
+    {
+      "id": "rej-0257",
+      "dateRejected": "2026-10-28",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Senior Software Engineer LATAM",
+      "organisation": "Wagmo",
+      "url": "https://remoteOK.com/remote-jobs/remote-senior-software-engineer-latam-wagmo-1137572",
+      "relevanceScore": 0,
+      "categoriesMatched": [
+        "llm"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: llm; Healthcare role penalty (-20); Isolated weak-keyword penalty (-15))."
     }
   ]
 }
