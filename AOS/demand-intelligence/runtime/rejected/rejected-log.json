@@ -3374,6 +3374,18 @@
         "llm"
       ],
       "reason": "Weak/insufficient relevance signal (matched: llm; Healthcare role penalty (-20); Isolated weak-keyword penalty (-15))."
+    },
+    {
+      "id": "rej-0258",
+      "dateRejected": "2026-10-30",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Front End Developer",
+      "organisation": "Edconic",
+      "url": "https://remoteOK.com/remote-jobs/remote-front-end-developer-edconic-1137597",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
     }
   ]
 }
