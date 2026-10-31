@@ -1,6 +1,6 @@
 # Capacity Management
 
-**Generated:** 2026-10-30
+**Generated:** 2026-10-31
 **Founder's available days/week (config):** 4
 
 *Advisory only — never blocks a proposal from being prepared or changes a priority ranking. Every effort estimate below is Sales Director's own rate-card typicalDays range, reused verbatim.*
