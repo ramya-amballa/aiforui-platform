@@ -1,6 +1,6 @@
 # Revenue Dashboard
 
-**Date:** 2026-10-31
+**Date:** 2026-11-01
 
 ## Pipeline at a Glance
 

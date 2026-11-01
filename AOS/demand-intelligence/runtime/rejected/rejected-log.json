@@ -3400,6 +3400,46 @@
         "aiContext"
       ],
       "reason": "Weak/insufficient relevance signal (matched: aiContext; Isolated weak-keyword penalty (-15))."
+    },
+    {
+      "id": "rej-0260",
+      "dateRejected": "2026-11-01",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Scientific Account Executive",
+      "organisation": "Adaptyv",
+      "url": "https://remoteOK.com/remote-jobs/remote-scientific-account-executive-adaptyv-1137608",
+      "relevanceScore": 10,
+      "categoriesMatched": [
+        "governanceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: governanceContext; no penalties)."
+    },
+    {
+      "id": "rej-0261",
+      "dateRejected": "2026-11-01",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Contract Recruiter",
+      "organisation": "CAI",
+      "url": "https://remoteOK.com/remote-jobs/remote-contract-recruiter-cai-1137607",
+      "relevanceScore": 0,
+      "categoriesMatched": [
+        "companyIndustry"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: companyIndustry; HR role penalty (-40))."
+    },
+    {
+      "id": "rej-0262",
+      "dateRejected": "2026-11-01",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "AWS Cloud Solutions Architect",
+      "organisation": "Cloudary SAS",
+      "url": "https://remoteOK.com/remote-jobs/remote-aws-cloud-solutions-architect-cloudary-sas-1137606",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
     }
   ]
 }

@@ -1,6 +1,6 @@
 # Revenue Forecast
 
-**Generated:** 2026-10-31
+**Generated:** 2026-11-01
 **Method:** `revenue-forecasting-engine.md`
 
 ---
