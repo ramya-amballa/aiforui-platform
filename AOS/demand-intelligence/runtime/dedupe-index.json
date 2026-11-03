@@ -1325,6 +1325,16 @@
       "firstSeen": "2026-11-02",
       "source": "RemoteOK",
       "title": "Partner Operations Manager"
+    },
+    "4d271a25a881cd84": {
+      "firstSeen": "2026-11-03",
+      "source": "RemoteOK",
+      "title": "Software Engineer Infrastructure"
+    },
+    "23fb1e7ecbf51df9": {
+      "firstSeen": "2026-11-03",
+      "source": "RemoteOK",
+      "title": "Team Lead Account Executive"
     }
   }
 }

@@ -3452,6 +3452,30 @@
       "relevanceScore": 0,
       "categoriesMatched": [],
       "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0264",
+      "dateRejected": "2026-11-03",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Software Engineer Infrastructure",
+      "organisation": "Sodalis, Inc.",
+      "url": "https://remoteOK.com/remote-jobs/remote-software-engineer-infrastructure-sodalis-inc-1137614",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: AI Agents) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0265",
+      "dateRejected": "2026-11-03",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Team Lead Account Executive",
+      "organisation": "Capmo",
+      "url": "https://remoteOK.com/remote-jobs/remote-team-lead-account-executive-capmo-1137613",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
     }
   ]
 }

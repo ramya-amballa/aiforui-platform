@@ -1,0 +1,70 @@
+[
+  {
+    "source": "RemoteOK",
+    "sourceCategory": "Professional Network",
+    "title": "Software Engineer Infrastructure",
+    "organisation": "Sodalis, Inc.",
+    "description": "<h1>Software Engineer, Infrastructure</h1><p style=\"min-height:1.5em\"><strong>Hybrid in Palo Alto (Mon / Wed / Thurs) Â· $185Kâ$215K base + meaningful early-stage equity + full benefits</strong></p><div style=\"min-height:1.2em;margin-top:0px;margin-bottom:0px\">Â </div><h2>About Sodalis</h2><p style=\"min-height:1.5em\">Specialty pharmacy is where the most complex and expensive drugs reach the most in-need patients, and it still runs on faxes, phone tag, and manual data entry. Patients wait weeks for therapies that can't wait.</p><p style=\"min-height:1.5em\">Sodalis is building AI agents that run those operations end to end: reading and validating prescriptions, handling phone calls, and moving prescriptions through eligibility and fulfillment. The ambition goes beyond that. We want to be the rails every specialty prescription runs on, and the first system to perform clinical review at the standard of a pharmacist.</p><p style=\"min-height:1.5em\">We're already in production, processing tens of thousands of prescriptions a week. Backed by Gradient Ventures (Google's AI fund), and founded by veterans of Apple's Applied ML, Included Health, and Avella Specialty Pharmacy (scaled to $1.5B+ before its acquisition by OptumRx).</p><div style=\"min-height:1.2em;margin-top:0px;margin-bottom:0px\">Â </div><h2>The Opportunity</h2><p style=\"min-height:1.5em\">Everything we run today is cloud-based, and so are the pharmacy management systems we integrate with. But most of the specialty pharmacy market runs on-prem. To reach it, our system has to run on the pharmacy's systems instead of ours. Whether that's the full stack on-site or a hybrid split with our cloud is one of the first decisions you'd make. That's the problem you'd own.<br />We've never shipped an on-prem deployment, so there's no pattern to follow. You'll decide how our architecture gets packaged and deployed into environments we don't control, what has to change in our current infrastructure to make that possible, and how we maintain and see into those deployments once they're live.</p><p style=\"min-height:1.5em\">We don't yet know what these environments look like in detail. Some pharmacies may have restricted outbound access, legacy hardware, or IT teams that can't give us a login; others may be more open. Part of the job is going in with our customer, finding out what's actually there, and designing something that works across the range.<br />You'll start with our AI pharmacy tech product, rolling out with a committed customer, so you build against a real deployment instead of a hypothetical one. You'd work directly with the founders and the early engineering team on the architecture.</p><p style=\"min-height:1.5em\"></p><h2>What you'll do</h2><ul style=\"min-height:1.5em\"><li><p style=\"min-height:1.5em\">Decide how our architecture runs in a pharmacy's environment, starting with the AI pharmacy tech product: full stack on-site, a hybrid split with our cloud, or something in between.</p></li><li><p style=\"min-height:1.5em\">Adapt our current infrastructure and build the packaging and deployment path that installs and updates Sodalis at each pharmacy.</p></li><li><p style=\"min-height:1.5em\">Own those deployments over time: upgrades, rollbacks, and observability into health and failures without being on site.</p></li><li><p style=\"min-height:1.5em\">Go in with our customer and pharmacy IT teams to learn what their environments actually allow, and design for the range.</p></li><li><p style=\"min-height:1.5em\">Partner with the founders and early engineering team on architecture.</p></li></ul><h2>What we're looking for</h2><ul style=\"min-height:1.5em\"><li><p style=\"min-height:1.5em\">5+ years in infrastructure or platform engineering.</p></li><li><p style=\"min-height:1.5em\">You've taken an AWS-native stack and made it run on Kubernetes or similar in environments you don't operate, including stateful services.</p></li><li><p style=\"min-height:1.5em\">You've shipped and maintained software running in environments you don't control: on-prem, customer-hosted, edge, or embedded.</p></li><li><p style=\"min-height:1.5em\">You've kept a fleet of remote installs updated, observable, and recoverable without being able to log into them.</p></li><li><p style=\"min-height:1.5em\">You've set the first pattern for something in a startup and are comfortable with ambiguity.</p></li><li><p style=\"min-height:1.5em\">You'll spend time with pharmacy IT teams and need to understand their constraints firsthand. No healthcare background required.</p></li></ul><h2>How we work</h2><p style=\"min-height:1.5em\">We're a handful of people going all in on a problem we think is worth it, holding a high bar and shipping work that reaches real patients. It's intense, and it isn't for everyone. We want people who want to build something that matters, alongside others who care as much as they do. If that's you, we should talk.</p><br/><br/>Please mention the word **COMMITMENT** and tag RMjAuMTA5LjM2LjIyOQ== when applying to show you read the job post completely (#RMjAuMTA5LjM2LjIyOQ==). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+    "url": "https://remoteOK.com/remote-jobs/remote-software-engineer-infrastructure-sodalis-inc-1137614",
+    "location": "Palo Alto",
+    "remote": true,
+    "domainTags": [
+      "ADGL",
+      "AI Deployment Governance"
+    ],
+    "scores": {
+      "expectedRevenue": 5,
+      "probabilityOfWinning": 4,
+      "strategicValue": 4,
+      "relationshipValue": 2,
+      "timeRequired": 7,
+      "geography": 8,
+      "remoteCompatibility": 10,
+      "alignmentAIforUIServices": 5.5,
+      "alignmentADGL": 5.5,
+      "alignmentOPERA": 6,
+      "longTermRelationshipPotential": 5
+    },
+    "scopedEngagement": false,
+    "recurrencePattern": "none",
+    "autoScored": true,
+    "autoCollected": true,
+    "matchedKeywords": [
+      "AI Agents"
+    ]
+  },
+  {
+    "source": "RemoteOK",
+    "sourceCategory": "Professional Network",
+    "title": "Team Lead Account Executive",
+    "organisation": "Capmo",
+    "description": "<h1>Deine Rolle</h1><p>Unser Account Executive Team ist der Wachstumsmotor von Capmo â und du sorgst dafÃ¼r, dass er noch schneller und effizienter lÃ¤uft. Als Team Lead Account Executive (m/w/*) fÃ¼hrst du unser bestehendes AE-Team im Daily Business, Ã¼bersetzt unsere Sales-Strategie in konkrete MaÃnahmen und entwickelst unsere Prozesse kontinuierlich weiter. Du bist Sparringspartner, Coach und erste Anlaufstelle fÃ¼r dein Team â mit klarem Fokus auf Performance, Entwicklung und nachhaltiges Wachstum.<br><h3><br></h3><h3>Deine Aufgaben</h3><ul><li><strong>Team fÃ¼hren &amp; entwickeln</strong>: Du fÃ¼hrst ein Team an Account Executives operativ und entwickelst insbesondere unsere Junior AEs gezielt weiter â von erfolgreicher Discovery bis zum Aufbau starker Champions.</li><li><strong>Deals coachen &amp; Performance steigern</strong>: Du bist nah am Deal-Geschehen, challengst Strategien und PrioritÃ¤ten und hilfst deinem Team, komplexe Opportunities erfolgreich voranzutreiben.</li><li><strong>Forecast &amp; Pipeline im Griff haben</strong>: Du stellst gemeinsam mit deinem Team eine saubere, belastbare Pipeline sicher und verantwortest prÃ¤zise Forecasts gegenÃ¼ber dem Sales-Lead.</li><li><strong>KPIs verantworten</strong>: Du behÃ¤ltst die zentralen SaaS-KPIs im Blick â darunter Pipeline Coverage, Win Rate, Sales Cycle und Quota Attainment â und leitest daraus konkrete MaÃnahmen fÃ¼r dein Team ab.</li><li><strong>Sales Skills weiterentwickeln</strong>: Du nutzt echte Deals, Calls und CRM-Daten, um dein Team gezielt in Bereichen wie Discovery, Champion Development und VerhandlungsfÃ¼hrung zu coachen.</li><li><strong>Sales-Prozess weiterentwickeln</strong>: Du erkennst frÃ¼h, wo Prozesse im Sales-Alltag nicht funktionieren, bringst VerbesserungsvorschlÃ¤ge ein und setzt diese gemeinsam mit der Sales-Leitung um.</li><li><strong>Kollaboration</strong>: Du arbeitest eng mit Marketing, Customer Success und Product zusammen und sorgst dafÃ¼r, dass relevantes Feedback aus dem Markt im Unternehmen ankommt.</li></ul></p><br><h1>Das bieten wir dir</h1><p><ul><li><strong>Be rewarded for your work</strong>: Provision Ã¼ber 100 % mÃ¶glich â schieÃe Ã¼ber deine Ziele hinaus und profitiere davon.</li><li><strong>Become a shareholder!</strong> Partizipiere mit unserem Mitarbeiterbeteiligungsprogramm (VSOP) direkt an unserem Erfolg.</li><li><strong>Become an AI pro!&nbsp;</strong>Werde Experte im B2B-Vertrieb, indem du tÃ¤glich mit modernsten KI-Tools arbeitest und lernst, wie man AI erfolgreich in der Praxis einsetzt.</li><li><strong>Grow fast!</strong> JÃ¤hrliches Budget von 1.000 â¬ sowie zwei Development Days, die du in deine berufliche Weiterentwicklung investieren kannst.</li><li><strong>Fit(ness), Food oder Mobility Budget?</strong> Mit EGYM Wellpass hast du unbegrenzte Check-ins zu 90 Fitnessstudios und SchwimmbÃ¤dern in MÃ¼nchen oder wÃ¤hle einen Mittagszuschuss oder dein MobilitÃ¤tsbudget als Benefit.</li><li><strong>Wellbeing Matters!</strong> Mit unserer Kooperation mit OpenUp erhÃ¤ltst du sowie Familienmitglieder unkomplizierten Zugang zu professioneller UnterstÃ¼tzung rund um mentale und physische Gesundheit.</li><li><strong>Think Ahead</strong>: Wir bezuschussen deine betriebliche Altersvorsorge mit 20 %.</li><li><strong>Remain flexible!</strong> Home Office und Arbeiten im EU-Ausland sind mÃ¶glich. Die Position ist jedoch nicht als dauerhaft vollstÃ¤ndig remote ausgelegt.</li><li><strong>Be bold!</strong> Wachse an stÃ¤ndig neuen Herausforderungen â unsere offene Feedback- und Fehlerkultur unterstÃ¼tzt dich dabei.</li><li><strong>Meet the team!</strong> Freu dich auf Events, unser Weekly Allhands und unsere Company Week.</li><li><strong>#buildbetterplacestogether!</strong> Du hast die MÃ¶glichkeit, eine ganze Branche zu revolutionieren und die Art und Weise zu verÃ¤ndern, wie die buchstÃ¤bliche Zukunft gebaut wird</li></ul></p><br><h1>Das bringst du mit</h1><p><ul><li><strong>2-3 Jahre B2B-SaaS-Vertrieb&nbsp;</strong>als Account Executive, idealerweise mit erster FÃ¼hrungs-, Coaching- oder Mentoring-Erfahrung</li><li><strong>Nachweisbare Vertriebserfolge</strong> und sicherer Umgang mit Pipeline, Forecasting und relevanten Sales-KPIs</li><li><strong>Analytisches, datenbasiertes Denken</strong>: Du leitest aus CRM-Daten konkrete MaÃnahmen ab</li><li><strong>Hands-on Coaching</strong>: Du bist nah an den Deals und entwickelst AEs in Discovery, Champion Development und Verhandlung (Erfahrung mit MEDDIC, Challenger o. Ã¤. ist ein Plus)</li><li><strong>Ownership und Builder-MentalitÃ¤t</strong>: Du bringst Themen auch unter Unsicherheit voran, hinterfragst Prozesse und entwickelst skalierbare LÃ¶sungen, gern mit modernen KI-Tools</li><li>Sehr gutes Deutsch (C2) und verhandlungssicheres Englisch</li></ul></p><br><h1>Wir konnten dein Interesse wecken?</h1><p></p><br/><br/>Please mention the word **VIVACIOUS** and tag RMjAuMTA5LjM2LjIyOQ== when applying to show you read the job post completely (#RMjAuMTA5LjM2LjIyOQ==). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+    "url": "https://remoteOK.com/remote-jobs/remote-team-lead-account-executive-capmo-1137613",
+    "location": "Not specified",
+    "remote": true,
+    "domainTags": [
+      "ADGL",
+      "AI Deployment Governance"
+    ],
+    "scores": {
+      "expectedRevenue": 5,
+      "probabilityOfWinning": 4,
+      "strategicValue": 4,
+      "relationshipValue": 2,
+      "timeRequired": 7,
+      "geography": 8,
+      "remoteCompatibility": 10,
+      "alignmentAIforUIServices": 5.5,
+      "alignmentADGL": 5.5,
+      "alignmentOPERA": 6,
+      "longTermRelationshipPotential": 5
+    },
+    "scopedEngagement": false,
+    "recurrencePattern": "none",
+    "autoScored": true,
+    "autoCollected": true,
+    "matchedKeywords": [
+      "RAG"
+    ]
+  }
+]
