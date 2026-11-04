@@ -3476,6 +3476,38 @@
       "relevanceScore": 0,
       "categoriesMatched": [],
       "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0266",
+      "dateRejected": "2026-11-04",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Tax Manager Private Client",
+      "organisation": "Aprio",
+      "url": "https://remoteOK.com/remote-jobs/remote-tax-manager-private-client-aprio-1137622",
+      "relevanceScore": 28,
+      "categoriesMatched": [
+        "complianceContext",
+        "consultingContext",
+        "governanceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: complianceContext, consultingContext, governanceContext; no penalties)."
+    },
+    {
+      "id": "rej-0267",
+      "dateRejected": "2026-11-04",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Client Accounting Division Manager",
+      "organisation": "Burkland Associates",
+      "url": "https://remoteOK.com/remote-jobs/remote-client-accounting-division-manager-burkland-associates-1137621",
+      "relevanceScore": 28,
+      "categoriesMatched": [
+        "complianceContext",
+        "consultingContext",
+        "governanceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: complianceContext, consultingContext, governanceContext; no penalties)."
     }
   ]
 }
