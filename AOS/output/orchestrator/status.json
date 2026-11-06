@@ -9,16 +9,16 @@
     "reportPath": "string — this run's Daily Execution Report, relative to the repo root",
     "logPath": "string — this run's full log, relative to the repo root"
   },
-  "startedAt": "2026-11-05T07:07:08.837351+00:00",
-  "finishedAt": "2026-11-05T07:07:11.501358+00:00",
-  "durationSeconds": 2.66,
+  "startedAt": "2026-11-06T07:06:22.537756+00:00",
+  "finishedAt": "2026-11-06T07:06:24.718256+00:00",
+  "durationSeconds": 2.18,
   "employees": [
     {
       "key": "market-intelligence",
       "name": "Market Intelligence",
       "status": "SUCCESS",
       "attempts": 1,
-      "durationSeconds": 0.89,
+      "durationSeconds": 0.48,
       "error": null,
       "outputs": []
     },
@@ -36,11 +36,11 @@
       "name": "Demand Intelligence",
       "status": "SUCCESS",
       "attempts": 1,
-      "durationSeconds": 0.63,
+      "durationSeconds": 0.61,
       "error": null,
       "outputs": [
-        "demand-intelligence/runtime/rejected/2026-11-05-rejected-report.md",
-        "demand-intelligence/runtime/snapshots/2026-11-05-collection-snapshot.json",
+        "demand-intelligence/runtime/rejected/2026-11-06-rejected-report.md",
+        "demand-intelligence/runtime/snapshots/2026-11-06-collection-snapshot.json",
         "demand-intelligence/organisation-profiles.json",
         "output/demand-intelligence/top-organisations-this-week.json"
       ]
@@ -50,11 +50,11 @@
       "name": "Revenue Hunter",
       "status": "SUCCESS",
       "attempts": 1,
-      "durationSeconds": 0.09,
+      "durationSeconds": 0.07,
       "error": null,
       "outputs": [
-        "output/revenue-hunter/2026-11-05-revenue-dashboard.md",
-        "output/revenue-hunter/2026-11-05-revenue-forecast.md"
+        "output/revenue-hunter/2026-11-06-revenue-dashboard.md",
+        "output/revenue-hunter/2026-11-06-revenue-forecast.md"
       ]
     },
     {
@@ -93,7 +93,7 @@
       "name": "Account Intelligence",
       "status": "SUCCESS",
       "attempts": 1,
-      "durationSeconds": 0.04,
+      "durationSeconds": 0.03,
       "error": null,
       "outputs": []
     },
@@ -141,7 +141,7 @@
       "durationSeconds": 0.07,
       "error": null,
       "outputs": [
-        "output/tender-intelligence/2026-11-05-tender-intelligence-report.md",
+        "output/tender-intelligence/2026-11-06-tender-intelligence-report.md",
         "output/tender-intelligence/tender-intelligence-feed.json"
       ]
     },
@@ -180,7 +180,7 @@
       "durationSeconds": 0.03,
       "error": null,
       "outputs": [
-        "output/executive-memory/2026-11-05-executive-memory-report.md",
+        "output/executive-memory/2026-11-06-executive-memory-report.md",
         "output/executive-memory/executive-memory-feed.json"
       ]
     },
@@ -192,7 +192,7 @@
       "durationSeconds": 0.03,
       "error": null,
       "outputs": [
-        "output/market-positioning-intelligence/2026-11-05-market-positioning-report.md",
+        "output/market-positioning-intelligence/2026-11-06-market-positioning-report.md",
         "output/market-positioning-intelligence/market-positioning-feed.json"
       ]
     },
@@ -204,7 +204,7 @@
       "durationSeconds": 0.03,
       "error": null,
       "outputs": [
-        "output/capacity-management/2026-11-05-capacity-report.md",
+        "output/capacity-management/2026-11-06-capacity-report.md",
         "output/capacity-management/capacity-feed.json"
       ]
     },
@@ -231,15 +231,15 @@
       "name": "Daily Brief",
       "status": "SUCCESS",
       "attempts": 1,
-      "durationSeconds": 0.09,
+      "durationSeconds": 0.05,
       "error": null,
       "outputs": [
         "output/executive-dashboard/executive-dashboard.md",
         "output/executive-dashboard/executive-dashboard.html",
-        "output/executive-dashboard/2026-11-05-executive-dashboard.md",
-        "output/executive-dashboard/2026-11-05-executive-dashboard.html",
-        "output/daily-briefs/2026/11/05/executive-dashboard.md",
-        "output/daily-briefs/2026/11/05/executive-dashboard.html"
+        "output/executive-dashboard/2026-11-06-executive-dashboard.md",
+        "output/executive-dashboard/2026-11-06-executive-dashboard.html",
+        "output/daily-briefs/2026/11/06/executive-dashboard.md",
+        "output/daily-briefs/2026/11/06/executive-dashboard.html"
       ]
     },
     {
@@ -261,7 +261,7 @@
       "durationSeconds": 0.06,
       "error": null,
       "outputs": [
-        "output/ceo-advisor/2026-11-05-ceo-daily-report.md",
+        "output/ceo-advisor/2026-11-06-ceo-daily-report.md",
         "output/ceo-advisor/ceo-daily-report.md",
         "output/ceo-advisor/ceo-weekly-report.md",
         "output/ceo-advisor/ceo-monthly-business-review.md"
@@ -270,6 +270,6 @@
   ],
   "overallStatus": "SUCCESS",
   "failures": [],
-  "reportPath": "AOS/output/orchestrator/reports/2026-11-05-daily-execution-report.md",
-  "logPath": "AOS/output/orchestrator/logs/2026-11-05-070708-orchestrator.log"
+  "reportPath": "AOS/output/orchestrator/reports/2026-11-06-daily-execution-report.md",
+  "logPath": "AOS/output/orchestrator/logs/2026-11-06-070622-orchestrator.log"
 }
