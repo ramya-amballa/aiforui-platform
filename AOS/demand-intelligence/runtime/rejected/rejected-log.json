@@ -3573,6 +3573,59 @@
         "llm"
       ],
       "reason": "Weak/insufficient relevance signal (matched: aiContext, llm; no penalties)."
+    },
+    {
+      "id": "rej-0273",
+      "dateRejected": "2026-11-07",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Accountant",
+      "organisation": "Serve Robotics",
+      "url": "https://remoteOK.com/remote-jobs/remote-accountant-serve-robotics-1137694",
+      "relevanceScore": 16,
+      "categoriesMatched": [
+        "aiContext",
+        "complianceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: aiContext, complianceContext; no penalties)."
+    },
+    {
+      "id": "rej-0274",
+      "dateRejected": "2026-11-07",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Operations Expert with Python for AI Supply Chain Task Design",
+      "organisation": "Toptal",
+      "url": "https://remoteOK.com/remote-jobs/remote-operations-expert-with-python-for-ai-supply-chain-task-design-toptal-1137690",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: AI Agents) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0275",
+      "dateRejected": "2026-11-07",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "ML Inference Engineer â Terminal-Bench Task Designer (vLLM / SGLang / TensorRT-LLM)",
+      "organisation": "Toptal",
+      "url": "https://remoteOK.com/remote-jobs/remote-ml-inference-engineer-terminal-bench-task-designer-vllm-sglang-tensorrt-llm-toptal-1137689",
+      "relevanceScore": 0,
+      "categoriesMatched": [
+        "llm"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: llm; Isolated weak-keyword penalty (-15))."
+    },
+    {
+      "id": "rej-0276",
+      "dateRejected": "2026-11-07",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Front End Developer",
+      "organisation": "Cambridge Information Group",
+      "url": "https://remoteOK.com/remote-jobs/remote-front-end-developer-cambridge-information-group-1137597",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
     }
   ]
 }

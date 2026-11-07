@@ -1370,6 +1370,26 @@
       "firstSeen": "2026-11-06",
       "source": "RemoteOK",
       "title": "Software Engineer"
+    },
+    "06f245cc5f258a05": {
+      "firstSeen": "2026-11-07",
+      "source": "RemoteOK",
+      "title": "Accountant"
+    },
+    "81e7730a9a5ed798": {
+      "firstSeen": "2026-11-07",
+      "source": "RemoteOK",
+      "title": "Operations Expert with Python for AI Supply Chain Task Design"
+    },
+    "16d696ed5781c2f1": {
+      "firstSeen": "2026-11-07",
+      "source": "RemoteOK",
+      "title": "ML Inference Engineer â Terminal-Bench Task Designer (vLLM / SGLang / TensorRT-LLM)"
+    },
+    "34202e4aa8d1cc47": {
+      "firstSeen": "2026-11-07",
+      "source": "RemoteOK",
+      "title": "Front End Developer"
     }
   }
 }
