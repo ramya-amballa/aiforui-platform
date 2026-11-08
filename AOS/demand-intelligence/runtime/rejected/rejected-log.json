@@ -3626,6 +3626,34 @@
       "relevanceScore": 0,
       "categoriesMatched": [],
       "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0277",
+      "dateRejected": "2026-11-08",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "AI Developer",
+      "organisation": "Salvo Software",
+      "url": "https://remoteOK.com/remote-jobs/remote-ai-developer-salvo-software-1137701",
+      "relevanceScore": 22,
+      "categoriesMatched": [
+        "complianceContext",
+        "llm",
+        "rag"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: complianceContext, llm, rag; no penalties)."
+    },
+    {
+      "id": "rej-0278",
+      "dateRejected": "2026-11-08",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Registered Nurse",
+      "organisation": "Caringhand Home Health Solutions, Inc.",
+      "url": "https://remoteOK.com/remote-jobs/remote-registered-nurse-caringhand-home-health-solutions-inc-1137695",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
     }
   ]
 }
