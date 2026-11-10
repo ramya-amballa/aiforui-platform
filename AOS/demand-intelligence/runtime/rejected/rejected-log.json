@@ -3654,6 +3654,32 @@
       "relevanceScore": 0,
       "categoriesMatched": [],
       "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0279",
+      "dateRejected": "2026-11-10",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Revenue Cycle Manager",
+      "organisation": "Adaptive Innovations",
+      "url": "https://remoteOK.com/remote-jobs/remote-revenue-cycle-manager-adaptive-innovations-1137706",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0280",
+      "dateRejected": "2026-11-10",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Senior Product Manager",
+      "organisation": "Pencil",
+      "url": "https://remoteOK.com/remote-jobs/remote-senior-product-manager-pencil-1137705",
+      "relevanceScore": 0,
+      "categoriesMatched": [
+        "aiContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: aiContext; Isolated weak-keyword penalty (-15))."
     }
   ]
 }
