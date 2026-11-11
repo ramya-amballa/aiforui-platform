@@ -3680,6 +3680,47 @@
         "aiContext"
       ],
       "reason": "Weak/insufficient relevance signal (matched: aiContext; Isolated weak-keyword penalty (-15))."
+    },
+    {
+      "id": "rej-0281",
+      "dateRejected": "2026-11-11",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "HIL Support Specialist",
+      "organisation": "Extend Your Team",
+      "url": "https://remoteOK.com/remote-jobs/remote-hil-support-specialist-extend-your-team-1137711",
+      "relevanceScore": 5,
+      "categoriesMatched": [
+        "companyIndustry"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: companyIndustry; no penalties)."
+    },
+    {
+      "id": "rej-0282",
+      "dateRejected": "2026-11-11",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Senior Agentic AI Engineer NDA",
+      "organisation": "GT",
+      "url": "https://remoteOK.com/remote-jobs/remote-senior-agentic-ai-engineer-nda-gt-1137710",
+      "relevanceScore": 14,
+      "categoriesMatched": [
+        "consultingContext",
+        "llm"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: consultingContext, llm; no penalties)."
+    },
+    {
+      "id": "rej-0283",
+      "dateRejected": "2026-11-11",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Telehealth Endocrinologist Evenings Fridays and or Weekends",
+      "organisation": "Allara",
+      "url": "https://remoteOK.com/remote-jobs/remote-telehealth-endocrinologist-evenings-fridays-and-or-weekends-allara-1137709",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
     }
   ]
 }
