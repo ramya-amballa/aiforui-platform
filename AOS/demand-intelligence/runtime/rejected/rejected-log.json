@@ -3721,6 +3721,30 @@
       "relevanceScore": 0,
       "categoriesMatched": [],
       "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0284",
+      "dateRejected": "2026-11-12",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Strategy & Operations Coach APAC",
+      "organisation": "Mento",
+      "url": "https://remoteOK.com/remote-jobs/remote-strategy-operations-coach-apac-mento-1137717",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0285",
+      "dateRejected": "2026-11-12",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Bilingual Patient Engagement Specialist I English Spanish",
+      "organisation": "Sprinter Health",
+      "url": "https://remoteOK.com/remote-jobs/remote-bilingual-patient-engagement-specialist-i-english-spanish-sprinter-health-1137716",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
     }
   ]
 }
