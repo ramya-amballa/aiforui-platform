@@ -3745,6 +3745,20 @@
       "relevanceScore": 0,
       "categoriesMatched": [],
       "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0286",
+      "dateRejected": "2026-11-13",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Patient Care Specialist I",
+      "organisation": "Boston Scientific",
+      "url": "https://remoteOK.com/remote-jobs/remote-patient-care-specialist-i-boston-scientific-1137719",
+      "relevanceScore": 0,
+      "categoriesMatched": [
+        "complianceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: complianceContext; Healthcare role penalty (-20))."
     }
   ]
 }
