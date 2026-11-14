@@ -1440,6 +1440,21 @@
       "firstSeen": "2026-11-13",
       "source": "RemoteOK",
       "title": "Patient Care Specialist I"
+    },
+    "f579933f00efebf8": {
+      "firstSeen": "2026-11-14",
+      "source": "RemoteOK",
+      "title": "Software Engineer AI Tooling"
+    },
+    "ca4bd782b95948cc": {
+      "firstSeen": "2026-11-14",
+      "source": "RemoteOK",
+      "title": "Research Engineer Privacy and Anonymization"
+    },
+    "c5e0a95fb4ab407a": {
+      "firstSeen": "2026-11-14",
+      "source": "RemoteOK",
+      "title": "Freelance Question Reviewers"
     }
   }
 }

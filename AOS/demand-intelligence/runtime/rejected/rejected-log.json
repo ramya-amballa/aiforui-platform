@@ -3759,6 +3759,46 @@
         "complianceContext"
       ],
       "reason": "Weak/insufficient relevance signal (matched: complianceContext; Healthcare role penalty (-20))."
+    },
+    {
+      "id": "rej-0287",
+      "dateRejected": "2026-11-14",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Software Engineer AI Tooling",
+      "organisation": "Supabase",
+      "url": "https://remoteOK.com/remote-jobs/remote-software-engineer-ai-tooling-supabase-1137793",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0288",
+      "dateRejected": "2026-11-14",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Research Engineer Privacy and Anonymization",
+      "organisation": "Pragmatike",
+      "url": "https://remoteOK.com/remote-jobs/remote-research-engineer-privacy-and-anonymization-pragmatike-1137792",
+      "relevanceScore": 0,
+      "categoriesMatched": [
+        "llm"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: llm; Isolated weak-keyword penalty (-15))."
+    },
+    {
+      "id": "rej-0289",
+      "dateRejected": "2026-11-14",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Freelance Question Reviewers",
+      "organisation": "AMBOSS ",
+      "url": "https://remoteOK.com/remote-jobs/remote-freelance-question-reviewers-amboss-1137791",
+      "relevanceScore": 0,
+      "categoriesMatched": [
+        "llm"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: llm; Healthcare role penalty (-20); Isolated weak-keyword penalty (-15))."
     }
   ]
 }
