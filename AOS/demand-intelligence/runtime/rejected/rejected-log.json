@@ -3799,6 +3799,18 @@
         "llm"
       ],
       "reason": "Weak/insufficient relevance signal (matched: llm; Healthcare role penalty (-20); Isolated weak-keyword penalty (-15))."
+    },
+    {
+      "id": "rej-0290",
+      "dateRejected": "2026-11-15",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Scaled Account Manager EMEA",
+      "organisation": "DoiT",
+      "url": "https://remoteOK.com/remote-jobs/remote-scaled-account-manager-emea-doit-1137795",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
     }
   ]
 }
