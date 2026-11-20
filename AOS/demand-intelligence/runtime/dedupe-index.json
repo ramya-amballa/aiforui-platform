@@ -1460,6 +1460,21 @@
       "firstSeen": "2026-11-15",
       "source": "RemoteOK",
       "title": "Scaled Account Manager EMEA"
+    },
+    "888ee6c82dedffb4": {
+      "firstSeen": "2026-11-20",
+      "source": "RemoteOK",
+      "title": "Manager EDI"
+    },
+    "3d7e36526602c578": {
+      "firstSeen": "2026-11-20",
+      "source": "RemoteOK",
+      "title": "Legal Engineering Counsel"
+    },
+    "59c9dafed1c3af11": {
+      "firstSeen": "2026-11-20",
+      "source": "RemoteOK",
+      "title": "Business Development Manager"
     }
   }
 }
