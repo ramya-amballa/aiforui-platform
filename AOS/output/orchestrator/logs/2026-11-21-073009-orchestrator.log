@@ -1,0 +1,200 @@
+[2026-11-21T07:30:09.169887+00:00] AOS Orchestrator v1.0 — run started 2026-11-21T07:30:09.169027+00:00
+[2026-11-21T07:30:09.169926+00:00] Market Intelligence: attempt 1/3 -> 05-Market-Intelligence/runtime/monitor.py
+  EU AI Act: no feed URLs configured, skipping
+  ISO 42001: no feed URLs configured, skipping
+  NIST AI RMF: no feed URLs configured, skipping
+  DORA: no feed URLs configured, skipping
+  GDPR: no feed URLs configured, skipping
+  CBUAE: no feed URLs configured, skipping
+  RBI: no feed URLs configured, skipping
+  Microsoft AI: no feed URLs configured, skipping
+  OpenAI Enterprise: no feed URLs configured, skipping
+  Anthropic: no feed URLs configured, skipping
+  AI Security: no feed URLs configured, skipping
+  AI Governance: no feed URLs configured, skipping
+  Responsible AI: no feed URLs configured, skipping
+No new developments across any configured source. Nothing to do.
+[2026-11-21T07:30:09.664554+00:00] Market Intelligence: SUCCESS after 1 attempt(s), 0.49s
+[2026-11-21T07:30:09.664669+00:00] Website Intake Runtime: attempt 1/3 -> website-intake/runtime/generate.py
+No new website submissions in runtime/inbox/. Nothing to do.
+[2026-11-21T07:30:09.693826+00:00] Website Intake Runtime: SUCCESS after 1 attempt(s), 0.03s
+[2026-11-21T07:30:09.693915+00:00] Demand Intelligence: attempt 1/3 -> demand-intelligence/runtime/collect.py
+Collecting: demandSignals
+    Demand Signals: spaCy or its 'en_core_web_sm' model isn't installed — skipping. Run: pip install spacy && python3 -m spacy download en_core_web_sm
+Collecting: greenhouse
+  Greenhouse: no boardTokens configured, skipping (add company tokens to sources.json)
+Collecting: lever
+  Lever: no companies configured, skipping (add company slugs to sources.json)
+Collecting: ashby
+  Ashby: no jobBoardNames configured, skipping (add org names to sources.json)
+Collecting: remoteok
+Collecting: upwork
+  Upwork: connector-ready, no credentials configured — skipping
+Collecting: linkedinJobs
+  LinkedIn Jobs: connector-ready, awaiting Talent Solutions/Jobs API partner access — skipping
+Collecting: googleJobs
+  Google Jobs: connector-ready, no API credentials configured — skipping
+Collecting: wellfound
+  Wellfound: connector-ready, no known public/partner API to authenticate against yet — skipping
+Collecting: flexjobs
+  FlexJobs: connector-ready, no API credentials configured — skipping
+Collecting: uaeRecruiters
+  UAE Recruiters: no career page URLs configured, skipping
+Collecting: consultingFirms
+  Consulting Firms: no career page URLs configured, skipping
+Integration Status Dashboard written to AOS/output/demand-intelligence/integration-status-dashboard.md
+Collection Verification Report written to AOS/output/demand-intelligence/2026-11-21-collection-verification-report.md
+
+Discovered 66 postings across 12 sources; 60 are new after dedup.
+Wrote 60 new opportunities to AOS/demand-intelligence/runtime/inbox/2026-11-21-collected.json
+  [rejected] Advisory Solutions Architect, MSP (New Product Intro) -> relevance 43/100 — Weak/insufficient relevance signal (matched: aiGovernance, complianceContext, consultingContext, governanceContext; no penalties).
+  [rejected] Virtual IOP Clinician â Florida & Texas -> relevance 18/100 — Weak/insufficient relevance signal (matched: complianceContext, consultingContext; no penalties).
+  [rejected] Analyst Relations Senior Manager -> relevance 0/100 — No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity.
+  [rejected] Sales Commissions Analyst -> relevance 0/100 — Weak/insufficient relevance signal (matched: complianceContext; Healthcare role penalty (-20); HR role penalty (-20)).
+  [rejected] Intake and Discharge Clinician -> relevance 0/100 — Weak/insufficient relevance signal (matched: complianceContext; Healthcare role penalty (-20)).
+  [rejected] Senior DevOps Engineer II - Europe -> relevance 20/100 — Weak/insufficient relevance signal (matched: complianceContext, governanceContext; no penalties).
+  [rejected] Sr. Product Manager -> relevance 0/100 — No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity.
+  [rejected] Senior Director of Product Management (R14361) -> relevance 25/100 — Weak/insufficient relevance signal (matched: companyIndustry, complianceContext, governanceContext; no penalties).
+  [rejected] Director, Sales -> relevance 26/100 — Weak/insufficient relevance signal (matched: complianceContext, consultingContext, cybersecurityContext; no penalties).
+  [rejected] Technical Chief of Staff to the CTO -> relevance 18/100 — Weak/insufficient relevance signal (matched: complianceContext, consultingContext; no penalties).
+  [rejected] Per Diem Digital Clinician | MD/DO (CA license) -> relevance 0/100 — No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity.
+  [rejected] Per Diem Digital Clinician | NP (CA license) -> relevance 0/100 — No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity.
+  [rejected] Manager, Business Risk and AI Automation -> relevance 44/100 — Weak/insufficient relevance signal (matched: aiContext, complianceContext, consultingContext, governanceContext, roleResponsibilities; no penalties).
+  [rejected] Compensation Manager -> relevance 20/100 — Weak/insufficient relevance signal (matched: complianceContext, governanceContext; no penalties).
+  [rejected] PreSales Solutions Engineer -> relevance 16/100 — Weak/insufficient relevance signal (matched: consultingContext, cybersecurityContext; no penalties).
+  [rejected] Senior Atlassian Cloud Administrator -> relevance 10/100 — Weak/insufficient relevance signal (matched: governanceContext; no penalties).
+  [rejected] Product Designer -> relevance 10/100 — Weak/insufficient relevance signal (matched: complianceContext; no penalties).
+  [rejected] Senior Software Developer - Canada -> relevance 0/100 — No relevance signals matched in posting text (upstream keyword match: RAG, AI Agents) — likely a substring false positive upstream, not a real opportunity.
+  [rejected] Senior Software Engineer -> relevance 0/100 — No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity.
+  [rejected] Lifecycle Value Manager (Enterprise Customer Success/ Expansion), UK -> relevance 0/100 — No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity.
+  [rejected] Lifecycle Value Manager, Germany -> relevance 0/100 — No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity.
+  [rejected] Regional MSP Partner Manager, EMEA South (Paris) -> relevance 10/100 — Weak/insufficient relevance signal (matched: governanceContext; no penalties).
+  [rejected] Senior Product Engineer -> relevance 0/100 — Weak/insufficient relevance signal (matched: roleResponsibilities; Healthcare role penalty (-20)).
+  opp-0002: IT Manager -> relevance 55/100, priority 56/100 (Active) -> Apply
+  [rejected] Senior Atlassian Cloud Admininstrator -> relevance 10/100 — Weak/insufficient relevance signal (matched: governanceContext; no penalties).
+  [rejected] Principal DevSecOps Engineer -> relevance 24/100 — Weak/insufficient relevance signal (matched: complianceContext, cybersecurityContext, llm; no penalties).
+  [rejected] Infrastructure Software Engineer -> relevance 0/100 — No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity.
+  [rejected] Senior Software Engineer -> relevance 10/100 — Weak/insufficient relevance signal (matched: complianceContext; no penalties).
+  [rejected] Engineering Manager -> relevance 0/100 — No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity.
+  [rejected] Senior Software Engineer: Assets -> relevance 0/100 — Weak/insufficient relevance signal (matched: aiContext; HR role penalty (-20); Isolated weak-keyword penalty (-15)).
+  [rejected] Engineering Lead, Growth -> relevance 0/100 — Weak/insufficient relevance signal (matched: complianceContext; Healthcare role penalty (-20)).
+  [rejected] Engineering Lead, Clinical Operations -> relevance 0/100 — Weak/insufficient relevance signal (matched: complianceContext; Healthcare role penalty (-20)).
+  [rejected] Senior GTM Engineer -> relevance 16/100 — Weak/insufficient relevance signal (matched: aiContext, governanceContext; no penalties).
+  [rejected] Senior Software Engineer Guest & Host -> relevance 0/100 — No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity.
+  [rejected] Engineering Manager, External Search & AI Optimization -> relevance 0/100 — Weak/insufficient relevance signal (matched: aiContext; HR role penalty (-20); Isolated weak-keyword penalty (-15)).
+  [rejected] Engineering Manager, Product Engineering -> relevance 0/100 — No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity.
+  [rejected] Senior Data Engineer Tech Foundations -> relevance 0/100 — Weak/insufficient relevance signal (matched: governanceContext; HR role penalty (-20)).
+  [rejected] Velocity, Sales Director - USA & Europe -> relevance 10/100 — Weak/insufficient relevance signal (matched: governanceContext; no penalties).
+  [rejected] Staff Software Engineer (Interfaces) -> relevance 0/100 — No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity.
+  [rejected] Vice President, Public Sector -> relevance 25/100 — Weak/insufficient relevance signal (matched: companyIndustry, complianceContext, governanceContext; no penalties).
+  [rejected] Senior Sales Training and Enablement Manager -> relevance 10/100 — Weak/insufficient relevance signal (matched: complianceContext; no penalties).
+  [rejected] Senior Account Executive II -> relevance 0/100 — Weak/insufficient relevance signal (matched: companyIndustry; Healthcare role penalty (-40)).
+  [rejected] Technical Lead Norm Compliance -> relevance 29/100 — Weak/insufficient relevance signal (matched: companyIndustry, complianceContext, consultingContext, llm; no penalties).
+  [rejected] Enterprise Account Executive -> relevance 18/100 — Weak/insufficient relevance signal (matched: complianceContext, cybersecurityContext; no penalties).
+  [rejected] Global Head of GSI Solutions Architecture -> relevance 10/100 — Weak/insufficient relevance signal (matched: complianceContext; no penalties).
+  [rejected] Regional MSP Partner Manager, Benelux -> relevance 10/100 — Weak/insufficient relevance signal (matched: governanceContext; no penalties).
+  [rejected] GSI Specialty Seller, Identity Resilience (Global) -> relevance 26/100 — Weak/insufficient relevance signal (matched: complianceContext, consultingContext, cybersecurityContext; no penalties).
+  [rejected] Manager, WW Distribution -> relevance 10/100 — Weak/insufficient relevance signal (matched: complianceContext; no penalties).
+  [rejected] Account Executive, Enterprise (Atlanta/Tennessee) -> relevance 0/100 — No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity.
+  [rejected] Enterprise Solutions Engineer, East -> relevance 27/100 — Weak/insufficient relevance signal (matched: companyIndustry, consultingContext, llm, requiredSkills; no penalties).
+  [rejected] Revenue Enablement Manager -> relevance 18/100 — Weak/insufficient relevance signal (matched: complianceContext, consultingContext; no penalties).
+  [rejected] Customer Success Manager -> relevance 16/100 — Weak/insufficient relevance signal (matched: consultingContext, cybersecurityContext; no penalties).
+  [rejected] L1 Technical Support Engineer (Spanish-Speaking) -> relevance 19/100 — Weak/insufficient relevance signal (matched: companyIndustry, cybersecurityContext, llm; no penalties).
+  [rejected] Designated Technical Support Engineer - West -> relevance 19/100 — Weak/insufficient relevance signal (matched: companyIndustry, llm, requiredSkills; no penalties).
+  [rejected] Community Moderator - Wisdo (1099) -> relevance 0/100 — No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity.
+  [rejected] Head of Channel Sales & Alliances -> relevance 0/100 — Weak/insufficient relevance signal (matched: aiContext; HR role penalty (-20); Isolated weak-keyword penalty (-15)).
+  [rejected] Briefing Content Strategist -> relevance 0/100 — No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity.
+  [rejected] Agency Partnerships Director -> relevance 8/100 — Weak/insufficient relevance signal (matched: consultingContext; no penalties).
+  [rejected] Senior Analytics Engineer -> relevance 36/100 — Weak/insufficient relevance signal (matched: aiContext, complianceContext, governanceContext, roleResponsibilities; no penalties).
+  [rejected] Regional Marketing Manager, Southeast -> relevance 0/100 — No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity.
+
+1 opportunities processed, 59 rejected by the relevance engine. Report: AOS/output/demand-intelligence/2026-11-21-daily-report.md
+[2026-11-21T07:30:11.075008+00:00] Demand Intelligence: SUCCESS after 1 attempt(s), 1.38s
+[2026-11-21T07:30:11.075147+00:00] Revenue Hunter: attempt 1/3 -> revenue-hunter/runtime/generate.py
+  + rev-0002: IT Manager (opp-0002) -> 56/100 (Active)
+
+1 opportunity-sourced entries added, 0 CRM-sourced entries added, 0 stage(s) advanced. Dashboard and forecast written to AOS/output/revenue-hunter
+[2026-11-21T07:30:11.208013+00:00] Revenue Hunter: SUCCESS after 1 attempt(s), 0.13s
+[2026-11-21T07:30:11.208110+00:00] CRM: attempt 1/3 -> crm/runtime/generate.py
+No companies on record in company-intelligence.json yet. Nothing to report.
+[2026-11-21T07:30:11.229709+00:00] CRM: SUCCESS after 1 attempt(s), 0.02s
+[2026-11-21T07:30:11.229764+00:00] Service Mapping Engine: attempt 1/3 -> service-mapping/runtime/generate.py
+  opp-0002: IT Manager -> AI Governance Operating Model / Advisory engagement / Large
+
+1 opportunities mapped, 0 not applicable.
+[2026-11-21T07:30:11.252779+00:00] Service Mapping Engine: SUCCESS after 1 attempt(s), 0.02s
+[2026-11-21T07:30:11.252824+00:00] Sales Director: attempt 1/3 -> sales-director/runtime/prepare.py
+  opp-0002: IT Manager -> confidence 50/100 -> Needs Review
+
+1 packages prepared, 0 repaired. Report: AOS/output/sales-director/2026-11-21-sales-director-report.md
+[2026-11-21T07:30:11.278969+00:00] Sales Director: SUCCESS after 1 attempt(s), 0.03s
+[2026-11-21T07:30:11.279053+00:00] Account Intelligence: attempt 1/3 -> account-intelligence/runtime/generate.py
+No organisations qualified by Demand Intelligence yet. Nothing to do.
+[2026-11-21T07:30:11.303031+00:00] Account Intelligence: SUCCESS after 1 attempt(s), 0.02s
+[2026-11-21T07:30:11.303080+00:00] Relationship Intelligence: attempt 1/3 -> relationship-intelligence/runtime/generate.py
+No relationships tracked yet in relationship-profiles.json. Nothing to do.
+[2026-11-21T07:30:11.325566+00:00] Relationship Intelligence: SUCCESS after 1 attempt(s), 0.02s
+[2026-11-21T07:30:11.325612+00:00] Reverse Job Hunt: attempt 1/3 -> reverse-job-hunt/runtime/generate.py
+No organisations qualified by Demand Intelligence yet. Nothing to do.
+[2026-11-21T07:30:11.348864+00:00] Reverse Job Hunt: SUCCESS after 1 attempt(s), 0.02s
+[2026-11-21T07:30:11.348949+00:00] Recruiter Intelligence: attempt 1/3 -> recruiter-intelligence/runtime/generate.py
+No recruiter or consulting-channel contacts on record yet. Nothing to do.
+[2026-11-21T07:30:11.372239+00:00] Recruiter Intelligence: SUCCESS after 1 attempt(s), 0.02s
+[2026-11-21T07:30:11.372284+00:00] Fractional Advisory Radar: attempt 1/3 -> fractional-advisory-radar/runtime/generate.py
+No organisations qualified by Demand Intelligence yet. Nothing to do.
+[2026-11-21T07:30:11.394280+00:00] Fractional Advisory Radar: SUCCESS after 1 attempt(s), 0.02s
+[2026-11-21T07:30:11.394319+00:00] Tender & RFP Intelligence: attempt 1/3 -> tender-intelligence/runtime/generate.py
+    Tender Intelligence: no feed URLs configured, skipping
+No tenders tracked yet. Nothing more to do.
+0 new tender(s) this run, 0 tracked overall. Report: AOS/output/tender-intelligence/2026-11-21-tender-intelligence-report.md
+[2026-11-21T07:30:11.441829+00:00] Tender & RFP Intelligence: SUCCESS after 1 attempt(s), 0.05s
+[2026-11-21T07:30:11.441875+00:00] Executive Brand Intelligence: attempt 1/3 -> executive-brand-intelligence/runtime/generate.py
+No organisations qualified by Demand Intelligence yet. Nothing to do.
+[2026-11-21T07:30:11.465221+00:00] Executive Brand Intelligence: SUCCESS after 1 attempt(s), 0.02s
+[2026-11-21T07:30:11.465263+00:00] Delivery Intelligence: attempt 1/3 -> delivery-intelligence/runtime/generate.py
+No engagements at stage 'won' yet in pipeline.json. Nothing to do.
+[2026-11-21T07:30:11.488275+00:00] Delivery Intelligence: SUCCESS after 1 attempt(s), 0.02s
+[2026-11-21T07:30:11.488346+00:00] Company 360: attempt 1/3 -> company-360/runtime/generate.py
+No organisations profiled yet by Demand Intelligence. Nothing to do.
+[2026-11-21T07:30:11.512753+00:00] Company 360: SUCCESS after 1 attempt(s), 0.02s
+[2026-11-21T07:30:11.512807+00:00] Executive Memory: attempt 1/3 -> executive-memory/runtime/generate.py
+Days of CEO Advisor priority history: 111
+Recurring priorities: 1 | Recurring alerts: 1
+Lessons Learned entries: 0 | Recurring governance risks: 0
+Founder-recorded decisions: 0
+Report: AOS/output/executive-memory/2026-11-21-executive-memory-report.md
+[2026-11-21T07:30:11.537708+00:00] Executive Memory: SUCCESS after 1 attempt(s), 0.02s
+[2026-11-21T07:30:11.537758+00:00] Market Positioning Intelligence: attempt 1/3 -> market-positioning-intelligence/runtime/generate.py
+Service demand coverage: 2/10 services validated by real demand
+Regulatory tailwinds: 0 source(s), 0 substantive development(s)
+Lost opportunities on record: 0
+Report: AOS/output/market-positioning-intelligence/2026-11-21-market-positioning-report.md
+[2026-11-21T07:30:11.562654+00:00] Market Positioning Intelligence: SUCCESS after 1 attempt(s), 0.02s
+[2026-11-21T07:30:11.562698+00:00] Capacity Management: attempt 1/3 -> capacity-management/runtime/generate.py
+Capacity status: Available Capacity
+Active engagements: 0 (0-0 days) | Pending proposals: 0 (0-0 days)
+Weeks of committed work at 4 days/week: 0.0-0.0
+Report: AOS/output/capacity-management/2026-11-21-capacity-report.md
+[2026-11-21T07:30:11.587261+00:00] Capacity Management: SUCCESS after 1 attempt(s), 0.02s
+[2026-11-21T07:30:11.587299+00:00] Product Manager: attempt 1/3 -> product-manager/runtime/generate.py
+  prod-0001: [sales-director-pattern] Recurring demand pattern: 2 prepared proposals share the 'AI -> OPERA Module, 29/40 -> candidate
+
+1 signals evaluated. Report: AOS/output/product-manager/2026-11-21-product-manager-report.md
+[2026-11-21T07:30:11.610244+00:00] Product Manager: SUCCESS after 1 attempt(s), 0.02s
+[2026-11-21T07:30:11.610327+00:00] Content Director: attempt 1/3 -> content-director/runtime/generate.py
+No new signals from any source. Nothing to do.
+[2026-11-21T07:30:11.634765+00:00] Content Director: SUCCESS after 1 attempt(s), 0.02s
+[2026-11-21T07:30:11.634829+00:00] Daily Brief: attempt 1/3 -> executive-dashboard/runtime/generate.py
+Executive Dashboard written to /home/runner/work/aiforui-platform/aiforui-platform/AOS/output/executive-dashboard/executive-dashboard.md and /home/runner/work/aiforui-platform/aiforui-platform/AOS/output/executive-dashboard/executive-dashboard.html
+Daily Executive Brief archived to AOS/output/daily-briefs/2026/11/21
+[2026-11-21T07:30:11.673551+00:00] Daily Brief: SUCCESS after 1 attempt(s), 0.04s
+[2026-11-21T07:30:11.673671+00:00] Artifact Registry: attempt 1/3 -> artifact-registry/runtime/registry_builder.py
+Artifact Registry: 1713 artifact(s) indexed across 16 employee(s).
+Index written to AOS/output/artifact-registry/artifact-index.json
+[2026-11-21T07:30:11.844654+00:00] Artifact Registry: SUCCESS after 1 attempt(s), 0.17s
+[2026-11-21T07:30:11.844725+00:00] CEO Advisor: attempt 1/3 -> ceo-advisor/runtime/generate.py
+Top priority: Senior Governance Risk and Compliance Analyst (RainFocus) (Sales Director)
+Revenue winnable today: unestimated; at risk: unestimated
+1 strategic alert(s); 2 item(s) on the ignore list.
+[2026-11-21T07:30:11.888032+00:00] CEO Advisor: SUCCESS after 1 attempt(s), 0.04s
+[2026-11-21T07:30:11.888720+00:00] Run finished: SUCCESS. Report: AOS/output/orchestrator/reports/2026-11-21-daily-execution-report.md

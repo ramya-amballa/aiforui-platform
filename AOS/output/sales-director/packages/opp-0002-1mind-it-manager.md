@@ -1,0 +1,116 @@
+# Sales Director Package — IT Manager (1mind)
+
+**Opportunity:** opp-0002  
+**Classification:** Apply  
+**Prepared:** 2026-11-21  
+**Confidence score:** 50/100  
+**Status:** Needs Review
+
+---
+
+## Opportunity Qualification — Consider (5.6/10)
+
+- **Estimated project value:** USD 7,650 - USD 30,600 (Consulting Project, per day)
+- **Probability of winning:** 4.0/10
+- **Strategic value:** 8.0/10
+- **Brand value:** Not enough signal yet
+- **Repeat business potential:** 5.0/10 — No prior applications on record in CRM
+- **Time investment:** Low — quick to deliver
+- **Competition level:** Not tracked — AOS has no data source for competitor activity on this opportunity.
+
+*Advisory only — this verdict never changes whether a package is prepared; it's a starting judgement for the founder, not a filter.*
+
+---
+
+## Service Mapping
+
+**Primary Service:** AI Governance Operating Model  
+**Recommended Engagement Type:** Advisory engagement  
+**Estimated Project Size:** Large (heuristic-estimate)  
+**Recommended Proposal Template:** `templates/proposals/grc-proposal-template.md`
+
+**Secondary Services:** AI Control Library → Fractional Governance Support → Executive Workshop
+
+**Cross-Sell Opportunities:** Fractional AI Governance Lead; The ADGL Methodology; Executive Capability Overview
+
+---
+
+## Cover Letter
+
+Dear 1mind team,
+
+Reaching out regarding IT Manager at 1mind.
+
+I'm Ramya Amballa, founder of AI for U&I, an independent advisory practice in AI governance, technology risk and GRC. Ramya Amballa spent thirteen years across PwC, Wells Fargo, JPMorgan Chase and Viatris, running enterprise technology risk, cyber risk, GRC, third-party risk and audit readiness programmes across banking, professional services and life sciences.
+
+Based on what's been described, this looks like a strong fit for IT Manager, and I'd welcome the chance to discuss it further.
+
+Ramya
+
+---
+
+## Proposal — IT Manager (1mind)
+
+**Prepared by:** AI for U&I  
+**Date:** 2026-11-21  
+**Reference:** opp-0002
+
+### Situation
+<p style="min-height:1.5em"><strong>Job Title: </strong> IT Manager</p><p style="min-height:1.5em"><strong>Location:</strong><em>This is a fully remote opportunity and can be worked from any location in the United States.</em></p><p style="min-height:1.5em"></p><h2><strong>About Us</strong></h2><p style="min-height:1.5em"><strong>1mind is building the next generation of revenue teams.</strong></p><p style="min-height:1.5em">We are creating a new category of enterprise software: <strong>Autonomous Customer Experience. </strong>Our platform deploys <strong>Superhumans</strong>, go-to-market teammates with a face, a voice, and a GTM brain that serve the buyer across the entire journey with one continuous memory. They engage, demo, onboard, and support in the moments no company could ever staff, so the handoffs disappear and growth stops leaking.</p><p style="min-height:1.5em"><strong>Join us as we define the category and build the platform that powers the next generation of revenue teams. When the buyer wins, the company wins. Every1 Wins.</strong></p><p style="min-height:1.5em"></p><h2><strong>About the Role</strong></h2><p style="min-height:1.5em">Weâre looking for a hands-on IT Manager to manage 1mindâs internal technology, from laptops and logins to software purchases and vendor contracts. Weâre adding people, tools and compliance requirements fast, and this role makes sure everyone has what they need on day one, every dollar we spend on software is the right call, and we stay secure and  continuously audit ready as we scale. This is an individual contributor role, a great fit for a hands-on doer who likes scaling systems and wants real ownership to steward this rocketship to the next level.</p><p style="min-height:1.5em"></p><h2><strong>What Youâll Do</strong></h2><ul style="min-height:1.5em"><li><p style="min-height:1.5em">Be the go-to for all employee IT needs. Scale and run our help desk with a service mindset, and keep policies, runbooks and the knowledge base current</p></li><li><p style="min-height:1.5em">Own the employee IT lifecycle, from devices and day-one access through offboarding. Manage  SSO, SCIM provisioning and least-privilege access across our apps, and fix sync issues as they come up</p></li><li><p style="min-height:1.5em">Manage hardware inventory and core infrastructure, including our identity provider, Google Workspace, MDM and networking</p></li><li><p style="min-height:1.5em">Own every tool from request to retirement. Run evaluations, lead selection in partnership with department leads and stakeholders, negotiate terms with Finance and Legal, then handle deployment, licensing and decommissioning</p></li><li><p style="min-height:1.5em">Keep our vendor register and renewal calendar current so nothing auto-renews by surprise. Cut tools that are redundant, underused or overspending, including on AI/LLM usage</p></li><li><p style="min-height:1.5em">Partner with the GRC team on SOC 2, ISO 27001, ISO 42001, GDPR and CCPA/CPRA. Run vendor security assessments and access reviews, enforce controls like MFA, and support audits and incident response</p></li></ul><p style="min-height:1.5em"></p><h2><strong>What Youâll Bring</strong></h2><ul style="min-height:1.5em"><li><p style="min-height:1.5em">5+ years (or equivalent experience) in IT operations, systems administration or IT management, ideally at a fast-growing SaaS or tech company</p></li><li><p style="min-height:1.5em">Hands-on experience administering an identity provider (SSO and SCIM across many SaaS apps), Google Workspace and an MDM/endpoint platform</p></li><li><p style="min-height:1.5em">A track record of sourcing software, negotiating vendor contracts and managing a SaaS budget</p></li><li><p style="min-height:1.5em">Familiarity with SOC 2 and ISO 27001, and comfort supporting audits with clean evidence and documentation</p></li><li><p style="min-height:1.5em">Strong organization and a service mindset, with the ability to juggle tickets alongside bigger projects and a bias for automating the fix over closing the same ticket twice</p></li><li><p style="min-height:1.5em">Bonus points if youâve used Rippling, SentinelOne, Atlassian, Vanta, or Ramp, if youâve been the first or only IT hire at a startup, or if youâve worked with ISO 42001 or AI governance</p></li></ul><p style="min-height:1.5em"></p><h2><strong>Why Join Us</strong></h2><p style="min-height:1.5em">This is an opportunity to help define a new category at one of the most exciting moments in enterprise AI. Youâll work alongside a team of builders who move quickly, take ownership, and care deeply about solving meaningful problems. If youâre energized by ambiguity, excited to shape whatâs next, and want your work to have an outsized impact, weâd love to meet you!</p><p style="min-height:1.5em">The salary range for this position is <strong>$140,000 to $170,000</strong>. The compensation package for this position also includes stock options and company-paid benefits.</p><p style="min-height:1.5em">1mind's total compensation package is designed to be competitive and includes base salary, equity, and a full range of benefits and perks. Final compensation will depend on factors such as your skills, experience, qualifications, and location, and will be determined during the interview process. The hiring manager will share more details about the full compensation package and benefits as you move through the process.</p><p style="min-height:1.5em">We believe in providing interesting and meaningful work in a supportive and inclusive environment - free from discrimination for everyone without regard to race, color, religion, sex, sexual orientation, national origin, age, disability, gender identity, or veteran status. If you are passionate about learning and excited about what we are doing, then we want to hear from you!</p><p style="min-height:1.5em"></p><p style="min-height:1.5em"></p><p style="min-height:1.5em">[Please note that all legitimate communication from 1mind will come only from email addresses ending in @<a target="_blank" rel="noopener noreferrer nofollow" href="http://1mind.com">1mind.com</a>. We will never ask for payment, financial information, or personal details outside of our official application process. If you receive a suspicious message, please disregard it and alert us at <a target="_blank" rel="noopener noreferrer nofollow" href="mailto:careers@1mind.com"><u>careers@1mind.com</u></a>]</p><p style="min-height:1.5em"></p><p style="min-height:1.5em"><em>We may use artificial intelligence (AI) tools to support parts of the hiring process, such as reviewing applications, analyzing resumes, notetaking, or summarizing responses. These tools assist our recruitment team but do not replace human judgment - all hiring decisions are made by people. If you would like more information about how your data is processed or prefer to opt out of any AI-assisted tools, please let your recruiter know. Opting out will not impact your experience or consideration.</em></p><p style="min-height:1.5em"></p><h3>#LI-Remote</h3><br/><br/>Please mention the word **POWERFULLY** and tag RMTMwLjEzMS4yMzEuMjI1 when applying to show you read the job post completely (#RMTMwLjEzMS4yMzEuMjI1). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.
+
+### Relevant Experience
+- Ramya Amballa spent thirteen years across PwC, Wells Fargo, JPMorgan Chase and Viatris, running enterprise technology risk, cyber risk, GRC, third-party risk and audit readiness programmes across banking, professional services and life sciences.
+- At PwC, she tested controls across 300+ business-critical applications and cut residual risk exposure by 35% in a single programme.
+- At JPMorgan Chase, she ran global KYC and sanctions operations across multiple jurisdictions.
+- She holds NIST AI RMF, CAISR, EU GDPR Practitioner, and Microsoft AI Transformation Leader certifications.
+
+### Approach: OPERA
+Governance decisions are sequenced using the OPERA methodology: Opportunity, People, Evaluation, Response, Assurance.
+
+### Relevant Prior Work
+- **The ADGL Methodology** — The full AI Deployment Governance Lifecycle methodology: five phases, eighteen operational controls, risk scoring, RACI and a twelve-week delivery schedule, for governing an AI deployment before it reaches production.
+- **Executive Capability Overview** — A concise overview of AI for U&I's advisory approach, governance methodology, engagement models, and practitioner experience for executive decision makers.
+- **AI Governance Maturity Framework** — Assess where AI governance actually stands, across ownership, risk evaluation and assurance, built on the OPERA methodology.
+- **AI Governance Decision Playbook** — Use-case risk evaluation, escalation triggers and sign-off criteria for the decisions AI governance actually requires.
+- **DPDP Readiness Briefing** — India's Digital Personal Data Protection Act, framed around the governance decisions it actually requires.
+- **DPDP Compliance Toolkit** — Data processing inventory, consent mapping and accountability structure templates for DPDP compliance.
+- **Governance Operating Model Template** — Document decision rights, ownership and escalation paths for a governance operating model redesign.
+- **Audit Readiness Checklist** — Build continuous audit evidence into day-to-day control operation, so audit becomes validation, not discovery.
+
+### Recommended Pricing
+USD 7,650 - USD 30,600 (Consulting Project, per day)
+*Confirm before sending — this is a starting-point estimate, not a quoted price.*
+
+### Next Steps
+A short scoping call to confirm the details below before any formal engagement begins.
+
+---
+
+## Recruiter Outreach
+
+Not applicable — no recruiter channel identified for this opportunity.
+
+---
+
+## Client Outreach
+
+Hello,
+
+Reaching out regarding IT Manager at 1mind.
+
+I'm Ramya Amballa, founder of AI for U&I. I'd welcome a short call to understand IT Manager in more detail and confirm whether there's a fit before anything formal.
+
+Ramya
+
+---
+
+## Questions to Clarify Scope
+
+- Is this a fixed-scope engagement, an ongoing advisory arrangement, or still an open-ended lead?
+- Is there an existing governance owner or committee today, or would this be the first one?
+- What budget range or rate has already been discussed, if any?
+- What does success look like by the end of this engagement, from your side?
+
+---
+
+*This package is preparation only. Review and send by hand — nothing here is sent automatically.*

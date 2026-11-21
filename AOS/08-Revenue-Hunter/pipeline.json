@@ -39,6 +39,26 @@
       "nextAction": "Leave it, next scheduled touch stands.",
       "nextActionDue": "2026-08-30",
       "expectedCloseDate": null
+    },
+    {
+      "id": "rev-0002",
+      "dateAdded": "2026-11-21",
+      "type": "Consulting Project",
+      "title": "IT Manager",
+      "organisation": "1mind",
+      "sourceRef": "opp-0002",
+      "expectedRevenue": "Not yet estimated",
+      "probabilityOfSuccess": 4.0,
+      "effortRequired": 7.0,
+      "strategicValue": 8.0,
+      "score": 56,
+      "band": "Active",
+      "stage": "identified",
+      "owner": "Ramya",
+      "lastTouch": "2026-11-21",
+      "nextAction": "Leave it, next scheduled touch stands.",
+      "nextActionDue": "2026-11-28",
+      "expectedCloseDate": null
     }
   ]
 }

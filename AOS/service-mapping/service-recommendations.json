@@ -39,6 +39,30 @@
         "The ADGL Methodology",
         "Executive Capability Overview"
       ]
+    },
+    "opp-0002": {
+      "opportunityId": "opp-0002",
+      "title": "IT Manager",
+      "organisation": "1mind",
+      "dateMapped": "2026-11-21",
+      "notApplicable": false,
+      "notApplicableReason": null,
+      "primaryService": "AI Governance Operating Model",
+      "primaryServiceReason": "GRC domainTag",
+      "secondaryServices": [
+        "AI Control Library",
+        "Fractional Governance Support",
+        "Executive Workshop"
+      ],
+      "recommendedEngagementType": "Advisory engagement",
+      "estimatedProjectSize": "Large",
+      "projectSizeBasis": "heuristic-estimate",
+      "recommendedProposalTemplate": "grc-proposal-template.md",
+      "crossSellOpportunities": [
+        "Fractional AI Governance Lead",
+        "The ADGL Methodology",
+        "Executive Capability Overview"
+      ]
     }
   }
 }

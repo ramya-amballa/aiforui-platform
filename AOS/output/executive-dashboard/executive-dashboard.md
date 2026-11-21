@@ -1,6 +1,6 @@
 # AOS Executive Dashboard
 
-**Generated:** 2026-11-20
+**Generated:** 2026-11-21
 
 *Read-only view over `demand-intelligence/opportunity-schema.json`, `08-Revenue-Hunter/pipeline.json` and `06-CRM/company-intelligence.json`. Regenerate with `python3 runtime/generate.py`; do not hand-edit.*
 
@@ -8,9 +8,9 @@
 
 ## Revenue
 
-- **Total pipeline value:** 0 (1 item(s) not yet estimated, excluded)
+- **Total pipeline value:** 0 (2 item(s) not yet estimated, excluded)
 - **Expected revenue (probability-weighted):** 0
-- **Active opportunities:** 1
+- **Active opportunities:** 2
 
 ## Today's Priorities
 
@@ -21,6 +21,7 @@ _No Priority-band candidates yet. Run Demand Intelligence's ingestion workflow t
 ### Top 10 Opportunities
 | Title | Organisation | Score | Classification |
 |---|---|---|---|
+| IT Manager | 1mind | 56 | Apply |
 | Senior Governance Risk and Compliance Analyst | RainFocus | 55 | Apply |
 
 ### Highest ADGL Opportunities
@@ -57,4 +58,4 @@ _No partnership opportunities open._
 
 ## Daily Summary
 
-AI for U&I is tracking 1 active pipeline item(s) worth an estimated 0 (0 probability-weighted), alongside 1 open opportunity in the funnel.
+AI for U&I is tracking 2 active pipeline item(s) worth an estimated 0 (0 probability-weighted), alongside 2 open opportunities in the funnel.

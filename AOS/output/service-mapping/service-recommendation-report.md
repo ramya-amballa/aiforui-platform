@@ -1,6 +1,6 @@
 # Service Recommendation Report
 
-**Date:** 2026-08-23
+**Date:** 2026-11-21
 **Opportunities mapped this run:** 1
 **Not applicable this run:** 0
 
@@ -8,15 +8,15 @@
 
 | Title | Organisation | Primary Service | Engagement Type | Size | Template | Secondary Services |
 |---|---|---|---|---|---|---|
-| Senior Governance Risk and Compliance Analyst | RainFocus | AI Deployment Governance (ADGL) | Advisory engagement | Large (heuristic-estimate) | ai-governance-proposal-template.md | AI Governance Operating Model; AI Control Library; Fractional Governance Support |
+| IT Manager | 1mind | AI Governance Operating Model | Advisory engagement | Large (heuristic-estimate) | grc-proposal-template.md | AI Control Library; Fractional Governance Support; Executive Workshop |
 
 ## Cross-Sell Opportunities
 
-- **Senior Governance Risk and Compliance Analyst** (RainFocus): Executive Workshop; The ADGL Methodology; Executive Capability Overview
+- **IT Manager** (1mind): Fractional AI Governance Lead; The ADGL Methodology; Executive Capability Overview
 
 ## Summary
 
-**By Primary Service:** AI Deployment Governance (ADGL) (1)
+**By Primary Service:** AI Governance Operating Model (1)
 
 **By Engagement Type:** Advisory engagement (1)
 

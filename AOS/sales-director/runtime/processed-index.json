@@ -14,6 +14,15 @@
       "coverLetterPath": "AOS/output/sales-director/packages/opp-0001-rainfocus-senior-governance-risk-and-compliance-analyst-cover-letter.md",
       "recruiterMessagePath": "AOS/output/sales-director/packages/opp-0001-rainfocus-senior-governance-risk-and-compliance-analyst-recruiter-message.md",
       "clientOutreachPath": "AOS/output/sales-director/packages/opp-0001-rainfocus-senior-governance-risk-and-compliance-analyst-client-outreach.md"
+    },
+    "opp-0002": {
+      "datePrepared": "2026-11-21",
+      "status": "Needs Review",
+      "packagePath": "AOS/output/sales-director/packages/opp-0002-1mind-it-manager.md",
+      "proposalPath": "AOS/output/sales-director/packages/opp-0002-1mind-it-manager-proposal.md",
+      "coverLetterPath": "AOS/output/sales-director/packages/opp-0002-1mind-it-manager-cover-letter.md",
+      "recruiterMessagePath": "AOS/output/sales-director/packages/opp-0002-1mind-it-manager-recruiter-message.md",
+      "clientOutreachPath": "AOS/output/sales-director/packages/opp-0002-1mind-it-manager-client-outreach.md"
     }
   }
 }

@@ -23,6 +23,19 @@
       "coverLetterPath": "AOS/output/sales-director/packages/opp-0001-rainfocus-senior-governance-risk-and-compliance-analyst-cover-letter.md",
       "recruiterMessagePath": "AOS/output/sales-director/packages/opp-0001-rainfocus-senior-governance-risk-and-compliance-analyst-recruiter-message.md",
       "clientOutreachPath": "AOS/output/sales-director/packages/opp-0001-rainfocus-senior-governance-risk-and-compliance-analyst-client-outreach.md"
+    },
+    {
+      "opportunityId": "opp-0002",
+      "title": "IT Manager",
+      "organisation": "1mind",
+      "status": "Needs Review",
+      "qualificationVerdict": "Consider",
+      "qualificationScore": 5.6,
+      "packagePath": "AOS/output/sales-director/packages/opp-0002-1mind-it-manager.md",
+      "proposalPath": "AOS/output/sales-director/packages/opp-0002-1mind-it-manager-proposal.md",
+      "coverLetterPath": "AOS/output/sales-director/packages/opp-0002-1mind-it-manager-cover-letter.md",
+      "recruiterMessagePath": "AOS/output/sales-director/packages/opp-0002-1mind-it-manager-recruiter-message.md",
+      "clientOutreachPath": "AOS/output/sales-director/packages/opp-0002-1mind-it-manager-client-outreach.md"
     }
   ]
 }

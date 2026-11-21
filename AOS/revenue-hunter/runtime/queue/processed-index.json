@@ -4,7 +4,8 @@
     "addedFromCrm": "array of CRM companyName values already admitted as upsell/renewal candidates"
   },
   "addedFromOpportunities": [
-    "opp-0001"
+    "opp-0001",
+    "opp-0002"
   ],
   "addedFromCrm": []
 }

@@ -5,6 +5,8 @@
     "processedContentSignals": "array of content-director content-queue ids already evaluated"
   },
   "processedOpportunities": [],
-  "processedPatterns": [],
+  "processedPatterns": [
+    "sd-pattern-AI Governance"
+  ],
   "processedContentSignals": []
 }
