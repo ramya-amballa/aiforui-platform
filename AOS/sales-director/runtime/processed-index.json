@@ -23,6 +23,15 @@
       "coverLetterPath": "AOS/output/sales-director/packages/opp-0002-1mind-it-manager-cover-letter.md",
       "recruiterMessagePath": "AOS/output/sales-director/packages/opp-0002-1mind-it-manager-recruiter-message.md",
       "clientOutreachPath": "AOS/output/sales-director/packages/opp-0002-1mind-it-manager-client-outreach.md"
+    },
+    "opp-0003": {
+      "datePrepared": "2026-11-22",
+      "status": "Needs Review",
+      "packagePath": "AOS/output/sales-director/packages/opp-0003-carrot-sr-security-operations-manager.md",
+      "proposalPath": "AOS/output/sales-director/packages/opp-0003-carrot-sr-security-operations-manager-proposal.md",
+      "coverLetterPath": "AOS/output/sales-director/packages/opp-0003-carrot-sr-security-operations-manager-cover-letter.md",
+      "recruiterMessagePath": "AOS/output/sales-director/packages/opp-0003-carrot-sr-security-operations-manager-recruiter-message.md",
+      "clientOutreachPath": "AOS/output/sales-director/packages/opp-0003-carrot-sr-security-operations-manager-client-outreach.md"
     }
   }
 }

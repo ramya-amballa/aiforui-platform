@@ -53,11 +53,31 @@
       "strategicValue": 8.0,
       "score": 56,
       "band": "Active",
-      "stage": "identified",
+      "stage": "in-progress",
       "owner": "Ramya",
       "lastTouch": "2026-11-21",
       "nextAction": "Leave it, next scheduled touch stands.",
       "nextActionDue": "2026-11-28",
+      "expectedCloseDate": null
+    },
+    {
+      "id": "rev-0003",
+      "dateAdded": "2026-11-22",
+      "type": "Consulting Project",
+      "title": "Sr. Security Operations Manager",
+      "organisation": "Carrot",
+      "sourceRef": "opp-0003",
+      "expectedRevenue": "Not yet estimated",
+      "probabilityOfSuccess": 4.0,
+      "effortRequired": 7.0,
+      "strategicValue": 10.0,
+      "score": 58,
+      "band": "Active",
+      "stage": "identified",
+      "owner": "Ramya",
+      "lastTouch": "2026-11-22",
+      "nextAction": "Leave it, next scheduled touch stands.",
+      "nextActionDue": "2026-11-29",
       "expectedCloseDate": null
     }
   ]

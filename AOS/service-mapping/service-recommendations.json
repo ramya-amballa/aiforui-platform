@@ -63,6 +63,30 @@
         "The ADGL Methodology",
         "Executive Capability Overview"
       ]
+    },
+    "opp-0003": {
+      "opportunityId": "opp-0003",
+      "title": "Sr. Security Operations Manager",
+      "organisation": "Carrot",
+      "dateMapped": "2026-11-22",
+      "notApplicable": false,
+      "notApplicableReason": null,
+      "primaryService": "AI Deployment Governance (ADGL)",
+      "primaryServiceReason": "ADGL/AI Deployment Governance domainTag",
+      "secondaryServices": [
+        "AI Governance Operating Model",
+        "AI Control Library",
+        "Fractional Governance Support"
+      ],
+      "recommendedEngagementType": "Advisory engagement",
+      "estimatedProjectSize": "Large",
+      "projectSizeBasis": "heuristic-estimate",
+      "recommendedProposalTemplate": "technology-risk-proposal-template.md",
+      "crossSellOpportunities": [
+        "Executive Workshop",
+        "The ADGL Methodology",
+        "Executive Capability Overview"
+      ]
     }
   }
 }

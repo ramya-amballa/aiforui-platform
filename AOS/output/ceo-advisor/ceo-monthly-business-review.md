@@ -1,11 +1,11 @@
 # CEO Monthly Business Review
 
-**Generated:** 2026-11-21
+**Generated:** 2026-11-22
 **Window:** trailing 30 days, regenerated every run
 
-**Opportunities found this period:** 1
+**Opportunities found this period:** 2
 
-**By classification:** Apply (1)
+**By classification:** Apply (2)
 
 **Total open pipeline value:** unestimated
 

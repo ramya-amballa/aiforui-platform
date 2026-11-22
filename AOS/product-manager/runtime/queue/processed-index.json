@@ -6,7 +6,10 @@
   },
   "processedOpportunities": [],
   "processedPatterns": [
-    "sd-pattern-AI Governance"
+    "sd-pattern-AI Governance",
+    "sd-pattern-ADGL",
+    "sd-pattern-AI Deployment Governance",
+    "sd-pattern-GRC"
   ],
   "processedContentSignals": []
 }

@@ -1,6 +1,6 @@
 # CEO Daily Report
 
-**Date:** 2026-11-21
+**Date:** 2026-11-22
 
 ## Executive Summary
 
@@ -22,6 +22,14 @@ Today's highest-value action is Senior Governance Risk and Compliance Analyst (R
 **Evidence:** Prepared proposal package, status Needs Review  
 **Score:** 3.60 (value 3.0/10 x urgency 1.2, effort 7.0/10)  
 **Recommended Service (Service Mapping Engine):** AI Governance Operating Model — template `grc-proposal-template.md`  
+**Why this outranks the next priority:** scores 3.60 vs 3.60 for "Sr. Security Operations Manager (Carrot)" (Sales Director) — equal value, lower effort
+
+### 3. Sr. Security Operations Manager (Carrot)
+
+**Source:** Sales Director (`output/sales-director/ceo-advisor-feed.json`)  
+**Evidence:** Prepared proposal package, status Needs Review  
+**Score:** 3.60 (value 3.0/10 x urgency 1.2, effort 7.0/10)  
+**Recommended Service (Service Mapping Engine):** AI Deployment Governance (ADGL) — template `technology-risk-proposal-template.md`  
 **Why this outranks the next priority:** the only remaining candidate today
 
 ## Top 10 Organizations This Week
@@ -47,7 +55,7 @@ _Nothing to recommend today — Executive Brand Intelligence may not have run ye
 
 ## Artifact Registry
 
-**1713 artifact(s)** indexed across 16 employee(s) — last built 2026-11-21T07:30:11.818023+00:00.
+**1736 artifact(s)** indexed across 16 employee(s) — last built 2026-11-22T07:11:22.519183+00:00.
 
 ## Revenue Impact
 
@@ -65,6 +73,7 @@ Explicitly not worth today's time:
 
 - **Senior Governance Risk and Compliance Analyst (RainFocus)** — Needs Review status — confirm scope before investing further preparation time (source: Sales Director (output/sales-director/ceo-advisor-feed.json))
 - **IT Manager (1mind)** — Needs Review status — confirm scope before investing further preparation time (source: Sales Director (output/sales-director/ceo-advisor-feed.json))
+- **Sr. Security Operations Manager (Carrot)** — Needs Review status — confirm scope before investing further preparation time (source: Sales Director (output/sales-director/ceo-advisor-feed.json))
 
 ## Weekly Strategic Recommendation
 

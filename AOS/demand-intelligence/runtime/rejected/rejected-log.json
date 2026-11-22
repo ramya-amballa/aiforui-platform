@@ -4684,6 +4684,538 @@
       "relevanceScore": 0,
       "categoriesMatched": [],
       "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0353",
+      "dateRejected": "2026-11-22",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Revenue Operations Leader, Strategy & Planning",
+      "organisation": "Contentstack",
+      "url": "https://remoteOK.com/remote-jobs/remote-revenue-operations-leader-strategy-planning-contentstack-1137951",
+      "relevanceScore": 15,
+      "categoriesMatched": [
+        "companyIndustry",
+        "governanceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: companyIndustry, governanceContext; no penalties)."
+    },
+    {
+      "id": "rej-0354",
+      "dateRejected": "2026-11-22",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "VP, Customer Experience Operations",
+      "organisation": "Ping Identity",
+      "url": "https://remoteOK.com/remote-jobs/remote-vp-customer-experience-operations-ping-identity-1137949",
+      "relevanceScore": 13,
+      "categoriesMatched": [
+        "companyIndustry",
+        "cybersecurityContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: companyIndustry, cybersecurityContext; no penalties)."
+    },
+    {
+      "id": "rej-0355",
+      "dateRejected": "2026-11-22",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Senior Software Engineer - Behavioral Security Products",
+      "organisation": "Abnormal",
+      "url": "https://remoteOK.com/remote-jobs/remote-senior-software-engineer-behavioral-security-products-abnormal-1137948",
+      "relevanceScore": 8,
+      "categoriesMatched": [
+        "cybersecurityContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: cybersecurityContext; no penalties)."
+    },
+    {
+      "id": "rej-0356",
+      "dateRejected": "2026-11-22",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Principal Software Engineer, Infrastructure",
+      "organisation": "Reddit",
+      "url": "https://remoteOK.com/remote-jobs/remote-principal-software-engineer-infrastructure-reddit-1137945",
+      "relevanceScore": 0,
+      "categoriesMatched": [
+        "aiContext",
+        "companyIndustry"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: aiContext, companyIndustry; Healthcare role penalty (-20); HR role penalty (-20); Isolated weak-keyword penalty (-15))."
+    },
+    {
+      "id": "rej-0357",
+      "dateRejected": "2026-11-22",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Enterprise Performance Lead",
+      "organisation": "Clover Health",
+      "url": "https://remoteOK.com/remote-jobs/remote-enterprise-performance-lead-clover-health-1137944",
+      "relevanceScore": 18,
+      "categoriesMatched": [
+        "consultingContext",
+        "governanceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: consultingContext, governanceContext; no penalties)."
+    },
+    {
+      "id": "rej-0358",
+      "dateRejected": "2026-11-22",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Sr. Technology Partner Director, Product Partnerships",
+      "organisation": "Databricks",
+      "url": "https://remoteOK.com/remote-jobs/remote-sr-technology-partner-director-product-partnerships-databricks-1137941",
+      "relevanceScore": 25,
+      "categoriesMatched": [
+        "companyIndustry",
+        "complianceContext",
+        "governanceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: companyIndustry, complianceContext, governanceContext; no penalties)."
+    },
+    {
+      "id": "rej-0359",
+      "dateRejected": "2026-11-22",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Lead, Office of Software Assurance",
+      "organisation": "Natera",
+      "url": "https://remoteOK.com/remote-jobs/remote-lead-office-of-software-assurance-natera-1137940",
+      "relevanceScore": 38,
+      "categoriesMatched": [
+        "complianceContext",
+        "cybersecurityContext",
+        "governanceContext",
+        "roleResponsibilities"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: complianceContext, cybersecurityContext, governanceContext, roleResponsibilities; no penalties)."
+    },
+    {
+      "id": "rej-0360",
+      "dateRejected": "2026-11-22",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Medical Science Liaison - Breast Oncology",
+      "organisation": "Natera",
+      "url": "https://remoteOK.com/remote-jobs/remote-medical-science-liaison-breast-oncology-natera-1137939",
+      "relevanceScore": 18,
+      "categoriesMatched": [
+        "complianceContext",
+        "consultingContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: complianceContext, consultingContext; no penalties)."
+    },
+    {
+      "id": "rej-0361",
+      "dateRejected": "2026-11-22",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Business Services Assistant",
+      "organisation": "Ping Identity",
+      "url": "https://remoteOK.com/remote-jobs/remote-business-services-assistant-ping-identity-1137936",
+      "relevanceScore": 18,
+      "categoriesMatched": [
+        "complianceContext",
+        "cybersecurityContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: complianceContext, cybersecurityContext; no penalties)."
+    },
+    {
+      "id": "rej-0362",
+      "dateRejected": "2026-11-22",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "In-Home Care Admin Coordinator",
+      "organisation": "Clover Health",
+      "url": "https://remoteOK.com/remote-jobs/remote-in-home-care-admin-coordinator-clover-health-1137934",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0363",
+      "dateRejected": "2026-11-22",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Associate Counsel, Vendor and Provider Contracting",
+      "organisation": "Clover Health",
+      "url": "https://remoteOK.com/remote-jobs/remote-associate-counsel-vendor-and-provider-contracting-clover-health-1137933",
+      "relevanceScore": 47,
+      "categoriesMatched": [
+        "aiContext",
+        "companyIndustry",
+        "complianceContext",
+        "consultingContext",
+        "cybersecurityContext",
+        "governanceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: aiContext, companyIndustry, complianceContext, consultingContext, cybersecurityContext, governanceContext; no penalties)."
+    },
+    {
+      "id": "rej-0364",
+      "dateRejected": "2026-11-22",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Senior Staff Machine Learning Engineer, Ads Ranking",
+      "organisation": "Reddit",
+      "url": "https://remoteOK.com/remote-jobs/remote-senior-staff-machine-learning-engineer-ads-ranking-reddit-1137932",
+      "relevanceScore": 0,
+      "categoriesMatched": [
+        "aiContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: aiContext; Healthcare role penalty (-20); HR role penalty (-20); Isolated weak-keyword penalty (-15))."
+    },
+    {
+      "id": "rej-0365",
+      "dateRejected": "2026-11-22",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Sr. Product Marketing Manager, Secrets Manager",
+      "organisation": "Bitwarden",
+      "url": "https://remoteOK.com/remote-jobs/remote-sr-product-marketing-manager-secrets-manager-bitwarden-1137931",
+      "relevanceScore": 8,
+      "categoriesMatched": [
+        "cybersecurityContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: cybersecurityContext; no penalties)."
+    },
+    {
+      "id": "rej-0366",
+      "dateRejected": "2026-11-22",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Senior Product Design Manager",
+      "organisation": "LastPass",
+      "url": "https://remoteOK.com/remote-jobs/remote-senior-product-design-manager-lastpass-1137928",
+      "relevanceScore": 10,
+      "categoriesMatched": [
+        "governanceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: governanceContext; no penalties)."
+    },
+    {
+      "id": "rej-0367",
+      "dateRejected": "2026-11-22",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Manager, Product Design",
+      "organisation": "Carrot",
+      "url": "https://remoteOK.com/remote-jobs/remote-manager-product-design-carrot-1137927",
+      "relevanceScore": 0,
+      "categoriesMatched": [
+        "complianceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: complianceContext; Healthcare role penalty (-20); HR role penalty (-20))."
+    },
+    {
+      "id": "rej-0368",
+      "dateRejected": "2026-11-22",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Staff Scientist, Machine Learning (Genomics)",
+      "organisation": "Natera",
+      "url": "https://remoteOK.com/remote-jobs/remote-staff-scientist-machine-learning-genomics-natera-1137926",
+      "relevanceScore": 16,
+      "categoriesMatched": [
+        "aiContext",
+        "roleResponsibilities"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: aiContext, roleResponsibilities; no penalties)."
+    },
+    {
+      "id": "rej-0369",
+      "dateRejected": "2026-11-22",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Senior Software Engineer II - Agentic Intelligence",
+      "organisation": "Honeycomb.io",
+      "url": "https://remoteOK.com/remote-jobs/remote-senior-software-engineer-ii-agentic-intelligence-honeycomb-io-1137924",
+      "relevanceScore": 32,
+      "categoriesMatched": [
+        "complianceContext",
+        "governanceContext",
+        "llm",
+        "rag"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: complianceContext, governanceContext, llm, rag; no penalties)."
+    },
+    {
+      "id": "rej-0370",
+      "dateRejected": "2026-11-22",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Technical Solutions Engineer",
+      "organisation": "Stripe",
+      "url": "https://remoteOK.com/remote-jobs/remote-technical-solutions-engineer-stripe-1137922",
+      "relevanceScore": 17,
+      "categoriesMatched": [
+        "companyIndustry",
+        "llm",
+        "rag"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: companyIndustry, llm, rag; no penalties)."
+    },
+    {
+      "id": "rej-0371",
+      "dateRejected": "2026-11-22",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Global Account Manager, Strategics  (NY/NJ)",
+      "organisation": "Everpure",
+      "url": "https://remoteOK.com/remote-jobs/remote-global-account-manager-strategics-ny-nj-everpure-1137921",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0372",
+      "dateRejected": "2026-11-22",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Senior Pre-Sales Systems Engineer, Federal Civilian",
+      "organisation": "Everpure",
+      "url": "https://remoteOK.com/remote-jobs/remote-senior-pre-sales-systems-engineer-federal-civilian-everpure-1137920",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0373",
+      "dateRejected": "2026-11-22",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Business Development Representative, Financial Services - UKI",
+      "organisation": "GitLab",
+      "url": "https://remoteOK.com/remote-jobs/remote-business-development-representative-financial-services-uki-gitlab-1137919",
+      "relevanceScore": 0,
+      "categoriesMatched": [
+        "companyIndustry",
+        "complianceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: companyIndustry, complianceContext; HR role penalty (-20))."
+    },
+    {
+      "id": "rej-0374",
+      "dateRejected": "2026-11-22",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Regional MSP Partner Manager, Germany",
+      "organisation": "Everpure",
+      "url": "https://remoteOK.com/remote-jobs/remote-regional-msp-partner-manager-germany-everpure-1137918",
+      "relevanceScore": 10,
+      "categoriesMatched": [
+        "governanceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: governanceContext; no penalties)."
+    },
+    {
+      "id": "rej-0375",
+      "dateRejected": "2026-11-22",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Senior Applied AI Engineer",
+      "organisation": "Wemolo",
+      "url": "https://remoteOK.com/remote-jobs/remote-senior-applied-ai-engineer-wemolo-1137917",
+      "relevanceScore": 26,
+      "categoriesMatched": [
+        "aiContext",
+        "consultingContext",
+        "llm",
+        "rag"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: aiContext, consultingContext, llm, rag; no penalties)."
+    },
+    {
+      "id": "rej-0376",
+      "dateRejected": "2026-11-22",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "New Business Account Executive - Nordics",
+      "organisation": "GitLab",
+      "url": "https://remoteOK.com/remote-jobs/remote-new-business-account-executive-nordics-gitlab-1137915",
+      "relevanceScore": 0,
+      "categoriesMatched": [
+        "complianceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: complianceContext; HR role penalty (-20))."
+    },
+    {
+      "id": "rej-0377",
+      "dateRejected": "2026-11-22",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Account Director",
+      "organisation": "Princeton10",
+      "url": "https://remoteOK.com/remote-jobs/remote-account-director-princeton10-1137913",
+      "relevanceScore": 0,
+      "categoriesMatched": [
+        "complianceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: complianceContext; Healthcare role penalty (-20))."
+    },
+    {
+      "id": "rej-0378",
+      "dateRejected": "2026-11-22",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Inside Sales Specialist-Temp",
+      "organisation": "Natera",
+      "url": "https://remoteOK.com/remote-jobs/remote-inside-sales-specialist-temp-natera-1137911",
+      "relevanceScore": 0,
+      "categoriesMatched": [
+        "complianceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: complianceContext; Healthcare role penalty (-20); HR role penalty (-20))."
+    },
+    {
+      "id": "rej-0379",
+      "dateRejected": "2026-11-22",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "SEA P2P Business Development Specialist",
+      "organisation": "Bybit",
+      "url": "https://remoteOK.com/remote-jobs/remote-sea-p2p-business-development-specialist-bybit-1137910",
+      "relevanceScore": 15,
+      "categoriesMatched": [
+        "companyIndustry",
+        "complianceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: companyIndustry, complianceContext; no penalties)."
+    },
+    {
+      "id": "rej-0380",
+      "dateRejected": "2026-11-22",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Customer Success Manager",
+      "organisation": "Salsify",
+      "url": "https://remoteOK.com/remote-jobs/remote-customer-success-manager-salsify-1137909",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0381",
+      "dateRejected": "2026-11-22",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Global Tax Manager",
+      "organisation": "Ensono",
+      "url": "https://remoteOK.com/remote-jobs/remote-global-tax-manager-ensono-1137907",
+      "relevanceScore": 16,
+      "categoriesMatched": [
+        "complianceContext",
+        "llm"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: complianceContext, llm; no penalties)."
+    },
+    {
+      "id": "rej-0382",
+      "dateRejected": "2026-11-22",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Senior Sales Engineer",
+      "organisation": "Natera",
+      "url": "https://remoteOK.com/remote-jobs/remote-senior-sales-engineer-natera-1137906",
+      "relevanceScore": 0,
+      "categoriesMatched": [
+        "complianceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: complianceContext; Healthcare role penalty (-20); HR role penalty (-20))."
+    },
+    {
+      "id": "rej-0383",
+      "dateRejected": "2026-11-22",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Senior Associate, Finance and Accounting Operations",
+      "organisation": "Ensono",
+      "url": "https://remoteOK.com/remote-jobs/remote-senior-associate-finance-and-accounting-operations-ensono-1137905",
+      "relevanceScore": 0,
+      "categoriesMatched": [
+        "complianceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: complianceContext; Healthcare role penalty (-20))."
+    },
+    {
+      "id": "rej-0384",
+      "dateRejected": "2026-11-22",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Data Strategy Operations Manager",
+      "organisation": "Abnormal",
+      "url": "https://remoteOK.com/remote-jobs/remote-data-strategy-operations-manager-abnormal-1137903",
+      "relevanceScore": 26,
+      "categoriesMatched": [
+        "complianceContext",
+        "governanceContext",
+        "llm"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: complianceContext, governanceContext, llm; no penalties)."
+    },
+    {
+      "id": "rej-0385",
+      "dateRejected": "2026-11-22",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Sr Sales Ops Analyst",
+      "organisation": "BeyondTrust",
+      "url": "https://remoteOK.com/remote-jobs/remote-sr-sales-ops-analyst-beyondtrust-1137902",
+      "relevanceScore": 18,
+      "categoriesMatched": [
+        "complianceContext",
+        "cybersecurityContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: complianceContext, cybersecurityContext; no penalties)."
+    },
+    {
+      "id": "rej-0386",
+      "dateRejected": "2026-11-22",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Senior Product Architect",
+      "organisation": "Storyblok",
+      "url": "https://remoteOK.com/remote-jobs/remote-senior-product-architect-storyblok-1137900",
+      "relevanceScore": 10,
+      "categoriesMatched": [
+        "complianceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: complianceContext; no penalties)."
+    },
+    {
+      "id": "rej-0387",
+      "dateRejected": "2026-11-22",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Security Analyst - Governance, Risk, and Compliance",
+      "organisation": "LaunchDarkly",
+      "url": "https://remoteOK.com/remote-jobs/remote-security-analyst-governance-risk-and-compliance-launchdarkly-1137898",
+      "relevanceScore": 41,
+      "categoriesMatched": [
+        "companyIndustry",
+        "complianceContext",
+        "cybersecurityContext",
+        "governanceContext",
+        "requiredSkills"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: companyIndustry, complianceContext, cybersecurityContext, governanceContext, requiredSkills; no penalties)."
+    },
+    {
+      "id": "rej-0388",
+      "dateRejected": "2026-11-22",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Staff Security Engineer - AppSec",
+      "organisation": "6sense",
+      "url": "https://remoteOK.com/remote-jobs/remote-staff-security-engineer-appsec-6sense-1137897",
+      "relevanceScore": 16,
+      "categoriesMatched": [
+        "cybersecurityContext",
+        "requiredSkills"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: cybersecurityContext, requiredSkills; no penalties)."
     }
   ]
 }

@@ -1,6 +1,6 @@
 # Revenue Dashboard
 
-**Date:** 2026-11-21
+**Date:** 2026-11-22
 
 ## Pipeline at a Glance
 
@@ -8,19 +8,19 @@
 |---|---|---|
 | Identified | 1 | 0 |
 | Qualified | 0 | 0 |
-| In Progress | 1 | 0 |
+| In Progress | 2 | 0 |
 | Won (this quarter) | 0 | 0 |
 | Lost (this quarter) | 0 | 0 |
 | Deferred | 0 | 0 |
 
 **Total weighted pipeline value:** 0  
-**Items pending a revenue estimate:** 2
+**Items pending a revenue estimate:** 3
 
 ## By Revenue Type (Service Line Performance)
 
 | Type | Open Items | Weighted Value |
 |---|---|---|
-| Consulting Project | 2 | 0 |
+| Consulting Project | 3 | 0 |
 | Enterprise Contract | 0 | 0 |
 | Workshop | 0 | 0 |
 | Speaking Engagement | 0 | 0 |

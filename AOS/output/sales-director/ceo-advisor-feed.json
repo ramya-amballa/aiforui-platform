@@ -36,6 +36,19 @@
       "coverLetterPath": "AOS/output/sales-director/packages/opp-0002-1mind-it-manager-cover-letter.md",
       "recruiterMessagePath": "AOS/output/sales-director/packages/opp-0002-1mind-it-manager-recruiter-message.md",
       "clientOutreachPath": "AOS/output/sales-director/packages/opp-0002-1mind-it-manager-client-outreach.md"
+    },
+    {
+      "opportunityId": "opp-0003",
+      "title": "Sr. Security Operations Manager",
+      "organisation": "Carrot",
+      "status": "Needs Review",
+      "qualificationVerdict": "Consider",
+      "qualificationScore": 6.0,
+      "packagePath": "AOS/output/sales-director/packages/opp-0003-carrot-sr-security-operations-manager.md",
+      "proposalPath": "AOS/output/sales-director/packages/opp-0003-carrot-sr-security-operations-manager-proposal.md",
+      "coverLetterPath": "AOS/output/sales-director/packages/opp-0003-carrot-sr-security-operations-manager-cover-letter.md",
+      "recruiterMessagePath": "AOS/output/sales-director/packages/opp-0003-carrot-sr-security-operations-manager-recruiter-message.md",
+      "clientOutreachPath": "AOS/output/sales-director/packages/opp-0003-carrot-sr-security-operations-manager-client-outreach.md"
     }
   ]
 }

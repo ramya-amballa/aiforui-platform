@@ -1,6 +1,6 @@
 # Service Recommendation Report
 
-**Date:** 2026-11-21
+**Date:** 2026-11-22
 **Opportunities mapped this run:** 1
 **Not applicable this run:** 0
 
@@ -8,15 +8,15 @@
 
 | Title | Organisation | Primary Service | Engagement Type | Size | Template | Secondary Services |
 |---|---|---|---|---|---|---|
-| IT Manager | 1mind | AI Governance Operating Model | Advisory engagement | Large (heuristic-estimate) | grc-proposal-template.md | AI Control Library; Fractional Governance Support; Executive Workshop |
+| Sr. Security Operations Manager | Carrot | AI Deployment Governance (ADGL) | Advisory engagement | Large (heuristic-estimate) | technology-risk-proposal-template.md | AI Governance Operating Model; AI Control Library; Fractional Governance Support |
 
 ## Cross-Sell Opportunities
 
-- **IT Manager** (1mind): Fractional AI Governance Lead; The ADGL Methodology; Executive Capability Overview
+- **Sr. Security Operations Manager** (Carrot): Executive Workshop; The ADGL Methodology; Executive Capability Overview
 
 ## Summary
 
-**By Primary Service:** AI Governance Operating Model (1)
+**By Primary Service:** AI Deployment Governance (ADGL) (1)
 
 **By Engagement Type:** Advisory engagement (1)
 

@@ -23,6 +23,42 @@
       "revenueOrLeadPotential": "Clear lead-gen or revenue role (grounded in a real qualified signal).",
       "owner": "",
       "notes": "Evaluated by Product Manager Runtime v1.0 on 2026-11-21. Demand 8/10, Build effort 8/10, Differentiation 6/10, Revenue 7/10 = 29/40."
+    },
+    {
+      "id": "prod-0002",
+      "dateAdded": "2026-11-22",
+      "signalSource": "Sales Director",
+      "signalDescription": "Recurring demand pattern: 2 prepared proposals share the 'ADGL' domain",
+      "proposedFormat": "ADGL Extension",
+      "score": 29,
+      "status": "candidate",
+      "revenueOrLeadPotential": "Clear lead-gen or revenue role (grounded in a real qualified signal).",
+      "owner": "",
+      "notes": "Evaluated by Product Manager Runtime v1.0 on 2026-11-22. Demand 8/10, Build effort 8/10, Differentiation 6/10, Revenue 7/10 = 29/40."
+    },
+    {
+      "id": "prod-0003",
+      "dateAdded": "2026-11-22",
+      "signalSource": "Sales Director",
+      "signalDescription": "Recurring demand pattern: 2 prepared proposals share the 'AI Deployment Governance' domain",
+      "proposedFormat": "OPERA Module",
+      "score": 29,
+      "status": "candidate",
+      "revenueOrLeadPotential": "Clear lead-gen or revenue role (grounded in a real qualified signal).",
+      "owner": "",
+      "notes": "Evaluated by Product Manager Runtime v1.0 on 2026-11-22. Demand 8/10, Build effort 8/10, Differentiation 6/10, Revenue 7/10 = 29/40."
+    },
+    {
+      "id": "prod-0004",
+      "dateAdded": "2026-11-22",
+      "signalSource": "Sales Director",
+      "signalDescription": "Recurring demand pattern: 2 prepared proposals share the 'GRC' domain",
+      "proposedFormat": "OPERA Module",
+      "score": 29,
+      "status": "candidate",
+      "revenueOrLeadPotential": "Clear lead-gen or revenue role (grounded in a real qualified signal).",
+      "owner": "",
+      "notes": "Evaluated by Product Manager Runtime v1.0 on 2026-11-22. Demand 8/10, Build effort 8/10, Differentiation 6/10, Revenue 7/10 = 29/40."
     }
   ]
 }
