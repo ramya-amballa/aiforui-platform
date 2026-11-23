@@ -1,6 +1,6 @@
 # CEO Daily Report
 
-**Date:** 2026-11-22
+**Date:** 2026-11-23
 
 ## Executive Summary
 
@@ -55,7 +55,7 @@ _Nothing to recommend today — Executive Brand Intelligence may not have run ye
 
 ## Artifact Registry
 
-**1736 artifact(s)** indexed across 16 employee(s) — last built 2026-11-22T07:11:22.519183+00:00.
+**1750 artifact(s)** indexed across 16 employee(s) — last built 2026-11-23T07:57:10.713089+00:00.
 
 ## Revenue Impact
 

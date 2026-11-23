@@ -1,14 +1,14 @@
 # Revenue Dashboard
 
-**Date:** 2026-11-22
+**Date:** 2026-11-23
 
 ## Pipeline at a Glance
 
 | Stage | Count | Weighted Value |
 |---|---|---|
-| Identified | 1 | 0 |
+| Identified | 0 | 0 |
 | Qualified | 0 | 0 |
-| In Progress | 2 | 0 |
+| In Progress | 3 | 0 |
 | Won (this quarter) | 0 | 0 |
 | Lost (this quarter) | 0 | 0 |
 | Deferred | 0 | 0 |
@@ -40,7 +40,7 @@
 
 | Item | Organisation | Last Touch | Days Stalled |
 |---|---|---|---|
-| Senior Governance Risk and Compliance Analyst | RainFocus | 2026-08-23 | 65 |
+| Senior Governance Risk and Compliance Analyst | RainFocus | 2026-08-23 | 66 |
 
 ## Won / Lost This Week
 

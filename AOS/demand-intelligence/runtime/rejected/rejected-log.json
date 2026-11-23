@@ -5216,6 +5216,218 @@
         "requiredSkills"
       ],
       "reason": "Weak/insufficient relevance signal (matched: cybersecurityContext, requiredSkills; no penalties)."
+    },
+    {
+      "id": "rej-0389",
+      "dateRejected": "2026-11-23",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "DRG Inpatient Coding Validator",
+      "organisation": "Clover Health",
+      "url": "https://remoteOK.com/remote-jobs/remote-drg-inpatient-coding-validator-clover-health-1137973",
+      "relevanceScore": 20,
+      "categoriesMatched": [
+        "complianceContext",
+        "roleResponsibilities"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: complianceContext, roleResponsibilities; no penalties)."
+    },
+    {
+      "id": "rej-0390",
+      "dateRejected": "2026-11-23",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "DRG Validation Auditor",
+      "organisation": "Clover Health",
+      "url": "https://remoteOK.com/remote-jobs/remote-drg-validation-auditor-clover-health-1137972",
+      "relevanceScore": 20,
+      "categoriesMatched": [
+        "complianceContext",
+        "roleResponsibilities"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: complianceContext, roleResponsibilities; no penalties)."
+    },
+    {
+      "id": "rej-0391",
+      "dateRejected": "2026-11-23",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Sr. Forward Deployed Data Engineer",
+      "organisation": "Natera",
+      "url": "https://remoteOK.com/remote-jobs/remote-sr-forward-deployed-data-engineer-natera-1137970",
+      "relevanceScore": 32,
+      "categoriesMatched": [
+        "complianceContext",
+        "governanceContext",
+        "llm",
+        "rag"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: complianceContext, governanceContext, llm, rag; no penalties)."
+    },
+    {
+      "id": "rej-0392",
+      "dateRejected": "2026-11-23",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Senior Clinical Trials Systems Manager",
+      "organisation": "Natera",
+      "url": "https://remoteOK.com/remote-jobs/remote-senior-clinical-trials-systems-manager-natera-1137967",
+      "relevanceScore": 0,
+      "categoriesMatched": [
+        "complianceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: complianceContext; Healthcare role penalty (-20); HR role penalty (-20))."
+    },
+    {
+      "id": "rej-0393",
+      "dateRejected": "2026-11-23",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Supv, Prior Authorization",
+      "organisation": "Natera",
+      "url": "https://remoteOK.com/remote-jobs/remote-supv-prior-authorization-natera-1137966",
+      "relevanceScore": 0,
+      "categoriesMatched": [
+        "complianceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: complianceContext; Healthcare role penalty (-20); HR role penalty (-20))."
+    },
+    {
+      "id": "rej-0394",
+      "dateRejected": "2026-11-23",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Business Development Representative, SLED - West",
+      "organisation": "GitLab",
+      "url": "https://remoteOK.com/remote-jobs/remote-business-development-representative-sled-west-gitlab-1137965",
+      "relevanceScore": 0,
+      "categoriesMatched": [
+        "complianceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: complianceContext; HR role penalty (-20))."
+    },
+    {
+      "id": "rej-0395",
+      "dateRejected": "2026-11-23",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Deal Desk Analyst (Eastern Time Zone Preferred)",
+      "organisation": "Mixpanel",
+      "url": "https://remoteOK.com/remote-jobs/remote-deal-desk-analyst-eastern-time-zone-preferred-mixpanel-1137961",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0396",
+      "dateRejected": "2026-11-23",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Director, Revenue Accounting",
+      "organisation": "6sense",
+      "url": "https://remoteOK.com/remote-jobs/remote-director-revenue-accounting-6sense-1137960",
+      "relevanceScore": 20,
+      "categoriesMatched": [
+        "complianceContext",
+        "governanceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: complianceContext, governanceContext; no penalties)."
+    },
+    {
+      "id": "rej-0397",
+      "dateRejected": "2026-11-23",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Corporate Counsel, Commercial",
+      "organisation": "Carrot",
+      "url": "https://remoteOK.com/remote-jobs/remote-corporate-counsel-commercial-carrot-1137959",
+      "relevanceScore": 28,
+      "categoriesMatched": [
+        "complianceContext",
+        "governanceContext",
+        "requiredSkills"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: complianceContext, governanceContext, requiredSkills; no penalties)."
+    },
+    {
+      "id": "rej-0398",
+      "dateRejected": "2026-11-23",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Release Strategist, Professional Services",
+      "organisation": "LaunchDarkly",
+      "url": "https://remoteOK.com/remote-jobs/remote-release-strategist-professional-services-launchdarkly-1137958",
+      "relevanceScore": 18,
+      "categoriesMatched": [
+        "consultingContext",
+        "governanceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: consultingContext, governanceContext; no penalties)."
+    },
+    {
+      "id": "rej-0399",
+      "dateRejected": "2026-11-23",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Senior Database Engineer",
+      "organisation": "Bitwarden",
+      "url": "https://remoteOK.com/remote-jobs/remote-senior-database-engineer-bitwarden-1137957",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0400",
+      "dateRejected": "2026-11-23",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Staff Data Scientist - Martech Platform (ML/Algos)",
+      "organisation": "Airbnb",
+      "url": "https://remoteOK.com/remote-jobs/remote-staff-data-scientist-martech-platform-ml-algos-airbnb-1137956",
+      "relevanceScore": 12,
+      "categoriesMatched": [
+        "aiContext",
+        "llm"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: aiContext, llm; no penalties)."
+    },
+    {
+      "id": "rej-0401",
+      "dateRejected": "2026-11-23",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Senior Software Engineer, Partner Integrations",
+      "organisation": "Airbnb",
+      "url": "https://remoteOK.com/remote-jobs/remote-senior-software-engineer-partner-integrations-airbnb-1137954",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0402",
+      "dateRejected": "2026-11-23",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Vice President, Storytelling & Communications",
+      "organisation": "6sense",
+      "url": "https://remoteOK.com/remote-jobs/remote-vice-president-storytelling-communications-6sense-1137953",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0403",
+      "dateRejected": "2026-11-23",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Private Practice Enablement Specialist (PST)",
+      "organisation": "Healthie",
+      "url": "https://remoteOK.com/remote-jobs/remote-private-practice-enablement-specialist-pst-healthie-1137952",
+      "relevanceScore": 0,
+      "categoriesMatched": [
+        "complianceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: complianceContext; Healthcare role penalty (-20))."
     }
   ]
 }
