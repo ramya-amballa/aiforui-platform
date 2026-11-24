@@ -5428,6 +5428,52 @@
         "complianceContext"
       ],
       "reason": "Weak/insufficient relevance signal (matched: complianceContext; Healthcare role penalty (-20))."
+    },
+    {
+      "id": "rej-0404",
+      "dateRejected": "2026-11-24",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Senior Software Engineer, Agentic AI",
+      "organisation": "Clover Health",
+      "url": "https://remoteOK.com/remote-jobs/remote-senior-software-engineer-agentic-ai-clover-health-1138070",
+      "relevanceScore": 12,
+      "categoriesMatched": [
+        "llm",
+        "rag"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: llm, rag; no penalties)."
+    },
+    {
+      "id": "rej-0405",
+      "dateRejected": "2026-11-24",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Senior Software Developer, Agentic AI - Canada",
+      "organisation": "Clover Health",
+      "url": "https://remoteOK.com/remote-jobs/remote-senior-software-developer-agentic-ai-canada-clover-health-1138068",
+      "relevanceScore": 12,
+      "categoriesMatched": [
+        "llm",
+        "rag"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: llm, rag; no penalties)."
+    },
+    {
+      "id": "rej-0406",
+      "dateRejected": "2026-11-24",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Threat Research Engineer, Security Factory: Threat Research",
+      "organisation": "GitLab",
+      "url": "https://remoteOK.com/remote-jobs/remote-threat-research-engineer-security-factory-threat-research-gitlab-1138067",
+      "relevanceScore": 24,
+      "categoriesMatched": [
+        "complianceContext",
+        "consultingContext",
+        "llm"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: complianceContext, consultingContext, llm; no penalties)."
     }
   ]
 }
