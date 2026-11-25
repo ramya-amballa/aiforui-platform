@@ -10,24 +10,24 @@
   "recurringPriorities": [
     {
       "organisation": "RainFocus",
-      "daysInTop3": 93
+      "daysInTop3": 94
     },
     {
       "organisation": "1mind",
-      "daysInTop3": 3
+      "daysInTop3": 4
     },
     {
       "organisation": "Carrot",
-      "daysInTop3": 2
+      "daysInTop3": 3
     }
   ],
   "recurringAlerts": [
     {
       "alertType": "No website enquiries received",
-      "daysFired": 114
+      "daysFired": 115
     }
   ],
-  "daysTracked": 114,
+  "daysTracked": 115,
   "lessonsLearnedLibrary": [],
   "recurringGovernanceRisks": [],
   "founderDecisions": []

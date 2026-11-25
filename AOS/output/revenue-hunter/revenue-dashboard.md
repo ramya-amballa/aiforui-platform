@@ -1,6 +1,6 @@
 # Revenue Dashboard
 
-**Date:** 2026-11-24
+**Date:** 2026-11-25
 
 ## Pipeline at a Glance
 
@@ -40,7 +40,7 @@
 
 | Item | Organisation | Last Touch | Days Stalled |
 |---|---|---|---|
-| Senior Governance Risk and Compliance Analyst | RainFocus | 2026-08-23 | 67 |
+| Senior Governance Risk and Compliance Analyst | RainFocus | 2026-08-23 | 68 |
 
 ## Won / Lost This Week
 
