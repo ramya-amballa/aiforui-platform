@@ -1,12 +1,12 @@
 # Revenue Dashboard
 
-**Date:** 2026-11-25
+**Date:** 2026-11-26
 
 ## Pipeline at a Glance
 
 | Stage | Count | Weighted Value |
 |---|---|---|
-| Identified | 0 | 0 |
+| Identified | 1 | 0 |
 | Qualified | 0 | 0 |
 | In Progress | 3 | 0 |
 | Won (this quarter) | 0 | 0 |
@@ -14,13 +14,13 @@
 | Deferred | 0 | 0 |
 
 **Total weighted pipeline value:** 0  
-**Items pending a revenue estimate:** 3
+**Items pending a revenue estimate:** 4
 
 ## By Revenue Type (Service Line Performance)
 
 | Type | Open Items | Weighted Value |
 |---|---|---|
-| Consulting Project | 3 | 0 |
+| Consulting Project | 4 | 0 |
 | Enterprise Contract | 0 | 0 |
 | Workshop | 0 | 0 |
 | Speaking Engagement | 0 | 0 |
@@ -40,7 +40,7 @@
 
 | Item | Organisation | Last Touch | Days Stalled |
 |---|---|---|---|
-| Senior Governance Risk and Compliance Analyst | RainFocus | 2026-08-23 | 68 |
+| Senior Governance Risk and Compliance Analyst | RainFocus | 2026-08-23 | 69 |
 
 ## Won / Lost This Week
 

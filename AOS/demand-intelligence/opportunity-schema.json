@@ -187,6 +187,54 @@
         "RAG",
         "AI Agents"
       ]
+    },
+    {
+      "id": "opp-0004",
+      "dateFound": "2026-11-26",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Knowledge Engineer",
+      "organisation": "Jobgether",
+      "description": "<div>\n<p><strong>This position is listed on behalf of a partner company, which manages all applications and next steps. Our partner is looking for a Knowledge Engineer based in the United States.</strong></p>\n<p>The Knowledge Engineer will play a pivotal role in building the knowledge infrastructure and AI-powered systems that support business operations and customer experiences. In this role, you will design and maintain trusted knowledge repositories, intelligent AI agents, and automated workflows that help teams access accurate information and streamline everyday tasks. Working across departments such as Support, Customer Success, Finance, Product, and Engineering, you will transform fragmented business knowledge into structured, AI-accessible resources. You will also develop secure integrations and intelligent automation solutions that enable AI systems to perform routine activities while maintaining appropriate human oversight. By combining expertise in AI engineering, data architecture, and knowledge management, you will help establish scalable and reliable AI capabilities across the organization. This is an exciting opportunity to contribute to an AI-first transformation within a collaborative, technology-driven environment.</p>\n</div><h4>Accountabilities:</h4><div>\n\nDesign, develop, and maintain a centralized, trusted knowledge infrastructure that makes product documentation, technical resources, business policies, operational procedures, and training materials accessible to AI systems.\nConsolidate and organize knowledge from multiple platforms, including Google Drive, Confluence, Jira, Salesforce, Snowflake, Omni, HubSpot, Zendesk, Highspot, and Slack, ensuring that each source has clear ownership and scheduled review dates.\nCollaborate with Data and Business Insights teams to make existing business data AI-ready by providing curated, read-only Snowflake views and standardized metric definitions that align with established reporting systems.\nBuild, deploy, and maintain AI agents and automated workflows for business functions such as customer support ticket triage, renewal research, accounts payable processing, and software reviews.\nDevelop and manage connectors, APIs, Model Context Protocol (MCP) servers, and automation integrations that allow AI agents to interact securely with business systems while enforcing appropriate permissions, human approvals, and audit trails.\nCreate automated pipelines that identify changes in documentation, business systems, and operational processes, ensuring that knowledge repositories, AI agents, and workflows remain accurate and up to date.\nStructure and optimize information for AI retrieval through taxonomy development, metadata management, content chunking, tagging, embeddings, and Retrieval-Augmented Generation (RAG) techniques.\nEstablish evaluation frameworks and quality assurance processes to measure AI agent accuracy, detect outdated or conflicting information, and minimize hallucinations before and after deployment.\nMaintain a centralized registry of approved AI connectors, prompts, plugins, reusable skills, and workflows to ensure that AI solutions remain secure, standardized, and company-owned.\nImplement and manage access controls, data permissions, and security practices to protect sensitive information and ensure compliance with internal IT and security requirements.\nDocument technical architecture, workflows, integration standards, and operational processes while staying informed about emerging AI technologies and industry best practices.\nMonitor AI usage, operational costs, adoption, and feedback to identify knowledge gaps, improve answer quality, and prioritize future enhancements.\nPartner with subject-matter experts across Support, Customer Success, Finance, Accounting, Revenue Operations, Product, and Engineering to capture institutional knowledge, map business processes, and establish content ownership.\nCollaborate with training teams, Product Marketing, and departmental AI champions to transform product documentation, customer support resources, and training materials into AI-accessible knowledge for internal teams and external customers.\nIntegrate AI-powered tools into employee and customer training programs to improve knowledge sharing, self-service capabilities, and operational efficiency.\n\n<h2>Requirements:</h2>\n\nBachelor's degree in Computer Science, Information Systems, or a related discipline, or equivalent professional experience.\nAt least 5 years of experience in knowledge engineering, AI/ML engineering, data engineering, analytics engineering, solutions engineering, or technical knowledge management.\nHands-on experience building, deploying, and maintaining production-ready AI agents and agentic workflows using large language model platforms and APIs such as Claude, OpenAI, or Gemini.\nPractical knowledge of agent frameworks, Model Context Protocol (MCP), and AI-driven automation architectures.\nStrong experience with Retrieval-Augmented Generation (RAG), GraphRAG, vector databases, embeddings, prompt engineering, data pipelines, and AI output evaluation.\nProficiency in Python or JavaScript and SQL, with a solid understanding of APIs, system integrations, and automation platforms such as Zapier, Workato, or n8n.\nExperience working with cloud data warehouses and semantic data layers, particularly Snowflake, dbt, or business intelligence platforms such as Omni.\nFamiliarity with knowledge management platforms and enterprise SaaS applications, including Confluence, Notion, Google Workspace, Jira, Salesforce, NetSuite, or Zendesk.\nStrong information architecture and knowledge organization skills, with exceptional attention to detail and content accuracy.\nUnderstanding of data privacy, information security, and access control principles for AI systems, including human-in-the-loop approval processes and audit logging.\nExcellent communication and collaboration skills, with the ability to explain complex technical concepts to non-technical stakeholders.\nAbility to understand business processes, collaborate with subject-matter experts, and translate operational needs into practical technical solutions.\nFamiliarity with lead generation, marketing technology (MarTech), or data products is considered an advantage.\nExperience developing customer-facing knowledge bases, technical product documentation, or training content is a plus.\nWillingness to travel approximately 5â10% of the time.\n\n<h2>Benefits:</h2>\n\nFull-time remote working arrangement.\nOpportunity to contribute to a company-wide AI transformation and help establish the foundations of an AI-first operating model.\nHigh-impact technical role with the opportunity to design and implement production AI agents and intelligent automation workflows.\nExposure to modern AI technologies, including large language models, RAG, GraphRAG, MCP, and advanced data integration solutions.\nCross-functional collaboration with experienced professionals across engineering, data, finance, product, and customer-facing teams.\nOpportunity to develop and implement innovative solutions that improve employee productivity and customer experiences.\nSignificant ownership and influence over AI architecture, knowledge management standards, and automation strategy.\nProfessional development opportunities through continuous exposure to emerging AI tools, technologies, and practices.\n\n</div><div><strong>How Jobgether works:</strong></div>\n<div>We use an <strong>AI-powered matching process</strong> to ensure your application is reviewed quickly, objectively, and fairly against the role's core requirements. Our system identifies the top-fitting candidates, and this shortlist is then shared directly with the hiring company. The final decision and next steps (interviews, assessments) are managed by their internal team.</div>\n<div>We appreciate your interest and wish you the best!</div>\n<div><a href=\"https://jobgether.com/how-jobgether-works\">Â Why Apply Through Jobgether?</a>Â </div>\n<div>Â </div>\n<div><strong>Data Privacy Notice:</strong> By submitting your application, you acknowledge that Jobgether will process your personal data to evaluate your candidacy and share relevant information with the hiring employer. This processing is based on legitimate interest and pre-contractual measures under applicable data protection laws (including GDPR). You may exercise your rights (access, rectification, erasure, objection) at any time.</div>\n<div>Â </div>\n<div>Â </div>\n<div>#LI-CL1</div><br/><br/>Please mention the word **ERUDITE** and tag RMTcyLjIxMi4yMDcuMjA0 when applying to show you read the job post completely (#RMTcyLjIxMi4yMDcuMjA0). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "url": "https://remoteOK.com/remote-jobs/remote-knowledge-engineer-jobgether-1138105",
+      "location": "US Only",
+      "remote": true,
+      "domainTags": [
+        "AI Governance",
+        "ADGL",
+        "AI Deployment Governance"
+      ],
+      "scores": {
+        "expectedRevenue": 5.0,
+        "probabilityOfWinning": 4.0,
+        "strategicValue": 4.0,
+        "relationshipValue": 2.0,
+        "timeRequired": 7.0,
+        "geography": 8.0,
+        "remoteCompatibility": 10.0,
+        "alignmentAIforUIServices": 7.0,
+        "alignmentADGL": 8.0,
+        "alignmentOPERA": 6.0,
+        "longTermRelationshipPotential": 5.0
+      },
+      "relevanceScore": 63,
+      "priorityScore": 54,
+      "band": "Active",
+      "classification": "Apply",
+      "scopedEngagement": false,
+      "routedTo": [],
+      "status": "routed",
+      "lastTouch": "2026-11-26",
+      "nextAction": "",
+      "nextActionDue": "",
+      "notes": "",
+      "autoCollected": true,
+      "autoScored": true,
+      "matchedKeywords": [
+        "AI Transformation",
+        "RAG",
+        "AI Agents"
+      ]
     }
   ]
 }

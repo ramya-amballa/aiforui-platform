@@ -9,7 +9,7 @@
   "serviceDemandCoverage": [
     {
       "service": "AI Deployment Governance (ADGL)",
-      "recommendationCount": 2
+      "recommendationCount": 3
     },
     {
       "service": "AI Governance Operating Model",

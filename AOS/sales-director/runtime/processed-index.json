@@ -32,6 +32,15 @@
       "coverLetterPath": "AOS/output/sales-director/packages/opp-0003-carrot-sr-security-operations-manager-cover-letter.md",
       "recruiterMessagePath": "AOS/output/sales-director/packages/opp-0003-carrot-sr-security-operations-manager-recruiter-message.md",
       "clientOutreachPath": "AOS/output/sales-director/packages/opp-0003-carrot-sr-security-operations-manager-client-outreach.md"
+    },
+    "opp-0004": {
+      "datePrepared": "2026-11-26",
+      "status": "Needs Review",
+      "packagePath": "AOS/output/sales-director/packages/opp-0004-jobgether-knowledge-engineer.md",
+      "proposalPath": "AOS/output/sales-director/packages/opp-0004-jobgether-knowledge-engineer-proposal.md",
+      "coverLetterPath": "AOS/output/sales-director/packages/opp-0004-jobgether-knowledge-engineer-cover-letter.md",
+      "recruiterMessagePath": "AOS/output/sales-director/packages/opp-0004-jobgether-knowledge-engineer-recruiter-message.md",
+      "clientOutreachPath": "AOS/output/sales-director/packages/opp-0004-jobgether-knowledge-engineer-client-outreach.md"
     }
   }
 }

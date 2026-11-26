@@ -5502,6 +5502,215 @@
         "governanceContext"
       ],
       "reason": "Weak/insufficient relevance signal (matched: aiContext, complianceContext, governanceContext; no penalties)."
+    },
+    {
+      "id": "rej-0409",
+      "dateRejected": "2026-11-26",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Sr. Account Manager - Mid Market",
+      "organisation": "H1",
+      "url": "https://remoteOK.com/remote-jobs/remote-sr-account-manager-mid-market-h1-1138111",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0410",
+      "dateRejected": "2026-11-26",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Sr. Customer Success Manager I",
+      "organisation": "Lyra Health",
+      "url": "https://remoteOK.com/remote-jobs/remote-sr-customer-success-manager-i-lyra-health-1138106",
+      "relevanceScore": 0,
+      "categoriesMatched": [
+        "requiredSkills"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: requiredSkills; Healthcare role penalty (-20))."
+    },
+    {
+      "id": "rej-0411",
+      "dateRejected": "2026-11-26",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Intermediate Security Engineer, Security Incident Response Team (SIRT)",
+      "organisation": "GitLab",
+      "url": "https://remoteOK.com/remote-jobs/remote-intermediate-security-engineer-security-incident-response-team-sirt-gitlab-1138104",
+      "relevanceScore": 23,
+      "categoriesMatched": [
+        "companyIndustry",
+        "complianceContext",
+        "cybersecurityContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: companyIndustry, complianceContext, cybersecurityContext; no penalties)."
+    },
+    {
+      "id": "rej-0412",
+      "dateRejected": "2026-11-26",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Senior Executive Assistant, Office of the CRO (EST / CST)",
+      "organisation": "GitLab",
+      "url": "https://remoteOK.com/remote-jobs/remote-senior-executive-assistant-office-of-the-cro-est-cst-gitlab-1138103",
+      "relevanceScore": 16,
+      "categoriesMatched": [
+        "aiContext",
+        "complianceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: aiContext, complianceContext; no penalties)."
+    },
+    {
+      "id": "rej-0413",
+      "dateRejected": "2026-11-26",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Senior Corporate Accountant - Tax",
+      "organisation": "Salesloft",
+      "url": "https://remoteOK.com/remote-jobs/remote-senior-corporate-accountant-tax-salesloft-1138099",
+      "relevanceScore": 16,
+      "categoriesMatched": [
+        "aiContext",
+        "complianceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: aiContext, complianceContext; no penalties)."
+    },
+    {
+      "id": "rej-0414",
+      "dateRejected": "2026-11-26",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Security Engineer, Offensive Security",
+      "organisation": "Dropbox",
+      "url": "https://remoteOK.com/remote-jobs/remote-security-engineer-offensive-security-dropbox-1138096",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: AI Security, RAG, AI Agents) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0415",
+      "dateRejected": "2026-11-26",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Principal Software Engineer",
+      "organisation": "Ping Identity",
+      "url": "https://remoteOK.com/remote-jobs/remote-principal-software-engineer-ping-identity-1138095",
+      "relevanceScore": 8,
+      "categoriesMatched": [
+        "cybersecurityContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: cybersecurityContext; no penalties)."
+    },
+    {
+      "id": "rej-0416",
+      "dateRejected": "2026-11-26",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Senior Web Engineer, Profile & Community",
+      "organisation": "Airbnb",
+      "url": "https://remoteOK.com/remote-jobs/remote-senior-web-engineer-profile-community-airbnb-1138091",
+      "relevanceScore": 0,
+      "categoriesMatched": [
+        "complianceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: complianceContext; HR role penalty (-20))."
+    },
+    {
+      "id": "rej-0417",
+      "dateRejected": "2026-11-26",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Associate, Payment Integrity",
+      "organisation": "Oscar Health",
+      "url": "https://remoteOK.com/remote-jobs/remote-associate-payment-integrity-oscar-health-1138090",
+      "relevanceScore": 24,
+      "categoriesMatched": [
+        "aiContext",
+        "complianceContext",
+        "consultingContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: aiContext, complianceContext, consultingContext; no penalties)."
+    },
+    {
+      "id": "rej-0418",
+      "dateRejected": "2026-11-26",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "District Manager, Enterprise - Healthcare (Southeast)",
+      "organisation": "Everpure",
+      "url": "https://remoteOK.com/remote-jobs/remote-district-manager-enterprise-healthcare-southeast-everpure-1138089",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0419",
+      "dateRejected": "2026-11-26",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Senior Account Executive - SaaS Industrials",
+      "organisation": "Salsify",
+      "url": "https://remoteOK.com/remote-jobs/remote-senior-account-executive-saas-industrials-salsify-1138088",
+      "relevanceScore": 13,
+      "categoriesMatched": [
+        "companyIndustry",
+        "consultingContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: companyIndustry, consultingContext; no penalties)."
+    },
+    {
+      "id": "rej-0420",
+      "dateRejected": "2026-11-26",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Sr. Account Executive, AI & HPC",
+      "organisation": "Everpure",
+      "url": "https://remoteOK.com/remote-jobs/remote-sr-account-executive-ai-hpc-everpure-1138086",
+      "relevanceScore": 0,
+      "categoriesMatched": [
+        "aiContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: aiContext; Isolated weak-keyword penalty (-15))."
+    },
+    {
+      "id": "rej-0421",
+      "dateRejected": "2026-11-26",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Director, Product Marketing (Contractor)",
+      "organisation": "Glossier",
+      "url": "https://remoteOK.com/remote-jobs/remote-director-product-marketing-contractor-glossier-1138085",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0422",
+      "dateRejected": "2026-11-26",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Portfolio Customer Success Manager",
+      "organisation": "LastPass",
+      "url": "https://remoteOK.com/remote-jobs/remote-portfolio-customer-success-manager-lastpass-1138083",
+      "relevanceScore": 8,
+      "categoriesMatched": [
+        "cybersecurityContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: cybersecurityContext; no penalties)."
+    },
+    {
+      "id": "rej-0423",
+      "dateRejected": "2026-11-26",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Region Head, Asia",
+      "organisation": "Dropbox",
+      "url": "https://remoteOK.com/remote-jobs/remote-region-head-asia-dropbox-1138082",
+      "relevanceScore": 10,
+      "categoriesMatched": [
+        "governanceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: governanceContext; no penalties)."
     }
   ]
 }

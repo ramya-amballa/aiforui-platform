@@ -87,6 +87,30 @@
         "The ADGL Methodology",
         "Executive Capability Overview"
       ]
+    },
+    "opp-0004": {
+      "opportunityId": "opp-0004",
+      "title": "Knowledge Engineer",
+      "organisation": "Jobgether",
+      "dateMapped": "2026-11-26",
+      "notApplicable": false,
+      "notApplicableReason": null,
+      "primaryService": "AI Deployment Governance (ADGL)",
+      "primaryServiceReason": "ADGL/AI Deployment Governance domainTag",
+      "secondaryServices": [
+        "AI Governance Operating Model",
+        "AI Control Library",
+        "Fractional Governance Support"
+      ],
+      "recommendedEngagementType": "Advisory engagement",
+      "estimatedProjectSize": "Large",
+      "projectSizeBasis": "heuristic-estimate",
+      "recommendedProposalTemplate": "ai-governance-proposal-template.md",
+      "crossSellOpportunities": [
+        "Executive Workshop",
+        "The ADGL Methodology",
+        "Executive Capability Overview"
+      ]
     }
   }
 }

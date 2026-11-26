@@ -79,6 +79,26 @@
       "nextAction": "Leave it, next scheduled touch stands.",
       "nextActionDue": "2026-11-29",
       "expectedCloseDate": null
+    },
+    {
+      "id": "rev-0004",
+      "dateAdded": "2026-11-26",
+      "type": "Consulting Project",
+      "title": "Knowledge Engineer",
+      "organisation": "Jobgether",
+      "sourceRef": "opp-0004",
+      "expectedRevenue": "Not yet estimated",
+      "probabilityOfSuccess": 4.0,
+      "effortRequired": 7.0,
+      "strategicValue": 4.0,
+      "score": 50,
+      "band": "Active",
+      "stage": "identified",
+      "owner": "Ramya",
+      "lastTouch": "2026-11-26",
+      "nextAction": "Leave it, next scheduled touch stands.",
+      "nextActionDue": "2026-12-03",
+      "expectedCloseDate": null
     }
   ]
 }
