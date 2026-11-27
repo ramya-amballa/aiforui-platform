@@ -1,7 +1,7 @@
 # Executive Memory
 
-**Generated:** 2026-11-26
-**Days of CEO Advisor priority history tracked:** 116
+**Generated:** 2026-11-27
+**Days of CEO Advisor priority history tracked:** 117
 
 *A read-only aggregator — every pattern below is counted from real, already-computed data. Nothing here is a new score or a fabricated pattern.*
 
@@ -9,13 +9,13 @@
 
 ## Recurring Priorities (CEO Advisor's own history)
 
-- **RainFocus** — Top 3 on 95 day(s)
-- **1mind** — Top 3 on 5 day(s)
-- **Carrot** — Top 3 on 4 day(s)
+- **RainFocus** — Top 3 on 96 day(s)
+- **1mind** — Top 3 on 6 day(s)
+- **Carrot** — Top 3 on 5 day(s)
 
 ## Recurring Alert Types
 
-- **No website enquiries received** — fired on 116 day(s)
+- **No website enquiries received** — fired on 117 day(s)
 
 ---
 

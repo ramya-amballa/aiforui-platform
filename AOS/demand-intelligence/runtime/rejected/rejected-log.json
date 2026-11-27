@@ -5711,6 +5711,449 @@
         "governanceContext"
       ],
       "reason": "Weak/insufficient relevance signal (matched: governanceContext; no penalties)."
+    },
+    {
+      "id": "rej-0424",
+      "dateRejected": "2026-11-27",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Director of Software Engineering",
+      "organisation": "Warner Music Group",
+      "url": "https://remoteOK.com/remote-jobs/remote-director-of-software-engineering-warner-music-group-1138173",
+      "relevanceScore": 20,
+      "categoriesMatched": [
+        "complianceContext",
+        "governanceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: complianceContext, governanceContext; no penalties)."
+    },
+    {
+      "id": "rej-0425",
+      "dateRejected": "2026-11-27",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Partner Solution Architect, Partner Center of Excellence",
+      "organisation": "agiloft",
+      "url": "https://remoteOK.com/remote-jobs/remote-partner-solution-architect-partner-center-of-excellence-agiloft-1138172",
+      "relevanceScore": 20,
+      "categoriesMatched": [
+        "aiContext",
+        "consultingContext",
+        "llm"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: aiContext, consultingContext, llm; no penalties)."
+    },
+    {
+      "id": "rej-0426",
+      "dateRejected": "2026-11-27",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Head of Professional Services, NICE",
+      "organisation": "TTEC Digital",
+      "url": "https://remoteOK.com/remote-jobs/remote-head-of-professional-services-nice-ttec-digital-1138171",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0427",
+      "dateRejected": "2026-11-27",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Enterprise Account Executive - Western US",
+      "organisation": "agiloft",
+      "url": "https://remoteOK.com/remote-jobs/remote-enterprise-account-executive-western-us-agiloft-1138169",
+      "relevanceScore": 34,
+      "categoriesMatched": [
+        "aiContext",
+        "complianceContext",
+        "consultingContext",
+        "governanceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: aiContext, complianceContext, consultingContext, governanceContext; no penalties)."
+    },
+    {
+      "id": "rej-0428",
+      "dateRejected": "2026-11-27",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Partner Director, Federal",
+      "organisation": "Netomi",
+      "url": "https://remoteOK.com/remote-jobs/remote-partner-director-federal-netomi-1138167",
+      "relevanceScore": 23,
+      "categoriesMatched": [
+        "companyIndustry",
+        "consultingContext",
+        "governanceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: companyIndustry, consultingContext, governanceContext; no penalties)."
+    },
+    {
+      "id": "rej-0429",
+      "dateRejected": "2026-11-27",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Account Executive - Chicago",
+      "organisation": "Saviynt",
+      "url": "https://remoteOK.com/remote-jobs/remote-account-executive-chicago-saviynt-1138164",
+      "relevanceScore": 41,
+      "categoriesMatched": [
+        "companyIndustry",
+        "complianceContext",
+        "consultingContext",
+        "cybersecurityContext",
+        "governanceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: companyIndustry, complianceContext, consultingContext, cybersecurityContext, governanceContext; no penalties)."
+    },
+    {
+      "id": "rej-0430",
+      "dateRejected": "2026-11-27",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Manager, Technical Support",
+      "organisation": "Coupa",
+      "url": "https://remoteOK.com/remote-jobs/remote-manager-technical-support-coupa-1138159",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0431",
+      "dateRejected": "2026-11-27",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Client Account Executive",
+      "organisation": "Jobgether",
+      "url": "https://remoteOK.com/remote-jobs/remote-client-account-executive-jobgether-1138156",
+      "relevanceScore": 26,
+      "categoriesMatched": [
+        "consultingContext",
+        "governanceContext",
+        "requiredSkills"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: consultingContext, governanceContext, requiredSkills; no penalties)."
+    },
+    {
+      "id": "rej-0432",
+      "dateRejected": "2026-11-27",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Traveling Account Executive - Neurology/Rare Disease",
+      "organisation": "Jobgether",
+      "url": "https://remoteOK.com/remote-jobs/remote-traveling-account-executive-neurology-rare-disease-jobgether-1138154",
+      "relevanceScore": 28,
+      "categoriesMatched": [
+        "complianceContext",
+        "governanceContext",
+        "requiredSkills"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: complianceContext, governanceContext, requiredSkills; no penalties)."
+    },
+    {
+      "id": "rej-0433",
+      "dateRejected": "2026-11-27",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Commercial Manager - Europe",
+      "organisation": "Lyra Health",
+      "url": "https://remoteOK.com/remote-jobs/remote-commercial-manager-europe-lyra-health-1138149",
+      "relevanceScore": 28,
+      "categoriesMatched": [
+        "governanceContext",
+        "requiredSkills",
+        "roleResponsibilities"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: governanceContext, requiredSkills, roleResponsibilities; no penalties)."
+    },
+    {
+      "id": "rej-0434",
+      "dateRejected": "2026-11-27",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "SEO - Manager",
+      "organisation": "Bounteous",
+      "url": "https://remoteOK.com/remote-jobs/remote-seo-manager-bounteous-1138148",
+      "relevanceScore": 42,
+      "categoriesMatched": [
+        "complianceContext",
+        "cybersecurityContext",
+        "governanceContext",
+        "llm",
+        "requiredSkills"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: complianceContext, cybersecurityContext, governanceContext, llm, requiredSkills; no penalties)."
+    },
+    {
+      "id": "rej-0435",
+      "dateRejected": "2026-11-27",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Manager, Account Managment",
+      "organisation": "agiloft",
+      "url": "https://remoteOK.com/remote-jobs/remote-manager-account-managment-agiloft-1138147",
+      "relevanceScore": 34,
+      "categoriesMatched": [
+        "aiContext",
+        "consultingContext",
+        "governanceContext",
+        "responsibleAi"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: aiContext, consultingContext, governanceContext, responsibleAi; no penalties)."
+    },
+    {
+      "id": "rej-0436",
+      "dateRejected": "2026-11-27",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Creative Director",
+      "organisation": "Luxury Presence",
+      "url": "https://remoteOK.com/remote-jobs/remote-creative-director-luxury-presence-1138146",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0437",
+      "dateRejected": "2026-11-27",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Account Executive",
+      "organisation": "IDMWORKS",
+      "url": "https://remoteOK.com/remote-jobs/remote-account-executive-idmworks-1138145",
+      "relevanceScore": 15,
+      "categoriesMatched": [
+        "companyIndustry",
+        "governanceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: companyIndustry, governanceContext; no penalties)."
+    },
+    {
+      "id": "rej-0438",
+      "dateRejected": "2026-11-27",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Lifecycle Marketing Manager",
+      "organisation": "Lifeforce",
+      "url": "https://remoteOK.com/remote-jobs/remote-lifecycle-marketing-manager-lifeforce-1138144",
+      "relevanceScore": 0,
+      "categoriesMatched": [
+        "complianceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: complianceContext; Healthcare role penalty (-20))."
+    },
+    {
+      "id": "rej-0439",
+      "dateRejected": "2026-11-27",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Regional Sales Manager (Automotive Software Sales)",
+      "organisation": "Keyloop",
+      "url": "https://remoteOK.com/remote-jobs/remote-regional-sales-manager-automotive-software-sales-keyloop-1138142",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0440",
+      "dateRejected": "2026-11-27",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Enterprise Account Executive - Southeast",
+      "organisation": "agiloft",
+      "url": "https://remoteOK.com/remote-jobs/remote-enterprise-account-executive-southeast-agiloft-1138139",
+      "relevanceScore": 34,
+      "categoriesMatched": [
+        "aiContext",
+        "complianceContext",
+        "consultingContext",
+        "governanceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: aiContext, complianceContext, consultingContext, governanceContext; no penalties)."
+    },
+    {
+      "id": "rej-0441",
+      "dateRejected": "2026-11-27",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Sr. Manager, Revenue Enablement",
+      "organisation": "Secure Code Warrior",
+      "url": "https://remoteOK.com/remote-jobs/remote-sr-manager-revenue-enablement-secure-code-warrior-1138138",
+      "relevanceScore": 33,
+      "categoriesMatched": [
+        "aiGovernance",
+        "cybersecurityContext",
+        "governanceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: aiGovernance, cybersecurityContext, governanceContext; no penalties)."
+    },
+    {
+      "id": "rej-0442",
+      "dateRejected": "2026-11-27",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Channel Manager, North America Midwest (with LATAM Partner Coverage)",
+      "organisation": "Secure Code Warrior",
+      "url": "https://remoteOK.com/remote-jobs/remote-channel-manager-north-america-midwest-with-latam-partner-coverage-secure-code-warrior-1138137",
+      "relevanceScore": 28,
+      "categoriesMatched": [
+        "complianceContext",
+        "cybersecurityContext",
+        "governanceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: complianceContext, cybersecurityContext, governanceContext; no penalties)."
+    },
+    {
+      "id": "rej-0443",
+      "dateRejected": "2026-11-27",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Account Manager",
+      "organisation": "Everbridge",
+      "url": "https://remoteOK.com/remote-jobs/remote-account-manager-everbridge-1138135",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0444",
+      "dateRejected": "2026-11-27",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Federal Account Executive",
+      "organisation": "Metabase",
+      "url": "https://remoteOK.com/remote-jobs/remote-federal-account-executive-metabase-1138134",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0445",
+      "dateRejected": "2026-11-27",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Account Executive I - 1096 (Remote)",
+      "organisation": "Lightcast",
+      "url": "https://remoteOK.com/remote-jobs/remote-account-executive-i-1096-remote-lightcast-1138132",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0446",
+      "dateRejected": "2026-11-27",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "SEO Manager (Remote)",
+      "organisation": "Silverback Strategies",
+      "url": "https://remoteOK.com/remote-jobs/remote-seo-manager-remote-silverback-strategies-1138130",
+      "relevanceScore": 20,
+      "categoriesMatched": [
+        "aiContext",
+        "consultingContext",
+        "llm"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: aiContext, consultingContext, llm; no penalties)."
+    },
+    {
+      "id": "rej-0447",
+      "dateRejected": "2026-11-27",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Senior SEO Manager (Remote)",
+      "organisation": "Silverback Strategies",
+      "url": "https://remoteOK.com/remote-jobs/remote-senior-seo-manager-remote-silverback-strategies-1138129",
+      "relevanceScore": 20,
+      "categoriesMatched": [
+        "aiContext",
+        "consultingContext",
+        "llm"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: aiContext, consultingContext, llm; no penalties)."
+    },
+    {
+      "id": "rej-0448",
+      "dateRejected": "2026-11-27",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Senior Paid Media Manager (Remote)",
+      "organisation": "Silverback Strategies",
+      "url": "https://remoteOK.com/remote-jobs/remote-senior-paid-media-manager-remote-silverback-strategies-1138128",
+      "relevanceScore": 20,
+      "categoriesMatched": [
+        "complianceContext",
+        "roleResponsibilities"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: complianceContext, roleResponsibilities; no penalties)."
+    },
+    {
+      "id": "rej-0449",
+      "dateRejected": "2026-11-27",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Commercial Account Executive",
+      "organisation": "Apryse",
+      "url": "https://remoteOK.com/remote-jobs/remote-commercial-account-executive-apryse-1138127",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0450",
+      "dateRejected": "2026-11-27",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "North America Alliance and Partnerships Director (Remote)",
+      "organisation": "Vendavo",
+      "url": "https://remoteOK.com/remote-jobs/remote-north-america-alliance-and-partnerships-director-remote-vendavo-1138124",
+      "relevanceScore": 10,
+      "categoriesMatched": [
+        "complianceContext"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: complianceContext; no penalties)."
+    },
+    {
+      "id": "rej-0451",
+      "dateRejected": "2026-11-27",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Client Acquisitions Specialist, Inside Sales",
+      "organisation": "Koala Health",
+      "url": "https://remoteOK.com/remote-jobs/remote-client-acquisitions-specialist-inside-sales-koala-health-1138122",
+      "relevanceScore": 0,
+      "categoriesMatched": [],
+      "reason": "No relevance signals matched in posting text (upstream keyword match: RAG) — likely a substring false positive upstream, not a real opportunity."
+    },
+    {
+      "id": "rej-0452",
+      "dateRejected": "2026-11-27",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Sales Enablement Director",
+      "organisation": "Jobgether",
+      "url": "https://remoteOK.com/remote-jobs/remote-sales-enablement-director-jobgether-1138118",
+      "relevanceScore": 21,
+      "categoriesMatched": [
+        "companyIndustry",
+        "cybersecurityContext",
+        "requiredSkills"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: companyIndustry, cybersecurityContext, requiredSkills; no penalties)."
+    },
+    {
+      "id": "rej-0453",
+      "dateRejected": "2026-11-27",
+      "source": "RemoteOK",
+      "sourceCategory": "Professional Network",
+      "title": "Account Director (Network Testing & Planning)",
+      "organisation": "Jobgether",
+      "url": "https://remoteOK.com/remote-jobs/remote-account-director-network-testing-planning-jobgether-1138117",
+      "relevanceScore": 18,
+      "categoriesMatched": [
+        "governanceContext",
+        "requiredSkills"
+      ],
+      "reason": "Weak/insufficient relevance signal (matched: governanceContext, requiredSkills; no penalties)."
     }
   ]
 }

@@ -1451,6 +1451,31 @@
         "No website enquiries received",
         "Product opportunity detected"
       ]
+    },
+    {
+      "date": "2026-11-27",
+      "top3": [
+        {
+          "label": "Senior Governance Risk and Compliance Analyst (RainFocus)",
+          "organisation": "RainFocus",
+          "source": "Sales Director"
+        },
+        {
+          "label": "IT Manager (1mind)",
+          "organisation": "1mind",
+          "source": "Sales Director"
+        },
+        {
+          "label": "Sr. Security Operations Manager (Carrot)",
+          "organisation": "Carrot",
+          "source": "Sales Director"
+        }
+      ],
+      "alertTypes": [
+        "ADGL demand increasing",
+        "No website enquiries received",
+        "Product opportunity detected"
+      ]
     }
   ]
 }
