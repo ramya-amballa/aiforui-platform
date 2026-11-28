@@ -1,10 +1,10 @@
 # CEO Daily Report
 
-**Date:** 2026-11-27
+**Date:** 2026-11-28
 
 ## Executive Summary
 
-Today's highest-value action is Senior Governance Risk and Compliance Analyst (RainFocus) (source: Sales Director). Revenue winnable today: unestimated; revenue at risk: unestimated; highest-value opportunity: Senior Governance Risk and Compliance Analyst (RainFocus) — unestimated. 3 strategic alert(s) this period: ADGL demand increasing; No website enquiries received; Product opportunity detected.
+Today's highest-value action is Senior Governance Risk and Compliance Analyst (RainFocus) (source: Sales Director). Revenue winnable today: unestimated; revenue at risk: unestimated; highest-value opportunity: Senior Governance Risk and Compliance Analyst (RainFocus) — unestimated. 3 strategic alert(s) this period: ADGL demand increasing; No website enquiries received; Consulting demand shift.
 
 ## Top 3 Priorities
 
@@ -55,7 +55,7 @@ _Nothing to recommend today — Executive Brand Intelligence may not have run ye
 
 ## Artifact Registry
 
-**1814 artifact(s)** indexed across 16 employee(s) — last built 2026-11-27T08:52:34.605882+00:00.
+**1828 artifact(s)** indexed across 16 employee(s) — last built 2026-11-28T08:13:21.171818+00:00.
 
 ## Revenue Impact
 
@@ -67,7 +67,7 @@ _Nothing to recommend today — Executive Brand Intelligence may not have run ye
 
 - **ADGL demand increasing** — 2 ADGL/AI Deployment Governance opportunities in the last 7 days vs 0 in the 7 days before that (source: Demand Intelligence (demand-intelligence/opportunity-schema.json))
 - **No website enquiries received** — 0 website leads in the last 7 days (source: Website Intake (website-intake/leads.json))
-- **Product opportunity detected** — "AI Governance" appeared in 3 opportunities in the last 7 days — a recurring pattern worth a productised offer (source: Demand Intelligence (demand-intelligence/opportunity-schema.json))
+- **Consulting demand shift** — "Apply" classification doubled: 2 in the last 7 days vs 1 before (source: Demand Intelligence (demand-intelligence/opportunity-schema.json))
 
 ## Ignore List
 
@@ -80,5 +80,5 @@ Explicitly not worth today's time:
 
 ## Weekly Strategic Recommendation
 
-Evaluate productising the recurring theme in this alert: "AI Governance" appeared in 3 opportunities in the last 7 days — a recurring pattern worth a productised offer — route the candidate to Product Manager for a formal evaluation.
+Prioritise ADGL-related content and outreach this week: 2 ADGL/AI Deployment Governance opportunities in the last 7 days vs 0 in the 7 days before that.
 

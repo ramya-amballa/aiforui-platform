@@ -10,24 +10,32 @@
   "recurringPriorities": [
     {
       "organisation": "RainFocus",
-      "daysInTop3": 96
+      "daysInTop3": 97
     },
     {
       "organisation": "1mind",
-      "daysInTop3": 6
+      "daysInTop3": 7
     },
     {
       "organisation": "Carrot",
-      "daysInTop3": 5
+      "daysInTop3": 6
     }
   ],
   "recurringAlerts": [
     {
       "alertType": "No website enquiries received",
-      "daysFired": 117
+      "daysFired": 118
+    },
+    {
+      "alertType": "ADGL demand increasing",
+      "daysFired": 2
+    },
+    {
+      "alertType": "Product opportunity detected",
+      "daysFired": 2
     }
   ],
-  "daysTracked": 117,
+  "daysTracked": 118,
   "lessonsLearnedLibrary": [],
   "recurringGovernanceRisks": [],
   "founderDecisions": []
